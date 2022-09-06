@@ -33,7 +33,7 @@
             font-size: 72px;
             padding: 32px;
 
-            text-transform: uppercase;
+            /* text-transform: uppercase; */
             background: rgba(0, 0, 0, 0.3);
         }
 
@@ -50,14 +50,14 @@
         }
 
         audio {
-            margin-bottom: 48px;
+            margin-top: 32px;
         }
 
         footer {
             font-size: 32px;
             padding: 32px;
 
-            text-transform: uppercase;
+            /* text-transform: uppercase; */
 
             background: rgba(0, 0, 0, 0.3);
         }
@@ -67,12 +67,18 @@
 <body>
     <header>
         <h1>Perfect</h1>
-        <img src="/HTML/class-03-img/images/img-1.jpg" alt="">
     </header>
 
     <main>
         <article>
             <section>
+
+                <img src="/HTML/class-03-img/images/img-1.jpg" alt="">
+
+                <div class="sound">
+                    <audio src="../sounds/perfect.mp3" autoplay controls></audio>
+                </div>
+
                 <h2>Primeira Parte</h2>
                 <p>
                     I found a love, for me <br>
@@ -166,10 +172,6 @@
                     You look perfect tonight <br>
                 </p>
             </section>
-
-            <div class="sound">
-                <audio src="../sounds/perfect.mp3" autoplay controls></audio>
-            </div>
         </article>
     </main>
     

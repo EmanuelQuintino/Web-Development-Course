@@ -1,24 +1,111 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pr-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Class-05 Site Navegation</title>
+    <title>Class 05 - Table Challenge</title>
 
-    <!-- Criar um Menu de Site -->
-
-</head>
-<body>
-    <header>
-        <nav>
-            <ul>
-                <li></li>
-            </ul>
-        </nav>
-    </header>
-
-    <main>
+    <!-- 
+        Criar tabela da copa do mundo com grupo G:
         
+        -Criar título da tabela "COPA DO MUNDO"
+        -Criar nome "Grupo G" no thead
+        -Criar colunas com Seleção,  JG, V, E, D, PT
+        -Criar Linhas com imagens redimensionadas das bandeiras e dados
+        
+    -->
+
+
+    <style>
+        table {
+            margin: 100px auto;
+            font-size: 48px;
+            background: rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        th {
+            padding: 8px;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+
+        <caption>COPA DO MUNDO</caption>
+
+        <thead>
+            <tr>
+                <th colspan="6">Grupo G</th>
+            </tr>
+            <tr>
+                <th>Seleção</th>
+                <th>JG</th>
+                <th>V</th>
+                <th>E</th>
+                <th>D</th>
+                <th>PT</th>
+
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <th>
+                    <img src="images/brasil.jpg" alt="Bandeira Brasil">
+                </th>
+                <td>3</td>
+                <td>2</td>
+                <td>1</td>
+                <td>0</td>
+                <td>
+                    <strong>7</strong>
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <img src="images/servia.png" alt="Bandeira Servia">
+                </th>
+                <td>3</td>
+                <td>1</td>
+                <td>2</td>
+                <td>0</td>
+                <td>
+                    <strong>5</strong>
+                </td>
+            </tr>
+
+            <tr>
+                <th>
+                    <img src="images/suica.png" alt="Bandeira Suíça">
+                </th>
+                <td>3</td>
+                <td>1</td>
+                <td>2</td>
+                <td>0</td>
+                <td>
+                    <strong>2</strong>
+                </td>
+            </tr>
+
+            <tr>
+                <th>
+                    <img src="images/camaroes.png" alt="Bandeira Camarões">
+                </th>
+                <td>3</td>
+                <td>0</td>
+                <td>1</td>
+                <td>2</td>
+                <td>
+                    <strong>1</strong>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    
 </body>
+
 </html>

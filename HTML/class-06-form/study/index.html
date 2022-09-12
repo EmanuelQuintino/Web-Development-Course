@@ -88,7 +88,7 @@
             type="number" 
             list="" 
             name="teste3" 
-            placeholder="Insira número da sorte"
+            placeholder="Insira número"
             min="0"
             max="100"
             step="5"
@@ -134,7 +134,7 @@
             accept="image/*"
             multiple
 
-            > <!-- aceppt: "image/*" ; "audio/*" ; "video/*" -->
+            > <!-- aceppt: ".doc"; "image/*" ; "audio/*" ; "video/*" -->
         </form>
         
         <!-- input do checkbox  -->
@@ -182,7 +182,7 @@
 
         <br>
         <label for="categoria">Escolha a Modalidade Esportiva: </label>
-        <select name="" id="categoria"> <!--Mais de um elemento: multiple size = "2"-->
+        <select name="" id="categoria"> <!--Mais de um elemento: multiple; size = "2" quantos elementos quero deixar visível-->
             
             <option value="">Sem opção</option>
            
@@ -206,15 +206,7 @@
         <br><br>
         <label for="comentario">Área de Comentários</label>
         <br>
-        <textarea 
-            placeholder="Insira seu comentário"
-            name="comentar" 
-            id="comentario" 
-            cols="30" 
-            rows="10"
-            wrap="soft"
-        >
-        </textarea>
+        <textarea placeholder="Insira seu comentário até 500 caracteres" name="comentar" id="comentario" cols="30" rows="10" maxlength="500" wrap="soft"></textarea>
         
         <br><br>
         <button type="submit">Salvar</button>

@@ -20,6 +20,12 @@
             width: 320px;
             margin: 0 auto;
         }
+
+        .area-01 label, .area-03 label {
+            width: 80px;
+            display: inline-block;
+            text-align: right;
+        }
     </style>
 </head>
 
@@ -29,7 +35,7 @@
     </header>
     <main>
         <form action="" method="GET">
-            <fieldset>
+            <fieldset class="area-01">
                 <legend>
                     <strong>
                         DADOS PESSOAIS
@@ -37,7 +43,7 @@
                 </legend>
                 
                 <section>
-                    <label for="name">Nome: </label>
+                    <label for="name">Nome:</label>
                     <input id="name" type="text" autofocus>
                 </section>
 
@@ -59,17 +65,17 @@
                 </section>
                 <br>
                 <section>
-                    <input id="masculine" type="radio" name="sexo">
                     <label for="masculine">Masculino</label>
+                    <input id="masculine" type="radio" name="sexo">
 
-                    <input id="feminine" type="radio" name="sexo">
                     <label for="feminine">Feminino</label>
+                    <input id="feminine" type="radio" name="sexo">
                 </section>
             </fieldset>
 
             <br>
 
-            <fieldset>
+            <fieldset class="area-02">
                 <legend>
                     <strong>
                         LINGUAGENS DE DOMÍNIO
@@ -102,7 +108,7 @@
 
             <br>
             
-            <fieldset>
+            <fieldset class="area-03">
                 <legend>
                     <strong>
                         DADOS DE LOGIN
@@ -122,14 +128,14 @@
 
                 <br>
                 <section>
-                    <label for="photo">Foto de Perfil:</label>
+                    <label for="photo">Foto:</label>
                     <input type="file" id="photo" minlength="8" accept="image/*">
                 </section>
             </fieldset>
 
             <br>
 
-            <fieldset>
+            <fieldset class="area-04">
                 <legend>
                     <strong>
                         OBSERVAÇÕES       

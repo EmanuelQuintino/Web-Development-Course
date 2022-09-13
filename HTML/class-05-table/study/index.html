@@ -5,11 +5,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Class 05 - Table</title>
+
+    <style>
+        table {
+            border-collapse: collapse;
+            text-align: center;
+            width: 200px;
+        }
+        th, td {
+            border: 1px solid black;
+        }
+
+        th, tfoot {
+            background: #eee;
+        }
+    </style>
 </head>
 <body>
     <table>
-        
-        <caption>PRODUTOS</caption>
+
+        <caption>
+            <strong>
+                PRODUTOS
+            </strong>
+        </caption>
         
         <thead>
             <tr>
@@ -31,8 +50,16 @@
 
         <tfoot>
             <tr>
-                <td>TOTAL</td>
-                <td>330</td>
+                <td>
+                 <strong>
+                    TOTAL
+                 </strong>   
+                </td>
+                <td>
+                    <strong>
+                       330
+                    </strong>   
+                   </td>
             </tr>
         </tfoot>
         

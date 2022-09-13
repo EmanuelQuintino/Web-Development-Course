@@ -44,7 +44,7 @@
                 
                 <section>
                     <label for="name">Nome:</label>
-                    <input id="name" type="text" autofocus>
+                    <input id="name" type="text" autofocus required placeholder="Digite seu nome">
                 </section>
 
                 <br>
@@ -56,12 +56,12 @@
                 <br>
                 <section>
                     <label for="RG">RG:</label>
-                    <input id="RG" type="number">
+                    <input id="RG" type="number" required placeholder="Informe seu RG">
                 </section>
                 <br>
                 <section>
                     <label for="CPF">CPF:</label>
-                    <input id="CPF" type="number">
+                    <input id="CPF" type="number" required placeholder="Informe seu CPF">
                 </section>
                 <br>
                 <section>
@@ -117,19 +117,19 @@
 
                 <section>
                     <label for="email">E-mail:</label>
-                    <input type="email" placeholder="fuluno@email.com" id="email">
+                    <input type="email" placeholder="fuluno@email.com" id="email" required>
                 </section>
 
                 <br>
                 <section>
                     <label for="password">Senha:</label>
-                    <input type="password" id="password" minlength="8">
+                    <input type="password" id="password" minlength="8" required placeholder="Mínimo de 8 caracteres">
                 </section>
 
                 <br>
                 <section>
                     <label for="photo">Foto:</label>
-                    <input type="file" id="photo" minlength="8" accept="image/*">
+                    <input type="file" id="photo"  accept="image/*">
                 </section>
             </fieldset>
 
@@ -144,7 +144,7 @@
 
                 <section>
                     <label for="observation" hidden>Observação</label>
-                    <textarea name="" id="observation" cols="36" rows="10"></textarea>
+                    <textarea name="" id="observation" cols="36" rows="10" placeholder="Faça observações sobre seu perrfil"></textarea>
                 </section>
             </fieldset>
 

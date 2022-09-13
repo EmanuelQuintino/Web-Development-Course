@@ -49,22 +49,22 @@
         
         <thead>
             <tr>
-                <th class="tr-left">
+                <th class="tr-left" scope="col">
                     &lt; <strong>thead</strong> &gt;
                     &lt; <strong>tr</strong> &gt;
                 </th>
 
-                <th class="main colspan" colspan="2">
+                <th class="main colspan" colspan="2" scope="colgroup">
                     &lt; <strong>th colspan="2"</strong> &gt;
                     &lt; <strong>/th</strong> &gt;
                 </th>
 
-                <th class="main">
+                <th class="main" scope="col">
                     &lt; <strong>th</strong> &gt;
                     &lt; <strong>/th</strong> &gt;
                 </th>
             
-                <th>
+                <th scope="col">
                     &lt; <strong>/tr</strong> &gt;
                     &lt; <strong>/thead</strong> &gt;
                 </th>
@@ -78,7 +78,7 @@
                     &lt; <strong>tr</strong> &gt;
                 </td>
 
-                <th class="main rowspan" rowspan="2">
+                <th class="main rowspan" rowspan="2" scope="rowgroup">
                     &lt; <strong>th rowspan="2"</strong> &gt;
                     &lt; <strong>/th</strong> &gt;
                 </th>
@@ -175,7 +175,7 @@
                 </td>
             </tr>
             
-            <th colspan="5"> 
+            <th colspan="5" scope="colgroup"> 
                 &lt; /table &gt;
             </th>
         </tfoot>

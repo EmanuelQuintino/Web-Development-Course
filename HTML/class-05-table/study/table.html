@@ -4,10 +4,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Table Diagram</title>
 </head>
 
 <style>
+    h1, p {
+        text-align: center;
+        font-size: 32px;
+        margin-top: 48px;
+    }
+    
     table {
         border-collapse: collapse;
         font-size: 32px;
@@ -20,6 +26,7 @@
         border: solid 1px black;
         background: #eee;
         text-align: center;
+        padding: 8px;
     }
 
     th.colspan {
@@ -36,149 +43,168 @@
 </style>
     
 <body>
-    <table>  
-        <caption>
+    <main>
+        <article>
             <section>
-                &lt; <strong>caption</strong>&gt;
-                &lt; <strong>/caption</strong>&gt;
+                <h1>
+                    TABLE DIAGRAM
+                </h1>
             </section>
+    
             <section>
-                &lt; <strong>table</strong> &gt;
+                <table>  
+                    <caption>
+                        <section>
+                            &lt; <strong>caption</strong>&gt;
+                            &lt; <strong>/caption</strong>&gt;
+                        </section>
+                        <section>
+                            &lt; <strong>table</strong> &gt;
+                        </section>
+                    </caption>
+                    
+                    <thead>
+                        <tr>
+                            <th class="tr-left" scope="col">
+                                &lt; <strong>thead</strong> &gt;
+                                &lt; <strong>tr</strong> &gt;
+                            </th>
+            
+                            <th class="main colspan" colspan="2" scope="colgroup">
+                                &lt; <strong>th colspan="2"</strong> &gt;
+                                &lt; <strong>/th</strong> &gt;
+                            </th>
+            
+                            <th class="main" scope="col">
+                                &lt; <strong>th</strong> &gt;
+                                &lt; <strong>/th</strong> &gt;
+                            </th>
+                        
+                            <th scope="col">
+                                &lt; <strong>/tr</strong> &gt;
+                                &lt; <strong>/thead</strong> &gt;
+                            </th>
+                        </tr> 
+                    </thead>
+                    
+                    <tbody>
+                        <tr>
+                            <td class="tr-left">
+                                &lt; <strong>tbody</strong> &gt;
+                                &lt; <strong>tr</strong> &gt;
+                            </td>
+            
+                            <th class="main rowspan" rowspan="2" scope="rowgroup">
+                                &lt; <strong>th rowspan="2"</strong> &gt;
+                                &lt; <strong>/th</strong> &gt;
+                            </th>
+            
+                            <td class="main">
+                                &lt; <strong>td</strong> &gt;
+                                &lt; <strong>/td</strong> &gt;
+                            </td>
+                            
+                            <td class="main">
+                                &lt; <strong>td</strong> &gt;
+                                &lt; <strong>/td</strong> &gt;
+                            </td>
+            
+                            <td>
+                                &lt; <strong>/tr</strong> &gt;
+                            </td>
+                        </tr>
+            
+                        
+                        <tr>
+                            <td class="tr-left">
+                                &lt; <strong>tr</strong> &gt;
+                            </td>
+            
+                            <td class="main">
+                                &lt; <strong>td</strong> &gt;
+                                &lt; <strong>/td</strong> &gt;
+                            </td>
+                            
+                            <td class="main">
+                                &lt; <strong>td</strong> &gt;
+                                &lt; <strong>/td</strong> &gt;
+                            </td>
+            
+                            <td>
+                                &lt; <strong>/tr</strong> &gt;
+                            </td>
+                        </tr>
+                        
+                        <tr>
+                            <td class="tr-left">
+                                &lt; <strong>tr</strong> &gt;
+                            </td>
+            
+                            <td class="main">
+                                &lt; <strong>td</strong> &gt;
+                                &lt; <strong>/td</strong> &gt;
+                            </td>
+            
+                            <td class="main">
+                                &lt; <strong>td</strong> &gt;
+                                &lt; <strong>/td</strong> &gt;
+                            </td>
+                            
+                            <td class="main">
+                                &lt; <strong>td</strong> &gt;
+                                &lt; <strong>/td</strong> &gt;
+                            </td>
+            
+                            <td>
+                                &lt; <strong>/tr</strong> &gt;
+                                &lt; <strong>/tbody</strong> &gt;
+                            </td>
+                        </tr>
+                    </tbody>
+                    
+                    <tfoot>
+            
+                        <tr>
+                            <td class="tr-left">
+                                &lt; <strong>tfoot</strong> &gt;
+                                &lt; <strong>tr</strong> &gt;
+                            </td>
+            
+                            <td class="main">
+                                &lt; <strong>td</strong> &gt;
+                                &lt; <strong>/td</strong> &gt;
+                            </td>
+            
+                            <td class="main">
+                                &lt; <strong>td</strong> &gt;
+                                &lt; <strong>/td</strong> &gt;
+                            </td>
+                            
+                            <td class="main">
+                                &lt; <strong>td</strong> &gt;
+                                &lt; <strong>/td</strong> &gt;
+                            </td>
+            
+                            <td>
+                                &lt; <strong>/tr</strong> &gt;
+                                &lt; <strong>/tfoot</strong> &gt;
+                            </td>
+                        </tr>
+                        
+                        <th colspan="5" scope="colgroup"> 
+                            &lt; /table &gt;
+                        </th>
+                    </tfoot>
+                </table>
             </section>
-        </caption>
-        
-        <thead>
-            <tr>
-                <th class="tr-left" scope="col">
-                    &lt; <strong>thead</strong> &gt;
-                    &lt; <strong>tr</strong> &gt;
-                </th>
-
-                <th class="main colspan" colspan="2" scope="colgroup">
-                    &lt; <strong>th colspan="2"</strong> &gt;
-                    &lt; <strong>/th</strong> &gt;
-                </th>
-
-                <th class="main" scope="col">
-                    &lt; <strong>th</strong> &gt;
-                    &lt; <strong>/th</strong> &gt;
-                </th>
-            
-                <th scope="col">
-                    &lt; <strong>/tr</strong> &gt;
-                    &lt; <strong>/thead</strong> &gt;
-                </th>
-            </tr> 
-        </thead>
-        
-        <tbody>
-            <tr>
-                <td class="tr-left">
-                    &lt; <strong>tbody</strong> &gt;
-                    &lt; <strong>tr</strong> &gt;
-                </td>
-
-                <th class="main rowspan" rowspan="2" scope="rowgroup">
-                    &lt; <strong>th rowspan="2"</strong> &gt;
-                    &lt; <strong>/th</strong> &gt;
-                </th>
-
-                <td class="main">
-                    &lt; <strong>td</strong> &gt;
-                    &lt; <strong>/td</strong> &gt;
-                </td>
-                
-                <td class="main">
-                    &lt; <strong>td</strong> &gt;
-                    &lt; <strong>/td</strong> &gt;
-                </td>
-
-                <td>
-                    &lt; <strong>/tr</strong> &gt;
-                </td>
-            </tr>
-
-            
-            <tr>
-                <td class="tr-left">
-                    &lt; <strong>tr</strong> &gt;
-                </td>
-
-                <td class="main">
-                    &lt; <strong>td</strong> &gt;
-                    &lt; <strong>/td</strong> &gt;
-                </td>
-                
-                <td class="main">
-                    &lt; <strong>td</strong> &gt;
-                    &lt; <strong>/td</strong> &gt;
-                </td>
-
-                <td>
-                    &lt; <strong>/tr</strong> &gt;
-                </td>
-            </tr>
-            
-            <tr>
-                <td class="tr-left">
-                    &lt; <strong>tr</strong> &gt;
-                </td>
-
-                <td class="main">
-                    &lt; <strong>td</strong> &gt;
-                    &lt; <strong>/td</strong> &gt;
-                </td>
-
-                <td class="main">
-                    &lt; <strong>td</strong> &gt;
-                    &lt; <strong>/td</strong> &gt;
-                </td>
-                
-                <td class="main">
-                    &lt; <strong>td</strong> &gt;
-                    &lt; <strong>/td</strong> &gt;
-                </td>
-
-                <td>
-                    &lt; <strong>/tr</strong> &gt;
-                    &lt; <strong>/tbody</strong> &gt;
-                </td>
-            </tr>
-        </tbody>
-        
-        <tfoot>
-
-            <tr>
-                <td class="tr-left">
-                    &lt; <strong>tfoot</strong> &gt;
-                    &lt; <strong>tr</strong> &gt;
-                </td>
-
-                <td class="main">
-                    &lt; <strong>td</strong> &gt;
-                    &lt; <strong>/td</strong> &gt;
-                </td>
-
-                <td class="main">
-                    &lt; <strong>td</strong> &gt;
-                    &lt; <strong>/td</strong> &gt;
-                </td>
-                
-                <td class="main">
-                    &lt; <strong>td</strong> &gt;
-                    &lt; <strong>/td</strong> &gt;
-                </td>
-
-                <td>
-                    &lt; <strong>/tr</strong> &gt;
-                    &lt; <strong>/tfoot</strong> &gt;
-                </td>
-            </tr>
-            
-            <th colspan="5" scope="colgroup"> 
-                &lt; /table &gt;
-            </th>
-        </tfoot>
-    </table>
+        </article>
+    </main>
+    <footer>
+        <p>
+            * Set "scope" in <strong>th</strong> for accessibility: 
+            &lt; <strong>th scope="col"</strong> &gt;
+            &lt; <strong>/tfoot</strong> &gt;
+        </p>    
+    </footer>  
 </body>
 </html>

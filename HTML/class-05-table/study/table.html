@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    table {
+        border-collapse: collapse;
+        font-size: 32px;
+
+        margin: 32px auto;
+    }
+
+    th.main,
+    td.main {
+        border: solid 1px black;
+        background: #eee;
+        text-align: center;
+    }
+
+    th.colspan {
+        background: lightcyan;
+    }
+    
+    th.rowspan {
+        background: lightyellow;
+    }
+
+    .tr-left {
+        text-align: right;
+    }
+</style>
+    
+<body>
+    <table>  
+        <caption>
+            <section>
+                &lt; <strong>caption</strong>&gt;
+                &lt; <strong>/caption</strong>&gt;
+            </section>
+            <section>
+                &lt; <strong>table</strong> &gt;
+            </section>
+        </caption>
+        
+        <thead>
+            <tr>
+                <th class="tr-left">
+                    &lt; <strong>thead</strong> &gt;
+                    &lt; <strong>tr</strong> &gt;
+                </th>
+
+                <th class="main colspan" colspan="2">
+                    &lt; <strong>th colspan="2"</strong> &gt;
+                    &lt; <strong>/th</strong> &gt;
+                </th>
+
+                <th class="main">
+                    &lt; <strong>th</strong> &gt;
+                    &lt; <strong>/th</strong> &gt;
+                </th>
+            
+                <th>
+                    &lt; <strong>/tr</strong> &gt;
+                    &lt; <strong>/thead</strong> &gt;
+                </th>
+            </tr> 
+        </thead>
+        
+        <tbody>
+            <tr>
+                <td class="tr-left">
+                    &lt; <strong>tbody</strong> &gt;
+                    &lt; <strong>tr</strong> &gt;
+                </td>
+
+                <th class="main rowspan" rowspan="2">
+                    &lt; <strong>th rowspan="2"</strong> &gt;
+                    &lt; <strong>/th</strong> &gt;
+                </th>
+
+                <td class="main">
+                    &lt; <strong>td</strong> &gt;
+                    &lt; <strong>/td</strong> &gt;
+                </td>
+                
+                <td class="main">
+                    &lt; <strong>td</strong> &gt;
+                    &lt; <strong>/td</strong> &gt;
+                </td>
+
+                <td>
+                    &lt; <strong>/tr</strong> &gt;
+                </td>
+            </tr>
+
+            
+            <tr>
+                <td class="tr-left">
+                    &lt; <strong>tr</strong> &gt;
+                </td>
+
+                <td class="main">
+                    &lt; <strong>td</strong> &gt;
+                    &lt; <strong>/td</strong> &gt;
+                </td>
+                
+                <td class="main">
+                    &lt; <strong>td</strong> &gt;
+                    &lt; <strong>/td</strong> &gt;
+                </td>
+
+                <td>
+                    &lt; <strong>/tr</strong> &gt;
+                </td>
+            </tr>
+            
+            <tr>
+                <td class="tr-left">
+                    &lt; <strong>tr</strong> &gt;
+                </td>
+
+                <td class="main">
+                    &lt; <strong>td</strong> &gt;
+                    &lt; <strong>/td</strong> &gt;
+                </td>
+
+                <td class="main">
+                    &lt; <strong>td</strong> &gt;
+                    &lt; <strong>/td</strong> &gt;
+                </td>
+                
+                <td class="main">
+                    &lt; <strong>td</strong> &gt;
+                    &lt; <strong>/td</strong> &gt;
+                </td>
+
+                <td>
+                    &lt; <strong>/tr</strong> &gt;
+                    &lt; <strong>/tbody</strong> &gt;
+                </td>
+            </tr>
+        </tbody>
+        
+        <tfoot>
+
+            <tr>
+                <td class="tr-left">
+                    &lt; <strong>tfoot</strong> &gt;
+                    &lt; <strong>tr</strong> &gt;
+                </td>
+
+                <td class="main">
+                    &lt; <strong>td</strong> &gt;
+                    &lt; <strong>/td</strong> &gt;
+                </td>
+
+                <td class="main">
+                    &lt; <strong>td</strong> &gt;
+                    &lt; <strong>/td</strong> &gt;
+                </td>
+                
+                <td class="main">
+                    &lt; <strong>td</strong> &gt;
+                    &lt; <strong>/td</strong> &gt;
+                </td>
+
+                <td>
+                    &lt; <strong>/tr</strong> &gt;
+                    &lt; <strong>/tfoot</strong> &gt;
+                </td>
+            </tr>
+            
+            <th colspan="5"> 
+                &lt; /table &gt;
+            </th>
+        </tfoot>
+    </table>
+</body>
+</html>

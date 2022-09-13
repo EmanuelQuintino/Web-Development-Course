@@ -7,8 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Class-06 Formulários Challenge</title>
 
-    <!-- Criar um Menu de Site -->
-
 </head>
 
 <body>
@@ -16,33 +14,138 @@
         <h1>Cadastro de Pessoal</h1>
     </header>
     <main>
-        <form action="">
+        <form action="" method="get">
             <fieldset>
-                <legend>Dados Pessoais</legend>
+                <legend>
+                    <strong>
+                        DADOS PESSOAIS
+                    </strong>
+                </legend>
                 
                 <section>
                     <label for="name">Nome: </label>
-                    <input id="name" type="text">
+                    <input id="name" type="text" autofocus>
+
+                    <span>
+                        <label for="birth">Nascimento: </label>
+                        <input id="birth" type="date">
+                    </span>
                 </section>
                 <br>
                 <section>
-                    <label for="name">Nascimento: </label>
-                    <input id="name" type="date">
+                    <label for="RG">RG:</label>
+                    <input id="RG" type="number">
                 </section>
                 <br>
                 <section>
-                    <label for="name">RG: </label>
-                    <input id="name" type="number">
+                    <label for="CPF">CPF:</label>
+                    <input id="CPF" type="number">
                 </section>
                 <br>
                 <section>
-                    <label for="name">CPF: </label>
-                    <input id="name" type="number">
+                    <input id="masculine" type="radio" name="sexo">
+                    <label for="masculine">Masculino</label>
+
+                    <input id="feminine" type="radio" name="sexo">
+                    <label for="feminine">Feminino</label>
                 </section>
             </fieldset>
+
+            <br>
+
+            <fieldset>
+                <legend>
+                    <strong>
+                        DADOS DE ENDEREÇO
+                    </strong>
+                </legend>
+                
+                <section>
+                    <label for="street">Rua:</label>
+                    <input id="street" type="text">
+                    
+                    <span>
+                        <label for="number">Número:</label>
+                        <input id="number" type="number">
+                    </span>
+                </section>
+
+                <br>
+                <section>
+                    <label for="city">Cidade:</label>
+                    <input id="city" type="text">
+                </section>
+
+                <br>
+                <section>
+                    <label for="state">Estado:</label>
+                    <input id="state" type="text" list="states">
+
+                    <datalist id="states">
+                        <option value="Acre AC"></option>
+                        <option value="Alagoas AL"></option>
+                        <option value="Amapá AP"></option>
+                        <option value="Amazonas AM"></option>
+                        <option value="Bahia BA"></option>
+                        <option value="Ceará CE"></option>
+                        <option value="Espírito Santo ES"></option>
+                        <option value="Goiás GO"></option>
+                        <option value="Maranhão MA"></option>
+                        <option value="Mato Grosso MT"></option>
+                        <option value="Mato Grosso do Sul MS"></option>
+                        <option value="Minas Gerais MG"></option>
+                        <option value="Pará PA"></option>
+                        <option value="Paraíba PB"></option>
+                        <option value="Paraná PR"></option>
+                        <option value="Pernambuco PE"></option>
+                        <option value="Piauí PI"></option>
+                        <option value="Rio de Janeiro RJ"></option>
+                        <option value="Rio Grande do Norte RN"></option>
+                        <option value="Rio Grande do Sul RS"></option>
+                        <option value="Rondônia RO"></option>
+                        <option value="Roraima RR"></option>
+                        <option value="Santa Catarina SC"></option>
+                        <option value="São Paulo SP"></option>
+                        <option value="Sergipe SE"></option>
+                        <option value="Tocantins TO"></option>
+                        <option value="Distrito Federal DF"></option>
+                    </datalist>
+                </section>
+            </fieldset>
+
+            <br>
+            
+            <fieldset>
+                <legend>
+                    <strong>
+                        DADOS DE LOGIN
+                    </strong>
+                </legend>
+
+                <section>
+                    <label for="email">E-mail:</label>
+                    <input type="email" placeholder="fuluno@email.com">
+                </section>
+
+                <br>
+                <section>
+                    <label for="password">Senha:</label>
+                    <input type="password" id="password" minlength="8">
+                </section>
+
+                <br>
+                <section>
+                    <label for="photo">Foto:</label>
+                    <input type="file" id="photo" minlength="8" accept="image/*">
+                </section>
+            </fieldset>
+
+            <br>
+
+            <button type="submit">Salvar</button>
+            <button type="reset">Limpar</button>
         </form>
     </main>
-
 </body>
 
 </html>

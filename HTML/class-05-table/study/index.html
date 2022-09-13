@@ -1,68 +1,64 @@
 <!DOCTYPE html>
-<html lang="pr-BR">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Class 05 - Table</title>
-
-    <style>
-        table {
-            border-collapse: collapse;
-            text-align: center;
-            width: 200px;
-        }
-        th, td {
-            border: 1px solid black;
-        }
-
-        th, tfoot {
-            background: #eee;
-        }
-    </style>
+    <title>Class-05- Table</title>
 </head>
+
+<style>
+    table {
+        border-collapse: collapse;
+        text-align: center;
+    }
+
+    thead, tfoot {
+        background: #eee;
+    }
+
+    td,th {
+        border: solid 1px black;
+    }
+    </style>
+    
 <body>
     <table>
-
-        <caption>
-            <strong>
-                PRODUTOS
-            </strong>
-        </caption>
-        
+        <caption>Lista</caption>
         <thead>
             <tr>
-                <th>NOME</th>
-                <th>PREÇO</th>
+                <th>Produto</th>
+                <th>Preço</th>
             </tr>
         </thead>
         
         <tbody>
             <tr>
-                <td>ARROZ</td>
+                <td>Arroz</td>
                 <td>100</td>
             </tr>
+            
             <tr>
-                <td>FEIJÃO</td>
-                <td>230</td>
+                <td>Feijão</td>
+                <td>220</td>
             </tr>
-        </tbody>
-
-        <tfoot>
+            
             <tr>
-                <td>
-                 <strong>
-                    TOTAL
-                 </strong>   
+                <td>Óleo</td>
+                <td>320</td>
+            </tr>
+       </tbody>
+       
+       <tfoot>
+           <tr>
+               <td>
+                   <strong>Total</strong>
                 </td>
                 <td>
-                    <strong>
-                       330
-                    </strong>   
-                   </td>
-            </tr>
+                    <strong>640</strong>
+                </td>
+            </tr>            
         </tfoot>
-        
     </table>
 </body>
 </html>

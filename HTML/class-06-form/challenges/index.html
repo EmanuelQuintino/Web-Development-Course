@@ -32,7 +32,7 @@
         <h1>CRIE SEU PERFIL</h1>
     </header>
     <main>
-        <form action="" method="GET">
+        <form action="" method="post">
             <fieldset class="area-01">
                 <legend>
                     <strong>
@@ -42,24 +42,24 @@
                 
                 <section>
                     <label for="name">Nome:</label>
-                    <input id="name" type="text" autofocus required placeholder="Digite seu nome">
+                    <input id="name" type="text" autofocus required placeholder="Digite seu nome" name="name">
                 </section>
 
                 <br>
                 <section>
                     <label for="birth">Nascimento: </label>
-                    <input id="birth" type="date">
+                    <input id="birth" type="date" name="birth">
                 </section>
                 
                 <br>
                 <section>
                     <label for="RG">RG:</label>
-                    <input id="RG" type="number" required placeholder="Informe seu RG">
+                    <input id="RG" type="number" required placeholder="Informe seu RG" name="RG">
                 </section>
                 <br>
                 <section>
                     <label for="CPF">CPF:</label>
-                    <input id="CPF" type="number" required placeholder="Informe seu CPF">
+                    <input id="CPF" type="number" required placeholder="Informe seu CPF" name="CPF">
                 </section>
                 <br>
                 <section>
@@ -82,22 +82,22 @@
                 
                 <section>
                     <span>
-                        <input id="html" type="checkbox">
+                        <input id="html" type="checkbox" name="html">
                         <label for="html">HTML</label>      
                     </span>
 
                     <span>
-                        <input id="css" type="checkbox">
+                        <input id="css" type="checkbox" name="css">
                         <label for="css">CSS</label>      
                     </span>
 
                     <span>
-                        <input id="javaScript" type="checkbox">
+                        <input id="javaScript" type="checkbox" name="javaScript">
                         <label for="javaScript">JavaScript</label>      
                     </span>
 
                     <span>
-                        <input id="sql" type="checkbox">
+                        <input id="sql" type="checkbox" name="sql">
                         <label for="sql">SQL</label>      
                     </span>
                 </section>
@@ -115,19 +115,19 @@
 
                 <section>
                     <label for="email">E-mail:</label>
-                    <input type="email" placeholder="fuluno@email.com" id="email" required>
+                    <input type="email" placeholder="fuluno@email.com" id="email" required name="email">
                 </section>
 
                 <br>
                 <section>
                     <label for="password">Senha:</label>
-                    <input type="password" id="password" minlength="8" required placeholder="Mínimo de 8 caracteres">
+                    <input type="password" id="password" minlength="8" required placeholder="Mínimo de 8 caracteres" name="password">
                 </section>
 
                 <br>
                 <section>
                     <label for="photo">Foto:</label>
-                    <input type="file" id="photo"  accept="image/*">
+                    <input type="file" id="photo" accept="image/*" name="photo">
                 </section>
             </fieldset>
 
@@ -142,7 +142,7 @@
 
                 <section>
                     <label for="observation" hidden>Observação</label>
-                    <textarea name="" id="observation" cols="36" rows="10" placeholder="Faça observações sobre seu perfil"></textarea>
+                    <textarea name="" id="observation" cols="36" rows="10" placeholder="Faça observações sobre seu perfil" name="observation"></textarea>
                 </section>
             </fieldset>
 

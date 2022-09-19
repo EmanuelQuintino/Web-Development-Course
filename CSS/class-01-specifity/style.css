@@ -1,0 +1,15 @@
+h1, p{
+    color: white;
+}
+
+.texto p {
+    color: red;
+}
+
+.texto {
+    color: peru;
+}
+
+#ultimoTexto .texto {
+    color: azure;
+}

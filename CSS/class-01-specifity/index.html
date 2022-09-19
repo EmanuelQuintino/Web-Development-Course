@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class-01 Especificidade</title>
+
+    <style>
+
+        /* HTML: tag > atributos > valor  */
+
+        /* CSS: seletor > propriedade > valor */
+
+        /* 
+            Especificidade:
+                0 = * Seletor universal
+                1 = Elementos (tags) h1, p, img, span... 
+                10 = Class Ex: (.class)
+                100 = ID Ex: (#id)
+                1000 = Inline
+        */
+
+        h1 {
+            font-size: 36px;
+        }
+
+    </style>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <h1 class="texto">Estudo do CSS</h1>
+    <p class="texto">CSS - Cascading Style Sheets</p>
+
+    <span class="texto">
+        <p class="texto">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo veniam expedita recusandae a nihil eum ratione, exercitationem, similique doloremque tempore vel ab, amet voluptate accusamus quos impedit. Nesciunt, voluptatibus! Corrupti.
+        </p>
+    </span>
+
+    <p id="ultimoTexto" class="texto">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore debitis libero dolores praesentium incidunt sit, omnis quis commodi veritatis voluptatem. Facere dolorem laudantium molestiae veniam aspernatur nobis nostrum commodi perferendis?
+    </p>
+
+    
+</body>
+</html>

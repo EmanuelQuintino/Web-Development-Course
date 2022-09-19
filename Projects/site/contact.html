@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class-07 Site Navegation</title>
+
+    <style>
+        header, h1 {
+            text-align: center;
+        }
+
+        li {
+            display: inline;
+            font-weight: bold;
+        }
+
+        #contact {
+            color: red;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        h1 {
+            margin-top: 72px;
+        }
+
+        p {
+            width: 320px;
+            margin: 0 auto;
+        }
+
+        form {
+            width: 320px;
+            margin: auto;
+
+            margin-top: 32px;
+
+        }
+    </style>
+
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li>
+                    <a href="index.html" id="home">HOME</a>
+                </li>
+                <li>
+                    <a href="./page/article.html" id="article">ARTIGO</a>
+                </li>
+                <li>
+                    <a href="contact.html" id="contact">CONTATO</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <article>
+            <section>
+                <h1>CONTATO</h1>
+                <p>Telefone: (88) 99605-9913</p>
+                <p>E-mail: emanuelquintino@hotmail.com</p>
+            </section>
+            
+            <section>
+                <form action="">
+                    <fieldset>
+                        <legend>AGENDE SUA VISITA</legend>
+        
+                        <section>
+                            <label for="name">Nome:</label>
+                            <input type="text" id="name" required name="nome">
+                        </section>
+        
+                        <br>
+                        <section>
+                            <label for="email">E-mail:</label>
+                            <input type="email" placeholder="fuluno@email.com" id="email" required name="email">
+                        </section>
+                        
+                        <br>
+                        <section>
+                            <label for="observation">Observação</label>
+                            <textarea name="" id="observation" cols="36" rows="10" placeholder="Faça observações sobre seu perfil" name="observation" maxlength="370"></textarea>
+                        </section>
+                    </fieldset>
+        
+                    <br>
+        
+                    <button type="submit">Enviar</button>
+                    </fieldset>
+                </form>
+            </section>
+        </article>
+    </main>
+</body>
+</html>

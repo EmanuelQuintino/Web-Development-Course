@@ -12,6 +12,7 @@ span p {
 
 .texto {
     color: peru;
+    font-family: 'Roboto', serif;
 }
 
 #ultimoTexto .texto {

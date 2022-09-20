@@ -2,6 +2,10 @@ h1, p{
     color: white;
 }
 
+span p {
+    color: darkgreen !important;
+}
+
 .texto p {
     color: red;
 }

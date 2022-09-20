@@ -14,9 +14,9 @@ h1, p{
     font-weight: bold;
     /* 0-9 A B C D E F*/
     font-style: italic;
-    /* font-size: 32px; */
+    font-size: 24px;
     /* font-size: 4rem; */
-    font-size: 70%;
+    /* font-size: 70%; */
 
     /* letter-spacing: 8px; */
     /* word-spacing: 2em; */
@@ -42,6 +42,10 @@ h1, p{
 
 #ultimoTexto .texto {
     color: azure;
+}
+
+div.father {
+    font-size: 48px;
 }
 
 div {

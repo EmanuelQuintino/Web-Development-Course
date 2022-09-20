@@ -1,20 +1,49 @@
-h1, p{
-    color: white;
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Roboto:wght@400;700&display=swap');
+
+body {
+    /* font-family: 'Times New Roman', Times, serif; */
+    font-family: 'Bungee Spice', cursive;
+    /* font-family: 'Roboto', sans-serif; */
 }
 
-span p {
-    color: darkgreen !important;
+h1, p{
+
+    
+/* color: #AA0; */
+    color:  black;
+    font-weight: bold;
+    /* 0-9 A B C D E F*/
+    font-style: italic;
+    /* font-size: 32px; */
+    /* font-size: 4rem; */
+    font-size: 70%;
+
+    /* letter-spacing: 8px; */
+    /* word-spacing: 2em; */
+    /* line-height: 2; */
+
+    text-transform: capitalize;
+
+    text-align: right;
+
+    text-shadow: 0.2px 0.2px 0.5px black;
 }
 
 .texto p {
-    color: red;
+    color: hsl(240, 100%, 50%)
+    /* 0 - 255 */
 }
 
 .texto {
     color: peru;
-    font-family: 'Roboto', serif;
+    background-color: bisque;
+    border: solid 1px red;
 }
 
 #ultimoTexto .texto {
     color: azure;
+}
+
+div {
+    font-size: 50%;
 }

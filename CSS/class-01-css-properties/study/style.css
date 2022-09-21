@@ -1,20 +1,43 @@
 @import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Roboto:wght@400;700&display=swap');
 
 body {
+
+    width: 720px;
+    margin: auto;
+
     /* font-family: 'Times New Roman', Times, serif; */
     font-family: 'Bungee Spice', cursive;
     /* font-family: 'Roboto', sans-serif; */
+
+    /* background: linear-gradient(180deg, lightblue, lightgreen); */
+
+    
+
+    background-image: url("images/logo.jpg");
+    background-repeat: no-repeat;
+    background-size: 320px;
+    background-position: top right;
+    background-attachment: fixed;
+}
+
+div.myImage {
+
+    height: 120px;
+    width: 120px;
+
+    background: linear-gradient(130deg, purple, red, yellow);
+
+    border-radius: 20%;    
 }
 
 h1, p{
 
-    
 /* color: #AA0; */
     color:  black;
     font-weight: bold;
     /* 0-9 A B C D E F*/
     font-style: italic;
-    font-size: 24px;
+    font-size: 32px;
     /* font-size: 4rem; */
     /* font-size: 70%; */
 
@@ -36,18 +59,14 @@ h1, p{
 
 .texto {
     color: peru;
-    background-color: bisque;
-    border: solid 1px red;
+    /* background-color: bisque; */
+    /* border: solid 1px red; */
 }
 
 #ultimoTexto .texto {
     color: azure;
 }
 
-div.father {
-    font-size: 48px;
-}
-
 div {
-    font-size: 80%;
+    font-size: 70%;
 }

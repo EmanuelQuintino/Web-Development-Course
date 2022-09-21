@@ -1,0 +1,97 @@
+:root {
+    font-size: 6.25%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 16rem;
+    /* background: lightgrey; */
+    height: 100vh;
+    color: peru;
+}
+
+#page {
+    padding: 16rem;
+    padding: 32rem;
+}
+
+header h2 {
+    font-size: 32rem;
+}
+
+header, nav ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    gap: 24rem;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: peru;
+    /* text-shadow: 1rem 1rem 2rem black ; */
+    font-size: 24rem;
+}
+
+main article {
+    margin-top: 72rem;
+    
+    max-width: 1200rem;
+    height: 60vh;
+
+    margin: 72rem auto;
+    padding: 32rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 72rem;
+    
+    /* text-shadow: 1rem 1rem 1rem black ; */
+    font-size: 32rem;
+
+    
+    /* background: rgba(0, 0, 0, 0.2); */
+}
+
+section img {
+    width: 320rem;
+}
+
+img {
+    width: 320px;
+}
+
+footer {
+    text-align: center;
+    font-size: 32rem;
+    margin: 16rem;
+}
+
+.form-contact {
+    flex-direction: column;
+
+    height: 80%;
+    width: 640rem;
+    margin: 128rem auto;
+    border-radius: 5%;
+
+    background-color: #eee;
+}
+
+.form-contact section {
+    font-size: 24rem;
+}
+
+fieldset {
+    padding: 32rem;
+}

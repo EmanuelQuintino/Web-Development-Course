@@ -6,20 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Class-07 Site Navegation</title>
     
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../style.css">
     
 </head>
 <body>
     <article id="page">
         <header>
-            <h2>my.title</h2>
+            <img src="../medias/chalkboard-with-kids.jpg" alt="" class="logo">
             <nav>
                 <ul>
                     <li>
-                        <a href="index.html" id="home">HOME</a>
+                        <a href="../index.html" id="home">HOME</a>
                     </li>
                     <li>
-                        <a href="./page/article.html" id="article">PLANOS</a>
+                        <a href="article.html" id="article">PLANOS</a>
                     </li>
                     <li>
                         <a href="contact.html" id="contact" style="color: red;">CONTATO</a>
@@ -30,22 +30,17 @@
     
         <main>
             <article class="form-contact">
-                <section>
-                    <h1>CONTATO</h1>
-                    <p>Telefone: (88) 99605-9913</p>
-                    <p>E-mail: emanuelquintino@hotmail.com</p>
-                </section>
                 
                 <section>
                     <form action="">
                         <fieldset>
                             <legend>AGENDE SUA VISITA</legend>
-            
+                            
                             <section>
                                 <label for="name">Nome:</label>
                                 <input type="text" id="name" required name="nome">
                             </section>
-            
+                            
                             <br>
                             <section>
                                 <label for="email">E-mail:</label>
@@ -54,23 +49,28 @@
                             
                             <br>
                             <section>
-                                <label for="observation">Observação</label>
+                                <label for="observation">Observações</label> <br>
                                 <textarea name="" id="observation" cols="36" rows="10" placeholder="Faça observações sobre seu perfil" name="observation" maxlength="370"></textarea>
                             </section>
                         </fieldset>
-            
-                        <br>
-            
+                        
+                        
                         <button type="submit">Enviar</button>
-                        </fieldset>
-                    </form>
-                </section>
-            </article>
-        </main>
-
-        <footer>
-            &copy; myFooter
-        </footer>
-    </article>
+                    </fieldset>
+                </form>
+            </section>
+            
+            <section>
+                <h1>CONTATO</h1>
+                <p>Telefone: (88) 99605-9913</p>
+                <p>E-mail: emanuelquintino@hotmail.com</p>
+            </section>
+        </article>
+    </main>
+    
+    <footer>
+        &copy; myFooter
+    </footer>
+</article>
 </body>
 </html>

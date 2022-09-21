@@ -1,7 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,400;1,700&display=swap');
 
-
-
 :root {
     --blue-color: #2C87BF;
     --green-color: #3FBF83;
@@ -62,7 +60,8 @@ p {
 }
 
 .slogan {
-    font-weight: 800;
+    /* font-family: 'Kanit', sans-serif; */
+    font-weight: 700;
     margin-bottom: 24px;
 }
 

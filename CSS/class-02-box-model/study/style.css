@@ -1,0 +1,49 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    display: none;
+}
+
+section {
+    height: 80vh;
+    border: solid 1px black;
+    padding: 32px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+}
+
+div {
+    height: 140px;
+    width: 140px;
+    
+    border: solid 1px black;
+
+    color: white;
+    font-size: 64px;
+    font-weight: 500;
+}
+
+.square1 {
+    background: red;
+    /* display: inline-block; */
+    padding: 20px;
+}
+
+.square2 {
+    background: green;
+    padding: 20px;
+    /* margin: 20px; */
+}
+
+.square3 {
+    background: blue;
+    padding: 20px;
+    /* margin: 20px; */
+}

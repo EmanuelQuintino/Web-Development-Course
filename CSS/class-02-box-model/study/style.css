@@ -4,17 +4,21 @@
     box-sizing: border-box;
 }
 
-img {
-    display: none;
+body {
+    padding: 32px;
 }
 
-section {
+img {
+    display: inline;
+}
+
+main {
     height: 80vh;
     border: solid 1px black;
     padding: 32px;
 
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     gap: 32px;
@@ -34,17 +38,13 @@ div {
 .square1 {
     background: red;
     /* display: inline-block; */
-    padding: 20px;
 }
 
 .square2 {
     background: green;
-    padding: 20px;
-    /* margin: 20px; */
+    /* padding: 20px; */
 }
 
 .square3 {
     background: blue;
-    padding: 20px;
-    /* margin: 20px; */
 }

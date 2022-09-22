@@ -23,16 +23,19 @@
                 -margin
                     Margin Collapsing 
                         Quando o top se junta com o bottom sem somar (Pega o margin maior)
-                        Obs: Quando os elementos estão um do lado do outro somam-se as margens.
+                        Obs: Quando os elementos estão lado a lado somam-se as margens.
 
                 Shorthand: 
-                    - 1px > top, right, bottom, left
-                    - 1px 2px > top, bottom, right, left
-                    - 1px 2px 3px > top, right,left, bottom 
-                    - 1px 2px 3px 4px > top, right, bottom, left
+                    1px >  top, right, bottom, left (1px)
+                    1px 2px > top, bottom (1px) - right, left (2px)
+                	1px 2px 3px > top (1px) - right, left (2px) - bottom (3px) 
+                    1px 2px 3px 4px > top(1px) - right(2px) - bottom (3px) - left(4px)
+
                 
                 Display
                     - block
+                       Mantém as propriedades
+
                     - inline 
                         height e width não funcionam
                         Somente valores horizontais em padding, margin e border

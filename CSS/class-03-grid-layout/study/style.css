@@ -12,10 +12,12 @@ body {
     grid-template-areas: 
         "Header Header"
         "Main Aside"
+        ". Aside"
+        ". Aside"
         "Footer Footer";
     
     grid-template-columns: 1fr 30%;
-    grid-template-rows: 10% 1fr 10%;
+    grid-template-rows: 10% 50% 1fr 10%;
 }
 
 header { 

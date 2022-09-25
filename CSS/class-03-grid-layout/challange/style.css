@@ -14,8 +14,8 @@ body {
         "MAIN ASIDE"
         "FOOTER FOOTER";
 
-        grid-template-columns: 1fr 73%;
-        grid-template-rows: 20% 1fr 10%;
+    grid-template-columns: 1fr 73%;
+    grid-template-rows: 20% 1fr 10%;
 }
 
 header {
@@ -74,9 +74,8 @@ main {
     justify-content: center;
 }
 
-/* Part 1 */
-article {
-    color: #055902;
+/* Part 1, Part 2 */
+article { 
     font: bolder;
     padding: .5rem;
 
@@ -94,7 +93,6 @@ h2 {
 p {
     margin: .5rem;
 }
-
 
 aside {
     grid-area: ASIDE;

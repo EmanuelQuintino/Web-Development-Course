@@ -16,8 +16,20 @@ body {
         ". Aside"
         "Footer Footer";
     
-    grid-template-columns: 1fr 30%;
-    grid-template-rows: 10% 50% 1fr 10%;
+    /* grid-template-columns: 1fr 30%; */
+    /* grid-template-rows: 10% 50% 1fr 1fr 10%; */
+
+    grid-template-columns: 128px 128px;
+    grid-template-rows: 72px 72px 72px 72px 72px;
+
+    justify-content: center;
+    align-content: center;
+
+    /* justify-items: center; */
+    /* align-items: center; */
+    
+    gap: 8px;
+
 }
 
 header { 

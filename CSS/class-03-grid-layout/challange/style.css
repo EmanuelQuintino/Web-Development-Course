@@ -89,12 +89,34 @@ aside {
 }
 
 .gallery {
-    display: flex;
+    /* display: flex;
     align-items: center;
     justify-content: center;
-    /* flex-wrap: wrap; */
+    gap: 8px; */
 
+    display: grid;
+    grid-template-areas: 
+        "A B C"
+        "A D E";
     gap: 8px;
+
+    padding-top: 42px;
+}
+
+.gallery :nth-child(1) {
+    grid-area: A;
+}
+.gallery :nth-child(2) {
+    grid-area: B;
+}
+.gallery :nth-child(3) {
+    grid-area: C;
+}
+.gallery :nth-child(4) {
+    grid-area: D;
+}
+.gallery :nth-child(5) {
+    grid-area: E;
 }
 
 img {

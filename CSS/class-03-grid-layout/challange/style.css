@@ -36,7 +36,7 @@ header {
 
 #title {
     font-size: 3em;
-    text-shadow: .5px .5px .5px black;
+    text-shadow: 1px 1px 2px black;
 }
 
 ul {
@@ -146,7 +146,7 @@ footer {
     color:white;
     font: bolder;
     padding: .5em;
-    text-shadow: .5px .5px .5px black;
+    text-shadow: .5px .5px 2px black;
     
     display: flex;
     align-items: center;

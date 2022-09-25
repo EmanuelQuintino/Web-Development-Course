@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+
+    height: 100vh;
+    display: grid;
+
+    grid-template-areas: 
+        "Header Header"
+        "Main Aside"
+        "Footer Footer";
+    
+    grid-template-columns: 1fr 30%;
+    grid-template-rows: 10% 1fr 10%;
+}
+
+header { 
+    background: lightskyblue;
+    grid-area: Header;
+}
+
+h1 {
+    font-size: 32px;
+}
+
+main {
+    background: lightcoral;
+    grid-area: Main;
+}
+
+aside {
+    background: lightgreen;
+    grid-area: Aside;
+}
+
+footer {
+    background: lightgray;
+    grid-area: Footer;
+}

@@ -1,0 +1,108 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* >>>>> Header <<<<<*/
+
+header {
+    display: flex;
+    justify-content: space-between;
+    border: solid 1px;
+    background: linear-gradient(grey, lightgrey);
+    color:white;
+    font: bolder;
+    padding: 2em;
+    align-items: center;
+    text-shadow: .01rem .01rem .1rem black;
+}
+
+#titulo {
+    font-size: 2.5em;
+}
+
+ul {
+    display: flex;
+    list-style: none;
+    /* gap: .8rem;  */
+    justify-content: space-evenly;
+    /* rem acessa o elemento root e corrige o problema em com os filhos  */
+    align-items: center;
+    border: solid 1px;
+    width: 15rem;
+}
+
+li {
+    padding: .4rem;
+    flex: 1;
+}
+
+li:hover {
+    background-color: lightgray;
+}
+
+/* >>>>> Main <<<<<*/
+
+article {
+    display: flex;
+    gap: .5rem;
+    margin: .5rem;
+}
+
+section {
+    border: solid .1rem lightgray;
+    height: 120vh;
+}
+
+/* Part 1 */
+article section:nth-child(1) {
+    color: gray;
+    flex-grow: 1;
+    flex-shrink: 1;
+    font: bolder;
+    padding: .5rem;
+}
+
+/* Part 2 */
+article section:nth-child(2) {
+    color: gray;
+    flex-grow: 4;
+    font: bolder;
+    padding: .5rem;
+}
+
+p {
+    margin: .5rem;
+
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    padding: .5rem;
+    gap: 1rem;
+    /* justify-content: space-evenly; */
+    justify-content: center;
+    align-items: center;
+    /* border: solid 1px lightgray; */
+}
+
+.image {
+    width: 20%;
+    height: auto;
+    /* margin: .5em; */
+}
+
+footer {
+    font-size: .7rem;
+    border: solid 1px;
+    background: linear-gradient(grey, lightgrey);
+    color:white;
+    font: bolder;
+    padding: .5em;
+    text-shadow: .01rem .01rem .1rem black;
+    
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+}

@@ -14,7 +14,7 @@ body {
         "MAIN ASIDE"
         "FOOTER FOOTER";
 
-        grid-template-columns: 1fr 75%;
+        grid-template-columns: 1fr 73%;
         grid-template-rows: 20% 1fr 10%;
 }
 
@@ -26,7 +26,7 @@ header {
     align-items: center;
     
     border: solid 1px;
-    background: linear-gradient(green, lightgreen);
+    background: linear-gradient(#034001, #078C03);
     color:white;
     font: bolder;
     text-shadow: .01rem .01rem .1rem black;
@@ -59,7 +59,8 @@ li {
 }
 
 li:hover {
-    background-color: lightgreen;
+    background-color: #078C03;
+    filter: brightness(1.2);
     cursor: pointer;
 }
 
@@ -75,11 +76,11 @@ main {
 
 /* Part 1 */
 article {
-    color: green;
+    color: #055902;
     font: bolder;
     padding: .5rem;
 
-    box-shadow: .1px .1px 2px .5px black;
+    box-shadow: .5px .5px 2px 1px black;
     border-radius: 8px;
 }
 
@@ -92,24 +93,24 @@ aside {
     grid-area: ASIDE;
 }
 
-.gallery {
-    /* display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px; */
+aside.gallery {
+    display: flex;
+    place-items: center;
+}
 
+.gallery section{
     display: grid;
     grid-template-areas: 
         "A B C"
         "A D E";
-    gap: 8px;
-
-    padding-top: 42px;
+    gap: 16px;
 }
 
 .gallery :nth-child(1) {
     grid-area: A;
+    width: 251px;
 }
+
 .gallery :nth-child(2) {
     grid-area: B;
 }
@@ -126,22 +127,22 @@ aside {
 img {
     width: 320px;
     transition: 200ms;
+
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
+
+    border-radius: 4px;
 }
 
 img:hover {
-    scale: 1.02;
+    scale: 1.05;
     filter: brightness(1.1);
-}
-
-#firstImg {
-    width: 242px;
 }
 
 footer {
     grid-area: FOOTER;
     font-size: .7rem;
     border: solid 1px;
-    background: linear-gradient(lightgreen, green);
+    background: linear-gradient(#078C03, #034001);
     color:white;
     font: bolder;
     padding: .5em;

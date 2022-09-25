@@ -45,7 +45,11 @@ ul {
     justify-content: space-evenly;
     align-items: center;
     border: solid 1px;
-    width: 15rem;
+    width: 24rem;
+
+    font-size: 24px;
+    text-align: center;
+
 }
 
 li {

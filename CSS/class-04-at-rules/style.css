@@ -1,0 +1,36 @@
+@charset "utf-8";
+
+/* @import "../class-03-grid-layout/study/style.css"; */
+
+@font-face {
+    font-family: myFont1;
+    src: url("fonts/simpsons.ttf");
+}
+
+@font-face {
+    font-family: myFont2;
+    src: url("fonts/zrnic/zrnic\ rg.ttf");
+}
+
+
+
+div#circle {
+    height: 120px;
+    width: 120px;
+    background: red;
+
+    padding: 8px;
+
+    color: white;
+    font-size: 32px;
+
+    bor
+}
+
+h1 {
+    font-family: myFont1;    
+}
+
+h2 {
+    font-family: myFont2;
+}

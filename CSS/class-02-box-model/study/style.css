@@ -8,13 +8,23 @@ body {
     padding: 32px;
 }
 
+h1 {
+    position: sticky;
+    top: 35px;
+}
+
+h2 {
+    position: sticky;
+    top: 32px;
+}
+
 img {
     display: inline;
     width: 480px;
 }
 
 main {
-    height: 80vh;
+    height: 100vh;
     border: solid 1px black;
     padding: 32px;
 

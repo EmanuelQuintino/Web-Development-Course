@@ -108,12 +108,12 @@ aside.gallery {
     grid-template-areas: 
         "A B C"
         "A D E";
-    gap: 16px;
+    gap: 24px;
 }
 
 .gallery :nth-child(1) {
     grid-area: A;
-    width: 251px;
+    width: 13rem;
 }
 
 .gallery :nth-child(2) {
@@ -130,7 +130,7 @@ aside.gallery {
 }
 
 img {
-    width: 320px;
+    width: 16rem;
     transition: 200ms;
 
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 1);

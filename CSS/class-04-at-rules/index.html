@@ -9,22 +9,51 @@
     <link rel="stylesheet" href="style.css">
     
     <!-- 
-        @charset — Defines the character set used by the style sheet.
+        @charset — Define o conjunto de caracteres usado pela folha de estilo.
         
-        @import — Tells the CSS engine to include an external style sheet.
+        @import — Diz ao mecanismo CSS para incluir uma folha de estilo externa.
         
-        @font-face — Describes the aspect of an external font to be downloaded.
+        @font-face — Descreve o aspecto de uma fonte externa a ser baixada.
             - TTF (TrueType), OTF (OpenType)
             - site: https://www.dafont.com/pt/)
         
-        @media — A conditional group rule that will apply its content if the device meets the criteria of the condition defined using a media query.
+        @media — Uma regra de grupo condicional que aplicará seu conteúdo se o dispositivo atender aos critérios da condição definida usando uma consulta de mídia.
+            -Mobile First
+            -Flexible Unit
         
-        @keyframes — Describes the aspect of intermediate steps in a CSS animation sequence.
+        @keyframes — Descreve o aspecto das etapas intermediárias em uma sequência de animação CSS.
      -->
 </head>
 <body>
-    <!-- <div id="circle">X</div> -->
-    <h1>os Simpsons</h1>
-    <h2>Play Station 2</h2>
+    <article>
+        <h1>Class At Rules</h1>
+        <section>
+            <h2>@charset</h2>
+            <p>
+                Define o conjunto de caracteres usado pela folha de estilo.
+            </p>
+        </section>
+
+        <section>
+            <h2>@import</h2>
+            <p>
+                Diz ao mecanismo CSS para incluir uma folha de estilo externa.
+            </p>
+
+            <div id="circle">X</div>
+
+        </section>
+        <section>
+            <h2>@font-face</h2>
+            <pre>
+@font-face — Descreve o aspecto de uma fonte
+externa a ser baixada.
+    - TTF (TrueType), OTF (OpenType)
+    - site: https://www.dafont.com/pt/)
+            </pre>
+            <p id="simpsons">os Simpsons</p>
+            <p id="playStation">Play Station 2</p>
+        </section>
+    </article>
 </body>
 </html>

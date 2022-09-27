@@ -12,7 +12,26 @@
     src: url("fonts/zrnic/zrnic\ rg.ttf");
 }
 
+article {
+    display: flex;
+    gap: 64px;
+}
 
+h1 {
+    font-size: 64px;
+}
+
+h2 {
+    font-size: 32px;
+}
+
+p {
+    font-size: 24px;
+}
+
+pre {
+    font-size: 24px;
+}
 
 div#circle {
     height: 120px;
@@ -23,14 +42,14 @@ div#circle {
 
     color: white;
     font-size: 32px;
-
-    bor
 }
 
-h1 {
-    font-family: myFont1;    
+#simpsons {
+    font-family: myFont1; 
+    font-size: 64px;
 }
 
-h2 {
+#playStation {
     font-family: myFont2;
+    font-size: 48px;
 }

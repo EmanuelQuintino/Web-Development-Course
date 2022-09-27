@@ -1,0 +1,106 @@
+@charset "utf-8";
+
+/* @import "../class-03-grid-layout/study/style.css"; */
+
+@font-face {
+    font-family: myFont1;
+    src: url("fonts/simpsons.ttf");
+}
+
+@font-face {
+    font-family: myFont2;
+    src: url("fonts/zrnic/zrnic\ rg.ttf");
+}
+
+article {
+    display: flex;
+    gap: 64px;
+
+    opacity: 0;
+    animation-name: myAnimation;
+    animation-duration: 1000ms;
+    animation-fill-mode: forwards;
+    /* animation-delay: 1s; */
+    /* animation-iteration-count: infinite; */
+    animation-timing-function: ease-in-out;
+
+}
+
+h1 {
+    font-size: 64px;
+}
+
+h2 {
+    font-size: 32px;
+
+    animation: rotateAnimation;
+    animation-duration: 1s;
+}
+
+p {
+    font-size: 24px;
+}
+
+pre {
+    font-size: 24px;
+}
+
+div#circle {
+    height: 120px;
+    width: 120px;
+    background: red;
+
+    padding: 8px;
+
+    color: white;
+    font-size: 32px;
+}
+
+#simpsons {
+    font-family: myFont1; 
+    font-size: 64px;
+}
+
+#playStation {
+    font-family: myFont2;
+    font-size: 48px;
+}
+@media (max-width: 640px) {
+    article {
+        display: block;
+        width: 300px;
+        padding: 8px;
+    }
+
+    h1 {
+        font-size: 45px;
+    }
+
+    h2 {
+        font-size: 36px;
+    }
+    
+    p {
+        font-size: 24px;
+    }
+}
+
+@keyframes myAnimation {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes rotateAnimation {
+    to {
+        transform: rotateZ(0deg);
+    }
+    
+    from {
+        transform: rotateZ(360deg);
+    }
+}

@@ -59,6 +59,10 @@ a:hover {
     border-radius: 4rem;
 }
 
+.container {
+    display: flex;
+}
+
 main article {
     max-width: 1200rem;
 
@@ -76,12 +80,13 @@ main article {
     background: rgba(0, 0, 0, 0.2);
 }
 
-section img {
-    width: 320rem;
-}
+.card {
+    height: auto;
+    width: 200px;
 
-img {
-    width: 320px;
+    padding: 8px;
+    box-shadow: .1px .1px 2px 1px black;
+    border-radius: 4px;
 }
 
 footer {

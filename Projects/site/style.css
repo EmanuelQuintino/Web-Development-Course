@@ -10,13 +10,24 @@
 
 body {
     font-size: 16rem;
-    /* background: lightgrey; */
 }
 
-#page {
-    height: 90vh;
+.page {
+    width: 100vw;
     padding: 48rem;
 }
+/* 
+#page-home {
+
+}
+
+#page-gallery {
+
+}
+
+#page-contact {
+    
+} */
 
 header .logo {
     width: 128rem;
@@ -50,7 +61,6 @@ a:hover {
 
 main article {
     max-width: 1200rem;
-    height: 60vh;
 
     margin: 48rem auto;
     padding: 32rem;

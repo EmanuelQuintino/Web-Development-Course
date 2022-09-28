@@ -6,7 +6,7 @@
 
 body {
     height: 100vh;
-
+    
     display: grid;
 
     grid-template-areas: 
@@ -14,7 +14,7 @@ body {
         "MAIN ASIDE"
         "FOOTER FOOTER";
 
-    grid-template-columns: 1fr 60%;
+    grid-template-columns: 1fr 65%;
     grid-template-rows: 20% 1fr 10%;
 }
 
@@ -67,7 +67,7 @@ li:hover {
 main {
     grid-area: MAIN;
 
-    padding: 16px;
+    padding: 0 32px;
 
     display: flex;
     align-items: center;
@@ -109,11 +109,14 @@ aside.gallery {
         "A B C"
         "A D E";
     gap: 24px;
+
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
 }
 
 .gallery :nth-child(1) {
     grid-area: A;
-    width: 13rem;
+    max-width: 13rem;
 }
 
 .gallery :nth-child(2) {
@@ -130,12 +133,15 @@ aside.gallery {
 }
 
 img {
-    width: 16rem;
+    max-width: 16rem;
     transition: 200ms;
 
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
 
     border-radius: 4px;
+
+    object-fit: cover;
+
 }
 
 img:hover {

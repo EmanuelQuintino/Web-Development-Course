@@ -5,17 +5,23 @@
 }
 
 body {
-    padding: 32px;
+    padding: 24px;
 }
 
 h1 {
     position: sticky;
-    top: 35px;
+    top: 32px;
+}
+
+section p{
+    padding: 32px;
+    position: sticky;
+    text-align: right;
 }
 
 h2 {
     position: sticky;
-    top: 32px;
+    top: 48px;
 }
 
 img {

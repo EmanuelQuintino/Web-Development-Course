@@ -28,6 +28,9 @@ article {
 
 h1 {
     font-size: 64px;
+
+    transform: rotate(20deg);
+    display: inline;
 }
 
 h2 {
@@ -35,6 +38,10 @@ h2 {
 
     animation: rotateAnimation;
     animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+
+    display: inline-block;
 }
 
 p {
@@ -97,10 +104,10 @@ div#square {
 
 @keyframes rotateAnimation {
     to {
-        transform: rotateZ(0deg);
+        rotate: 0deg;
     }
     
     from {
-        transform: rotateZ(360deg);
+        rotate: 360deg;
     }
 }

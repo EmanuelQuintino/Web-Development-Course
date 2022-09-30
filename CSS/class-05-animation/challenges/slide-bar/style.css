@@ -42,7 +42,7 @@ span {
     animation-name: slideImagesAnimation;
     animation-duration: 15s;
     animation-iteration-count: infinite;
-    /* animation-timing-function: ease-in-out; */
+    animation-timing-function: ease-in-out;
 
     object-fit: cover;
 }

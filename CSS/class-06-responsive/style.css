@@ -21,7 +21,7 @@ h1 {
     font-size: 32rem;
     text-align: center;
 
-    margin-top: 16rem;
+    margin-top: 24rem;
 }
 
 .container {
@@ -35,7 +35,7 @@ section:nth-child(1) {
 
 img {
     width: 240rem;
-    margin: 32rem auto 0;
+    margin: 48rem auto 0;
 }
 
 h2 {

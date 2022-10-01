@@ -10,9 +10,15 @@
 }
 
 .container {
-    padding: 16rem;
+    padding: 24rem;
     /* max-width: 320rem; */
 
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 h1 {
@@ -20,12 +26,12 @@ h1 {
     /* font-size: 3.75rem; */
     font-size: 32rem;
     text-align: center;
-
     margin-top: 24rem;
+
 }
 
 .container {
-    width: 320rem;
+    max-width: 480rem;
     margin: 0 auto;
 } 
 
@@ -63,9 +69,9 @@ footer {
     margin-top: 72rem;
 }
 
-@media (min-width: 640px) {
+@media (min-width: 850px) {
     .container {
-        width: 1024rem;
+        max-width: 1024rem;
         margin: 0 auto;
     }
 

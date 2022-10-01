@@ -48,6 +48,19 @@ img {
     height: auto;
     margin: 48rem auto 0;
     object-fit: cover;
+
+    transition: 300ms;
+
+    animation-name: cloudAnimation;
+    animation-duration: 2000ms;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+}
+
+img:hover {
+    filter: brightness(1.1);
+    scale: 1.1;
 }
 
 h2 {
@@ -117,5 +130,11 @@ footer {
     footer {
         font-size: 24rem;
         margin-top: 64rem;
+    }
+}
+
+@keyframes cloudAnimation {
+    to {
+        transform: translateY(-20rem);
     }
 }

@@ -37,11 +37,17 @@ h1 {
 
 section:nth-child(1) {
     display: flex;
+    width: 240rem;
+    margin: 0 auto;
+
 }
 
 img {
-    width: 240rem;
+    /* width: 240rem; */
+    width: 100%;
+    height: auto;
     margin: 48rem auto 0;
+    object-fit: cover;
 }
 
 h2 {
@@ -69,7 +75,7 @@ footer {
     margin-top: 72rem;
 }
 
-@media (min-width: 850px) {
+@media (min-width: 640px) {
     .container {
         max-width: 1024rem;
         margin: 0 auto;
@@ -90,8 +96,14 @@ footer {
         margin-top: 48rem;
     }
 
+    section:nth-child(1) {
+        width: 1840rem;
+    }
+
     img {
-        width: 420rem;
+        width: 100%;
+        height: auto;
+        object-fit: cover;
     }
 
     h2 {

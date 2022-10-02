@@ -1,6 +1,7 @@
 :root {
     font-size: 6.25%;
 
+    --brown-0: #5b1008;
     --brown-1: #941E10;
     --brown-2: #E0412F;
     --brown-3: #FF614F;
@@ -26,10 +27,18 @@ body {
 
 header {
     width: 100%;
-    height: 80rem;
+    height: 100rem;
     padding: 16rem;
 
-    background: var(--brown-1);
+    background: linear-gradient(var(--brown-0), var(--brown-1));
+}
+
+header img {
+    width: 64rem;
+    height: auto;
+    border-radius: 50%;
+
+    box-shadow: .5rem .5rem 1rem 1rem rgba(0, 0, 0, 0.5);
 }
 
 header, nav ul {
@@ -39,19 +48,19 @@ header, nav ul {
 }
 
 nav ul {
-    gap: 4rem;
     list-style: none;
 }
 
 #home, #gallery, #contact {
     color: var(--green-2);
+    font-weight: 700;
 }
 
 a {
     text-decoration: none;
     color: white;
     text-shadow: .5rem .5rem 2rem rgba(0, 0, 0, 0.5) ;
-    font-size: 16rem;
+    font-size: 18rem;
     padding: 8rem;
 }
 
@@ -64,7 +73,7 @@ a:hover {
 
 .imagesShowBar {
     width: 100%;
-    height: 200rem;
+    height: 240rem;
 
     margin: 0 auto;
 
@@ -75,10 +84,6 @@ a:hover {
     position: relative;
 
     overflow: hidden;
-
-    /* border-radius: 24rem; */
-
-    /* box-shadow: 1rem 1rem 2rem black; */
 }
 
 .imageShowBar {
@@ -87,8 +92,6 @@ a:hover {
     width: 100%;
     height: auto;
     object-fit: cover;
-    
-    /* border-radius: 24rem; */
 
     opacity: 0;
 
@@ -131,21 +134,39 @@ main article {
     justify-content: center;
     gap: 72rem;
     
-    /* text-shadow: 1rem 1rem 1rem black ; */
     font-size: 32rem;
 
     background: rgba(0, 0, 0, 0.2);
 }
 
 .cards {
+    max-width: 1024rem;
+    margin: 0 auto;
+
     padding: 16rem;
+
+    display: grid;
+    /* grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr); */
+    grid-template-columns: repeat(auto-fit, minmax(240rem, 1fr));
+    
+    grid-column-gap: 32rem;
+    grid-row-gap: 48rem;
 }
 
 .card {
     padding: 8rem;
     border-radius: 4rem;
     box-shadow: .1rem .1rem 2rem 1rem black;
+
+    transition: transform 300ms;
 }
+
+
+.card:hover {
+    transform: scale(1.02);
+}
+
 
 .card img {
     height: 240rem;
@@ -155,7 +176,13 @@ main article {
     
     border-radius: 8rem 8rem 0 0;
 
+    transition: brightness 300ms;
 }
+
+.card img:hover {
+    filter: brightness(1.1);
+}
+
 .cardPart1 {
     border-radius: 8rem;
 }
@@ -165,7 +192,7 @@ main article {
 }
 
 .cardPart2 h3 {
-    color: #941E10;
+    color: var(--brown-1);
     font-size: 32rem;
 
     margin-top: 8rem;
@@ -180,20 +207,37 @@ main article {
     width: 100%;
     height: 48rem;
     border-radius: 8rem;
-    background: #941E10;
+    background: var(--brown-1);
     color: white;
     font-size: 24rem;
 
     margin: 16rem 0 8rem;
+    transition: brightness 300ms;
+
+    cursor: pointer;
 }
 
-
-
+.cardPart2 button:hover {
+    filter: brightness(1.2);
+}
 
 footer {
-    text-align: center;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: white;
     font-size: 32rem;
-    margin: 16rem;
+    font-weight: 700;
+
+    width: 100%;
+    height: 100rem;
+    padding: 16rem;
+
+    background: linear-gradient(var(--brown-1), var(--brown-0));
+
+    margin-top: 32rem;
 }
 
 .form-contact section {

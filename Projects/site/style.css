@@ -13,24 +13,19 @@ body {
 }
 
 .page {
-    width: 100vw;
-    padding: 48rem;
-}
-/* 
-#page-home {
-
+    width: 100VW;
 }
 
-#page-gallery {
+header {
+    width: 100%;
+    height: 80rem;
+    padding: 16rem;
 
+    background: brown;
 }
-
-#page-contact {
-    
-} */
 
 header .logo {
-    width: 128rem;
+
 }
 
 header, nav ul {
@@ -40,15 +35,15 @@ header, nav ul {
 }
 
 nav ul {
-    gap: 8rem;
+    gap: 4rem;
     list-style: none;
 }
 
 a {
     text-decoration: none;
-    color: peru;
-    /* text-shadow: 1rem 1rem 2rem black ; */
-    font-size: 24rem;
+    color: white;
+    text-shadow: 1rem 1rem 2rem black ;
+    font-size: 16rem;
     padding: 8rem;
 }
 
@@ -59,8 +54,67 @@ a:hover {
     border-radius: 4rem;
 }
 
-.container {
+.imagesShowBar {
+    width: 95%;
+    height: 200rem;
+
+    margin: 32rem auto;
+
     display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+
+    overflow: hidden;
+
+    border-radius: 24rem;
+
+    box-shadow: 1rem 1rem 2rem black;
+}
+
+.imageShowBar {
+    position: absolute;
+    
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    
+    border-radius: 24rem;
+
+    opacity: 0;
+
+    animation: imageShowAnimation 30s;
+    animation-iteration-count: infinite;
+}
+
+
+.imageShowBar:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.imageShowBar:nth-child(2) {
+    animation-delay: 5s;
+}
+
+.imageShowBar:nth-child(3) {
+    animation-delay: 10s;
+}
+
+.imageShowBar:nth-child(4) {
+    animation-delay: 15s;
+}
+
+.imageShowBar:nth-child(5) {
+    animation-delay: 20s;
+}
+
+.imageShowBar:nth-child(6) {
+    animation-delay: 25s;
+}
+
+.container {
+    
 }
 
 main article {
@@ -95,21 +149,23 @@ footer {
     margin: 16rem;
 }
 
-/* .form-contact {
-    flex-direction: row;
-
-    height: 80%;
-    width: 1080rem;
-    margin: 64rem auto;
-    border-radius: 5%;
-
-    background-color: #eee;
-} */
-
 .form-contact section {
     font-size: 24rem;
 }
 
 fieldset {
     padding: 32rem;
+}
+
+@keyframes imageShowAnimation {
+
+    25% {
+        opacity: 1;
+        transform: scale(1.1, 1.1);
+    }
+    
+    50% {
+        /* transform: translate(-100%); */
+        opacity: 0;
+    }
 }

@@ -8,6 +8,10 @@
     box-sizing: border-box;
 }
 
+body {
+    font-size: 16rem;
+}
+
 header {
     background: green;
     width: 100%;
@@ -27,5 +31,24 @@ img {
     height: auto;
 
     object-fit: cover;
+}
+
+main {
+    padding: 32rem;
+}
+
+h2 {
+    margin-top: 32rem;
+}
+
+h3 {
+    margin-top: 24rem;
+}
+
+ul {
+    list-style-position: inside;
+    columns: 2;
+
+    margin-top: 8rem;
 }
 

@@ -1,5 +1,10 @@
 :root {
-    /* font-size: 6.25%; */
+    /* font-size: 1rem; */
+    /* font-size: 16px; */
+    /* font-size: 32px; */
+
+    /* 1rem => 16px = 100%*/
+    font-size: 6.25%;
 }
 
 * {
@@ -9,7 +14,7 @@
 }
 
 body {
-    /* font-size: 16rem; */
+    font-size: 16rem;
 }
 
 header {
@@ -35,39 +40,50 @@ img {
 
 main {
     padding: 32px;
-    /* padding: 32rem; */
+    padding: 2rem;
+    padding: 32rem;
 }
 
 h1 {
-    font-size: 48px;
-    font-size: 3rem;
+    /* font-size: 48px; */
+    /* font-size: 3rem; */
+    font-size: 48rem;
 }
 
 h2 {
-    margin-top: 32px;
-    /* margin-top: 32rem; */
+    /* margin-top: 32px; */
+    /* margin-top: 2rem; */
+    margin-top: 32rem;
 }
 
 h3 {
-    margin-top: 24px;
-    /* margin-top: 24rem; */
+    /* margin-top: 24px; */
+    /* margin-top: 1.5rem; */
+    margin-top: 24rem;
 }
 
 ul {
     list-style-position: inside;
     columns: 2;
 
-    margin-top: 8px;
-    /* margin-top: 8rem; */
+    /* margin-top: 8px; */
+    margin-top: 8rem;
+
+    font-size: 18px;
+    font-size: 1.125rem;
+    font-size: 18rem;
 }
 
 section:last-child {
     margin-top: 32px;
+    margin-top: 32rem;
+
 }
 
 div {
-    font-size: 2em;
-    font-size: 2rem;
+    /* font-size: 2em; */
+    /* font-size: 2rem; */
+    font-size: 32rem;
 
 }
 

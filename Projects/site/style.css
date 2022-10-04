@@ -162,11 +162,9 @@ main article {
     transition: transform 300ms;
 }
 
-
 .card:hover {
     transform: scale(1.02);
 }
-
 
 .card img {
     height: 240rem;

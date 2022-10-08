@@ -222,21 +222,55 @@ padding: 0 12rem;
 }
 
 footer {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
+    text-align: center;
     color: white;
-    font-size: 32rem;
     font-weight: 700;
 
     width: 100%;
-    height: 100rem;
+    height: 100%;
     padding: 16rem;
 
     background: linear-gradient(var(--brown-1), var(--brown-0));
 
     margin-top: 32rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 32rem;
+}
+
+.footerLogo {
+    font-size: 24rem;
+    margin-top: 32rem;
+
+    text-shadow: .1rem .1rem 2rem black;
+}
+
+.footerImageLogo {
+    width: 120rem;
+    border-radius: 50%;
+    margin-top: 32rem;
+    box-shadow: .1rem .1rem 2rem black;
+}
+
+.FooterSocialMediaLogos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 32rem;
+}
+
+.FooterSocialMediaLogos img{
+    margin-top: 32rem;
+    width: 40rem;
+}
+
+.footerLocal iframe {
+    width: 100%;
+
+    margin-top: 16rem;
 }
 
 @keyframes imageShowAnimation {

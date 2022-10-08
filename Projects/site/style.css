@@ -21,10 +21,6 @@ body {
     font-size: 16rem;
 }
 
-.page {
-    width: 100VW;
-}
-
 header {
     width: 100%;
     height: 100rem;
@@ -56,7 +52,7 @@ nav ul {
     color: var(--green-2);
 }
 
-a {
+header a {
     text-decoration: none;
     color: white;
     text-shadow: .5rem .5rem 2rem rgba(0, 0, 0, 0.5) ;
@@ -64,7 +60,7 @@ a {
     padding: 8rem;
 }
 
-a:hover {
+header a:hover {
     filter: brightness(1.1);
     background: var(--brown-4);
     padding: 8rem;
@@ -140,6 +136,10 @@ main article {
     background: rgba(0, 0, 0, 0.2);
 }
 
+aside {
+    padding: 8rem;
+}
+
 .cards {
     max-width: 1024rem;
     margin: 0 auto;
@@ -156,11 +156,12 @@ main article {
 }
 
 .card {
-    padding: 8rem;
     border-radius: 4rem;
     box-shadow: .1rem .1rem 2rem 1rem black;
 
     transition: transform 300ms;
+
+    overflow: hidden;
 }
 
 .card:hover {
@@ -172,10 +173,12 @@ main article {
     width: 100%;
     
     object-fit: cover;
-    
-    border-radius: 8rem 8rem 0 0;
+    object-position: center;
 
     transition: brightness 300ms;
+
+    box-shadow: .1rem .1rem 2rem 1rem black;
+
 }
 
 .card img:hover {
@@ -187,7 +190,7 @@ main article {
 }
 
 .cardPart2 {
-    border-radius: 0 0 8rem 8rem;
+padding: 0 12rem;
 }
 
 .cardPart2 h3 {
@@ -195,6 +198,8 @@ main article {
     font-size: 32rem;
 
     margin-top: 8rem;
+
+    text-shadow: 1rem 1rem 2rem 1rem black;
 }
 
 .cardPart2 p:nth-child(2) {
@@ -202,21 +207,22 @@ main article {
     font-weight: 700;
 }
 
-.cardPart2 button {
+.buttonCard {
     width: 100%;
     height: 48rem;
     border-radius: 8rem;
     background: var(--brown-1);
     color: white;
     font-size: 24rem;
-
-    margin: 16rem 0 8rem;
+    
+    margin: 16rem auto 8rem;
+    
     transition: brightness 300ms;
 
     cursor: pointer;
 }
 
-.cardPart2 button:hover {
+.buttonCard:hover {
     filter: brightness(1.2);
 }
 

@@ -1,0 +1,9 @@
+@import url(style.css);
+
+.form-contact section {
+    font-size: 24rem;
+}
+
+fieldset {
+    padding: 16rem;
+}

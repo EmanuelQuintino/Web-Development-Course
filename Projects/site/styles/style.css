@@ -21,6 +21,10 @@ body {
     font-size: 16rem;
 }
 
+.page {
+    width: 100%;
+}
+
 header {
     width: 100%;
     height: 100rem;
@@ -120,20 +124,11 @@ header a:hover {
     animation-delay: 25s;
 }
 
-main article {
-    max-width: 1200rem;
+main {
+    max-width: 480rem;
 
-    margin: 48rem auto;
+    margin: 0 auto;
     padding: 32rem;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 72rem;
-    
-    font-size: 32rem;
-
-    background: rgba(0, 0, 0, 0.2);
 }
 
 aside {
@@ -242,14 +237,6 @@ footer {
     background: linear-gradient(var(--brown-1), var(--brown-0));
 
     margin-top: 32rem;
-}
-
-.form-contact section {
-    font-size: 24rem;
-}
-
-fieldset {
-    padding: 32rem;
 }
 
 @keyframes imageShowAnimation {

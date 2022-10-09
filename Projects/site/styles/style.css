@@ -31,6 +31,11 @@ header {
     padding: 16rem;
 
     background: linear-gradient(var(--brown-0), var(--brown-1));
+
+    position: sticky;
+    top: -1rem;
+
+    z-index: 1;
 }
 
 header img {
@@ -231,8 +236,6 @@ footer {
     padding: 16rem;
 
     background: linear-gradient(var(--brown-1), var(--brown-0));
-
-    margin-top: 32rem;
 
     display: flex;
     flex-direction: column;

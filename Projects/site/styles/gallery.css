@@ -44,8 +44,9 @@ table {
     text-align: center;
     
     border-radius: 8rem;
-    background-color: rgba(0, 0, 0, 0.05);
+    background-color: #FF614F22;
     
+    border: solid var(--brown-4);
 }
 
 table td {

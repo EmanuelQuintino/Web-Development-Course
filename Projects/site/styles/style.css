@@ -36,6 +36,12 @@ header {
     top: -1rem;
 
     z-index: 1;
+
+    transition: transform 500ms;
+}
+
+.headerHidden {
+    transform: translateY(-100%);
 }
 
 header img {

@@ -1,6 +1,7 @@
 :root {
     font-size: 6.25%;
-
+    scroll-behavior: smooth;
+    
     --brown-0: #5b1008;
     --brown-1: #941E10;
     --brown-2: #E0412F;
@@ -9,6 +10,7 @@
     --green-1: #009447;
     --green-2: #2FE085;
     --green-3: #2FE08588;
+    
 }
 
 * {

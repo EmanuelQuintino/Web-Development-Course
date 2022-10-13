@@ -16,6 +16,11 @@ main {
     padding: 16rem;
 }
 
+.form-contact {
+    margin-top: 32rem;
+    max-width: 680rem;
+}
+
 main h1 {
     background: var(--brown-1);
     color: white;
@@ -23,8 +28,9 @@ main h1 {
     text-align: center;
     border-radius: 8rem 8rem 0 0;
     border-top: solid 1px var(--brown-2);
-    border-right: solid 1px var(--brown-2);
     border-left: solid 1px var(--brown-2);
+    border-bottom: none;
+    border-right: solid 1px var(--brown-2);
 }
 
 .form-contact legend {
@@ -33,18 +39,43 @@ main h1 {
 
 fieldset {
     padding: 16rem;
-
+    
     display: flex;
     flex-direction: column;
     gap: 16rem;
-
+    
     border-radius: 0 0 8rem 8rem;
-
-    background: var(--brown-5);
-
+        
+    border-top: none;
     border-right: solid 1px var(--brown-2);
     border-left: solid 1px var(--brown-2);
-    border-bottom: solid 1px var(--brown-2);
+    border-bottom: solid 1px var(--brown-2);  
+    
+    background: var(--brown-5);
+}
+
+.inputBox label {
+    font-weight: 700;
+    color: var(--brown-1);
+}
+
+.inputBox input,
+.inputBox textarea {
+    width: 100%;
+    margin-top: 4rem;
+    padding: 8rem;
+
+    border: solid 1.5rem var(--brown-4);
+    border-radius: 4rem;
+
+    color: var(--brown-0);
+
+    background: white;
+}
+
+.inputBox input::,
+.inputBox textarea:checked {
+    border: solid 1.5rem var(--brown-3);
 }
 
 form button {

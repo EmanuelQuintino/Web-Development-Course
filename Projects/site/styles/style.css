@@ -136,11 +136,17 @@ header a:hover {
     animation-delay: 25s;
 }
 
-main {
+.container main {
     max-width: 480rem;
 
     margin: 0 auto;
     padding: 32rem;
+
+    text-align: center;
+}
+
+.mainImageLogo {
+    width: 100%;
 }
 
 aside {

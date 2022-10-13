@@ -254,7 +254,7 @@ footer {
 
 .footerLogo {
     font-size: 24rem;
-    margin-top: 24rem;
+    margin-top: 16rem;
 
     text-shadow: .1rem .1rem 2rem black;
 }
@@ -262,7 +262,7 @@ footer {
 .footerImageLogo {
     width: 120rem;
     border-radius: 50%;
-    margin-top: 32rem;
+    margin-top: 16rem;
     box-shadow: .1rem .1rem 2rem black;
 }
 

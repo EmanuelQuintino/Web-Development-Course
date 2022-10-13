@@ -17,14 +17,14 @@ main {
 }
 
 .form-contact {
-    margin-top: 32rem;
+    margin-top: 16rem;
     max-width: 680rem;
 }
 
 main h1 {
     background: var(--brown-1);
     color: white;
-    padding: 8rem;
+    padding: 16rem;
     text-align: center;
     border-radius: 8rem 8rem 0 0;
     border-top: solid 1px var(--brown-2);
@@ -50,7 +50,7 @@ fieldset {
     border-right: solid 1px var(--brown-2);
     border-left: solid 1px var(--brown-2);
     border-bottom: solid 1px var(--brown-2);  
-    
+
     background: var(--brown-5);
 }
 
@@ -60,6 +60,7 @@ fieldset {
 }
 
 .inputBox input,
+.inputBox select,
 .inputBox textarea {
     width: 100%;
     margin-top: 4rem;
@@ -73,11 +74,34 @@ fieldset {
     background: white;
 }
 
-.inputBox input::,
-.inputBox textarea:checked {
-    border: solid 1.5rem var(--brown-3);
+.inputBox input:focus,
+.inputBox select:focus,
+.inputBox textarea:focus {
+    outline: solid 1rem var(--brown-2);
+}
+
+.inputBox textarea {
+    resize: none;
 }
 
 form button {
     margin-top: 16rem;
+    padding: 12rem;
+    width: 100%;
+    
+    border-radius: 8rem;
+    border: 0;
+    
+    background: var(--green-2);
+
+    color: white;
+    font-size: 16rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    
+    cursor: pointer;
+}
+
+form button:hover {
+    filter: brightness(1.05);
 }

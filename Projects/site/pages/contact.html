@@ -34,7 +34,7 @@
             <article class="form-contact">
                 <h1>AGENDE SUA VIAGEM</h1>
                 <section>
-                    <form action="">
+                    <form action="" method="get">
                         <fieldset>
                             <legend>AGENDE SUA VIAGEM</legend>
                             
@@ -50,11 +50,25 @@
                             </section>
                             
                             <section class="inputBox">
-                                <label for="observation">Observações</label> <br>
-                                <textarea name="" id="observation" cols="36" rows="10" placeholder="Faça observações sobre seu perfil" name="observation" maxlength="370"></textarea>
+                                <label for="observation">Selecione o destino</label>
+                                <select name="destino" id="destinyCountry">
+                                    <option value="França">França</option>
+                                    <option value="África do Sul">África do Sul</option>
+                                    <option value="Grécia">Grécia</option>
+                                    <option value="Alemanha">Alemanha</option>
+                                </select>
+                            </section>
+
+                            <section class="inputBox">
+                                <label for="observation">Data da viagem</label>
+                                <input type="date" name="dataViagem">
+                            </section>
+                            
+                            <section class="inputBox">
+                                <label for="observation">Observações</label>
+                                <textarea name="" id="observation" cols="36" rows="7" placeholder="Faça observações sobre seu perfil" name="observation" maxlength="370"></textarea>
                             </section>
                         </fieldset>
-                        
                         
                         <button type="submit">Enviar</button>
                     </form>

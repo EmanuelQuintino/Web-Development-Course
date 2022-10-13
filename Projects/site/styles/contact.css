@@ -19,6 +19,9 @@ main {
 .form-contact {
     margin-top: 16rem;
     max-width: 680rem;
+
+    display: grid;
+    gap: 32rem;
 }
 
 main h1 {

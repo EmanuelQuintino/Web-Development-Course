@@ -1,9 +1,52 @@
 @import url(style.css);
 
-.form-contact section {
-    font-size: 24rem;
+:root {    
+    --brown-0: #5b1008;
+    --brown-1: #941E10;
+    --brown-2: #E0412F;
+    --brown-3: #FF614F;
+    --brown-4: #FF614F55;
+    --brown-5: #FF614F22;
+    --green-1: #009447;
+    --green-2: #2FE085;
+    --green-3: #2FE08588;    
+}
+
+main {
+    padding: 16rem;
+}
+
+main h1 {
+    background: var(--brown-1);
+    color: white;
+    padding: 8rem;
+    text-align: center;
+    border-radius: 8rem 8rem 0 0;
+    border-top: solid 1px var(--brown-2);
+    border-right: solid 1px var(--brown-2);
+    border-left: solid 1px var(--brown-2);
+}
+
+.form-contact legend {
+    display: none;
 }
 
 fieldset {
     padding: 16rem;
+
+    display: flex;
+    flex-direction: column;
+    gap: 16rem;
+
+    border-radius: 0 0 8rem 8rem;
+
+    background: var(--brown-5);
+
+    border-right: solid 1px var(--brown-2);
+    border-left: solid 1px var(--brown-2);
+    border-bottom: solid 1px var(--brown-2);
+}
+
+form button {
+    margin-top: 16rem;
 }

@@ -9,8 +9,7 @@
     --brown-4: #FF614F55;
     --green-1: #009447;
     --green-2: #2FE085;
-    --green-3: #2FE08588;
-    
+    --green-3: #2FE08588;    
 }
 
 * {
@@ -186,7 +185,6 @@ aside {
     transition: brightness 300ms;
 
     box-shadow: .1rem .1rem 2rem 1rem black;
-
 }
 
 .card img:hover {

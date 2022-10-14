@@ -8,18 +8,21 @@
     --brown-4: #FF614F55;
     --brown-5: #FF614F22;
     --green-1: #009447;
-    --green-2: #2FE085;
-    --green-3: #2FE08588;    
+    --green-2: #03ce65;    
+    --green-3: #2FE085;
+    --green-4: #2FE08588;
 }
 
 main {
     padding: 16rem;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .form-contact {
     margin-top: 8rem;
-    max-width: 680rem;
-
     display: grid;
     gap: 32rem;
 }
@@ -106,5 +109,5 @@ form button {
 }
 
 form button:hover {
-    filter: brightness(1.05);
+    filter: brightness(1.1);
 }

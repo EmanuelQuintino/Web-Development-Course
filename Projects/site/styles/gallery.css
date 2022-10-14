@@ -67,6 +67,10 @@ aside p {
     margin-top: -24rem;
 }
 
+main {
+    padding: 16rem;
+}
+
 main h1 {
     font-size: 32rem;
     margin-top: 32rem;

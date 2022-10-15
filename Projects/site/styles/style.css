@@ -164,13 +164,32 @@ header a:hover {
 
 .boxImageLogo {
     height: 240rem;
+    position: relative;
+
+    display: grid;
+    place-items: center;
 }
 
-.mainImageLogo {
+/* .mainImageLogo {
     width: 100%;
     position: relative;
     top: -32rem;
     z-index: -1;
+} */
+
+.mainImageLogo {
+    width: 80%;
+    position: absolute;
+}
+
+.mainImageLogoPlane {
+    animation-name: cloudAnimation;
+    animation-duration: 2500ms;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+
+    top: 7rem;
 }
 
 aside {
@@ -332,5 +351,11 @@ footer .logo span {
     40% {
         /* transform: translate(-100%); */
         opacity: 0;
+    }
+}
+
+@keyframes cloudAnimation {
+    to {
+        transform: translateY(-10rem);
     }
 }

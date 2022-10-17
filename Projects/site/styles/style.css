@@ -189,7 +189,7 @@ header a:hover {
     animation-direction: alternate;
     animation-timing-function: ease-in-out;
 
-    top: 7rem;
+    /* top: 7rem; */
 }
 
 aside {
@@ -355,7 +355,12 @@ footer .logo span {
 }
 
 @keyframes cloudAnimation {
-    to {
-        transform: translateY(-10rem);
+    0% {
+        transform: translateY(5rem);
     }
+    
+    100% {
+        transform: translateY(-5rem);
+    }
+
 }

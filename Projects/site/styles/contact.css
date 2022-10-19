@@ -19,12 +19,18 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
+
+    max-width: 1024rem;
+
+    margin: 0 auto;
 }
 
 .form-contact {
     margin-top: 8rem;
     display: grid;
     gap: 32rem;
+
+    animation: topDownAnimation 1000ms;
 }
 
 main h1 {
@@ -110,4 +116,11 @@ form button {
 
 form button:hover {
     filter: brightness(1.1);
+}
+
+@media (min-width: 640px) {
+    .form-contact {
+        display: flex;
+        justify-content: space-around;
+    }
 }

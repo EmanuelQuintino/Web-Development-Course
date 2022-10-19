@@ -162,6 +162,10 @@ header a:hover {
     text-shadow: .5rem .5rem 1rem rgba(0, 0, 0, 0.5);
 }
 
+.mainLogo {
+    animation: topDownAnimation 1000ms;
+}
+
 .boxImageLogo {
     height: 240rem;
     position: relative;
@@ -359,8 +363,20 @@ footer .logo span {
     100% {
         transform: translateY(-5rem);
     }
-
 }
+
+@keyframes topDownAnimation {
+    0% {
+        opacity: 0;
+        transform: translateY(-10rem);
+    }
+    
+    100% {
+        opacity: 1;
+        transform: translateY(0rem);
+    }
+}
+
 
 @media (min-width: 480px) {
     .container main {
@@ -400,6 +416,9 @@ footer .logo span {
         line-height: 72rem;
     }
 
+    .footerLogo {
+        font-size: 32rem;
+    }
     .footerLocal {
         display: flex;
         align-items: center;

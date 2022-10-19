@@ -15,6 +15,10 @@
     --green-4: #2FE08588;
 }
 
+.containerPlans {
+    animation: topDownAnimation 1000ms;
+}
+
 aside {
     display: flex;
     flex-direction: column;

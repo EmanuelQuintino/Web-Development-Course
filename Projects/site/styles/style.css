@@ -399,4 +399,19 @@ footer .logo span {
         font-size: 48rem;
         line-height: 72rem;
     }
+
+    .footerLocal {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        font-size: 32rem;
+    }
+
+    .footerLocal iframe {
+        width: 150%;
+        height: 380rem;
+
+    }
 }

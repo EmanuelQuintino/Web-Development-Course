@@ -96,3 +96,24 @@ main img {
 
     margin-top: 16rem;
 }
+
+@media (min-width: 640px) {
+    .containerPlans {
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-start;
+    }
+
+    aside {
+        position: sticky;
+        top: 0rem;
+    }
+
+    aside table {
+        margin-top: 16rem;
+    }
+
+    main {
+        max-width: 620rem;
+    }
+}

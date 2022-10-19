@@ -143,7 +143,7 @@ header a:hover {
     animation-delay: 25s;
 }
 
-/* >>>>>>>>>>>>>>>      Main    <<<<<<<<<<<<<<<<< */
+/* >>>>>>>>>>>>>>>>>    Main    <<<<<<<<<<<<<<<<< */
 
 .container main {
     max-width: 480rem;
@@ -184,7 +184,7 @@ header a:hover {
 
 .mainImageLogoPlane {
     animation-name: cloudAnimation;
-    animation-duration: 2500ms;
+    animation-duration: 2000ms;
     animation-iteration-count: infinite;
     animation-direction: alternate;
     animation-timing-function: ease-in-out;

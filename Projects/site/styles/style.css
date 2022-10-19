@@ -170,13 +170,6 @@ header a:hover {
     place-items: center;
 }
 
-/* .mainImageLogo {
-    width: 100%;
-    position: relative;
-    top: -32rem;
-    z-index: -1;
-} */
-
 .mainImageLogo {
     width: 80%;
     position: absolute;
@@ -188,8 +181,12 @@ header a:hover {
     animation-iteration-count: infinite;
     animation-direction: alternate;
     animation-timing-function: ease-in-out;
+}
 
-    /* top: 7rem; */
+.mainSlogan {
+    margin-top: -8rem;
+    font-size: 32rem;
+    line-height: 48rem;
 }
 
 aside {
@@ -363,4 +360,43 @@ footer .logo span {
         transform: translateY(-5rem);
     }
 
+}
+
+@media (min-width: 480px) {
+    .container main {
+        max-width: 720rem;
+    
+        margin: 0 auto;
+        padding: 32rem;
+    
+        text-align: center;
+    }
+
+    .logo {
+        font-size: 38rem;
+    }
+    
+    .logo span {
+        color: var(--brown-1);
+        text-shadow: 1rem 1rem 2rem rgba(0, 0, 0, 0.5);
+    }
+    
+    .mainImageLogo {
+        width: 70%;
+        margin-top: 128rem;
+    }
+    
+    .mainImageLogoPlane {
+        animation-name: cloudAnimation;
+        animation-duration: 2500ms;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-timing-function: ease-in-out;
+    }
+
+    .mainSlogan {
+        margin-top: 128rem;
+        font-size: 48rem;
+        line-height: 72rem;
+    }
 }

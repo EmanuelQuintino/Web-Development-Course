@@ -31,6 +31,7 @@ body {
 .page {
     width: 100%;
 }
+/* >>>>>>>>>>>>>>>>>>>>>>>>     Header    <<<<<<<<<<<<<<<<<<<<<<<<<< */
 
 header {
     width: 100%;
@@ -141,6 +142,8 @@ header a:hover {
 .imageShowBar:nth-child(6) {
     animation-delay: 25s;
 }
+
+/* >>>>>>>>>>>>>>>      Main    <<<<<<<<<<<<<<<<< */
 
 .container main {
     max-width: 480rem;
@@ -282,6 +285,8 @@ padding: 0 12rem;
     filter: brightness(1.2);
 }
 
+/* >>>>>>>>>>>>>>>>>>>>>    Footer    <<<<<<<<<<<<<<<<<<<<<<<< */
+
 footer {
     text-align: center;
     color: white;
@@ -336,9 +341,11 @@ footer .logo span {
 .footerLocal iframe {
     width: 100%;
     height: 280rem;
-
+    
     margin-top: 16rem;
 }
+
+/* >>>>>>>>>>>>>>>>>>>>>>   Animations   <<<<<<<<<<<<<<<<<<<<<< */
 
 @keyframes imageShowAnimation {
     10% {
@@ -376,6 +383,8 @@ footer .logo span {
         transform: translateY(0rem);
     }
 }
+
+/* >>>>>>>>>>>>>>>>>>>>>>   Responsive   <<<<<<<<<<<<<<<<<<<<<< */
 
 
 @media (min-width: 480px) {

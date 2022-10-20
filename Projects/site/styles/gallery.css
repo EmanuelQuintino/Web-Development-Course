@@ -63,7 +63,7 @@ table td a {
     cursor: pointer;
     color: var(--brown-0);
     font-weight: 700;
-    display: flex;    
+    display: flex;  
 }
 
 table td a:hover {

@@ -58,9 +58,16 @@ table td {
     padding: 4rem;
 }
 
-table a {
+table td a {
     text-decoration: none;
     cursor: pointer;
+    color: var(--brown-0);
+    font-weight: 700;
+    display: flex;    
+}
+
+table td a:hover {
+    color: var(--brown-3);
 }
 
 .promotionTable {
@@ -118,6 +125,6 @@ main img {
     }
 
     main {
-        max-width: 620rem;
+        max-width: 720rem;
     }
 }

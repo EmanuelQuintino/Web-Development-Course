@@ -313,7 +313,8 @@ footer .logo span {
 }
 
 .footerLogo {
-    font-size: 24rem;
+    font-size: 20rem;
+    line-height: 32rem;
     margin-top: 16rem;
 
     text-shadow: .1rem .1rem 2rem black;

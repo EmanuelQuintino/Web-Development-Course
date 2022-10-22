@@ -389,6 +389,11 @@ footer .logo span {
 
 
 @media (min-width: 480px) {
+
+    .imagesShowBar {
+        height: 360rem;
+    }
+
     .container main {
         max-width: 720rem;
     

@@ -12,44 +12,69 @@
     <!-- Readme Stats -->
     <!-- https://github.com/anuraghazra/github-readme-stats/ -->
 
-    <link rel="stylesheet" href="style.css">
+    <style>
+        .container {
+            display: flex;
+            gap: 48px;
+        }
+    </style>
 
 </head>
 <body>
     <main>
         <h1>Git Commands</h1>
-        <p>
-            <ol start="0">
-                <li>git --version</li>
-                <li>git init</li>
-                <li>git config --global user.name "Emanuel Quintino"</li>
-                <li>git config --global user.email "emanuelquintino@hotmail.com"</li>
-                <li>git config --global core.editor "code -w"</li>
-                <li>git config --list --global</li>
-                <li>git config --list --local</li>
-                <li>git status (Working Directory, Stage Area, Repository(Log))</li>
-                <li>git add .</li>
-                <li>git restore . (modified)</li>
-                <li>git restore --staged .</li>
-                <li>git commit -m "first commit"</li>
-                <li>git commit --amend -m "new message"</li>
-                <li>git reset --soft HEAD~1</li>
-                <li>git log</li>
-                <li>git log -n 3</li>
-                <li>git diff</li>
-                <li>git branch -M main</li>
-                <li>git remote add origin (add address)</li>
-                <li>git remote --v (consult remote address)</li>
-                <li>git push -u origin main</li>
-                <li>git push</li>
-                <li>git rm -r --cached . (clear cached Git)</li>
-                <li>git clone (add link)</li>
-                <li>git pull</li>
-                <li>git checkout -b "name branch"</li>
-                <li>git merge (name branch)</li>
-            </ol>
-        </p>
+        
+        <div class="container">
+            <p>
+                <ol start="0">
+                    <li>git --version</li>
+                    <li>git init</li>
+                    <li>git config --global user.name "Emanuel Quintino"</li>
+                    <li>git config --global user.email "emanuelquintino@hotmail.com"</li>
+                    <li>git config --global core.editor "code -w"</li>
+                    <li>git config --list --global</li>
+                    <li>git config --list --local</li>
+                    <li>git status (Working Directory, Stage Area, Repository(Log))</li>
+                    <li>git add .</li>
+                    <li>git restore . (modified)</li>
+                    <li>git restore --staged .</li>
+                    <li>git commit -m "first commit"</li>
+                    <li>git commit --amend -m "new message"</li>
+                    <li>git reset --soft HEAD~1</li>
+                    <li>git log</li>
+                    <li>git log -n 3</li>
+                    <li>git diff</li>
+                    <li>git branch -M main</li>
+                    <li>git remote add origin (add address)</li>
+                    <li>git remote --v (consult remote address)</li>
+                    <li>git push -u origin main</li>
+                    <li>git push</li>
+                    <li>git rm -r --cached . (clear cached Git and remove file GitHub)</li>
+                    <li>git clone (add link)</li>
+                    <li>git pull</li>
+                    <li>git checkout -b "name branch"</li>
+                    <li>git merge (name branch)</li>
+                </ol>
+            </p>
+            
+            <p>
+                <ul>
+                    <li>
+                        <strong>U</strong> (Untracked): São os arquivos que ainda não são monitorados pelo GIT.
+                    </li>
+                    <li>
+                        <strong>M</strong> (Modified): Arquivos que já foram commitados e agora foram modificados.
+                    </li>
+                    <li>
+                        <strong>A</strong> (Added): Arquivos que ainda não foram commitados mas já rodou git add.
+                    </li>
+                    <li>
+                        <strong>D</strong> (Deleted): São arquivo que foram removidos.
+                    </li>
+                </ul>
+            </p>
+            
+        </div>
     </main>
-    
 </body>
 </html>

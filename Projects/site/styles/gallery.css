@@ -116,15 +116,6 @@ main img {
     font-size: 16rem;
     color: var(--green-1);
     font-weight: 700;
-    /* text-decoration: none; */
-    /* text-transform: uppercase; */
-    /* text-shadow: .2rem .2rem .5rem black; */
-    
-    /* border: none; */
-    /* border-radius: 4rem; */
-    /* padding: 4rem 16rem; */
-    
-    /* background: linear-gradient(var(--green-2), var(--green-3)); */
 }
 
 .want-travel a:hover {

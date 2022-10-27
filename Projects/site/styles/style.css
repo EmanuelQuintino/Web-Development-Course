@@ -387,6 +387,25 @@ footer .logo span {
 
 /* >>>>>>>>>>>>>>>>>>>>>>   Responsive   <<<<<<<<<<<<<<<<<<<<<< */
 
+@media (max-width: 360px) {
+    header img {
+        width: 60rem;
+    }
+
+    header a {
+        font-size: 16rem;
+    }
+}
+
+@media (max-width: 320px) {
+    header img {
+        width: 48rem;
+    }
+
+    header a {
+        font-size: 16rem;
+    }
+}
 
 @media (min-width: 480px) {
 

@@ -28,7 +28,7 @@ main {
 .form-contact {
     margin-top: 8rem;
     display: grid;
-    gap: 32rem;
+    gap: 48rem;
 
     animation: topDownAnimation 1000ms;
 }
@@ -118,9 +118,21 @@ form button:hover {
     filter: brightness(1.1);
 }
 
+.contact-card {
+    display: flex;
+    flex-direction: column;
+    gap: 16rem;
+}
+
 @media (min-width: 640px) {
     .form-contact {
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
+    }
+}
+
+@media (min-width: 1024px) {
+    .form-contact {
+        gap: 128rem;
     }
 }

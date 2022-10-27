@@ -52,6 +52,7 @@ table {
     background-color: #FF614F22;
     
     border: solid var(--brown-4);
+    /* border-collapse: collapse; */
 }
 
 table td {

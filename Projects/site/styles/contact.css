@@ -121,7 +121,17 @@ form button:hover {
 .contact-card {
     display: flex;
     flex-direction: column;
-    gap: 16rem;
+    gap: 8rem;
+
+    max-width: 400rem;
+}
+
+#text-description-site {
+    margin-top: 24rem;
+}
+
+#my-contacts {
+    margin-top: 16rem;
 }
 
 @media (min-width: 640px) {

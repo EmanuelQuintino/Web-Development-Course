@@ -207,8 +207,11 @@ aside {
     padding: 16rem;
 
     display: grid;
-    /* grid-template-columns: 1fr 1fr 1fr;
-    grid-template-columns: repeat(3, 1fr); */
+    /* grid-template-columns: 240rem 240rem 240rem; */
+    /* grid-template-columns: 1fr 1fr 1fr; */
+    /* grid-template-columns: repeat(3, 1fr); */
+    /* grid-template-columns: repeat(auto-fit, 1fr); */
+    /* grid-template-columns: repeat(auto-fit, 240rem); */
     grid-template-columns: repeat(auto-fit, minmax(240rem, 1fr));
     
     grid-column-gap: 32rem;

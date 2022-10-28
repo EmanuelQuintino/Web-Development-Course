@@ -81,14 +81,12 @@ ul {
 section:last-child {
     margin-top: 32px;
     margin-top: 32rem;
-
 }
 
 div {
     /* font-size: 2em; */
     /* font-size: 2rem; */
     font-size: 32rem;
-
 }
 
 span {

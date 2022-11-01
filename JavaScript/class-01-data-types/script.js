@@ -1,72 +1,111 @@
 // Segundo o ECMAScript
 
-//  *Primitive Values : String, Number, Boolean...
 
-// string 
-// nome = "Emanuel"
-// console.log(typeof "Emanuel")
+// >>>>> Primitive Values : String, Number, Boolean... <<<<<
 
-// number: integer, float, NaN, Infinity
+
+// ----- String ------
+// let nome = "Emanuel"
+// let age = "29"
+// age = Number(age)
+// console.log(typeof age)
+
+
+// ----- Number: integer, float, NaN, Infinity -----
 // console.log(typeof 32.2)
 // console.log(typeof (32 + 5))
 // console.log(15/"Emanuel")
 // console.log(typeof NaN)
 
-// boolean: true or false
-// console.log(typeof (12 == 13))
+
+// ----- Boolean: true or false ------
+// console.log(typeof (10 == 20))
 // console.log(20 == 20)
-// console.log(12 == "Emanuel")
-// console.log((11 === "11")) //cuidado porque são tipos diferentes de dados
-
-// num1 = "11"
-// num2 = 22
-// soma = num1 + num2
-
-// console.log(soma)
-
-//  *Tipos Estrutural: Object, Function
-
-// object
-
-// aluno = {
-//     nome:"Emanuel",
-//     idade: 28,
-// }
-
-// console.log(typeof aluno)
-// console.log(aluno.nome)
-
-// array or vetor 
-
-// lista = ["Leite", 30, "pão", 20]
-
-// console.log(typeof lista)
-// console.log(typeof lista[0])
-// console.log(typeof lista[1])
+// console.log(20 == "Emanuel")
+// console.log((30 === "11")) //cuidado porque são tipos diferentes de dados
 
 
-// let colege = []
+// ------ Template Strings ------
+// let num1 = '10'
+// let num2 = 20
+// let soma = num1 + num2
 
-// let studant1 = {
-//     nome: "Emanuel",
+// console.log(num1 + num2)
+// console.log("A soma é: " + (num1 + num2))
+// console.log("A soma de " + num1 + " e de " + num2 + " é igual a " + (num1 + num2))
+// console.log(`A soma de ${num1} e de ${num2} é igual a ${soma}`)
+
+
+
+//  >>>>> Tipos Estrutural: Object, Function <<<<<<
+
+
+// ------ Object ------
+// let name = "Emanuel"
+// let age = 29
+// let profession = "Web Developer"
+
+// console.log(name)
+// console.log(age)
+// console.log(profession)
+
+// person = {
+//     name:"Emanuel",
 //     age: 29,
-//     wight: 1.85,
-//     isSubscribed: true
-// }
-// const studant2 = {
-//     nome: "João",
-//     age: 28,
-//     wight: 1.80,
-//     isSubscribed: true
+//     profession: "Web Developer"
 // }
 
-// console.log(typeof colege)
-// colege[0] = studant1
-// colege[1] = studant2 
-// console.log(colege)
-// console.log(colege[0])
-// console.log(colege[1])
+// console.log(person)
+// console.log(typeof person)
+// console.log(person.profession)
 
-// console.log(studant)
-// console.log(`${studant.nome} de idade de ${studant.age} anos pesa ${studant.wight}`)
-// console.log(studant.nome + " de idade de " + studant.age + " anos pesa " + studant.wight)
+
+// ----- Array or Vetor ------
+countries = ["Brasil", "Alemanha", "Itália", "Uruguai", "Espanha"]
+
+// console.log(countries)
+// console.log(typeof countries)
+// console.log(countries[3])
+// console.log(typeof countries[3])
+
+countries = ["Brasil", 5, "Alemanha", 4, "Itália", 4, "Uruguai",2 , "Espanha", 1]
+
+countries = [["Brasil", 5], ["Alemanha", 4], ["Itália", 4], ["Uruguai",2] , ["Espanha", 1]]
+
+// console.log(countries)
+// console.log(typeof countries)
+// console.log(countries[3])
+// console.log(typeof countries[3])
+// console.log(countries[0][1])
+
+countries = [
+    {
+        name: "Brasil",
+        champion: 5
+    },
+    
+    {
+        name: "Alemanha",
+        champion: 4
+    },
+
+    {
+        name: "Itália",
+        champion: 4
+    },
+
+    {
+        name: "Uruguai",
+        champion: 2
+    },
+
+    {
+        name: "Espanha",
+        champion: 1
+    },
+]
+
+console.log(countries)
+console.log(typeof countries)
+console.log(countries[3].name)
+console.log(countries[3].champion)

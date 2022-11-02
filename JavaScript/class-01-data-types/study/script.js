@@ -7,7 +7,10 @@
 // ----- String ------
 // let nome = "Emanuel"
 // let age = "29"
+
 // age = Number(age)
+// Number() (função construtora para converter um dado em número)
+
 // console.log(typeof age)
 
 
@@ -26,15 +29,18 @@
 
 
 // ------ Template Strings ------
+
 // let num1 = '10'
 // let num2 = 20
 // let soma = num1 + num2
 
 // console.log(num1 + num2)
 // console.log("A soma é: " + (num1 + num2))
-// console.log("A soma de " + num1 + " e de " + num2 + " é igual a " + (num1 + num2))
-// console.log(`A soma de ${num1} e de ${num2} é igual a ${soma}`)
 
+// console.log("A soma de " + num1 + " e de " + num2 + " é igual a " + (num1 + num2))
+// type conversion (type casting)
+
+// console.log(`A soma de ${num1} e de ${num2} é igual a ${soma}`)
 
 
 //  >>>>> Tipos Estrutural: Object, Function <<<<<<

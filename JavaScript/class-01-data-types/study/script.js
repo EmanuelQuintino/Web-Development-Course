@@ -43,6 +43,22 @@
 // console.log(`A soma de ${num1} e de ${num2} é igual a ${soma}`)
 
 
+
+//  >>>>> Variables Scope (hoisting) <<<<<<
+
+var num = 2
+console.log(num)    
+
+{
+    // var num = 3
+    var num = 3
+    console.log(num)    
+}
+
+console.log(num)
+
+
+
 //  >>>>> Tipos Estrutural: Object, Function <<<<<<
 
 
@@ -111,7 +127,7 @@ countries = [
     },
 ]
 
-console.log(countries)
-console.log(typeof countries)
-console.log(countries[3].name)
-console.log(countries[3].champion)
+// console.log(countries)
+// console.log(typeof countries)
+// console.log(countries[3].name)
+// console.log(countries[3].champion)

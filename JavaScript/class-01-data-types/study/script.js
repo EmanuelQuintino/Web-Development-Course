@@ -55,22 +55,24 @@ let soma = num1 + num2
 
 //  >>>>> Variables Scope (hoisting) <<<<<<
 
-// var num = 2
-// const pi = 3.14
-
-// console.log(num)    
-
 // {
-//     var num = 3
-//     // var pi = 1
-//     let pi = 1
+//     var num = 2
+//     const pi = 3.14
+
+//     console.log(num)    
+
+//         {
+//             var num = 3
+//             // var pi = 1
+//             let pi = 1
+//             console.log(num)
+//             console.log(pi)
+            
+//         }
+
 //     console.log(num)
 //     console.log(pi)
-    
 // }
-
-// console.log(num)
-// console.log(pi)
 
 
 

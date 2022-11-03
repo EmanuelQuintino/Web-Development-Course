@@ -17,7 +17,7 @@
 // ----- Number: integer, float, NaN, Infinity -----
 // console.log(typeof 32.2)
 // console.log(typeof (32 + 5))
-// console.log(15/"Emanuel")
+// console.log(typeof 15 + "Emanuel")
 // console.log(typeof NaN)
 
 
@@ -25,44 +25,59 @@
 // console.log(typeof (10 == 20))
 // console.log(20 == 20)
 // console.log(20 == "Emanuel")
-// console.log((30 === "11")) //cuidado porque são tipos diferentes de dados
+// console.log((11 === "11")) //cuidado porque são tipos diferentes de dados
 
 
-// ------ Template Strings ------
+// ------ Template Strings (Interpolation) ------
 
-// let num1 = '10'
-// let num2 = 20
-// let soma = num1 + num2
+let num1 = '10'
+let num2 = 20
+
+num1 = Number(num1)
+
+let soma = num1 + num2
 
 // console.log(num1 + num2)
+
+// type conversion (type casting)
+// console.log("A soma é: " + num1 + num2)
+
+// grouping operator 
 // console.log("A soma é: " + (num1 + num2))
 
+// concatenation
 // console.log("A soma de " + num1 + " e de " + num2 + " é igual a " + (num1 + num2))
-// type conversion (type casting)
 
+// Template Strings (Interpolation)
 // console.log(`A soma de ${num1} e de ${num2} é igual a ${soma}`)
 
 
 
 //  >>>>> Variables Scope (hoisting) <<<<<<
 
-var num = 2
-console.log(num)    
+// var num = 2
+// const pi = 3.14
 
-{
-    // var num = 3
-    var num = 3
-    console.log(num)    
-}
+// console.log(num)    
 
-console.log(num)
+// {
+//     var num = 3
+//     // var pi = 1
+//     let pi = 1
+//     console.log(num)
+//     console.log(pi)
+    
+// }
+
+// console.log(num)
+// console.log(pi)
 
 
 
 //  >>>>> Tipos Estrutural: Object, Function <<<<<<
 
 
-// ------ Object ------
+// // ------ Object ------
 // let name = "Emanuel"
 // let age = 29
 // let profession = "Web Developer"
@@ -92,7 +107,7 @@ countries = ["Brasil", "Alemanha", "Itália", "Uruguai", "Espanha"]
 
 countries = ["Brasil", 5, "Alemanha", 4, "Itália", 4, "Uruguai",2 , "Espanha", 1]
 
-countries = [["Brasil", 5], ["Alemanha", 4], ["Itália", 4], ["Uruguai",2] , ["Espanha", 1]]
+// countries = [["Brasil", 5], ["Alemanha", 4], ["Itália", 4], ["Uruguai",2] , ["Espanha", 1]]
 
 // console.log(countries)
 // console.log(typeof countries)
@@ -127,7 +142,7 @@ countries = [
     },
 ]
 
-// console.log(countries)
-// console.log(typeof countries)
-// console.log(countries[3].name)
-// console.log(countries[3].champion)
+console.log(countries)
+console.log(typeof countries)
+console.log(countries[3].name)
+console.log(countries[3].champion)

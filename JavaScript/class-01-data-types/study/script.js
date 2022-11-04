@@ -25,6 +25,8 @@
 // console.log(typeof (10 == 20))
 // console.log(20 == 20)
 // console.log(20 == "Emanuel")
+// console.log(20 != "Emanuel")
+// console.log((11 == "11"))
 // console.log((11 === "11")) //cuidado porque são tipos diferentes de dados
 
 
@@ -55,24 +57,33 @@ let soma = num1 + num2
 
 //  >>>>> Variables Scope (hoisting) <<<<<<
 
-// {
-//     var num = 2
-//     const pi = 3.14
+{   
+    // var num
+    var num = "Global"
+    // let num = "Global"
 
-//     console.log(num)    
+    // const pi = 3.14
 
-//         {
-//             var num = 3
-//             // var pi = 1
-//             let pi = 1
-//             console.log(num)
-//             console.log(pi)
-            
-//         }
+    // console.log(num)    
 
-//     console.log(num)
-//     console.log(pi)
-// }
+        {
+            var num = "Local"
+            // let num = "Local"
+            // var pi = 1
+            // let pi = 1
+            // console.log(num)
+            // console.log(pi)   
+        }
+
+        {
+            // var num = "Local2"
+            let num = "Local2"
+            // console.log(num)
+        }
+
+    // console.log(num)
+    // console.log(pi)
+}
 
 
 
@@ -80,9 +91,9 @@ let soma = num1 + num2
 
 
 // // ------ Object ------
-// let name = "Emanuel"
-// let age = 29
-// let profession = "Web Developer"
+let name = "Emanuel"
+let age = 29
+let profession = "Web Developer"
 
 // console.log(name)
 // console.log(age)
@@ -96,26 +107,26 @@ let soma = num1 + num2
 
 // console.log(person)
 // console.log(typeof person)
-// console.log(person.profession)
+// console.log(person.name)
 
 
 // ----- Array or Vetor ------
 countries = ["Brasil", "Alemanha", "Itália", "Uruguai", "Espanha"]
 
-// console.log(countries)
 // console.log(typeof countries)
-// console.log(countries[3])
-// console.log(typeof countries[3])
+// console.log(countries)
+// console.log(countries[0])
 
-countries = ["Brasil", 5, "Alemanha", 4, "Itália", 4, "Uruguai",2 , "Espanha", 1]
+// countries = ["Brasil", 5, "Alemanha", 4, "Itália", 4, "Uruguai",2 , "Espanha", 1]
 
 // countries = [["Brasil", 5], ["Alemanha", 4], ["Itália", 4], ["Uruguai",2] , ["Espanha", 1]]
 
 // console.log(countries)
 // console.log(typeof countries)
 // console.log(countries[3])
-// console.log(typeof countries[3])
-// console.log(countries[0][1])
+// console.log(typeof countries[4])
+// console.log(countries[1])
+// console.log(countries[3][1])
 
 countries = [
     {
@@ -144,7 +155,11 @@ countries = [
     },
 ]
 
-console.log(countries)
-console.log(typeof countries)
-console.log(countries[3].name)
-console.log(countries[3].champion)
+country = 0
+
+// console.log(countries)
+// console.log(typeof countries)
+// console.log(countries[country].name)
+// console.log(countries[country].champion)
+
+console.log(`${countries[country].name}, Títulos: ${countries[country].champion}`)

@@ -87,7 +87,7 @@ let soma = num1 + num2
 
 
 
-//  >>>>> Tipos Estrutural: Object, Function <<<<<<
+//  >>>>> Type Structutal (Object, Functions) <<<<<<
 
 
 // // ------ Object ------
@@ -110,7 +110,7 @@ let profession = "Web Developer"
 // console.log(person.name)
 
 
-// ----- Array or Vetor ------
+// ----- Array (Vetor) ------
 countries = ["Brasil", "Alemanha", "Itália", "Uruguai", "Espanha"]
 
 // console.log(typeof countries)
@@ -162,4 +162,4 @@ country = 0
 // console.log(countries[country].name)
 // console.log(countries[country].champion)
 
-console.log(`${countries[country].name}, Títulos: ${countries[country].champion}`)
+console.log(`${countries[country].name} tem ${countries[country].champion} título(s)`)

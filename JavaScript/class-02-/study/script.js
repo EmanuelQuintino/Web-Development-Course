@@ -1,38 +1,48 @@
-// // window.alert('Bem vindo!')
-
 // // *Expressions and Operators
 
+
 // // Arithmetic Operators
-        // adição +
-        // subtração -
-        // multiplicação *
-        // divisão /
-        // resto da divisão %
-        // exponencial ** 
-        // incremento ++
-        // decremento --
+        // addition +
+        // subtraction -
+        // multiplication *
+        // division /
+        // remainder %
+        // exponentiation ** (to square root use (1/2))
+        // increment ++
+        // decrement --
          
-        // let num1 = '10'
-        // let num2 = 10
+        let num1 = '4'
+        let num2 = 3
         // console.log(num1 ** num2)
 
-// // Assignment (Atribuição)
-        // num2 = num2 + 1
-        // num2 -= 1
-        // console.log(num2)
 
-// // Expressions Grouping Operator
-        // let total = (2 + 3) * 3
-        // console.log(total)
+// // Assignment (Atribuição)
+        // num1 = Number(num1)
+
+        // num1 = num1 + 2
+        
+        // num1 += 2
+        // num1 -= 2
+        // num1 *= 2
+        // num1 /= 2
+        // num1 &= 2
+        // num1 **= 2
+        // console.log(num1)
+
 
 // // Comparison Operators (Boolean)
-        // >  >=
-        // <  <=
-        // ==
-        // !=
-        // ===
-        // !==
+        // >    >=
+        // <    <=
+        // ==   !=
+        // ===  !==
 
+        // console.log(num1 > num2)
+        // console.log(num1 >= num2)
+        // console.log(num1 < num2)
+        // console.log(num1 <= num2)
+        // console.log(num1 == num2)
+        // console.log(num1 != num2)
+        // console.log(num1 === num2)
         // console.log(num1 !== num2)
 
 
@@ -40,11 +50,20 @@
         // and  &&
         // or   ||
         // not  !
-        let juntarDinheiro = false
-        let comprarRoupa = true
+
+        //Ir para a Walt Disney?
+
+        let pouparDinheiro = true
+        let juntarDinheiro = true
+
+        // console.log(pouparDinheiro)
         
-        //ir para festa
-        // console.log(!juntarDinheiro && comprarRoupa)
+        // console.log(pouparDinheiro && juntarDinheiro)
+
+        let guardarPoupanca = false
+        let guardarSelic = true
+        
+        // console.log(guardarPoupanca || guardarSelic)
 
 // // Operators
 
@@ -65,26 +84,51 @@
         // console.log(fruits)
 
 // // Ternary
+
         // test ? true : false
+
         // console.log(n1 > n2 ? 'Yes' : 'No')
-        // console.log(n1 >= n2 ? 'Aprovado': 'Reprovado')
+        
+        let avarege = 7
+        // console.log(avarege >= 7 ? 'Aprovado': 'Reprovado')
+        
+        // * Cuidado com valores Truthy e False onde o booleano é considerado obrigatório (condicionais e loops).
+        
+        // Truthy               False
+        // 1, 1.5, -1           0
+        // " ", "0", "false"    ""
+        // {}                   null
+        // []                   undefined
+        // Infinity, -Infinity  NaN
+                
+        // console.log( Infinity? 'Aprovado': 'Reprovado')
+
+// // Expressions Grouping Operator
+        // let total = (2 + 3) * 3
+        // console.log(total)
 
 
 // // Operator Precedence
-        // ()
-        // !  ++  --
-        // *  /
-        // +  -
-        // <  <=  >  >=
-        // ==  !=  ===  !==
-        // &&
-        // ||
-        // ?:
-        // =  += ...
 
-        // console.log(3 + 5 / 2)
-        // console.log(3 > 2 || 4 > 10)
-        // console.log(3 > 2 > 1) // true = 1 false = 0
-        // console.log(3 > 2 && 2 > 1)
+// grouping                      ()
+// negation and increment        ! ++ --
+// multiplication and division   * /
+// addition and subtraction      + -
+// comparison                    < <= > >=
+// equality                      == != === !==
+// and                           && 
+// or                            ||
+// conditional                   ?:
+// assignment                    = += -= *= %=
 
-        //Obs: Apenas referência, aprende com o tempo!
+
+// console.log(7 + 8 / 2)
+// console.log((7 + 8) / 2)
+// console.log(3 < 2 || 4 < 10)
+console.log(3 > 2 > 1) // true = 1 false = 0
+// console.log(true == 1) 
+// console.log(true === 1) 
+// console.log(3 > 2 && 2 > 1)
+
+
+// Referência: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Expressions_and_Operators

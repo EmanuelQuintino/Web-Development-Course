@@ -163,3 +163,6 @@ country = 0
 // console.log(countries[country].champion)
 
 console.log(`${countries[country].name} tem ${countries[country].champion} título(s)`)
+
+
+// referência: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Data_structures

@@ -1,6 +1,7 @@
 // Solicite 2 números e apresente:
-// Crie constantes com as operações de +, -, *, /, %, ** e raiz para os números solicitados.
-// Apresente as operaçôes e os resultados escrevendo no documento (função write).
+// As operaçôes e os resultados escrevendo no documento (função write).
+// Crie constantes e atribua as operações de:
+// +, -, *, /, %, ** e raiz para os números solicitados.
 
 const numberOne = Number(prompt("Digite o primeiro número: "))
 const numberTwo = Number(prompt("Digite o sugundo número: "))
@@ -20,7 +21,3 @@ document.write(`A divisão de ${numberOne} e ${numberTwo} = ${div.toFixed(2)} <b
 document.write(`O resto da divisão de ${numberOne} e ${numberTwo} = ${rem} <br>`)
 document.write(`A potência de ${numberOne} elevado a ${numberTwo} = ${exp} <br>`)
 document.write(`A raiz ${numberTwo} de ${numberOne} = ${sqr.toFixed(2)} <br>`)
-
-
-
-

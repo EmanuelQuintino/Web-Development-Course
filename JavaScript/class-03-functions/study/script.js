@@ -1,6 +1,7 @@
-// Function Declarations
+// Function Statements
 
-// >>>> Nomeada <<<<
+
+// >>>> Named <<<<
  
 // function myTest(text) { //parameters
 //     console.log(text)
@@ -17,7 +18,7 @@
 // }
 
 
-// >>>> Anonima <<<<
+// >>>> Anonymous <<<<
 
 // const somar = function (num1, num2) {
 //     return num1 + num2
@@ -32,7 +33,7 @@ const somar = (num1, num2) => num1 + num2
 // console.log(soma)
 
 
-// >>>> Function() Constructor <<<<<
+// >>>> Constructor <<<<<
 
 // function Car(brandName, motorPower) {
 //     this.brand = brandName

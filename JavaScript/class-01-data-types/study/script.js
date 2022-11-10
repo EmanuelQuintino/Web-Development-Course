@@ -1,4 +1,4 @@
-// Segundo o ECMAScript
+// ECMAScript Data Types
 
 
 // >>>>> Primitive Values : String, Number, Boolean... <<<<<
@@ -7,9 +7,6 @@
 // ----- String ------
 // let nome = "Emanuel"
 // let age = "29"
-
-// age = Number(age)
-// Number() (função construtora para converter um dado em número)
 
 // console.log(typeof age)
 
@@ -35,13 +32,14 @@
 let num1 = '10'
 let num2 = 20
 
-num1 = Number(num1)
+num1 = Number(num1) // type conversion (typecasting)
+// Number() (função construtora para converter um dado em número)
+
+// console.log(num1 + num2) // Type Coersion 
 
 let soma = num1 + num2
 
-// console.log(num1 + num2)
 
-// type conversion (type casting)
 // console.log("A soma é: " + num1 + num2)
 
 // grouping operator 

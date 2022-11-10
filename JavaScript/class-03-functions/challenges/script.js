@@ -3,12 +3,12 @@
 // name, height, weight
 // Escreva na tela o nome do paciente e o seu IMC
 
-function calcIMC (height, weight) {
-    let imc = weight / (height / 100 ) ** 2
+function calcIMC (patient) {
+    let imc = patient.weight / (patient.height / 100 ) ** 2
     return imc.toFixed(2)
 }
 
-let listPatients = [
+const listPatients = [
     {
         name: 'Maria',
         height: 160,
@@ -26,10 +26,6 @@ let listPatients = [
     },
 ]
 
-const imcPatients1 = calcIMC(listPatients[0].height, listPatients[0].weight)
-const imcPatients2 = calcIMC(listPatients[1].height, listPatients[1].weight)
-const imcPatients3 = calcIMC(listPatients[2].height, listPatients[2].weight)
-
-document.write(`O IMC de ${listPatients[0].name} é ${imcPatients1} <br>`)
-document.write(`O IMC de ${listPatients[1].name} é ${imcPatients2} <br>`)
-document.write(`O IMC de ${listPatients[2].name} é ${imcPatients3} <br>`)
+document.write(`O IMC de ${listPatients[0].name} é ${calcIMC(listPatients[0])} <br>`)
+document.write(`O IMC de ${listPatients[1].name} é ${calcIMC(listPatients[1])} <br>`)
+document.write(`O IMC de ${listPatients[2].name} é ${calcIMC(listPatients[2])} <br>`)

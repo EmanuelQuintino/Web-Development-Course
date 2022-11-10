@@ -29,3 +29,7 @@ const listPatients = [
 document.write(`O IMC de ${listPatients[0].name} é ${calcIMC(listPatients[0])} <br>`)
 document.write(`O IMC de ${listPatients[1].name} é ${calcIMC(listPatients[1])} <br>`)
 document.write(`O IMC de ${listPatients[2].name} é ${calcIMC(listPatients[2])} <br>`)
+
+// for (const patient of listPatients) {
+//     document.write(`O IMC de ${patient.name} é ${calcIMC(patient)} <br>`)
+// }

@@ -47,3 +47,6 @@ const somar = (num1, num2) => num1 + num2
 // console.log(siena.brand)
 // console.log(onix.motor)
 // console.log(polo)
+
+
+// Referência: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions

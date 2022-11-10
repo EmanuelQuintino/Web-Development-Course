@@ -1,6 +1,6 @@
-// Faça um programa que execute o IMC de cada paciente
-// Os pacientes deverão estar em uma lista e conter as propriedades:
-// name, height, weight
+// Crie uma função que retorne o IMC dos pacientes
+// Faça um array (lista) com todos os pacientes
+// Cada paciente deverá conter as propriedades name, height, weight;
 // Escreva na tela o nome do paciente e o seu IMC
 
 function calcIMC (patient) {

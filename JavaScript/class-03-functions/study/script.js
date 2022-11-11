@@ -13,7 +13,7 @@
 // function somar(num1, num2) {
 //     // return num1 + num2
 
-//     let soma = num1 + num2 //Atenção para o operador chave
+//     let soma = num1 + num2 //key operator
 //     return soma
 // }
 

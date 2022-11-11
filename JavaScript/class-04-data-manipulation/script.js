@@ -25,18 +25,44 @@
 
 // >>>> Number Manipulation <<<<
 
-// console.log(num)
+let num1 = 7.5
+let num2 = -5
+
+// console.log(num1)
+// console.log(Math.sqrt(81))
+// console.log(Math.PI)
+// console.log(Math.abs(num2))
+
+console.log(Math.max(12, 34, 4, 98, 32, 56 ,178 ,12, 43, 65))
+console.log(Math.min(12, 34, 4, 98, 32, 56 ,178 ,12, 43, 65))
+
+// console.log(Math.ceil(num1))
+// console.log(Math.round(num1))
+// console.log(Math.floor(num1))
+
+// console.log(Math.round(Math.random()*2))
+
+// let mega = []
+
+// for(let i=0; i<6; i++) {
+//     mega[i] = Math.ceil(Math.random()*60)
+// }
+
+// console.log(mega)
+
+
+
 // console.log(typeof Number(num.toFixed(2)))
 // console.log(Number(num.toFixed(2).replace(".", ",")))
 // console.log(typeof num.toFixed(2).replace(".", ","))
 
 // Convert Currency
-// console.log(num.toLocaleString('pt-br', {style: 'currency', currency: 'brl'})) //Brasil
-// console.log(num.toLocaleString('pt-br', {style: 'currency', currency: 'usd'})) //Dólar Americano
-// console.log(num.toLocaleString('pt-br', {style: 'currency', currency: 'eur'})) //Euro
-// console.log(num.toLocaleString('pt-br', {style: 'currency', currency: 'jpy'})) // Iene
+// console.log(num.toLocaleString('pt-br', {style: 'currency', currency: 'brl'})) 
+// console.log(num.toLocaleString('pt-br', {style: 'currency', currency: 'usd'}))
+// console.log(num.toLocaleString('pt-br', {style: 'currency', currency: 'eur'})) 
+// console.log(num.toLocaleString('pt-br', {style: 'currency', currency: 'jpy'})) 
 
-//Código Padrão Internacional de Moedas ISO 4217
+// International Standard Currency Code ISO 4217
 
 // let cpf = 32165498758
 // console.log(cpf + 2)
@@ -47,7 +73,7 @@
 
 // >>>> Date Manipulation <<<<
 data = new Date()
-console.log(data.getDate())
+// console.log(data.getDate())
 
 
 // >>>> Array Manipulation <<<<
@@ -55,11 +81,14 @@ console.log(data.getDate())
 // let myArray = Array(1, "a", () => "A" )
 // console.log(myArray[2]())
 
-// let techs = ['HTML', 'CSS', 'Git']
+let techs = ['HTML', 'CSS', 'Git']
 
 // techs.push('JavaScript')
 // techs.pop()
 // techs.unshift('SQL')
+// techs.shift()
+
+let index = techs.slice(0, 1)
 
 // let index = techs.indexOf('SQL')
 // techs.splice(index, 1)
@@ -79,3 +108,4 @@ console.log(data.getDate())
 // deleteArrayIndex("css")
 
 // console.log(techs)
+// console.log(index)

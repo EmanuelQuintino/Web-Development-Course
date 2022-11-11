@@ -7,6 +7,17 @@
     <title>Class 04 Prototype</title>
 </head>
 <body>
+    <!-- <input type="text" id="cpf" aria-autocomplete="none" maxlength="14" onkeyup="cpfMask()"> -->
     <script src="script.js"></script>
+
+    <script>
+        let cpf = document.querySelector("#cpf")
+
+        function cpfMask() {
+            cpf.value.length == 3 ? cpf.value += "." : cpf.value 
+            cpf.value.length == 7 ? cpf.value += "." : cpf.value 
+            cpf.value.length == 11 ? cpf.value += "-" : cpf.value 
+        }
+    </script>
 </body>
 </html>

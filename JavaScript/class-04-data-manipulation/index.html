@@ -8,7 +8,7 @@
 </head>
 <body>
     <form action="">
-        <input type="text" id="cpf" maxlength="14" autocomplete="off">
+        <input type="text" id="cpf" maxlength="14" autocomplete="off" placeholder="000.000.000-00">
         <button type="submit">Enviar</button>
     </form>
     <script src="script.js"></script>
@@ -16,10 +16,18 @@
     <script>
         const cpf = document.querySelector("#cpf")
 
-        cpf.addEventListener("keypress", () => {
+        cpf.addEventListener("keypress", (event) => {
+            
+            console.log(event.keyCode)
+        
+            if(event.keyCode < 48 || event.keyCode > 57) {
+                event.preventDefault()
+            }
+
             cpf.value.length == 3 ? cpf.value += "." : cpf.value 
             cpf.value.length == 7 ? cpf.value += "." : cpf.value 
             cpf.value.length == 11 ? cpf.value += "-" : cpf.value
+
         })
     </script>
 </body>

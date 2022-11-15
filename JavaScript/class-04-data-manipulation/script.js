@@ -1,11 +1,11 @@
-// >>>> Data Manipulation <<<< 
+// >>>>>>>>>>> Data Manipulation <<<<<<<<<<<<<< 
 
 // Prototype (Chain) 
 // console.log('Emanuel'.__proto__)
 // console.log(10.0.__proto__)
 
 
-// >>>> String <<<<
+// >>>>>>>>>>>> String <<<<<<<<<<<<<<
 
 // let myName = 'Emanuel'
 // let phrase = 'Eu sou Web Developer'
@@ -21,7 +21,7 @@
 
 
 
-// >>>> Number Manipulation <<<<
+// >>>>>>>>>>> Number Manipulation <<<<<<<<<<<<
 
 let num1 = 7.93467
 let num2 = -5
@@ -66,7 +66,7 @@ let num2 = -5
 
 
 
-// >>>> Date Manipulation <<<<
+// >>>>>>>>>>>>>> Date Manipulation <<<<<<<<<<<<
 data = new Date()
 data1 = new Date('2022-01-13 02:15:23')
 data2 = new Date('2022-01-13 03:22:23')
@@ -100,8 +100,7 @@ document.write(Math.floor(Math.abs(data1 - data2) / 1000 / 60 / 60 / 24))
 
 
 
-
-// >>>> Array Manipulation <<<<
+// >>>>>>>>>>>> Array Manipulation <<<<<<<<<<<<<
 
 // let myArray = Array(1, "a", () => "A" )
 // console.log(myArray[2]())

@@ -20,6 +20,7 @@
 // console.log(phrase.toLocaleLowerCase().includes('web'))
 
 
+
 // >>>> Number Manipulation <<<<
 
 let num1 = 7.93467
@@ -64,9 +65,40 @@ let num2 = -5
 // console.log(mega.sort())
 
 
+
 // >>>> Date Manipulation <<<<
 data = new Date()
-// console.log(data.getDate())
+data1 = new Date('2022-01-13 02:15:23')
+data2 = new Date('2022-01-13 03:22:23')
+
+// document.write(data)
+
+// document.write(data.getSeconds())
+// document.write(data.getMinutes())
+// document.write(data.getHours())
+
+// document.write(data.getDay()) // 0 - 6
+// document.write(data.getDate())
+// document.write(data.getMonth() + 1) // 0 - 11
+// document.write(data.getFullYear())
+
+// document.write(data.getDate() + "/" + data.getMonth() + "/" + data.getFullYear())
+
+// data.setSeconds(data.getSeconds() + 60)
+// data.setMinutes(data.getMinutes() + 60)
+// data.setHours(data.getHours() + 25)
+// data.setDate(data.getDate() + 30)
+// data.setMonth(data.getMonth() + 14)
+// data.setFullYear(data.getFullYear() + 2)
+
+// document.write(data.toLocaleString("pr-BR"))
+// document.write(data.toLocaleDateString("pr-BR"))
+// document.write(data.toLocaleTimeString("pr-BR"))
+
+                                                //  s      m    h    d
+document.write(Math.floor(Math.abs(data1 - data2) / 1000 / 60 / 60 / 24))
+
+
 
 
 // >>>> Array Manipulation <<<<
@@ -81,7 +113,7 @@ let techs = ['HTML', 'CSS', 'Git']
 // techs.unshift('SQL')
 // techs.shift()
 
-let index = techs.slice(0, 1)
+// let index = techs.slice(0, 1)
 
 // let index = techs.indexOf('SQL')
 // techs.splice(index, 1)

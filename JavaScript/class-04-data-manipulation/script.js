@@ -1,20 +1,29 @@
 // >>>>>>>>>>> Data Manipulation <<<<<<<<<<<<<< 
 
 // Prototype (Chain) 
-// console.log('Emanuel'.__proto__)
-// console.log(10.0.__proto__)
+
+// function Car(motorPower) {
+//     this.motor = motorPower
+// }
+
+// console.log(new Car("v8").motor)
+
+let myName = "Emanuel"
+let age = 29
+
+// console.log(myName.__proto__)
+// console.log(age.__proto__)
 
 
 // >>>>>>>>>>>> String <<<<<<<<<<<<<<
 
-// let myName = 'Emanuel'
-// let phrase = 'Eu sou Web Developer'
+let phrase = 'Eu sou Web Developer'
 
 // console.log(myName.length)
 // console.log(myName.toLocaleUpperCase())
 
 // console.log(typeof phrase.split(' ')[2])
-// console.log(typeof phrase.split(' ').join("-"))
+// console.log(phrase.split(' ').join("_"))
 
 // console.log(phrase.includes('web')) //case-sensitive
 // console.log(phrase.toLocaleLowerCase().includes('web'))
@@ -52,30 +61,23 @@ let num2 = -5
 // console.log(Math.ceil(num1))
 // console.log(Math.round(num1))
 // console.log(Math.floor(num1))
-// console.log(Math.floor(num1))
 // 
-// console.log(Math.round(Math.random()*2))
-
-// let mega = []
-
-// for(let i=0; i<6; i++) {
-//         mega[i] = Math.ceil(Math.random()*60)
-// }
-
-// console.log(mega.sort())
-
+// console.log(Math.round(Math.random()*10))
 
 
 // >>>>>>>>>>>>>> Date Manipulation <<<<<<<<<<<<
 data = new Date()
-data1 = new Date('2022-01-13 02:15:23')
+data1 = new Date('2022-01-13 02:05:03')
 data2 = new Date('2022-01-13 03:22:23')
 
 // document.write(data)
 
-// document.write(data.getSeconds())
-// document.write(data.getMinutes())
-// document.write(data.getHours())
+// document.write(data1.getSeconds().toString().padStart(2, '0'))
+// document.write(data1.getMinutes())
+// document.write(data1.getHours())
+
+
+// document.write(data1.getHours() + ":" + data1.getMinutes() + ":" + data1.getSeconds().toString().padStart(2, '0'))
 
 // document.write(data.getDay()) // 0 - 6
 // document.write(data.getDate())
@@ -96,16 +98,18 @@ data2 = new Date('2022-01-13 03:22:23')
 // document.write(data.toLocaleTimeString("pr-BR"))
 
                                                 //  s      m    h    d
-document.write(Math.floor(Math.abs(data1 - data2) / 1000 / 60 / 60 / 24))
+// document.write(Math.floor(Math.abs(data1 - data2) / 1000 / 60 / 60 / 24))
 
 
 
 // >>>>>>>>>>>> Array Manipulation <<<<<<<<<<<<<
 
 // let myArray = Array(1, "a", () => "A" )
+// console.log(myArray.length)
+// console.log(myArray)
 // console.log(myArray[2]())
 
-let techs = ['HTML', 'CSS', 'Git']
+// let techs = ['HTML', 'CSS', 'Git']
 
 // techs.push('JavaScript')
 // techs.pop()
@@ -131,5 +135,8 @@ let techs = ['HTML', 'CSS', 'Git']
 
 // deleteArrayIndex("css")
 
-// console.log(techs)
+// nums = [2, 1, 5, 19, 10]
+// console.log(nums.sort((a, b) => a - b))
+
+// console.log(techs.sort())
 // console.log(index)

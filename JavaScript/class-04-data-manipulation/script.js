@@ -86,7 +86,7 @@ let date2 = new Date('2022-04-01 02:22:23')
 
 // document.write(date1.getHours().toString().padStart(2, '0') + ":" + date1.getMinutes().toString().padStart(2, '0') + ":" + date1.getSeconds().toString().padStart(2, '0'))
 
-// document.write(date1.toLocaleTimeString("pr-BR"))
+// document.write(date1.toLocaleTimeString("pt-BR"))
 
 
 // document.write(date.getDay()) // 0 - 6

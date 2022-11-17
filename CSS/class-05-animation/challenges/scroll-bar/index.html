@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scroll Bar</title>
+
+    <style>
+        .container {
+            width: 60vw;
+            margin: 0 auto;
+            display: flex;
+            gap: 6px;
+
+            overflow-x: auto;
+
+            scroll-snap-type: x mandatory;
+        }
+
+        img {
+            width: 30%;
+            height: 30%;
+            /* flex: none; */
+
+            scroll-snap-align: start;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="../projects/site/images/image-card1.jpg" alt="">
+        <img src="../projects/site/images/image-card1.jpg" alt="">
+        <img src="../projects/site/images/image-card1.jpg" alt="">
+        <img src="../projects/site/images/image-card1.jpg" alt="">
+        <img src="../projects/site/images/image-card1.jpg" alt="">
+    </div>
+</body>
+</html>

@@ -118,22 +118,29 @@ let date2 = new Date('2022-04-01 02:22:23')
 // >>>>>>>>>>>> Array Manipulation <<<<<<<<<<<<<
 
 // let myArray = Array(1, "a", () => "A" )
-// console.log(myArray.length)
 // console.log(myArray)
+// console.log(myArray.length)
 // console.log(myArray[2]())
 
-// let techs = ['HTML', 'CSS', 'Git']
+let techs = ['HTML', 'CSS', 'Git']
 
-// techs.push('JavaScript')
-// techs.pop()
+techs.push('JavaScript')
+
+// let removeElement = techs.shift()
+let removeElement = techs.pop()
+
+// console.log(`${removeElement} foi removido!`)
+
 // techs.unshift('SQL')
 // techs.shift()
 
-// let index = techs.slice(0, 1)
+// let index = techs.slice(0, 5)
 
-// let index = techs.indexOf('SQL')
-// techs.splice(index, 1)
+// let index = techs.indexOf('Git')
+// techs.splice(-3, 1)
+// console.log(techs.splice(index, 1))
 // techs.splice(techs.indexOf("SQL"), 1)
+
 
 // function deleteArrayIndex(techName) {
 //     let aux = techs
@@ -148,8 +155,9 @@ let date2 = new Date('2022-04-01 02:22:23')
 
 // deleteArrayIndex("css")
 
-// nums = [2, 1, 5, 19, 10]
-// console.log(nums.sort((a, b) => a - b))
 
-// console.log(techs.sort())
+nums = [2, "2", 2, 1, 5, 19, 10]
+console.log(nums.sort((a, b) => a -b))
+console.log(techs.sort())
+
 // console.log(index)

@@ -21,12 +21,14 @@ let age = 29
 let phrase = 'Eu sou Web Developer'
 
 // console.log(myName.length)
+// console.log(myName[1])
 // console.log(myName.toLocaleUpperCase())
 
 // console.log(typeof phrase.split(' ')[2])
 // console.log(phrase.split(' ').join("_"))
 
 // console.log(phrase.includes('web')) //case-sensitive
+// console.log("Web" == "web")
 // console.log(phrase.toLocaleLowerCase().includes('web'))
 
 
@@ -39,6 +41,7 @@ let num2 = -5
 // console.log(num1)
 // console.log(String(num1).length)
 // console.log(String(num1).replace(".", "").length)
+// console.log("R$ " + String(num1.toFixed(2)).replace(".", ","))
 
 // console.log(Number(num1.toFixed(2)))
 // console.log(Number(num1.toFixed(2).replace(".", ",")))
@@ -70,39 +73,45 @@ let num2 = -5
 
 // >>>>>>>>>>>>>> Date Manipulation <<<<<<<<<<<<
 
-data = new Date()
-data1 = new Date('2022-01-13 02:05:03')
-data2 = new Date('2022-01-13 03:22:23')
+date = new Date()
+let date1 = new Date('2022-03-01 02:05:03')
+let date2 = new Date('2022-04-01 02:22:23')
 
-// document.write(data)
+// document.write(date)
 
-// document.write(data1.getSeconds().toString().padStart(2, '0'))
-// document.write(data1.getMinutes())
-// document.write(data1.getHours())
+// document.write(date1.getHours())
+// document.write(date1.getMinutes())
+// document.write(date1.getSeconds().toString().padStart(2, '0'))
 
 
-// document.write(data1.getHours() + ":" + data1.getMinutes() + ":" + data1.getSeconds().toString().padStart(2, '0'))
+// document.write(date1.getHours().toString().padStart(2, '0') + ":" + date1.getMinutes().toString().padStart(2, '0') + ":" + date1.getSeconds().toString().padStart(2, '0'))
 
-// document.write(data.getDay()) // 0 - 6
-// document.write(data.getDate())
-// document.write(data.getMonth() + 1) // 0 - 11
-// document.write(data.getFullYear())
+// document.write(date1.toLocaleTimeString("pr-BR"))
 
-// document.write(data.getDate() + "/" + data.getMonth() + "/" + data.getFullYear())
 
-// data.setSeconds(data.getSeconds() + 60)
-// data.setMinutes(data.getMinutes() + 60)
-// data.setHours(data.getHours() + 25)
-// data.setDate(data.getDate() + 30)
-// data.setMonth(data.getMonth() + 14)
-// data.setFullYear(data.getFullYear() + 2)
+// document.write(date.getDay()) // 0 - 6
+// document.write(date.getDate())
+// document.write(date.getMonth() + 1) // 0 - 11
+// document.write(date.getFullYear())
 
-// document.write(data.toLocaleString("pr-BR"))
-// document.write(data.toLocaleDateString("pr-BR"))
-// document.write(data.toLocaleTimeString("pr-BR"))
+// document.write(date.getDate() + "/" + date.getMonth() + "/" + date.getFullYear())
 
-                                                   //  s      m    h    d
-// document.write(Math.floor(Math.abs(data1 - data2) / 1000 / 60 / 60 / 24))
+// document.write(date.toLocaleDateString("pr-BR"))
+
+
+// date1.setSeconds(date1.getSeconds() + 157)
+// date1.setMinutes(date1.getMinutes() + 56)
+// date1.setHours(date1.getHours() + 23)
+
+// date1.setDate(date1.getDate() + 20)
+// date1.setMonth(date1.getMonth() + 13)
+// date1.setFullYear(date1.getFullYear() + 20)
+
+// document.write(date1.toLocaleString("pr-BR"))
+
+
+                                                //   s     m    h    d
+// document.write(Math.floor(Math.abs(date1 - date2) / 1000 / 60 / 60 / 24))
 
 
 

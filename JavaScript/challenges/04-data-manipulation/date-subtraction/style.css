@@ -1,0 +1,24 @@
+form {
+    width: 220px;
+    border: solid 1px black;
+    border-radius: 4px;
+    padding: 8px 8px 0;
+}
+
+section {
+    margin-bottom: 8px;
+}
+
+label {
+    width: 80px;
+    text-align: right;
+    display: inline-block;
+}
+
+input {
+    width: 55%;
+}
+
+button {
+    margin-top: 16px;
+}

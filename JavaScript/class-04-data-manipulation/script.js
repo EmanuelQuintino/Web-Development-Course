@@ -15,6 +15,7 @@ let age = 29
 // console.log(age.__proto__)
 
 
+
 // >>>>>>>>>>>> String <<<<<<<<<<<<<<
 
 let phrase = 'Eu sou Web Developer'
@@ -51,6 +52,7 @@ let num2 = -5
 
 // International Standard Currency Code ISO 4217
 
+
 // console.log(Math.sqrt(81))
 // console.log(Math.PI)
 // console.log(Math.abs(num2))
@@ -65,7 +67,9 @@ let num2 = -5
 // console.log(Math.round(Math.random()*10))
 
 
+
 // >>>>>>>>>>>>>> Date Manipulation <<<<<<<<<<<<
+
 data = new Date()
 data1 = new Date('2022-01-13 02:05:03')
 data2 = new Date('2022-01-13 03:22:23')
@@ -97,7 +101,7 @@ data2 = new Date('2022-01-13 03:22:23')
 // document.write(data.toLocaleDateString("pr-BR"))
 // document.write(data.toLocaleTimeString("pr-BR"))
 
-                                                //  s      m    h    d
+                                                   //  s      m    h    d
 // document.write(Math.floor(Math.abs(data1 - data2) / 1000 / 60 / 60 / 24))
 
 

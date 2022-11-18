@@ -129,9 +129,11 @@ let date2 = new Date("2022-04-01 12:03:19")
 let techs = ['HTML', 'CSS', 'Git']
 
 techs.push('JavaScript')
+// techs.pop() // LIFO
 // let removeElement = techs.pop()
 
 techs.unshift('SQL')
+// techs.shift() // FIFO
 // let removeElement = techs.shift()
 
 // console.log(`${removeElement} foi removido!`)

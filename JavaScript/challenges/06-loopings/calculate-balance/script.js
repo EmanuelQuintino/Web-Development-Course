@@ -1,6 +1,6 @@
-console.log('Seja Bem-Vindo à Aula de Calcular Saldo!')
-
-// Crie dois objetos dp tipo Arrey com Receita e Despesas. Depois uma função para calcular o saldo e em seguida falar se está positivo ou Negativo.
+// Crie dois objetos do tipo Arrey com Receita e Despesas. 
+// Depois uma função para calcular o saldo
+// Diga se o saldo está Positivo ou Negativo.
 
 let receita = [200, 2800.25, 800]
 let despesa = [500, 2500, 300.89]

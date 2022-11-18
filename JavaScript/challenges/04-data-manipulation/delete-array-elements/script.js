@@ -8,13 +8,12 @@ function deleteArrayElements(techName) {
     let aux = techs
     techs = []
 
-    aux.map(tech => {
-        if(String(tech).toLocaleLowerCase().replace(" ", "") != String(techName).toLocaleLowerCase().replace(" ", "")) {
-            techs.push(tech)
+    aux.map((element) => {
+        if(String(element).toLocaleLowerCase().replace(" ", "") != String(techName).toLocaleLowerCase().replace(" ", "")) {
+            techs.push(element)
         }
     })
 } 
 
-deleteArrayIndex(15.0)
-
+deleteArrayElements(15.0)
 document.write(techs)

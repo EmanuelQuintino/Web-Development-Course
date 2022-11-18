@@ -9,7 +9,7 @@ function deleteArrayElements(techName) {
     techs = []
 
     aux.map((element) => {
-        if(String(element).toLocaleLowerCase().replace(" ", "") != String(techName).toLocaleLowerCase().replace(" ", "")) {
+        if(String(element).toLocaleLowerCase().split(" ").join("") != String(techName).toLocaleLowerCase().split(" ").join("")) {
             techs.push(element)
         }
     })

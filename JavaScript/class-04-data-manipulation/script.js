@@ -113,8 +113,11 @@ let date2 = new Date("2022-04-01 12:03:19")
 // document.write(dateNow.toLocaleDateString("pt-BR"))
 
 // document.write(dateNow.toLocaleString("pt-BR"))
+
                                     //   s      m    h    d
-document.write(Math.abs(date1 - date2) / 1000 / 60 / 60 / 24)
+// document.write(Math.abs(date1 - date2) / 1000 / 60 / 60 / 24)
+
+
 
 // >>>>>>>>>>>> Array Manipulation <<<<<<<<<<<<<
 

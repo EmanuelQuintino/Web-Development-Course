@@ -9,11 +9,12 @@ function deleteArrayElements(techName) {
     techs = []
 
     aux.map((element) => {
-        if(String(element).toLocaleLowerCase().split(" ").join("") != String(techName).toLocaleLowerCase().split(" ").join("")) {
-            techs.push(element)
-        }
+        if( String(element).toLocaleLowerCase().split(" ").join("") !=
+            String(techName).toLocaleLowerCase().split(" ").join("")) {
+                techs.push(element)
+            }
     })
 } 
 
-deleteArrayElements(15.0)
+deleteArrayElements("Java Script")
 document.write(techs)

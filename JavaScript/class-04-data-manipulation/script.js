@@ -129,39 +129,22 @@ let date2 = new Date("2022-04-01 12:03:19")
 let techs = ['HTML', 'CSS', 'Git']
 
 techs.push('JavaScript')
+// let removeElement = techs.pop()
 
+techs.unshift('SQL')
 // let removeElement = techs.shift()
-let removeElement = techs.pop()
 
 // console.log(`${removeElement} foi removido!`)
 
-// techs.unshift('SQL')
-// techs.shift()
+// let index = techs.slice(1, -2)
 
-// let index = techs.slice(0, 5)
-
-// let index = techs.indexOf('Git')
-// techs.splice(-3, 1)
+let index = techs.indexOf('Git')
+// techs.splice(index, 1)
 // console.log(techs.splice(index, 1))
 // techs.splice(techs.indexOf("SQL"), 1)
 
+// nums = [2, "2", 2, 1, 5, 19, 10, 20]
+// console.log(nums.sort((a, b) => a - b))
 
-// function deleteArrayIndex(techName) {
-//     let aux = techs
-//     techs = []
-
-//     aux.map(tech => {
-//         if(tech.toLocaleLowerCase() != techName.toLocaleLowerCase()) {
-//             techs.push(tech)
-//         }
-//     })
-// } 
-
-// deleteArrayIndex("css")
-
-
-nums = [2, "2", 2, 1, 5, 19, 10]
-console.log(nums.sort((a, b) => a -b))
 console.log(techs.sort())
-
-// console.log(index)
+console.log(index)

@@ -1,0 +1,28 @@
+.container {
+    width: 720px;
+    height: 320px;
+    margin: 48px auto;
+    display: flex;
+    gap: 6px;
+
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+}
+
+.container::-webkit-scrollbar {
+    display: none;
+    /* height: 5px; */
+    /* border: 1px solid rgba(0, 0, 0, 0.1); */
+}
+
+/* .container::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.2);
+} */
+
+img {
+    width: 45%;
+    height: 100%;
+    
+    object-fit: cover;
+    scroll-snap-align: start;
+}

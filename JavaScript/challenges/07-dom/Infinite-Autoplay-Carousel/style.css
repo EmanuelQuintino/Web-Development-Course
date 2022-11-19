@@ -17,7 +17,7 @@ body {
     width: 90%;
     max-width: 720px;
 
-    /* overflow: hidden; */
+    overflow: hidden;
     /* overflow-x: auto; */
     /* scroll-snap-type: x mandatory; */
 }
@@ -35,6 +35,7 @@ img {
 
 .carouselImages {
     display: flex;
+    gap: 5px;
     
     width: 300%;
     /* height: 400px; */
@@ -55,7 +56,11 @@ button {
     right: 10px;
 }
 
-.buttonLeft {
+button:hover {
+    filter: brightness(1.5);
+}
+
+.previousButton {
     transform: rotateY(180deg);
     left: 10px;
 }

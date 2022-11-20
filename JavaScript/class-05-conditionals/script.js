@@ -37,5 +37,3 @@ switch (opcao){
         window.alert('Digite uma opção válida!')
         break
 }
-
-// Throw e Try...catch (Lançar, tentar, capturar) ... >>>>  Criar aula   <<<<

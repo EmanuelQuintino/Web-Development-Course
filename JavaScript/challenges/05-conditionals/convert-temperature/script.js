@@ -1,37 +1,37 @@
-// Crie uma função que receba uma String em Celsius (10c) ou Fahrenheit (50f) e converta para a outra unidade. Use tratamento de erro: Throw, Try e Catch
+// Crie uma função que receba uma String em Celsius (10c) ou Fahrenheit (50f)
+// Converta para a outra unidade. Use tratamento de erro: Throw, Try e Catch
 
-// C = (F - 32) * 5/9   
-// F = C * 9/5 + 32   
+// C = (F - 32) * 5/9
+// F = C * 9/5 + 32
 
-let temperatura = '50f'
+function degreeConvert (degree){
 
-function grauConvert (grau){ //Posso usar dois parâmetros (grau, f) (grau, c) 
-    
-    grauCelsius = grau.toLocaleLowerCase().includes('c')
-    grauFahrenheit = grau.toLocaleLowerCase().includes('f')
-    
-    //Fluxo de Erro
-    if (!grauCelsius && !grauFahrenheit) { 
-        throw new Error('Grau não Identificado')
+    let arrayDegree = Array.from(degree)
+    let scaleDegree = arrayDegree.pop()
+    let newDegree = Number(arrayDegree.join(""))
+
+    //if newDegree = NaN then False
+    if (!newDegree) {
+        throw new Error('Insira um valor válido (Ex: 10f ou 20c)')
     }
 
-    //Fluxo de Ideal
-    else if (grauCelsius == true) { // Posso usar expressão regular para pegar apenas o número
-        let convertido = Number(grau.toLocaleLowerCase().replace('c', ''))
-        return console.log((convertido * 9/5 + 32) + 'f')
+    if (scaleDegree.toLowerCase() == "c") {
+        return (newDegree * 9/5 + 32).toLocaleString('pt-BR') + 'f'
     }
 
-    //Fluxo Alternativo
-    else if (grauFahrenheit == true){ //Posso usar expressão regular para pegar apenas o número
-        let convertido = Number(grau.toLocaleLowerCase().replace('f', '')) //usar o let crio uma nova variável, se não usar o let uso a mesma variável do escopo anterior
-        return console.log(((convertido - 32) * 5/9) + 'c')
+    else if (scaleDegree.toLowerCase() == "f"){
+        return ((newDegree - 32) * 5/9).toLocaleString('pt-BR') + 'c'
+    }
 
+    else {
+        throw new Error("Escala inválida (Ex: 10f ou 20c)")
     }
 }
 
 try {
-    grauConvert(temperatura)
-} 
+    let temperature = '15s'
+    document.write(`${temperature.toLowerCase()} =  ${degreeConvert(temperature)}`)
+}
 catch (error) {
-    console.log(error) //Objeto de erro tem .message
+    document.write(error)
 }

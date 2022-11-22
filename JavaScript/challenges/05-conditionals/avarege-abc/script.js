@@ -1,4 +1,4 @@
-// Crie um algoritimo que tenha 3 funções que faça a média, 
+// Crie um algoritimo que tenha 3 funções que faça a média,
 // transforme para o sistema de caracteres ABC
 // diga se o aluno foi aprovado (A, B e C) ou reprovado (D e E):
 
@@ -9,14 +9,14 @@
 // E:  < - 60
 
 function mediaCalc (nota1, nota2) {
-    let media = (nota1 + nota2) / 2 
+    let media = (nota1 + nota2) / 2
     return media
 }
 
 function abcConvert (media) {
-    
+
     let notaABC
-    
+
     if (media >= 90 && media <=100){
         notaABC = 'A'
     }
@@ -59,7 +59,7 @@ function alunoResultado (notaACB){
             break
         default:
             window.alert('Nota ABC Inválida!')
-    }  
+    }
     return none
 }
 
@@ -78,5 +78,3 @@ let abc = abcConvert(media)
 
 let resultado = alunoResultado (abc)
 window.alert(resultado)
-
-// obs : O exercício é apenas educacional! As funções têm que ser especialistas e retornarem apenas um valor. Uma  melhor prática é usar as mensagens no main e a função chamar um valor.

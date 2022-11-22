@@ -29,7 +29,7 @@ function degreeConvert (degree){
 }
 
 try {
-    let temperature = '15s'
+    let temperature = '20f'
     document.write(`${temperature.toLowerCase()} =  ${degreeConvert(temperature)}`)
 }
 catch (error) {

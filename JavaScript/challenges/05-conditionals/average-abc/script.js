@@ -1,6 +1,6 @@
 // Crie um algoritimo que tenha 3 funções que faça a média,
 // Transforme essa média para o sistema de caracteres ABC
-// Depois diga se o aluno foi aprovado (A, B e C) ou reprovado (D e E):
+// Depois diga se o aluno foi aprovado (A, B e C) ou reprovado (D e F):
 // As funções devem funcionar com strings e notas inválidas devem retornar mensagem de erro.
 
 // A: 90 - 100

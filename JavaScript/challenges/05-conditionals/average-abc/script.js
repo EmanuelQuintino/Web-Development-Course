@@ -1,7 +1,7 @@
 // Crie um algoritimo que tenha 3 funções que faça a média,
 // Transforme essa média para o sistema de caracteres ABC
 // Depois diga se o aluno foi aprovado (A, B e C) ou reprovado (D e E):
-// Avise quando algum valor for inválido
+// As funções devem funcionar com strings e notas inválidas devem retornar mensagem de erro.
 
 // A: 90 - 100
 // B: 80 - 89
@@ -18,6 +18,7 @@ function averageCalculate(note1, note2) {
 
     return average
 }
+
 function abcConvert(average) {
     let notaABC
 
@@ -43,6 +44,7 @@ function abcConvert(average) {
 
     return notaABC
 }
+
 function estudantSituation(noteABC){
     let situation
 
@@ -60,7 +62,7 @@ function estudantSituation(noteABC){
             situation = 'Foi quase, reprovado com D!'
             break
         case 'F':
-            situation = 'Precisa estudar mais, reprovado com E!'
+            situation = 'Precisa estudar mais, reprovado com F!'
             break
         default:
             situation = 'Nota ABC Inválida!'
@@ -68,10 +70,10 @@ function estudantSituation(noteABC){
     return situation
 }
 
-let nota1 = 60
-let nota2 = "40"
+let note1 = 80
+let note2 = "90"
 
-let avaregeStudant = averageCalculate(nota1, nota2)
+let avaregeStudant = averageCalculate(note1, note2)
 console.log(avaregeStudant)
 
 let abcAvarege = abcConvert(avaregeStudant)

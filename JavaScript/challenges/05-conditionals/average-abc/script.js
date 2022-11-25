@@ -20,29 +20,29 @@ function averageCalculate(note1, note2) {
 }
 
 function abcConvert(average) {
-    let notaABC
+    let noteABC
 
     Number(average)
     if (average >= 90 && average <=100){
-        notaABC = 'A'
+        noteABC = 'A'
     }
     else if (average >= 80 && average <=89){
-        notaABC = 'B'
+        noteABC = 'B'
     }
     else if (average >= 70 && average <=79){
-        notaABC = 'C'
+        noteABC = 'C'
     }
     else if (average >= 60 && average <=69){
-        notaABC = 'D'
+        noteABC = 'D'
     }
     else if (average >= 0 && average <=59){
-        notaABC = 'F'
+        noteABC = 'F'
     }
     else {
-        notaABC = 'Média inválida!'
+        noteABC = 'Média inválida!'
     }
 
-    return notaABC
+    return noteABC
 }
 
 function estudantSituation(noteABC){
@@ -73,11 +73,11 @@ function estudantSituation(noteABC){
 let note1 = 80
 let note2 = "90"
 
-let avaregeStudant = averageCalculate(note1, note2)
-console.log(avaregeStudant)
+let averageStudant = averageCalculate(note1, note2)
+console.log(averageStudant)
 
-let abcAvarege = abcConvert(avaregeStudant)
-console.log(abcAvarege)
+let abcAverage = abcConvert(averageStudant)
+console.log(abcAverage)
 
-let situation = estudantSituation(abcAvarege)
+let situation = estudantSituation(abcAverage)
 console.log(situation)

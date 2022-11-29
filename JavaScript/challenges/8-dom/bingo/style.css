@@ -1,0 +1,182 @@
+:root {
+    font-size: 62.5%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    margin-top: 3.2rem;
+}
+
+body {
+    font-size: 1.6rem;
+    text-align: center;
+}
+
+.page {
+    padding: 3.2rem;
+}
+
+h2 {
+    font-size: 2.0rem;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    flex-direction: column;
+
+    height: 26.0rem;
+    width: 16.0rem;
+    margin: 0 auto;
+
+}
+
+.container {
+    margin-top: 1.6rem;
+    height: 100%;
+    width: 100%;
+    perspective: 120.0rem;
+}
+
+.container:hover > .flipCard {
+    /* cursor: pointer; */
+    transform: rotateY(180deg);
+}
+
+.flipCard {
+    height: 100%;
+    width: 100%;
+
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 1500ms;
+}
+
+.flipFront,
+.flipBack {
+    height: 100%;
+    width: 100%;
+    padding: 2.4rem;
+
+    border-radius: 1.6rem;
+    box-shadow: .1rem .1rem .2rem black;
+
+    position: absolute;
+    backface-visibility: hidden;
+
+    display: grid;
+    place-items: center;
+
+    font-weight: 700;
+    color: white;
+    text-shadow: .02rem .02rem .2rem black;
+}
+
+.flipFront {
+    background: linear-gradient(125deg, green, yellow, blue);
+}
+
+.flipBack {
+    transform: rotateY(180deg);
+    background: linear-gradient(165deg, rgb(186, 185, 185), rgb(239, 235, 235));
+}
+
+.flipBack span {
+    font-size: 2.4rem;
+    padding: .8rem;
+    border-radius: 0.8rem;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.flipBack span:hover {
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.buttonDrawn {
+    width: 100%;
+    padding: .8rem;
+    margin-top: 1.6rem;
+
+    border: none;
+    border-radius: .8rem;
+
+    color: white;
+    font-weight: 700;
+    text-shadow: .02rem .02rem .2rem black;
+
+    box-shadow: .1rem .1rem .2rem black;
+
+    background: linear-gradient(125deg, green, yellow, blue);
+}
+
+.buttonNewBingo {
+    width: 100%;
+    padding: .8rem;
+    margin-top: .8rem;
+
+    border: none;
+    border-radius: .8rem;
+    box-shadow: .1rem .1rem .2rem black;
+
+    background: linear-gradient(165deg, rgb(186, 185, 185), rgb(239, 235, 235));
+}
+
+.buttonDrawn:hover,
+.buttonNewBingo:hover {
+    cursor: pointer;
+    filter: brightness(1.1);
+}
+
+aside {
+    margin-top: 1.6rem;
+}
+
+.tipWordDrawnContainer {
+    height: 8.8rem;
+    width: 100%;
+    padding: 1.6rem;
+
+    font-size: 1.6rem;
+    text-align: justify;
+
+    border-radius: 0.8rem;
+    background: rgba(0, 0, 0, 0.1);
+
+    display: grid;
+    place-items: center;
+}
+
+.listWordsDrawnContainer{
+    margin-top: 2.4rem;
+    display: flex;
+    gap: .4rem;
+    flex-wrap: wrap;
+}
+
+.listWordsDrawnContainer div{
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: .8rem;
+    padding: .6rem;
+}
+
+.listWordsDrawnContainer div:hover {
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.15);
+}
+
+.wordWasDrawn {
+    color: red;
+    background: none;
+    text-decoration: line-through .2px;
+}
+
+footer {
+    margin-top: 1.6rem;
+}

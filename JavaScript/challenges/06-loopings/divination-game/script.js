@@ -3,7 +3,7 @@
 // Se acertar apresente a mensagem: Parabêns!, acertou o número 'X' em 'N' tentativas
 // O programa deve ser encerrado caso o usuário clique em cancelar.
 
-const numberRamdom = Math.ceil(Math.random() * 10)
+const numberRandom = Math.ceil(Math.random() * 10)
 
 let countTry = 1
 while(true) {
@@ -18,8 +18,12 @@ while(true) {
         alert('Insira um número de 1 a 10')
     }
 
-    if (Number(numberUser) == numberRamdom) {
-        alert(`Parabêns! Acertou o número ${numberRamdom} em ${countTry} tentativa(s)`)
+    if(numberUser > 10 || numberUser < 1) {
+        alert("Atenção, número fora do intervalo de 1 a 10")
+    }
+
+    if (Number(numberUser) == numberRandom) {
+        alert(`Parabêns! Acertou o número ${numberRandom} em ${countTry} tentativa(s)`)
         break;
     }
 

@@ -4,7 +4,7 @@ const team = 'Brasil'
 // const team = {name: 'Brasil', cups: 5}
 const teams = ['Brasil', 'Argentina', 'Portugal', 'Alemanha']
 
-
+// >>>>>>>>> forEach <<<<<<<<<<
 // teams.forEach((value, index, array) => {
 //     console.log(value, index, array)
 // })
@@ -16,6 +16,7 @@ const teams = ['Brasil', 'Argentina', 'Portugal', 'Alemanha']
 
 // console.log(testReturnForEach) // no return
 
+//>>>>>>>>> Map <<<<<<<<<<<
 // let testReturnMap = teamArray.map((team, index, array) => {
 //     console.log(team, index, array)
 //     return [team, index, array]
@@ -23,24 +24,22 @@ const teams = ['Brasil', 'Argentina', 'Portugal', 'Alemanha']
 
 // console.log(testReturnMap) // Immutable
 
-
 const real = [10, 20, 30, 40, 50]
+// const convertDollar = real.map((value) => value * 5.36)
+// console.log(convertDollar)
+// console.log(real)
 
+// >>>>>>>>> Reduce <<<<<<<<<<
 // let initial = 200
 // const sumReal = real.reduce((a, b) => a + b, initial)
-
-// console.log(real)
 // console.log(sumReal)
 
-// const convertDollar = real.map((value) => value * 5.36)
 // const sumConvertedDollar = convertDollar.reduce((a, b) => a + b)
-
-// console.log(convertDollar)
 // console.log(sumConvertedDollar)
 
 // console.log(real.map(value => value * 5.36).reduce((a, b) => a + b))
 
-
+// >>>>>>>>> Filter <<<<<<<<<<
 // console.log(real.filter((value) => value < 40))
 
 const averageStudants = [
@@ -61,10 +60,12 @@ let yearCurrent = new Date().getFullYear()
 // console.table(averageStudants.filter(studant => (yearCurrent - studant.birth) >= 30))
 // console.table(averageStudants.filter((studant) => Array.from(studant.name)[0].toLocaleLowerCase() == "j"));
 
+// >>>>>>> Find <<<<<<<
 // console.log(averageStudants.find((studant) => (yearCurrent - studant.birth) >= 30));
 // console.log(averageStudants.find((studant) => studant.name.toLocaleLowerCase() == 'amanda'));
 // console.log(averageStudants.find((studant) => studant.id == 5));
 
+// >>>>>>> Sort <<<<<<<<
 // Table ASCII (0-9, A-Z, a-z)
 // console.table(averageStudants.sort((a, b) => b.average - a.average))
 
@@ -74,4 +75,5 @@ console.table(averageStudants.sort((a, b) => {
     return 0;
 }))
 
+// >>>>>> Concat <<<<<<
 // console.log(teams.concat(team))

@@ -1,6 +1,6 @@
-// >>>>>>>>>>> Data Manipulation <<<<<<<<<<<<<< 
+// >>>>>>>>>>> Data Manipulation <<<<<<<<<<<<<<
 
-// Prototype (Chain) 
+// Prototype (Chain)
 
 // function Car(motorPower) {
 //     this.motor = motorPower
@@ -48,10 +48,10 @@ let num2 = -5
 // console.log(typeof num1.toFixed(2).replace(".", ","))
 
 // Convert Currency
-// console.log(num1.toLocaleString('pt-br', {style: 'currency', currency: 'brl'})) 
+// console.log(num1.toLocaleString('pt-br', {style: 'currency', currency: 'brl'}))
 // console.log(num1.toLocaleString('pt-br', {style: 'currency', currency: 'usd'}))
-// console.log(num1.toLocaleString('pt-br', {style: 'currency', currency: 'eur'})) 
-// console.log(num1.toLocaleString('pt-br', {style: 'currency', currency: 'jpy'})) 
+// console.log(num1.toLocaleString('pt-br', {style: 'currency', currency: 'eur'}))
+// console.log(num1.toLocaleString('pt-br', {style: 'currency', currency: 'jpy'}))
 
 // International Standard Currency Code ISO 4217
 
@@ -66,7 +66,7 @@ let num2 = -5
 // console.log(Math.ceil(num1))
 // console.log(Math.round(num1))
 // console.log(Math.floor(num1))
-// 
+//
 // console.log(Math.round(Math.random()*10))
 
 
@@ -145,8 +145,4 @@ let index = techs.indexOf('Git')
 // console.log(techs.splice(index, 1))
 // techs.splice(techs.indexOf("SQL"), 1)
 
-// nums = [2, "2", 2, 1, 5, 19, 10, 20]
-// console.log(nums.sort((a, b) => a - b))
-
-console.log(techs.sort())
 console.log(index)

@@ -7,10 +7,10 @@
     2 - Remover item cadastrado
     3 - Ver itens cadastrados
     4 - Sair do programa
-*/ 
+*/
 
 // Se não houver itens cadastrados mostrar mensagem de erro.
-// Se houver item já cadastrado mostrar mensagem já cadastrado. 
+// Se houver item já cadastrado mostrar mensagem já cadastrado.
 
 let itens = []
 let menuOption
@@ -34,9 +34,9 @@ while (menuOption != 4) {
                     alert('Item já cadastrado!')
                 }
                 break
-        
+
         case 2: if (itens.length == 0) {
-                    alert('Lista vazia!') 
+                    alert('Lista vazia!')
                 }
                 else if (itens.length == 1){
                     alert(`Item "${itens[0]}" foi removido com sucesso!`)
@@ -44,7 +44,7 @@ while (menuOption != 4) {
                 }
                 else {
                     let removeItem = prompt('Digite o nome do item para remover:')
-        
+
                     if (itens.indexOf(removeItem) == -1) {
                         alert('Item não encontrado!')
                     }
@@ -53,13 +53,13 @@ while (menuOption != 4) {
 
                         alert(`Item "${removeItem}" foi removido com sucesso!`)
                     }
-                }                
+                }
                 break
-        
+
         case 3: if (itens.length == 0) {
                     alert('Lista vazia!')
                 } else {
-                    alert(itens)
+                    alert(itens.join('-'))
                 }
                 break
 

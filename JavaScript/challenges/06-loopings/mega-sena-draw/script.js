@@ -6,15 +6,11 @@
 const numbersMega = []
 
 while(numbersMega.length < 6 ) {
-    let num = Math.ceil(Math.random() * 60)
+    let num = String(Math.ceil(Math.random() * 60)).padStart(2, 0)
 
     if(!numbersMega.includes(num)){
         numbersMega.push(num)
     }
 }
 
-let showNumbers = numbersMega.map((number) => {
-    return String(number).padStart(2, 0)
-}).sort((a, b) => a - b).join('-')
-
-document.write(showNumbers)
+document.write(numbersMega.sort((a, b) => a - b).join('-'))

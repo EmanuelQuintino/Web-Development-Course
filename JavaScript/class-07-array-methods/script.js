@@ -50,12 +50,10 @@ const averageStudants = [
     {id: 6, name: 'Pedro', average: 7, birth: 1990},
 ]
 
-let approvedStudants = averageStudants.filter((value) => value.average >= 7)
+let approvedStudants = averageStudants.filter((studant) => studant.average >= 7)
+let birthStudants = averageStudants.filter((studant) => studant.birth >= 2000)
 
-let birthStudants = averageStudants.filter((value) => value.birth >= 2000)
-
-
-let ageStudants = averageStudants.filter((value) => (new Date().getFullYear() - value.birth) >= 30)
+let ageStudants = averageStudants.filter((studant) => (new Date().getFullYear() - studant.birth) >= 30)
 
 // console.table(approvedStudants)
 // console.table(birthStudants)

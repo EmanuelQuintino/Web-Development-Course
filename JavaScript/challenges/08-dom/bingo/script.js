@@ -7,7 +7,6 @@ const buttonNewBingo = document.querySelector(".buttonNewBingo")
 const tipWordDrawn = document.querySelector(".tipWordDrawnContainer span")
 const listWordsDrawnContainer = document.querySelector(".listWordsDrawnContainer")
 
-
 function showWordsDrawn() {
     listWordsDrawnContainer.innerHTML = `${wordList.map((value) => {
         let wordWasDrawn = ''
@@ -55,7 +54,6 @@ function newBingo() {
         showWordsDrawn()
     }
 }
-
 
 buttonDrawn.addEventListener('click', () => {
     bingoDrawn(newNumberDrawn())

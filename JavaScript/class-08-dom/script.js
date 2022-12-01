@@ -1,43 +1,37 @@
-// const myTitle = document.getElementById('myTitle') //element
-const myTitle = document.querySelector('#myTitle') //element
-// const myParagraph = document.getElementsByClassName('paragraph') // HTMLCollection
-const myParagraph = document.querySelectorAll('.paragraph') // NodeList
+// const myTitle = document.getElementById("myTitle") // element
+// const myTitle = document.querySelector("body h1#myTitle") // element
 
-// console.log(myTitle);
-// console.log(myParagraph);
-// console.log(myCommands);
+// console.log(myTitle)
+// console.log(myTitle.textContent)
 
 // myTitle.innerHTML = "Teste"
-myTitle.style.color = "yellow"
-myTitle.style.background = 'green'
-myParagraph.innerHTML = "Teste"
+// myTitle.innerText = "<h3>Teste</h3>"
+// myTitle.innerHTML = "<h3>Teste</h3>"
 
-for (const iterator of myParagraph) {
-    iterator.innerHTML = 'Test'
-    iterator.style.color = 'blue'
-}
+myTitle.style.color = "red"
 
-// myParagraph.forEach(element => {
-//     element.innerHTML = "<strong>Teste</strong>"
-// });
+// const myParagraph = document.getElementsByClassName("paragraph") //HTMLCollection
+// console.log(myParagraph[0]);
 
+// for (const value of myParagraph) {
+    // console.log(value);
+// }
 
-// const myCommands = document.querySelectorAll('.commands')
+const myParagraph = document.querySelectorAll(".paragraph") // NodeList
+console.log(myParagraph);
 
-// myCommands.forEach((element) => {
-//     console.log(element.textContent.trim());
-// })
-
-
-const myText = document.querySelector("#myText")
-const writeMyText = document.querySelector("#writeMyText")
-const buttonSubmit = document.querySelector("#buttonSubmit")
-
-writeMyText.style.background = 'lightgray'
-buttonSubmit.addEventListener('click', ()=> {
-    writeMyText.innerHTML = myText.value
+myParagraph.forEach((value) => {
+    value.style.color = 'green'
 })
 
-myText.addEventListener('keyup', ()=> {
-    writeMyText.innerHTML = myText.value
+const myText = document.querySelector("#myText")
+const myButton = document.querySelector("#myButton")
+const writeText = document.querySelector("#writeText")
+
+myButton.addEventListener("click", () =>{
+    writeText.innerHTML = myText.value
+})
+
+myText.addEventListener("keyup", () =>{
+    writeText.innerHTML = myText.value
 })

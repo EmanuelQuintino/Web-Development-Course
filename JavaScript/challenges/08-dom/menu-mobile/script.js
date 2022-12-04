@@ -1,6 +1,6 @@
-const mobileButton = document.querySelector("#mobileButton")
+const menuButton = document.querySelector("#menuButton")
 
-mobileButton.addEventListener("click", () => {
+menuButton.addEventListener("click", () => {
     const nav = document.querySelector("#nav")
     nav.classList.toggle("active")
 })

@@ -14,7 +14,7 @@
     align-items: center;
     justify-content: space-between;
 
-    background: rgb(50, 50, 227);
+    background: rgb(21, 21, 114);
 }
 
 #logo {
@@ -22,7 +22,7 @@
     font-weight: bold;
 }
 
-#mobileButton {
+#menuButton {
     display: none;
 }
 
@@ -46,8 +46,38 @@ a {
 }
 
 @media (max-width: 600px) {
-    #mobileButton {
-        display: block;
+    #menuButton {
+        display: flex;
+        flex-direction: column;
+        gap: .2rem;
+
+        padding: .5rem 1rem;
+        border: none;
+        background: none;
+        cursor: pointer;
+
+        color: white;
+    }
+
+    #iconMenuButton {
+        border-top: 2px solid;
+        width: 20px;
+        transition: 200ms;
+        position: relative;
+    }
+
+    #nav.active #iconMenuButton:nth-child(1) {
+        transform: rotate(135deg);
+        bottom:-4px;
+    }
+
+    #nav.active #iconMenuButton:nth-child(2) {
+        border: none;
+    }
+
+    #nav.active #iconMenuButton:nth-child(3) {
+        transform: rotate(-135deg);
+        top: -4px;
     }
 
     #menu {
@@ -61,16 +91,12 @@ a {
         height: 0;
         transition: 600ms;
 
-        background: rgb(50, 50, 227);
+        background: rgb(153, 153, 221);
         z-index: 1;
-
-        visibility: hidden;
-        overflow-y: hidden;
     }
 
     #nav.active #menu {
         height: calc(100vh - var(--menuHeight));
-        visibility: visible;
     }
 
     #menu a {

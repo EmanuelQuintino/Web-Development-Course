@@ -41,17 +41,23 @@ a {
     text-decoration: none;
 }
 
+#menu a.select {
+    color: aqua;
+}
+
 #menu a:hover {
-    background: rgba(255, 255, 255, 0.2)
+    background: rgba(0, 255, 255, 0.2);
 }
 
 main {
+    max-width: 40rem;
+    margin: 0 auto;
     padding: 2rem;
 }
 
 main h1 {
     text-align: center;
-    margin: 2rem;
+    margin: 1rem;
 }
 
 main p {
@@ -105,7 +111,7 @@ main p {
         height: 0;
         transition: 600ms;
 
-        background: rgb(126, 126, 220);
+        background: rgb(63, 63, 172);
         z-index: 1;
 
         visibility: hidden;

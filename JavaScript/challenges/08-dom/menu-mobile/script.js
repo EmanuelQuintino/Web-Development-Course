@@ -1,6 +1,11 @@
 const menuButton = document.querySelector("#menuButton")
 
-menuButton.addEventListener("click", () => {
+function toogleMenu(event) {
+    if (event.type == "touchstart") event.preventDefault()
+
     const nav = document.querySelector("#nav")
     nav.classList.toggle("active")
-})
+}
+
+menuButton.addEventListener("click", toogleMenu)
+menuButton.addEventListener("touchstart", toogleMenu)

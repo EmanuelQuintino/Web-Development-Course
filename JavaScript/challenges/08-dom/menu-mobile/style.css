@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+header {
+    height: 70px;
+    padding: 1rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: rgb(50, 50, 227);
+}
+
+#logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+#menu {
+    display: flex;
+    list-style: none;
+}
+
+a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+
+    padding: .5rem;
+    border-radius: 4px;
+}
+
+#menu a:hover {
+    background: rgba(255, 255, 255, 0.2)
+}

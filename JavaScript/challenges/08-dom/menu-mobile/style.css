@@ -5,8 +5,9 @@
     font-family: sans-serif;
 }
 
-header {
-    height: 70px;
+#header {
+    --menuHeight: 70px;
+    height: var(--menuHeight);
     padding: 1rem;
 
     display: flex;
@@ -21,19 +22,65 @@ header {
     font-weight: bold;
 }
 
+#mobileButton {
+    display: none;
+}
+
 #menu {
     display: flex;
     list-style: none;
+    gap: .5rem;
 }
 
 a {
-    color: rgb(255, 255, 255);
-    text-decoration: none;
-
+    display: block;
     padding: .5rem;
     border-radius: 4px;
+
+    color: white;
+    text-decoration: none;
 }
 
 #menu a:hover {
     background: rgba(255, 255, 255, 0.2)
+}
+
+@media (max-width: 600px) {
+    #mobileButton {
+        display: block;
+    }
+
+    #menu {
+        display: block;
+
+        position: absolute;
+        top: var(--menuHeight);
+        right: 0;
+
+        width: 100%;
+        height: 0;
+        transition: 600ms;
+
+        background: rgb(50, 50, 227);
+        z-index: 1;
+
+        visibility: hidden;
+        overflow-y: hidden;
+    }
+
+    #nav.active #menu {
+        height: calc(100vh - var(--menuHeight));
+        visibility: visible;
+    }
+
+    #menu a {
+        padding: 1rem 0;
+        margin: 0 1rem;
+
+        border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+        border-radius: 0;
+
+        display: grid;
+        place-items: center;
+    }
 }

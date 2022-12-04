@@ -45,6 +45,20 @@ a {
     background: rgba(255, 255, 255, 0.2)
 }
 
+main {
+    padding: 2rem;
+}
+
+main h1 {
+    text-align: center;
+    margin: 2rem;
+}
+
+main p {
+    margin-top: 2rem;
+    text-align: justify;
+}
+
 @media (max-width: 600px) {
     #menuButton {
         display: flex;
@@ -91,12 +105,16 @@ a {
         height: 0;
         transition: 600ms;
 
-        background: rgb(153, 153, 221);
+        background: rgb(126, 126, 220);
         z-index: 1;
+
+        visibility: hidden;
+        overflow-y: hidden;
     }
 
     #nav.active #menu {
         height: calc(100vh - var(--menuHeight));
+        visibility: visible;
     }
 
     #menu a {

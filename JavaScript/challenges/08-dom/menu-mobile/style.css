@@ -62,12 +62,12 @@ a {
     #iconMenuButton {
         border-top: 2px solid;
         width: 20px;
-        transition: 200ms;
+        transition: 300ms;
         position: relative;
     }
 
     #nav.active #iconMenuButton:nth-child(1) {
-        transform: rotate(135deg);
+        transform: rotate(45deg);
         bottom:-4px;
     }
 
@@ -76,7 +76,7 @@ a {
     }
 
     #nav.active #iconMenuButton:nth-child(3) {
-        transform: rotate(-135deg);
+        transform: rotate(-45deg);
         top: -4px;
     }
 

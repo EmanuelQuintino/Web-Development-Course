@@ -1,5 +1,4 @@
-// Faça um programa com Menu que execute as seguintes funções:
-
+// Faça um Menu com as seguintes opções:
 /*
     Digite a opção desejada:
 
@@ -9,13 +8,14 @@
     4 - Sair do programa
 */
 
-// Se não houver itens cadastrados mostrar mensagem de erro.
-// Se houver item já cadastrado mostrar mensagem já cadastrado.
+// Fazer alerta de item cadastrado caso o mesmo já esteja cadastrado
+// Se não houver itens cadastrados mostrar mensagem de alerta nas opções
+// Mostrar mensagem de sucesso junto do nome ao cadastrar ou remover ítem
+// O programa também deve ser encerrado em caso do usuário não digitar valor.
 
-let itens = []
-let menuOption
+const itens = []
 
-while (menuOption != 4) {
+while (true) {
     menuOption = Number(prompt(`
         Digite a opção desejada:
 
@@ -25,17 +25,24 @@ while (menuOption != 4) {
         4 - Sair do programa
     `))
 
-    switch (menuOption) {
-        case 1: let addItem = prompt('Digite o nome do item para adicionar:')
+    if (menuOption == 0 || menuOption == 4) {
+        alert("Programa encerrado!")
+        break;
+    } else {
+        switch (menuOption) {
+            case 1:
+                let addItem = prompt('Digite o nome do item para adicionar: ')
                 if (itens.indexOf(addItem) == -1) {
+                    alert(`"${addItem}" cadastrado com sucesso!`)
                     itens.push(addItem)
                 }
                 else {
                     alert('Item já cadastrado!')
                 }
-                break
+                break;
 
-        case 2: if (itens.length == 0) {
+            case 2:
+                if (itens.length == 0) {
                     alert('Lista vazia!')
                 }
                 else if (itens.length == 1){
@@ -50,22 +57,20 @@ while (menuOption != 4) {
                     }
                     else {
                         itens.splice(itens.indexOf(removeItem), 1)
-
                         alert(`Item "${removeItem}" foi removido com sucesso!`)
                     }
                 }
-                break
+                break;
 
-        case 3: if (itens.length == 0) {
+            case 3:
+                if (itens.length == 0) {
                     alert('Lista vazia!')
                 } else {
                     alert(itens.join('-'))
                 }
-                break
+                break;
 
-        case 4: alert('Programa encerrado!')
-                break
-
-        default: alert('Opção Inválida!')
+            default: alert('Opção Inválida!')
+        }
     }
 }

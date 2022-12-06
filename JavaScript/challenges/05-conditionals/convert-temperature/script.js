@@ -6,7 +6,7 @@
 // C = (F - 32) * 5/9
 // F = C * 9/5 + 32
 
-function degreeConvert (degree){
+function degreeConvert(degree) {
     let auxDegree = String(degree).split(" ").join("")
     let arrayDegree = Array.from(auxDegree)
     let scaleDegree = arrayDegree.pop()
@@ -16,10 +16,10 @@ function degreeConvert (degree){
         throw new Error('Insira um valor válido (Ex: 10F ou 20C)')
     }
     if (scaleDegree.toUpperCase() == "C") {
-        return (newDegree * 9/5 + 32).toLocaleString('pt-BR') + '°F'
+        return (newDegree * 9/5 + 32).toLocaleString('pt-BR') + 'F'
     }
     else if (scaleDegree.toUpperCase() == "F"){
-        return ((newDegree - 32) * 5/9).toLocaleString('pt-BR') + '°C'
+        return ((newDegree - 32) * 5/9).toLocaleString('pt-BR') + 'C'
     }
     else {
         throw new Error("Escala inválida (Ex: 10F ou 20C)")

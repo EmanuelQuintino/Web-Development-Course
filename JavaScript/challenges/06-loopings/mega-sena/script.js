@@ -6,10 +6,10 @@
 const numbersMega = []
 
 while(numbersMega.length < 6 ) {
-    let num = String(Math.ceil(Math.random() * 60)).padStart(2, 0)
+    let numberDrawn = String(Math.ceil(Math.random() * 60)).padStart(2, 0)
 
-    if(!numbersMega.includes(num)){
-        numbersMega.push(num)
+    if(!numbersMega.includes(numberDrawn)){
+        numbersMega.push(numberDrawn)
     }
 }
 

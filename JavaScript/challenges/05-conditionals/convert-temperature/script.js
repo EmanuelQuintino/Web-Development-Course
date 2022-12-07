@@ -12,8 +12,8 @@ function degreeConvert(degree) {
     let scaleDegree = arrayDegree.pop()
     let newDegree = Number(arrayDegree.join(""))
 
-    if (!newDegree) {
-        throw new Error('Insira um valor válido (Ex: 10F ou 20C)')
+    if (isNaN(newDegree)) {
+        throw new Error('Valor inválido! Insira conforme exemplo: 10F ou 20C.')
     }
     if (scaleDegree.toUpperCase() == "C") {
         return (newDegree * 9/5 + 32).toLocaleString('pt-BR') + 'F'
@@ -22,7 +22,7 @@ function degreeConvert(degree) {
         return ((newDegree - 32) * 5/9).toLocaleString('pt-BR') + 'C'
     }
     else {
-        throw new Error("Escala inválida (Ex: 10F ou 20C)")
+        throw new Error("Escala não identificada, insira 'C' ou 'F': Ex: 10F ou 20C.")
     }
 }
 

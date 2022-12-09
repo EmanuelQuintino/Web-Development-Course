@@ -35,7 +35,6 @@ while (true) {
     4 - Sair do programa
     `)
 
-    console.log(menuOption);
     if (menuOption == null) {
         break;
     }
@@ -82,9 +81,6 @@ while (true) {
             break;
 
         case '3':
-            if (itens.length == 0) {
-                alert('Lista vazia! Adicione ítens para removê-los.')
-            }
             if (itens.length == 1){
                 alert(`Item "${itens[0]}" foi removido com sucesso!`)
                 itens.pop()
@@ -92,24 +88,33 @@ while (true) {
             }
 
             while (true) {
-                let removeItem = prompt('Digite o nome do item para remover:')
-
-                if (removeItem == null) {
+                if (itens.length == 0) {
+                    alert('Lista vazia! Adicione ítens para removê-los.')
                     break;
                 }
-
-                if (itens.indexOf(removeItem) == -1) {
-                    alert('Item não encontrado!')
-                }
                 else {
-                    itens.splice(itens.indexOf(removeItem), 1)
-                    alert(`Item "${removeItem}" foi removido com sucesso!`)
+                    let removeItem = prompt('Digite o nome do item para remover:')
+
+                    if (removeItem == null) {
+                        break;
+                    }
+
+                    if (removeItem === '') {
+                        alert('Por favor, insira o nome para remover.')
+                        continue
+                    }
+
+                    if (itens.indexOf(removeItem) == -1) {
+                        alert('Item não encontrado!')
+                    }
+                    else {
+                        itens.splice(itens.indexOf(removeItem), 1)
+                        alert(`Item "${removeItem}" foi removido com sucesso!`)
+                    }
                 }
             }
             break;
-
         default: alert('Opção Inválida!')
     }
 }
-
 alert("Programa encerrado!")

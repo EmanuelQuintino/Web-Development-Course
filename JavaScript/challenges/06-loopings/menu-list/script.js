@@ -22,7 +22,7 @@
     4 - Sair do programa
 */
 
-const itens = []
+const listItens = []
 let menuOption
 
 while (true) {
@@ -58,9 +58,9 @@ while (true) {
                 }
 
                 if (addItem != "") {
-                    if (itens.indexOf(addItem) == -1) {
+                    if (listItens.indexOf(addItem) == -1) {
                         alert(`"${addItem}" cadastrado com sucesso!`)
-                        itens.push(addItem)
+                        listItens.push(addItem)
                     }
                     else {
                         alert('Item já cadastrado!')
@@ -73,22 +73,22 @@ while (true) {
             break;
 
         case '2':
-            if (itens.length == 0) {
+            if (listItens.length == 0) {
             alert('Lista vazia! Adicione itens para vê-los.')
             } else {
-                alert(itens.join('-'))
+                alert(listItens.join('-'))
             }
             break;
 
         case '3':
-            if (itens.length == 1){
-                alert(`Item "${itens[0]}" foi removido com sucesso!`)
-                itens.pop()
+            if (listItens.length == 1){
+                alert(`Item "${listItens[0]}" foi removido com sucesso!`)
+                listItens.pop()
                 break;
             }
 
             while (true) {
-                if (itens.length == 0) {
+                if (listItens.length == 0) {
                     alert('Lista vazia! Adicione ítens para removê-los.')
                     break;
                 }
@@ -104,11 +104,11 @@ while (true) {
                         continue
                     }
 
-                    if (itens.indexOf(removeItem) == -1) {
+                    if (listItens.indexOf(removeItem) == -1) {
                         alert('Item não encontrado!')
                     }
                     else {
-                        itens.splice(itens.indexOf(removeItem), 1)
+                        listItens.splice(listItens.indexOf(removeItem), 1)
                         alert(`Item "${removeItem}" foi removido com sucesso!`)
                     }
                 }

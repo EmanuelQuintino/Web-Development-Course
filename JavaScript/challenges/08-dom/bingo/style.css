@@ -18,7 +18,13 @@ body {
 }
 
 .page {
+    width: 100%;
+    margin: 3.2rem auto;
     padding: 3.2rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
 }
 
 h2 {
@@ -31,10 +37,9 @@ main {
     justify-items: center;
     flex-direction: column;
 
-    height: 26.0rem;
-    width: 16.0rem;
+    height: 36.0rem;
+    width: 24.0rem;
     margin: 0 auto;
-
 }
 
 .container {
@@ -135,15 +140,16 @@ main {
 }
 
 aside {
-    margin-top: 1.6rem;
+    width: 72.0rem;
+    margin: 0 auto;
 }
 
 .tipWordDrawnContainer {
-    height: 8.8rem;
+    height: 24.0rem;
     width: 100%;
-    padding: 1.6rem;
+    padding: 2.4rem;
 
-    font-size: 1.6rem;
+    font-size: 2.4rem;
     text-align: justify;
 
     border-radius: 0.8rem;

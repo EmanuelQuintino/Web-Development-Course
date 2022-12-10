@@ -1,4 +1,4 @@
-import { wordList } from "./scripts/wordListCup.js"
+import { wordList } from "./wordListCup.js"
 
 const flipBackWord = document.querySelector(".flipBack span")
 const wordDrawn = document.querySelector(".wordDrawn span")

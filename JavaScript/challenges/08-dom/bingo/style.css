@@ -9,13 +9,15 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
-header {
-    margin-top: 3.2rem;
-}
-
 body {
     font-size: 1.6rem;
     text-align: center;
+    background: rgb(30, 30, 30);
+    color: white;
+}
+
+header {
+    margin-top: 3.2rem;
 }
 
 .page {
@@ -154,7 +156,7 @@ aside {
     text-align: justify;
 
     border-radius: 0.8rem;
-    background: rgba(0, 0, 0, 0.1);
+    background: rgba(80, 80, 80, 0.1);
 
     display: grid;
     place-items: center;
@@ -168,14 +170,14 @@ aside {
 }
 
 .listWordsDrawnContainer div{
-    background: rgba(0, 0, 0, 0.1);
+    background: rgba(80, 80, 80, 0.1);
     border-radius: .8rem;
     padding: .6rem;
 }
 
 .listWordsDrawnContainer div:hover {
     cursor: pointer;
-    background: rgba(0, 0, 0, 0.15);
+    background: rgba(100, 100, 100, 0.15);
 }
 
 .wordWasDrawn {

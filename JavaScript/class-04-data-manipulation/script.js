@@ -60,8 +60,9 @@ let num2 = -5
 // console.log(Math.PI)
 // console.log(Math.abs(num2))
 
-// console.log(Math.max(12, 34, 4, 98, 32, 56 ,178 ,12, 43, 65))
-// console.log(Math.min(12, 34, 4, 98, 32, 56 ,178 ,12, 43, 65))
+const numbers = [12, 34, 4, 98, 32, 56 ,178 ,12, 43, 65]
+console.log(Math.max(...numbers)) //spread
+console.log(Math.min(...numbers))
 
 // console.log(Math.ceil(num1))
 // console.log(Math.round(num1))

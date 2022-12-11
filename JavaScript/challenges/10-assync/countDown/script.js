@@ -1,8 +1,8 @@
 const semicircules = document.querySelectorAll('.semicircle')
-const timer = document.querySelectorAll('.timer')
+const timer = document.querySelectorAll('.timer-container span')
 
 const minute = 0;
-const second = 10;
+const second = 5;
 
 const minutes = minute * 60000
 const seconds = second * 1000
@@ -12,10 +12,9 @@ const futureTime = startTime + setTime
 
 
 const timerLoop = setInterval(countDownTimer);
-countDownTimer();
 
-function countDownTimer() {
-    const currentTime = Date.now()
+function circleRotate(time) {
+    const currentTime = time
     const remainingTime = futureTime - currentTime
     const angle = (remainingTime / setTime) * 360
 
@@ -29,16 +28,30 @@ function countDownTimer() {
         semicircules[1].style.transform = `rotate(${angle}deg)`
     }
 
-    const minutes = Math.floor((remainingTime / (1000 * 60)) % 60)
-    const seconds = Math.floor((remainingTime / 1000) % 60)
+    if (remainingTime <= 3000) {
+        semicircules[0].style.backgroundColor = 'red'
+        semicircules[1].style.backgroundColor = 'red'
 
-    // timer.innerHTML = `
-    // <span>${minutes}</span>
-    // <span class="colon">:</span>
-    // <span>${seconds}</span>
-    // `;
+        timer.forEach((value) => {
+            value.style.color = 'red'
+        })
+    }
 
     if (remainingTime < 0) {
         clearInterval(timerLoop)
+
+        semicircules[0].style.backgroundColor = '#088b8b'
+        semicircules[1].style.backgroundColor = '#088b8b'
+
+        timer.forEach((value) => {
+            value.style.color = '#088b8b'
+        })
     }
 }
+
+function countDownTimer() {
+    const time = Date.now()
+    circleRotate(time)
+}
+
+countDownTimer();

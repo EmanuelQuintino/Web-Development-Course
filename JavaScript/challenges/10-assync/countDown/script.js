@@ -1,5 +1,5 @@
 const semicircules = document.querySelectorAll('.semicircle')
-const timer = document.querySelectorAll('.timer-container span')
+const timer = document.querySelector('.timer')
 
 const minute = 0;
 const second = 5;
@@ -10,8 +10,6 @@ const setTime = minutes + seconds
 const startTime = Date.now();
 const futureTime = startTime + setTime
 
-
-const timerLoop = setInterval(countDownTimer);
 
 function circleRotate(time) {
     const currentTime = time
@@ -31,27 +29,19 @@ function circleRotate(time) {
     if (remainingTime <= 3000) {
         semicircules[0].style.backgroundColor = 'red'
         semicircules[1].style.backgroundColor = 'red'
-
-        timer.forEach((value) => {
-            value.style.color = 'red'
-        })
+        timer.style.color = 'red'
     }
 
     if (remainingTime < 0) {
-        clearInterval(timerLoop)
-
         semicircules[0].style.backgroundColor = '#088b8b'
         semicircules[1].style.backgroundColor = '#088b8b'
+        timer.style.color = '#088b8b'
 
-        timer.forEach((value) => {
-            value.style.color = '#088b8b'
-        })
+        clearInterval(timerLoop)
     }
 }
 
-function countDownTimer() {
+const timerLoop = setInterval(function countDownTimer() {
     const time = Date.now()
     circleRotate(time)
-}
-
-countDownTimer();
+});

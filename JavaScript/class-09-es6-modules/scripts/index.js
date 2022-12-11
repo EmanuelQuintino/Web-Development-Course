@@ -2,15 +2,15 @@
 
 // named import
 // import { sum, sub, mul, div } from "./functions.js";
-// import { operations } from "./functions.js";
+import { operations } from "./functions.js";
 
 // console.log(sum(3, 2));
 // console.log(sub(3, 2));
 // console.log(mul(3, 2));
 // console.log(div(3, 2));
 
-// console.log(operations.sum(2, 4));
-// console.log(operations.div(2, 4));
+console.log(operations.sum(2, 4));
+console.log(operations.div(2, 4));
 
 
 //>>>>>>> Class <<<<<<<<<<
@@ -29,11 +29,10 @@ class Person {
     }
 }
 
-const person1 = new Person('Emanuel', 30)
-// console.log(person1.status());
+console.log(new Person('Emanuel', 30).status());
 
 //>>>>>>> Factory (Creational Design Pattern ) <<<<<<<<<<
-const person2 = (name, age) => {
+function person(name, age) {
     return {
         name,
         age,
@@ -48,7 +47,7 @@ const person2 = (name, age) => {
     }
 }
 
-// console.log(person2('Emanuel', 30).status());
+console.log(person('Emanuel', 30).status());
 
 
 // function showFruits(...fruits) { // rest

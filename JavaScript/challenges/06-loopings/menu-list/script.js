@@ -20,6 +20,8 @@
         - Alertar usuário caso o item informado não seja encontrado
 
     4 - Sair do programa
+        - Sair do programa quando escolher a opção 4 ou cancelar
+        - Se não escolher uma das opções do menu mostrar mensagem de alerta
 */
 
 const listItens = []
@@ -35,16 +37,12 @@ while (true) {
     4 - Sair do programa
     `)
 
-    if (menuOption == null) {
-        break;
-    }
-
-    if (menuOption === '4') {
+    if (menuOption === '4' || menuOption == null) {
         break;
     }
 
     if (menuOption === '') {
-        alert('Por favor, insira alguma das opções.')
+        alert('Por favor escolha alguma das opções.')
         continue
     }
 

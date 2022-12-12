@@ -1,8 +1,10 @@
-const semicircules = document.querySelectorAll('.semicircle')
 const timer = document.querySelector('.timer')
+const semicircules = document.querySelectorAll('.semicircle')
+
+let time = Number(prompt('Digite quantos minutos: ')) * 60
 
 const minute = 0;
-const second = 5;
+const second = 7;
 
 const minutes = minute * 60000
 const seconds = second * 1000
@@ -10,9 +12,14 @@ const setTime = minutes + seconds
 const startTime = Date.now();
 const futureTime = startTime + setTime
 
+function showTimer() {
+    let minutes = Math.floor(time / 60)
+    let seconds = time % 60
+    timer.innerHTML = `${String(minutes).padStart(2, 0)}:${String(seconds).padStart(2, 0)}`
+}
 
-function circleRotate(time) {
-    const currentTime = time
+const timerRotate = setInterval(() => {
+    const currentTime = Date.now()
     const remainingTime = futureTime - currentTime
     const angle = (remainingTime / setTime) * 360
 
@@ -37,11 +44,17 @@ function circleRotate(time) {
         semicircules[1].style.backgroundColor = '#088b8b'
         timer.style.color = '#088b8b'
 
-        clearInterval(timerLoop)
+        clearInterval(timerRotate)
     }
-}
-
-const timerLoop = setInterval(function countDownTimer() {
-    const time = Date.now()
-    circleRotate(time)
 });
+
+const countDown = setInterval(() => {
+    if (time == 0) {
+        clearInterval(countDown)
+    } else {
+        --time
+    }
+    showTimer()
+}, 1000)
+
+showTimer()

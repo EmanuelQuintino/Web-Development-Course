@@ -37,7 +37,7 @@ while (true) {
     4 - Sair do programa
     `)
 
-    if (menuOption === '4' || menuOption == null) {
+    if (menuOption === '4' || menuOption === null) {
         break;
     }
 

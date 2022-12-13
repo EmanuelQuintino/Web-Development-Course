@@ -15,16 +15,28 @@ function sum(num1, num2, callback) {
 
 // console.log('Antes');
 let timeOut = setTimeout(() => {
-    console.log('Test TimeOut ms');
+    // console.log('Test TimeOut ms');
 }, 2000)
 // console.log('Depois');
 
+let index = 0
+const array = [12, 28, 33, 46, 52, 59]
+const newArray = []
 let interval = setInterval(() => {
-    console.log('Test Interval ms');
-}, 1000)
+    newArray.push(array[index])
 
-console.log(timeOut);
-console.log(interval);
+    let numbers = document.querySelector('.numbers')
+    numbers.innerHTML = newArray.join('-')
+
+    if (array.length == newArray.length) {
+        clearInterval(interval)
+    }
+
+    index++
+}, 1500)
+
+// console.log(timeOut);
+// console.log(interval);
 
 let isFinish = false
 if (isFinish) {

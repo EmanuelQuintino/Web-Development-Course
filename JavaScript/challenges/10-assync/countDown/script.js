@@ -26,7 +26,6 @@ startButton.addEventListener('click', () => {
     }
 
     const timerRotate = setInterval(() => {
-        console.log(futureTime);
         const currentTime = Date.now()
         const remainingTime = futureTime - currentTime
         const angle = (remainingTime / setTime) * 360

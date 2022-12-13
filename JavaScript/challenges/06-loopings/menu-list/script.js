@@ -48,31 +48,30 @@ while (true) {
 
     switch (menuOption) {
         case '1':
-            while(true) {
-                let addItem = prompt('Digite o nome do item para adicionar: ')
+            while (true) {
+                let addItem = prompt("Digite o nome do item para adicionar:")
 
-                if (addItem == null) {
+                if (addItem === null) {
                     break;
                 }
 
-                if (addItem != "") {
-                    if (listItens.indexOf(addItem) == -1) {
-                        alert(`"${addItem}" cadastrado com sucesso!`)
-                        listItens.push(addItem)
-                    }
-                    else {
-                        alert('Item já cadastrado!')
-                    }
+                if (addItem === '') {
+                    alert('Digite o nome para cadastrar.')
+                    continue;
                 }
-                else {
-                    alert('Insira algum item para cadastrar.')
+
+                if (listItens.includes(addItem)) {
+                    alert("Item já cadastrado!")
+                } else {
+                    listItens.push(addItem)
+                    alert(`"${addItem}" cadastrado com sucesso!`)
                 }
             }
             break;
 
         case '2':
             if (listItens.length == 0) {
-            alert('Lista vazia! Adicione itens para vê-los.')
+                alert('Lista vazia!')
             } else {
                 alert(listItens.join('-'))
             }
@@ -87,7 +86,7 @@ while (true) {
 
             while (true) {
                 if (listItens.length == 0) {
-                    alert('Lista vazia! Adicione ítens para removê-los.')
+                    alert('Lista vazia!')
                     break;
                 }
                 else {
@@ -97,17 +96,16 @@ while (true) {
                         break;
                     }
 
-                    if (removeItem === '') {
+                    if (removeItem == '') {
                         alert('Por favor, insira o nome para remover.')
                         continue
                     }
 
-                    if (listItens.indexOf(removeItem) == -1) {
-                        alert('Item não encontrado!')
-                    }
-                    else {
+                    if (listItens.includes(removeItem)) {
                         listItens.splice(listItens.indexOf(removeItem), 1)
-                        alert(`Item "${removeItem}" foi removido com sucesso!`)
+                        alert(`"${removeItem}" foi removido com sucesso!`)
+                    } else {
+                        alert("Item não encontrado!")
                     }
                 }
             }

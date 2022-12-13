@@ -77,25 +77,35 @@ body {
 .timer-container {
     width: 35.0rem;
     height: 20.0rem;
-    z-index: 6;
 
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.timer-container {
-    font-size: 7.0rem;
+.timer {
+    font-size: 4.8rem;
     font-weight: 100;
+    z-index: 6;
 
-    width: 8.0rem;
-    height: 8.0rem;
+    display: none;
+}
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.start-button {
+    font-size: 4.8rem;
+    color: #088b8b;
 
-    margin: 0 1.0rem 0 1.0rem;
+    border: none;
+    background: none;
+
+    position: absolute;
+
+    z-index: 7;
+}
+
+.start-button:hover {
+    cursor: pointer;
+    filter: brightness(1.1);
 }
 
 .colon {

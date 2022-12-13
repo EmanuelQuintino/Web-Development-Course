@@ -2,6 +2,9 @@ const timer = document.querySelector('.timer')
 const semicircules = document.querySelectorAll('.semicircle')
 const startButton = document.querySelector('.start-button')
 
+const beepAudio = document.querySelector('.beep-audio')
+const alertAudio = document.querySelector('.alert-audio')
+
 startButton.addEventListener('click', () => {
     let time = Number(prompt('Digite quantos minutos: ')) * 60
     let minute = Math.floor(time / 60)
@@ -38,7 +41,7 @@ startButton.addEventListener('click', () => {
             semicircules[1].style.transform = `rotate(${angle}deg)`
         }
 
-        if (remainingTime <= 5000) {
+        if (remainingTime <= 10000) {
             semicircules[0].style.backgroundColor = 'red'
             semicircules[1].style.backgroundColor = 'red'
             timer.style.color = 'red'
@@ -57,15 +60,11 @@ startButton.addEventListener('click', () => {
     });
 
     const countDown = setInterval(() => {
-        if (second <= 6 && second != 1) {
-            console.log('beep');
-
-            const beepAudio = document.querySelector('.beepAudio')
+        if (time <= 11 && time != 1) {
             beepAudio.play();
         }
 
         if (time == 1) {
-            const alertAudio = new Audio('./audios/HTC-Mega-Happy.mp3')
             alertAudio.play()
 
             clearInterval(countDown)

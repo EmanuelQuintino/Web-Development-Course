@@ -1,3 +1,5 @@
+//vai para condicionais if peso normal ou não
+
 // Crie uma função que retorne o IMC dos pacientes
 // Faça um array (lista) com todos os pacientes
 // Cada paciente deverá conter as propriedades name, height, weight;
@@ -35,5 +37,5 @@ document.write(`O IMC de ${listPatients[2].name} é ${calcIMC(listPatients[2])} 
 // }
 
 // for (let i=0; i < listPatients.length; i++) {
-//     document.write(`O IMC de ${listPatients[i].name} é ${calcIMC(listPatients[i])} <br>`)    
+//     document.write(`O IMC de ${listPatients[i].name} é ${calcIMC(listPatients[i])} <br>`)
 // }

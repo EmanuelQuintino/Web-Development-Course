@@ -2,22 +2,25 @@ const timer = document.querySelector('.timer')
 const semicircules = document.querySelectorAll('.semicircle')
 const startButton = document.querySelector('.start-button')
 
-let time, minute, second, minutes, seconds
-let setTime, startTime, futureTime
-
 startButton.addEventListener('click', () => {
-    time = Number(prompt('Digite quantos minutos: ')) * 60
-    minute = Math.floor(time / 60)
-    second = time % 60
+    let time = Number(prompt('Digite quantos minutos: ')) * 60
+    let minute = Math.floor(time / 60)
+    let second = time % 60
 
-    minutes = minute * 60000
-    seconds = second * 1000
-    setTime = minutes + seconds
-    startTime = Date.now();
-    futureTime = startTime + setTime
+    const minutes = minute * 60000
+    const seconds = second * 1000
+    const setTime = minutes + seconds
+    const startTime = Date.now();
+    const futureTime = startTime + setTime
 
     timer.style.display = 'flex'
     startButton.style.display = 'none'
+
+    function showTimer() {
+        minute = Math.floor(time / 60)
+        second = time % 60
+        timer.innerHTML = `${String(minute).padStart(2, 0)}:${String(second).padStart(2, 0)}`
+    }
 
     const timerRotate = setInterval(() => {
         console.log(futureTime);
@@ -52,29 +55,25 @@ startButton.addEventListener('click', () => {
             clearInterval(timerRotate)
         }
     });
-})
 
-function showTimer() {
-    minute = Math.floor(time / 60)
-    second = time % 60
-    timer.innerHTML = `${String(minute).padStart(2, 0)}:${String(second).padStart(2, 0)}`
-}
+    const countDown = setInterval(() => {
+        if (second <= 6 && second != 1) {
+            console.log('beep');
 
-const countDown = setInterval(() => {
+            const beepAudio = document.querySelector('.beepAudio')
+            beepAudio.play();
+        }
+
+        if (time == 1) {
+            const alertAudio = new Audio('./audios/HTC-Mega-Happy.mp3')
+            alertAudio.play()
+
+            clearInterval(countDown)
+        } else {
+            --time
+        }
+        showTimer()
+    }, 1000)
+
     showTimer()
-    if (second <= 5 && second != 0) {
-        console.log('beep');
-
-        const beepAudio = document.querySelector('.beepAudio')
-        beepAudio.play();
-    }
-
-    if (time == 0) {
-        const alertAudio = new Audio('./audios/HTC-Mega-Happy.mp3')
-        alertAudio.play()
-
-        clearInterval(countDown)
-    } else {
-        --time
-    }
-}, 1000)
+})

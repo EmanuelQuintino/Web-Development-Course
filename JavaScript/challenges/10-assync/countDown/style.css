@@ -1,3 +1,8 @@
+@font-face {
+    font-family: digital-clock;
+    src: url('fonts/DS-DIGII.TTF');
+}
+
 :root {
     font-size: 62.5%;
 }
@@ -84,10 +89,11 @@ body {
 }
 
 .timer {
-    font-size: 4.8rem;
-    font-weight: 100;
-    z-index: 6;
+    font-size: 6.4rem;
+    font-weight: 400;
+    font-family: digital-clock;
 
+    z-index: 6;
     display: none;
 }
 

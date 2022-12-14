@@ -1,0 +1,108 @@
+:root {
+    font-size: 62.5%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Helvetica, sans-serif;
+}
+
+body {
+    height: 100vh;
+    font-size: 1.6rem;
+}
+
+h1 {
+    margin: 4.8rem 0;
+    font-size: 2.8rem;
+    text-align: center;
+}
+
+.container {
+    width: 32.0rem;
+    padding: 1.6rem;
+    margin: auto;
+}
+
+main section {
+    margin-top: 3.2rem;
+}
+
+input {
+    width: 100%;
+    padding: 1.0rem;
+    font-size: 2.0rem;
+}
+
+main button {
+    margin-top: 3.2rem;
+    width: 100%;
+    padding: .8rem;
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+
+aside {
+    text-align: center;
+}
+
+aside h2 {
+    margin-top: 3.2rem;
+    font-size: 2.4rem;
+}
+
+aside p {
+    margin-top: 1.6rem;
+    font-size: 2.4rem;
+}
+
+aside img {
+    margin-top: 4.8rem;
+}
+
+.container-modal {
+    position: absolute;
+    inset: 0;
+
+    display: grid;
+    place-content: center;
+
+    background: rgb(0, 0, 0, 0.7);
+
+    display: none;
+}
+
+.modal {
+    position: relative;
+
+    padding: 3.2rem;
+
+    width: 32.0rem;
+    margin: auto;
+
+    background: #fff;
+    box-shadow: 0rem .2rem .4rem rgba(0, 0, 0, 0.1);
+    border-radius: .8rem;
+
+    font-size: 3.2rem;
+    text-align: center;
+}
+
+.close-button {
+    position: absolute;
+
+    background: none;
+    border: none;
+
+    top: 1.6rem;
+    right: 1.6rem;
+
+    cursor: pointer;
+    transition: 2ms;
+}
+
+.close-button:hover {
+    transform: scale(1.1);
+}

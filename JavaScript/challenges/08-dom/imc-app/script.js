@@ -1,5 +1,11 @@
 const calculateButton = document.querySelector('.calculate-button')
 const closeButton = document.querySelector('.close-button')
+const containerModal = document.querySelector('.container-modal')
+
+function modalClose() {
+    let containerModal = document.querySelector('.container-modal')
+    containerModal.style.display = 'none'
+}
 
 calculateButton.addEventListener("click", (event) => {
     event.preventDefault()
@@ -10,15 +16,9 @@ calculateButton.addEventListener("click", (event) => {
 
     if (height && weight) {
         const result = document.querySelectorAll('.result')
-        console.log(result);
-
         result.forEach((value) => {
             value.innerHTML = `Seu IMC é ${imcCalculate}`
         })
-
-        console.log(height);
-        console.log(weight);
-        console.log(imcCalculate);
 
         let containerModal = document.querySelector('.container-modal')
         containerModal.style.display = 'grid'
@@ -27,7 +27,19 @@ calculateButton.addEventListener("click", (event) => {
     }
 })
 
-closeButton.addEventListener("click", (event) => {
-    let containerModal = document.querySelector('.container-modal')
-    containerModal.style.display = 'none'
+closeButton.addEventListener("click", () => {
+    modalClose()
+})
+
+window.addEventListener("keydown", (event) => {
+    if(event.key == "Escape") {
+        modalClose()
+    }
+})
+
+containerModal.addEventListener('click', (event) => {
+    const isOut = event.target.matches('.container-modal')
+    if (isOut) {
+        modalClose()
+    }
 })

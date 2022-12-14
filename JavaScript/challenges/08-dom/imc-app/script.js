@@ -17,7 +17,7 @@ calculateButton.addEventListener("click", (event) => {
     if (height && weight) {
         const result = document.querySelectorAll('.result')
         result.forEach((value) => {
-            value.innerHTML = `Seu IMC é ${imcCalculate}`
+            value.innerHTML = `O IMC é ${imcCalculate}`
         })
 
         let containerModal = document.querySelector('.container-modal')

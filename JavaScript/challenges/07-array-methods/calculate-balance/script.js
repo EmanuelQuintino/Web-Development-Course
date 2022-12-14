@@ -24,20 +24,20 @@ const expensesValues = expenses.filter((value) => value.includes('R$'))
 const expensesValuesNumber = expensesValues.map((expense) => Number(expense.replace("R$ ", "").replace(',', '.')))
 const expensesSum = expensesValuesNumber.reduce((a, b) => a + b)
 
-let statusBalence
+let statusBalance
 let resultBalance = incomesSum - expensesSum
 
 if ( resultBalance > 0) {
-    statusBalence = 'Existe um superávit. Invista o dinheiro!'
+    statusBalance = 'Existe um superávit. Invista o dinheiro!'
 }
 else if ( resultBalance < 0) {
-    statusBalence = 'Foi gasto todo dinheiro e existe dívidas!'
+    statusBalance = 'Foi gasto todo dinheiro e existe dívidas!'
 } else {
-    statusBalence = 'Foi gasto todo dinheiro, mas não existe dívidas!'
+    statusBalance = 'Foi gasto todo dinheiro, mas não existe dívidas!'
 }
 
 console.log
 (`Gastos: ${incomesSum.toLocaleString('pt-br', {style: 'currency', currency: 'brl'})}
 Despesas: ${expensesSum.toLocaleString('pt-br', {style: 'currency', currency: 'brl'})}
 Saldo: ${resultBalance.toLocaleString('pt-br', {style: 'currency', currency: 'brl'})}
-${statusBalence}.`)
+${statusBalance}.`)

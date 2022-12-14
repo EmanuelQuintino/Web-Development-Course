@@ -56,7 +56,7 @@ startButton.addEventListener('click', () => {
 
             clearInterval(timerRotate)
         }
-    });
+    }, 10);
 
     const countDown = setInterval(() => {
         if (time <= 11 && time != 1) {

@@ -12,18 +12,29 @@ calculateButton.addEventListener("click", (event) => {
 
     const height = Number(document.querySelector('#height').value)
     const weight = Number(document.querySelector('#weight').value)
-    const imcCalculate = (weight / (height / 100) ** 2).toFixed(2)
 
     if (height && weight) {
+        const imc = (weight / (height / 100) ** 2).toFixed(2)
+
+        let situation
+        if (imc < 18.5) {
+            situation = 'Magreza'
+        } else if (imc > 24.9) {
+            situation = 'Sobrepeso'
+        } else {
+            situation = 'Peso Normal'
+        }
+
         const result = document.querySelectorAll('.result')
         result.forEach((value) => {
-            value.innerHTML = `O IMC é ${imcCalculate}`
+            value.innerHTML = `O IMC é ${imc}
+            ${situation}`
         })
 
         let containerModal = document.querySelector('.container-modal')
         containerModal.style.display = 'grid'
     } else {
-      alert(`Por favor insira seu peso e altura.`)
+      alert(`Por favor insira sua altura e peso.`)
     }
 })
 

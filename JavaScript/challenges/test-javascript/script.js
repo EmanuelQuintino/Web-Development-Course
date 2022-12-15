@@ -50,6 +50,7 @@ for (const value of list) {
     console.log(value);
 }
 
+
 // Questão 6 (while):
 // Escreva os números de 0 a 500 sem os que pertencem à familía do 200 e do 300:
 
@@ -78,6 +79,7 @@ if (speed > maxSpeed || speed < (maxSpeed / 2)) {
 }
 
 alert(`Motorista ${situation}`)
+
 
 // Questão 8 (array methods):
 // Uma empresa vai dar 10% de aumento para seus funcionários

@@ -18,11 +18,11 @@ const expenses = [
 
 const incomeValues = incomes.filter((value) => value.includes('R$'))
 const incomeValuesNumber = incomeValues.map((income) => Number(income.replace("R$ ", "").replace(',', '.')))
-const incomesSum = incomeValuesNumber.reduce((a, b) => a + b)
+const incomesSum = incomeValuesNumber.reduce((a, b) => a + b, 0)
 
 const expensesValues = expenses.filter((value) => value.includes('R$'))
 const expensesValuesNumber = expensesValues.map((expense) => Number(expense.replace("R$ ", "").replace(',', '.')))
-const expensesSum = expensesValuesNumber.reduce((a, b) => a + b)
+const expensesSum = expensesValuesNumber.reduce((a, b) => a + b, 0)
 
 let statusBalance
 let resultBalance = incomesSum - expensesSum

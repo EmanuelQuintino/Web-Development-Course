@@ -32,10 +32,10 @@ console.log(test());
 // Questão 4 (Data Manipulation):
 // Usando os métodos FIFO e LIFO, crie um array com 3 valos e posteriormente insira mais um valor no final e substitua o do início por outro.
 
-const list = ['arroz', 'feijão', 'carne']
-list.push('batata')
+const list = ['A', 'B', 'C']
+list.push('D')
 list.shift()
-list.unshift('ovo')
+list.unshift('E')
 console.log(list);
 
 
@@ -69,7 +69,7 @@ while (count <= 500) {
 // E por velocidade baixa ( quando estiver inferior à metade da máxima )
 // A velocidade da pista é de 60km/h
 
-const speed = Number(prompt('Velocidade do carro:'))
+const speed = 75
 const maxSpeed = 60
 
 if (speed > maxSpeed || speed < (maxSpeed / 2)) {
@@ -78,7 +78,7 @@ if (speed > maxSpeed || speed < (maxSpeed / 2)) {
     situation = 'não multado!'
 }
 
-alert(`Motorista ${situation}`)
+console.log(`Motorista ${situation}`)
 
 
 // Questão 8 (array methods):

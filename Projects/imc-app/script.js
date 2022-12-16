@@ -7,8 +7,8 @@ function modalClose() {
     containerModal.style.display = 'none'
 }
 
-calculateButton.addEventListener(window.innerWidth > 400 ? "click" : "touchstart", (event) => {
-    event.preventDefault()
+function imcCalculate(event) {
+    event.preventDefault();
 
     const height = Number(document.querySelector('#height').value)
     const weight = Number(document.querySelector('#weight').value)
@@ -42,7 +42,10 @@ calculateButton.addEventListener(window.innerWidth > 400 ? "click" : "touchstart
     } else {
       alert(`Por favor insira sua altura e peso.`)
     }
-})
+}
+
+calculateButton.addEventListener("click", imcCalculate)
+calculateButton.addEventListener("touchstart", imcCalculate)
 
 closeButton.addEventListener("click", () => {
     modalClose()

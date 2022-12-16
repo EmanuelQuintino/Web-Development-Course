@@ -7,7 +7,7 @@ function modalClose() {
     containerModal.style.display = 'none'
 }
 
-calculateButton.addEventListener("click", (event) => {
+function imcCalculate(event) {
     event.preventDefault()
 
     const height = Number(document.querySelector('#height').value)
@@ -42,7 +42,9 @@ calculateButton.addEventListener("click", (event) => {
     } else {
       alert(`Por favor insira sua altura e peso.`)
     }
-})
+}
+
+calculateButton.addEventListener(window.innerWidth > 400 ? "click" : "touchstart", imcCalculate)
 
 closeButton.addEventListener("click", () => {
     modalClose()

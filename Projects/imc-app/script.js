@@ -19,10 +19,16 @@ calculateButton.addEventListener("click", (event) => {
         let situation
         if (imc < 18.5) {
             situation = 'Magreza'
-        } else if (imc > 24.9) {
-            situation = 'Sobrepeso'
-        } else {
+        } else if (imc >= 18.5 && imc < 25) {
             situation = 'Peso Normal'
+        }else if (imc >= 25 && imc < 30) {
+            situation = 'Sobrepeso'
+        } else if (imc >= 30 && imc < 35) {
+            situation = 'Obesidade I'
+        } else if (imc >= 35 && imc < 40) {
+            situation = 'Obesidade II'
+        } else if (imc >= 40 ) {
+            situation = 'Obesidade III'
         }
 
         const result = document.querySelectorAll('.result')
@@ -42,15 +48,15 @@ closeButton.addEventListener("click", () => {
     modalClose()
 })
 
-window.addEventListener("keydown", (event) => {
-    if(event.key == "Escape") {
+containerModal.addEventListener('click', (event) => {
+    const isOut = event.target.matches('.container-modal')
+    if (isOut) {
         modalClose()
     }
 })
 
-containerModal.addEventListener('click', (event) => {
-    const isOut = event.target.matches('.container-modal')
-    if (isOut) {
+window.addEventListener("keyup", (event) => {
+    if(event.key == "Escape") {
         modalClose()
     }
 })

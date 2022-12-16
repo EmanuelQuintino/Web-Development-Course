@@ -10,8 +10,7 @@
 }
 
 body {
-    height: 100vh;
-    overflow: hidden;
+    height: 100%;
 
     font-size: 1.6rem;
     color: white;
@@ -62,12 +61,6 @@ input::-webkit-inner-spin-button {
     -webkit-appearance: none;
 }
 
-/* input:focus {
-    outline: none;
-    border: .2rem solid yellow;
-    box-shadow: 0 0 .4rem yellow;
-} */
-
 main button {
     margin-top: 3.2rem;
     width: 100%;
@@ -83,12 +76,6 @@ main button {
 
     cursor: pointer;
 }
-/*
-main button:focus {
-    outline: none;
-    border: .1rem solid yellow;
-    box-shadow: 0 0 .4rem purple;
-} */
 
 aside {
     text-align: center;
@@ -100,7 +87,7 @@ aside h2 {
 }
 
 aside p {
-    width: 16.0rem;
+    width: 19.0rem;
     margin: 1.6rem auto;
 
     font-size: 2.4rem;
@@ -140,8 +127,8 @@ aside p {
 
 .close-button {
     position: absolute;
-    top: 2.0rem;
-    right: 2.0rem;
+    top: 1.2rem;
+    right: 1.3rem;
 
     font-size: 1.8rem;
     font-weight: 500;

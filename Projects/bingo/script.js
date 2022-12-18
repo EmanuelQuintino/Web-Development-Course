@@ -3,7 +3,6 @@ let sizeCard = 1 // não pode ser maior que o total de números
 const totalNumbers = 75
 const arrayNumbers = []
 
-// localStorage.clear()
 
 function numberDrawn() {
     while(localStorage.length < totalNumbers) {
@@ -36,6 +35,12 @@ function updateDisplay() {
     const lastNumber2 = document.querySelector('.lastNumber2')
     const lastNumber3 = document.querySelector('.lastNumber3')
 
+    if (localStorage.length == 0) {
+        lastNumber1.innerHTML = '-'
+        lastNumber2.innerHTML = '-'
+        lastNumber3.innerHTML = '-'
+    }
+
     if (localStorage.length > 1) {
         lastNumber1.innerHTML = localStorage.getItem(localStorage.length - 1)
     }
@@ -50,11 +55,17 @@ function updateDisplay() {
 
     const selectNumber = document.querySelectorAll(`.number`)
     selectNumber.forEach((number) => {
-      for (let index = 1; index <= localStorage.length; index++) {
-        if (number.textContent == localStorage.getItem(index)) {
-            number.classList.add('select')
+        let isIn = false
+        for (let index = 1; index <= localStorage.length; index++) {
+            if (number.textContent == localStorage.getItem(index)) {
+                isIn = true
+            }
         }
-      }
+        if (isIn) {
+            number.classList.add('select')
+        } else {
+            number.classList.remove('select')
+        }
     })
 }
 

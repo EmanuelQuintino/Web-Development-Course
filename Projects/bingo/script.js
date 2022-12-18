@@ -31,7 +31,7 @@ function updateDisplay() {
 
     createNumbers()
 
-    numberCall.innerHTML = localStorage.length == 1 ? '-' : localStorage.getItem(localStorage.length - 1)
+    numberCall.innerHTML = localStorage.length == 1 ? '' : localStorage.getItem(localStorage.length - 1)
     totalNumbersCall.innerHTML = localStorage.length - 1
     displayTotalNumbers.innerHTML = ` / ${totalNumbers}`
 

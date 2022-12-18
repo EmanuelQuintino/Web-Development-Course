@@ -1,5 +1,5 @@
 .bingoPenal {
-    height: calc(100vh - 2.4rem);
+    height: calc(100vh - 3.2rem);
     background: rgba(0, 0, 0, 0.3);
     padding: 1.6rem;
 
@@ -76,7 +76,12 @@
 
 .numberCall {
     font-size: 12.0rem;
-    text-align: center;
+
+    height: 16.0rem;
+    width: 100%;
+
+    display: grid;
+    place-items: center;
 
     margin-top: 1.6rem;
     padding: .8rem;

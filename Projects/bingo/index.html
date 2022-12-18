@@ -56,22 +56,22 @@
             <button class="closeButton">X</button>
             <form action="">
                 <section>
+                    <label for="inputAmountNumbersBingo">Quantos números serão sorteados?</label>
+                    <input type="number" id="inputAmountNumbersBingo" min="10" max="75" placeholder="10-75" value="75" autofocus required>
+                </section>
+
+                <section>
+                    <label for="inputSizeCard">Qual o tamanho da cartela?</label>
+                    <input type="number" id="inputSizeCard" min="5" max="60" placeholder="5-60" value="25" required>
+                </section>
+
+                <section>
                     <label for="inputAmountCards">Quantas cartelas deseja gerar?</label>
-                    <input type="number" id="inputAmountCards" maxlength="4">
+                    <input type="number" id="inputAmountCards" min="0" max="9999" placeholder="0-9999">
                 </section>
 
                 <section>
-                    <label for="inputSizeCard">Quantos números cada cartela terá?</label>
-                    <input type="number" id="inputSizeCard" maxlength="3">
-                </section>
-
-                <section>
-                    <label for="inputAmountNumbersBingo">Quantos números deve ter no Bingo?</label>
-                    <input type="number" id="inputAmountNumbersBingo" maxlength="3">
-                </section>
-
-                <section>
-                    <label for="themeBingo">Qual tema do Bingo?</label>
+                    <label for="themeBingo">Qual cor deseja usar com tema?</label>
                     <input type="color" id="themeBingo">
                 </section>
             </form>

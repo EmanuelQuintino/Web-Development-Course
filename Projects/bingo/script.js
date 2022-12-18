@@ -3,7 +3,6 @@ let sizeCard = 1 // não pode ser maior que o total de números
 const totalNumbers = 75
 const arrayNumbers = []
 
-
 function numberDrawn() {
     while(localStorage.length < totalNumbers) {
         let numDrawn = Math.ceil(Math.random() * totalNumbers)
@@ -69,6 +68,35 @@ function updateDisplay() {
     })
 }
 
+function configModalClose() {
+    const configContainer = document.querySelector('.configContainer')
+    configContainer.style.display = 'none'
+
+    let Soundclick = new Audio('./sounds/click-2.mp3')
+    Soundclick.play()
+
+    isConfigActive = false
+}
+
+function newBingo() {
+    if (inputAmountNumbers.value < 10 || inputAmountNumbers.value > 75 || inputSizeCard.value < 5 || inputSizeCard.value > 60) {
+        window.alert(`Por favor, preencha os valores no intervalo indicado.`)
+    } else if (inputSizeCard.value > inputAmountNumbers.value) {
+        alert('Atenção, a quantidade de números do Bingo de ser maior que o tamanho da cartela!')
+    } else {
+        let Soundclick = new Audio('./sounds/click-3.mp3')
+        Soundclick.play()
+
+        localStorage.clear()
+        updateDisplay()
+
+        const configContainer = document.querySelector('.configContainer')
+        configContainer.style.display = 'none'
+
+        isConfigActive = false
+    }
+}
+
 function checkCards() {
     let cardToWin = 0
     for (const card of arrayCards) {
@@ -94,12 +122,13 @@ function checkCards() {
     }
 }
 
-//>>>>>>>>>>>>>>>>>>>>> Numbers <<<<<<<<<<<<<<<<<<<<<<<
+// Create Numbers
 const numbers =  document.querySelector('.numbersContainer')
 for (let index = 1; index <= totalNumbers; index++) {
     numbers.innerHTML += `<div class="number number${index}">${index}</div>`
 }
 
+// Bingo Button
 const buttonBingo = document.querySelector('.buttonBingo')
 buttonBingo.addEventListener('click', (event) => {
     event.preventDefault()
@@ -116,9 +145,11 @@ buttonBingo.addEventListener('click', (event) => {
     }
 })
 
+let isConfigActive = false
 const configButton = document.querySelector('.configButton')
 configButton.addEventListener('click', (event) => {
     event.preventDefault()
+    isConfigActive = true
 
     let Soundclick = new Audio('./sounds/click-2.mp3')
     Soundclick.play()
@@ -127,36 +158,53 @@ configButton.addEventListener('click', (event) => {
     configContainer.style.display = 'grid'
 })
 
+// Close Button Config
 const closeButton = document.querySelector('.closeButton')
 closeButton.addEventListener('click', (event) => {
     event.preventDefault()
-
-    let Soundclick = new Audio('./sounds/click-2.mp3')
-    Soundclick.play()
-
-    const configContainer = document.querySelector('.configContainer')
-    configContainer.style.display = 'none'
+    configModalClose()
 })
 
+window.addEventListener('keyup', (event) => {
+    if (isConfigActive) {
+        if (event.key == 'Escape') {
+            configModalClose()
+        }
+
+        // if (event.key == 'Enter') {
+        //     newBingo()
+        // }
+    }
+})
+
+//Inputs
+const inputAmountNumbers = document.querySelector("#inputAmountNumbersBingo")
+inputAmountNumbers.addEventListener("keypress", (event) => {
+    if(event.keyCode < 48 || event.keyCode > 57 || inputAmountNumbers.value.length == 2) {
+        event.preventDefault()
+    }
+})
+
+const inputSizeCard = document.querySelector("#inputSizeCard")
+inputSizeCard.addEventListener("keypress", (event) => {
+    if(event.keyCode < 48 || event.keyCode > 57 || inputSizeCard.value.length == 2) {
+        event.preventDefault()
+    }
+})
+
+const inputAmountCards = document.querySelector("#inputAmountCards")
+inputAmountCards.addEventListener("keypress", (event) => {
+    if(event.keyCode < 48 || event.keyCode > 57 || inputAmountCards.value.length == 4) {
+        event.preventDefault()
+    }
+})
+
+// New Bingo Button
 const newBingoButton = document.querySelector('.newBingoButton')
 newBingoButton.addEventListener('click', (event) => {
     event.preventDefault()
-
-    let Soundclick = new Audio('./sounds/click-3.mp3')
-    Soundclick.play()
-
-    localStorage.clear()
-    updateDisplay()
-
-    const configContainer = document.querySelector('.configContainer')
-    configContainer.style.display = 'none'
+    newBingo()
 })
-
-updateDisplay()
-
-
-
-
 
 
 

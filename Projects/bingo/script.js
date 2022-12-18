@@ -1,4 +1,3 @@
-
 let totalCards = 5
 let sizeCard = 1 // não pode ser maior que o total de números
 const totalNumbers = 75
@@ -85,7 +84,7 @@ function checkCards() {
 }
 
 //>>>>>>>>>>>>>>>>>>>>> Numbers <<<<<<<<<<<<<<<<<<<<<<<
-const numbers = document.querySelector('.numbersContainer')
+const numbers =  document.querySelector('.numbersContainer')
 for (let index = 1; index <= totalNumbers; index++) {
     numbers.innerHTML += `<div class="number number${index}">${index}</div>`
 }
@@ -103,6 +102,30 @@ buttonBingo.addEventListener('click', (event) => {
     }
 })
 
+const configButton = document.querySelector('.configButton')
+configButton.addEventListener('click', (event) => {
+    event.preventDefault()
+    const configContainer = document.querySelector('.configContainer')
+    configContainer.style.display = 'grid'
+})
+
+const closeButton = document.querySelector('.closeButton')
+closeButton.addEventListener('click', (event) => {
+    event.preventDefault()
+    const configContainer = document.querySelector('.configContainer')
+    configContainer.style.display = 'none'
+})
+
+const newBingoButton = document.querySelector('.newBingoButton')
+newBingoButton.addEventListener('click', (event) => {
+    event.preventDefault()
+    localStorage.clear()
+    updateDisplay()
+
+    const configContainer = document.querySelector('.configContainer')
+    configContainer.style.display = 'none'
+})
+
 updateDisplay()
 
 
@@ -114,29 +137,29 @@ updateDisplay()
 
 
 
-
 // >>>>>>>>>>>>>>>>>>>>> Cartelas <<<<<<<<<<<<<<<<<<<<<
-  const arrayCards = []
-  for (let index = 0; index < totalCards; index++) {
-      const arrayCard = []
-      for (let index = 0; index < sizeCard; index++) {
-          while(true) {
-              let number = Math.ceil(Math.random() * totalNumbers)
-              if (!arrayCard.includes(number)) {
-                  arrayCard.push(number)
-                  break;
-              }
-          }
-      }
-      arrayCard.sort((a, b) => a - b)
-      arrayCards.push(arrayCard)
-  }
-  console.log(arrayCards);
+// const arrayCards = []
+// for (let index = 0; index < totalCards; index++) {
+//     const arrayCard = []
+//     for (let index = 0; index < sizeCard; index++) {
+//         while(true) {
+//             let number = Math.ceil(Math.random() * totalNumbers)
+//               if (!arrayCard.includes(number)) {
+//                   arrayCard.push(number)
+//                   break;
+//               }
+//           }
+//       }
+//       arrayCard.sort((a, b) => a - b)
+//       arrayCards.push(arrayCard)
+//   }
+
+// console.log(arrayCards);
 
 
-  function includesNumber(number) {
-      if (!arrayNumbers.includes(number.textContent)) {
-              arrayNumbers.push(number.textContent)
-          }
-          console.log(arrayNumbers.sort((a, b)=> a - b));
-  }
+// function includesNumber(number) {
+//     if (!arrayNumbers.includes(number.textContent)) {
+//             arrayNumbers.push(number.textContent)
+//         }
+//         console.log(arrayNumbers.sort((a, b)=> a - b));
+// }

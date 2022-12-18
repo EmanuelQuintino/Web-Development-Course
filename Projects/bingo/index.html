@@ -6,29 +6,38 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project Bingo</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./styles/index.css">
     <script src="script.js" defer></script>
 </head>
 
 <body>
-    <div class="container">
+    <div class="container bingoContainer">
         <aside class="numbersContainer"></aside>
         <main>
             <article class="bingoPenal">
+                <button class="configButton">
+                    <img src="./images/config.svg" alt="config" >
+                </button>
                 <section class="sectionNumbers">
-                    <div class="blockNumber">
-                        <h2>Número</h2>
-                        <div class="numberCall">-</div>
+                    <div class="blockArmedCards">
+                        <h2>Armadas</h2>
+                        <div class="armedCards">-</div>
                     </div>
                     <div class="blockTotal">
-                        <h2>Total</h2>
+                        <h2>Chamadas</h2>
                         <div class="totalNumbersCall">-</div>
                     </div>
                     <div class="totalNumbers">/ 75</div>
                 </section>
+                    <div class="numberCall">-</div>
+                <section>
+
+                </section>
+
                 <section class="buttonBingoContainer">
                     <button class="bingo buttonBingo">SORTEAR</button>
                 </section>
+
                 <section class="lastNumbersContainer">
                     <h2>Últimos Números</h2>
                     <div class="lastNumbers">
@@ -40,6 +49,34 @@
             </article>
         </main>
     </div>
-</body>
 
+    <div class="container configContainer">
+        <fieldset>
+            <h2>Configurações</h2>
+            <button class="closeButton">X</button>
+            <form action="">
+                <section>
+                    <label for="inputAmountCards">Quantas cartelas deseja gerar?</label>
+                    <input type="number" id="inputAmountCards" maxlength="4">
+                </section>
+
+                <section>
+                    <label for="inputSizeCard">Quantos números cada cartela terá?</label>
+                    <input type="number" id="inputSizeCard" maxlength="3">
+                </section>
+
+                <section>
+                    <label for="inputAmountNumbersBingo">Quantos números deve ter no Bingo?</label>
+                    <input type="number" id="inputAmountNumbersBingo" maxlength="3">
+                </section>
+
+                <section>
+                    <label for="themeBingo">Qual tema do Bingo?</label>
+                    <input type="color" id="themeBingo">
+                </section>
+            </form>
+            <button class="newBingoButton">Novo Bingo</button>
+        </fieldset>
+    </div>
+</body>
 </html>

@@ -93,6 +93,9 @@ const buttonBingo = document.querySelector('.buttonBingo')
 buttonBingo.addEventListener('click', (event) => {
     event.preventDefault()
 
+    let Soundclick = new Audio('./sounds/click-1.mp3')
+    Soundclick.play()
+
     let numDrawn = numberDrawn();
     if (numDrawn) {
         // checkCards()
@@ -105,6 +108,10 @@ buttonBingo.addEventListener('click', (event) => {
 const configButton = document.querySelector('.configButton')
 configButton.addEventListener('click', (event) => {
     event.preventDefault()
+
+    let Soundclick = new Audio('./sounds/click-2.mp3')
+    Soundclick.play()
+
     const configContainer = document.querySelector('.configContainer')
     configContainer.style.display = 'grid'
 })
@@ -112,6 +119,10 @@ configButton.addEventListener('click', (event) => {
 const closeButton = document.querySelector('.closeButton')
 closeButton.addEventListener('click', (event) => {
     event.preventDefault()
+
+    let Soundclick = new Audio('./sounds/click-2.mp3')
+    Soundclick.play()
+
     const configContainer = document.querySelector('.configContainer')
     configContainer.style.display = 'none'
 })
@@ -119,6 +130,10 @@ closeButton.addEventListener('click', (event) => {
 const newBingoButton = document.querySelector('.newBingoButton')
 newBingoButton.addEventListener('click', (event) => {
     event.preventDefault()
+
+    let Soundclick = new Audio('./sounds/click-3.mp3')
+    Soundclick.play()
+
     localStorage.clear()
     updateDisplay()
 

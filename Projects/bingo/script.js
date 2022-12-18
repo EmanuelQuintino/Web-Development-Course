@@ -1,12 +1,15 @@
-let totalCards = 5
-let sizeCard = 1 // não pode ser maior que o total de números
-const totalNumbers = 75
-const arrayNumbers = []
+function createNumbers () {
+    totalNumbers = localStorage.getItem('totalNumbers')
+    const numbers =  document.querySelector('.numbersContainer')
+    numbers.innerHTML = ``
+    for (let index = 1; index <= totalNumbers; index++) {
+        numbers.innerHTML += `<div class="number number${index}">${index}</div>`
+    }
+}
 
 function numberDrawn() {
-    while(localStorage.length < totalNumbers) {
+    while(localStorage.length - 1 < totalNumbers) {
         let numDrawn = Math.ceil(Math.random() * totalNumbers)
-
         let isIn = false
         for (let index = 1; index <= localStorage.length; index++) {
             if (localStorage.getItem(index) == numDrawn) {
@@ -15,7 +18,7 @@ function numberDrawn() {
         }
 
         if (!isIn) {
-            localStorage.setItem(localStorage.length + 1, numDrawn)
+            localStorage.setItem(localStorage.length, numDrawn)
             return numDrawn
         }
     }
@@ -26,30 +29,32 @@ function updateDisplay() {
     const totalNumbersCall = document.querySelector('.totalNumbersCall')
     const displayTotalNumbers = document.querySelector('.totalNumbers')
 
-    numberCall.innerHTML = localStorage.getItem(localStorage.length)
-    totalNumbersCall.innerHTML = localStorage.length
+    createNumbers()
+
+    numberCall.innerHTML = localStorage.length == 1 ? '-' : localStorage.getItem(localStorage.length - 1)
+    totalNumbersCall.innerHTML = localStorage.length - 1
     displayTotalNumbers.innerHTML = ` / ${totalNumbers}`
 
     const lastNumber1 = document.querySelector('.lastNumber1')
     const lastNumber2 = document.querySelector('.lastNumber2')
     const lastNumber3 = document.querySelector('.lastNumber3')
 
-    if (localStorage.length == 0) {
+    if (localStorage.length == 1) {
         lastNumber1.innerHTML = '-'
         lastNumber2.innerHTML = '-'
         lastNumber3.innerHTML = '-'
     }
 
-    if (localStorage.length > 1) {
-        lastNumber1.innerHTML = localStorage.getItem(localStorage.length - 1)
-    }
-
     if (localStorage.length > 2) {
-        lastNumber2.innerHTML = localStorage.getItem(localStorage.length - 2)
+        lastNumber1.innerHTML = localStorage.getItem(localStorage.length - 2)
     }
 
     if (localStorage.length > 3) {
-        lastNumber3.innerHTML = localStorage.getItem(localStorage.length - 3)
+        lastNumber2.innerHTML = localStorage.getItem(localStorage.length - 3)
+    }
+
+    if (localStorage.length > 4) {
+        lastNumber3.innerHTML = localStorage.getItem(localStorage.length - 4)
     }
 
     const selectNumber = document.querySelectorAll(`.number`)
@@ -88,11 +93,11 @@ function newBingo() {
         Soundclick.play()
 
         localStorage.clear()
+        localStorage.setItem('totalNumbers', inputAmountNumbers.value)
         updateDisplay()
 
         const configContainer = document.querySelector('.configContainer')
         configContainer.style.display = 'none'
-
         isConfigActive = false
     }
 }
@@ -122,11 +127,10 @@ function checkCards() {
     }
 }
 
-// Create Numbers
-const numbers =  document.querySelector('.numbersContainer')
-for (let index = 1; index <= totalNumbers; index++) {
-    numbers.innerHTML += `<div class="number number${index}">${index}</div>`
-}
+// let totalCards = 5
+// let sizeCard = 1 // não pode ser maior que o total de números
+let totalNumbers
+updateDisplay()
 
 // Bingo Button
 const buttonBingo = document.querySelector('.buttonBingo')

@@ -35,7 +35,7 @@
                 </section>
 
                 <section class="buttonBingoContainer">
-                    <button class="bingo buttonBingo">SORTEAR</button>
+                    <button class="bingo buttonBingo buttonColor">SORTEAR</button>
                 </section>
 
                 <section class="lastNumbersContainer">
@@ -62,20 +62,23 @@
 
                 <section>
                     <label for="inputSizeCard">Qual o tamanho da cartela?</label>
-                    <input type="number" id="inputSizeCard" min="5" max="60" placeholder="5-60" value="25" required>
+                    <input type="number" id="inputSizeCard" min="5" max="60" placeholder="5-60" value="5" required disabled>
                 </section>
 
                 <section>
                     <label for="inputAmountCards">Quantas cartelas deseja gerar?</label>
-                    <input type="number" id="inputAmountCards" min="0" max="9999" placeholder="0-9999">
+                    <input type="number" id="inputAmountCards" min="0" max="9999" placeholder="0-9999" disabled>
                 </section>
 
                 <section>
-                    <label for="themeBingo">Qual cor deseja usar com tema?</label>
-                    <input type="color" id="themeBingo">
+                    <label for="themeBingo">Qual cor deseja usar como tema?</label>
+                    <input type="color" id="inputColors" list="colors" value="#008000">
+                    <datalist>
+                        <option value="#008000">#008000</option>
+                    </datalist>
                 </section>
             </form>
-            <button class="newBingoButton">Novo Bingo</button>
+            <button class="newBingoButton buttonColor">Novo Bingo</button>
         </fieldset>
     </div>
 </body>

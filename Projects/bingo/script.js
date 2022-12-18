@@ -182,6 +182,20 @@ inputAmountCards.addEventListener("keypress", (event) => {
     }
 })
 
+const inputColors = document.querySelector("#inputColors")
+inputColors.addEventListener('change', () => {
+    let bingoContainer = document.querySelector('.bingoContainer')
+    bingoContainer.style.background = inputColors.value
+
+    const soundsChange = new Audio('./sounds/click-3.mp3')
+    soundsChange.play()
+
+    // let buttons = document.querySelectorAll('.newBingoButton')
+    // buttons.forEach((button) => {
+        // button.style.background = `linear-gradient(135deg, ${inputColors.value}, ${inputColors.value}BB)`
+    // })
+})
+
 // New Bingo Button
 const newBingoButton = document.querySelector('.newBingoButton')
 newBingoButton.addEventListener('click', (event) => {
@@ -195,7 +209,7 @@ newBingoButton.addEventListener('click', (event) => {
     } else if (amountNumbers < sizeCard) {
         alert('Atenção, a quantidade de números do Bingo tem que ser maior que o tamanho da cartela!')
     } else {
-        let Soundclick = new Audio('./sounds/click-3.mp3')
+        let Soundclick = new Audio('./sounds/click-4.mp3')
         Soundclick.play()
 
         localStorage.clear()

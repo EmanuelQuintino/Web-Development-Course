@@ -79,7 +79,8 @@
     font-size: 2.0rem;
     font-weight: 600;
     color: white;
-    background: linear-gradient(115deg, rgb(5, 215, 5), rgb(10, 225, 10));
+    text-shadow: .05rem .05rem .1rem black;
+    background: linear-gradient(135deg, #00BB00, #00BB00BB);
     box-shadow: .05rem .05rem .2rem black;
 
     transition: 200ms;
@@ -87,5 +88,5 @@
 
 .newBingoButton:hover {
     cursor: pointer;
-    background: linear-gradient(115deg, rgb(6, 201, 6), rgb(11, 212, 11));
+    background: linear-gradient(115deg, #00AA00, #00AA00BB);
 }

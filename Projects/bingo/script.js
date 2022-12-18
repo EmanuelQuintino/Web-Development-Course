@@ -83,25 +83,6 @@ function configModalClose() {
     isConfigActive = false
 }
 
-function newBingo() {
-    if (inputAmountNumbers.value < 10 || inputAmountNumbers.value > 75 || inputSizeCard.value < 5 || inputSizeCard.value > 60) {
-        window.alert(`Por favor, preencha os valores no intervalo indicado.`)
-    } else if (inputSizeCard.value > inputAmountNumbers.value) {
-        alert('Atenção, a quantidade de números do Bingo de ser maior que o tamanho da cartela!')
-    } else {
-        let Soundclick = new Audio('./sounds/click-3.mp3')
-        Soundclick.play()
-
-        localStorage.clear()
-        localStorage.setItem('totalNumbers', inputAmountNumbers.value)
-        updateDisplay()
-
-        const configContainer = document.querySelector('.configContainer')
-        configContainer.style.display = 'none'
-        isConfigActive = false
-    }
-}
-
 function checkCards() {
     let cardToWin = 0
     for (const card of arrayCards) {
@@ -127,8 +108,6 @@ function checkCards() {
     }
 }
 
-// let totalCards = 5
-// let sizeCard = 1 // não pode ser maior que o total de números
 let totalNumbers
 updateDisplay()
 
@@ -207,10 +186,27 @@ inputAmountCards.addEventListener("keypress", (event) => {
 const newBingoButton = document.querySelector('.newBingoButton')
 newBingoButton.addEventListener('click', (event) => {
     event.preventDefault()
-    newBingo()
+
+    let amountNumbers = Number(inputAmountNumbers.value)
+    let sizeCard = Number(inputSizeCard.value)
+
+    if (amountNumbers < 10 || amountNumbers > 75 || sizeCard < 5 || sizeCard > 60) {
+        window.alert(`Por favor, preencha os valores no intervalo indicado.`)
+    } else if (amountNumbers < sizeCard) {
+        alert('Atenção, a quantidade de números do Bingo tem que ser maior que o tamanho da cartela!')
+    } else {
+        let Soundclick = new Audio('./sounds/click-3.mp3')
+        Soundclick.play()
+
+        localStorage.clear()
+        localStorage.setItem('totalNumbers', inputAmountNumbers.value)
+        updateDisplay()
+
+        const configContainer = document.querySelector('.configContainer')
+        configContainer.style.display = 'none'
+        isConfigActive = false
+    }
 })
-
-
 
 
 

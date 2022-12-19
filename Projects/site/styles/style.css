@@ -207,11 +207,8 @@ aside {
     padding: 16rem;
 
     display: grid;
-    /* grid-template-columns: 240rem 240rem 240rem; */
-    /* grid-template-columns: 1fr 1fr 1fr; */
-    /* grid-template-columns: repeat(3, 1fr); */
-    /* grid-template-columns: repeat(auto-fit, 1fr); */
-    /* grid-template-columns: repeat(auto-fit, 240rem); */
+    /* grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr); */
     grid-template-columns: repeat(auto-fit, minmax(240rem, 1fr));
     
     grid-column-gap: 32rem;
@@ -429,7 +426,7 @@ footer .logo span {
     }
 
     .logo {
-        font-size: 38rem;
+        font-size: 32rem;
     }
     
     .logo span {
@@ -458,6 +455,7 @@ footer .logo span {
 
     .footerLogo {
         font-size: 28rem;
+        line-height: 42rem;
     }
     .footerLocal {
         display: flex;
@@ -472,5 +470,34 @@ footer .logo span {
         width: 150%;
         height: 380rem;
 
+    }
+}
+
+@media (min-width: 640px) {
+    .container main {
+        max-width: 720rem;
+    }
+
+    main article {
+        width: 100%;
+    }
+
+    .mainLogo {
+        font-size: 40rem;
+    }
+}
+
+@media (min-width: 720px) {
+    .container main {
+        max-width: 920rem;
+    }
+
+    .mainLogo {
+        font-size: 48rem;
+    }
+
+    .mainImageLogo {
+        width: 50%;
+        margin-top: 128rem;
     }
 }

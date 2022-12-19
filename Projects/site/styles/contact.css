@@ -124,6 +124,7 @@ form button:hover {
     gap: 8rem;
 
     max-width: 400rem;
+    text-align: justify;
 }
 
 #text-description-site {
@@ -131,13 +132,47 @@ form button:hover {
 }
 
 #my-contacts {
-    margin-top: 16rem;
+    margin: 24rem auto;
+}
+#my-contacts a:hover {
+    filter: brightness(1.1);
 }
 
 @media (min-width: 640px) {
     .form-contact {
         display: flex;
         justify-content: space-between;
+    }
+
+    .contact-card {
+        display: flex;
+        flex-direction: column;
+        gap: 8rem;
+    
+        max-width: 300rem;
+    }
+
+    #my-contacts img {
+        width: auto;
+        height: 35%;
+    }
+    
+}
+
+@media (min-width: 720px) {
+    .contact-card {    
+        max-width: 350rem;
+    }
+
+    #my-contacts img {
+        width: auto;
+        height: 80%;
+    }
+}
+
+@media (min-width: 900px) {
+    .contact-card {    
+        max-width: 400rem;
     }
 }
 

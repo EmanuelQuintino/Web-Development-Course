@@ -1,24 +1,43 @@
-class SmoothScroll {
-    constructor(links) {
-        this.menuLinks = document.querySelectorAll(links)
-        this.addClickEvent()
+class Mamifero {
+    constructor() {
+        this.nascer()
     }
 
-    handleClick(event) {
-        event.preventDefault()
-        const href = event.currentTarget.getAttribute('href')
-        const section = document.querySelector(href)
-        window.scrollTo({
-            top: section.offsetTop - 20,
-            behavior: 'smooth'
-        })
+    nascer() {
+        console.log('Nasceu!');
+        this.tomarLeite()
     }
 
-    addClickEvent() {
-        this.menuLinks.forEach((link) => {
-            link.addEventListener('click', this.handleClick)
-        })
+    tomarLeite() {
+        console.log(`Tomou leite!`);
     }
 }
 
-const scroll = new SmoothScroll('li a')
+class Terrestre extends Mamifero {
+    constructor() {
+        super()
+    }
+
+    locomocao() {
+        console.log('andar');
+    }
+}
+
+class Felino extends Terrestre {
+    constructor() {
+        super()
+    }
+
+    locomocao() {
+        console.log(`Andar e Correr`);
+    }
+}
+
+const mamifero = new Mamifero()
+// mamifero.tomarLeite()
+
+const macaco = new Terrestre()
+// macaco.locomocao()
+
+const leao = new Felino()
+leao.locomocao()

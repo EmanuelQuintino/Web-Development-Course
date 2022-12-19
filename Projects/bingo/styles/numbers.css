@@ -45,7 +45,7 @@
     height: 6.4rem;
     width: 6.4rem;
 
-    border: .15rem solid black;
+    border: .195rem solid #252525;
     border-radius: 50%;
 
     display: grid;
@@ -55,6 +55,7 @@
 
     font-size: 3.2rem;
     font-weight: 500;
+    color: #252525;
     background: white;
 }
 

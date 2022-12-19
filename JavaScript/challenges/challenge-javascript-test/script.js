@@ -1,8 +1,9 @@
 // Questão 1 (Data Types):
-// Declare as seguntes variáveis e atribua os valores por tipo: Sting, Number, Function, Array, Object
+// Declare as seguntes variáveis e atribua os valores por tipo: Sting, Number, Boolean, Function, Array, Object
 
 let number = 1
 let sting = '1'
+let boolean = true
 let myFunction = () => {}
 let array = []
 let object = {}

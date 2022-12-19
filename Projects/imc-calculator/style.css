@@ -72,8 +72,11 @@ main button {
 
     border: none;
     border-radius: .8rem;
+}
 
+main button:hover {
     cursor: pointer;
+    background: rgb(245, 245, 0);
 }
 
 aside {

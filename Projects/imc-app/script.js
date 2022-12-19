@@ -44,8 +44,8 @@ function imcCalculate(event) {
     }
 }
 
-calculateButton.addEventListener("click", imcCalculate)
 calculateButton.addEventListener("touchstart", imcCalculate)
+calculateButton.addEventListener("click", imcCalculate)
 
 closeButton.addEventListener("click", () => {
     modalClose()

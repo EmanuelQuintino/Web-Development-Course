@@ -1,5 +1,6 @@
 // Questão 1 (Data Types):
-// Declare as seguntes variáveis e atribua os valores por tipo: Sting, Number, Boolean, Function, Array, Object
+// Declare as seguntes variáveis e atribua os valores por tipo:
+// Sting, Number, Boolean, Function, Array, Object
 
 let number = 1
 let sting = '1'
@@ -10,7 +11,8 @@ let object = {}
 
 
 // Questão 2 (Operators):
-// Imprima as operações de soma, subtração, multiplicação, divisão, resto da divisão e potenciação de 12 e 3 e raiz quadrada de 144;
+// Imprima as operações de soma, subtração, multiplicação, divisão,
+// resto da divisão e potenciação de 12 e 3 e raiz quadrada de 144;
 
 console.log(12 + 3);
 console.log(12 - 3);
@@ -31,7 +33,8 @@ console.log(test());
 
 
 // Questão 4 (Data Manipulation):
-// Usando os métodos FIFO e LIFO, crie um array com 3 valos e posteriormente insira mais um valor no final e substitua o do início por outro.
+// Usando os métodos FIFO e LIFO, crie um array com 3 valos e posteriormente
+// insira mais um valor no final e substitua o do início por outro.
 
 const list = ['A', 'B', 'C']
 list.push('D')

@@ -10,6 +10,16 @@
     font-size: 1.6rem;
 }
 
+body {
+    background-image: url('./Documents/background-3.jpg');
+
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+}
+
 header {
     text-align: center;
     padding: 3.2rem;

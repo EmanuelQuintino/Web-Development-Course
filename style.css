@@ -93,30 +93,30 @@ footer {
 }
 
 .logoContainer {
-    margin-top: .8rem;
+    margin-top: 1.6rem;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    gap: 1.2rem;
+    gap: 1.6rem;
 }
 
 #logoJucas {
-    width: 5.0rem;
+    width: 9.0rem;
     height: 100%;
 }
 
 #logoEmpreendaMais {
-    width: 4.0rem;
+    width: 7.0rem;
     height: 100%;
 }
 
 #logoReprogramaJucas {
-    width: 8.0rem;
+    width: 12.0rem;
     height: 100%;
 }
 
 #logoCvt {
-    width: 9.0rem;
+    width: 15.0rem;
     height: 100%;
 }

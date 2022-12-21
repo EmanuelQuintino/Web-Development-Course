@@ -16,7 +16,7 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    backdrop-filter: brightness(70%);
+    backdrop-filter: brightness(40%);
     color: white;
 }
 
@@ -47,15 +47,6 @@ main p {
 
 .ementa {
     margin: 3.2rem 0;
-}
-
-.ementa section p {
-
-}
-
-h3 {
-    margin-top: 1.6rem;
-    padding: .8rem;
 }
 
 .containerTechnologies {
@@ -106,30 +97,72 @@ h3 {
     top: .2rem;
 }
 
-.ementa section:nth-child(2) ul {
-    margin-top: 1.6rem;
-    list-style-position: inside;
+.projectsContainer {
+    width: 100%;
+
+    display: flex;
+    gap: 1.6rem;
+
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
 }
 
-aside article image {
+.projectsContainer::-webkit-scrollbar {
+    display: none;
+    /* height: 5px; */
+    /* border: 1px solid rgba(0, 0, 0, 0.1); */
+}
+
+/* .container::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.2);
+} */
+
+.projectBox {
+    border: .1rem solid white;
+    object-fit: cover;
+    scroll-snap-align: start;
+}
+
+.project {
+    width: 34.0rem;
+}
+
+.project a img {
+    object-fit: cover;
+    width: 100%;
+}
+
+.projectDescription {
+    padding: .8rem;
+}
+
+.projectDescription h4 {
+    margin: .4rem 0;
+}
+
+.projectDescription p {
+    text-align: justify;
+}
+
+.instructorPerfil {
     text-align: center;
+    margin-top: 3.6rem;
 }
 
 h2 {
-    margin-top: 1.6rem;
     font-size: 2.0rem;
-    color: #DAC748;
     text-align: center;
 }
 
 #imageGithub {
     width: 24.0rem;
     border-radius: 50%;
-
     margin: 3.2rem auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+}
+
+h3 {
+    margin-top: 1.6rem;
+    padding: .8rem;
 }
 
 aside section + section {

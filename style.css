@@ -11,12 +11,12 @@
 }
 
 body {
-    background-image: url('./Documents/background-2.jpg');
+    background-image: url('./Documents/background-1.jpg');
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    backdrop-filter: brightness(40%);
+    backdrop-filter: brightness(70%);
     color: white;
 }
 
@@ -27,7 +27,11 @@ header {
 }
 
 h1 {
-    font-size: 2.0rem;
+    font-size: 3.2rem;
+    text-align: center;
+    color: #DAC748;
+
+    font-family: 'Black Ops One', cursive;
 }
 
 main,
@@ -42,23 +46,35 @@ main p {
 }
 
 .ementa {
-    /* display: flex; */
-    gap: 6.4rem;
+    margin: 3.2rem 0;
+}
+
+.ementa section p {
+
 }
 
 h3 {
     margin-top: 1.6rem;
+    padding: .8rem;
+}
+
+.containerTechnologies {
+    margin: 2.4rem;
+}
+
+.containerTechnologies img {
+    height: 6.0rem;
+    width: auto;
 }
 
 .ementa section:first-child ul {
-    margin-top: 1.6rem;
     list-style: none;
 
     display: flex;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 1.2rem;
+    gap: 1.6rem;
 }
 
 .ementa section:first-child ul li {
@@ -66,31 +82,54 @@ h3 {
     align-items: center;
     flex-direction: column;
     gap: .8rem;
+
+    transition: 200ms;
 }
 
-.sqlParagraph {
+.ementa section:first-child ul li:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+.sqlName {
     position: relative;
     top: -1.5rem;
 }
 
-.ementa section:nth-child(2) ul {
-    list-style-position: inside;
-    margin-top: .8rem;
+#iconSql {
+    height: 9.0rem;
+    width: auto;
 }
 
-aside article {
+.gitName {
+    position: relative;
+    top: .2rem;
+}
+
+.ementa section:nth-child(2) ul {
+    margin-top: 1.6rem;
+    list-style-position: inside;
+}
+
+aside article image {
     text-align: center;
 }
 
 h2 {
     margin-top: 1.6rem;
     font-size: 2.0rem;
+    color: #DAC748;
+    text-align: center;
 }
 
 #imageGithub {
-    margin-top: 1.6rem;
     width: 24.0rem;
     border-radius: 50%;
+
+    margin: 3.2rem auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 aside section + section {
@@ -109,6 +148,10 @@ footer {
     align-items: center;
     justify-content: center;
     gap: 1.6rem;
+}
+
+.socialMediasContainer {
+    margin-top: 2.4rem;
 }
 
 #logoPrefeituraJucas {

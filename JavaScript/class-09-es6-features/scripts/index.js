@@ -66,8 +66,14 @@ import { operations } from "./functions.js";
 
 
 // // spread
-// const numbers = [1, 3, 42, 5, 87, 6]
+const numbers = [1, 3, 42, 5, 87, 6]
 // console.log(Math.max(...numbers))
+
+// const clone = numbers
+// const clone = [...numbers]
+// clone.pop()
+// console.log(clone);
+// console.log(numbers);
 
 const listItens = document.querySelectorAll("div");
 // console.log(listItens);
@@ -81,9 +87,9 @@ const listItens = document.querySelectorAll("div");
 // console.log(arrayListItens);
 // arrayListItens.map(value => console.log(value));
 
-[...listItens].map(value => console.log(value))
+// [...listItens].map(value => console.log(value))
 
-let number; number = 7
-console.log(number);
+// let number; number = 7
+// console.log(number);
 
 // ASI (Automatic Semicolon Insertion)

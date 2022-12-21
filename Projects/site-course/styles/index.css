@@ -11,7 +11,7 @@
 }
 
 body {
-    background-image: url('./Documents/background-1.jpg');
+    background-image: url('../images/background-1.jpg');
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -185,6 +185,10 @@ footer {
 
 .socialMediasContainer {
     margin-top: 2.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .8rem;
 }
 
 #logoPrefeituraJucas {

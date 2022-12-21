@@ -14,62 +14,68 @@ import { operations } from "./functions.js";
 
 
 //>>>>>>> Class <<<<<<<<<<
-// class Person {
-//     constructor (name, age) {
-//         this.name = name
-//         this.age = age
-//         this.canDrive = age >= 18
-//         this.status = () => {
-//             if (this.canDrive) {
-//                 return 'Pode dirigir';
-//             } else {
-//                 return 'Não pode dirigir';;
-//             }
-//         }
-//     }
-// }
+class Person {
+    constructor (name, age) {
+        this.name = name
+        this.age = age
+        this.canDrive = age >= 18
+        this.status = () => {
+            if (this.canDrive) {
+                return 'Pode dirigir';
+            } else {
+                return 'Não pode dirigir';
+            }
+        }
+    }
+}
 
-// console.log(new Person('Emanuel', 30).status());
+const person1 = new Person('Emanuel', 30)
+// console.log(person1.status());
+// console.log(typeof person1);
 
 // //>>>>>>> Factory (Creational Design Pattern ) <<<<<<<<<<
-// function person(name, age) {
-//     return {
-//         name,
-//         age,
-//         canDrive: age >= 18,
-//         status: function status(canDrive) {
-//             if (this.canDrive) {
-//                 return 'Pode dirigir';
-//             } else {
-//                 return 'Não pode dirigir';
-//             }
-//         }
-//     }
-// }
+function person(name, age) {
+    return {
+        name,
+        age,
+        canDrive: age >= 18,
+        status: function status(canDrive) {
+            if (this.canDrive) {
+                return 'Pode dirigir';
+            } else {
+                return 'Não pode dirigir';
+            }
+        }
+    }
+}
 
-// console.log(person('Emanuel', 30).status());
+const person2 = person('João', 17)
+// console.log(person2.status());
+// console.log(typeof person2);
 
 
-// function showFruits(array, ...fruits) { // rest
-//     console.log(array);
-//     console.log(fruits);
-// }
 
-// // //destructure
-// const array = ['A', 'B', 'C', 'D']
-// const [item1, item2] = array
-
+//destructure
+const array = ['A', 'B', 'C', 'D']
+const [item1, item2] = array
 // console.log(item1)
 // console.log(item2)
 
-// showFruits(array, 'E', 'F', 'G')
+
+// rest
+function showItens(array, ...itens) {
+    console.log(array);
+    console.log(itens);
+}
+
+// showItens(array, 'E', 'F', 'G')
 
 
-// // spread
+// spread
 const numbers = [1, 3, 42, 5, 87, 6]
 // console.log(Math.max(...numbers))
 
-// const clone = numbers
+const clone = numbers
 // const clone = [...numbers]
 // clone.pop()
 // console.log(clone);

@@ -103,14 +103,10 @@
     </style>
 </head>
 <body>
-    <table>
-        <div class="cardsContainer"></div>
-    </table>
+    <div class="cardsContainer"></div>
 
     <script>
-        // print()
-
-        const totalCards = 400
+        const totalCards = Number(prompt('Quantas cartelas deseja gerar?'))
         const sizeCard = 25
         const totalNumbers = 75
         const arrayCards = []
@@ -171,6 +167,7 @@
                 console.log(arrayNumbers.sort((a, b)=> a - b));
         }
 
+        print()
     </script>
 </body>
 </html>

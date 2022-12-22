@@ -99,3 +99,8 @@ const listItens = document.querySelectorAll("div");
 // console.log(number);
 
 // ASI (Automatic Semicolon Insertion)
+
+// Babel (ES6 to ES5)
+// - Parser: Code to AST (Abstract Syntex Tree)
+// - Transformer: AST Manipulates (JSON)
+// - Generator: AST to Code

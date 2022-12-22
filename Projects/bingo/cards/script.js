@@ -1,5 +1,5 @@
-// const totalCards = Number(prompt('Quantas cartelas deseja gerar?'))
-const totalCards = 100
+const totalCards = Number(prompt('Quantas cartelas deseja gerar?'))
+// const totalCards = 100
 const sizeCard = 25
 const totalNumbers = 75
 const arrayCards = []

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bingo Cards</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Fragment+Mono&display=swap');
+
+        :root {
+            font-size: 62.5%;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .cardsContainer {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 2.4rem;
+        }
+
+        .card {
+            width: 34.0rem;
+            height: 50.0rem;
+
+            border: .2rem solid black;
+        }
+
+        .header {
+            background: #eee;
+            padding: .8rem;
+            height: 7.2rem;
+            position: relative;
+        }
+
+        h1 {
+            font-size: 4.8rem;
+            letter-spacing: 3.5rem;
+            font-family: 'Fragment Mono', monospace;
+
+            position: absolute;
+            left: 2.5rem;
+        }
+
+        .numbersContainer {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: .8rem;
+
+            height: 100%;
+
+            padding: .8rem;
+            border-radius: .8rem;
+        }
+
+        .number {
+            height: 5.6rem;
+            width: 5.6rem;
+
+            border: .1rem solid #252525;
+            border-radius: 50%;
+
+            display: grid;
+            place-items: center;
+
+            cursor: pointer;
+
+            font-size: 2.4rem;
+            font-weight: 600;
+            color: #252525;
+            background: white;
+        }
+
+        .numbersCodContainer {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: space-between;
+
+            height: 83%;
+        }
+
+        .codContainer {
+            position: relative;
+
+        }
+
+        .codContainer p {
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+    </style>
+</head>
+<body>
+    <table>
+        <div class="cardsContainer"></div>
+    </table>
+
+    <script>
+        // print()
+
+        const totalCards = 400
+        const sizeCard = 25
+        const totalNumbers = 75
+        const arrayCards = []
+
+        for (let index = 0; index < totalCards; index++) {
+            const arrayCard = []
+            for (let index = 0; index < sizeCard; index++) {
+                while(true) {
+                    let number = Math.ceil(Math.random() * totalNumbers)
+                    if (!arrayCard.includes(number)) {
+                        arrayCard.push(number)
+                        break;
+                    }
+                }
+            }
+            arrayCard.sort((a, b) => a - b)
+            arrayCards.push(arrayCard)
+        }
+
+        console.log(arrayCards);
+
+
+        // Preencher Cartelas
+        const cards =  document.querySelector('.cardsContainer')
+        cards.innerHTML = ``
+
+        for (let i = 0; i < arrayCards.length; i++) {
+            cards.innerHTML += `
+                <div class="card">
+                    <section class="header">
+                        <h1>BINGO</h1>
+                    </section>
+
+                    <div class="numbersCodContainer">
+                        <section class="numbersContainer numbersContainer${i}">
+                            <div class="number">00</div>
+                        </section>
+
+                        <div class="codContainer">
+                            <p>N° ${String(i + 1).padStart(6, 0)}</p>
+                        </div>
+                    </div>
+                </div>
+            `
+            const numbers =  document.querySelector(`.numbersContainer${i}`)
+            numbers.innerHTML = ``
+            for (let j = 0; j < arrayCards[i].length; j++) {
+                numbers.innerHTML += `<div class="number number${j}">${arrayCards[i][j]}</div>`
+            }
+        }
+
+
+
+        function includesNumber(number) {
+            if (!arrayNumbers.includes(number.textContent)) {
+                    arrayNumbers.push(number.textContent)
+                }
+                console.log(arrayNumbers.sort((a, b)=> a - b));
+        }
+
+    </script>
+</body>
+</html>

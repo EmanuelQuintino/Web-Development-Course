@@ -2,7 +2,7 @@
 
 
 // >>>> Named <<<<
- 
+
 // function myTest(text) { //parameters
 //     console.log(text)
 // }
@@ -31,6 +31,20 @@ const somar = (num1, num2) => num1 + num2
 
 // console.log(somar(2, 5))
 // console.log(soma)
+
+
+// >>>>> Callback <<<<<<
+
+function show(item) {
+    console.log(item);
+}
+
+function sum(num1, num2, callback) {
+    let sum = num1 + num2
+    callback(sum)
+}
+
+sum(2, 3, show)
 
 
 // >>>> Constructor <<<<<

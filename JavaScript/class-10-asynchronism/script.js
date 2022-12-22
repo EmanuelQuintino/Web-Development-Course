@@ -1,15 +1,17 @@
 // >>>>>>> Asynchronism <<<<<<<
 
-// function print(num) {
-//     console.log(num);
-// }
+function canDrive(age) {
+    console.log(age >= 18);
+}
 
-// function sum(num1, num2, callback) {
-//     let sum = num1 + num2
-//     callback(sum)
-// }
+function age(yearBorn, callback) {
+    let age = new Date().getFullYear() - yearBorn
+    console.log(age);
+    callback(age)
 
-// sum(2, 3, print)
+}
+
+age(2007, canDrive)
 
 // >>>>>>>> setTimeout <<<<<<<<<
 
@@ -107,17 +109,17 @@ const gitHubUser = fetch(url)
 //   .catch(error => console.log(error))
 
 
-async function userRepositories(name) { // return promise
-  try {
-    const url = `https://api.github.com/users/${name}`
-    const userData = await fetch(url).then(response => response.json())
-    const userRepositories = await fetch(userData.repos_url).then(response => response.json())
-    for (const repository of userRepositories) {
-      console.log(repository.name);
-    }
-  } catch (error) {
-    console.log(error);
-  }
-}
+// async function userRepositories(name) { // return promise
+//   try {
+//     const url = `https://api.github.com/users/${name}`
+//     const userData = await fetch(url).then(response => response.json())
+//     const userRepositories = await fetch(userData.repos_url).then(response => response.json())
+//     for (const repository of userRepositories) {
+//       console.log(repository.name);
+//     }
+//   } catch (error) {
+//     console.log(error);
+//   }
+// }
 
-userRepositories('EmanuelQuintino')
+// userRepositories('EmanuelQuintino')

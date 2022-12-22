@@ -4,78 +4,80 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bingo Cards</title>
+    <title>Bingo-Cards</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="cardsContainer"></div>
 
-    <script>
-        const totalCards = Number(prompt('Quantas cartelas deseja gerar?'))
-        // const totalCards = 12
-        const sizeCard = 25
-        const totalNumbers = 75
-        const arrayCards = []
-        const dateBingo = new Date().toLocaleString('pt-BR')
-        console.log(dateBingo);
+    <!-- <div class="pages">
+        <div class="cardsContainer">
+            <div class="card">
+                <section class="header">
+                    <h1>BINGO</h1>
+                </section>
 
-        for (let index = 0; index < totalCards; index++) {
-            const arrayCard = []
-            for (let index = 0; index < sizeCard; index++) {
-                while(true) {
-                    let number = Math.ceil(Math.random() * totalNumbers)
-                    if (!arrayCard.includes(number)) {
-                        arrayCard.push(number)
-                        break;
-                    }
-                }
-            }
-            arrayCard.sort((a, b) => a - b)
-            arrayCards.push(arrayCard)
-        }
-
-        console.log(arrayCards);
-
-
-        // Preencher Cartelas
-        const cards =  document.querySelector('.cardsContainer')
-        cards.innerHTML = ``
-
-        for (let i = 0; i < arrayCards.length; i++) {
-            cards.innerHTML += `
-                <div class="card">
-                    <section class="header">
-                        <h1>BINGO</h1>
+                <div class="numbersCodContainer">
+                    <section class="numbersContainer numbersContainer${i}">
+                        <div class="number">00</div>
                     </section>
 
-                    <div class="numbersCodContainer">
-                        <section class="numbersContainer numbersContainer${i}">
-                            <div class="number">00</div>
-                        </section>
-
-                        <div class="codContainer">
-                            <p>Data ${dateBingo} / N° ${String(i + 1).padStart(6, 0)}</p>
-                        </div>
+                    <div class="codContainer">
+                        <p>Data ${dateBingo} / N° ${String(i + 1).padStart(6, 0)}</p>
                     </div>
                 </div>
-            `
-            const numbers =  document.querySelector(`.numbersContainer${i}`)
-            numbers.innerHTML = ``
-            for (let j = 0; j < arrayCards[i].length; j++) {
-                numbers.innerHTML += `<div class="number number${j}">${arrayCards[i][j]}</div>`
-            }
-        }
+            </div>
+            <div class="card">
+                <section class="header">
+                    <h1>BINGO</h1>
+                </section>
 
+                <div class="numbersCodContainer">
+                    <section class="numbersContainer numbersContainer${i}">
+                        <div class="number">00</div>
+                    </section>
 
+                    <div class="codContainer">
+                        <p>Data ${dateBingo} / N° ${String(i + 1).padStart(6, 0)}</p>
+                    </div>
+                </div>
+            </div>
 
-        function includesNumber(number) {
-            if (!arrayNumbers.includes(number.textContent)) {
-                    arrayNumbers.push(number.textContent)
-                }
-                console.log(arrayNumbers.sort((a, b)=> a - b));
-        }
+            <div class="card">
+                <section class="header">
+                    <h1>BINGO</h1>
+                </section>
 
-        print()
-    </script>
+                <div class="numbersCodContainer">
+                    <section class="numbersContainer numbersContainer${i}">
+                        <div class="number">00</div>
+                    </section>
+
+                    <div class="codContainer">
+                        <p>Data ${dateBingo} / N° ${String(i + 1).padStart(6, 0)}</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <section class="header">
+                    <h1>BINGO</h1>
+                </section>
+
+                <div class="numbersCodContainer">
+                    <section class="numbersContainer numbersContainer${i}">
+                        <div class="number">00</div>
+                    </section>
+
+                    <div class="codContainer">
+                        <p>Data ${dateBingo} / N° ${String(i + 1).padStart(6, 0)}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div> -->
+
+    <script src="script.js"></script>
 </body>
 </html>

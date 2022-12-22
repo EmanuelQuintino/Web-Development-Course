@@ -12,6 +12,14 @@
 
 body {
     height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+.pages {
+    height: 100%;
+    display: grid;
+    place-items: center;
 }
 
 .cardsContainer {
@@ -19,14 +27,15 @@ body {
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 4.2rem 2.4rem;
+    gap: 3.6rem;
 }
 
 .card {
-    width: 34.0rem;
-    height: 48.0rem;
+    width: 32.0rem;
+    height: 46.0rem;
 
     border: .2rem solid black;
+    margin-top: 2.8rem;
 }
 
 .header {
@@ -37,7 +46,7 @@ body {
 }
 
 h1 {
-    font-size: 4.8rem;
+    font-size: 4.2rem;
     letter-spacing: 3.5rem;
     font-family: 'Fragment Mono', monospace;
 
@@ -53,14 +62,12 @@ h1 {
     gap: .8rem;
 
     height: 100%;
-
     padding: .8rem;
-    border-radius: .8rem;
 }
 
 .number {
-    height: 5.6rem;
-    width: 5.6rem;
+    height: 5.2rem;
+    width: 5.2rem;
 
     border: .1rem solid #252525;
     border-radius: 50%;

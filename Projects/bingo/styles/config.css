@@ -69,6 +69,10 @@
     -webkit-appearance: none;
 }
 
+.pdfImage {
+    width: 2.0rem;
+}
+
 .newBingoButton {
     margin-top: 4.8rem;
     width: 22.0rem;

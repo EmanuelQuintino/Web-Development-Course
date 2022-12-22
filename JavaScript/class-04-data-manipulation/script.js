@@ -74,7 +74,7 @@ console.log(Math.min(...numbers))
 
 // >>>>>>>>>>>>>> Date Manipulation <<<<<<<<<<<<
 
-// let dateNow = new Date()
+let dateNow = new Date()
 let date1 = new Date("2022-03-01 12:03:19")
 let date2 = new Date("2022-04-01 12:03:19")
 
@@ -111,7 +111,11 @@ let date2 = new Date("2022-04-01 12:03:19")
 // dateNow.setMonth(dateNow.getMonth() + 2)
 // dateNow.setFullYear(dateNow.getFullYear() + 30)
 
-// document.write(dateNow.toLocaleDateString("pt-BR"))
+document.write(dateNow.toLocaleDateString("pt-BR", {
+    day: "2-digit",
+    month: "2-digit",
+    year:"2-digit"
+}))
 
 // document.write(dateNow.toLocaleString("pt-BR"))
 

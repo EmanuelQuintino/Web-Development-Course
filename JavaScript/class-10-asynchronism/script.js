@@ -1,49 +1,50 @@
 // >>>>>>> Asynchronism <<<<<<<
 
-function canDrive(age) {
-    console.log(age >= 18);
-}
+// function canDrive(age) {
+//     console.log(age >= 18);
+// }
 
-function age(yearBorn, callback) {
-    let age = new Date().getFullYear() - yearBorn
-    console.log(age);
-    callback(age)
+// function age(yearBorn, callback) {
+//     let age = new Date().getFullYear() - yearBorn
+//     console.log(age);
+//     callback(age)
+// }
 
-}
-
-age(2007, canDrive)
+// age(2007, canDrive)
 
 // >>>>>>>> setTimeout <<<<<<<<<
 
 // console.log('Antes');
-// let timeOut = setTimeout(() => {
-//     console.log('Test TimeOut ms');
-// }, 2000)
+let timeOut = setTimeout(() => {
+    console.log('Test TimeOut ms');
+}, 2000)
 // console.log('Depois');
 
-// let index = 0
-// const array = [12, 28, 33, 46, 52, 59]
-// const newArray = []
-// let interval = setInterval(() => {
-//     newArray.push(array[index])
+let count = 0
+const array = [12, 28, 33, 46, 52, 59]
+const newArray = []
+let interval = setInterval(() => {
+    // console.log('SetInterval');
+    newArray.push(array[count])
 
-//     let numbers = document.querySelector('.numbers')
-//     numbers.innerHTML = newArray.join('-')
+    let numbers = document.querySelector('.numbers')
+    numbers.innerHTML = newArray.join('-')
 
-//     if (array.length == newArray.length) {
-//         clearInterval(interval)
-//     }
+    if (array.length == newArray.length) {
+        clearInterval(interval)
+    }
 
-//     index++
-// }, 1500)
+    count++
+}, 1400)
 
-// // console.log(timeOut);
-// // console.log(interval);
+console.log(timeOut);
+console.log(interval);
 
-// let isFinish = false
-// if (isFinish) {
-//     clearInterval(interval)
-// }
+let isFinish = false
+if (isFinish) {
+  clearTimeout(timeOut)
+  clearTimeout(interval)
+}
 
 
 // >>>>>>>>>> Promises <<<<<<<<<<<<<<

@@ -16,7 +16,7 @@
 
 // console.log('Antes');
 let timeOut = setTimeout(() => {
-    console.log('Test TimeOut ms');
+    // console.log('Test TimeOut ms');
 }, 2000)
 // console.log('Depois');
 
@@ -28,7 +28,7 @@ let interval = setInterval(() => {
     newArray.push(array[count])
 
     let numbers = document.querySelector('.numbers')
-    numbers.innerHTML = newArray.join('-')
+    // numbers.innerHTML = newArray.join('-')
 
     if (array.length == newArray.length) {
         clearInterval(interval)
@@ -37,8 +37,8 @@ let interval = setInterval(() => {
     count++
 }, 1400)
 
-console.log(timeOut);
-console.log(interval);
+// console.log(timeOut);
+// console.log(interval);
 
 let isFinish = false
 if (isFinish) {
@@ -49,10 +49,12 @@ if (isFinish) {
 
 // >>>>>>>>>> Promises <<<<<<<<<<<<<<
 
+// Pending - Fulfilled - Rejected - Settled
+
 // console.log('Fazer requisição');
 
 // const promise = new Promise((resolve, reject) => {
-//     let situation = true
+//     let situation = false
 //     if (situation) {
 //         return resolve('Resposta do Banco de Dados!')
 //     } else {
@@ -60,16 +62,18 @@ if (isFinish) {
 //     }
 // })
 
+// console.log(promise);
+
 // promise
 //     .then((answer) => console.log(answer))
 //     .catch((error) => console.log(error))
 //     .finally(() => console.log('Requisição concluída!'))
 
 // async function requestData() {
-//     try {
-//         const response = await promise
-//         console.log(response);
-//     } catch (error) {
+    //     try {
+        //         const response = await promise
+        //         console.log(response);
+        //     } catch (error) {
 //         console.log(error);
 //     } finally {
 //         console.log('Requisição concluída!');
@@ -79,23 +83,41 @@ if (isFinish) {
 // requestData()
 // console.log('Finalizar requisição');
 
-const userName = 'EmanuelQuintino'
-const url = `https://api.github.com/users/${userName}`
-const gitHubUser = fetch(url)
-    .then(request => request.json())
-    .then(({ name, bio, public_repos }) => ({
-            name,
-            bio,
-            public_repos
-        })
-    )
+console.log('Início');
+
+// const userName = 'EmanuelQuintino'
+// const url = `https://api.github.com/users/${userName}`
+// const gitHubUser = fetch(url)
+//     .then(request => request.json())
+//     .then(({ name, bio }) => ({
+//             name,
+//             bio,
+//         })
+//     )
+
+// console.log(gitHubUser);
 
 // gitHubUser
 //     .then((user) => {
-//       console.log(`${user.name} tem ${user.public_repos} repositório(s) públicos: ${user.bio}`);
+//       console.log(`${user.name}: ${user.bio}`);
 //     })
 //     .catch((error) => console.log(error))
 
+async function userGitHubData(user) {
+    try {
+        const url = `https://api.github.com/users/${user}`
+        await fetch(url)
+            .then(request => request.json())
+            .then(({name, bio}) => {
+                    console.log(`${name}: ${bio}`);
+                });
+    } catch (error) {
+        console.log(error);
+    }
+}
+
+userGitHubData('EmanuelQuintino')
+console.log('Fim');
 
 // >>>>>>>> Exercise <<<<<<<<<<<
 // fetch(url)

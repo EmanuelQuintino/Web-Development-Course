@@ -292,33 +292,3 @@ newBingoButton.addEventListener('click', (event) => {
         isConfigActive = false
     }
 })
-
-
-
-
-// >>>>>>>>>>>>>>>>>>>>> Cartelas <<<<<<<<<<<<<<<<<<<<<
-// const arrayCards = []
-// for (let index = 0; index < totalCards; index++) {
-//     const arrayCard = []
-//     for (let index = 0; index < sizeCard; index++) {
-//         while(true) {
-//             let number = Math.ceil(Math.random() * totalNumbers)
-//               if (!arrayCard.includes(number)) {
-//                   arrayCard.push(number)
-//                   break;
-//               }
-//           }
-//       }
-//       arrayCard.sort((a, b) => a - b)
-//       arrayCards.push(arrayCard)
-//   }
-
-// console.log(arrayCards);
-
-
-// function includesNumber(number) {
-//     if (!arrayNumbers.includes(number.textContent)) {
-//             arrayNumbers.push(number.textContent)
-//         }
-//         console.log(arrayNumbers.sort((a, b)=> a - b));
-// }

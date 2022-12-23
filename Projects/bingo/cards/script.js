@@ -1,26 +1,29 @@
 const totalCards = Number(prompt('Quantas cartelas deseja gerar?'))
-// const totalCards = 100
+// const totalCards = 1
 const sizeCard = 25
 const totalNumbers = 75
 const arrayCards = []
 const dateBingo = new Date().toLocaleString('pt-BR')
 console.log(dateBingo);
 
-for (let index = 0; index < totalCards; index++) {
-    const arrayCard = []
-    for (let index = 0; index < sizeCard; index++) {
-        while(true) {
-            let number = Math.ceil(Math.random() * totalNumbers)
-            if (!arrayCard.includes(number)) {
-                arrayCard.push(number)
-                break;
+function creatsCards() {
+    for (let index = 0; index < totalCards; index++) {
+        const arrayCard = []
+        for (let index = 0; index < sizeCard; index++) {
+            while(true) {
+                let number = Math.ceil(Math.random() * totalNumbers)
+                if (!arrayCard.includes(number)) {
+                    arrayCard.push(number)
+                    break;
+                }
             }
         }
+        arrayCard.sort((a, b) => a - b)
+        arrayCards.push(arrayCard)
     }
-    arrayCard.sort((a, b) => a - b)
-    arrayCards.push(arrayCard)
 }
 
+creatsCards()
 console.log(arrayCards);
 
 
@@ -29,11 +32,11 @@ console.log(arrayCards);
 // const pages =  document.querySelector('.pages')
 // pages.innerHTML = ``
 
-const cards =  document.querySelector('.cardsContainer')
-cards.innerHTML = ``
+const cardsContainer =  document.querySelector('.cardsContainer')
+cardsContainer.innerHTML = ``
 
 for (let i = 0; i < arrayCards.length; i++) {
-    cards.innerHTML += `
+    cardsContainer.innerHTML += `
         <div class="card">
             <section class="header">
                 <h1>BINGO</h1>

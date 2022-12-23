@@ -87,7 +87,7 @@ const listItens = document.querySelectorAll("div");
 console.log(listItens);
 // listItens.forEach(value => console.log(value))
 
-// let arrayListItens = Array.from(listItens)
+//// let arrayListItens = Array.from(listItens)
 // console.log(arrayListItens);
 // arrayListItens.map(value => console.log(value))
 

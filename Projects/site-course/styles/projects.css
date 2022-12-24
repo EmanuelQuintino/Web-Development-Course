@@ -39,11 +39,11 @@
 }
 
 .projectDescription {
-    padding: .8rem;
+    padding: .4rem .8rem;
 }
 
 .projectDescription h4 {
-    margin: .4rem 0;
+    margin: 0 0 .4rem;
 }
 
 .projectDescription p {

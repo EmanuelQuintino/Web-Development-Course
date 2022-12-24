@@ -1,3 +1,45 @@
+function newBingo() {
+    let Soundclick = new Audio('./sounds/click-4.mp3')
+    Soundclick.play()
+
+    const dateBingo = new Date().toLocaleString('pt-BR')
+    console.log(dateBingo);
+
+    let totalNumbers = Number(inputAmountNumbers.value)
+    let sizeCard = Number(inputSizeCard.value)
+    let totalCards = Number(inputAmountCards.value)
+    let colorTheme = inputColors.value
+
+    const arrayCards = creatsCards(sizeCard, totalCards, totalNumbers)
+
+    console.log(arrayCards);
+
+    const bingoData = {
+        hour: dateBingo,
+        totalNumbers,
+        sizeCard,
+        totalCards,
+        colorTheme,
+        cards: arrayCards
+    }
+
+    // console.log(bingoData);
+
+    if (totalNumbers < 4 || totalNumbers > 75 || sizeCard < 1 || sizeCard > 25 || totalCards < 2 || totalCards > 99) {
+        window.alert(`Por favor, preencha os valores no intervalo indicado.`)
+    } else if (totalNumbers < sizeCard) {
+        alert('Atenção, a quantidade de números do Bingo tem que ser maior que o tamanho da cartela!')
+    } else {
+        localStorage.clear()
+        localStorage.setItem('bingoData', JSON.stringify(bingoData))
+        updateDisplay()
+
+        const configContainer = document.querySelector('.configContainer')
+        configContainer.style.display = 'none'
+        isConfigActive = false
+    }
+}
+
 function createNumbers () {
     const numbers =  document.querySelector('.numbersContainer')
     numbers.innerHTML = ``
@@ -28,7 +70,7 @@ function updateDisplay() {
     bingoData = JSON.parse(bingoDataLocal)
 
     let bingoContainer = document.querySelector('.bingoContainer')
-    bingoContainer.style.background = bingoData.colorTheme
+    bingoContainer.style.background = bingoData.colorTheme || '#008000'
 
     const numberCall = document.querySelector('.numberCall')
     const totalNumbersCall = document.querySelector('.totalNumbersCall')
@@ -76,6 +118,14 @@ function updateDisplay() {
             number.classList.remove('select')
         }
     })
+}
+
+function openConfig() {
+    let Soundclick = new Audio('./sounds/click-2.mp3')
+    Soundclick.play()
+
+    const configContainer = document.querySelector('.configContainer')
+    configContainer.style.display = 'grid'
 }
 
 function configModalClose() {
@@ -157,10 +207,6 @@ function checkCards() {
     }
 }
 
-let bingoDataLocal = localStorage.getItem('bingoData')
-let bingoData = JSON.parse(bingoDataLocal)
-updateDisplay()
-
 // Bingo Button
 const buttonBingo = document.querySelector('.buttonBingo')
 buttonBingo.addEventListener('click', (event) => {
@@ -182,13 +228,9 @@ let isConfigActive = false
 const configButton = document.querySelector('.configButton')
 configButton.addEventListener('click', (event) => {
     event.preventDefault()
+
     isConfigActive = true
-
-    let Soundclick = new Audio('./sounds/click-2.mp3')
-    Soundclick.play()
-
-    const configContainer = document.querySelector('.configContainer')
-    configContainer.style.display = 'grid'
+    openConfig()
 })
 
 // Close Button Config
@@ -245,45 +287,15 @@ inputColors.addEventListener('change', () => {
 const newBingoButton = document.querySelector('.newBingoButton')
 newBingoButton.addEventListener('click', (event) => {
     event.preventDefault()
-
-    let Soundclick = new Audio('./sounds/click-4.mp3')
-    Soundclick.play()
-
-    const dateBingo = new Date().toLocaleString('pt-BR')
-    console.log(dateBingo);
-
-    let totalNumbers = Number(inputAmountNumbers.value)
-    let sizeCard = Number(inputSizeCard.value)
-    let totalCards = Number(inputAmountCards.value)
-    let colorTheme = inputColors.value
-
-    const arrayCards = creatsCards(sizeCard, totalCards, totalNumbers)
-
-    console.log(arrayCards);
-
-    const bingoData = {
-        hour: dateBingo,
-        totalNumbers,
-        sizeCard,
-        totalCards,
-        colorTheme,
-        cards: arrayCards
-    }
-
-    // console.log(bingoData);
-
-
-    if (totalNumbers < 4 || totalNumbers > 75 || sizeCard < 1 || sizeCard > 25 || totalCards < 2 || totalCards > 99) {
-        window.alert(`Por favor, preencha os valores no intervalo indicado.`)
-    } else if (totalNumbers < sizeCard) {
-        alert('Atenção, a quantidade de números do Bingo tem que ser maior que o tamanho da cartela!')
-    } else {
-        localStorage.clear()
-        localStorage.setItem('bingoData', JSON.stringify(bingoData))
-        updateDisplay()
-
-        const configContainer = document.querySelector('.configContainer')
-        configContainer.style.display = 'none'
-        isConfigActive = false
-    }
+    newBingo()
 })
+
+let bingoDataLocal = localStorage.getItem('bingoData')
+let bingoData = JSON.parse(bingoDataLocal)
+
+if (bingoData) {
+    updateDisplay()
+} else {
+    newBingo()
+    // openConfig()
+}

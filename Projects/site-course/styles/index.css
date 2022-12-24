@@ -53,16 +53,16 @@ header {
     line-height: .4rem;
 }
 
-#logoReprogramaJucasHeader {
-    width: 100%;
-}
-
 h1 {
     font-size: 2.6rem;
     text-align: center;
     color: #DAC748;
 
     font-family: 'Black Ops One', cursive;
+}
+
+#logoReprogramaJucasHeader {
+    width: 100%;
 }
 
 main p {
@@ -127,7 +127,7 @@ footer {
     height: 100%;
 
     position: relative;
-    inset: -0.65rem 1.6rem 0;
+    inset: -0.65rem 1.2rem 0;
 }
 
 /* #logoReprogramaJucas {

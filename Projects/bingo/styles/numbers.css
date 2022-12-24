@@ -14,7 +14,7 @@
 }
 
 .container {
-    height: 100vh;
+    height: 100%;
     width: 100%;
     padding: 1.6rem;
 
@@ -62,4 +62,38 @@
 .select {
     color: white;
     background: #252525;
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 1.2rem;
+    }
+
+    .bingoContainer {
+        display: flex;
+        flex-direction: column;
+        gap: 1.0rem;
+    }
+
+    .numbersContainer {
+        gap: .6rem;
+        padding: 1.8rem 1.0rem;
+    }
+
+    .number {
+        height: 4.0rem;
+        width: 4.0rem;
+
+        border: .195rem solid #252525;
+
+        font-size: 2.0rem;
+        font-weight: 500;
+        color: #252525;
+        background: white;
+    }
+
+    .select {
+        color: white;
+        background: #252525;
+    }
 }

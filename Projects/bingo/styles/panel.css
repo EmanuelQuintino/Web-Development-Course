@@ -152,3 +152,58 @@
 
     margin-top: 1.2rem;
 }
+
+@media (max-width: 480px) {
+    .bingoPenal {
+        height: 100%;
+    }
+
+    .blockArmedCards h2,
+    .blockTotal h2 {
+        font-size: 1.6rem;
+        line-height: 2.4rem;
+    }
+
+    .armedCards,
+    .totalNumbersCall {
+        height: 5.6rem;
+        width: 8.0rem;
+        font-size: 3.2rem;
+    }
+
+    .totalNumbers {
+        font-size: 2.0rem;
+    }
+
+    .numberCall {
+        font-size: 8.0rem;
+        height: 10.0rem;
+        margin-top: .8rem;
+    }
+
+    .buttonBingoContainer {
+        margin-top: .8rem;
+    }
+
+    .buttonBingo {
+        width: 100%;
+        padding: 1.6rem;
+        font-size: 2.4rem;
+    }
+
+    .lastNumbersContainer {
+        margin-top: 2.0rem;
+    }
+
+    .lastNumbersContainer h2 {
+        font-size: 1.6rem;
+    }
+
+    .lastNumbers div {
+        height: 5.6rem;
+        width: 6.4rem;
+
+        font-size: 2.4rem;
+        margin-top: .8rem;
+    }
+}

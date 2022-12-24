@@ -56,7 +56,6 @@
     width: 28.0rem;
     display: inline-block;
     text-align: left;
-
 }
 
 .configContainer input{
@@ -71,6 +70,8 @@
 
 .pdfImage {
     width: 2.0rem;
+    position: relative;
+    inset: .4rem 0 0 .4rem;
 }
 
 .newBingoButton {
@@ -93,4 +94,47 @@
 .newBingoButton:hover {
     cursor: pointer;
     background: linear-gradient(115deg, #00AA00, #00AA00BB);
+}
+
+@media (max-width: 480px) {
+    .configContainer fieldset{
+        width: 32.0rem;
+        padding: 1.6rem 0 2.4rem;
+    }
+
+    .configContainer h2 {
+        font-size: 2.0rem;
+        margin-top: 1.6rem;
+    }
+
+    .closeButton {
+        top: 1.2rem;
+        right: 1.2rem;
+    }
+
+    .configContainer form {
+        margin-top: .8rem;
+    }
+
+    .configContainer form section {
+        margin-top: 2.0rem;
+    }
+
+    .configContainer label{
+        text-align: center;
+    }
+
+    .configContainer input{
+        display: flex;
+        margin: .8rem auto;
+    }
+
+    .newBingoButton {
+        margin-top: 3.6rem;
+        width: 16.0rem;
+        padding: .8rem;
+
+        font-size: 1.6rem;
+        font-weight: 600;
+    }
 }

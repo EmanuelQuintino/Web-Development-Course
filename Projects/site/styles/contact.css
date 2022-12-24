@@ -1,6 +1,6 @@
 @import url(style.css);
 
-:root {    
+:root {
     --brown-0: #5b1008;
     --brown-1: #941E10;
     --brown-2: #E0412F;
@@ -8,27 +8,27 @@
     --brown-4: #FF614F55;
     --brown-5: #FF614F22;
     --green-1: #009447;
-    --green-2: #03ce65;    
+    --green-2: #03ce65;
     --green-3: #2FE085;
     --green-4: #2FE08588;
 }
 
 main {
-    padding: 16rem;
-    
+    padding: 1.6rem;
+
     display: flex;
     align-items: center;
     justify-content: center;
 
-    max-width: 1024rem;
+    max-width: 102.4rem;
 
     margin: 0 auto;
 }
 
 .form-contact {
-    margin-top: 8rem;
+    margin-top: .8rem;
     display: grid;
-    gap: 48rem;
+    gap: 4.8rem;
 
     animation: topDownAnimation 1000ms;
 }
@@ -36,9 +36,9 @@ main {
 main h1 {
     background: var(--brown-1);
     color: white;
-    padding: 16rem;
+    padding: 1.6rem;
     text-align: center;
-    border-radius: 8rem 8rem 0 0;
+    border-radius: .8rem .8rem 0 0;
     border-top: solid 1px var(--brown-2);
     border-left: solid 1px var(--brown-2);
     border-bottom: none;
@@ -50,18 +50,18 @@ main h1 {
 }
 
 fieldset {
-    padding: 16rem;
-    
+    padding: 1.6rem;
+
     display: flex;
     flex-direction: column;
-    gap: 16rem;
-    
-    border-radius: 0 0 8rem 8rem;
-        
+    gap: 1.6rem;
+
+    border-radius: 0 0 .8rem .8rem;
+
     border-top: none;
     border-right: solid 1px var(--brown-2);
     border-left: solid 1px var(--brown-2);
-    border-bottom: solid 1px var(--brown-2);  
+    border-bottom: solid 1px var(--brown-2);
 
     background: var(--brown-5);
 }
@@ -75,11 +75,11 @@ fieldset {
 .inputBox select,
 .inputBox textarea {
     width: 100%;
-    margin-top: 4rem;
-    padding: 8rem;
+    margin-top: .4rem;
+    padding: .8rem;
 
-    border: solid 1.5rem var(--brown-4);
-    border-radius: 4rem;
+    border: solid .15rem var(--brown-4);
+    border-radius: .4rem;
 
     color: var(--brown-0);
 
@@ -89,7 +89,7 @@ fieldset {
 .inputBox input:focus,
 .inputBox select:focus,
 .inputBox textarea:focus {
-    outline: solid 1rem var(--brown-2);
+    outline: solid .1rem var(--brown-2);
 }
 
 .inputBox textarea {
@@ -97,20 +97,20 @@ fieldset {
 }
 
 form button {
-    margin-top: 16rem;
-    padding: 12rem;
+    margin-top: 1.6rem;
+    padding: 1.2rem;
     width: 100%;
-    
-    border-radius: 8rem;
+
+    border-radius: .8rem;
     border: 0;
-    
+
     background: var(--green-2);
 
     color: white;
-    font-size: 16rem;
+    font-size: 1.6rem;
     font-weight: 700;
     text-transform: uppercase;
-    
+
     cursor: pointer;
 }
 
@@ -121,18 +121,18 @@ form button:hover {
 .contact-card {
     display: flex;
     flex-direction: column;
-    gap: 8rem;
+    gap: .8rem;
 
-    max-width: 400rem;
+    max-width: 40.0rem;
     text-align: justify;
 }
 
 #text-description-site {
-    margin-top: 24rem;
+    margin-top: 2.4rem;
 }
 
 #my-contacts {
-    margin: 24rem auto;
+    margin: 2.4rem auto;
 }
 #my-contacts a:hover {
     filter: brightness(1.1);
@@ -147,21 +147,20 @@ form button:hover {
     .contact-card {
         display: flex;
         flex-direction: column;
-        gap: 8rem;
-    
-        max-width: 300rem;
+        gap: .8rem;
+
+        max-width: 30.0rem;
     }
 
     #my-contacts img {
         width: auto;
         height: 35%;
     }
-    
 }
 
 @media (min-width: 720px) {
-    .contact-card {    
-        max-width: 350rem;
+    .contact-card {
+        max-width: 35.0rem;
     }
 
     #my-contacts img {
@@ -171,13 +170,13 @@ form button:hover {
 }
 
 @media (min-width: 900px) {
-    .contact-card {    
-        max-width: 400rem;
+    .contact-card {
+        max-width: 40.0rem;
     }
 }
 
 @media (min-width: 1024px) {
     .form-contact {
-        gap: 128rem;
+        gap: 12.8rem;
     }
 }

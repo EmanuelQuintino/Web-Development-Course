@@ -17,13 +17,14 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     backdrop-filter: brightness(40%);
+
+    height: 100%;
     color: white;
 }
 
 header {
     text-align: center;
     padding: 3.2rem;
-
 }
 
 h1 {

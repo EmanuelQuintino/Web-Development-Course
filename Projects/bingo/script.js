@@ -239,11 +239,6 @@ inputColors.addEventListener('change', () => {
 
     const soundsChange = new Audio('./sounds/click-3.mp3')
     soundsChange.play()
-
-    // let buttons = document.querySelectorAll('.newBingoButton')
-    // buttons.forEach((button) => {
-        // button.style.background = `linear-gradient(135deg, ${inputColors.value}, ${inputColors.value}BB)`
-    // })
 })
 
 // New Bingo Button

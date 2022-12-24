@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap');
 
 :root {
-    font-size: 6.25%;
+    font-size: 62.5%;
     scroll-behavior: smooth;
-    
+
     --brown-0: #5b1008;
     --brown-1: #941E10;
     --brown-2: #E0412F;
@@ -11,10 +11,10 @@
     --brown-4: #FF614F55;
     --brown-5: #FF614F22;
     --green-1: #009447;
-    --green-2: #03ce65;    
+    --green-2: #03ce65;
     --green-3: #2FE085;
     --green-4: #2FE08588;
-    
+
     --fontLogo:'Cinzel', serif;
 }
 
@@ -25,7 +25,7 @@
 }
 
 body {
-    font-size: 16rem;
+    font-size: 1.6rem;
 }
 
 .page {
@@ -35,13 +35,13 @@ body {
 
 header {
     width: 100%;
-    height: 100rem;
-    padding: 16rem;
+    height: 10.0rem;
+    padding: 1.6rem;
 
     background: linear-gradient(var(--brown-0), var(--brown-1));
 
     position: sticky;
-    top: -1rem;
+    top: -0.1rem;
 
     z-index: 1;
 
@@ -53,11 +53,11 @@ header {
 }
 
 header img {
-    width: 64rem;
+    width: 6.4rem;
     height: auto;
     border-radius: 50%;
 
-    box-shadow: .5rem .5rem 1rem 1rem rgba(0, 0, 0, 0.5);
+    box-shadow: .05rem .05rem .1rem .1rem rgba(0, 0, 0, 0.5);
 }
 
 header, nav ul {
@@ -78,21 +78,21 @@ nav ul {
 header a {
     text-decoration: none;
     color: white;
-    text-shadow: .5rem .5rem 2rem rgba(0, 0, 0, 0.5) ;
-    font-size: 18rem;
-    padding: 8rem;
+    text-shadow: .05rem .05rem .2rem rgba(0, 0, 0, 0.5) ;
+    font-size: 1.8rem;
+    padding: .8rem;
 }
 
 header a:hover {
     filter: brightness(1.1);
     background: var(--brown-4);
-    padding: 8rem;
-    border-radius: 4rem;
+    padding: .8rem;
+    border-radius: .4rem;
 }
 
 .imagesShowBar {
     width: 100%;
-    height: 240rem;
+    height: 24.0rem;
 
     margin: 0 auto;
 
@@ -107,7 +107,7 @@ header a:hover {
 
 .imageShowBar {
     position: absolute;
-    
+
     width: 100%;
     height: auto;
     object-fit: cover;
@@ -146,10 +146,10 @@ header a:hover {
 /* >>>>>>>>>>>>>>>>>    Main    <<<<<<<<<<<<<<<<< */
 
 .container main {
-    max-width: 480rem;
+    max-width: 48.0rem;
 
     margin: 0 auto;
-    padding: 32rem;
+    padding: 3.2rem;
 
     text-align: center;
 }
@@ -157,12 +157,12 @@ header a:hover {
 .logo {
     font-family: var(--fontLogo);
     font-weight: 700;
-    font-size: 23rem;
+    font-size: 2.3rem;
 }
 
 .logo span {
     color: var(--brown-1);
-    text-shadow: .5rem .5rem 1rem rgba(0, 0, 0, 0.5);
+    text-shadow: .05rem .05rem .1rem rgba(0, 0, 0, 0.5);
 }
 
 .mainLogo {
@@ -170,7 +170,7 @@ header a:hover {
 }
 
 .boxImageLogo {
-    height: 240rem;
+    height: 24.0rem;
     position: relative;
 
     display: grid;
@@ -191,33 +191,33 @@ header a:hover {
 }
 
 .mainSlogan {
-    margin-top: -8rem;
-    font-size: 32rem;
-    line-height: 48rem;
+    margin-top: -0.8rem;
+    font-size: 3.2rem;
+    line-height: 4.8rem;
 }
 
 aside {
-    padding: 8rem;
+    padding: .8rem;
 }
 
 .cards {
-    max-width: 1024rem;
+    max-width: 102.4rem;
     margin: 0 auto;
 
-    padding: 16rem;
+    padding: 1.6rem;
 
     display: grid;
     /* grid-template-columns: 1fr 1fr 1fr;
     grid-template-columns: repeat(3, 1fr); */
-    grid-template-columns: repeat(auto-fit, minmax(240rem, 1fr));
-    
-    grid-column-gap: 32rem;
-    grid-row-gap: 48rem;
+    grid-template-columns: repeat(auto-fit, minmax(24.0rem, 1fr));
+
+    grid-column-gap: 3.2rem;
+    grid-row-gap: 4.8rem;
 }
 
 .card {
-    border-radius: 4rem;
-    box-shadow: .1rem .1rem 2rem 1rem black;
+    border-radius: .4rem;
+    box-shadow: .01rem .01rem .2rem .1rem black;
 
     transition: transform 300ms;
 
@@ -229,15 +229,15 @@ aside {
 }
 
 .card img {
-    height: 240rem;
+    height: 24.0rem;
     width: 100%;
-    
+
     object-fit: cover;
     object-position: center;
 
     transition: brightness 300ms;
 
-    box-shadow: .1rem .1rem 2rem 1rem black;
+    box-shadow: .01rem .01rem .2rem .1rem black;
 }
 
 .card img:hover {
@@ -245,40 +245,40 @@ aside {
 }
 
 .cardPart1 {
-    border-radius: 8rem;
+    border-radius: .8rem;
 }
 
 .cardPart2 {
-padding: 0 12rem;
+padding: 0 1.2rem;
 }
 
 .cardPart2 h3 {
     color: var(--brown-1);
-    font-size: 32rem;
+    font-size: 3.2rem;
 
-    margin-top: 8rem;
+    margin-top: .8rem;
 
-    text-shadow: 1rem 1rem 2rem 1rem black;
+    text-shadow: .1rem .1rem .2rem .1rem black;
 }
 
 .cardPart2 p:nth-child(2) {
-    font-size: 24rem;
+    font-size: 2.4rem;
     font-weight: 700;
 }
 
 .buttonCard {
     width: 100%;
-    height: 48rem;
+    height: 4.8rem;
 
-    border-radius: 8rem;
+    border-radius: .8rem;
     border: none;
 
     background: var(--brown-1);
     color: white;
-    font-size: 24rem;
-    
-    margin: 16rem auto 8rem;
-    
+    font-size: 2.4rem;
+
+    margin: 1.6rem auto .8rem;
+
     transition: brightness 300ms;
 
     cursor: pointer;
@@ -297,7 +297,7 @@ footer {
 
     width: 100%;
     height: 100%;
-    padding: 16rem;
+    padding: 1.6rem;
 
     background: linear-gradient(var(--brown-1), var(--brown-0));
 
@@ -305,48 +305,48 @@ footer {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 32rem;
+    gap: 3.2rem;
 
-    margin-top: 32rem;
+    margin-top: 3.2rem;
 }
 
 footer .logo span {
     color: var(--green-3);
-    text-shadow: 1rem 1rem 1rem black;
+    text-shadow: .1rem .1rem .1rem black;
 }
 
 .footerLogo {
-    font-size: 20rem;
-    line-height: 32rem;
-    margin-top: 16rem;
+    font-size: 2.0rem;
+    line-height: 3.2rem;
+    margin-top: 1.6rem;
 
-    text-shadow: .1rem .1rem 2rem black;
+    text-shadow: .01rem .01rem .2rem black;
 }
 
 .footerImageLogo {
-    width: 120rem;
+    width: 12.0rem;
     border-radius: 50%;
-    margin-top: 16rem;
-    box-shadow: .1rem .1rem 2rem black;
+    margin-top: 1.6rem;
+    box-shadow: .01rem .01rem .2rem black;
 }
 
 .FooterSocialMediaLogos {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 32rem;
+    gap: 3.2rem;
 }
 
 .FooterSocialMediaLogos img{
-    margin-top: 32rem;
-    width: 40rem;
+    margin-top: 3.2rem;
+    width: 4.0rem;
 }
 
 .footerLocal iframe {
     width: 100%;
-    height: 280rem;
-    
-    margin-top: 16rem;
+    height: 28.0rem;
+
+    margin-top: 1.6rem;
 }
 
 /* >>>>>>>>>>>>>>>>>>>>>>   Animations   <<<<<<<<<<<<<<<<<<<<<< */
@@ -355,11 +355,11 @@ footer .logo span {
     10% {
         opacity: 1;
     }
-    
+
     20% {
         transform: scale(1.1, 1.1);
     }
-    
+
     40% {
         /* transform: translate(-100%); */
         opacity: 0;
@@ -368,20 +368,20 @@ footer .logo span {
 
 @keyframes cloudAnimation {
     0% {
-        transform: translateY(5rem);
+        transform: translateY(.5rem);
     }
-    
+
     100% {
-        transform: translateY(-5rem);
+        transform: translateY(-0.5rem);
     }
 }
 
 @keyframes topDownAnimation {
     0% {
         opacity: 0;
-        transform: translateY(-10rem);
+        transform: translateY(-1.0rem);
     }
-    
+
     100% {
         opacity: 1;
         transform: translateY(0rem);
@@ -392,53 +392,53 @@ footer .logo span {
 
 @media (max-width: 360px) {
     header img {
-        width: 60rem;
+        width: 6.0rem;
     }
 
     header a {
-        font-size: 16rem;
+        font-size: 1.6rem;
     }
 }
 
 @media (max-width: 320px) {
     header img {
-        width: 48rem;
+        width: 4.8rem;
     }
 
     header a {
-        font-size: 16rem;
+        font-size: 1.6rem;
     }
 }
 
 @media (min-width: 480px) {
 
     .imagesShowBar {
-        height: 360rem;
+        height: 36.0rem;
     }
 
     .container main {
-        max-width: 720rem;
-    
+        max-width: 72.0rem;
+
         margin: 0 auto;
-        padding: 32rem;
-    
+        padding: 3.2rem;
+
         text-align: center;
     }
 
     .logo {
-        font-size: 32rem;
+        font-size: 3.2rem;
     }
-    
+
     .logo span {
         color: var(--brown-1);
-        text-shadow: 1rem 1rem 2rem rgba(0, 0, 0, 0.5);
+        text-shadow: .1rem .1rem .2rem rgba(0, 0, 0, 0.5);
     }
-    
+
     .mainImageLogo {
         width: 70%;
-        margin-top: 128rem;
+        margin-top: 12.8rem;
     }
-    
+
     .mainImageLogoPlane {
         animation-name: cloudAnimation;
         animation-duration: 2500ms;
@@ -448,14 +448,14 @@ footer .logo span {
     }
 
     .mainSlogan {
-        margin-top: 128rem;
-        font-size: 48rem;
-        line-height: 72rem;
+        margin-top: 12.8rem;
+        font-size: 4.8rem;
+        line-height: 7.2rem;
     }
 
     .footerLogo {
-        font-size: 28rem;
-        line-height: 42rem;
+        font-size: 2.8rem;
+        line-height: 4.2rem;
     }
     .footerLocal {
         display: flex;
@@ -463,19 +463,18 @@ footer .logo span {
         justify-content: center;
         flex-direction: column;
 
-        font-size: 32rem;
+        font-size: 3.2rem;
     }
 
     .footerLocal iframe {
         width: 150%;
-        height: 380rem;
-
+        height: 38.0rem;
     }
 }
 
 @media (min-width: 640px) {
     .container main {
-        max-width: 720rem;
+        max-width: 72.0rem;
     }
 
     main article {
@@ -483,21 +482,21 @@ footer .logo span {
     }
 
     .mainLogo {
-        font-size: 40rem;
+        font-size: 4.0rem;
     }
 }
 
 @media (min-width: 720px) {
     .container main {
-        max-width: 920rem;
+        max-width: 92.0rem;
     }
 
     .mainLogo {
-        font-size: 48rem;
+        font-size: 4.8rem;
     }
 
     .mainImageLogo {
         width: 50%;
-        margin-top: 128rem;
+        margin-top: 12.8rem;
     }
 }

@@ -94,6 +94,14 @@ aside section + section {
     margin-top: 2.0rem;
 }
 
+.socialMediasContainer {
+    margin-top: 2.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .8rem;
+}
+
 footer {
     margin-top: 2.4rem;
     text-align: center;
@@ -109,38 +117,21 @@ footer {
     gap: 1.6rem;
 }
 
-.socialMediasContainer {
-    margin-top: 2.4rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: .8rem;
-}
-
 #logoPrefeituraJucas {
-    width: 11.0rem;
+    width: 16.0rem;
     height: 100%;
 }
 
 #logoEmpreendaMais {
-    width: 6.6rem;
+    width: 9.6rem;
     height: 100%;
 
     position: relative;
-    inset: -0.65rem 1.2rem 0;
+    inset: -0.90rem 1.5rem 0;
 }
 
-/* #logoReprogramaJucas {
-    width: 16.0rem;
-    height: 100%;
-
-    position: relative;
-    inset: -0.4rem 0 0 0;
-} */
-
 .boxLogoCvt {
-    width: 15.5rem;
-    height: 4.2rem;
+    width: 24.0rem;
     border-radius: .8rem;
     overflow: hidden;
 
@@ -149,7 +140,7 @@ footer {
 }
 
 #logoCvt {
-    width: 17.0rem;
+    width: 24.0rem;
     height: 100%;
 
     object-fit: cover;

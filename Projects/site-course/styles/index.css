@@ -118,20 +118,21 @@ footer {
 }
 
 #logoPrefeituraJucas {
-    width: 16.0rem;
+    width: 12.0rem;
     height: 100%;
 }
 
 #logoEmpreendaMais {
-    width: 9.6rem;
+    width: 7.6rem;
     height: 100%;
 
     position: relative;
-    inset: -0.90rem 1.5rem 0;
+    inset: -0.65rem 1.2rem 0;
 }
 
 .boxLogoCvt {
-    width: 24.0rem;
+    width: 16.5rem;
+    height: 4.2rem;
     border-radius: .8rem;
     overflow: hidden;
 
@@ -140,7 +141,7 @@ footer {
 }
 
 #logoCvt {
-    width: 24.0rem;
+    width: 18.0rem;
     height: 100%;
 
     object-fit: cover;

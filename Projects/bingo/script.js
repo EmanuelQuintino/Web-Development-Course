@@ -293,9 +293,11 @@ newBingoButton.addEventListener('click', (event) => {
 let bingoDataLocal = localStorage.getItem('bingoData')
 let bingoData = JSON.parse(bingoDataLocal)
 
+alert(bingoData)
+
 if (bingoData) {
     updateDisplay()
 } else {
-    newBingo()
-    // openConfig()
+    // newBingo()
+    openConfig()
 }

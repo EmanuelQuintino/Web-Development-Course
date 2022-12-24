@@ -23,6 +23,8 @@ body {
 
     height: 100%;
     color: white;
+
+    background-color: #000219;
 }
 
 .backgroundImage {
@@ -124,7 +126,7 @@ footer {
 }
 
 .boxLogoCvt {
-    width: 15.0rem;
+    width: 15.5rem;
     height: 4.2rem;
     border-radius: .8rem;
     overflow: hidden;

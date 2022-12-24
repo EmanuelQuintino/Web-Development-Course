@@ -39,19 +39,7 @@ body {
     object-fit: cover;
 }
 
-header {
-    text-align: center;
-    padding: 3.2rem;
-}
-
-h1 {
-    font-size: 3.2rem;
-    text-align: center;
-    color: #DAC748;
-
-    font-family: 'Black Ops One', cursive;
-}
-
+header,
 main,
 aside {
     max-width: 48.0rem;
@@ -59,7 +47,27 @@ aside {
     padding: 0 1.6rem;
 }
 
+header {
+    margin-top: 2.4rem;
+    text-align: center;
+    line-height: .4rem;
+}
+
+#logoReprogramaJucasHeader {
+    width: 100%;
+}
+
+h1 {
+    width: 100%;
+    font-size: 2.6rem;
+    text-align: center;
+    color: #DAC748;
+
+    font-family: 'Black Ops One', cursive;
+}
+
 main p {
+    margin-top: 3.2rem;
     text-align: justify;
 }
 
@@ -120,16 +128,16 @@ footer {
     height: 100%;
 
     position: relative;
-    inset: -0.65rem 0 0 0;
+    inset: -0.65rem .8rem 0;
 }
 
-#logoReprogramaJucas {
+/* #logoReprogramaJucas {
     width: 16.0rem;
     height: 100%;
 
     position: relative;
     inset: -0.4rem 0 0 0;
-}
+} */
 
 .boxLogoCvt {
     width: 15.5rem;
@@ -144,7 +152,6 @@ footer {
 #logoCvt {
     width: 17.0rem;
     height: 100%;
-    /* background: white; */
 
     object-fit: cover;
     object-position: center;

@@ -11,15 +11,27 @@
 }
 
 body {
-    background-image: url('../images/background-1.jpg');
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    backdrop-filter: brightness(40%);
+    /* background-image: url('../images/background-1.jpg'); */
+    /* background-attachment: fixed; */
+    /* background-position: center; */
+    /* background-repeat: no-repeat; */
+    /* background-size: cover; */
+    /* backdrop-filter: brightness(40%); */
 
     height: 100%;
     color: white;
+}
+
+.backgroundImage {
+    position: fixed;
+    z-index: -1;
+    filter: brightness(40%);
+
+    width: 100%;
+    height: auto;
+
+    object-position: center;
+    object-fit: cover;
 }
 
 header {

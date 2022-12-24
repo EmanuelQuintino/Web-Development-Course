@@ -61,7 +61,7 @@ h1 {
     font-family: 'Black Ops One', cursive;
 }
 
-#logoReprogramaJucasHeader {
+#logoReprogramaJucas {
     width: 100%;
 }
 
@@ -129,14 +129,6 @@ footer {
     position: relative;
     inset: -0.65rem 1.2rem 0;
 }
-
-/* #logoReprogramaJucas {
-    width: 16.0rem;
-    height: 100%;
-
-    position: relative;
-    inset: -0.4rem 0 0 0;
-} */
 
 .boxLogoCvt {
     width: 15.5rem;

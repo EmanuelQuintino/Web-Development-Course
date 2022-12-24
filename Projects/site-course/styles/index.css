@@ -1,3 +1,6 @@
+@import url(ementa.css);
+@import url(projects.css);
+
 :root {
     font-size: 62.5%;
 }
@@ -58,114 +61,8 @@ main p {
     text-align: justify;
 }
 
-.ementa {
-    margin: 3.2rem 0;
-}
-
-.containerTechnologies {
-    margin: 2.4rem;
-}
-
-.containerTechnologies img {
-    height: 6.0rem;
-    width: auto;
-}
-
-.ementa section:first-child ul {
-    list-style: none;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 1.6rem;
-}
-
-.ementa section:first-child ul li {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    gap: .8rem;
-
-    transition: 200ms;
-}
-
-.ementa section:first-child ul li:hover {
-    cursor: pointer;
-    transform: scale(1.05);
-}
-
-.sqlName {
-    position: relative;
-    top: -1.5rem;
-}
-
-#iconSql {
-    height: 9.0rem;
-    width: auto;
-}
-
-.gitName {
-    position: relative;
-    top: .2rem;
-}
-
-.containerAnotherSubjects {
-    list-style: inside;
-    margin: 1.6rem 0 4.8rem;
-}
-
 h2 {
     font-size: 2.0rem;
-}
-
-.projectsContainer {
-    margin-top: 1.6rem;
-    width: 100%;
-
-    display: flex;
-    gap: 1.6rem;
-
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-}
-
-.projectsContainer::-webkit-scrollbar {
-    display: none;
-    /* height: 5px; */
-    /* border: 1px solid rgba(0, 0, 0, 0.1); */
-}
-
-/* .container::-webkit-scrollbar-thumb {
-    background-color: rgba(0, 0, 0, 0.2);
-} */
-
-.projectBox {
-    border: .1rem solid white;
-    object-fit: cover;
-    scroll-snap-align: start;
-}
-
-.project {
-    width: 34.0rem;
-}
-
-.project a img {
-    object-fit: cover;
-    width: 100%;
-}
-
-.projectDescription {
-    padding: .8rem;
-}
-
-.projectDescription h4 {
-    margin: .4rem 0;
-}
-
-.projectDescription p {
-    text-align: justify;
-    font-size: 1.6rem;
 }
 
 .instructorPerfil {

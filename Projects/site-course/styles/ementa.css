@@ -1,0 +1,56 @@
+.ementa {
+    margin: 3.2rem 0;
+}
+
+.containerTechnologies {
+    margin: 2.4rem;
+}
+
+.containerTechnologies img {
+    height: 6.0rem;
+    width: auto;
+}
+
+.ementa section:first-child ul {
+    list-style: none;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.6rem;
+}
+
+.ementa section:first-child ul li {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: .8rem;
+
+    transition: 200ms;
+}
+
+.ementa section:first-child ul li:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+.sqlName {
+    position: relative;
+    top: -1.5rem;
+}
+
+#iconSql {
+    height: 9.0rem;
+    width: auto;
+}
+
+.gitName {
+    position: relative;
+    top: .2rem;
+}
+
+.containerAnotherSubjects {
+    list-style: inside;
+    margin: 1.6rem 0 4.8rem;
+}

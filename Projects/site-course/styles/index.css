@@ -16,20 +16,19 @@
 }
 
 body {
-    background-image: url('../images/background-1.jpg');
+    /* background-image: url('../images/background-1.jpg');
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    backdrop-filter: brightness(40%);
+    backdrop-filter: brightness(40%); */
 
     height: 100%;
     color: white;
-
     background-color: #000219;
 }
 
-/* .backgroundImage {
+.backgroundImage {
     position: fixed;
     z-index: -1;
     filter: brightness(40%);
@@ -39,7 +38,7 @@ body {
 
     object-position: center;
     object-fit: cover;
-} */
+}
 
 header,
 main,

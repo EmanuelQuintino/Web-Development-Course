@@ -118,6 +118,10 @@ footer {
     gap: .8rem;
 }
 
+.socialMediasContainer img {
+    width: 11.0rem;
+}
+
 #logoPrefeituraJucas {
     width: 11.0rem;
     height: 100%;

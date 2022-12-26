@@ -29,7 +29,7 @@ body {
     background-color: #000219;
 }
 
-.backgroundImage {
+/* .backgroundImage {
     position: fixed;
     z-index: -1;
     filter: brightness(40%);
@@ -39,7 +39,7 @@ body {
 
     object-position: center;
     object-fit: cover;
-}
+} */
 
 header,
 main,
@@ -56,7 +56,6 @@ header {
 
 h1 {
     font-size: 2.5rem;
-    /* line-height: .4rem; */
     text-align: center;
     color: #DAC748;
     font-family: 'Chakra Petch', sans-serif;
@@ -132,7 +131,7 @@ footer {
     height: 100%;
 
     position: relative;
-    inset: -0.65rem 1.2rem 0;
+    inset: -0.65rem 1.0rem 0;
 }
 
 .boxLogoCvt {

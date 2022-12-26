@@ -1,6 +1,8 @@
 @import url(ementa.css);
 @import url(projects.css);
 
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700&display=swap');
+
 :root {
     font-size: 62.5%;
 }
@@ -10,7 +12,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 1.8rem;
+    font-size: 1.6rem;
 }
 
 body {
@@ -48,15 +50,16 @@ aside {
 }
 
 header {
-    margin-top: 5.6rem;
+    padding-top: 5.6rem;
     text-align: center;
 }
 
 h1 {
-    font-size: 2.6rem;
+    font-size: 2.4rem;
+    line-height: .4rem;
     text-align: center;
     color: #DAC748;
-    font-family: 'Black Ops One', cursive;
+    font-family: 'Chakra Petch', sans-serif;
 }
 
 #logoReprogramaJucas {
@@ -64,7 +67,7 @@ h1 {
 }
 
 main p {
-    margin-top: 2.4rem;
+    margin-top: 4.8rem;
     text-align: justify;
 }
 

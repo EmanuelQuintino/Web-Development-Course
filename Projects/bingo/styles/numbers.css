@@ -77,6 +77,30 @@
     }
 
     .numbersContainer {
+        gap: .6rem;
+        padding: 1.8rem 1.0rem;
+    }
+
+    .number {
+        height: 3.6rem;
+        width: 3.6rem;
+
+        border: .13rem solid #252525;
+
+        font-size: 1.6rem;
+        font-weight: 500;
+        color: #252525;
+        background: white;
+    }
+
+    .select {
+        color: white;
+        background: #252525;
+    }
+}
+
+@media (max-width: 360px) {
+    .numbersContainer {
         gap: .4rem;
         padding: 1.8rem 1.0rem;
     }

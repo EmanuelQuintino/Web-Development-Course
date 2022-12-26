@@ -56,7 +56,7 @@ header {
 
 h1 {
     font-size: 2.5rem;
-    line-height: .4rem;
+    /* line-height: .4rem; */
     text-align: center;
     color: #DAC748;
     font-family: 'Chakra Petch', sans-serif;
@@ -67,7 +67,7 @@ h1 {
 }
 
 main p {
-    margin-top: 4.8rem;
+    margin-top: 2.4rem;
     text-align: justify;
 }
 

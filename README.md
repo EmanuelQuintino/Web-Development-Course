@@ -4,7 +4,7 @@ O curso de Desenvolvimento Web é o nosso programa piloto e faz parte do projeto
 
 ### Dentre as tecnologias abordadas temos:
 
-<div style="display: flex; align-items: center; justify-content: space-around; gap: 8px">
+<div style="display: flex; align-items: center; justify-content: space-around; gap: 8px;">
   <img align="center" alt="HTML" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg">
   HTML
   <img align="center" alt="CSS" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg">
@@ -22,7 +22,7 @@ O curso de Desenvolvimento Web é o nosso programa piloto e faz parte do projeto
 </div>
 
 <section>
-    <ul style="display: flex; align-items: center; justify-content: space-around; gap: 8px">
+    <ul style="display: flex; align-items: center; justify-content: space-around; gap: 8px;">
       <li>
           <img alt="HTML" height="30" width="40"
           src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg">

@@ -35,14 +35,14 @@
     transform: scale(1.05);
 }
 
-.sqlName {
-    position: relative;
-    top: -1.5rem;
+#iconSql {
+    height: 11.0rem;
+    width: auto;
 }
 
-#iconSql {
-    height: 9.0rem;
-    width: auto;
+.sqlName {
+    position: relative;
+    top: -2.4rem;
 }
 
 .gitName {

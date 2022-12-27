@@ -7,16 +7,15 @@ window.addEventListener("scroll", () => {
         });
     }
 
-    if(window.scrollY > 280) {
+    if(window.scrollY > 200) {
         const anotherSubjects = document.querySelector(".anotherSubjects");
             anotherSubjects.classList.add("downTopAnimation")
     }
 
-    if(window.scrollY > 540) {
+    if(window.scrollY > 440) {
         const projects = document.querySelector(".projects");
         projects.classList.add("downTopAnimation")
     }
-
 
     if(window.scrollY > 920) {
         const aside = document.querySelector("aside");
@@ -24,21 +23,16 @@ window.addEventListener("scroll", () => {
     }
 
     if(window.scrollY > 1120) {
-        const dataInstructor = document.querySelector(".dataInstructor");
-        dataInstructor.classList.add("downTopAnimation")
-    }
-
-    if(window.scrollY > 1220) {
         const education = document.querySelector(".education");
         education.classList.add("downTopAnimation")
     }
 
-    if(window.scrollY > 1320) {
+    if(window.scrollY > 1220) {
         const containerContacts = document.querySelector(".containerContacts");
         containerContacts.classList.add("downTopAnimation")
     }
 
-    if(window.scrollY > 1600) {
+    if(window.scrollY > 1500) {
         const footer = document.querySelector("footer");
         footer.classList.add("pulsarAnimation")
     }

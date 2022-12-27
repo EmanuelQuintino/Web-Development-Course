@@ -18,8 +18,8 @@ window.addEventListener("scroll", () => {
     }
 
     if(window.scrollY > 920) {
-        const aside = document.querySelector("aside");
-        aside.classList.add("opacityAnimation")
+        const instructorPerfil = document.querySelector(".instructorPerfil");
+        instructorPerfil.classList.add("opacityAnimation")
     }
 
     if(window.scrollY > 1120) {

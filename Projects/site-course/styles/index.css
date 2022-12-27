@@ -74,6 +74,7 @@ h2 {
 .instructorPerfil {
     text-align: center;
     margin-top: 5.6rem;
+    opacity: 0;
 }
 
 #imageGithub {
@@ -89,10 +90,6 @@ h3 {
 
 aside section + section {
     margin-top: 2.0rem;
-}
-
-aside {
-    opacity: 0;
 }
 
 .containerContacts {

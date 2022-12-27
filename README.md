@@ -22,7 +22,7 @@ O curso de Desenvolvimento Web é o nosso programa piloto e faz parte do projeto
 </div>
 
 <section>
-    <ul class="containerTechnologies">
+    <ul style="display: flex; align-items: center; justify-content: space-around; gap: 8px">
       <li>
           <img alt="HTML" height="30" width="40"
           src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg">

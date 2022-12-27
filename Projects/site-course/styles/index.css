@@ -67,8 +67,8 @@ main p {
     text-align: justify;
 }
 
-h2 {
-    font-size: 2.0rem;
+aside section + section {
+    margin-top: 2.0rem;
 }
 
 .instructorPerfil {
@@ -77,19 +77,23 @@ h2 {
     opacity: 0;
 }
 
+h2 {
+    font-size: 2.0rem;
+}
+
 #imageGithub {
     width: 24.0rem;
     border-radius: 50%;
     margin: 3.2rem auto;
 }
 
+.education {
+    opacity: 0;
+}
+
 h3 {
     margin-top: 1.6rem;
     padding: .8rem;
-}
-
-aside section + section {
-    margin-top: 2.0rem;
 }
 
 .containerContacts {

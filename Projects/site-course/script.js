@@ -32,7 +32,7 @@ window.addEventListener("scroll", () => {
         containerContacts.classList.add("downTopAnimation")
     }
 
-    if(window.scrollY > 1500) {
+    if(window.scrollY > 1400) {
         const footer = document.querySelector("footer");
         footer.classList.add("pulsarAnimation")
     }

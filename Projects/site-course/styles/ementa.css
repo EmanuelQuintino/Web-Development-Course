@@ -11,6 +11,11 @@
     width: auto;
 }
 
+.pulsarAnimation {
+    animation: pulsarAnimation 1s;
+    animation-timing-function: ease-in-out;
+}
+
 .ementa section:first-child ul {
     list-style: none;
 
@@ -50,7 +55,42 @@
     top: .2rem;
 }
 
+.anotherSubjects {
+ opacity: 0;
+}
+
+.downTopAnimation {
+    animation: downTopAnimation 1s;
+    animation-fill-mode: forwards;
+}
+
 .containerAnotherSubjects {
     list-style: inside;
     margin: 1.6rem 0 4.8rem;
+}
+
+@keyframes pulsarAnimation {
+    0% {
+        scale: 1.0;
+    }
+
+    50% {
+        scale: 1.1;
+    }
+
+    100% {
+        scale: 1.0;
+    }
+}
+
+@keyframes downTopAnimation {
+    0% {
+        opacity: 0;
+        transform: translateY(115%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }

@@ -15,13 +15,6 @@
 }
 
 body {
-    /* background-image: url('../images/background-1.jpg');
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    backdrop-filter: brightness(40%); */
-
     height: 100%;
     color: white;
     background-color: #000219;
@@ -50,6 +43,12 @@ aside {
 header {
     padding-top: 5.6rem;
     text-align: center;
+
+    animation: topDownAnimation 2s;
+}
+
+#logoReprogramaJucas {
+    width: 100%;
 }
 
 h1 {
@@ -59,8 +58,8 @@ h1 {
     font-family: 'Chakra Petch', sans-serif;
 }
 
-#logoReprogramaJucas {
-    width: 100%;
+.topDownAnimation {
+    animation: topDownAnimation 2s;
 }
 
 main p {
@@ -90,6 +89,19 @@ h3 {
 
 aside section + section {
     margin-top: 2.0rem;
+}
+
+aside {
+    opacity: 0;
+}
+
+.education, .containerContacts {
+    opacity: 0;
+}
+
+.opacityAnimation {
+    animation: opacityAnimation 2s;
+    animation-fill-mode: forwards;
 }
 
 footer {
@@ -148,4 +160,26 @@ footer {
 
     object-fit: cover;
     object-position: center;
+}
+
+@keyframes topDownAnimation {
+    0% {
+        opacity: 0;
+        transform: translateY(-15%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes opacityAnimation {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }

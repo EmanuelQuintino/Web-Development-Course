@@ -1,3 +1,7 @@
+.projects {
+ opacity: 0;
+}
+
 .projects h2 {
     font-size: 2.0rem;
 }
@@ -15,13 +19,7 @@
 
 .projectsContainer::-webkit-scrollbar {
     display: none;
-    /* height: 5px; */
-    /* border: 1px solid rgba(0, 0, 0, 0.1); */
 }
-
-/* .container::-webkit-scrollbar-thumb {
-    background-color: rgba(0, 0, 0, 0.2);
-} */
 
 .projectBox {
     border: .1rem solid white;

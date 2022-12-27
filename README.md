@@ -21,6 +21,46 @@ O curso de Desenvolvimento Web é o nosso programa piloto e faz parte do projeto
   SQL
 </div>
 
+<section>
+    <ul class="containerTechnologies">
+      <li>
+          <img alt="HTML" height="30" width="40"
+          src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg">
+          <span>HTML</span>
+      </li>
+      <li>
+          <img alt="CSS" height="30" width="40"
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg">
+          <span>CSS</span>
+      </li>
+      <li>
+          <img alt="JavaScript" height="30" width="40"
+          src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg">
+          <span>JavaScript</span>
+      </li>
+      <li>
+          <img alt="React" height="30" width="40"
+          src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg">
+          <span>React</span>
+      </li>
+      <li>
+          <img alt="Node.JS" height="30" width="40"
+          src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" />
+          <span>Node.JS</span>
+      </li>
+      <li class="sqlConatiner">
+          <img id="iconSql" alt="MySQL" height="60" width="50"
+          src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original-wordmark.svg">
+          <span class="sqlName">SQL</span>
+      </li>
+      <li>
+          <img alt="Git" height="30" width="40"
+          src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" />
+          <span class="gitName">Git</span>
+      </li>
+  </ul>
+</section>
+
 ### Além de conteúdos complementares como:
 
 - Ética

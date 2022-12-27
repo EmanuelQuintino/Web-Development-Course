@@ -4,7 +4,6 @@ O curso de Desenvolvimento Web é o nosso programa piloto e faz parte do projeto
 
 ### Dentre as tecnologias abordadas temos:
 
-<div>
   <img align="center" alt="HTML" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg">
   HTML
   <img align="center" alt="CSS" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg">
@@ -19,7 +18,7 @@ O curso de Desenvolvimento Web é o nosso programa piloto e faz parte do projeto
   Git
   <img align="center" alt="MySQL" height="70" width="60" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original-wordmark.svg">
   SQL
-</div>
+
 
 ### Além de conteúdos complementares como:
 

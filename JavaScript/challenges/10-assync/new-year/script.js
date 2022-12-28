@@ -14,9 +14,10 @@ const countdown = setInterval(() => {
     const displayMinutes = document.querySelector('.minutes')
     const displaySeconds = document.querySelector('.seconds')
 
-    displayDays.innerHTML = String(days).padStart(3, 0)
-    displayHours.innerHTML = String(hours).padStart(2, 0)
-    displayMinutes.innerHTML = String(minutes).padStart(2, 0)
-    displaySeconds.innerHTML = String(seconds).padStart(2, 0)
+    const displayTime = (time, length) => String(time).padStart(length, 0)
+    displayDays.innerHTML = displayTime(days, 3) 
+    displayHours.innerHTML = displayTime(hours, 2) 
+    displayMinutes.innerHTML = displayTime(minutes, 2)  
+    displaySeconds.innerHTML = displayTime(seconds, 2)  
 }, 1000)
 

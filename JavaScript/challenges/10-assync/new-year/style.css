@@ -1,0 +1,72 @@
+:root {
+    font-size: 62.5%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.6rem;
+}
+
+body {
+    background: url('./images/new-year-background.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    height: 100vh;
+    width: 100%;
+
+    display: grid;
+    place-items: center;
+
+    color: white;
+}
+
+
+header h1, header span {
+    font-size: 4.8rem;
+    text-align: center;
+}
+
+.container {
+    margin-top: -28.0rem;
+    background: rgba(0, 0, 0, 0.9);
+    border-radius: .8rem;
+    
+    padding: 5.6rem;
+    
+    display: flex;
+    align-items: center;
+    gap: 1.6rem;
+}
+
+.box {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+
+    width: 12.0rem;
+}
+
+.boxDays {
+    width: 14.0rem;
+}
+
+.box div{
+    font-size: 4.8rem;
+    background: #2b0e2d;
+    border-radius: .8rem;
+
+    display: grid;
+    place-items: center;
+
+    padding: 2.4rem;
+}
+
+.box span {
+    font-size: 2.4rem;
+    margin-top: .8rem;
+}

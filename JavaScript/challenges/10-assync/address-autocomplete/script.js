@@ -13,7 +13,7 @@ cep.addEventListener('blur', (event) => {
         .then((request) => request.json())
         .then((data) => {
             logradouro.value = data.logradouro
-            number.focus()
+            // number.focus()
             complemento.value = data.complemento
             bairro.value = data.bairro
             localidade.value = data.localidade

@@ -20,4 +20,3 @@ const countdown = setInterval(() => {
     displayMinutes.innerHTML = displayTime(minutes, 2)  
     displaySeconds.innerHTML = displayTime(seconds, 2)  
 }, 1000)
-

@@ -1,6 +1,6 @@
 window.addEventListener("scroll", () => {
     console.log(window.scrollY);
-    if(window.scrollY > 150) {
+    if(window.scrollY > 100) {
         const containerTechnologies = document.querySelectorAll(".containerTechnologies li");
         containerTechnologies.forEach(element => {
             element.classList.add("pulsarAnimation")

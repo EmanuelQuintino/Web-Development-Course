@@ -1,3 +1,4 @@
+import { Card } from '../components/Card'
 import './App.css'
 
 export function App() {
@@ -12,6 +13,10 @@ export function App() {
           <button type='button'>Pesquisar</button>    
         </section>
       </header>
+      
+      <main>
+        <Card />
+      </main>
     </div>
   )
 }

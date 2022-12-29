@@ -7,8 +7,8 @@ export function App() {
         <section>
           <h1>Previsão do Tempo</h1>
         </section>
-        <section>
-          <input type="text" placeholder='Digite o nome da cidade'/>
+        <section className='search'>
+          <input type="text" placeholder='Nome da cidade'/>
           <button type='button'>Pesquisar</button>    
         </section>
       </header>

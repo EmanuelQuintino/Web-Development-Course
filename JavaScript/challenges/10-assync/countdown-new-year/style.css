@@ -70,3 +70,32 @@ header h1, header span {
     font-size: 2.4rem;
     margin-top: .8rem;
 }
+
+@media (max-width: 42.0rem) {
+    header h1, header span {
+        font-size: 3.2rem;
+    }
+    
+    .container {
+        padding: 2.4rem;        
+        gap: 1.2rem;
+    }
+    
+    .box {
+        width: 6.4rem;
+    }
+    
+    .boxDays {
+        width: 8.0rem;
+    }
+    
+    .box div{
+        font-size: 2.4rem;
+        padding: 1.2rem;
+    }
+    
+    .box span {
+        font-size: 1.4rem;
+        margin-top: .8rem;
+    }      
+}

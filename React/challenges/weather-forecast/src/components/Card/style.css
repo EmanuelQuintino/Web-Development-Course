@@ -1,0 +1,47 @@
+main {
+    max-width: 48.0rem;
+    margin: 0 auto;
+    padding: 0 2.4rem;
+}
+
+article {
+    border-radius: .8rem;
+    box-shadow: .05rem .05rem .2rem black;
+    padding: 1.6rem;
+}
+
+h2 {
+    font-size: 3.2rem;
+    line-height: 4.8rem;
+}
+
+section:nth-child(1) div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+section:nth-child(1) span {
+    color: gray;
+}
+
+.temperature {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 4.8rem 1.6rem;
+}
+
+.temperature p {
+    font-size: 8.8rem;
+}
+
+.daysForecast {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.windForecast {
+    color: gray;
+}

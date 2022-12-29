@@ -77,13 +77,13 @@
     }
 
     .numbersContainer {
-        gap: .6rem;
-        padding: 1.8rem 1.0rem;
+        gap: .4rem;
+        padding: 1.0rem;
     }
 
     .number {
-        height: 3.6rem;
-        width: 3.6rem;
+        height: 3.2rem;
+        width: 3.2rem;
 
         border: .13rem solid #252525;
 

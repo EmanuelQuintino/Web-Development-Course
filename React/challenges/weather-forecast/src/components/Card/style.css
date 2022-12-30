@@ -1,10 +1,5 @@
-main {
-    max-width: 48.0rem;
-    margin: 2.4rem auto;
-    padding: 0 2.4rem;
-}
-
 article {
+    width: 32.0rem;
     border: .1rem solid gray;
     border-radius: .8rem;
     padding: 1.6rem;

@@ -5,7 +5,7 @@
 }
 
 header {
-    padding: 2.4rem 0;
+    padding: 2.4rem 1.6rem;
 }
 
 h1 {
@@ -20,23 +20,21 @@ h1 {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: .4rem;
-
     margin-top: 2.4rem;
+}
+
+section input {
+    width: 23.0rem;
+    font-size: 1.6rem;
+    padding: .8rem;
+    border: none;
+    border-radius: .4rem;
 }
 
 .inputContainer label {
     position: relative;
     inset: .25rem 0 0 -2.8rem;
     color: gray;
-}
-
-section input {
-    width: 24.0rem;
-    font-size: 1.6rem;
-    padding: .8rem;
-    border: none;
-    border-radius: .4rem;
 }
 
 section button {
@@ -46,9 +44,32 @@ section button {
     border-radius: .4rem;
     background: rgb(80, 80, 240);
     color: white;
+    margin-left: -0.8rem;
 }
 
 section button:hover {
     cursor: pointer;
     background: rgb(64, 64, 219);
+}
+
+main {
+    display: grid;
+    place-items: center;
+    
+    max-width: 48.0rem;
+    height: 50%;
+    margin: 2.4rem auto;
+    padding: 0 2.4rem;
+}
+
+.spinnerLoading {
+    font-size: 3.6rem;
+    color: gray;
+    animation: spinnerRotate 1s infinite linear;
+}
+
+@keyframes spinnerRotate {
+    to {
+        transform: rotate(360deg);
+    }
 }

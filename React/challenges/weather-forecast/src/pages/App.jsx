@@ -1,13 +1,15 @@
-import { GoSearch } from 'react-icons/go'
 import { useEffect } from 'react'
 import { useState } from 'react'
 import { Card } from '../components/Card'
+import { GoSearch } from 'react-icons/go'
+import { ImSpinner2 } from 'react-icons/im'
 import './App.css'
 
 export function App() {
-  const [searchCity, setSearchCity] = useState('Jucás')
+  const [searchCity, setSearchCity] = useState('')
   const [cityName, setCityName] = useState('')
   const [cityWeather, setCityWeather] = useState('')
+  const [isLoading, setIsLoading] = useState()
   
   function formSubmit(event) {
     event.preventDefault()
@@ -15,11 +17,21 @@ export function App() {
   }
   
   useEffect(() => {
-    fetch(`https://goweather.herokuapp.com/weather/${searchCity}`)
-      .then(request => request.json())
-      .then(data => setCityWeather(data))  
-  
-    setCityName(searchCity) 
+    async function searchCityAPI() {
+      cityName ? setIsLoading(true): setIsLoading(false)
+      try {
+        const request = await fetch(`https://goweather.herokuapp.com/weather/${searchCity}`)
+        const data = await request.json()
+        setCityWeather(data)
+      } catch (error) {
+        console.log(error);
+      } finally {
+        setIsLoading(false)
+      } 
+      setCityName(searchCity) 
+    }
+
+    searchCityAPI()
   }, [cityName])
 
   return (
@@ -49,9 +61,14 @@ export function App() {
       </header>
       
       <main>
-        {cityName && cityWeather && (
-          <Card cityName={cityName} weather={cityWeather}/>
-        )}
+        {
+          isLoading ? 
+          <ImSpinner2 className='spinnerLoading'/> : 
+          cityName && cityWeather && (
+            <Card cityName={cityName} weather={cityWeather}/>
+          )
+        }
+  
       </main>
     </div>
   )

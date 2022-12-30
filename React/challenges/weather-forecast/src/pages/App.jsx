@@ -1,3 +1,4 @@
+import { GoSearch } from 'react-icons/go'
 import { useEffect } from 'react'
 import { useState } from 'react'
 import { Card } from '../components/Card'
@@ -19,7 +20,6 @@ export function App() {
       .then(data => setCityWeather(data))  
   
     setCityName(searchCity) 
-    console.log('Effect');
   }, [cityName])
 
   return (
@@ -31,12 +31,18 @@ export function App() {
 
         <section className='search'>
           <form action="" onSubmit={formSubmit}>
-            <input 
-              type="text" 
-              placeholder='Nome da cidade'
-              value={searchCity}
-              onChange={event => setSearchCity(event.target.value)}
-            />
+            <div className='inputContainer'>
+              <input 
+                id='searchCity'
+                type="text" 
+                placeholder='Nome da cidade'
+                value={searchCity}
+                onChange={event => setSearchCity(event.target.value)}
+                />
+                <label htmlFor="searchCity">
+                  <GoSearch/>
+                </label>
+            </div>
             <button type='submit'>Pesquisar</button>
           </form>    
         </section>

@@ -5,8 +5,8 @@ main {
 }
 
 article {
+    border: .1rem solid gray;
     border-radius: .8rem;
-    box-shadow: .05rem .05rem .2rem black;
     padding: 1.6rem;
 }
 
@@ -28,18 +28,30 @@ section:nth-child(1) span {
 .temperature {
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
     padding: 4.8rem 0rem;
+
+    font-size: 5.2rem;
 }
 
 .temperature p {
-    font-size: 6.4rem;
+    font-size: 7.2rem;
 }
 
 .daysForecast {
     display: flex;
     align-items: center;
     justify-content: space-around;
+}
+
+.dayForecast div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.dayForecast h3 {
+    text-align: center;
 }
 
 .windForecast {

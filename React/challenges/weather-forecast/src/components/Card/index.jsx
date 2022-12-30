@@ -1,3 +1,7 @@
+import { BsThermometerHigh } from "react-icons/bs"
+import { TbWindsock } from "react-icons/tb"
+
+import {v4 as uuid } from "uuid"
 import "./style.css"
 
 export function Card({cityName, weather}) {
@@ -9,7 +13,7 @@ export function Card({cityName, weather}) {
         "Sunny": "Ensolarado",          
         "Patchy rain possible": "Possibilidade de chuva irregular",          
     }
-    weather.description
+
     return (
         <article>
             <section>
@@ -22,12 +26,15 @@ export function Card({cityName, weather}) {
                             weather.description
                         } 
                     </p>
-                    <span>{weather.wind}</span>
+                    <span>
+                        {weather.wind}
+                        <TbWindsock/>
+                    </span>
                 </div>
             </section>
             <section className="temperature">
-                <img src="" alt="imagem" />
-                <p>{weather.temperature}</p>
+                <p>{weather.temperature.replace(' ', '')}</p>
+                <BsThermometerHigh/>
             </section>
             <section className="daysForecast">
                 {
@@ -35,15 +42,15 @@ export function Card({cityName, weather}) {
                         const weekDayForecast = new Date().setDate(new Date().getDate() + index + 1)
                         const weekDayFormat = Intl.DateTimeFormat('pt-BR', {weekday: 'short'}).format(weekDayForecast)
                         return (
-                            <div className="dayForecast">
+                            <div className="dayForecast" key={uuid()}>
                             <h3>{weekDayFormat}</h3>
                             <div className="temperatureForecast">
-                                <img src="" alt="image"/>
-                                {forecast.temperature}
+                                {forecast.temperature.replace(' ', '')}
+                                <BsThermometerHigh/>
                             </div>
                             <div className="windForecast">
-                                <img src="" alt="image"/>
-                                {forecast.wind}
+                                {forecast.wind.replace(' ', '')}
+                                <TbWindsock/>
                             </div>
                         </div>
                         )

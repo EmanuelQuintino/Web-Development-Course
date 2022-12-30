@@ -9,13 +9,17 @@ export function App() {
           <h1>Previsão do Tempo</h1>
         </section>
         <section className='search'>
-          <input type="text" placeholder='Nome da cidade'/>
+          <input 
+            type="text" 
+            placeholder='Nome da cidade'
+            onChange={event => console.log(event.target.value)}
+          />
           <button type='button'>Pesquisar</button>    
         </section>
       </header>
       
       <main>
-        <Card />
+        <Card city="Jucás" degree = "28°"/>
       </main>
     </div>
   )

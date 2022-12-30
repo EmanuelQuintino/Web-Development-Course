@@ -1,10 +1,10 @@
 import "./style.css"
 
-export function Card() {
+export function Card({city, degree}) {
     return (
         <article>
             <section>
-                <h2>Jucás</h2>
+                <h2>{city}</h2>
                 <div>
                     <p>Parcialmente nublado</p>
                     <span>Vento 10km/h</span>
@@ -12,7 +12,7 @@ export function Card() {
             </section>
             <section className="temperature">
                 <img src="" alt="imagem" />
-                <p>23°</p>
+                <p>{degree}</p>
             </section>
             <section className="daysForecast">
                 <div className="dayForecast">

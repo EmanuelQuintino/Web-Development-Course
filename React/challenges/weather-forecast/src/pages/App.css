@@ -16,7 +16,7 @@ h1 {
     text-shadow: .05rem .05rem .2rem black;
 }
 
-.search {
+.search form {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -26,6 +26,7 @@ h1 {
 }
 
 section input {
+    width: 24.0rem;
     font-size: 1.6rem;
     padding: .8rem;
     border: none;

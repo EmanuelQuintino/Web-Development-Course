@@ -1,53 +1,54 @@
 import "./style.css"
 
-export function Card({city, degree}) {
+export function Card({cityName, weather}) {
+    const translateWeatherDescription = {
+        "Partly cloudy": "Parcialmente nublado",          
+        "Clear": "Tempo limpo",          
+        "Light snow": "Neve leve",          
+        "Rain with thunderstorm": "Chuva com trovoada",          
+        "Sunny": "Ensolarado",          
+        "Patchy rain possible": "Possibilidade de chuva irregular",          
+    }
+    weather.description
     return (
         <article>
             <section>
-                <h2>{city}</h2>
+                <h2>{cityName}</h2>
                 <div>
-                    <p>Parcialmente nublado</p>
-                    <span>Vento 10km/h</span>
+                    <p>
+                        {
+                            translateWeatherDescription[weather.description] ? 
+                            translateWeatherDescription[weather.description] :
+                            weather.description
+                        } 
+                    </p>
+                    <span>{weather.wind}</span>
                 </div>
             </section>
             <section className="temperature">
                 <img src="" alt="imagem" />
-                <p>{degree}</p>
+                <p>{weather.temperature}</p>
             </section>
             <section className="daysForecast">
-                <div className="dayForecast">
-                    <h3>Segunda</h3>
-                    <div className="temperatureForecast">
-                        <img src="" alt="image"/>
-                        25°
-                    </div>
-                    <div className="windForecast">
-                        <img src="" alt="image"/>
-                        12km/h
-                    </div>
-                </div>
-                <div className="dayForecast">
-                    <h3>Segunda</h3>
-                    <div className="temperatureForecast">
-                        <img src="" alt="image"/>
-                        25°
-                    </div>
-                    <div className="windForecast">
-                        <img src="" alt="image"/>
-                        12km/h
-                    </div>
-                </div>
-                <div className="dayForecast">
-                    <h3>Segunda</h3>
-                    <div className="temperatureForecast">
-                        <img src="" alt="image"/>
-                        25°
-                    </div>
-                    <div className="windForecast">
-                        <img src="" alt="image"/>
-                        12km/h
-                    </div>
-                </div>
+                {
+                    weather.forecast.map((forecast, index) => {
+                        const weekDayForecast = new Date().setDate(new Date().getDate() + index + 1)
+                        const weekDayFormat = Intl.DateTimeFormat('pt-BR', {weekday: 'short'}).format(weekDayForecast)
+                        return (
+                            <div className="dayForecast">
+                            <h3>{weekDayFormat}</h3>
+                            <div className="temperatureForecast">
+                                <img src="" alt="image"/>
+                                {forecast.temperature}
+                            </div>
+                            <div className="windForecast">
+                                <img src="" alt="image"/>
+                                {forecast.wind}
+                            </div>
+                        </div>
+                        )
+                    })
+                }
             </section>
         </article>
     )

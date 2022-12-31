@@ -50,6 +50,7 @@ section:nth-child(1) span {
 
 .dayForecast h3 {
     text-align: center;
+    text-transform: capitalize;
 }
 
 .windForecast {

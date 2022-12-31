@@ -1,8 +1,9 @@
 article {
     width: 32.0rem;
-    border: .1rem solid gray;
     border-radius: .8rem;
     padding: 1.6rem;
+
+    color: white;
 }
 
 h2 {
@@ -25,7 +26,9 @@ section:nth-child(1) span {
     align-items: center;
     justify-content: center;
     padding: 4.8rem 0rem;
+}
 
+.temperature .thermometerIcon {
     font-size: 5.2rem;
 }
 

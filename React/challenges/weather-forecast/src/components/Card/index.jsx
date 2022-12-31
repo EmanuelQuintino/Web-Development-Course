@@ -34,7 +34,7 @@ export function Card({cityName, weather}) {
             </section>
             <section className="temperature">
                 <p>{weather.temperature.replace(' ', '')}</p>
-                <BsThermometerHigh/>
+                <BsThermometerHigh className="thermometerIcon"/>
             </section>
             <section className="daysForecast">
                 {

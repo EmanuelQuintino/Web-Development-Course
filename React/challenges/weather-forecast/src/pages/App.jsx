@@ -45,6 +45,7 @@ export function App() {
         <section className='search'>
           <form action="" onSubmit={formSubmit}>
             <div className='inputContainer'>
+              <label htmlFor="searchCity">Pesquisar cidade</label>
               <input 
                 id='searchCity'
                 type="text" 
@@ -52,11 +53,10 @@ export function App() {
                 value={searchCity}
                 onChange={event => setSearchCity(event.target.value)}
                 />
-                <label htmlFor="searchCity">
-                  <GoSearch/>
-                </label>
             </div>
-            <button type='submit'>Pesquisar</button>
+            <button type='submit'>
+                  <GoSearch/>
+            </button>
           </form>    
         </section>
       </header>

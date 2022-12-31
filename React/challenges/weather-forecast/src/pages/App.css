@@ -1,7 +1,7 @@
 .container {
     height: 100vh;
     width: 100%;
-    background: linear-gradient(#87ceeb, #e0f6ff);
+    background: black;
 }
 
 header {
@@ -20,6 +20,7 @@ h1 {
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: .4rem;
     margin-top: 2.4rem;
 }
 
@@ -32,19 +33,17 @@ section input {
 }
 
 .inputContainer label {
-    position: relative;
-    inset: .25rem 0 0 -2.8rem;
-    color: gray;
+    position: absolute;
+    color: transparent;
 }
 
 section button {
     font-size: 1.6rem;
-    padding: .8rem;
+    padding: .8rem 1.2rem;
     border: none;
     border-radius: .4rem;
     background: rgb(80, 80, 240);
     color: white;
-    margin-left: -0.8rem;
 }
 
 section button:hover {

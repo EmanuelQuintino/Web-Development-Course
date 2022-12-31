@@ -20,6 +20,7 @@ export function App() {
     async function searchCityAPI() {
       cityName ? setIsLoading(true): setIsLoading(false)
       try {
+        // https://api.weatherapi.com/v1/forecast.json?key=fb85b303e1fe4286a2b15407223112&q=Jucas&days=3
         const request = await fetch(`https://goweather.herokuapp.com/weather/${searchCity}`)
         const data = await request.json()
         setCityWeather(data)

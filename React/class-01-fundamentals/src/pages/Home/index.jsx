@@ -3,34 +3,48 @@ import "./style.css"
 
 export function Home() {
   const [num, setNum] = useState(1)
+  const [name, setName] = useState('Emanuel')
   // let num = 1
+  const array = ['A', 'B', 'C']
+
+  function arrayList() {
+    return array.map((item, index) => <li key={index}>{item}</li>)    
+  }
+
   function increment() {
+    array.push(num)
     setNum(num + 1)
     // num += 1
     console.log(num);
+    console.log(array);
   }
+
   return (
     <React.Fragment>
       <header>
         <h1>Class React Fundamentals</h1>
       </header>
 
+      <ul>{arrayList()}</ul>
+
       <main>
         <article>
           <section>
             <h2>Paragraph {num}</h2>
             <button onClick={increment}>Increment</button>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, quis quod reiciendis sequi quasi ratione fuga tempora nostrum quisquam ipsum quibusdam asperiores! Neque aliquam adipisci necessitatibus blanditiis esse eum nulla.
-            </p>
           </section>
 
           <section>
-            <h2>Paragraph 2</h2>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, quis quod reiciendis sequi quasi ratione fuga tempora nostrum quisquam ipsum quibusdam asperiores! Neque aliquam adipisci necessitatibus blanditiis esse eum nulla.
-            </p>
+            <form action="">
+              <label htmlFor="name">Nome </label>
+              <input 
+                type="text" 
+                id="name" 
+                onChange={(event) => setName(event.target.value)}/>
+            </form>
+            <p>{name}</p>
           </section>
+
         </article>
       </main>
 

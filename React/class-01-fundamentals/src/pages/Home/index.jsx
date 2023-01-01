@@ -12,11 +12,9 @@ export function Home() {
   }
 
   function increment() {
-    array.push(num)
     setNum(num + 1)
     // num += 1
     console.log(num);
-    console.log(array);
   }
 
   return (

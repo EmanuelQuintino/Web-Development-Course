@@ -33,7 +33,9 @@ window.addEventListener("scroll", () => {
     }
 
     if(window.scrollY > 1320) {
-        const footer = document.querySelector("footer");
-        footer.classList.add("pulsarAnimation")
+        const footerLogo = document.querySelectorAll("footer h3, .logoContainer img");
+        footerLogo.forEach((value) => {
+            value.classList.add("pulsarAnimation")
+        })
     }
 });

@@ -111,6 +111,11 @@ footer {
     padding: 3.2rem 0rem;
 }
 
+footer h3 {
+    width: 50%;
+    margin: 0 auto;
+}
+
 .logoContainer {
     margin-top: 1.6rem;
     display: flex;

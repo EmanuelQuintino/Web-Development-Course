@@ -12,3 +12,15 @@ body, input, button {
     font-size: 1.6rem;
     font-family: Arial, Helvetica, sans-serif;
 }
+
+body {
+    background: #333;
+    color: white;
+}
+
+.container {
+padding: 1.6rem;
+max-width: 48.0rem;
+margin: 0 auto;
+}
+  

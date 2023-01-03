@@ -9,7 +9,7 @@ export function Home() {
             <section>
               <h1>Class React Base JSX</h1>
               <h2>Uma biblioteca JavaScript para criar interfaces de usuário</h2>
-              <img src={IconReact} alt="" />
+              <img src={IconReact} alt="" className="iconReact"/>
             </section>
             <section>
               <h3>Declarativo</h3>

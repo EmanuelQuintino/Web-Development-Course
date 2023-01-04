@@ -11,15 +11,21 @@
 body, input, button {
     font-size: 1.6rem;
     font-family: Arial, Helvetica, sans-serif;
+    color: white;
 }
 
 body {
     background: #333;
-    color: white;
+    overflow: auto;
 }
 
 .container {
-padding: 1.6rem;
-max-width: 48.0rem;
-margin: 0 auto;
+    padding: 1.6rem;
+    max-width: 48.0rem;
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+    color: white;
 }

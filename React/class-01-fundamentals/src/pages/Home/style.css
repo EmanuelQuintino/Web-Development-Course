@@ -21,6 +21,11 @@ main h2 {
     line-height: 3.2rem;
 }
 
+main img {
+    width: 100%;
+    margin: 0 auto .4rem;
+}
+
 footer {
     margin-top: 3.2rem;
 }

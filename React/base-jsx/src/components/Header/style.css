@@ -1,14 +1,14 @@
 ul {
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: end;
     gap: .4rem;
     padding: 3.2rem;
 }
 
 li {
     list-style: none;
-    padding: .4rem;
+    padding: .8rem;
 }
 
 .select {
@@ -17,6 +17,6 @@ li {
 
 li:hover {
     cursor: pointer;
-    background: #adc5c933;
+    background: #adc5c911;
     border-radius: .4rem;
 }

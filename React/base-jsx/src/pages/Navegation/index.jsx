@@ -1,6 +1,6 @@
 import "./style.css"
 
-export function Router() {
+export function Navegation() {
     return (
         <div className="container">
             <h1>Class Routers</h1>

@@ -5,8 +5,8 @@ export function Header() {
         <header>
             <nav>
                 <ul>
-                    <li className="select">Home</li>
-                    <li>Router</li>
+                    <li className="select"><a>Home</a></li>
+                    <li><a>Navegação</a></li>
                 </ul>
             </nav>
         </header>

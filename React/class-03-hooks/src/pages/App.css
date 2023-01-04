@@ -1,0 +1,14 @@
+.container {
+  max-width: 48.8rem;
+  margin: 0 auto;
+  padding: .8rem;
+}
+
+h1 {
+  margin-top: 3.2rem;
+  text-align: center;
+}
+
+p {
+  margin-top: 2.4rem;
+}

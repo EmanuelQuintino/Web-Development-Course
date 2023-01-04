@@ -1,0 +1,9 @@
+.cardContainer {
+    border: solid 1px black;
+    width: 48.0rem;
+    margin: 2.4rem auto;
+}
+
+.cardContainer img {
+    width: 100%;
+}

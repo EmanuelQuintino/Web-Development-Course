@@ -217,7 +217,7 @@ buttonBingo.addEventListener('click', (event) => {
 
     let numDrawn = numberDrawn();
     if (numDrawn) {
-        // checkCards()
+        checkCards()
         updateDisplay()
     } else {
         alert('Bingo encerrado!')
@@ -277,7 +277,7 @@ inputAmountCards.addEventListener("keypress", (event) => {
 const inputColors = document.querySelector("#inputColors")
 inputColors.addEventListener('change', () => {
     let bingoContainer = document.querySelector('.bingoContainer')
-    bingoContainer.style.background = inputColors.value
+    // bingoContainer.style.background = inputColors.value
 
     const soundsChange = new Audio('./sounds/click-3.mp3')
     soundsChange.play()

@@ -17,7 +17,7 @@ window.addEventListener("scroll", () => {
         projects.classList.add("downTopAnimation")
     }
 
-    if(window.scrollY > 920) {
+    if(window.scrollY > 720) {
         const instructorPerfil = document.querySelector(".instructorPerfil");
         instructorPerfil.classList.add("opacityAnimation")
     }

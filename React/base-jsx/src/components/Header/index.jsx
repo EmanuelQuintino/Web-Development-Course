@@ -6,7 +6,7 @@ export function Header() {
         <header>
             <nav>
                 <ul>
-                    <li><Link to={'/'}>Home</Link></li>
+                    <li><Link to={'/'} className='select'>Home</Link></li>
                     <li><Link to={'/navegation'}>Navegação</Link></li>     
                 </ul>
             </nav>

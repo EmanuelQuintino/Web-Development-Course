@@ -25,7 +25,7 @@ function newBingo() {
 
     // console.log(bingoData);
 
-    if (totalNumbers < 4 || totalNumbers > 75 || sizeCard < 1 || sizeCard > 25 || totalCards < 2 || totalCards > 99) {
+    if (totalNumbers < 40 || totalNumbers > 75 || sizeCard < 15 || sizeCard > 25 || totalCards < 2 || totalCards > 99) {
         window.alert(`Por favor, preencha os valores no intervalo indicado.`)
     } else if (totalNumbers < sizeCard) {
         alert('Atenção, a quantidade de números do Bingo tem que ser maior que o tamanho da cartela!')
@@ -207,7 +207,7 @@ function checkCards() {
     }
 }
 
-// Bingo Button
+// Buttons
 const buttonBingo = document.querySelector('.buttonBingo')
 buttonBingo.addEventListener('click', (event) => {
     event.preventDefault()
@@ -217,7 +217,7 @@ buttonBingo.addEventListener('click', (event) => {
 
     let numDrawn = numberDrawn();
     if (numDrawn) {
-        checkCards()
+        // checkCards()
         updateDisplay()
     } else {
         alert('Bingo encerrado!')
@@ -283,7 +283,7 @@ inputColors.addEventListener('change', () => {
     soundsChange.play()
 })
 
-// New Bingo Button
+// New Bingo
 const newBingoButton = document.querySelector('.newBingoButton')
 newBingoButton.addEventListener('click', (event) => {
     event.preventDefault()
@@ -295,6 +295,7 @@ let bingoDataLocal = localStorage.getItem('bingoData')
 let bingoData = JSON.parse(bingoDataLocal)
 if (bingoData) {
     updateDisplay()
+    console.log(bingoData);
 } else {
     newBingo()
     // openConfig()

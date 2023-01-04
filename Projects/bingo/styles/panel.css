@@ -1,7 +1,7 @@
 .bingoPenal {
     height: calc(100vh - 3.2rem);
     background: rgba(0, 0, 0, 0.3);
-    padding: .8rem 1.6rem;
+    padding: 1.6rem;
 
     color: white;
     font-weight: 600;
@@ -83,19 +83,18 @@
     display: grid;
     place-items: center;
 
-    margin-top: 1.6rem;
+    margin: 2.8rem 0;
     padding: .8rem;
     border-radius: .8rem;
     background: rgba(255, 255, 0, 0.3);
 }
 
 .buttonBingoContainer {
-    margin-top: 1.6rem;
+    margin-top: 3.2rem;
 }
 
 .buttonBingo {
     width: 100%;
-
     padding: 2.4rem;
 
     border: none;
@@ -156,6 +155,7 @@
 @media (max-width: 480px) {
     .bingoPenal {
         height: 100%;
+        padding: .8rem 1.6rem;
     }
 
     .blockArmedCards h2,
@@ -182,7 +182,7 @@
     }
 
     .lastNumbersContainer {
-        margin-top: 2.0rem;
+        margin-top: -0.8rem;
     }
 
     .lastNumbersContainer h2 {

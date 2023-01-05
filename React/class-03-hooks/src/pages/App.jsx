@@ -1,15 +1,48 @@
-import { useState } from 'react'
 import './App.css'
+import { useState } from 'react'
 
 export function App() {
-  const [count, setCount] = useState(0)
+  const [name, setName] = useState('Emanuel');
+  const [auxName, setAuxName] = useState('');
+  const [count, setCount] = useState(0);
+  // console.log(name);
+  // let count = 0
+
+  function changeCount() {
+    // setCount(count + 1)
+    // setCount(count + 1)
+    
+    // Previous Value
+    setCount(prevCount => prevCount + 1)
+    setCount(prevCount => prevCount + 1)
+  }
+
+  function changeName(event) {
+    event.preventDefault();
+    setAuxName(name)
+  }
 
   return (
     <div className='container'>
       <h1>Class Hooks</h1>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, eos at! Commodi, laborum ratione voluptatibus dignissimos consequuntur nulla aliquid error, in assumenda, incidunt perferendis delectus vel magni magnam provident ad!
-      </p>
+      <section>
+        <p>Nome: {name}</p>
+        <p>Nome: {auxName}</p>
+        <p>Count: {count}</p>
+      
+        <button onClick={() => {
+          setCount(count - 1)
+          // console.log(count);
+        }}>&lt;Rem</button>
+      
+        <button onClick={changeCount}>Add&gt;</button>
+      </section>
+
+      <form action="">
+        <input type="text" onChange={event => setName(event.target.value)} />
+        <button onClick={changeName}>Enviar</button>
+      </form>
+     
     </div>
   )
 }    

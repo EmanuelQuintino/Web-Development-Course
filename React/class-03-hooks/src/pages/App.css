@@ -2,6 +2,8 @@
   max-width: 48.8rem;
   margin: 0 auto;
   padding: .8rem;
+
+  text-align: center;
 }
 
 h1 {
@@ -11,4 +13,13 @@ h1 {
 
 p {
   margin-top: 2.4rem;
+}
+
+button {
+  padding: 0 .4rem;
+  margin-top: .8rem;
+}
+
+form {
+  margin-top: 1.6rem;
 }

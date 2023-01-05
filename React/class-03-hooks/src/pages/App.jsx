@@ -26,9 +26,9 @@ export function App() {
   useEffect(() => {
     if (auxName) {
       fetch(`https://api.github.com/users/${auxName}`)
-      .then(response => response.json())
-      .then(data => setDataUser(data))
-      // .then(data => console.log(data))
+        .then(response => response.json())
+        .then(data => setDataUser(data))
+        .catch(error => console.log(error))
     }
   }, [auxName])
 

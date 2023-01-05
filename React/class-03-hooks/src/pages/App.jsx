@@ -24,10 +24,12 @@ export function App() {
   }
 
   useEffect(() => {
-    fetch(`https://api.github.com/users/${auxName}`)
+    if (auxName) {
+      fetch(`https://api.github.com/users/${auxName}`)
       .then(response => response.json())
       .then(data => setDataUser(data))
       // .then(data => console.log(data))
+    }
   }, [auxName])
 
   return (
@@ -51,12 +53,14 @@ export function App() {
         <button onClick={changeName}>Enviar</button>
       </form>
 
-      <section>
-        <h2>{dataUser.name}</h2>
-        <img src={dataUser.avatar_url} alt="" />
-        <p>{dataUser.bio}</p>
-      </section>
-  
+      {dataUser && (
+          <section>
+            <h2>{dataUser.name}</h2>
+            <img src={dataUser.avatar_url} alt="" />
+            <p>{dataUser.bio}</p>
+          </section>
+        )
+      }
     </div>
   )
 }    

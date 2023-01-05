@@ -1,6 +1,6 @@
 window.addEventListener("scroll", () => {
     console.log(window.scrollY);
-    if(window.scrollY > 100) {
+    if(window.scrollY > 50) {
         const containerTechnologies = document.querySelectorAll(".containerTechnologies li");
         containerTechnologies.forEach(element => {
             element.classList.add("pulsarAnimation")
@@ -12,7 +12,7 @@ window.addEventListener("scroll", () => {
             anotherSubjects.classList.add("downTopAnimation")
     }
 
-    if(window.scrollY > 440) {
+    if(window.scrollY > 340) {
         const projects = document.querySelector(".projects");
         projects.classList.add("downTopAnimation")
     }

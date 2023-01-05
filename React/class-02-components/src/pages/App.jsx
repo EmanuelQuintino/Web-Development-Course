@@ -6,8 +6,7 @@ export function App() {
     <div>
       <h1>Class Components</h1>
       <CardProfile login='EmanuelQuintino' name={'Emanuel Quintino'} age={30}/>
-      <CardProfile login='Mario13Sergio' name='Mario Sergio' age={15}/>
-      <CardProfile login='Italo-Morais' name='Italo Morais' age={20}/>
+      <CardProfile login='SamilaLucas1' name={'Samila Lucas'} age={18}/>
     </div>
   )
 }

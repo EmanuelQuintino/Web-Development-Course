@@ -23,3 +23,11 @@ button {
 form {
   margin-top: 1.6rem;
 }
+
+h2 {
+  font-size: 2.4rem;
+  margin: 2.4rem 0;
+}
+img {
+  width: 16.0rem;
+}

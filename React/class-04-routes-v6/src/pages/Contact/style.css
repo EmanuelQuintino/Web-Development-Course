@@ -15,13 +15,30 @@ label {
     display: block;
 }
 
-input {
+section input {
     width: 100%;
     padding: .4rem;
+    color: black;
 } 
 
-textarea {
+section textarea {
+    color: black;
     width: 100%;
     padding: .4rem;
     resize: none;
+}
+
+form button {
+    width: 100%;
+    padding: .4rem;
+    margin-top: 1.6rem;
+    border-radius: .4rem;
+    border: none;
+    background: #00c4e7;
+    font-weight: 600;
+}
+
+form button:hover {
+    cursor: pointer;
+    background: #07b5d3;
 }

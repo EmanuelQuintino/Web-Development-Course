@@ -24,6 +24,11 @@ export function Contact() {
                             <label htmlFor="">Observações:</label>
                             <textarea name="" id="" cols="30" rows="10" placeholder="Suas observações"></textarea>
                         </section>
+
+                        <button onClick={(event) => {
+                            event.preventDefault()
+                            alert('Formulário enviado com sucesso!')
+                        }}>Enviar</button>
                     </form>
 
                 </article>

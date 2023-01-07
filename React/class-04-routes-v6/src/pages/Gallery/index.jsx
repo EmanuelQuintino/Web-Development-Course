@@ -1,12 +1,12 @@
 import "./style.css"
 
-export function Navegation() {
+export function Gallery() {
     return (
         <div className="container">
             <main>
                 <article>
                     <section>
-                        <h1>Class Routers</h1>
+                        <h1>Galeria</h1>
                     </section>
                     <section>
                         <p>

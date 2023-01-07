@@ -1,0 +1,27 @@
+h1 {
+    text-align: center;
+}
+
+form {
+    max-width: 32.0rem;
+    margin: 0 auto;
+}
+
+main section {
+    margin-top: 1.6rem;
+}
+
+label {
+    display: block;
+}
+
+input {
+    width: 100%;
+    padding: .4rem;
+} 
+
+textarea {
+    width: 100%;
+    padding: .4rem;
+    resize: none;
+}

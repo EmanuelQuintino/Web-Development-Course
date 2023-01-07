@@ -1,12 +1,14 @@
 import { Routes, Route } from "react-router-dom";
 import { Home } from '../pages/Home'
-import { Navegation } from '../pages/Navegation'
+import { Gallery } from '../pages/Gallery'
+import { Contact } from '../pages/Contact'
 
 export function AppRoutes() {
     return(
           <Routes>
             <Route path='/' element={<Home />}/>
-            <Route path='/navegation' element={<Navegation />}/>
+            <Route path='/gallery' element={<Gallery />}/>
+            <Route path='/contact' element={<Contact />}/>
           </Routes>
     )
 }

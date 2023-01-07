@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom"
+import { Link, NavLink } from "react-router-dom"
 import "./style.css"
 
 export function Header() {
@@ -6,8 +6,9 @@ export function Header() {
         <header>
             <nav>
                 <ul>
-                    <li><Link to={'/'} className='select'>Home</Link></li>
-                    <li><Link to={'/navegation'}>Navegação</Link></li>     
+                    <li><NavLink to="/" className={({isActive}) => isActive ? 'select' : ''}>Home</NavLink></li>
+                    <li><NavLink to="/gallery" className={({isActive}) => isActive ? 'select' : ''}>Galeria</NavLink></li>
+                    <li><NavLink to="/contact" className={({isActive}) => isActive ? 'select' : ''}>Contato</NavLink></li>
                 </ul>
             </nav>
         </header>

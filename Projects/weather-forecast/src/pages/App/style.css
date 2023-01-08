@@ -1,0 +1,47 @@
+h1 {
+    text-align: center;
+    margin-top: 2.4rem;
+}
+
+form {
+    margin-top: 1.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .4rem;
+}
+
+main {
+    padding: 3.2rem 2.4rem;
+}
+
+.blockCurrentTime {
+    margin-top: 1.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.6rem;
+}
+
+.blockDegree {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.degreeCurrent {
+    font-size: 6.4rem;
+    padding: .8rem;
+}
+
+.degreeCurrent + p {
+    display: flex;
+    flex-direction: column;
+    border-left: 2px solid gray;
+
+    padding: .8rem;
+}
+
+.degreeCurrent + p span:nth-child(2) {
+    color: gray;
+}

@@ -54,27 +54,8 @@ main {
     display: flex;
     align-items: center;
     justify-content: space-around;
-}
 
-.weatherCondition {
-    margin-top: 2.0rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 9.2rem;
-    height: 9.2rem;
-    background: rgba(128, 128, 128, 0.5);
-    border-radius: 50%;
-}
-
-.weatherCondition p {
-    font-weight: 600;
-}
-
-.weatherCondition h4 {
-    font-size: 1.6rem;
-    font-weight: 400;
+    padding: 2.4rem 0;
 }
 
 .containerWeatherForecast {
@@ -85,7 +66,6 @@ main {
 }
 
 .blockWeatherForecast {
-    margin-top: 2.0rem;
     display: flex;
     flex-direction: column;
     align-items: center;

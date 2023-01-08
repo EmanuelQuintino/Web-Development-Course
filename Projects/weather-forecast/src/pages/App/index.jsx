@@ -1,4 +1,5 @@
 import {useState, useEffect} from "react"
+import { ClimateCard } from "../../components/ClimateCard"
 import "./style.css"
 
 export function App() {  
@@ -59,20 +60,9 @@ export function App() {
             </section>
 
             <section className="containerWeatherCondition">
-              <div className="weatherCondition">
-                <p>14.5km/h</p>
-                <h4>Vento</h4>
-              </div>
-
-              <div className="weatherCondition">
-                <p>91%</p>
-                <h4>Umidade</h4>
-              </div>
-
-              <div className="weatherCondition">
-                <p>2.4mm</p>
-                <h4>Chuva</h4>
-              </div>
+              <ClimateCard climate='Vento' condition='14.4km/h'/>
+              <ClimateCard climate='Umidade' condition='92%'/>
+              <ClimateCard climate='Chuva' condition='120.4mm'/>
             </section>
 
             <section className="containerWeatherForecast">

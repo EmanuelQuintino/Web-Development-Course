@@ -32,7 +32,6 @@ export function App() {
         </form>
       </header>
 
-      {/* {data && ( */}
         <main>
           <article>
               <section className="blockCityName">
@@ -142,11 +141,6 @@ export function App() {
             </section>
           </article>
         </main>
-
-        <footer>
-          &copy; Web Development Course - Jucás 
-        </footer>
-      {/* )} */}
     </div>
     )   
 }

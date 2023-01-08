@@ -38,7 +38,7 @@ export function App() {
               <section className="blockCityName">
                 {/* <h2>{data.location.name}, {data.location.region}</h2> */}
                 <h2>jucas, ceara</h2>
-                <img src="" alt="Brasil"/>
+                <p>Brasil</p>
               </section>
 
             <section className="blockCurrentTime">
@@ -59,8 +59,93 @@ export function App() {
               </div>
             </section>
 
+            <section className="containerWeatherCondition">
+              <div className="weatherCondition">
+                <p>14.5km/h</p>
+                <h4>Vento</h4>
+              </div>
+
+              <div className="weatherCondition">
+                <p>91%</p>
+                <h4>Umidade</h4>
+              </div>
+
+              <div className="weatherCondition">
+                <p>2.4mm</p>
+                <h4>Chuva</h4>
+              </div>
+            </section>
+
+            <section className="containerWeatherForecast">
+              <div className="blockWeatherForecast">
+                <h3>Seg</h3>
+                <img src="" alt="icon" />
+                <p className="forecastDegreeMaxMin">
+                    <span>28°</span>
+                    <span>23°</span>
+                </p>
+              </div>
+
+              <div className="blockWeatherForecast">
+                <h3>Ter</h3>
+                <img src="" alt="icon" />
+                <p className="forecastDegreeMaxMin">
+                    <span>28°</span>
+                    <span>23°</span>
+                </p>
+              </div>
+
+              <div className="blockWeatherForecast">
+                <h3>Qua</h3>
+                <img src="" alt="icon" />
+                <p className="forecastDegreeMaxMin">
+                    <span>28°</span>
+                    <span>23°</span>
+                </p>
+              </div>
+
+              <div className="blockWeatherForecast">
+                <h3>Qui</h3>
+                <img src="" alt="icon" />
+                <p className="forecastDegreeMaxMin">
+                    <span>28°</span>
+                    <span>23°</span>
+                </p>
+              </div>
+
+              <div className="blockWeatherForecast">
+                <h3>Sex</h3>
+                <img src="" alt="icon" />
+                <p className="forecastDegreeMaxMin">
+                    <span>28°</span>
+                    <span>23°</span>
+                </p>
+              </div>
+
+              <div className="blockWeatherForecast">
+                <h3>Sab</h3>
+                <img src="" alt="icon" />
+                <p className="forecastDegreeMaxMin">
+                    <span>28°</span>
+                    <span>23°</span>
+                </p>
+              </div>
+
+              <div className="blockWeatherForecast">
+                <h3>Dom</h3>
+                <img src="" alt="icon" />
+                <p className="forecastDegreeMaxMin">
+                    <span>28°</span>
+                    <span>23°</span>
+                </p>
+              </div>
+            </section>
           </article>
         </main>
+
+        <footer>
+          &copy; Web Development Course - Jucás 
+        </footer>
       {/* )} */}
     </div>
     )   

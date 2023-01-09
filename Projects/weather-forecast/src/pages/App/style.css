@@ -46,9 +46,10 @@ main {
 }
 
 .spinner {
-    margin-top: 50%;
     animation: spinnerRotate 1s linear;
     font-size: 4.2rem;
+    display: block;
+    margin: 50% auto;
 }
 
 .blockCurrentTime {
@@ -79,11 +80,15 @@ main {
 }
 
 .degreeCurrent + p {
+    font-size: 2.2rem;
+}
+
+.degreeCurrent + p {
     display: flex;
     flex-direction: column;
     border-left: 2px solid gray;
 
-    padding: .8rem;
+    padding: .4rem .8rem;
 }
 
 .degreeCurrent + p span:nth-child(2) {

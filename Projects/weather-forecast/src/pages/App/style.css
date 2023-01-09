@@ -11,8 +11,11 @@ form {
 }
 
 form input {
+    border: none;
     border-radius: .4rem;
-    padding: .4rem .8rem;
+    padding: .6rem .8rem;
+    background: rgba(128, 128, 128, 0.3);
+    color: white;
 }
 
 .searchButton {
@@ -26,8 +29,8 @@ form button {
     border: none;
     border-radius: .4rem;
     color: white;
-    background: rgb(50, 50, 179);
-    padding: .5rem .8rem;
+    background: #106cc4;
+    padding: .6rem .8rem;
 }
 
 form button:hover {

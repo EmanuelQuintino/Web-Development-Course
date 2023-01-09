@@ -11,6 +11,7 @@ export function App() {
   const [searchedCity, setSearchedCity] = useState('jucas')
   const [weatherData, setWeatherData] = useState(null)
   const [isLoading, setIsLoading] = useState(false)
+  const [dateNow, setDateNow] = useState()
 
   const API = `https://api.weatherapi.com/v1/forecast.json?key=fb85b303e1fe4286a2b15407223112&q=${searchedCity}&days=4&lang=pt`
 
@@ -36,6 +37,10 @@ export function App() {
     getCityWeather()
   }, [searchedCity])
 
+  setInterval(() => {
+    setDateNow(new Date().toLocaleString('pt-BR'))
+  }, 1000)
+
   return (
     <div className="container">
       <header>
@@ -57,7 +62,7 @@ export function App() {
           <article>
             <section className="blockCityName">
               <h2>{weatherData.location.name}, {weatherData.location.region}</h2>
-              <p>{weatherData.location.country}</p>
+              <p>{weatherData.location.country}, {dateNow}</p>
             </section>
 
             <section className="blockCurrentTime">

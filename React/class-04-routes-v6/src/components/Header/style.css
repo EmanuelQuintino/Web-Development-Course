@@ -1,3 +1,16 @@
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 2.4rem;
+}
+
+.logo {
+    width: 4.2rem;
+    height: auto;
+}
+
 ul {
     display: flex;
     align-items: center;

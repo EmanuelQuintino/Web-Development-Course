@@ -1,4 +1,6 @@
 import "./style.css"
+import { Link } from "react-router-dom"
+import { AiOutlineArrowLeft } from "react-icons/ai"
 
 export function Contact() {
     return (
@@ -31,6 +33,11 @@ export function Contact() {
                         }}>Enviar</button>
                     </form>
 
+                    <section>
+                    <Link to="/gallery">
+                        <AiOutlineArrowLeft className="arrowIcon"/>
+                    </Link>
+                    </section>
                 </article>
             </main>
         </div>

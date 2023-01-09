@@ -1,5 +1,7 @@
 import "./style.css"
 import IconReact from "../../images/react.svg"
+import { AiOutlineArrowRight } from "react-icons/ai"
+import { Link } from "react-router-dom"
 
 export function Home() {
   return (
@@ -28,6 +30,12 @@ export function Home() {
               <p>
               Como a lógica do componente é escrita em JavaScript e não em templates, você pode facilmente passar diversos tipos de dados ao longo da sua aplicação e ainda manter o estado fora do DOM.
               </p>
+            </section>
+
+            <section className="linkArrow">
+              <Link to="/gallery">
+                <AiOutlineArrowRight className="arrowIcon"/>
+              </Link>
             </section>
           </article>
         </main>

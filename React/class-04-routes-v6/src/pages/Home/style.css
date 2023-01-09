@@ -37,6 +37,11 @@ h3 {
   text-align: justify;
 }
 
+.linkArrow {
+  display: flex;
+  justify-content: flex-end;
+}
+
 @keyframes animationRotation {
   to {
     transform: rotate(360deg);

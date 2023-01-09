@@ -29,3 +29,12 @@ a {
     text-decoration: none;
     color: white;
 }
+
+.arrowIcon {
+    color: gray;
+  }
+  
+.arrowIcon:hover {
+color: white;
+}
+  

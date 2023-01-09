@@ -1,4 +1,6 @@
 import "./style.css"
+import { Link } from "react-router-dom"
+import { AiOutlineArrowLeft, AiOutlineArrowRight } from "react-icons/ai"
 
 export function Gallery() {
     return (
@@ -24,6 +26,16 @@ export function Gallery() {
                         <p>
                             Isso permite experiências de usuário mais rápidas porque o navegador não precisa solicitar um documento totalmente novo ou reavaliar recursos CSS e JavaScript para a próxima página. Ele também permite experiências de usuário mais dinâmicas com coisas como animação.
                         </p>
+                    </section>
+
+                    <section className="arrowLinks">
+                        <Link to="/">
+                            <AiOutlineArrowLeft className="arrowIcon"/>
+                        </Link>
+
+                        <Link to="/contact">
+                            <AiOutlineArrowRight className="arrowIcon"/>
+                        </Link>
                     </section>
                 </article>
             </main>

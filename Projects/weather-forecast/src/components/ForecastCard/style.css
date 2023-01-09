@@ -1,0 +1,24 @@
+.blockWeatherForecast {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.blockWeatherForecast h3 {
+    text-transform: capitalize;
+}
+
+.blockWeatherForecast img {
+    padding: 0 0 .8rem;
+    width: 4.2rem;
+}
+
+.forecastDegreeMaxMin {
+    display: flex;
+    flex-direction: column;    
+}
+
+.forecastDegreeMaxMin span:nth-child(2) {
+    color: gray;
+}

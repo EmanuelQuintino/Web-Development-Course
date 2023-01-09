@@ -8,7 +8,31 @@ form {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: .4rem;
+}
+
+form input {
+    border-radius: .4rem;
+    padding: .4rem .8rem;
+}
+
+.searchButton {
+    color: gray;
+    font-size: 1.6rem;
+    position: relative;
+    left: -2.8rem;
+}
+
+form button {
+    border: none;
+    border-radius: .4rem;
+    color: white;
+    background: rgb(50, 50, 179);
+    padding: .5rem .8rem;
+}
+
+form button:hover {
+    cursor: pointer;
+    background: rgb(47, 47, 152);
 }
 
 main {
@@ -31,6 +55,15 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.iconCurrentWeather {
+    width: 7.2rem;
+    height: 7.2rem;
+}
+
+.iconThermometer {
+    font-size: 4.8rem;
 }
 
 .degreeCurrent {

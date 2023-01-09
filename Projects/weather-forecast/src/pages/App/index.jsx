@@ -14,6 +14,7 @@ export function App() {
     const response = await fetch(API)
     const data = await response.json()
     setWeatherData(data)
+    console.log(data.forecast.forecastday[0].day);
   }
 
   function searchCity(event) {
@@ -45,19 +46,21 @@ export function App() {
               </section>
 
               <section className="blockCurrentTime">
-                <img src={weatherData.current.condition.icon} alt="icon-weather" className="iconCurrentWeather"/>
                 <div className="currentTime">
                   <div className="blockDegree">
                     <BsThermometerHigh className='iconThermometer'/>
                     <p className="degreeCurrent">{weatherData.current.temp_c}°</p>
                     <p>
-                      <span className="degreeMax">{weatherData.forecast.forecastday[0].maxtemp_c}°</span>
-                      <span className="degreeMin">{weatherData.forecast.forecastday[0].mintemp_c}°</span>
+                      <span className="degreeMax">{weatherData.forecast.forecastday[0].day.maxtemp_c}°</span>
+                      <span className="degreeMin">{weatherData.forecast.forecastday[0].day.mintemp_c}°</span>
                     </p>
                   </div>
-                  <div>
-                    <p>{weatherData.current.condition.text}</p>
-                    <p>Sensação térmica de {weatherData.current.feelslike_c}°</p>
+                  <div className="blockSituation">
+                    <img src={weatherData.current.condition.icon} alt="icon-weather" className="iconCurrentWeather"/>
+                    <div>
+                      <p>{weatherData.current.condition.text}</p>
+                      <p>Sensação térmica de {weatherData.current.feelslike_c}°</p>
+                    </div>
                   </div>
                 </div>
               </section>

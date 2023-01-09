@@ -57,17 +57,12 @@ main {
     justify-content: center;
 }
 
-.iconCurrentWeather {
-    width: 7.2rem;
-    height: 7.2rem;
-}
-
 .iconThermometer {
-    font-size: 4.8rem;
+    font-size: 4.2rem;
 }
 
 .degreeCurrent {
-    font-size: 6.4rem;
+    font-size: 7.2rem;
     padding: .8rem;
 }
 
@@ -81,6 +76,18 @@ main {
 
 .degreeCurrent + p span:nth-child(2) {
     color: gray;
+}
+
+.blockSituation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2.4rem;
+}
+
+.iconCurrentWeather {
+    width: 6.4rem;
+    height: 6.4rem;
 }
 
 .containerWeatherCondition {

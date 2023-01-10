@@ -128,6 +128,12 @@ export function App() {
           </article>
         )}
       </main>
+
+      <footer>
+        <p>
+          Web Development Course - Jucás
+        </p>
+      </footer>
     </div>
     )   
 }

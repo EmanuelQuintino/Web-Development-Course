@@ -127,6 +127,10 @@ main {
     list-style: none;
 }
 
+footer p {
+    text-align: center;
+}
+
 @keyframes spinnerRotate {
     to {
         transform: rotate(360deg);

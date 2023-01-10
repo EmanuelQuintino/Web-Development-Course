@@ -18,9 +18,20 @@ export function App() {
   async function getCityWeather() {
     setIsLoading(true)
     try {
-      const response = await fetch(API)
-      const data = await response.json()
-      setWeatherData(data)
+      if (searchedCity) {
+        const response = await fetch(API)   
+        if (response.status == 200) {
+          const data = await response.json()
+          setWeatherData(data)
+        } else if (response.status == 400) {
+          alert(`Cidade não encontrada: 
+  - Por favor verifique se a cidade existe
+  - Digite sem acentuação
+  - Se necessário use o nome do estado e país junto da cidade`)
+        }
+      } else {
+        alert('Por favor digitar nome da cidade')
+      }
     } catch (error) {
       alert(error);  
     } finally {
@@ -58,7 +69,9 @@ export function App() {
 
       <main>
         { isLoading ? <ImSpinner2 className="spinner"/> 
-        :searchedCity && weatherData && (
+        :
+        searchedCity && weatherData && 
+        (
           <article>
             <section className="blockCityName">
               <h2>{weatherData.location.name}, {weatherData.location.region}</h2>

@@ -9,6 +9,9 @@
 }
 
 body {
+  display: grid;
+  place-items: center;
+  
   color: white;
 
   width: 100%;

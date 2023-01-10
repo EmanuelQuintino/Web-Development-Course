@@ -1,6 +1,7 @@
 h1 {
     text-align: center;
-    padding-top: 3.2rem;
+    padding-top: 2.4rem;
+    font-size: 3.8rem;
 }
 
 form {
@@ -15,7 +16,8 @@ form {
 form input {
     border: none;
     border-radius: .4rem;
-    padding: .6rem .8rem;
+    font-size: 2.0rem;
+    padding: .8rem 1.2rem;
     background: rgba(128, 128, 128, 0.3);
     color: white;
     width: 100%;
@@ -23,9 +25,9 @@ form input {
 
 .searchButton {
     color: gray;
-    font-size: 1.6rem;
+    font-size: 2.4rem;
     position: relative;
-    left: -2.8rem;
+    left: -3.2rem;
 }
 
 form button {
@@ -33,7 +35,8 @@ form button {
     border-radius: .4rem;
     color: white;
     background: #106cc4;
-    padding: .6rem .8rem;
+    padding: .8rem 1.2rem;
+    font-size: 2.0rem;
 }
 
 form button:hover {

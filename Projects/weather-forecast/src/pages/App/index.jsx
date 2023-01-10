@@ -44,7 +44,7 @@ export function App() {
   return (
     <div className="container">
       <header>
-        <h1>Previsão do tempo</h1>
+        <h1>Previsão do Tempo</h1>
         <form action="">
           <input 
             type="text" 

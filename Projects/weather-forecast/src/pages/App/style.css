@@ -129,7 +129,7 @@ main {
 
 footer p {
     text-align: center;
-    padding: 2.4rem 1.6rem;
+    padding: 2.4rem 1.6rem 0;
 }
 
 @keyframes spinnerRotate {

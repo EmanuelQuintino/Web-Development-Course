@@ -113,8 +113,7 @@ export function App() {
                         <ForecastCard 
                           day={index == 0 ? 'Hoje' 
                           :Intl.DateTimeFormat('pt-BR', { weekday: 'short'})
-                          .format(new Date(forecastday.date))
-                          } 
+                          .format(new Date().setDate(new Date().getDate() + index))} 
                           icon={forecastday.day.condition.icon} 
                           tempMax={forecastday.day.maxtemp_c} 
                           tempMin={forecastday.day.mintemp_c}

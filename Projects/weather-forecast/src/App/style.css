@@ -13,6 +13,14 @@ form {
     padding: 0 3.2rem;
 }
 
+.srOnly {
+    position: absolute;
+    width: 0.1rem;
+    height: 0.1rem;
+    overflow: hidden;
+    color: transparent;
+}
+
 form input {
     border: none;
     border-radius: .4rem;

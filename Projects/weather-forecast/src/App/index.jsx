@@ -57,7 +57,9 @@ export function App() {
       <header>
         <h1>Previsão do Tempo</h1>
         <form action="">
-          <input 
+          <label htmlFor="citySearchInput" className="srOnly">Pesquisar nome da cidade</label>
+          <input
+            id="citySearchInput" 
             type="text" 
             onChange={(event) => setInputCity(event.target.value)}
             placeholder='Nome da cidade'

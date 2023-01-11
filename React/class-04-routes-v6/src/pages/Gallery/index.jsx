@@ -8,7 +8,7 @@ export function Gallery() {
             <main>
                 <article>
                     <section>
-                        <h1>Galeria</h1>
+                        <h1>React Router Dom</h1>
                     </section>
                     <section>
                         <p>

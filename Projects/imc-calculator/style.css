@@ -20,6 +20,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     backdrop-filter: brightness(50%);
+    -webkit-backdrop-filter: brightness(50%);
 }
 
 .container {

@@ -22,6 +22,7 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   backdrop-filter: brightness(30%);
+  -webkit-backdrop-filter: brightness(30%);
 }
 
 body, input, button {

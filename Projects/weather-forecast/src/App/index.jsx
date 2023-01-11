@@ -2,9 +2,9 @@ import {useState, useEffect} from "react"
 import { GoSearch } from 'react-icons/go'
 import { BsThermometerHigh } from 'react-icons/bs'
 import { ImSpinner2 } from 'react-icons/im'
-import { ClimateCard } from "../../components/ClimateCard"
+import { ClimateCard } from "../components/ClimateCard"
 import "./style.css"
-import { ForecastCard } from "../../components/ForecastCard"
+import { ForecastCard } from "../components/ForecastCard"
 
 export function App() {  
   const [inputCity, setInputCity] = useState('')

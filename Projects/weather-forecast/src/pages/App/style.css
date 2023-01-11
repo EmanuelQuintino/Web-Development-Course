@@ -1,11 +1,11 @@
 h1 {
     text-align: center;
     padding-top: 2.4rem;
-    font-size: 3.8rem;
+    font-size: 4.0rem;
 }
 
 form {
-    margin-top: 1.6rem;
+    margin-top: .8rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -45,7 +45,7 @@ form button:hover {
 }
 
 main {
-    padding: 2.4rem 3.2rem 1.6rem;
+    padding: 1.6rem 3.2rem;
 }
 
 .spinner {
@@ -78,12 +78,12 @@ main {
 }
 
 .degreeCurrent {
-    font-size: 7.2rem;
-    padding: .8rem;
+    font-size: 6.4rem;
+    padding: 0 .8rem;
 }
 
 .degreeCurrent + p {
-    font-size: 2.2rem;
+    font-size: 1.8rem;
 }
 
 .degreeCurrent + p {
@@ -91,7 +91,7 @@ main {
     flex-direction: column;
     border-left: 2px solid gray;
 
-    padding: .4rem .8rem;
+    padding: .2rem .8rem;
 }
 
 .degreeCurrent + p span:nth-child(2) {
@@ -103,6 +103,9 @@ main {
     align-items: center;
     justify-content: center;
     gap: 2.4rem;
+
+    margin: -0.8rem;
+    padding: 0;
 }
 
 .iconCurrentWeather {
@@ -129,7 +132,7 @@ main {
 
 footer p {
     text-align: center;
-    padding: 2.4rem 1.6rem 0;
+    padding: 1.6rem 0;
 }
 
 @keyframes spinnerRotate {

@@ -9,6 +9,12 @@
     text-transform: capitalize;
 }
 
+.blockIconDegree {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .blockWeatherForecast img {
     padding: 0 0 .8rem;
     width: 4.2rem;
@@ -16,7 +22,9 @@
 
 .forecastDegreeMaxMin {
     display: flex;
-    flex-direction: column;    
+    flex-direction: column;
+    border-left: 1px solid gray;
+    padding-left: .4rem;
 }
 
 .forecastDegreeMaxMin span:nth-child(2) {

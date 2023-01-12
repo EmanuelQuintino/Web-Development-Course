@@ -48,9 +48,14 @@ export function App() {
     getCityWeather()
   }, [searchedCity])
 
-  setInterval(() => {
-    setDateNow(new Date().toLocaleString('pt-BR'))
-  }, 1000)
+  useEffect(() => {
+    const time = setInterval(() => {
+      setDateNow(new Date().toLocaleString('pt-BR'))
+    }, 1000)
+    return () => {
+      clearInterval(time)
+    }
+  }, [])
 
   return (
     <div className="container">

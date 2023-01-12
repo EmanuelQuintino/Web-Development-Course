@@ -49,11 +49,11 @@ export function App() {
   }, [searchedCity])
 
   useEffect(() => {
-    const time = setInterval(() => {
+    const timer = setInterval(() => {
       setDateNow(new Date().toLocaleString('pt-BR'))
     }, 1000)
     return () => {
-      clearInterval(time)
+      clearInterval(timer)
     }
   }, [])
 

@@ -56,7 +56,7 @@ export function App() {
     <div className="container">
       <header>
         <h1>Previsão do Tempo</h1>
-        <form action="">
+        <form action="" onSubmit={searchCity}>
           <label htmlFor="citySearchInput" className="srOnly">Pesquisar nome da cidade</label>
           <input
             id="citySearchInput" 
@@ -65,7 +65,7 @@ export function App() {
             placeholder='Nome da cidade'
             />
           <GoSearch className='searchButton'/>
-          <button onClick={searchCity}>Buscar</button>
+          <button>Buscar</button>
         </form>
       </header>
 

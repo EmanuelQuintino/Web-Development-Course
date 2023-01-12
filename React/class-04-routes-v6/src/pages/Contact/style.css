@@ -34,11 +34,11 @@ form button {
     margin-top: 1.6rem;
     border-radius: .4rem;
     border: none;
-    background: #00c4e788;
+    background: #70c7fd77;
     font-weight: 600;
 }
 
 form button:hover {
     cursor: pointer;
-    background: #00c4e7aa;
+    background: #70c7fd66;
 }

@@ -1,0 +1,79 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+
+    display: grid;
+    place-items: center;
+
+    padding: 42px;
+}
+
+.container {
+    width: 320px;
+}
+
+h1 {
+    text-align: center;
+}
+
+.block {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+section {
+    margin-top: 8px;
+    display: flex;
+    flex-direction: column;
+}
+
+input, select {
+    box-sizing: border-box;
+    padding: 2px 4px;
+    height: 24px;
+}
+
+label {
+    line-height: 20px;
+    font-weight: 500;
+}
+
+.cep input {
+    width: 92px;
+}
+
+.number input {
+    width: 64px;
+}
+
+.district {
+    width: 150px;
+}
+
+.city input {
+    width: 150px;
+}
+
+.state select {
+    width: 240px;
+}
+
+.uf input {
+    width: 60px;
+}
+
+button {
+    margin-top: 16px;
+    width: 100%;
+    padding: 4px;
+    border-radius: 4px;
+    border: none;
+    color: white;
+    font-weight: 700;
+    background: rgb(245, 153, 5);
+}
+
+button:hover {
+    cursor: pointer;
+    background: rgb(230, 146, 9);
+}

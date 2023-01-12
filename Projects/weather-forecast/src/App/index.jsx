@@ -70,63 +70,61 @@ export function App() {
       </header>
 
       <main>
-        { isLoading ? <ImSpinner2 className="spinner"/> 
-        :
-        searchedCity && weatherData && 
-        (
-          <article>
-            <section className="blockCityName">
-              <h2>{weatherData.location.name}, {weatherData.location.region}</h2>
-              <p>{weatherData.location.country}, {dateNow}</p>
-            </section>
+        { isLoading ? <ImSpinner2 className="spinner"/> :
+          searchedCity && weatherData && (
+            <article>
+              <section className="blockCityName">
+                <h2>{weatherData.location.name}, {weatherData.location.region}</h2>
+                <p>{weatherData.location.country}, {dateNow}</p>
+              </section>
 
-            <section className="blockCurrentTime">
-              <div className="currentTime">
-                <div className="blockDegree">
-                  <BsThermometerHigh className='iconThermometer'/>
-                  <p className="degreeCurrent">{weatherData.current.temp_c}°</p>
-                  <p>
-                    <span className="degreeMax">{weatherData.forecast.forecastday[0].day.maxtemp_c}°</span>
-                    <span className="degreeMin">{weatherData.forecast.forecastday[0].day.mintemp_c}°</span>
-                  </p>
-                </div>
-                <div className="blockSituation">
-                  <img src={weatherData.current.condition.icon} alt="icon-weather" className="iconCurrentWeather"/>
-                  <div>
-                    <p>{weatherData.current.condition.text}</p>
-                    <p>Sensação térmica de {weatherData.current.feelslike_c}°</p>
+              <section className="blockCurrentTime">
+                <div className="currentTime">
+                  <div className="blockDegree">
+                    <BsThermometerHigh className='iconThermometer'/>
+                    <p className="degreeCurrent">{weatherData.current.temp_c}°</p>
+                    <p>
+                      <span className="degreeMax">{weatherData.forecast.forecastday[0].day.maxtemp_c}°</span>
+                      <span className="degreeMin">{weatherData.forecast.forecastday[0].day.mintemp_c}°</span>
+                    </p>
+                  </div>
+                  <div className="blockSituation">
+                    <img src={weatherData.current.condition.icon} alt="icon-weather" className="iconCurrentWeather"/>
+                    <div>
+                      <p>{weatherData.current.condition.text}</p>
+                      <p>Sensação térmica de {weatherData.current.feelslike_c}°</p>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </section>
+              </section>
 
-            <section className="containerWeatherCondition">
-              <ClimateCard climate='Vento' condition={`${weatherData.current.wind_kph}km/h`}/>
-              <ClimateCard climate='Umidade' condition={`${weatherData.current.humidity}%`}/>
-              <ClimateCard climate='Chuva' condition={`${weatherData.current.precip_mm}mm`}/>
-            </section>
+              <section className="containerWeatherCondition">
+                <ClimateCard climate='Vento' condition={`${weatherData.current.wind_kph}km/h`}/>
+                <ClimateCard climate='Umidade' condition={`${weatherData.current.humidity}%`}/>
+                <ClimateCard climate='Chuva' condition={`${weatherData.current.precip_mm}mm`}/>
+              </section>
 
-            <section className="containerWeatherForecast">
-              <ol>
-                {
-                  weatherData.forecast.forecastday.map((forecastday, index) => {
-                    return (
-                      <li  key={index}>
-                        <ForecastCard 
-                          day={index == 0 ? 'Hoje' 
-                          :Intl.DateTimeFormat('pt-BR', { weekday: 'short'})
-                          .format(new Date().setDate(new Date().getDate() + index))} 
-                          icon={forecastday.day.condition.icon} 
-                          tempMax={forecastday.day.maxtemp_c} 
-                          tempMin={forecastday.day.mintemp_c}
-                        />
-                      </li>
-                    )
-                  })
-                }
-              </ol>
-            </section>
-          </article>
+              <section className="containerWeatherForecast">
+                <ol>
+                  {
+                    weatherData.forecast.forecastday.map((forecastDay, index) => {
+                      return (
+                        <li  key={index}>
+                          <ForecastCard 
+                            day={index == 0 ? 'Hoje' :
+                            Intl.DateTimeFormat('pt-BR', { weekday: 'short'})
+                            .format(new Date().setDate(new Date().getDate() + index))} 
+                            icon={forecastDay.day.condition.icon} 
+                            tempMax={forecastDay.day.maxtemp_c} 
+                            tempMin={forecastDay.day.mintemp_c}
+                          />
+                        </li>
+                      )
+                    })
+                  }
+                </ol>
+              </section>
+            </article>
         )}
       </main>
 

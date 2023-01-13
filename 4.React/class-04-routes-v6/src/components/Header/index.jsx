@@ -1,12 +1,11 @@
 import { Link, NavLink } from "react-router-dom"
-import logoReprogramaJucas from "../../images/logo-reprograma-icon.png"
 import "./style.css"
 
 export function Header() {
     return(
         <header>
             <Link to={"/"}>
-                <img src={logoReprogramaJucas} alt="logo" className="logo"/>
+                <img src="images/icon-reprograma-jucas.png" alt="logo" className="logo"/>
             </Link>
             <nav>
                 <ul>

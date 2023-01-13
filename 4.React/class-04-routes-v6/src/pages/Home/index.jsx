@@ -1,5 +1,4 @@
 import "./style.css"
-import IconReact from "../../images/react.svg"
 import { AiOutlineArrowRight } from "react-icons/ai"
 import { Link } from "react-router-dom"
 
@@ -11,7 +10,7 @@ export function Home() {
             <section>
               <h1>Class React Base JSX</h1>
               <h2>Uma biblioteca JavaScript para criar interfaces de usuário</h2>
-              <img src={IconReact} alt="" className="iconReact"/>
+              <img src="images/react.svg" alt="" className="iconReact"/>
             </section>
             <section>
               <h3>Declarativo</h3>

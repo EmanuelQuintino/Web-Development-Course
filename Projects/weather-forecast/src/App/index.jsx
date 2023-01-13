@@ -69,7 +69,7 @@ export function App() {
             onChange={(event) => setInputCity(event.target.value)}
             placeholder='Nome da cidade'
             />
-          <GoSearch className='searchButton'/>
+          <GoSearch className='searchIcon'/>
           <button>Buscar</button>
         </form>
       </header>
@@ -88,7 +88,7 @@ export function App() {
                   <div className="blockDegree">
                     <BsThermometerHigh className='iconThermometer'/>
                     <p className="degreeCurrent">{weatherData.current.temp_c}°</p>
-                    <p>
+                    <p className="degreeMinMax">
                       <span className="degreeMax">{weatherData.forecast.forecastday[0].day.maxtemp_c}°</span>
                       <span className="degreeMin">{weatherData.forecast.forecastday[0].day.mintemp_c}°</span>
                     </p>

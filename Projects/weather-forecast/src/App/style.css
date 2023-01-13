@@ -31,7 +31,7 @@ form input {
     width: 100%;
 }
 
-.searchButton {
+.searchIcon {
     color: gray;
     font-size: 2.4rem;
     position: relative;
@@ -90,11 +90,8 @@ main {
     padding: 0 .8rem;
 }
 
-.degreeCurrent + p {
+.degreeMinMax {
     font-size: 1.8rem;
-}
-
-.degreeCurrent + p {
     display: flex;
     flex-direction: column;
     border-left: 2px solid gray;
@@ -102,7 +99,7 @@ main {
     padding: .2rem .8rem;
 }
 
-.degreeCurrent + p span:nth-child(2) {
+.degreeMin {
     color: gray;
 }
 

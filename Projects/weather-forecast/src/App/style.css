@@ -1,3 +1,17 @@
+.container {
+    height: 100vh;
+    width: 100vw;
+    
+    overflow: auto;
+
+    display: grid;
+    place-items: center;
+}
+
+header, main {
+    width: 36.0rem;
+}
+
 h1 {
     text-align: center;
     padding-top: 2.4rem;
@@ -10,7 +24,7 @@ form {
     align-items: center;
     justify-content: center;
 
-    padding: 0 3.2rem;
+    padding: 0 2.4rem;
 }
 
 .srOnly {
@@ -53,7 +67,7 @@ form button:hover {
 }
 
 main {
-    padding: 1.6rem 3.2rem;
+    padding: 1.6rem 2.4rem;
 }
 
 .spinner {

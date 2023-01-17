@@ -8,6 +8,15 @@
     place-items: center;
 }
 
+::-webkit-scrollbar {
+    background: rgba(0, 0, 0, 0.4);
+    width: 1vw;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #106cc477;
+}
+
 header, main {
     width: 36.0rem;
 }

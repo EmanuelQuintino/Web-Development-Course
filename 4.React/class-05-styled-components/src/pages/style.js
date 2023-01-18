@@ -23,8 +23,7 @@ export const Container = styled.div `
 
     button {
         width: 12.0rem;
-        margin: 1.6rem auto;
-        padding: 1.6rem;
+        margin: .8rem auto;
         border-radius: .8rem;
 
         background: none;

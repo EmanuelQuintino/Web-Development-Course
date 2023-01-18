@@ -14,7 +14,7 @@ export default createGlobalStyle`
     body, input, button, textarea, select {
         font-size: 1.6rem;
         font-family: Arial, Helvetica, sans-serif;
-        color: white;
+        color: ${(props) => props.theme.color.font};
     }
 
     body {

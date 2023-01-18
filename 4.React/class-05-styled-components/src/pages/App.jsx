@@ -9,11 +9,13 @@ export function App() {
     <Container>
       <h1>{option} {count} - Styled Components</h1>
       <img src="./react.svg" alt="" />
+
+      <button onClick={() => setCount(count + 1)}>Count</button>
+      
       <select value={option} onChange={(event) => setOption(event.target.value)}>
         <option value="Class">Class</option>
         <option value="Aula">Aula</option>
       </select>
-      <button onClick={() => setCount(count + 1)}>Count</button>
     </Container>
   )
 }

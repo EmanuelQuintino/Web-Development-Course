@@ -21,6 +21,12 @@ export const Container = styled.div `
         margin: 2.4rem auto;
     }
 
+    select {
+        width: 12.0rem;
+        margin: 1.6rem auto;
+        background: #808080;
+    }
+
     button {
         width: 12.0rem;
         margin: .8rem auto;

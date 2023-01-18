@@ -24,7 +24,7 @@ export const Container = styled.div `
     select {
         width: 12.0rem;
         margin: 1.6rem auto;
-        background: #808080;
+        padding: .4rem;
     }
 
     button {

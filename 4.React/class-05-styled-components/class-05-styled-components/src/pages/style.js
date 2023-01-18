@@ -27,13 +27,17 @@ export const Container = styled.div `
         padding: 1.6rem;
         border-radius: .8rem;
 
-        background: ${({theme}) => theme.color.main};
+        background: none;
+        outline: none;
+        border: none;
+
+        color: ${({ theme }) => theme.color.complementary};
         font-weight: 600;
         text-shadow: .02rem .02rem .1rem black;
         font-size: 2.0rem;
     }
 
     button:hover {
-        filter: brightness(1.05);
+        filter: brightness(1.2);
     }
 `;

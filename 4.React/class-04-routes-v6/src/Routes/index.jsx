@@ -3,6 +3,10 @@ import { Home } from '../pages/Home'
 import { Gallery } from '../pages/Gallery'
 import { Contact } from '../pages/Contact'
 
+// <Route path='/' element={<Home/>}/>
+// <Link to="/">
+// <BrowserRouter>
+
 export function AppRoutes() {
     return(
           <Routes>

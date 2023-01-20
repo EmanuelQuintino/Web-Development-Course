@@ -33,7 +33,7 @@ export function App() {
         alert('Por favor digitar nome da cidade')
       }
     } catch (error) {
-      alert(error);  
+      alert(`${error} - Verifique a conexão`);  
     } finally {
       setIsLoading(false)
     }

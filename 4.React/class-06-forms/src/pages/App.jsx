@@ -20,9 +20,6 @@ export function App() {
       ability: [...ability].map(element => {
           const ability = element.value
           const isChecked = element.checked
-          const a = {
-            ability
-          }
           return {[ability]:isChecked};  
       })
     })

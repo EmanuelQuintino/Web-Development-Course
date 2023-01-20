@@ -27,10 +27,10 @@ export function App() {
           alert(`Cidade não encontrada: 
   - Por favor verifique se a cidade existe
   - Digite sem acentuação
-  - Se necessário use o nome do estado e país junto da cidade`)
+  - Use estado e país junto do nome`)
         }
       } else {
-        alert('Por favor digitar nome da cidade')
+        alert('Por favor digite o nome da cidade')
       }
     } catch (error) {
       alert(`${error} - Verifique a conexão`);  

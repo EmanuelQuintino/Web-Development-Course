@@ -76,7 +76,7 @@ export function App() {
 
       <main>
         { isLoading ? <ImSpinner2 className="spinner"/> :
-          searchedCity && weatherData && (
+          weatherData && (
             <article>
               <section className="blockCityName">
                 <h2>{weatherData.location.name}, {weatherData.location.region}</h2>
@@ -116,9 +116,10 @@ export function App() {
                       return (
                         <li  key={index}>
                           <ForecastCard 
-                            day={index == 0 ? 'Hoje' :
-                            Intl.DateTimeFormat('pt-BR', { weekday: 'short'})
-                            .format(new Date().setDate(new Date().getDate() + index))} 
+                            day={
+                              index == 0 ? 'Hoje' :
+                              Intl.DateTimeFormat('pt-BR', { weekday: 'short'})
+                              .format(new Date(forecastDay.date.split('-').join('/')))} 
                             icon={forecastDay.day.condition.icon} 
                             tempMax={forecastDay.day.maxtemp_c} 
                             tempMin={forecastDay.day.mintemp_c}

@@ -18,9 +18,7 @@ export function App() {
       term: term.value,
       question: question.value,
       ability: [...ability].map(element => {
-          const ability = element.value
-          const isChecked = element.checked
-          return {[ability]:isChecked};  
+          return {[element.value]:element.checked};  
       })
     })
   }

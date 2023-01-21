@@ -4,14 +4,13 @@ import './userForm.css'
 export function UserForm() {
   const [formData, setFormData] = useState({})
 
-  function handleSubmit(event) {
+  async function handleSubmit(event) {
     event.preventDefault();
 
     const { name, email, course, term, question, ability } = event.target
 
     // console.log(ability);
-
-    setFormData({
+    const userData = {
       name: name.value,
       email: email.value,
       course: course.value,
@@ -20,7 +19,18 @@ export function UserForm() {
       ability: [...ability].map(element => {
           return {[element.value]:element.checked};  
       })
-    })
+    }
+
+    setFormData(userData)
+
+    // const API = 'http://localhost:5173'
+    // await fetch(API + "/", {
+    //   method: "POST",
+    //   body: JSON.stringify(userData),
+    //   headers: {
+    //     "Content-Type": "application/json"
+    //   }
+    // })
   }
 
   return (
@@ -78,7 +88,7 @@ export function UserForm() {
       </form>
 
       {console.log(formData)}
-      {console.log(JSON.stringify(formData))}
+      {/* {console.log(JSON.stringify(formData))} */}
     </div>
   )
 }

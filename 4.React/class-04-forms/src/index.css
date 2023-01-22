@@ -1,0 +1,41 @@
+:root {
+    font-size: 62.5%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, input, button, textarea, select {
+    font-size: 1.6rem;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    background: rgba(0, 0, 0, 0.2);
+    border: none;
+}
+
+body {
+    background: #333;
+    overflow: auto;
+}
+
+.container {
+    padding: 1.6rem;
+    max-width: 48.0rem;
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.arrowIcon {
+    color: gray;
+  }
+  
+.arrowIcon:hover {
+color: white;
+}

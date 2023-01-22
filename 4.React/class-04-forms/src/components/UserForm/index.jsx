@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import './userForm.css'
+import './style.css'
 
 export function UserForm() {
   const [formData, setFormData] = useState({})
@@ -34,7 +34,8 @@ export function UserForm() {
   }
 
   return (
-    <div className="App">
+    <div className="formContainer">
+      <h2>Inscrição para curso</h2>
       <form action="get" onSubmit={handleSubmit}>
         <section>
           <label htmlFor="inputName">Nome:</label>
@@ -74,7 +75,7 @@ export function UserForm() {
         </section>
 
         <section>
-          <label htmlFor="question">Por que deseja fazer esse curso?</label> <br />
+          <label htmlFor="question">Por que deseja fazer esse curso?</label>
           <textarea
             name="question"
             id="question"

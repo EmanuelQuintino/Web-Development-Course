@@ -21,12 +21,6 @@ body {
     overflow: auto;
 }
 
-.container {
-    padding: 1.6rem;
-    max-width: 48.0rem;
-    margin: 0 auto;
-}
-
 a {
     text-decoration: none;
     color: white;

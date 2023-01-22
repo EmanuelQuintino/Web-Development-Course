@@ -1,0 +1,33 @@
+form {
+    margin-top: 1.6rem;
+}
+
+h2 {
+    text-align: center;
+    margin-top: 2.4rem;
+}
+
+form section {
+    margin-top: .8rem;
+}
+
+label {
+    line-height: 2.4rem;
+}
+
+form input, select, textarea {
+    padding: .4rem .8rem;
+}
+
+input[type=text],
+input[type=email],
+select, textarea {
+    width: 100%;
+    resize: none;
+}
+
+button {
+    padding: .8rem 1.6rem;
+    border-radius: .4rem;
+    margin: 0 auto;
+}

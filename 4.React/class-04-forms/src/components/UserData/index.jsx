@@ -1,4 +1,4 @@
-import { Globals } from "../globals"
+import { Globals } from "../../globals"
 import { useState } from "react"
 
 export function UserData() {

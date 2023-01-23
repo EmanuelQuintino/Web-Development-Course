@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Globals } from '../globals';
+import { Globals } from '../../globals';
 import './style.css'
 
 export function UserForm() {

@@ -11,7 +11,6 @@ export function UserForm() {
 
     const { name, email, course, term, question, ability } = event.target
 
-    // console.log(ability);
     const userData = {
       name: name.value,
       email: email.value,
@@ -34,6 +33,8 @@ export function UserForm() {
     //     "Content-Type": "application/json"
     //   }
     // })
+    
+    alert('Formulário enviado com sucesso!')
   }
 
   return (

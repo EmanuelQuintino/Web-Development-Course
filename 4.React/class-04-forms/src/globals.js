@@ -1,3 +1,3 @@
-export class Globals {
+export class GlobalVariables {
     static user = {}
 }

@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Globals } from '../globals';
 import './style.css'
 
 export function UserForm() {
@@ -22,6 +23,7 @@ export function UserForm() {
     }
 
     setFormData(userData)
+    Globals.user = userData
 
     // const API = 'http://localhost:5173'
     // await fetch(API + "/", {
@@ -90,6 +92,7 @@ export function UserForm() {
 
       {console.log(formData)}
       {/* {console.log(JSON.stringify(formData))} */}
+      {Globals.user.name}
     </div>
   )
 }

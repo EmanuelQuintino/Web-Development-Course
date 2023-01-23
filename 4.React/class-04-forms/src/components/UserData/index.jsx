@@ -10,7 +10,7 @@ export function UserData() {
 
     return (
         <>
-            <p>UserData</p>
+            <h2>UserData</h2>
             <p>{user.name}</p>
             <p>{user.email}</p>
             <button onClick={userShow}>Show</button>

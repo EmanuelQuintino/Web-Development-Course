@@ -1,24 +1,17 @@
 import { Container } from './style'
+import { Button } from '../components/Button'
 
 export function App() {
   return (
     <Container>
       <h1>Class 06 - Styled Components</h1>
-      <img src="./react.svg" alt="" />
+      <img src="./react.svg" alt="icon" />
 
-      <form action="">
-        <section>
-          <label htmlFor="email">Email:</label>
-          <input type="email" id='email'/>
-        </section>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis totam mollitia officia voluptate pariatur quis incidunt corporis sapiente maxime modi. Inventore harum doloremque expedita blanditiis corporis incidunt, ut quasi ratione!
+      </p>
 
-        <section>
-          <label htmlFor="password">Senha:</label>
-          <input type="password" id='password'/>
-        </section>
-
-        <button>Login</button>
-      </form>
+      <Button/>
     </Container>
   )
 }

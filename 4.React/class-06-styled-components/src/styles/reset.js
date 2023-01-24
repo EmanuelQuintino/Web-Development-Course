@@ -11,15 +11,16 @@ export default createGlobalStyle`
         box-sizing: border-box;
     }
 
-    body, input, button, textarea, select {
+    body  {
         font-size: 1.6rem;
         font-family: Arial, Helvetica, sans-serif;
         color: ${(props) => props.theme.color.font};
-        background: ${({theme})=> theme.color.neutral};
-    }
-
-    body {
         background-color: ${({theme}) => theme.color.background};
+    }
+    
+    input, button, textarea, select {
+        font-size: 1.6rem;
+        font-family: Arial, Helvetica, sans-serif;
     }
 
     a {

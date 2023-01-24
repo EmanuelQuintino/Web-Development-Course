@@ -1,11 +1,6 @@
 import styled from 'styled-components'
 
 export const Container = styled.div `
-    /* background: #252525; */
-    /* color: #fff; */
-    /* text-align: center; */
-    /* padding: 16px 16px 2.4rem; */
-
     height: 100vh;
     display: grid;
     place-content: center;
@@ -21,13 +16,23 @@ export const Container = styled.div `
         margin: 2.4rem auto;
     }
 
-    select {
-        width: 12.0rem;
-        margin: 1.6rem auto;
-        padding: .4rem;
+    form {
+        max-width: 32.0rem;
+        margin: 0 auto;
+        text-align: center;
     }
 
-    button {
+    form section {
+        margin-top: .8rem;
+    }
+
+    form label {
+        display: inline-block;
+        width: 5.6rem;
+        text-align: right;
+    }
+
+    form button {
         width: 12.0rem;
         margin: .8rem auto;
         border-radius: .8rem;

@@ -15,7 +15,7 @@ export const Container = styled.div `
     }
     
     img {
-        width: 120px;
+        width: 12.0rem;
         margin: 2.4rem auto;
     }
 `;

@@ -26,11 +26,11 @@ export function UserForm() {
     GlobalVariables.user = userData
 
     // const API = 'http://localhost:5173'
-    // await fetch(API + "/", {
+    // await fetch(API + "/api", {
     //   method: "POST",
     //   body: JSON.stringify(userData),
     //   headers: {
-    //     "Content-Type": "application/json"
+    //     "Content-Type": "application/json; charset=UTF-8"
     //   }
     // })
     

@@ -1,24 +1,23 @@
-drop table studants;
+DROP TABLE studants;
 
-create table studants(
-	id smallint unsigned primary key auto_increment, 
-	name varchar(40) not null,
-    c_performance decimal(5, 2),
-    cpf varchar(11) unique not null,
-    birth_year date not null,
-    age tinyint unsigned not null,
-    gender enum('M', 'F') not null,
-    city varchar(30) default "Jucás"
+CREATE TABLE studants(
+	id SMALLINT UNSIGNED PRIMARY KEY AUTO_INCREMENT, 
+	name VARCHAR(40) NOT NULL,
+    c_performance DECIMAL(5, 2),
+    cpf VARCHAR(11) UNIQUE NOT NULL,
+    birth_year DATE NOT NULL,
+    gender ENUM('M', 'F') NOT NULL,
+    city VARCHAR(30) DEFAULT "Jucás"
 );
 
-describe studants;
+DESCRIBE studants;
 
-insert into studants (name, c_performance, cpf, birth_year, age, gender)
-values ("João", 89.2, "12345678900", "1989-12-25", "25", "M");
+INSERT INTO studants (name, c_performance, cpf, birth_year, gender)
+VALUES ("João", 89.2, "12345678900", "1989-12-25", "M");
 
-insert into studants values 
-(default, "Pedro", 90.75, "12345678901", "1998-02-12", "30", "M", default),
-(default, "Maria", 95, "12345678902", "1995-11-23", "50", "F", "Iguatu");
+INSERT INTO Studants VALUES 
+(DEFAULT, "Pedro", 90.75, "12345678901", "1998-02-12", "M", DEFAULT),
+(DEFAULT, "Maria", 95, "12345678902", "1995-11-23", "F", "Iguatu");
 
-select name, c_performance as cr, city 
-from studants order by cr desc limit 10;
+SELECT name, C_performance AS Cr, City 
+FROM Studants orDER By Cr DESC LIMIT 10;

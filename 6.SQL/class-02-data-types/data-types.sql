@@ -19,5 +19,5 @@ INSERT INTO Studants VALUES
 (DEFAULT, "Pedro", 90.75, "12345678901", "1998-02-12", "M", DEFAULT),
 (DEFAULT, "Maria", 95, "12345678902", "1995-11-23", "F", "Iguatu");
 
-SELECT name, C_performance AS Cr, City 
-FROM Studants orDER By Cr DESC LIMIT 10;
+SELECT id, name, c_performance AS CR, City 
+FROM studants ORDER BY CR DESC LIMIT 10;

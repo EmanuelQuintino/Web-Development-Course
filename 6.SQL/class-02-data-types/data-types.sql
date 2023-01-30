@@ -29,6 +29,13 @@ FROM studants
 ORDER BY CR 
 DESC LIMIT 10;
 
+SELECT 
+	name AS Nome, 
+    birth_year AS Nascimanto, 
+    CURDATE() Hoje,
+    FLOOR(DATEDIFF(CURRENT_DATE(), birth_year) / 365.25) Idade
+FROM studants;
+
 DROP TABLE courses;
 CREATE TABLE courses (
 	id SMALLINT UNSIGNED PRIMARY KEY AUTO_INCREMENT,

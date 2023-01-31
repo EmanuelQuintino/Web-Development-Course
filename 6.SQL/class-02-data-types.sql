@@ -56,12 +56,18 @@ AFTER c_performance;
 
 ALTER TABLE STUDANTS
 CHANGE COLUMN course
-course TINYINT UNSIGNED
+id_course TINYINT UNSIGNED
 AFTER c_performance;
 
 ALTER TABLE studants
-ADD FOREIGN KEY (course)
+ADD FOREIGN KEY (id_course)
 REFERENCES courses(id);
 
 SELECT id, name, course FROM STUDANTS;
-UPDATE studants SET course = 1 WHERE id = 1;
+UPDATE studants SET id_course = 2 WHERE id = 3;
+
+SELECT * FROM courses;
+
+SELECT studants.name, studants.id_course, courses.name
+FROM studants INNER JOIN courses
+ON studants.id_course = courses.id;

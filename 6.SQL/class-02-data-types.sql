@@ -63,7 +63,7 @@ ALTER TABLE studants
 ADD FOREIGN KEY (id_course)
 REFERENCES courses(id);
 
-SELECT id, name, course FROM STUDANTS;
+SELECT id, name, course FROM studants;
 UPDATE studants SET id_course = 2 WHERE id = 3;
 
 SELECT * FROM courses;

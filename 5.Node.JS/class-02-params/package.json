@@ -1,0 +1,15 @@
+{
+  "name": "class-02-params",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./src/server.js",
+  "scripts": {
+    "dev": "node ./src/server.js"
+  },
+  "keywords": [],
+  "author": "Emanuel Quintino",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}

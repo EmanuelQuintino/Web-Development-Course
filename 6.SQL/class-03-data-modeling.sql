@@ -1,3 +1,5 @@
+-- [employees](0,N) <> (1,1)[department] 
+
 DROP TABLE department;
 CREATE TABLE department(
 	cod_depart SMALLINT UNSIGNED PRIMARY KEY AUTO_INCREMENT, 

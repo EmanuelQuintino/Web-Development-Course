@@ -43,31 +43,11 @@ CREATE TABLE courses (
     hours TINYINT UNSIGNED
 );
 
+DESCRIBE courses;
+
 INSERT INTO courses VALUES
 (DEFAULT, 'Programador Web', 240),
 (DEFAULT, 'Ferramentas Digitais', 160),
 (DEFAULT, 'Informática para o Mundo do Trabalho', 160);
 
 SELECT * FROM courses;
-
-ALTER TABLE studants 
-ADD COLUMN course TINYINT UNSIGNED
-AFTER c_performance;
-
-ALTER TABLE STUDANTS
-CHANGE COLUMN course
-id_course TINYINT UNSIGNED
-AFTER c_performance;
-
-ALTER TABLE studants
-ADD FOREIGN KEY (id_course)
-REFERENCES courses(id);
-
-SELECT id, name, course FROM studants;
-UPDATE studants SET id_course = 2 WHERE id = 3;
-
-SELECT * FROM courses;
-
-SELECT studants.name, studants.id_course, courses.name
-FROM studants INNER JOIN courses
-ON studants.id_course = courses.id;

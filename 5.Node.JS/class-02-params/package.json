@@ -4,7 +4,7 @@
   "description": "",
   "main": "./src/server.js",
   "scripts": {
-    "dev": "node ./src/server.js"
+    "start": "node ./src/server.js"
   },
   "keywords": [],
   "author": "Emanuel Quintino",

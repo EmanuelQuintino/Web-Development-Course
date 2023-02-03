@@ -2,8 +2,8 @@ const express = require('express');
 const userRouter = express();
 
 userRouter.post("/", (req, res) => {
-    const {name, email, password} = req.body;
-    res.json({name, email, password});
+    const {name, phone} = req.body;
+    res.json({name, phone});
 });
 
 module.exports = userRouter;

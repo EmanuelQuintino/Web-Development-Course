@@ -13,4 +13,7 @@ router.get('/contact', (req, res) => {
     res.send('Contact');
 });
 
+const userRouter = require('./user.routes');
+router.use('/user', userRouter);
+
 module.exports = router;

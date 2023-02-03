@@ -1,7 +1,7 @@
 {
-  "name": "class-03-verbs",
+  "name": "class-03-controllers",
   "version": "1.0.0",
-  "description": "Class POST - Body Params",
+  "description": "",
   "main": "./src/server.js",
   "scripts": {
     "start": "node ./src/server.js",

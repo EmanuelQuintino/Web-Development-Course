@@ -7,7 +7,6 @@ app.listen(port, console.log(`Server is running on PORT ${port}...`));
 const database = require('./database');
 app.get('/users', (req, res) => {
     database('users')
-        .then((result) => {
-            res.json(result);
-        });
+        .then((result) => res.json(result))
+        .catch((error) => console.error(error));
 });

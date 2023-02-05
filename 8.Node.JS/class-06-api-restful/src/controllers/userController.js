@@ -34,7 +34,20 @@ module.exports = {
             })
             .where({id});
 
-            return res.send({situation: 'updated user'});
+            return res.send({situation: `updated user ${id}`});
+        } catch (error) {
+            next(error);
+        }
+    },
+
+    async delete(req, res, next) {
+        try {
+            const {id} = req.params;
+            await database('users')
+            .where({id})
+            .del(); 
+
+            return res.send({situation: `user ${id} deleted`});
         } catch (error) {
             next(error);
         }

@@ -1,11 +1,7 @@
 const { Router } = require('express');
 const userRoutes = Router();
 
-const database = require('../database');
-userRoutes.get('/', (req, res) => {
-    database('users')
-        .then((result) => res.json(result))
-        .catch((error) => console.error(error));
-});
+const userControllers = require('../controllers/userController.js');
+userRoutes.get('/', userControllers.index);
 
 module.exports = userRoutes;

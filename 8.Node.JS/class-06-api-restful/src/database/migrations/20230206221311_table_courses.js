@@ -1,8 +1,8 @@
 exports.up = function(knex) {
-    return knex.schema.createTable('users', (table) => {
+    return knex.schema.createTable('courses', (table) => {
       table.increments('id');
       table.string('name').notNull();
-      table.string('email').unique().notNull();
+      table.string('hours').notNull();
   
       table.timestamp('created_at').defaultTo(knex.fn.now());
       table.timestamp('updated_at').defaultTo(knex.fn.now());
@@ -10,5 +10,5 @@ exports.up = function(knex) {
   };
   
   exports.down = function(knex) {
-    return knex.schema.dropTable('users');
+    return knex.schema.dropTable('courses');
   };

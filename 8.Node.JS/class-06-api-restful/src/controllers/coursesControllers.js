@@ -1,21 +1,25 @@
 const database = require('../database');
 
 module.exports = {
-    async index(req, res) {
-            const result = await database('users'); 
-            return res.json(result);
+    async read(req, res, next) {
+            try {
+                const result = await database('courses'); 
+                return res.json(result);
+            } catch (error) {
+                next(error);
+            }
     },
 
     async create(req, res, next) {
         try {
-            const {name, email} = req.body;
+            const {name, hours} = req.body;
             
-            await database('users').insert({
+            await database('courses').insert({
                 name, 
-                email
+                hours
             });
 
-            return res.status(201).send({situation: 'user created'});
+            return res.status(201).send({situation: 'course created'});
         } catch (error) {
             next(error);
         }
@@ -23,18 +27,18 @@ module.exports = {
 
     async update(req, res, next) {
         try {
-            const {name, email} = req.body;
+            const {name, hours} = req.body;
             const {id} = req.params;
 
-            await database('users')
+            await database('courses')
             .update({
                 name, 
-                email, 
+                hours, 
                 updated_at: database.fn.now()
             })
             .where({id});
 
-            return res.send({situation: `updated user ${id}`});
+            return res.send({situation: `updated course ${id}`});
         } catch (error) {
             next(error);
         }
@@ -43,11 +47,11 @@ module.exports = {
     async delete(req, res, next) {
         try {
             const {id} = req.params;
-            await database('users')
+            await database('courses')
             .where({id})
             .del(); 
 
-            return res.send({situation: `user ${id} deleted`});
+            return res.send({situation: `course ${id} deleted`});
         } catch (error) {
             next(error);
         }

@@ -3,7 +3,15 @@ const database = require('../database');
 module.exports = {
     async read(req, res, next) {
             try {
-                const result = await database('courses'); 
+                const table = database('courses');
+                const {id} = req.query;
+                
+                if (id) {
+                    table.select().where({id});
+                }
+
+                const result = await table;
+                
                 return res.json(result);
             } catch (error) {
                 next(error);

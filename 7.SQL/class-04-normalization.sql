@@ -1,4 +1,6 @@
--- 1FN
+-- 1FN, 2FN, 3FN
+
+DROP TABLE users;
 CREATE TABLE users (
 	id SMALLINT UNSIGNED AUTO_INCREMENT,
 	name VARCHAR(255) NOT NULL,
@@ -32,13 +34,14 @@ INSERT INTO users(name, street, neighborhood, city) VALUES
 ('Thiago','Rua X', 'Bairro Y', 'Cidade Z'),
 ('Beatriz','Rua X', 'Bairro Y', 'Cidade Z');
 
+DROP TABLE phones;
 CREATE TABLE phones(
 	id SMALLINT UNSIGNED NOT NULL AUTO_INCREMENT,
     number VARCHAR(255) NOT NULL,
     user SMALLINT UNSIGNED NOT NULL,
   
 	PRIMARY KEY(id),
-    FOREIGN KEY(user) REFERENCES users(id)
+    FOREIGN KEY(user) REFERENCES users(id) ON DELETE CASCADE
 );
 
 DESCRIBE phones;
@@ -51,9 +54,9 @@ INSERT INTO phones (number, user) VALUES
 
 SELECT * FROM phones;
 
+DELETE FROM users WHERE id = 1;
+
 SELECT users.name, phones.number
 FROM phones INNER JOIN users
 ON phones.user = users.id
 ORDER BY users.name;
-
--- 2FN

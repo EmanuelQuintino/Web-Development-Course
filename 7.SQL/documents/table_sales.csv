@@ -1,1066 +1,1156 @@
-cod;month;name;sale
-1;set;Ana Clara;2960
-2;out;Derlândio;4356
-3;nov;Derlândio;3950
-4;out;Ana Clara;1798
-5;nov;Derlândio;5182
-6;dez;Ítalo;969
-7;jan;Ana Clara;3423
-8;out;Samila;865
-9;nov;Jill;533
-10;dez;Murilo;5158
-11;jan;Derlândio;3811
-12;fev;Ana Clara;3947
-13;mar;Mario;3752
-14;abr;Samila;1086
-15;mai;Jill;4604
-16;jun;Murilo;3432
-17;jul;Samila;1730
-18;jul;Jill;1485
-19;ago;Ítalo;292
-20;set;Ítalo;3119
-21;out;Mario;4108
-22;nov;Derlândio;5003
-23;dez;Jill;3457
-24;jan;Ana Clara;770
-25;fev;Felipe;2833
-26;mar;Murilo;4397
-27;abr;Ana Clara;725
-28;mar;Derlândio;4345
-29;abr;Felipe;859
-30;mai;Felipe;4105
-31;jun;Murilo;4490
-32;jul;Samila;5233
-33;ago;Jill;1901
-34;set;Derlândio;2784
-35;out;Samila;3311
-36;nov;Murilo;2930
-37;out;Derlândio;4191
-38;nov;Ítalo;2201
-39;dez;Murilo;4859
-40;jan;Derlândio;2138
-41;out;Ana Clara;2799
-42;nov;Ítalo;4746
-43;dez;Mario;922
-44;jan;Ítalo;510
-45;fev;Jill;698
-46;mar;Ana Clara;2743
-47;abr;Ítalo;1548
-48;mai;Samila;532
-49;jun;Samila;4848
-50;jul;Jill;1798
-51;jul;Ítalo;1561
-52;ago;Ítalo;2451
-53;set;Felipe;4996
-54;out;Derlândio;5222
-55;nov;Felipe;1240
-56;dez;Murilo;2803
-57;jan;Felipe;3458
-58;fev;Samila;210
-59;mar;Ítalo;4288
-60;abr;Samila;4072
-61;mar;Murilo;1576
-62;abr;Samila;2474
-63;mai;Mario;4884
-64;jun;Jill;2535
-65;jul;Ana Clara;2006
-66;ago;Felipe;5161
-67;set;Jill;3108
-68;out;Felipe;2937
-69;nov;Mario;3583
-70;dez;Felipe;5113
-71;jan;Derlândio;4613
-72;fev;Jill;3933
-73;mar;Mario;3420
-74;abr;Felipe;4164
-75;mai;Samila;3071
-76;jun;Samila;4940
-77;jul;Samila;756
-78;jul;Mario;4036
-79;ago;Murilo;320
-80;set;Ana Clara;1094
-81;out;Samila;3779
-82;nov;Felipe;4541
-83;dez;Murilo;4881
-84;jan;Ítalo;336
-85;fev;Jill;2090
-86;mar;Jill;2885
-87;abr;Ana Clara;4338
-88;mai;Ana Clara;3514
-89;jun;Murilo;4632
-90;jul;Ana Clara;1221
-91;ago;Mario;2127
-92;set;Samila;5081
-93;out;Derlândio;1680
-94;nov;Ana Clara;745
-95;out;Felipe;3839
-96;nov;Mario;3784
-97;mai;Ítalo;395
-98;jun;Samila;4994
-99;jul;Jill;198
-100;ago;Mario;2877
-101;set;Mario;942
-102;out;Samila;2099
-103;nov;Felipe;966
-104;dez;Samila;1755
-105;jan;Mario;5095
-106;fev;Ana Clara;1358
-107;mar;Jill;1119
-108;abr;Derlândio;988
-109;mai;Ana Clara;974
-110;jun;Felipe;5015
-111;jul;Derlândio;662
-112;jul;Ana Clara;3894
-113;ago;Mario;2247
-114;set;Samila;1069
-115;out;Murilo;3451
-116;nov;Murilo;1489
-117;dez;Samila;754
-118;jan;Ítalo;1509
-119;fev;Derlândio;1763
-120;mar;Ítalo;3647
-121;abr;Ítalo;3206
-122;mai;Felipe;3060
-123;ago;Jill;3086
-124;set;Samila;4307
-125;out;Derlândio;2985
-126;nov;Samila;4082
-127;dez;Derlândio;4552
-128;jan;Mario;441
-129;fev;Jill;5090
-130;mar;Derlândio;1756
-131;abr;Jill;2046
-132;mai;Derlândio;605
-133;jun;Jill;3848
-134;jul;Jill;390
-135;ago;Murilo;3246
-136;set;Murilo;685
-137;out;Ana Clara;3774
-138;nov;Ana Clara;2294
-139;out;Ítalo;3167
-140;nov;Felipe;5251
-141;mai;Samila;2097
-142;jun;Ítalo;4491
-143;jul;Felipe;1040
-144;ago;Jill;3247
-145;set;Murilo;2295
-146;out;Mario;762
-147;jan;Murilo;1370
-148;fev;Mario;3371
-149;mar;Jill;5159
-150;abr;Jill;4269
-151;mai;Ana Clara;1076
-152;jun;Jill;453
-153;jul;Felipe;4741
-154;ago;Ítalo;2693
-155;set;Murilo;2601
-156;out;Derlândio;3401
-157;nov;Murilo;4049
-158;dez;Samila;4742
-159;jan;Samila;2362
-160;fev;Mario;251
-161;mar;Samila;5068
-162;abr;Mario;1464
-163;mai;Ana Clara;3854
-164;jun;Mario;3250
-165;jul;Derlândio;240
-166;jul;Felipe;186
-167;ago;Derlândio;3164
-168;set;Jill;2547
-169;out;Jill;1822
-170;nov;Derlândio;171
-171;dez;Ítalo;5061
-172;jan;Murilo;672
-173;fev;Murilo;2032
-174;mar;Jill;1689
-175;abr;Felipe;4057
-176;mai;Derlândio;665
-177;jun;Jill;3184
-178;jul;Felipe;4579
-179;ago;Ana Clara;4984
-180;set;Ítalo;1587
-181;out;Murilo;2567
-182;nov;Derlândio;513
-183;out;Derlândio;5226
-184;nov;Murilo;582
-185;dez;Murilo;1018
-186;jan;Ana Clara;4687
-187;out;Samila;4923
-188;nov;Felipe;1065
-189;dez;Ítalo;4895
-190;jan;Felipe;2456
-191;fev;Murilo;2086
-192;mar;Ana Clara;2679
-193;abr;Murilo;4372
-194;mai;Ítalo;2998
-195;jun;Felipe;2939
-196;jul;Samila;3898
-197;jul;Jill;3491
-198;ago;Derlândio;3691
-199;set;Mario;2381
-200;out;Samila;4218
-201;nov;Ana Clara;2870
-202;dez;Mario;547
-203;jan;Mario;1182
-204;fev;Murilo;2773
-205;mar;Samila;1378
-206;abr;Jill;4350
-207;mar;Felipe;174
-208;set;Murilo;4191
-209;out;Derlândio;2396
-210;nov;Ana Clara;3994
-211;out;Jill;1360
-212;nov;Felipe;3539
-213;dez;Derlândio;3920
-214;jan;Jill;1426
-215;out;Samila;3548
-216;nov;Mario;860
-217;dez;Jill;755
-218;jan;Samila;4820
-219;fev;Samila;1489
-220;mar;Jill;2705
-221;abr;Derlândio;1349
-222;mai;Ana Clara;1127
-223;jun;Ítalo;2204
-224;jul;Murilo;3228
-225;jul;Jill;1396
-226;ago;Felipe;1948
-227;set;Samila;2420
-228;out;Samila;3194
-229;nov;Samila;2606
-230;dez;Derlândio;2431
-231;jan;Samila;1503
-232;fev;Mario;851
-233;mar;Felipe;204
-234;abr;Samila;184
-235;mar;Murilo;1248
-236;abr;Ana Clara;3254
-237;mai;Murilo;4499
-238;jun;Mario;5217
-239;jul;Ítalo;378
-240;ago;Ana Clara;1170
-241;set;Ítalo;1992
-242;out;Ítalo;3578
-243;nov;Jill;4557
-244;out;Murilo;2849
-245;nov;Samila;2330
-246;dez;Ana Clara;3436
-247;jan;Ana Clara;1981
-248;out;Jill;369
-249;nov;Mario;308
-250;dez;Ítalo;3140
-251;jan;Jill;1489
-252;fev;Jill;4408
-253;mar;Mario;1549
-254;abr;Murilo;2135
-255;mai;Mario;382
-256;jun;Ana Clara;1765
-257;jul;Mario;1123
-258;jul;Felipe;1728
-259;ago;Murilo;5136
-260;set;Felipe;4315
-261;out;Derlândio;3724
-262;nov;Felipe;2536
-263;dez;Jill;4588
-264;jan;Mario;498
-265;fev;Jill;1165
-266;mar;Derlândio;4872
-267;abr;Ana Clara;1345
-268;mar;Derlândio;4918
-269;abr;Ana Clara;1763
-270;mai;Ana Clara;5219
-271;jun;Murilo;3002
-272;jul;Derlândio;5223
-273;ago;Samila;1602
-274;set;Murilo;2368
-275;out;Ana Clara;1415
-276;nov;Samila;2969
-277;dez;Ana Clara;1473
-278;jan;Mario;1066
-279;fev;Mario;572
-280;mar;Ítalo;905
-281;abr;Jill;3455
-282;mai;Samila;421
-283;jun;Felipe;1925
-284;jul;Derlândio;3778
-285;jul;Derlândio;902
-286;ago;Samila;486
-287;set;Mario;2365
-288;out;Derlândio;5127
-289;nov;Ana Clara;220
-290;dez;Mario;4640
-291;jan;Murilo;578
-292;fev;Mario;5194
-293;mar;Felipe;2071
-294;abr;Derlândio;1285
-295;mai;Murilo;1011
-296;jun;Mario;1739
-297;jul;Jill;2176
-298;ago;Felipe;4675
-299;set;Mario;3461
-300;out;Mario;1958
-301;nov;Mario;4022
-302;out;Felipe;4425
-303;nov;Felipe;1799
-304;mai;Samila;5104
-305;jun;Ana Clara;1353
-306;jul;Jill;2151
-307;ago;Felipe;1176
-308;set;Mario;2820
-309;out;Derlândio;4483
-310;nov;Ítalo;1619
-311;dez;Derlândio;1859
-312;jan;Mario;3171
-313;fev;Felipe;4010
-314;mar;Murilo;3723
-315;abr;Mario;804
-316;mai;Derlândio;2728
-317;jun;Jill;2501
-318;jul;Murilo;214
-319;jul;Ana Clara;294
-320;ago;Ítalo;4630
-321;set;Jill;167
-322;out;Jill;1279
-323;nov;Ana Clara;1017
-324;dez;Samila;1137
-325;jan;Murilo;2120
-326;fev;Jill;593
-327;mar;Samila;1790
-328;abr;Ítalo;810
-329;mai;Mario;5029
-330;ago;Samila;3573
-331;set;Derlândio;4686
-332;out;Mario;3090
-333;nov;Ítalo;4007
-334;dez;Jill;3139
-335;jan;Mario;2097
-336;fev;Jill;2323
-337;mar;Samila;1652
-338;abr;Mario;2369
-339;mai;Ítalo;3021
-340;jun;Felipe;4039
-341;jul;Ítalo;4840
-342;ago;Mario;3970
-343;set;Mario;3586
-344;out;Samila;3618
-345;nov;Samila;3617
-346;out;Ítalo;1159
-347;nov;Derlândio;3805
-348;mai;Ana Clara;1508
-349;jun;Ana Clara;4968
-350;jul;Jill;2547
-351;ago;Felipe;2196
-352;set;Mario;1540
-353;out;Felipe;954
-354;jan;Murilo;3131
-355;fev;Felipe;4799
-356;mar;Jill;3781
-357;abr;Derlândio;2971
-358;mai;Felipe;596
-359;jun;Murilo;5022
-360;jul;Ana Clara;4436
-361;ago;Murilo;453
-362;set;Samila;291
-363;out;Samila;2738
-364;dez;Murilo;4510
-365;jan;Murilo;286
-366;fev;Ítalo;1463
-367;mar;Felipe;3177
-368;abr;Jill;5055
-369;mai;Jill;3451
-370;jun;Ana Clara;5104
-371;jul;Murilo;2289
-372;jul;Murilo;2731
-373;ago;Derlândio;391
-374;set;Derlândio;3659
-375;out;Derlândio;2589
-376;nov;Murilo;1770
-377;dez;Ítalo;3053
-378;jan;Derlândio;127
-379;fev;Mario;4602
-380;mar;Felipe;4384
-381;abr;Ítalo;3867
-382;mai;Jill;4674
-383;ago;Felipe;5039
-384;set;Ítalo;3892
-385;out;Murilo;4380
-386;nov;Murilo;1220
-387;dez;Jill;1689
-388;jan;Derlândio;3047
-389;fev;Jill;4456
-390;mar;Mario;1937
-391;abr;Murilo;3291
-392;mai;Mario;3453
-393;jun;Derlândio;934
-394;jul;Felipe;4526
-395;ago;Murilo;2512
-396;set;Felipe;1029
-397;out;Murilo;1409
-398;nov;Ítalo;837
-399;out;Derlândio;2596
-400;nov;Mario;960
-401;mai;Mario;2249
-402;jun;Ana Clara;3814
-403;jul;Ana Clara;4895
-404;ago;Ítalo;4499
-405;set;Ítalo;3079
-406;out;Murilo;2927
-407;jan;Ítalo;4382
-408;fev;Ítalo;631
-409;mar;Jill;517
-410;abr;Mario;3979
-411;mai;Felipe;4620
-412;jun;Jill;4935
-413;jul;Samila;2893
-414;ago;Ítalo;4782
-415;set;Jill;4412
-416;out;Felipe;1263
-417;nov;Felipe;1435
-418;dez;Ítalo;2171
-419;jan;Felipe;4038
-420;fev;Ítalo;2210
-421;mar;Ítalo;5170
-422;abr;Felipe;2454
-423;mai;Ítalo;896
-424;jun;Jill;3428
-425;jul;Ana Clara;957
-426;jul;Samila;1910
-427;ago;Derlândio;2781
-428;set;Jill;4287
-429;out;Felipe;550
-430;nov;Ítalo;1039
-431;dez;Ana Clara;3760
-432;jan;Jill;3057
-433;fev;Jill;4720
-434;mar;Murilo;2119
-435;abr;Mario;1593
-436;mai;Derlândio;723
-437;jun;Mario;2397
-438;jul;Mario;3685
-439;ago;Jill;4857
-440;set;Felipe;2600
-441;out;Ítalo;2821
-442;nov;Mario;3033
-443;out;Mario;2626
-444;nov;Samila;323
-445;dez;Derlândio;5014
-446;jan;Murilo;1223
-447;out;Felipe;2301
-448;nov;Ítalo;4809
-449;dez;Jill;1770
-450;jan;Samila;2046
-451;fev;Murilo;4392
-452;mar;Mario;2736
-453;abr;Murilo;595
-454;mai;Murilo;554
-455;jun;Ana Clara;2663
-456;jul;Ana Clara;2431
-457;jul;Felipe;660
-458;ago;Derlândio;5068
-459;set;Ana Clara;2909
-460;out;Jill;2150
-461;nov;Samila;2958
-462;dez;Murilo;2176
-463;jan;Jill;4384
-464;fev;Derlândio;1620
-465;mar;Felipe;4468
-466;abr;Mario;137
-467;mar;Mario;220
-468;set;Felipe;2672
-469;nov;Ítalo;3225
-470;out;Ana Clara;4645
-471;nov;Jill;875
-472;dez;Felipe;2062
-473;jan;Ana Clara;1759
-474;out;Samila;1768
-475;nov;Jill;330
-476;dez;Mario;2636
-477;jan;Jill;2820
-478;fev;Derlândio;1185
-479;mar;Ítalo;2194
-480;abr;Samila;4391
-481;mai;Samila;2087
-482;jun;Ítalo;4700
-483;jul;Murilo;4467
-484;jul;Jill;735
-485;ago;Murilo;2952
-486;set;Derlândio;2535
-487;out;Felipe;523
-488;nov;Derlândio;1300
-489;dez;Ana Clara;662
-490;jan;Mario;2469
-491;fev;Jill;1818
-492;mar;Mario;193
-493;abr;Mario;4510
-494;mar;Murilo;1630
-495;set;Murilo;3012
-496;out;Felipe;988
-497;nov;Derlândio;1073
-498;out;Felipe;3658
-499;nov;Derlândio;1956
-500;dez;Jill;1215
-501;jan;Ítalo;4804
-502;out;Ítalo;1648
-503;nov;Ítalo;164
-504;dez;Ítalo;2549
-505;jan;Ana Clara;1514
-506;fev;Ana Clara;624
-507;mar;Derlândio;169
-508;abr;Ítalo;2201
-509;mai;Derlândio;694
-510;jun;Felipe;239
-511;jul;Ana Clara;914
-512;jul;Ana Clara;1597
-513;ago;Samila;3601
-514;set;Samila;3277
-515;out;Derlândio;3478
-516;nov;Ana Clara;3199
-517;dez;Jill;4287
-518;jan;Mario;2677
-519;fev;Ana Clara;3466
-520;mar;Felipe;182
-521;abr;Mario;5113
-522;mar;Mario;3731
-523;abr;Murilo;754
-524;mai;Samila;4265
-525;jun;Felipe;3414
-526;jul;Jill;263
-527;ago;Samila;3509
-528;set;Murilo;1318
-529;out;Samila;4855
-530;nov;Ana Clara;4366
-531;out;Felipe;2913
-532;nov;Derlândio;2188
-533;dez;Ana Clara;3926
-534;jan;Ítalo;965
-535;out;Mario;2876
-536;nov;Murilo;908
-537;dez;Ana Clara;1520
-538;jan;Jill;3086
-539;fev;Ana Clara;4202
-540;mar;Felipe;764
-541;abr;Felipe;708
-542;mai;Derlândio;3450
-543;jun;Mario;2412
-544;jul;Ana Clara;691
-545;jul;Derlândio;4495
-546;ago;Ana Clara;4802
-547;set;Murilo;3730
-548;out;Derlândio;2026
-549;nov;Derlândio;123
-550;dez;Derlândio;2728
-551;jan;Felipe;3731
-552;fev;Ana Clara;5215
-553;mar;Samila;2883
-554;abr;Samila;4852
-555;mar;Samila;1332
-556;abr;Jill;5076
-557;mai;Ana Clara;1702
-558;jun;Ana Clara;2801
-559;jul;Samila;4532
-560;ago;Ítalo;436
-561;set;Murilo;1275
-562;out;Derlândio;1237
-563;nov;Ítalo;4479
-564;dez;Jill;3735
-565;jan;Murilo;1537
-566;fev;Samila;2838
-567;mar;Samila;1412
-568;abr;Felipe;3622
-569;mai;Derlândio;5020
-570;jun;Murilo;4672
-571;jul;Ítalo;5136
-572;jul;Ana Clara;5161
-573;ago;Samila;1856
-574;set;Murilo;5096
-575;out;Samila;3684
-576;nov;Ítalo;2820
-577;dez;Jill;5008
-578;jan;Jill;448
-579;fev;Felipe;3471
-580;mar;Samila;154
-581;abr;Felipe;131
-582;mai;Ana Clara;3552
-583;jun;Samila;5227
-584;jul;Murilo;804
-585;ago;Jill;556
-586;set;Ítalo;1383
-587;out;Jill;2020
-588;nov;Mario;3208
-589;out;Ítalo;1813
-590;nov;Murilo;280
-591;mai;Felipe;200
-592;jun;Jill;3894
-593;jul;Jill;3029
-594;ago;Ítalo;1731
-595;set;Ítalo;4137
-596;out;Ítalo;3241
-597;nov;Felipe;4974
-598;dez;Samila;179
-599;jan;Derlândio;1178
-600;fev;Derlândio;3332
-601;mar;Derlândio;4173
-602;abr;Mario;2323
-603;mai;Jill;4605
-604;jun;Murilo;512
-605;jul;Murilo;1604
-606;jul;Ítalo;4270
-607;ago;Samila;3086
-608;set;Derlândio;1711
-609;out;Derlândio;1986
-610;nov;Mario;693
-611;dez;Mario;2963
-612;jan;Mario;4937
-613;fev;Jill;4797
-614;mar;Mario;1866
-615;abr;Jill;3245
-616;mai;Ana Clara;1568
-617;ago;Ítalo;4053
-618;set;Murilo;1951
-619;out;Jill;840
-620;nov;Samila;1719
-621;dez;Jill;4035
-622;jan;Ítalo;276
-623;fev;Jill;394
-624;mar;Derlândio;1403
-625;abr;Jill;1996
-626;mai;Samila;5203
-627;jun;Derlândio;4461
-628;jul;Jill;4593
-629;ago;Felipe;3289
-630;set;Mario;1642
-631;out;Samila;5015
-632;nov;Ana Clara;3765
-633;out;Mario;632
-634;nov;Jill;3891
-635;mai;Felipe;4229
-636;jun;Ítalo;578
-637;jul;Mario;3340
-638;ago;Ítalo;4066
-639;set;Ítalo;2477
-640;out;Ítalo;3542
-641;jan;Felipe;954
-642;fev;Jill;4025
-643;mar;Derlândio;1768
-644;abr;Mario;1501
-645;mai;Derlândio;1606
-646;jun;Ítalo;1668
-647;jul;Mario;4128
-648;ago;Felipe;508
-649;set;Murilo;4359
-650;out;Murilo;4252
-651;dez;Murilo;4531
-652;jan;Mario;3051
-653;fev;Murilo;2952
-654;mar;Derlândio;2644
-655;abr;Mario;4578
-656;mai;Ítalo;2206
-657;jun;Ana Clara;3916
-658;mai;Felipe;1135
-659;jun;Ítalo;547
-660;jul;Jill;5253
-661;jul;Murilo;1188
-662;ago;Samila;1184
-663;set;Mario;1044
-664;out;Ítalo;1722
-665;nov;Felipe;605
-666;dez;Murilo;3901
-667;jan;Samila;3607
-668;fev;Felipe;2436
-669;mar;Ítalo;3220
-670;abr;Felipe;3699
-671;mai;Murilo;3961
-672;jun;Mario;3441
-673;jul;Derlândio;3196
-674;ago;Mario;3127
-675;set;Ítalo;3520
-676;out;Murilo;3716
-677;nov;Jill;4863
-678;out;Felipe;146
-679;nov;Ítalo;2999
-680;dez;Jill;2826
-681;jan;Ana Clara;305
-682;out;Mario;2625
-683;nov;Ana Clara;4302
-684;dez;Samila;4217
-685;jan;Samila;3675
-686;fev;Derlândio;3937
-687;mar;Murilo;4661
-688;abr;Mario;1071
-689;mai;Derlândio;1182
-690;jun;Felipe;3200
-691;jul;Ítalo;4841
-692;jul;Mario;3990
-693;ago;Murilo;1147
-694;set;Derlândio;2929
-695;out;Derlândio;368
-696;nov;Felipe;2765
-697;dez;Samila;2075
-698;jan;Mario;2366
-699;fev;Mario;4443
-700;mar;Derlândio;2310
-701;abr;Felipe;2736
-702;mar;Felipe;4406
-703;set;Ana Clara;4667
-704;nov;Murilo;1894
-705;out;Samila;4896
-706;nov;Felipe;5125
-707;dez;Ítalo;1447
-708;jan;Jill;740
-709;out;Ítalo;2577
-710;nov;Felipe;2367
-711;dez;Mario;3335
-712;jan;Samila;3980
-713;fev;Samila;4289
-714;mar;Jill;1640
-715;abr;Felipe;4094
-716;mai;Samila;3567
-717;jun;Murilo;3988
-718;jul;Samila;498
-719;jul;Jill;2285
-720;ago;Derlândio;4487
-721;set;Murilo;3067
-722;out;Murilo;1331
-723;nov;Jill;3527
-724;dez;Derlândio;4746
-725;jan;Felipe;1831
-726;fev;Jill;1922
-727;mar;Derlândio;4007
-728;abr;Jill;250
-729;mar;Murilo;3311
-730;set;Jill;3113
-731;out;Jill;1064
-732;nov;Ítalo;984
-733;out;Mario;777
-734;nov;Derlândio;180
-735;dez;Derlândio;2588
-736;jan;Ana Clara;698
-737;out;Ítalo;1412
-738;nov;Felipe;3589
-739;dez;Murilo;2804
-740;jan;Derlândio;5170
-741;fev;Felipe;4771
-742;mar;Derlândio;4592
-743;abr;Murilo;669
-744;mai;Mario;2573
-745;jun;Ana Clara;1410
-746;jul;Mario;1278
-747;jul;Felipe;1763
-748;ago;Murilo;766
-749;set;Samila;1070
-750;out;Murilo;4319
-751;nov;Derlândio;3572
-752;dez;Mario;2314
-753;jan;Felipe;3311
-754;fev;Felipe;4004
-755;mar;Ana Clara;241
-756;abr;Felipe;864
-757;mai;Samila;3163
-758;jun;Samila;1053
-759;jul;Jill;4812
-760;jul;Samila;3400
-761;ago;Mario;2755
-762;set;Ana Clara;1926
-763;out;Jill;5110
-764;nov;Murilo;4176
-765;dez;Felipe;1349
-766;jan;Felipe;2562
-767;fev;Ítalo;3765
-768;mar;Jill;5233
-769;abr;Ana Clara;1648
-770;mai;Ana Clara;1038
-771;ago;Samila;4680
-772;set;Jill;3617
-773;out;Mario;5240
-774;nov;Murilo;404
-775;dez;Ana Clara;194
-776;jan;Ana Clara;903
-777;fev;Ítalo;2385
-778;mar;Ítalo;1376
-779;abr;Felipe;4962
-780;mai;Ítalo;4034
-781;jun;Felipe;3815
-782;jul;Derlândio;4029
-783;ago;Mario;3438
-784;set;Mario;972
-785;out;Jill;5181
-786;nov;Murilo;3301
-787;out;Derlândio;3270
-788;nov;Murilo;3790
-789;mai;Felipe;5053
-790;jun;Felipe;3745
-791;jul;Samila;496
-792;ago;Ítalo;5030
-793;set;Derlândio;1468
-794;out;Derlândio;1967
-795;jan;Murilo;4848
-796;fev;Derlândio;2578
-797;mar;Ítalo;4181
-798;abr;Murilo;610
-799;mai;Samila;5065
-800;jun;Felipe;770
-801;jul;Samila;4206
-802;ago;Samila;2079
-803;set;Felipe;3015
-804;out;Ana Clara;1853
-805;dez;Ana Clara;3983
-806;jan;Samila;3951
-807;fev;Jill;310
-808;mar;Jill;2359
-809;abr;Derlândio;3322
-810;mai;Samila;3517
-811;jun;Jill;310
-812;mai;Samila;3626
-813;jun;Samila;173
-814;jul;Samila;4487
-815;jul;Ítalo;4629
-816;ago;Ana Clara;3987
-817;set;Jill;3578
-818;out;Ítalo;2953
-819;nov;Mario;2109
-820;dez;Mario;4612
-821;jan;Ítalo;1888
-822;fev;Felipe;4088
-823;mar;Derlândio;3407
-824;abr;Ítalo;4186
-825;mai;Jill;1689
-826;jun;Ana Clara;4648
-827;jul;Derlândio;4216
-828;ago;Jill;1478
-829;set;Jill;3109
-830;out;Felipe;2439
-831;nov;Ana Clara;5012
-832;out;Derlândio;945
-833;nov;Felipe;781
-834;dez;Jill;717
-835;jan;Derlândio;4705
-836;out;Jill;420
-837;nov;Murilo;3647
-838;dez;Ítalo;4088
-839;jan;Ana Clara;1448
-840;fev;Ítalo;2858
-841;mar;Ana Clara;2911
-842;abr;Ítalo;476
-843;mai;Felipe;2908
-844;jun;Derlândio;3835
-845;jul;Samila;1882
-846;jul;Ana Clara;3294
-847;ago;Felipe;1807
-848;set;Jill;3555
-849;out;Felipe;4576
-850;nov;Murilo;2014
-851;dez;Samila;3722
-852;jan;Felipe;1311
-853;fev;Felipe;2512
-854;mar;Ítalo;290
-855;abr;Jill;2284
-856;mar;Derlândio;3008
-857;set;Murilo;3163
-858;nov;Jill;953
-859;out;Samila;875
-860;nov;Ana Clara;176
-861;dez;Ítalo;852
-862;jan;Ana Clara;2591
-863;out;Ana Clara;1752
-864;nov;Jill;5187
-865;dez;Ítalo;5254
-866;jan;Derlândio;3603
-867;fev;Jill;129
-868;mar;Derlândio;1239
-869;abr;Derlândio;4913
-870;mai;Derlândio;4470
-871;jun;Jill;1639
-872;jul;Murilo;2586
-873;jul;Murilo;3434
-874;ago;Ana Clara;3953
-875;set;Derlândio;1327
-876;out;Mario;1498
-877;nov;Ana Clara;851
-878;dez;Derlândio;1603
-879;jan;Derlândio;4074
-880;fev;Derlândio;434
-881;mar;Murilo;277
-882;abr;Samila;2525
-883;mar;Murilo;1761
-884;set;Samila;713
-885;out;Murilo;3746
-886;nov;Samila;705
-887;out;Ítalo;4532
-888;nov;Ana Clara;3498
-889;dez;Felipe;3600
-890;jan;Ana Clara;2938
-891;out;Ana Clara;276
-892;nov;Derlândio;1466
-893;dez;Derlândio;2354
-894;jan;Mario;586
-895;fev;Samila;1386
-896;mar;Murilo;586
-897;abr;Samila;4410
-898;mai;Mario;1702
-899;jun;Felipe;1061
-900;jul;Ítalo;3722
-901;jul;Derlândio;1099
-902;ago;Samila;2428
-903;set;Samila;4722
-904;out;Murilo;1343
-905;nov;Ana Clara;1466
-906;dez;Samila;4520
-907;jan;Jill;2233
-908;fev;Felipe;135
-909;mar;Ana Clara;397
-910;abr;Samila;2368
-911;mai;Derlândio;1301
-912;jun;Derlândio;4326
-913;jul;Jill;4378
-914;jul;Mario;3818
-915;ago;Felipe;4609
-916;set;Jill;992
-917;out;Samila;4314
-918;nov;Jill;2948
-919;dez;Samila;165
-920;jan;Derlândio;3403
-921;fev;Jill;394
-922;mar;Felipe;1403
-923;abr;Jill;3394
-924;mai;Ana Clara;714
-925;ago;Jill;4007
-926;set;Ana Clara;5050
-927;out;Ítalo;200
-928;nov;Ítalo;3102
-929;dez;Ítalo;3101
-930;jan;Ana Clara;1881
-931;fev;Jill;3736
-932;mar;Ana Clara;1450
-933;abr;Murilo;2227
-934;mai;Jill;767
-935;jun;Felipe;2962
-936;jul;Ana Clara;5102
-937;ago;Felipe;1709
-938;set;Jill;4884
-939;out;Ana Clara;1360
-940;nov;Samila;484
-941;out;Ítalo;1403
-942;nov;Felipe;3041
-943;mai;Mario;5163
-944;jun;Derlândio;1265
-945;jul;Ítalo;3256
-946;ago;Samila;5079
-947;set;Felipe;2286
-948;out;Ana Clara;4312
-949;jan;Felipe;2607
-950;fev;Jill;3987
-951;mar;Mario;4479
-952;abr;Jill;2388
-953;mai;Felipe;5053
-954;jun;Jill;366
-955;jul;Ana Clara;1184
-956;ago;Jill;2979
-957;set;Mario;1639
-958;out;Derlândio;3043
-959;dez;Samila;2984
-960;jan;Mario;3122
-961;fev;Derlândio;481
-962;mar;Felipe;1327
-963;abr;Mario;3854
-964;mai;Derlândio;2952
-965;jun;Felipe;2820
-966;mai;Ítalo;2733
-967;jun;Ana Clara;5084
-968;jul;Felipe;562
-969;jul;Ana Clara;4114
-970;ago;Felipe;2277
-971;set;Ana Clara;985
-972;out;Jill;5059
-973;nov;Samila;4191
-974;dez;Ítalo;3512
-975;jan;Mario;2135
-976;fev;Mario;1709
-977;mar;Samila;1441
-978;abr;Ítalo;5160
-979;mai;Felipe;1644
-980;jun;Felipe;4555
-981;jul;Samila;1629
-982;ago;Jill;4170
-983;set;Jill;4227
-984;out;Mario;5074
-985;nov;Mario;3764
-986;out;Derlândio;4266
-987;nov;Ítalo;1510
-988;dez;Ítalo;2705
-989;jan;Felipe;1666
-990;out;Ana Clara;2262
-991;nov;Ana Clara;4725
-992;dez;Mario;2289
-993;jan;Samila;2018
-994;fev;Ítalo;1470
-995;mar;Ítalo;4169
-996;abr;Felipe;2767
-997;mai;Ana Clara;399
-998;jun;Felipe;963
-999;jul;Murilo;411
-1000;jul;Felipe;418
-1001;ago;Murilo;4865
-1002;set;Mario;2616
-1003;out;Jill;4785
-1004;nov;Murilo;5198
-1005;dez;Derlândio;4522
-1006;jan;Felipe;5168
-1007;fev;Jill;1079
-1008;mar;Jill;5212
-1009;abr;Samila;1109
-1010;mar;Mario;1885
-1011;set;Ana Clara;1176
-1012;nov;Murilo;1446
-1013;out;Felipe;767
-1014;nov;Felipe;3411
-1015;dez;Ana Clara;3018
-1016;jan;Ítalo;1881
-1017;out;Felipe;3261
-1018;nov;Mario;1322
-1019;dez;Felipe;3789
-1020;jan;Jill;4031
-1021;fev;Felipe;1963
-1022;mar;Jill;3041
-1023;abr;Felipe;878
-1024;mai;Ítalo;1935
-1025;jun;Murilo;2765
-1026;jul;Ítalo;2095
-1027;jul;Ana Clara;5076
-1028;ago;Felipe;1262
-1029;set;Derlândio;2687
-1030;out;Ana Clara;3277
-1031;nov;Murilo;1474
-1032;dez;Jill;3255
-1033;jan;Felipe;4109
-1034;fev;Jill;4899
-1035;mar;Ana Clara;4202
-1036;abr;Mario;2811
-1037;mar;Ana Clara;2339
-1038;set;Ana Clara;1659
-1039;out;Jill;560
-1040;nov;Jill;5157
-1041;out;Jill;2964
-1042;nov;Ítalo;326
-1043;dez;Felipe;3102
-1044;jan;Felipe;1933
-1045;out;Mario;4286
-1046;nov;Felipe;976
-1047;dez;Felipe;5229
-1048;jan;Felipe;3221
-1049;fev;Mario;2347
-1050;mar;Murilo;2398
-1051;abr;Samila;3983
-1052;mai;Samila;3709
-1053;jun;Mario;515
-1054;jul;Samila;1388
-1055;jul;Mario;3220
-1056;ago;Samila;499
-1057;set;Murilo;5198
-1058;out;Ítalo;978
-1059;dez;Mario;5238
-1060;dez;Felipe;4265
-1061;jan;Murilo;385
-1062;fev;Felipe;308
-1063;mar;Felipe;3410
-1064;abr;Felipe;2983
-1065;mar;Jill;156
+cod;month;name;city;sale
+1;set;Ana Clara;Iguatu;2960
+2;out;Derlândio;Jucás;4356
+3;nov;Derlândio;Iguatu;3950
+4;out;Ana Clara;Saboeiro;1798
+5;nov;Derlândio;Tarrafas;5182
+6;dez;Ítalo;Jucás;969
+7;jan;Ana Clara;Cariús;3423
+8;out;Samila;Iguatu;865
+9;nov;Jill;Saboeiro;533
+10;dez;Murilo;Iguatu;5158
+11;jan;Derlândio;Iguatu;3811
+12;fev;Ana Clara;Iguatu;3947
+13;mar;Mario;Cariús;3752
+14;abr;Samila;Jucás;1086
+15;mai;Jill;Iguatu;4604
+16;jun;Murilo;Cariús;3432
+17;jul;Samila;Cariús;1730
+18;jul;Jill;Iguatu;1485
+19;ago;Ítalo;Saboeiro;292
+20;set;Ítalo;Iguatu;3119
+21;out;Mario;Tarrafas;4108
+22;nov;Derlândio;Iguatu;5003
+23;dez;Jill;Saboeiro;3457
+24;jan;Ana Clara;Jucás;770
+25;fev;Felipe;Iguatu;2833
+26;mar;Murilo;Jucás;4397
+27;abr;Ana Clara;Jucás;725
+28;mar;Derlândio;Iguatu;4345
+29;abr;Felipe;Jucás;859
+30;mai;Felipe;Tarrafas;4105
+31;jun;Murilo;Saboeiro;4490
+32;jul;Samila;Saboeiro;5233
+33;ago;Jill;Cariús;1901
+34;set;Derlândio;Cariús;2784
+35;out;Samila;Cariús;3311
+36;nov;Murilo;Cariús;2930
+37;out;Derlândio;Tarrafas;4191
+38;nov;Ítalo;Saboeiro;2201
+39;dez;Murilo;Tarrafas;4859
+40;jan;Derlândio;Tarrafas;2138
+41;out;Ana Clara;Tarrafas;2799
+42;nov;Ítalo;Saboeiro;4746
+43;dez;Mario;Saboeiro;922
+44;jan;Ítalo;Iguatu;510
+45;fev;Jill;Tarrafas;698
+46;mar;Ana Clara;Saboeiro;2743
+47;abr;Ítalo;Iguatu;1548
+48;mai;Samila;Tarrafas;532
+49;jun;Samila;Jucás;4848
+50;jul;Jill;Tarrafas;1798
+51;jul;Ítalo;Cariús;1561
+52;ago;Ítalo;Cariús;2451
+53;set;Felipe;Iguatu;4996
+54;out;Derlândio;Cariús;5222
+55;nov;Felipe;Iguatu;1240
+56;dez;Murilo;Tarrafas;2803
+57;jan;Felipe;Iguatu;3458
+58;fev;Samila;Tarrafas;210
+59;mar;Ítalo;Saboeiro;4288
+60;abr;Samila;Saboeiro;4072
+61;mar;Murilo;Iguatu;1576
+62;abr;Samila;Jucás;2474
+63;mai;Mario;Iguatu;4884
+64;jun;Jill;Tarrafas;2535
+65;jul;Ana Clara;Cariús;2006
+66;ago;Felipe;Cariús;5161
+67;set;Jill;Cariús;3108
+68;out;Felipe;Jucás;2937
+69;nov;Mario;Saboeiro;3583
+70;dez;Felipe;Saboeiro;5113
+71;jan;Derlândio;Cariús;4613
+72;fev;Jill;Saboeiro;3933
+73;mar;Mario;Saboeiro;3420
+74;abr;Felipe;Saboeiro;4164
+75;mai;Samila;Saboeiro;3071
+76;jun;Samila;Saboeiro;4940
+77;jul;Samila;Tarrafas;756
+78;jul;Mario;Saboeiro;4036
+79;ago;Murilo;Saboeiro;320
+80;set;Ana Clara;Jucás;1094
+81;out;Samila;Tarrafas;3779
+82;nov;Felipe;Cariús;4541
+83;dez;Murilo;Tarrafas;4881
+84;jan;Ítalo;Tarrafas;336
+85;fev;Jill;Tarrafas;2090
+86;mar;Jill;Cariús;2885
+87;abr;Ana Clara;Tarrafas;4338
+88;mai;Ana Clara;Saboeiro;3514
+89;jun;Murilo;Tarrafas;4632
+90;jul;Ana Clara;Iguatu;1221
+91;ago;Mario;Cariús;2127
+92;set;Samila;Iguatu;5081
+93;out;Derlândio;Saboeiro;1680
+94;nov;Ana Clara;Iguatu;745
+95;out;Felipe;Iguatu;3839
+96;nov;Mario;Cariús;3784
+97;mai;Ítalo;Jucás;395
+98;jun;Samila;Jucás;4994
+99;jul;Jill;Cariús;198
+100;ago;Mario;Saboeiro;2877
+101;set;Mario;Iguatu;942
+102;out;Samila;Cariús;2099
+103;nov;Felipe;Saboeiro;966
+104;dez;Samila;Cariús;1755
+105;jan;Mario;Jucás;5095
+106;fev;Ana Clara;Jucás;1358
+107;mar;Jill;Saboeiro;1119
+108;abr;Derlândio;Tarrafas;988
+109;mai;Ana Clara;Jucás;974
+110;jun;Felipe;Cariús;5015
+111;jul;Derlândio;Iguatu;662
+112;jul;Ana Clara;Iguatu;3894
+113;ago;Mario;Tarrafas;2247
+114;set;Samila;Tarrafas;1069
+115;out;Murilo;Tarrafas;3451
+116;nov;Murilo;Saboeiro;1489
+117;dez;Samila;Saboeiro;754
+118;jan;Ítalo;Jucás;1509
+119;fev;Derlândio;Tarrafas;1763
+120;mar;Ítalo;Cariús;3647
+121;abr;Ítalo;Iguatu;3206
+122;mai;Felipe;Iguatu;3060
+123;ago;Jill;Iguatu;3086
+124;set;Samila;Cariús;4307
+125;out;Derlândio;Cariús;2985
+126;nov;Samila;Jucás;4082
+127;dez;Derlândio;Cariús;4552
+128;jan;Mario;Saboeiro;441
+129;fev;Jill;Iguatu;5090
+130;mar;Derlândio;Saboeiro;1756
+131;abr;Jill;Cariús;2046
+132;mai;Derlândio;Saboeiro;605
+133;jun;Jill;Cariús;3848
+134;jul;Jill;Cariús;390
+135;ago;Murilo;Cariús;3246
+136;set;Murilo;Cariús;685
+137;out;Ana Clara;Jucás;3774
+138;nov;Ana Clara;Jucás;2294
+139;out;Ítalo;Jucás;3167
+140;nov;Felipe;Tarrafas;5251
+141;mai;Samila;Jucás;2097
+142;jun;Ítalo;Tarrafas;4491
+143;jul;Felipe;Saboeiro;1040
+144;ago;Jill;Tarrafas;3247
+145;set;Murilo;Cariús;2295
+146;out;Mario;Jucás;762
+147;jan;Murilo;Iguatu;1370
+148;fev;Mario;Jucás;3371
+149;mar;Jill;Cariús;5159
+150;abr;Jill;Iguatu;4269
+151;mai;Ana Clara;Iguatu;1076
+152;jun;Jill;Jucás;453
+153;jul;Felipe;Jucás;4741
+154;ago;Ítalo;Saboeiro;2693
+155;set;Murilo;Saboeiro;2601
+156;out;Derlândio;Cariús;3401
+157;nov;Murilo;Tarrafas;4049
+158;dez;Samila;Jucás;4742
+159;jan;Samila;Cariús;2362
+160;fev;Mario;Cariús;251
+161;mar;Samila;Jucás;5068
+162;abr;Mario;Cariús;1464
+163;mai;Ana Clara;Iguatu;3854
+164;jun;Mario;Saboeiro;3250
+165;jul;Derlândio;Jucás;240
+166;jul;Felipe;Tarrafas;186
+167;ago;Derlândio;Saboeiro;3164
+168;set;Jill;Jucás;2547
+169;out;Jill;Iguatu;1822
+170;nov;Derlândio;Tarrafas;171
+171;dez;Ítalo;Saboeiro;5061
+172;jan;Murilo;Jucás;672
+173;fev;Murilo;Jucás;2032
+174;mar;Jill;Saboeiro;1689
+175;abr;Felipe;Tarrafas;4057
+176;mai;Derlândio;Iguatu;665
+177;jun;Jill;Jucás;3184
+178;jul;Felipe;Jucás;4579
+179;ago;Ana Clara;Jucás;4984
+180;set;Ítalo;Jucás;1587
+181;out;Murilo;Cariús;2567
+182;nov;Derlândio;Jucás;513
+183;out;Derlândio;Iguatu;5226
+184;nov;Murilo;Tarrafas;582
+185;dez;Murilo;Tarrafas;1018
+186;jan;Ana Clara;Cariús;4687
+187;out;Samila;Saboeiro;4923
+188;nov;Felipe;Cariús;1065
+189;dez;Ítalo;Cariús;4895
+190;jan;Felipe;Iguatu;2456
+191;fev;Murilo;Saboeiro;2086
+192;mar;Ana Clara;Saboeiro;2679
+193;abr;Murilo;Tarrafas;4372
+194;mai;Ítalo;Saboeiro;2998
+195;jun;Felipe;Tarrafas;2939
+196;jul;Samila;Iguatu;3898
+197;jul;Jill;Cariús;3491
+198;ago;Derlândio;Tarrafas;3691
+199;set;Mario;Jucás;2381
+200;out;Samila;Iguatu;4218
+201;nov;Ana Clara;Saboeiro;2870
+202;dez;Mario;Tarrafas;547
+203;jan;Mario;Tarrafas;1182
+204;fev;Murilo;Saboeiro;2773
+205;mar;Samila;Jucás;1378
+206;abr;Jill;Tarrafas;4350
+207;mar;Felipe;Saboeiro;174
+208;set;Murilo;Jucás;4191
+209;out;Derlândio;Cariús;2396
+210;nov;Ana Clara;Iguatu;3994
+211;out;Jill;Cariús;1360
+212;nov;Felipe;Saboeiro;3539
+213;dez;Derlândio;Cariús;3920
+214;jan;Jill;Tarrafas;1426
+215;out;Samila;Jucás;3548
+216;nov;Mario;Tarrafas;860
+217;dez;Jill;Tarrafas;755
+218;jan;Samila;Tarrafas;4820
+219;fev;Samila;Cariús;1489
+220;mar;Jill;Tarrafas;2705
+221;abr;Derlândio;Jucás;1349
+222;mai;Ana Clara;Cariús;1127
+223;jun;Ítalo;Cariús;2204
+224;jul;Murilo;Cariús;3228
+225;jul;Jill;Iguatu;1396
+226;ago;Felipe;Cariús;1948
+227;set;Samila;Jucás;2420
+228;out;Samila;Iguatu;3194
+229;nov;Samila;Iguatu;2606
+230;dez;Derlândio;Iguatu;2431
+231;jan;Samila;Saboeiro;1503
+232;fev;Mario;Saboeiro;851
+233;mar;Felipe;Iguatu;204
+234;abr;Samila;Saboeiro;184
+235;mar;Murilo;Jucás;1248
+236;abr;Ana Clara;Iguatu;3254
+237;mai;Murilo;Iguatu;4499
+238;jun;Mario;Jucás;5217
+239;jul;Ítalo;Iguatu;378
+240;ago;Ana Clara;Saboeiro;1170
+241;set;Ítalo;Jucás;1992
+242;out;Ítalo;Tarrafas;3578
+243;nov;Jill;Cariús;4557
+244;out;Murilo;Tarrafas;2849
+245;nov;Samila;Tarrafas;2330
+246;dez;Ana Clara;Saboeiro;3436
+247;jan;Ana Clara;Tarrafas;1981
+248;out;Jill;Cariús;369
+249;nov;Mario;Saboeiro;308
+250;dez;Ítalo;Cariús;3140
+251;jan;Jill;Tarrafas;1489
+252;fev;Jill;Tarrafas;4408
+253;mar;Mario;Jucás;1549
+254;abr;Murilo;Tarrafas;2135
+255;mai;Mario;Jucás;382
+256;jun;Ana Clara;Iguatu;1765
+257;jul;Mario;Saboeiro;1123
+258;jul;Felipe;Saboeiro;1728
+259;ago;Murilo;Tarrafas;5136
+260;set;Felipe;Saboeiro;4315
+261;out;Derlândio;Cariús;3724
+262;nov;Felipe;Cariús;2536
+263;dez;Jill;Tarrafas;4588
+264;jan;Mario;Saboeiro;498
+265;fev;Jill;Cariús;1165
+266;mar;Derlândio;Tarrafas;4872
+267;abr;Ana Clara;Cariús;1345
+268;mar;Derlândio;Cariús;4918
+269;abr;Ana Clara;Saboeiro;1763
+270;mai;Ana Clara;Iguatu;5219
+271;jun;Murilo;Saboeiro;3002
+272;jul;Derlândio;Saboeiro;5223
+273;ago;Samila;Cariús;1602
+274;set;Murilo;Cariús;2368
+275;out;Ana Clara;Cariús;1415
+276;nov;Samila;Cariús;2969
+277;dez;Ana Clara;Jucás;1473
+278;jan;Mario;Cariús;1066
+279;fev;Mario;Iguatu;572
+280;mar;Ítalo;Tarrafas;905
+281;abr;Jill;Tarrafas;3455
+282;mai;Samila;Jucás;421
+283;jun;Felipe;Iguatu;1925
+284;jul;Derlândio;Saboeiro;3778
+285;jul;Derlândio;Cariús;902
+286;ago;Samila;Tarrafas;486
+287;set;Mario;Saboeiro;2365
+288;out;Derlândio;Jucás;5127
+289;nov;Ana Clara;Saboeiro;220
+290;dez;Mario;Iguatu;4640
+291;jan;Murilo;Tarrafas;578
+292;fev;Mario;Iguatu;5194
+293;mar;Felipe;Cariús;2071
+294;abr;Derlândio;Tarrafas;1285
+295;mai;Murilo;Cariús;1011
+296;jun;Mario;Cariús;1739
+297;jul;Jill;Cariús;2176
+298;ago;Felipe;Jucás;4675
+299;set;Mario;Saboeiro;3461
+300;out;Mario;Iguatu;1958
+301;nov;Mario;Cariús;4022
+302;out;Felipe;Jucás;4425
+303;nov;Felipe;Jucás;1799
+304;mai;Samila;Cariús;5104
+305;jun;Ana Clara;Iguatu;1353
+306;jul;Jill;Saboeiro;2151
+307;ago;Felipe;Iguatu;1176
+308;set;Mario;Iguatu;2820
+309;out;Derlândio;Cariús;4483
+310;nov;Ítalo;Cariús;1619
+311;dez;Derlândio;Jucás;1859
+312;jan;Mario;Saboeiro;3171
+313;fev;Felipe;Jucás;4010
+314;mar;Murilo;Cariús;3723
+315;abr;Mario;Cariús;804
+316;mai;Derlândio;Saboeiro;2728
+317;jun;Jill;Iguatu;2501
+318;jul;Murilo;Tarrafas;214
+319;jul;Ana Clara;Tarrafas;294
+320;ago;Ítalo;Iguatu;4630
+321;set;Jill;Tarrafas;167
+322;out;Jill;Cariús;1279
+323;nov;Ana Clara;Cariús;1017
+324;dez;Samila;Iguatu;1137
+325;jan;Murilo;Jucás;2120
+326;fev;Jill;Tarrafas;593
+327;mar;Samila;Tarrafas;1790
+328;abr;Ítalo;Cariús;810
+329;mai;Mario;Jucás;5029
+330;ago;Samila;Cariús;3573
+331;set;Derlândio;Cariús;4686
+332;out;Mario;Iguatu;3090
+333;nov;Ítalo;Tarrafas;4007
+334;dez;Jill;Jucás;3139
+335;jan;Mario;Jucás;2097
+336;fev;Jill;Saboeiro;2323
+337;mar;Samila;Saboeiro;1652
+338;abr;Mario;Cariús;2369
+339;mai;Ítalo;Saboeiro;3021
+340;jun;Felipe;Cariús;4039
+341;jul;Ítalo;Cariús;4840
+342;ago;Mario;Cariús;3970
+343;set;Mario;Jucás;3586
+344;out;Samila;Jucás;3618
+345;nov;Samila;Jucás;3617
+346;out;Ítalo;Cariús;1159
+347;nov;Derlândio;Saboeiro;3805
+348;mai;Ana Clara;Jucás;1508
+349;jun;Ana Clara;Cariús;4968
+350;jul;Jill;Tarrafas;2547
+351;ago;Felipe;Cariús;2196
+352;set;Mario;Tarrafas;1540
+353;out;Felipe;Cariús;954
+354;jan;Murilo;Cariús;3131
+355;fev;Felipe;Tarrafas;4799
+356;mar;Jill;Jucás;3781
+357;abr;Derlândio;Tarrafas;2971
+358;mai;Felipe;Iguatu;596
+359;jun;Murilo;Iguatu;5022
+360;jul;Ana Clara;Cariús;4436
+361;ago;Murilo;Iguatu;453
+362;set;Samila;Tarrafas;291
+363;out;Samila;Jucás;2738
+364;dez;Murilo;Saboeiro;4510
+365;jan;Murilo;Cariús;286
+366;fev;Ítalo;Tarrafas;1463
+367;mar;Felipe;Cariús;3177
+368;abr;Jill;Saboeiro;5055
+369;mai;Jill;Tarrafas;3451
+370;jun;Ana Clara;Saboeiro;5104
+371;jul;Murilo;Jucás;2289
+372;jul;Murilo;Jucás;2731
+373;ago;Derlândio;Saboeiro;391
+374;set;Derlândio;Cariús;3659
+375;out;Derlândio;Saboeiro;2589
+376;nov;Murilo;Tarrafas;1770
+377;dez;Ítalo;Cariús;3053
+378;jan;Derlândio;Tarrafas;127
+379;fev;Mario;Cariús;4602
+380;mar;Felipe;Jucás;4384
+381;abr;Ítalo;Cariús;3867
+382;mai;Jill;Saboeiro;4674
+383;ago;Felipe;Cariús;5039
+384;set;Ítalo;Tarrafas;3892
+385;out;Murilo;Cariús;4380
+386;nov;Murilo;Jucás;1220
+387;dez;Jill;Cariús;1689
+388;jan;Derlândio;Jucás;3047
+389;fev;Jill;Cariús;4456
+390;mar;Mario;Tarrafas;1937
+391;abr;Murilo;Saboeiro;3291
+392;mai;Mario;Tarrafas;3453
+393;jun;Derlândio;Jucás;934
+394;jul;Felipe;Tarrafas;4526
+395;ago;Murilo;Jucás;2512
+396;set;Felipe;Jucás;1029
+397;out;Murilo;Cariús;1409
+398;nov;Ítalo;Jucás;837
+399;out;Derlândio;Saboeiro;2596
+400;nov;Mario;Iguatu;960
+401;mai;Mario;Cariús;2249
+402;jun;Ana Clara;Tarrafas;3814
+403;jul;Ana Clara;Cariús;4895
+404;ago;Ítalo;Iguatu;4499
+405;set;Ítalo;Iguatu;3079
+406;out;Murilo;Saboeiro;2927
+407;jan;Ítalo;Tarrafas;4382
+408;fev;Ítalo;Saboeiro;631
+409;mar;Jill;Saboeiro;517
+410;abr;Mario;Tarrafas;3979
+411;mai;Felipe;Jucás;4620
+412;jun;Jill;Saboeiro;4935
+413;jul;Samila;Saboeiro;2893
+414;ago;Ítalo;Tarrafas;4782
+415;set;Jill;Cariús;4412
+416;out;Felipe;Jucás;1263
+417;nov;Felipe;Iguatu;1435
+418;dez;Ítalo;Iguatu;2171
+419;jan;Felipe;Jucás;4038
+420;fev;Ítalo;Cariús;2210
+421;mar;Ítalo;Tarrafas;5170
+422;abr;Felipe;Tarrafas;2454
+423;mai;Ítalo;Cariús;896
+424;jun;Jill;Saboeiro;3428
+425;jul;Ana Clara;Tarrafas;957
+426;jul;Samila;Jucás;1910
+427;ago;Derlândio;Cariús;2781
+428;set;Jill;Jucás;4287
+429;out;Felipe;Saboeiro;550
+430;nov;Ítalo;Jucás;1039
+431;dez;Ana Clara;Tarrafas;3760
+432;jan;Jill;Iguatu;3057
+433;fev;Jill;Iguatu;4720
+434;mar;Murilo;Cariús;2119
+435;abr;Mario;Cariús;1593
+436;mai;Derlândio;Saboeiro;723
+437;jun;Mario;Iguatu;2397
+438;jul;Mario;Saboeiro;3685
+439;ago;Jill;Cariús;4857
+440;set;Felipe;Tarrafas;2600
+441;out;Ítalo;Cariús;2821
+442;nov;Mario;Tarrafas;3033
+443;out;Mario;Iguatu;2626
+444;nov;Samila;Cariús;323
+445;dez;Derlândio;Iguatu;5014
+446;jan;Murilo;Tarrafas;1223
+447;out;Felipe;Jucás;2301
+448;nov;Ítalo;Iguatu;4809
+449;dez;Jill;Iguatu;1770
+450;jan;Samila;Jucás;2046
+451;fev;Murilo;Saboeiro;4392
+452;mar;Mario;Iguatu;2736
+453;abr;Murilo;Tarrafas;595
+454;mai;Murilo;Iguatu;554
+455;jun;Ana Clara;Cariús;2663
+456;jul;Ana Clara;Iguatu;2431
+457;jul;Felipe;Jucás;660
+458;ago;Derlândio;Tarrafas;5068
+459;set;Ana Clara;Iguatu;2909
+460;out;Jill;Iguatu;2150
+461;nov;Samila;Cariús;2958
+462;dez;Murilo;Cariús;2176
+463;jan;Jill;Jucás;4384
+464;fev;Derlândio;Iguatu;1620
+465;mar;Felipe;Saboeiro;4468
+466;abr;Mario;Jucás;137
+467;mar;Mario;Iguatu;220
+468;set;Felipe;Jucás;2672
+469;nov;Ítalo;Tarrafas;3225
+470;out;Ana Clara;Jucás;4645
+471;nov;Jill;Iguatu;875
+472;dez;Felipe;Jucás;2062
+473;jan;Ana Clara;Iguatu;1759
+474;out;Samila;Jucás;1768
+475;nov;Jill;Jucás;330
+476;dez;Mario;Saboeiro;2636
+477;jan;Jill;Cariús;2820
+478;fev;Derlândio;Iguatu;1185
+479;mar;Ítalo;Cariús;2194
+480;abr;Samila;Cariús;4391
+481;mai;Samila;Cariús;2087
+482;jun;Ítalo;Tarrafas;4700
+483;jul;Murilo;Iguatu;4467
+484;jul;Jill;Jucás;735
+485;ago;Murilo;Cariús;2952
+486;set;Derlândio;Tarrafas;2535
+487;out;Felipe;Saboeiro;523
+488;nov;Derlândio;Cariús;1300
+489;dez;Ana Clara;Tarrafas;662
+490;jan;Mario;Saboeiro;2469
+491;fev;Jill;Saboeiro;1818
+492;mar;Mario;Jucás;193
+493;abr;Mario;Jucás;4510
+494;mar;Murilo;Iguatu;1630
+495;set;Murilo;Iguatu;3012
+496;out;Felipe;Saboeiro;988
+497;nov;Derlândio;Iguatu;1073
+498;out;Felipe;Cariús;3658
+499;nov;Derlândio;Saboeiro;1956
+500;dez;Jill;Cariús;1215
+501;jan;Ítalo;Iguatu;4804
+502;out;Ítalo;Tarrafas;1648
+503;nov;Ítalo;Iguatu;164
+504;dez;Ítalo;Tarrafas;2549
+505;jan;Ana Clara;Jucás;1514
+506;fev;Ana Clara;Jucás;624
+507;mar;Derlândio;Cariús;169
+508;abr;Ítalo;Jucás;2201
+509;mai;Derlândio;Iguatu;694
+510;jun;Felipe;Jucás;239
+511;jul;Ana Clara;Jucás;914
+512;jul;Ana Clara;Iguatu;1597
+513;ago;Samila;Saboeiro;3601
+514;set;Samila;Saboeiro;3277
+515;out;Derlândio;Cariús;3478
+516;nov;Ana Clara;Iguatu;3199
+517;dez;Jill;Saboeiro;4287
+518;jan;Mario;Saboeiro;2677
+519;fev;Ana Clara;Saboeiro;3466
+520;mar;Felipe;Tarrafas;182
+521;abr;Mario;Jucás;5113
+522;mar;Mario;Saboeiro;3731
+523;abr;Murilo;Cariús;754
+524;mai;Samila;Cariús;4265
+525;jun;Felipe;Cariús;3414
+526;jul;Jill;Saboeiro;263
+527;ago;Samila;Cariús;3509
+528;set;Murilo;Saboeiro;1318
+529;out;Samila;Jucás;4855
+530;nov;Ana Clara;Saboeiro;4366
+531;out;Felipe;Iguatu;2913
+532;nov;Derlândio;Cariús;2188
+533;dez;Ana Clara;Cariús;3926
+534;jan;Ítalo;Iguatu;965
+535;out;Mario;Cariús;2876
+536;nov;Murilo;Saboeiro;908
+537;dez;Ana Clara;Saboeiro;1520
+538;jan;Jill;Saboeiro;3086
+539;fev;Ana Clara;Jucás;4202
+540;mar;Felipe;Cariús;764
+541;abr;Felipe;Iguatu;708
+542;mai;Derlândio;Tarrafas;3450
+543;jun;Mario;Iguatu;2412
+544;jul;Ana Clara;Saboeiro;691
+545;jul;Derlândio;Saboeiro;4495
+546;ago;Ana Clara;Iguatu;4802
+547;set;Murilo;Jucás;3730
+548;out;Derlândio;Saboeiro;2026
+549;nov;Derlândio;Tarrafas;123
+550;dez;Derlândio;Jucás;2728
+551;jan;Felipe;Iguatu;3731
+552;fev;Ana Clara;Saboeiro;5215
+553;mar;Samila;Saboeiro;2883
+554;abr;Samila;Saboeiro;4852
+555;mar;Samila;Saboeiro;1332
+556;abr;Jill;Saboeiro;5076
+557;mai;Ana Clara;Iguatu;1702
+558;jun;Ana Clara;Iguatu;2801
+559;jul;Samila;Iguatu;4532
+560;ago;Ítalo;Saboeiro;436
+561;set;Murilo;Tarrafas;1275
+562;out;Derlândio;Jucás;1237
+563;nov;Ítalo;Saboeiro;4479
+564;dez;Jill;Saboeiro;3735
+565;jan;Murilo;Cariús;1537
+566;fev;Samila;Saboeiro;2838
+567;mar;Samila;Iguatu;1412
+568;abr;Felipe;Jucás;3622
+569;mai;Derlândio;Jucás;5020
+570;jun;Murilo;Tarrafas;4672
+571;jul;Ítalo;Jucás;5136
+572;jul;Ana Clara;Cariús;5161
+573;ago;Samila;Saboeiro;1856
+574;set;Murilo;Cariús;5096
+575;out;Samila;Jucás;3684
+576;nov;Ítalo;Tarrafas;2820
+577;dez;Jill;Jucás;5008
+578;jan;Jill;Tarrafas;448
+579;fev;Felipe;Jucás;3471
+580;mar;Samila;Cariús;154
+581;abr;Felipe;Jucás;131
+582;mai;Ana Clara;Cariús;3552
+583;jun;Samila;Iguatu;5227
+584;jul;Murilo;Iguatu;804
+585;ago;Jill;Jucás;556
+586;set;Ítalo;Tarrafas;1383
+587;out;Jill;Jucás;2020
+588;nov;Mario;Saboeiro;3208
+589;out;Ítalo;Iguatu;1813
+590;nov;Murilo;Cariús;280
+591;mai;Felipe;Saboeiro;200
+592;jun;Jill;Tarrafas;3894
+593;jul;Jill;Tarrafas;3029
+594;ago;Ítalo;Saboeiro;1731
+595;set;Ítalo;Iguatu;4137
+596;out;Ítalo;Cariús;3241
+597;nov;Felipe;Tarrafas;4974
+598;dez;Samila;Saboeiro;179
+599;jan;Derlândio;Tarrafas;1178
+600;fev;Derlândio;Cariús;3332
+601;mar;Derlândio;Saboeiro;4173
+602;abr;Mario;Jucás;2323
+603;mai;Jill;Jucás;4605
+604;jun;Murilo;Saboeiro;512
+605;jul;Murilo;Jucás;1604
+606;jul;Ítalo;Jucás;4270
+607;ago;Samila;Saboeiro;3086
+608;set;Derlândio;Tarrafas;1711
+609;out;Derlândio;Iguatu;1986
+610;nov;Mario;Cariús;693
+611;dez;Mario;Tarrafas;2963
+612;jan;Mario;Jucás;4937
+613;fev;Jill;Saboeiro;4797
+614;mar;Mario;Jucás;1866
+615;abr;Jill;Saboeiro;3245
+616;mai;Ana Clara;Jucás;1568
+617;ago;Ítalo;Cariús;4053
+618;set;Murilo;Cariús;1951
+619;out;Jill;Tarrafas;840
+620;nov;Samila;Jucás;1719
+621;dez;Jill;Iguatu;4035
+622;jan;Ítalo;Cariús;276
+623;fev;Jill;Jucás;394
+624;mar;Derlândio;Jucás;1403
+625;abr;Jill;Saboeiro;1996
+626;mai;Samila;Cariús;5203
+627;jun;Derlândio;Iguatu;4461
+628;jul;Jill;Saboeiro;4593
+629;ago;Felipe;Tarrafas;3289
+630;set;Mario;Saboeiro;1642
+631;out;Samila;Saboeiro;5015
+632;nov;Ana Clara;Tarrafas;3765
+633;out;Mario;Tarrafas;632
+634;nov;Jill;Saboeiro;3891
+635;mai;Felipe;Saboeiro;4229
+636;jun;Ítalo;Iguatu;578
+637;jul;Mario;Jucás;3340
+638;ago;Ítalo;Jucás;4066
+639;set;Ítalo;Tarrafas;2477
+640;out;Ítalo;Iguatu;3542
+641;jan;Felipe;Iguatu;954
+642;fev;Jill;Cariús;4025
+643;mar;Derlândio;Jucás;1768
+644;abr;Mario;Saboeiro;1501
+645;mai;Derlândio;Tarrafas;1606
+646;jun;Ítalo;Cariús;1668
+647;jul;Mario;Iguatu;4128
+648;ago;Felipe;Cariús;508
+649;set;Murilo;Cariús;4359
+650;out;Murilo;Tarrafas;4252
+651;dez;Murilo;Cariús;4531
+652;jan;Mario;Cariús;3051
+653;fev;Murilo;Iguatu;2952
+654;mar;Derlândio;Tarrafas;2644
+655;abr;Mario;Tarrafas;4578
+656;mai;Ítalo;Tarrafas;2206
+657;jun;Ana Clara;Iguatu;3916
+658;mai;Felipe;Cariús;1135
+659;jun;Ítalo;Saboeiro;547
+660;jul;Jill;Jucás;5253
+661;jul;Murilo;Jucás;1188
+662;ago;Samila;Saboeiro;1184
+663;set;Mario;Saboeiro;1044
+664;out;Ítalo;Jucás;1722
+665;nov;Felipe;Jucás;605
+666;dez;Murilo;Tarrafas;3901
+667;jan;Samila;Iguatu;3607
+668;fev;Felipe;Saboeiro;2436
+669;mar;Ítalo;Saboeiro;3220
+670;abr;Felipe;Cariús;3699
+671;mai;Murilo;Iguatu;3961
+672;jun;Mario;Saboeiro;3441
+673;jul;Derlândio;Saboeiro;3196
+674;ago;Mario;Jucás;3127
+675;set;Ítalo;Jucás;3520
+676;out;Murilo;Tarrafas;3716
+677;nov;Jill;Tarrafas;4863
+678;out;Felipe;Tarrafas;146
+679;nov;Ítalo;Cariús;2999
+680;dez;Jill;Jucás;2826
+681;jan;Ana Clara;Cariús;305
+682;out;Mario;Tarrafas;2625
+683;nov;Ana Clara;Saboeiro;4302
+684;dez;Samila;Jucás;4217
+685;jan;Samila;Tarrafas;3675
+686;fev;Derlândio;Cariús;3937
+687;mar;Murilo;Iguatu;4661
+688;abr;Mario;Cariús;1071
+689;mai;Derlândio;Jucás;1182
+690;jun;Felipe;Iguatu;3200
+691;jul;Ítalo;Jucás;4841
+692;jul;Mario;Saboeiro;3990
+693;ago;Murilo;Iguatu;1147
+694;set;Derlândio;Iguatu;2929
+695;out;Derlândio;Iguatu;368
+696;nov;Felipe;Jucás;2765
+697;dez;Samila;Jucás;2075
+698;jan;Mario;Tarrafas;2366
+699;fev;Mario;Tarrafas;4443
+700;mar;Derlândio;Saboeiro;2310
+701;abr;Felipe;Jucás;2736
+702;mar;Felipe;Saboeiro;4406
+703;set;Ana Clara;Tarrafas;4667
+704;nov;Murilo;Cariús;1894
+705;out;Samila;Iguatu;4896
+706;nov;Felipe;Jucás;5125
+707;dez;Ítalo;Cariús;1447
+708;jan;Jill;Iguatu;740
+709;out;Ítalo;Cariús;2577
+710;nov;Felipe;Iguatu;2367
+711;dez;Mario;Jucás;3335
+712;jan;Samila;Iguatu;3980
+713;fev;Samila;Saboeiro;4289
+714;mar;Jill;Jucás;1640
+715;abr;Felipe;Iguatu;4094
+716;mai;Samila;Jucás;3567
+717;jun;Murilo;Saboeiro;3988
+718;jul;Samila;Cariús;498
+719;jul;Jill;Iguatu;2285
+720;ago;Derlândio;Tarrafas;4487
+721;set;Murilo;Iguatu;3067
+722;out;Murilo;Tarrafas;1331
+723;nov;Jill;Tarrafas;3527
+724;dez;Derlândio;Tarrafas;4746
+725;jan;Felipe;Saboeiro;1831
+726;fev;Jill;Tarrafas;1922
+727;mar;Derlândio;Cariús;4007
+728;abr;Jill;Tarrafas;250
+729;mar;Murilo;Saboeiro;3311
+730;set;Jill;Cariús;3113
+731;out;Jill;Tarrafas;1064
+732;nov;Ítalo;Cariús;984
+733;out;Mario;Tarrafas;777
+734;nov;Derlândio;Saboeiro;180
+735;dez;Derlândio;Jucás;2588
+736;jan;Ana Clara;Tarrafas;698
+737;out;Ítalo;Cariús;1412
+738;nov;Felipe;Cariús;3589
+739;dez;Murilo;Cariús;2804
+740;jan;Derlândio;Iguatu;5170
+741;fev;Felipe;Jucás;4771
+742;mar;Derlândio;Jucás;4592
+743;abr;Murilo;Cariús;669
+744;mai;Mario;Iguatu;2573
+745;jun;Ana Clara;Jucás;1410
+746;jul;Mario;Iguatu;1278
+747;jul;Felipe;Jucás;1763
+748;ago;Murilo;Cariús;766
+749;set;Samila;Cariús;1070
+750;out;Murilo;Tarrafas;4319
+751;nov;Derlândio;Saboeiro;3572
+752;dez;Mario;Iguatu;2314
+753;jan;Felipe;Saboeiro;3311
+754;fev;Felipe;Cariús;4004
+755;mar;Ana Clara;Saboeiro;241
+756;abr;Felipe;Iguatu;864
+757;mai;Samila;Iguatu;3163
+758;jun;Samila;Saboeiro;1053
+759;jul;Jill;Saboeiro;4812
+760;jul;Samila;Saboeiro;3400
+761;ago;Mario;Cariús;2755
+762;set;Ana Clara;Tarrafas;1926
+763;out;Jill;Jucás;5110
+764;nov;Murilo;Cariús;4176
+765;dez;Felipe;Saboeiro;1349
+766;jan;Felipe;Jucás;2562
+767;fev;Ítalo;Cariús;3765
+768;mar;Jill;Cariús;5233
+769;abr;Ana Clara;Tarrafas;1648
+770;mai;Ana Clara;Cariús;1038
+771;ago;Samila;Iguatu;4680
+772;set;Jill;Cariús;3617
+773;out;Mario;Tarrafas;5240
+774;nov;Murilo;Jucás;404
+775;dez;Ana Clara;Jucás;194
+776;jan;Ana Clara;Iguatu;903
+777;fev;Ítalo;Saboeiro;2385
+778;mar;Ítalo;Iguatu;1376
+779;abr;Felipe;Tarrafas;4962
+780;mai;Ítalo;Iguatu;4034
+781;jun;Felipe;Tarrafas;3815
+782;jul;Derlândio;Iguatu;4029
+783;ago;Mario;Iguatu;3438
+784;set;Mario;Tarrafas;972
+785;out;Jill;Tarrafas;5181
+786;nov;Murilo;Jucás;3301
+787;out;Derlândio;Iguatu;3270
+788;nov;Murilo;Jucás;3790
+789;mai;Felipe;Cariús;5053
+790;jun;Felipe;Tarrafas;3745
+791;jul;Samila;Iguatu;496
+792;ago;Ítalo;Jucás;5030
+793;set;Derlândio;Saboeiro;1468
+794;out;Derlândio;Cariús;1967
+795;jan;Murilo;Jucás;4848
+796;fev;Derlândio;Jucás;2578
+797;mar;Ítalo;Tarrafas;4181
+798;abr;Murilo;Tarrafas;610
+799;mai;Samila;Cariús;5065
+800;jun;Felipe;Iguatu;770
+801;jul;Samila;Saboeiro;4206
+802;ago;Samila;Cariús;2079
+803;set;Felipe;Saboeiro;3015
+804;out;Ana Clara;Cariús;1853
+805;dez;Ana Clara;Iguatu;3983
+806;jan;Samila;Saboeiro;3951
+807;fev;Jill;Saboeiro;310
+808;mar;Jill;Iguatu;2359
+809;abr;Derlândio;Saboeiro;3322
+810;mai;Samila;Jucás;3517
+811;jun;Jill;Iguatu;310
+812;mai;Samila;Tarrafas;3626
+813;jun;Samila;Saboeiro;173
+814;jul;Samila;Saboeiro;4487
+815;jul;Ítalo;Tarrafas;4629
+816;ago;Ana Clara;Cariús;3987
+817;set;Jill;Cariús;3578
+818;out;Ítalo;Tarrafas;2953
+819;nov;Mario;Jucás;2109
+820;dez;Mario;Iguatu;4612
+821;jan;Ítalo;Cariús;1888
+822;fev;Felipe;Iguatu;4088
+823;mar;Derlândio;Iguatu;3407
+824;abr;Ítalo;Saboeiro;4186
+825;mai;Jill;Cariús;1689
+826;jun;Ana Clara;Jucás;4648
+827;jul;Derlândio;Cariús;4216
+828;ago;Jill;Tarrafas;1478
+829;set;Jill;Cariús;3109
+830;out;Felipe;Cariús;2439
+831;nov;Ana Clara;Iguatu;5012
+832;out;Derlândio;Saboeiro;945
+833;nov;Felipe;Saboeiro;781
+834;dez;Jill;Iguatu;717
+835;jan;Derlândio;Saboeiro;4705
+836;out;Jill;Cariús;420
+837;nov;Murilo;Iguatu;3647
+838;dez;Ítalo;Jucás;4088
+839;jan;Ana Clara;Saboeiro;1448
+840;fev;Ítalo;Tarrafas;2858
+841;mar;Ana Clara;Tarrafas;2911
+842;abr;Ítalo;Saboeiro;476
+843;mai;Felipe;Iguatu;2908
+844;jun;Derlândio;Jucás;3835
+845;jul;Samila;Cariús;1882
+846;jul;Ana Clara;Jucás;3294
+847;ago;Felipe;Jucás;1807
+848;set;Jill;Iguatu;3555
+849;out;Felipe;Iguatu;4576
+850;nov;Murilo;Tarrafas;2014
+851;dez;Samila;Iguatu;3722
+852;jan;Felipe;Jucás;1311
+853;fev;Felipe;Cariús;2512
+854;mar;Ítalo;Saboeiro;290
+855;abr;Jill;Cariús;2284
+856;mar;Derlândio;Jucás;3008
+857;set;Murilo;Iguatu;3163
+858;nov;Jill;Tarrafas;953
+859;out;Samila;Iguatu;875
+860;nov;Ana Clara;Saboeiro;176
+861;dez;Ítalo;Tarrafas;852
+862;jan;Ana Clara;Cariús;2591
+863;out;Ana Clara;Cariús;1752
+864;nov;Jill;Jucás;5187
+865;dez;Ítalo;Saboeiro;5254
+866;jan;Derlândio;Tarrafas;3603
+867;fev;Jill;Iguatu;129
+868;mar;Derlândio;Saboeiro;1239
+869;abr;Derlândio;Iguatu;4913
+870;mai;Derlândio;Saboeiro;4470
+871;jun;Jill;Saboeiro;1639
+872;jul;Murilo;Saboeiro;2586
+873;jul;Murilo;Iguatu;3434
+874;ago;Ana Clara;Iguatu;3953
+875;set;Derlândio;Tarrafas;1327
+876;out;Mario;Saboeiro;1498
+877;nov;Ana Clara;Jucás;851
+878;dez;Derlândio;Cariús;1603
+879;jan;Derlândio;Jucás;4074
+880;fev;Derlândio;Tarrafas;434
+881;mar;Murilo;Iguatu;277
+882;abr;Samila;Tarrafas;2525
+883;mar;Murilo;Cariús;1761
+884;set;Samila;Jucás;713
+885;out;Murilo;Jucás;3746
+886;nov;Samila;Iguatu;705
+887;out;Ítalo;Cariús;4532
+888;nov;Ana Clara;Cariús;3498
+889;dez;Felipe;Jucás;3600
+890;jan;Ana Clara;Iguatu;2938
+891;out;Ana Clara;Saboeiro;276
+892;nov;Derlândio;Saboeiro;1466
+893;dez;Derlândio;Tarrafas;2354
+894;jan;Mario;Tarrafas;586
+895;fev;Samila;Jucás;1386
+896;mar;Murilo;Jucás;586
+897;abr;Samila;Tarrafas;4410
+898;mai;Mario;Cariús;1702
+899;jun;Felipe;Tarrafas;1061
+900;jul;Ítalo;Saboeiro;3722
+901;jul;Derlândio;Tarrafas;1099
+902;ago;Samila;Iguatu;2428
+903;set;Samila;Saboeiro;4722
+904;out;Murilo;Cariús;1343
+905;nov;Ana Clara;Iguatu;1466
+906;dez;Samila;Iguatu;4520
+907;jan;Jill;Cariús;2233
+908;fev;Felipe;Tarrafas;135
+909;mar;Ana Clara;Saboeiro;397
+910;abr;Samila;Iguatu;2368
+911;mai;Derlândio;Saboeiro;1301
+912;jun;Derlândio;Saboeiro;4326
+913;jul;Jill;Saboeiro;4378
+914;jul;Mario;Jucás;3818
+915;ago;Felipe;Saboeiro;4609
+916;set;Jill;Tarrafas;992
+917;out;Samila;Saboeiro;4314
+918;nov;Jill;Jucás;2948
+919;dez;Samila;Tarrafas;165
+920;jan;Derlândio;Tarrafas;3403
+921;fev;Jill;Jucás;394
+922;mar;Felipe;Jucás;1403
+923;abr;Jill;Cariús;3394
+924;mai;Ana Clara;Cariús;714
+925;ago;Jill;Tarrafas;4007
+926;set;Ana Clara;Tarrafas;5050
+927;out;Ítalo;Cariús;200
+928;nov;Ítalo;Tarrafas;3102
+929;dez;Ítalo;Tarrafas;3101
+930;jan;Ana Clara;Jucás;1881
+931;fev;Jill;Iguatu;3736
+932;mar;Ana Clara;Saboeiro;1450
+933;abr;Murilo;Saboeiro;2227
+934;mai;Jill;Tarrafas;767
+935;jun;Felipe;Cariús;2962
+936;jul;Ana Clara;Jucás;5102
+937;ago;Felipe;Saboeiro;1709
+938;set;Jill;Iguatu;4884
+939;out;Ana Clara;Saboeiro;1360
+940;nov;Samila;Jucás;484
+941;out;Ítalo;Jucás;1403
+942;nov;Felipe;Saboeiro;3041
+943;mai;Mario;Saboeiro;5163
+944;jun;Derlândio;Cariús;1265
+945;jul;Ítalo;Cariús;3256
+946;ago;Samila;Jucás;5079
+947;set;Felipe;Tarrafas;2286
+948;out;Ana Clara;Jucás;4312
+949;jan;Felipe;Saboeiro;2607
+950;fev;Jill;Saboeiro;3987
+951;mar;Mario;Cariús;4479
+952;abr;Jill;Tarrafas;2388
+953;mai;Felipe;Iguatu;5053
+954;jun;Jill;Jucás;366
+955;jul;Ana Clara;Jucás;1184
+956;ago;Jill;Tarrafas;2979
+957;set;Mario;Cariús;1639
+958;out;Derlândio;Tarrafas;3043
+959;dez;Samila;Iguatu;2984
+960;jan;Mario;Iguatu;3122
+961;fev;Derlândio;Tarrafas;481
+962;mar;Felipe;Jucás;1327
+963;abr;Mario;Jucás;3854
+964;mai;Derlândio;Jucás;2952
+965;jun;Felipe;Iguatu;2820
+966;mai;Ítalo;Jucás;2733
+967;jun;Ana Clara;Iguatu;5084
+968;jul;Felipe;Tarrafas;562
+969;jul;Ana Clara;Tarrafas;4114
+970;ago;Felipe;Iguatu;2277
+971;set;Ana Clara;Iguatu;985
+972;out;Jill;Cariús;5059
+973;nov;Samila;Saboeiro;4191
+974;dez;Ítalo;Saboeiro;3512
+975;jan;Mario;Jucás;2135
+976;fev;Mario;Jucás;1709
+977;mar;Samila;Cariús;1441
+978;abr;Ítalo;Iguatu;5160
+979;mai;Felipe;Iguatu;1644
+980;jun;Felipe;Iguatu;4555
+981;jul;Samila;Jucás;1629
+982;ago;Jill;Jucás;4170
+983;set;Jill;Saboeiro;4227
+984;out;Mario;Cariús;5074
+985;nov;Mario;Iguatu;3764
+986;out;Derlândio;Saboeiro;4266
+987;nov;Ítalo;Iguatu;1510
+988;dez;Ítalo;Tarrafas;2705
+989;jan;Felipe;Jucás;1666
+990;out;Ana Clara;Tarrafas;2262
+991;nov;Ana Clara;Iguatu;4725
+992;dez;Mario;Tarrafas;2289
+993;jan;Samila;Iguatu;2018
+994;fev;Ítalo;Saboeiro;1470
+995;mar;Ítalo;Cariús;4169
+996;abr;Felipe;Iguatu;2767
+997;mai;Ana Clara;Iguatu;399
+998;jun;Felipe;Jucás;963
+999;jul;Murilo;Tarrafas;411
+1000;jul;Felipe;Jucás;418
+1001;ago;Murilo;Iguatu;4865
+1002;set;Mario;Saboeiro;2616
+1003;out;Jill;Iguatu;4785
+1004;nov;Murilo;Jucás;5198
+1005;dez;Derlândio;Jucás;4522
+1006;jan;Felipe;Jucás;5168
+1007;fev;Jill;Tarrafas;1079
+1008;mar;Jill;Jucás;5212
+1009;abr;Samila;Jucás;1109
+1010;mar;Mario;Tarrafas;1885
+1011;set;Ana Clara;Jucás;1176
+1012;nov;Murilo;Tarrafas;1446
+1013;out;Felipe;Cariús;767
+1014;nov;Felipe;Iguatu;3411
+1015;dez;Ana Clara;Cariús;3018
+1016;jan;Ítalo;Iguatu;1881
+1017;out;Felipe;Iguatu;3261
+1018;nov;Mario;Tarrafas;1322
+1019;dez;Felipe;Iguatu;3789
+1020;jan;Jill;Cariús;4031
+1021;fev;Felipe;Cariús;1963
+1022;mar;Jill;Saboeiro;3041
+1023;abr;Felipe;Tarrafas;878
+1024;mai;Ítalo;Cariús;1935
+1025;jun;Murilo;Cariús;2765
+1026;jul;Ítalo;Cariús;2095
+1027;jul;Ana Clara;Tarrafas;5076
+1028;ago;Felipe;Saboeiro;1262
+1029;set;Derlândio;Saboeiro;2687
+1030;out;Ana Clara;Tarrafas;3277
+1031;nov;Murilo;Tarrafas;1474
+1032;dez;Jill;Tarrafas;3255
+1033;jan;Felipe;Tarrafas;4109
+1034;fev;Jill;Jucás;4899
+1035;mar;Ana Clara;Cariús;4202
+1036;abr;Mario;Cariús;2811
+1037;mar;Ana Clara;Jucás;2339
+1038;set;Ana Clara;Saboeiro;1659
+1039;out;Jill;Iguatu;560
+1040;nov;Jill;Saboeiro;5157
+1041;out;Jill;Saboeiro;2964
+1042;nov;Ítalo;Cariús;326
+1043;dez;Felipe;Iguatu;3102
+1044;jan;Felipe;Saboeiro;1933
+1045;out;Mario;Tarrafas;4286
+1046;nov;Felipe;Iguatu;976
+1047;dez;Felipe;Saboeiro;5229
+1048;jan;Felipe;Jucás;3221
+1049;fev;Mario;Jucás;2347
+1050;mar;Murilo;Iguatu;2398
+1051;abr;Samila;Iguatu;3983
+1052;mai;Samila;Tarrafas;3709
+1053;jun;Mario;Jucás;515
+1054;jul;Samila;Saboeiro;1388
+1055;jul;Mario;Cariús;3220
+1056;out;Samila;Jucás;499
+1057;nov;Murilo;Jucás;5198
+1058;dez;Ítalo;Saboeiro;978
+1059;jan;Mario;Saboeiro;5238
+1060;fev;Felipe;Jucás;4265
+1061;mar;Murilo;Cariús;385
+1062;abr;Felipe;Tarrafas;308
+1063;mar;Felipe;Jucás;3410
+1064;set;Felipe;Cariús;2983
+1065;nov;Jill;Tarrafas;156
+1066;out;Ana Clara;Cariús;3011
+1067;nov;Felipe;Tarrafas;3913
+1068;dez;Murilo;Iguatu;1870
+1069;jan;Felipe;Saboeiro;3212
+1070;fev;Murilo;Saboeiro;1980
+1071;mar;Mario;Jucás;2063
+1072;abr;Jill;Tarrafas;2844
+1073;mar;Murilo;Jucás;4016
+1074;set;Derlândio;Saboeiro;3552
+1075;nov;Felipe;Saboeiro;3679
+1076;out;Jill;Cariús;2239
+1077;nov;Jill;Iguatu;2502
+1078;dez;Samila;Iguatu;2414
+1079;jan;Mario;Tarrafas;1417
+1080;out;Ana Clara;Iguatu;3283
+1081;nov;Murilo;Iguatu;3746
+1082;dez;Felipe;Cariús;3721
+1083;jan;Felipe;Saboeiro;1005
+1084;fev;Ana Clara;Cariús;3531
+1085;mar;Ítalo;Saboeiro;3209
+1086;abr;Felipe;Cariús;2208
+1087;mai;Mario;Iguatu;4422
+1088;jun;Felipe;Jucás;1135
+1089;jul;Jill;Iguatu;3146
+1090;jul;Felipe;Saboeiro;1601
+1091;ago;Jill;Jucás;3662
+1092;set;Felipe;Iguatu;1022
+1093;out;Samila;Cariús;2010
+1094;nov;Mario;Cariús;3478
+1095;dez;Samila;Iguatu;2045
+1096;jan;Mario;Cariús;2935
+1097;fev;Samila;Saboeiro;2610
+1098;mar;Murilo;Tarrafas;1182
+1099;abr;Ítalo;Cariús;1130
+1100;mar;Mario;Tarrafas;3842
+1101;set;Felipe;Tarrafas;2625
+1102;out;Murilo;Jucás;3800
+1103;nov;Felipe;Cariús;2262
+1104;out;Felipe;Saboeiro;4725
+1105;nov;Felipe;Saboeiro;2289
+1106;dez;Jill;Cariús;2018
+1107;jan;Ana Clara;Cariús;1470
+1108;out;Felipe;Jucás;4169
+1109;nov;Murilo;Saboeiro;2767
+1110;dez;Felipe;Saboeiro;399
+1111;jan;Murilo;Iguatu;963
+1112;fev;Mario;Saboeiro;411
+1113;mar;Jill;Cariús;418
+1114;abr;Murilo;Iguatu;4865
+1115;mai;Derlândio;Jucás;2616
+1116;jun;Felipe;Iguatu;4785
+1117;jul;Jill;Tarrafas;5198
+1118;jul;Jill;Iguatu;4522
+1119;out;Samila;Cariús;5168
+1119;mar;Ítalo;Tarrafas;1079
+1119;abr;Mario;Tarrafas;5212
+1119;mar;Felipe;Cariús;1109
+1119;set;Murilo;Tarrafas;1885
+1119;out;Felipe;Cariús;1176
+1119;nov;Felipe;Saboeiro;1446
+1119;out;Felipe;Tarrafas;767
+1119;nov;Jill;Iguatu;3411
+1119;dez;Ana Clara;Iguatu;3018
+1119;jan;Felipe;Jucás;1881
+1119;out;Murilo;Tarrafas;3261
+1119;nov;Felipe;Cariús;1322
+1119;dez;Murilo;Cariús;3789
+1119;jan;Mario;Jucás;4031
+1119;fev;Jill;Jucás;1963
+1119;mar;Murilo;Iguatu;3041
+1119;abr;Derlândio;Tarrafas;878
+1119;mai;Felipe;Cariús;1935
+1119;jun;Jill;Saboeiro;2765
+1119;jul;Jill;Cariús;2095
+1119;jul;Samila;Saboeiro;5076
+1119;out;Ítalo;Cariús;1262
+1119;mar;Mario;Cariús;2687
+1119;abr;Felipe;Cariús;3277
+1119;mar;Murilo;Cariús;1474
+1119;set;Felipe;Tarrafas;3255
+1119;out;Felipe;Saboeiro;4109
+1119;nov;Felipe;Saboeiro;4899
+1119;out;Jill;Tarrafas;4202
+1119;nov;Ana Clara;Tarrafas;2811
+1119;dez;Felipe;Iguatu;2339
+1119;jan;Murilo;Iguatu;1659
+1119;out;Felipe;Cariús;560
+1119;nov;Murilo;Iguatu;5157
+1119;dez;Mario;Saboeiro;2964
+1119;jan;Jill;Tarrafas;326

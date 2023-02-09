@@ -1,11 +1,11 @@
 SELECT * FROM sales;
 SELECT * FROM sales ORDER BY sale DESC;
-SELECT DISTINCT name FROM sales ORDER BY name;
+SELECT DISTINCT city FROM sales ORDER BY city;
 SELECT * FROM sales WHERE name LIKE '_a%';
 
 SELECT * FROM sales 
 WHERE month IN ('jan', 'jul','dez')
-ORDER BY month;
+ORDER BY month, name;
 
 SELECT * FROM sales 
 WHERE sale >= 2000 AND sale <= 3000
@@ -15,7 +15,7 @@ SELECT * FROM sales
 WHERE sale BETWEEN 2000 AND 3000
 ORDER BY sale;
 
-SELECT 	COUNT(*) FROM sales;
+SELECT COUNT(*) FROM sales;
 SELECT COUNT(DISTINCT name) FROM sales;
 SELECT COUNT(DISTINCT month) FROM sales;
 
@@ -27,10 +27,10 @@ SELECT
     AVG(sale),
     STD(sale)
 FROM sales
-WHERE month = 'dez' AND sale > 3000;
+WHERE city = 'jucas' AND sale > 3000;
 
-SELECT month, SUM(sale) AS total 
-FROM sales GROUP BY month
+SELECT city, SUM(sale) AS total 
+FROM sales GROUP BY city
 ORDER BY total DESC;
 
 SELECT

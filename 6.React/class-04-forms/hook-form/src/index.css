@@ -1,0 +1,36 @@
+:root {
+    font-size: 62.5%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #333;
+    overflow: auto;
+    color: white;
+    font-size: 1.6rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+input, button, textarea, select {
+    font-size: 1.6rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    padding: 1.6rem;
+    max-width: 48.0rem;
+    margin: 0 auto;
+
+    display: grid;
+    place-content: center;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}

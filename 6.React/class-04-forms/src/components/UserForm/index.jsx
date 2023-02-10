@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import { GlobalVariables } from '../../globals';
-import { UserData } from '../UserData';
 import './style.css'
 
 export function UserForm() {

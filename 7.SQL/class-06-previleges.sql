@@ -10,12 +10,20 @@ SHOW GRANTS FOR 'admin'@'localhost';
 GRANT SELECT ON school.* TO 'admin'@'localhost';
 REVOKE SELECT ON school.* FROM 'admin'@'localhost';
 
-GRANT SELECT, UPDATE, DELETE 
-ON school.users 
+GRANT SELECT, INSERT, UPDATE, DELETE 
+ON school.* 
 TO 'admin'@'localhost';
 
-REVOKE SELECT, UPDATE, DELETE
-ON school.users 
+REVOKE SELECT, INSERT, UPDATE, DELETE
+ON school.* 
+FROM 'admin'@'localhost';
+
+GRANT CREATE, DROP 
+ON school.* 
+TO 'admin'@'localhost';
+
+REVOKE CREATE, DROP 
+ON school.* 
 FROM 'admin'@'localhost';
 
 FLUSH PRIVILEGES;

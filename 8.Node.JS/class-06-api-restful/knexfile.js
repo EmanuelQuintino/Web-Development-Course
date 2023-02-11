@@ -1,10 +1,10 @@
 module.exports = {
   development: {
-    client: 'mysql2',
+    client: process.env.CLIENT,
     connection: {
-      database: 'school',
-      user: 'admin',
-      password: 'admin'
+      database: process.env.DATABASE,
+      user: process.env.USER,
+      password: process.env.PASSWORD
     },
     migrations: {
       tableName: 'migrations',

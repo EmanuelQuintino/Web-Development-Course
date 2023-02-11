@@ -4,6 +4,8 @@ const port = 3000;
 
 app.listen(port, console.log(`Server is running on PORT ${port}...`));
 
+require('dotenv').config();
+
 var cors = require('cors');
 app.use(cors());
 

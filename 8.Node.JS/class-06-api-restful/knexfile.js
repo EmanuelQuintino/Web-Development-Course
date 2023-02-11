@@ -1,6 +1,6 @@
 module.exports = {
   development: {
-    client: process.env.CLIENT,
+    client: 'mysql2',
     connection: {
       database: process.env.DATABASE,
       user: process.env.USER,

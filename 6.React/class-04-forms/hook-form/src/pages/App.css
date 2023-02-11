@@ -20,6 +20,7 @@ label {
 
 button {
     margin-top: 2.4rem;
+    cursor: pointer;
 }
 
 .error {

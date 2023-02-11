@@ -15,6 +15,7 @@ export function App() {
   
   function onSubmit(data) {
     console.log(data);
+    alert('Cadastro feito com sucesso!')
   };
   
   return (

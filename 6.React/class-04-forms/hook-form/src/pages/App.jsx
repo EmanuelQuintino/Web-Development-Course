@@ -13,8 +13,18 @@ export function App() {
   const { register, handleSubmit, formState: { errors } } = useForm({resolver: yupResolver(schema)});
   console.log(errors);
   
-  function onSubmit(data) {
+  async function onSubmit(data) {
     console.log(data);
+
+    const API = 'http://localhost:3000'
+    await fetch(API + "/studants", {
+      method: "POST",
+      body: JSON.stringify(data),
+      headers: {
+        "Content-Type": "application/json; charset=UTF-8"
+    }
+  })
+
     alert('Cadastro feito com sucesso!')
   };
   

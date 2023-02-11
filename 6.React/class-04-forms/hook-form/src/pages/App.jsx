@@ -16,16 +16,16 @@ export function App() {
   async function onSubmit(data) {
     console.log(data);
 
-    const API = 'http://localhost:3000'
-    await fetch(API + "/studants", {
-      method: "POST",
-      body: JSON.stringify(data),
-      headers: {
-        "Content-Type": "application/json; charset=UTF-8"
-    }
-  })
-
-    alert('Cadastro feito com sucesso!')
+    // const API = 'http://localhost:3000'
+    // await fetch(API + "/studants", {
+    //   method: "POST",
+    //   body: JSON.stringify(data),
+    //   headers: {
+    //     "Content-Type": "application/json; charset=UTF-8"
+    //   }
+    // });
+    
+    alert('Cadastro feito com sucesso!');
   };
   
   return (

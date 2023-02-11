@@ -23,7 +23,7 @@ export function App() {
       <h1>Hook Form</h1>
 
       <section>
-        <label htmlFor="inputName">Nome*</label>
+        <label htmlFor="inputName">Nome*:</label>
         <input type="text" id='inputName' placeholder='Digite seu nome' {...register("name")}/>
         <span className="error">{errors.name?.message}</span>
       </section>
@@ -43,7 +43,7 @@ export function App() {
       </section>
 
       <section>
-        <div>Matérias que tem aptidão</div>
+        <div>Matérias que tem aptidão:</div>
         <label><input type="checkbox" value='html' {...register("ability")}/>HTML</label>
         <label><input type="checkbox" value='css' {...register("ability")}/>CSS</label>
         <label><input type="checkbox" value='javascript'{...register("ability")}/>JavaScript</label>

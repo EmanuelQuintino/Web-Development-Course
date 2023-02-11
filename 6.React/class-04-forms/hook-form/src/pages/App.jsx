@@ -1,13 +1,22 @@
 import { useForm } from "react-hook-form";
+import { yupResolver } from '@hookform/resolvers/yup';
+import { object, string } from "yup";
 import './App.css'
 
-export function App() {
-  const { register, handleSubmit, formState: { errors } } = useForm();
+const schema = object({
+  name: string().required('Campo obrigatório!'),
+  email: string().required('Campo obrigatório!'),
+  term: string().oneOf(['yes'], 'Por favor, ler e aceitar os termos de uso para cadastrar!')
+}).required();
 
+export function App() {
+  const { register, handleSubmit, formState: { errors } } = useForm({resolver: yupResolver(schema)});
+  console.log(errors);
+  
   function onSubmit(data) {
     console.log(data);
   };
-
+  
   return (
     <form className='container' onSubmit={handleSubmit(onSubmit)}>
       <h1>Hook Form</h1>
@@ -15,11 +24,13 @@ export function App() {
       <section>
         <label htmlFor="inputName">Nome*</label>
         <input type="text" id='inputName' placeholder='Digite seu nome' {...register("name")}/>
+        <span className="error">{errors.name?.message}</span>
       </section>
 
       <section>
-        <label htmlFor="inputEmail">E-mail:</label>
+        <label htmlFor="inputEmail">E-mail*:</label>
         <input type="email" id='inputEmail' placeholder='Digite seu email' {...register("email")}/>
+        <span className="error">{errors.email?.message}</span>
       </section>
 
       <section>
@@ -47,6 +58,7 @@ export function App() {
           <input type="radio" id='no' value='no' {...register("term")}/>
           <label htmlFor="no">Não</label>
         </span>
+        <span className="error">{errors.term?.message}</span>
       </section>
 
       <section>
@@ -54,7 +66,7 @@ export function App() {
         <textarea
           id="question"
           cols="30"
-          rows="5"
+          rows="4"
           maxLength={'100'}
           placeholder='Digite suas razões aqui'
           {...register("question")}>

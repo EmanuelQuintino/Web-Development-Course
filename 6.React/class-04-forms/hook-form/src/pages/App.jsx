@@ -64,7 +64,7 @@ export function App() {
         <div>Aceita os termos de uso?</div>
         <span>
           <input type="radio" id='yes' value='yes' defaultChecked {...register("term")}/>
-          <label htmlFor="yes"> Sim*</label>
+          <label htmlFor="yes"> *Sim</label>
         </span>
         <span>
           <input type="radio" id='no' value='no' {...register("term")}/>

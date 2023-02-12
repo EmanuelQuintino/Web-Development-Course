@@ -10,7 +10,7 @@ const schema = object({
 }).required();
 
 export function App() {
-  const { register, handleSubmit, formState: { errors } } = useForm({resolver: yupResolver(schema)});
+  const { register, handleSubmit, formState: { errors }, reset } = useForm({resolver: yupResolver(schema)});
   console.log(errors);
   
   async function onSubmit(data) {
@@ -26,6 +26,7 @@ export function App() {
     // });
     
     alert('Cadastro feito com sucesso!');
+    reset();
   };
   
   return (
@@ -33,13 +34,13 @@ export function App() {
       <h1>Hook Form</h1>
 
       <section>
-        <label htmlFor="inputName">Nome*:</label>
+        <label htmlFor="inputName">* Nome:</label>
         <input type="text" id='inputName' placeholder='Digite seu nome' {...register("name")}/>
         <span className="error">{errors.name?.message}</span>
       </section>
 
       <section>
-        <label htmlFor="inputEmail">E-mail*:</label>
+        <label htmlFor="inputEmail">* E-mail:</label>
         <input type="email" id='inputEmail' placeholder='Digite seu email' {...register("email")}/>
         <span className="error">{errors.email?.message}</span>
       </section>
@@ -63,11 +64,11 @@ export function App() {
         <div>Aceita os termos de uso?</div>
         <span>
           <input type="radio" id='yes' value='yes' defaultChecked {...register("term")}/>
-          <label htmlFor="yes">Sim</label>
+          <label htmlFor="yes"> Sim*</label>
         </span>
         <span>
           <input type="radio" id='no' value='no' {...register("term")}/>
-          <label htmlFor="no">Não</label>
+          <label htmlFor="no"> Não</label>
         </span>
         <span className="error">{errors.term?.message}</span>
       </section>

@@ -6,7 +6,11 @@
   "scripts": {
     "start": "node ./src/server.js"
   },
-  "keywords": [],
+  "keywords": [
+    "node.js", 
+    "server", 
+    "express"
+  ],
   "author": "Emanuel Quintino",
   "license": "ISC",
   "dependencies": {

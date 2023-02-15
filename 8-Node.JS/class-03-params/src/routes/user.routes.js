@@ -10,7 +10,7 @@ userRouter.get('/:id/:name', (req, res) => {
 //Query Params
 userRouter.get('/', (req, res) => {
     const {id, name} = req.query;
-    res.send(`User${id} Name:${name}`);
+    res.send(`User:${id} Name:${name}`);
 });
 
 //Body Params

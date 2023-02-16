@@ -4,15 +4,16 @@ module.exports = {
     async read(req, res, next) {
             try {
                 const table = database('courses');
-                const {id} = req.query;
+                const { id } = req.query;
                 
                 if (id) {
                     table.select().where({id});
                 }
-
+                
                 const result = await table;
                 
                 return res.json(result);
+
             } catch (error) {
                 next(error);
             }
@@ -20,7 +21,7 @@ module.exports = {
 
     async create(req, res, next) {
         try {
-            const {name, hours} = req.body;
+            const { name, hours } = req.body;
             
             await database('courses').insert({
                 name, 
@@ -28,6 +29,7 @@ module.exports = {
             });
 
             return res.status(201).send({situation: 'course created'});
+            
         } catch (error) {
             next(error);
         }
@@ -35,8 +37,8 @@ module.exports = {
 
     async update(req, res, next) {
         try {
-            const {name, hours} = req.body;
-            const {id} = req.params;
+            const { name, hours } = req.body;
+            const { id } = req.params;
 
             await database('courses')
             .update({
@@ -47,6 +49,7 @@ module.exports = {
             .where({id});
 
             return res.send({situation: `updated course ${id}`});
+
         } catch (error) {
             next(error);
         }
@@ -54,12 +57,14 @@ module.exports = {
 
     async delete(req, res, next) {
         try {
-            const {id} = req.params;
+            const { id } = req.params;
+            
             await database('courses')
-            .where({id})
-            .del(); 
+            .del() 
+            .where({id});
 
             return res.send({situation: `course ${id} deleted`});
+
         } catch (error) {
             next(error);
         }

@@ -1,20 +1,20 @@
 const database = require('../databases/mysql');
 
 module.exports = {
+    read(req, res) {
+        const SQL = 'SELECT * FROM studants';
+        database.query(SQL, (error, result) => {
+            if (error) throw error;
+            res.json(result);
+        });
+    },
+
     create(req, res) {
         const { name, age } = req.body;
         const SQL = `INSERT INTO studants(name, age) VALUES("${name}", ${age})`;
         database.query(SQL, (error) => {
             if (error) throw error;
             res.json({status: 'created'});
-        });
-    },
-
-    read(req, res) {
-        const SQL = 'SELECT * FROM studants';
-        database.query(SQL, (error, result) => {
-            if (error) throw error;
-            res.json(result);
         });
     },
 

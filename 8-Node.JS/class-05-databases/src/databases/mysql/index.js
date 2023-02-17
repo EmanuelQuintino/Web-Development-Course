@@ -8,9 +8,14 @@ async function connection() {
         database: process.env.DATABASE
     });
     
-    const SQL = 'SELECT 1 + 1 AS solution';
-    database.query(SQL, (error) => {
-        if (error) throw error;
+    // const SQL = 'SELECT 1 + 1 AS solution';
+    // database.query(SQL, (error) => {
+    //     if (error) throw error;
+    //     console.log("Database is connected...");
+    // });
+
+    database.connect((error) => {
+        if (error) throw error;    
         console.log("Database is connected...");
     });
 

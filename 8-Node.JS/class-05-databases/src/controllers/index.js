@@ -6,7 +6,7 @@ module.exports = {
         const SQL = `INSERT INTO studants(name, age) VALUES("${name}", ${age})`;
         database.query(SQL, (error) => {
             if (error) throw error;
-            res.json({Situation: `Estudante ${name} cadastrado`});
+            res.json({status: 'created'});
         });
     },
 
@@ -14,17 +14,17 @@ module.exports = {
         const SQL = 'SELECT * FROM studants';
         database.query(SQL, (error, result) => {
             if (error) throw error;
-            res.json({result});
+            res.json(result);
         });
     },
 
     update(req, res) {
-        const { name, age } = req.body;
         const { id } = req.params;
+        const { name, age } = req.body;
         const SQL = `UPDATE studants SET name="${name}", age = ${age} WHERE id = ${id}`;
         database.query(SQL, (error, result) => {
             if (error) throw error;
-            res.json({Situation: `Estudante ID:${id} atualizado`});
+            res.json({status: 'updated'});
         });
     },
     
@@ -33,7 +33,7 @@ module.exports = {
         const SQL = `DELETE FROM studants WHERE id=${id}`;
         database.query(SQL, (error, result) => {
             if (error) throw error;
-            res.json({Situation: `Estudante ID:${id} deletado`});
+            res.json({status: 'deleted'});
         });
     },
 }

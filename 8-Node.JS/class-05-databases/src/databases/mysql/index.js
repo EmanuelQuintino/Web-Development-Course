@@ -2,10 +2,10 @@ const mysql = require('mysql2');
 
 async function connection() {
     const database = await mysql.createConnection({
-        host: 'localhost',
-        user: 'admin',
-        password: 'admin',
-        database: 'school'
+        host: process.env.HOST,
+        user: process.env.USER,
+        password: process.env.PASSWORD,
+        database: process.env.DATABASE
     });
     
     const SQL = 'SELECT 1 + 1 AS solution';

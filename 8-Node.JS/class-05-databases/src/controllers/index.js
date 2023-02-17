@@ -1,4 +1,4 @@
-const database = require('../database/mysql');
+const database = require('../databases/mysql');
 
 module.exports = {
     async create(req, res) {

@@ -9,5 +9,7 @@ app.use(express.json());
 const routes = require('./routes');
 app.use(routes);
 
-const database = require('./database/mysql');
+require('dotenv').config();
+
+const database = require('./databases/mysql');
 database();

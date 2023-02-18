@@ -13,7 +13,7 @@ module.exports = {
                 result = await prisma.users.findMany();
             }
             
-            res.json({listed: result});
+            res.json({listed: result? result: 'User not found!'});
         } catch (error) {
             res.json(error);
         }

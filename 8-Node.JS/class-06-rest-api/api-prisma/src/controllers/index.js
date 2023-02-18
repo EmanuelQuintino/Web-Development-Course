@@ -15,67 +15,49 @@ module.exports = {
             
             res.json({listed: result});
         } catch (error) {
-            console.error(error);
+            res.json(error);
         }
     },
 
     async create(req, res) {
         try {
             const { name, age, cpf } = req.body;
-            
+
             const userCPF = await prisma.users.findUnique({where: {cpf}});
-            if (userCPF) return res.json({alert: "CPF already used"});
-            
-            const reault = await prisma.users.create({
-                data: {
-                    name,
-                    age,
-                    cpf
-                }
-            });
+            if (userCPF) return res.json({alert: "CPF already used!"});
+
+            const reault = await prisma.users.create({data: {name, age, cpf}});
             return res.json({created: reault});
         } catch (error) {
-            console.error(error);
+            res.json(error);
         }
     },
 
     async update(req, res) {
         try {
+            const { id } = req.params;
             const { name, age, cpf } = req.body;
-            
-            const userCPF = await prisma.users.findUnique({where: {cpf}});
-            if (userCPF) return res.json({alert: "CPF already used"});
-            
-            const reault = await prisma.users.create({
-                data: {
-                    name,
-                    age,
-                    cpf
-                }
+                        
+            const reault = await prisma.users.update({
+                where: {id: Number(id)}, 
+                data: {name, age, cpf}
             });
-            return res.json({created: reault});
+            return res.json({updated: reault});
         } catch (error) {
-            console.error(error);
+            if (error.code == "P2002") return res.json({alert: "CPF already used!"});
+            if (error.code == "P2025") return res.json({alert: "User not found!"});
+            res.json(error);
         }
     },
 
     async delete(req, res) {
         try {
-            const { name, age, cpf } = req.body;
-            
-            const userCPF = await prisma.users.findUnique({where: {cpf}});
-            if (userCPF) return res.json({alert: "CPF already used"});
-            
-            const reault = await prisma.users.create({
-                data: {
-                    name,
-                    age,
-                    cpf
-                }
-            });
-            return res.json({created: reault});
+            const { id } = req.params;       
+            const reault = await prisma.users.delete({where: {id: Number(id)}});
+            return res.json({deleted: reault});
         } catch (error) {
-            console.error(error);
+            if (error.code == "P2025") return res.json({alert: "User not found!"});
+            res.json(error);
         }
     }
 }

@@ -42,6 +42,7 @@ module.exports = {
                 where: {id: Number(id)}, 
                 data: {name, age, cpf}
             });
+
             return res.json({updated: reault});
         } catch (error) {
             if (error.code == "P2002") return res.json({alert: "CPF already used!"});

@@ -1,5 +1,5 @@
 {
-  "name": "class-06-api-restful-knex",
+  "name": "knex",
   "version": "1.0.0",
   "description": "",
   "main": "./src/server.js",

@@ -15,6 +15,7 @@ module.exports = {
             
             res.json({listed: listUsers ?  listUsers : 'User not found'});
         } catch (error) {
+            if (error.code == "P2021") return res.json({alert: "Table not found"});
             next(error);
         }
     },

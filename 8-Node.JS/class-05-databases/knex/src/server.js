@@ -6,7 +6,7 @@ app.listen(port, console.log(`Server is running on PORT ${port}...`));
 
 require('dotenv').config();
 
-var cors = require('cors');
+const cors = require('cors');
 app.use(cors());
 
 app.use(express.json());

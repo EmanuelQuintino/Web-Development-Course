@@ -2,7 +2,7 @@ const prisma = require('../databases');
 const bcrypt = require('bcrypt');
 
 module.exports = {
-    async read(req, res) {
+    async read(req, res, next) {
         try {
             const { id } = req.query;
             let listUsers;
@@ -15,11 +15,11 @@ module.exports = {
             
             res.json({listed: listUsers ?  listUsers : 'User not found!'});
         } catch (error) {
-            res.json(error);
+            next(error);
         }
     },
 
-    async create(req, res) {
+    async create(req, res, next) {
         try {
             const { name, email, password } = req.body;
 
@@ -33,11 +33,11 @@ module.exports = {
             });
             return res.json({created: createUsers});
         } catch (error) {
-            res.json(error);
+            next(error);
         }
     },
 
-    async update(req, res) {
+    async update(req, res, next) {
         try {
             const { id } = req.params;
             const { name, email, password, confirmPassword } = req.body;
@@ -60,18 +60,18 @@ module.exports = {
         } catch (error) {
             if (error.code == "P2002") return res.json({alert: "Email already used!"});
             if (error.code == "P2025") return res.json({alert: "User not found!"});
-            res.json(error);
+            next(error);
         }
     },
 
-    async delete(req, res) {
+    async delete(req, res, next) {
         try {
             const { id } = req.params;       
             const deleteUsers = await prisma.users.delete({where: {id: Number(id)}});
             return res.json({deleted: deleteUsers});
         } catch (error) {
             if (error.code == "P2025") return res.json({alert: "User not found!"});
-            res.json(error);
+            next(error);
         }
     }
 }

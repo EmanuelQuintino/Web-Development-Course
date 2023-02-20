@@ -66,11 +66,21 @@ module.exports = {
 
     async delete(req, res, next) {
         try {
-            const { id } = req.params;       
-            const deleteUsers = await prisma.users.delete({where: {id: Number(id)}});
-            return res.json({deleted: deleteUsers});
+            const { id } = req.params;
+            const { password } = req.body;
+            const user = await prisma.users.findUnique({where: {id: Number(id)}});
+
+            if(!user) return res.json({alert: 'User not found'});
+            if(!password) return res.json({alert: 'Please confirm your password'});
+
+            const checkPassword = await bcrypt.compare(password, user.password);
+            if (checkPassword) {
+                const deleteUsers = await prisma.users.delete({where: {id: Number(id)}});
+                return res.json({deleted: deleteUsers});
+            } else {
+                res.json({alert: 'Incorrect password'});
+            }            
         } catch (error) {
-            if (error.code == "P2025") return res.json({alert: "User not found"});
             next(error);
         }
     }

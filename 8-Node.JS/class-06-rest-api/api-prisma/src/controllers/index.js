@@ -1,4 +1,5 @@
 const prisma = require('../databases');
+const bcrypt = require('bcrypt');
 
 module.exports = {
     async read(req, res) {
@@ -25,7 +26,11 @@ module.exports = {
             const userEmail = await prisma.users.findUnique({where: {email}});
             if (userEmail) return res.json({alert: "Email already used!"});
 
-            const createUsers = await prisma.users.create({data: {name, email, password}});
+            const passwordHash = await bcrypt.hash(password, 10);
+
+            const createUsers = await prisma.users.create({
+                data: {name, email, password: passwordHash}
+            });
             return res.json({created: createUsers});
         } catch (error) {
             res.json(error);
@@ -36,10 +41,12 @@ module.exports = {
         try {
             const { id } = req.params;
             const { name, email, password } = req.body;
+
+            const passwordHash = await bcrypt.hash(password, 10);
                         
             const updateUsers = await prisma.users.update({
                 where: {id: Number(id)}, 
-                data: {name, email, password}
+                data: {name, email, password: passwordHash}
             });
 
             return res.json({updated: updateUsers});

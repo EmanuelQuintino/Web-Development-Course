@@ -7,4 +7,5 @@ module.exports = `
         updated_at DATETIME DEFAULT CURRENT_TIMESTAMP,
         
         PRIMARY KEY(id)
-    );`;
+    );
+`;

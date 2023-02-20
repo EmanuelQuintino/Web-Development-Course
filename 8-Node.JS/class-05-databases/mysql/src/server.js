@@ -9,7 +9,7 @@ app.use(express.json());
 const routes = require('./routes');
 app.use(routes);
 
-const database = require('./databases/mysql');
+const database = require('./databases');
 database.connect((error) => {
     if (error) throw error;    
     console.log("Database is connected...");

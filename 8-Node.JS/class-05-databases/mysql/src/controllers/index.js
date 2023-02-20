@@ -1,4 +1,4 @@
-const database = require('../databases/mysql');
+const database = require('../databases');
 const table = 'users';
 
 module.exports = {

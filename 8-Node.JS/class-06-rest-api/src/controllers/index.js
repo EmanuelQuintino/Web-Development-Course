@@ -8,10 +8,12 @@ module.exports = {
             
             if (id) {
                 const listUser = await prisma.users.findUnique({where: {id: Number(id)}});
-                listUser ?  res.json({listed: listUser}) : res.status(400).json({alert: 'User not found'});
+                return listUser ? 
+                    res.json({listed: listUser}) : 
+                    res.status(400).json({alert: 'User not found'});
             } else {
                 const listUsers = await prisma.users.findMany();
-                res.json({listed: listUsers});
+                return res.json({listed: listUsers});
             }
         } catch (error) {
             if (error.code == "P2021") return res.status(500).json({alert: "Table not found"});
@@ -55,7 +57,7 @@ module.exports = {
                 });
                 return res.json({updated: updateUsers});
             } else {
-                res.status(401).json({alert: "Incorrect password"});   
+                return res.status(401).json({alert: "Incorrect password"});   
             }
         } catch (error) {
             if (error.code == "P2002") return res.status(400).json({alert: "Email already used"});
@@ -78,7 +80,7 @@ module.exports = {
                 const deleteUsers = await prisma.users.delete({where: {id: Number(id)}});
                 return res.json({deleted: deleteUsers});
             } else {
-                res.status(401).json({alert: 'Incorrect password'});
+                return res.status(401).json({alert: 'Incorrect password'});
             }            
         } catch (error) {
             next(error);

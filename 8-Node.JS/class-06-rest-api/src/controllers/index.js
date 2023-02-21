@@ -5,17 +5,16 @@ module.exports = {
     async read(req, res, next) {
         try {
             const { id } = req.query;
-            let listUsers;
             
             if (id) {
-                listUsers = await prisma.users.findUnique({where: {id: Number(id)}});
+                const listUser = await prisma.users.findUnique({where: {id: Number(id)}});
+                listUser ?  res.json({listed: listUser}) : res.status(400).json({alert: 'User not found'});
             } else {
-                listUsers = await prisma.users.findMany();
+                const listUsers = await prisma.users.findMany();
+                res.json({listed: listUsers});
             }
-            
-            res.json({listed: listUsers ?  listUsers : 'User not found'});
         } catch (error) {
-            if (error.code == "P2021") return res.json({alert: "Table not found"});
+            if (error.code == "P2021") return res.status(500).json({alert: "Table not found"});
             next(error);
         }
     },
@@ -25,7 +24,7 @@ module.exports = {
             const { name, email, password } = req.body;
 
             const userEmail = await prisma.users.findUnique({where: {email}});
-            if (userEmail) return res.json({alert: "Email already used"});
+            if (userEmail) return res.status(400).json({alert: "Email already used"});
 
             const passwordHash = await bcrypt.hash(password, 10);
 
@@ -44,8 +43,8 @@ module.exports = {
             const { name, email, password, confirmPassword } = req.body;
             const user = await prisma.users.findUnique({where: {id: Number(id)}});
             
-            if (!user) return res.json({alert: "User not found"});
-            if (!confirmPassword) return res.json({alert: "Please confirm your password"});
+            if (!user) return res.status(400).json({alert: "User not found"});
+            if (!confirmPassword) return res.status(400).json({alert: "Please confirm your password"});
             
             const checkPassword = await bcrypt.compare(confirmPassword, user.password);
             if (checkPassword) {
@@ -56,11 +55,11 @@ module.exports = {
                 });
                 return res.json({updated: updateUsers});
             } else {
-                res.json({alert: "Incorrect password"});   
+                res.status(400).json({alert: "Incorrect password"});   
             }
         } catch (error) {
-            if (error.code == "P2002") return res.json({alert: "Email already used"});
-            if (error.code == "P2025") return res.json({alert: "User not found"});
+            if (error.code == "P2002") return res.status(400).json({alert: "Email already used"});
+            if (error.code == "P2025") return res.status(400).json({alert: "User not found"});
             next(error);
         }
     },
@@ -71,15 +70,15 @@ module.exports = {
             const { password } = req.body;
             const user = await prisma.users.findUnique({where: {id: Number(id)}});
 
-            if(!user) return res.json({alert: 'User not found'});
-            if(!password) return res.json({alert: 'Please confirm your password'});
+            if(!user) return res.status(400).json({alert: 'User not found'});
+            if(!password) return res.status(400).json({alert: 'Please confirm your password'});
 
             const checkPassword = await bcrypt.compare(password, user.password);
             if (checkPassword) {
                 const deleteUsers = await prisma.users.delete({where: {id: Number(id)}});
                 return res.json({deleted: deleteUsers});
             } else {
-                res.json({alert: 'Incorrect password'});
+                res.status(400).json({alert: 'Incorrect password'});
             }            
         } catch (error) {
             next(error);

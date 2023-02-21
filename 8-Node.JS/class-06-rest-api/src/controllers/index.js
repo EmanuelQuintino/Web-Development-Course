@@ -55,7 +55,7 @@ module.exports = {
                 });
                 return res.json({updated: updateUsers});
             } else {
-                res.status(400).json({alert: "Incorrect password"});   
+                res.status(401).json({alert: "Incorrect password"});   
             }
         } catch (error) {
             if (error.code == "P2002") return res.status(400).json({alert: "Email already used"});
@@ -78,7 +78,7 @@ module.exports = {
                 const deleteUsers = await prisma.users.delete({where: {id: Number(id)}});
                 return res.json({deleted: deleteUsers});
             } else {
-                res.status(400).json({alert: 'Incorrect password'});
+                res.status(401).json({alert: 'Incorrect password'});
             }            
         } catch (error) {
             next(error);

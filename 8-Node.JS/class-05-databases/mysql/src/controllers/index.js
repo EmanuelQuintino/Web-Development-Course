@@ -1,5 +1,5 @@
 const database = require('../databases');
-const table = 'users';
+const table = 'courses';
 
 module.exports = {
     read(req, res) {
@@ -11,8 +11,8 @@ module.exports = {
     },
 
     create(req, res) {
-        const { name, age } = req.body;
-        const SQL = `INSERT INTO ${table}(name, age) VALUES("${name}", ${age})`;
+        const { name, hours } = req.body;
+        const SQL = `INSERT INTO ${table}(name, hours) VALUES("${name}", ${hours})`;
         database.query(SQL, (error) => {
             if (error) throw error;
             res.json({status: 'created'});
@@ -21,8 +21,8 @@ module.exports = {
 
     update(req, res) {
         const { id } = req.params;
-        const { name, age } = req.body;
-        const SQL = `UPDATE ${table} SET name="${name}", age=${age}, updated_at=NOW() WHERE id = ${id}`;
+        const { name, hours } = req.body;
+        const SQL = `UPDATE ${table} SET name="${name}", hours=${hours}, updated_at=NOW() WHERE id = ${id}`;
         database.query(SQL, (error, result) => {
             if (error) throw error;
             res.json({status: 'updated'});

@@ -6,11 +6,11 @@ module.exports = {
             const { id } = req.query;
             
             if (id) {
-                const listUser = await prisma.users.findUnique({where: {id: Number(id)}});
-                res.json(listUser);
+                const listCourse = await prisma.courses.findUnique({where: {id: Number(id)}});
+                res.json(listCourse);
             } else {
-                const listUsers = await prisma.users.findMany();
-                res.json(listUsers);
+                const listCourses = await prisma.courses.findMany();
+                res.json(listCourses);
             }
         } catch (error) {
             res.json({error: error.message});
@@ -19,9 +19,9 @@ module.exports = {
 
     async create(req, res) {
         try {
-            const { name, age } = req.body;
-            const createUser = await prisma.users.create({data: {name, age}});
-            res.json({create: createUser});
+            const { name, hours } = req.body;
+            const createCourse = await prisma.courses.create({data: {name, hours}});
+            res.json({create: createCourse});
         } catch (error) {
             res.json({error: error.message});
         }
@@ -30,12 +30,12 @@ module.exports = {
     async update(req, res) {
         try {
             const { id } = req.params;
-            const { name, age } = req.body;
-            const updateUser = await prisma.users.update({
-                data: {name, age},
+            const { name, hours } = req.body;
+            const updatecourse = await prisma.courses.update({
+                data: {name, hours},
                 where: {id: Number(id)}
             });
-            res.json({update: updateUser});
+            res.json({update: updatecourse});
         } catch (error) {
             res.json({error: error.message});
         }
@@ -44,8 +44,8 @@ module.exports = {
     async delete(req, res) {
         try {
             const { id } = req.params;
-            const deleteUser = await prisma.users.delete({where: {id: Number(id)}});
-            res.json({delete: deleteUser});
+            const deletecourse = await prisma.courses.delete({where: {id: Number(id)}});
+            res.json({delete: deletecourse});
         } catch (error) {
             res.json({error: error.message});
         }

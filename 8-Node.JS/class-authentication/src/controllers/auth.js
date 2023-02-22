@@ -16,7 +16,7 @@ module.exports = {
             
             const jwt = require('jsonwebtoken');
             const { secret, expiresIn } = require('../config/auth.json');
-            const token = jwt.sign({id: user.id}, secret, {expiresIn});
+            const token = jwt.sign({id: String(user.id)}, secret, {expiresIn});
             return res.json({login: user, token});
         } catch (error) {
             return res.json({error: error.message});

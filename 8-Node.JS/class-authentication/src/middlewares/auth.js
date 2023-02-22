@@ -11,7 +11,7 @@ module.exports = async (req, res, next) => {
         const { secret } = require('../config/auth.json');
         jwt.verify(token[1], secret, (error, decoded) => {
             if (error) return res.status(401).json({error: error.message});
-            console.log("Decoded:", decoded);    
+            req.user = {id: Number(decoded.id)};
             return next();
         });
     } catch (error) {

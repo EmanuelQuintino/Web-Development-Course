@@ -2,6 +2,15 @@ const prisma = require('../databases');
 const bcrypt = require('bcrypt');
 
 module.exports = {
+    async read(req, res) {
+        try {
+            const users = await prisma.users.findMany();
+            return res.json({List: users});
+        } catch (error) {
+            return res.json({error: error.message});
+        }
+    }, 
+    
     async create(req, res) {
         try {
             const { email, password } = req.body;  

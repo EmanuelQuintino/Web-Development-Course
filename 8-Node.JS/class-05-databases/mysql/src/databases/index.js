@@ -9,7 +9,7 @@ const connection = mysql.createConnection({
     database: process.env.DATABASE
 });
 
-const SQL = require('./migrations/userTable.js');
+const SQL = require('./migrations/coursesTable.js');
 connection.query(SQL);
 
 module.exports = connection;

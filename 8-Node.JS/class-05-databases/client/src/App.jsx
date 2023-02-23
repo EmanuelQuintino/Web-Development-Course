@@ -15,10 +15,11 @@ function App() {
   async function onSubmit(event) {
     event.preventDefault();
     const name = event.target.name.value;
+    const hours = event.target.hours.value;
 
     const data = {
-      name,
-      hours: 240
+      name, 
+      hours
     }
 
     await fetch(API, {
@@ -38,16 +39,25 @@ function App() {
 
   return (
     <div className="App">
+      <h1>Cadastrar Curso</h1>
       <form onSubmit={onSubmit}>
-        <input type="text" name='name'/>
+        <label>
+          Nome:
+          <input type="text" name='name'/>
+        </label>
+        <label>
+          Horas:
+          <input type="number" name='hours' max={240}/>
+        </label>
+
         <button>Enviar</button>
       </form>
 
-      <h2>Courses</h2>
+      <h2>Cursos cadatrados</h2>
       
       {listCourses && (
         listCourses.map((course, index) => {
-          return <p key={index}>{course.name}: {course.hours}hs</p>
+          return <p key={index}>{course.name} - {course.hours}hs</p>
         })
       )}
     </div>

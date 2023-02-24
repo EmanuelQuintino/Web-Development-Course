@@ -1,15 +1,20 @@
-import { useState, useEffect } from 'react'
-import './App.css'
+import axios from 'axios';
+import { useState, useEffect } from 'react';
+import './App.css';
 
 function App() {
   const [listCourses, setListCourses] = useState();
   const API = 'http://localhost:3000/courses'
 
   async function showUsers() {
-    await fetch(API)
-      .then((response) => response.json())
-      .then((data) => setListCourses(data))
-      .catch((error) => console.error(error));  
+    // await fetch(API)
+      // .then((response) => response.json())
+      // .then((data) => setListCourses(data))
+      // .catch((error) => console.error(error));
+    
+    await axios.get(API)
+      .then((response) => setListCourses(response.data))
+      .catch((error) => console.error(error));
   }
 
   async function onSubmit(event) {
@@ -22,13 +27,15 @@ function App() {
       hours
     }
 
-    await fetch(API, {
-      method: "POST",
-      body: JSON.stringify(data),
-      headers: {"Content-Type": "application/json; charset=UTF-8"}
-    })
-    .then(() => alert('Curso cadastrado com sucesso!'))
-    .catch((error) => alert(`Error: ${error}`));
+    // await fetch(API, {
+    //   method: "POST",
+    //   body: JSON.stringify(data),
+    //   headers: {"Content-Type": "application/json; charset=UTF-8"}
+    // })
+    // .then(() => alert('Curso cadastrado com sucesso!'))
+    // .catch((error) => alert(`Error: ${error}`));
+
+    await axios.post(API, data);
     
     showUsers();
   }

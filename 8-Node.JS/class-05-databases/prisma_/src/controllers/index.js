@@ -7,23 +7,25 @@ module.exports = {
             
             if (id) {
                 const listCourse = await prisma.courses.findUnique({where: {id: Number(id)}});
-                res.json(listCourse);
+                return res.json(listCourse);
             } else {
                 const listCourses = await prisma.courses.findMany();
-                res.json(listCourses);
+                return res.json(listCourses);
             }
         } catch (error) {
-            res.json({error: error.message});
+            return res.json({error: error.message});
         }
     },
 
     async create(req, res) {
         try {
             const { name, hours } = req.body;
+            console.log(name, hours);
             const createCourse = await prisma.courses.create({data: {name, hours}});
-            res.json({create: createCourse});
+            console.log(name, hours);
+            return res.json({create: createCourse});
         } catch (error) {
-            res.json({error: error.message});
+            return res.json({error: error.message});
         }
     },
 
@@ -35,9 +37,9 @@ module.exports = {
                 data: {name, hours},
                 where: {id: Number(id)}
             });
-            res.json({update: updatecourse});
+            return res.json({update: updatecourse});
         } catch (error) {
-            res.json({error: error.message});
+            return res.json({error: error.message});
         }
     },
 
@@ -45,9 +47,9 @@ module.exports = {
         try {
             const { id } = req.params;
             const deletecourse = await prisma.courses.delete({where: {id: Number(id)}});
-            res.json({delete: deletecourse});
+            return res.json({delete: deletecourse});
         } catch (error) {
-            res.json({error: error.message});
+            return res.json({error: error.message});
         }
     }
 }

@@ -36,7 +36,7 @@ function App() {
     // .catch((error) => alert(`Error: ${error}`));
 
     await axios.post(API, data)
-      .then((res) => console.log(res))
+      .then((res) => alert(res.data))
       .catch((error) => console.error(error));
     
     showUsers();

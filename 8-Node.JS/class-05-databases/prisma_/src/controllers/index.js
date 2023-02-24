@@ -13,19 +13,17 @@ module.exports = {
                 return res.json(listCourses);
             }
         } catch (error) {
-            return res.json({error: error.message});
+            return res.json(error.message);
         }
     },
 
     async create(req, res) {
         try {
             const { name, hours } = req.body;
-            console.log(name, hours);
-            const createCourse = await prisma.courses.create({data: {name, hours}});
-            console.log(name, hours);
-            return res.json({create: createCourse});
+            const createCourse = await prisma.courses.create({data: {name, hours: Number(hours)}});
+            return res.json(`Curso ${createCourse.name} cadastrado com sucesso!`);
         } catch (error) {
-            return res.json({error: error.message});
+            return res.json(error.message);
         }
     },
 
@@ -34,12 +32,12 @@ module.exports = {
             const { id } = req.params;
             const { name, hours } = req.body;
             const updatecourse = await prisma.courses.update({
-                data: {name, hours},
+                data: {name, hours: Number(hours)},
                 where: {id: Number(id)}
             });
-            return res.json({update: updatecourse});
+            return res.json(`Curso ${updatecourse.name} atualizado com sucesso`);
         } catch (error) {
-            return res.json({error: error.message});
+            return res.json(error.message);
         }
     },
 
@@ -47,9 +45,9 @@ module.exports = {
         try {
             const { id } = req.params;
             const deletecourse = await prisma.courses.delete({where: {id: Number(id)}});
-            return res.json({delete: deletecourse});
+            return res.json(`Curso ${updatecourse.name} daletado com sucesso`);
         } catch (error) {
-            return res.json({error: error.message});
+            return res.json(error.message);
         }
     }
 }

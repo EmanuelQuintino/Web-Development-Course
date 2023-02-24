@@ -8,12 +8,12 @@ function App() {
 
   async function showUsers() {
     // await fetch(API)
-      // .then((response) => response.json())
+      // .then((res) => res.json())
       // .then((data) => setListCourses(data))
       // .catch((error) => console.error(error));
     
     await axios.get(API)
-      .then((response) => setListCourses(response.data))
+      .then((res) => setListCourses(res.data))
       .catch((error) => console.error(error));
   }
 
@@ -35,7 +35,9 @@ function App() {
     // .then(() => alert('Curso cadastrado com sucesso!'))
     // .catch((error) => alert(`Error: ${error}`));
 
-    await axios.post(API, data);
+    await axios.post(API, data)
+      .then((res) => console.log(res))
+      .catch((error) => console.error(error));
     
     showUsers();
   }

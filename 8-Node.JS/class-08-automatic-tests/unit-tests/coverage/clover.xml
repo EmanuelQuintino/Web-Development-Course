@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1677363824325" clover="3.2.0">
+  <project timestamp="1677363824325" name="All files">
+    <metrics statements="9" coveredstatements="9" conditionals="2" coveredconditionals="2" methods="5" coveredmethods="5" elements="16" coveredelements="16" complexity="0" loc="9" ncloc="9" packages="1" files="2" classes="2"/>
+    <file name="evenOrOdd.js" path="C:\Users\emanu\OneDrive\Área de Trabalho\Emanuel\Web-Development-Course\8-Node.JS\class-08-automatic-tests\unit-tests\src\evenOrOdd.js">
+      <metrics statements="4" coveredstatements="4" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+      <line num="1" count="1" type="stmt"/>
+      <line num="3" count="2" type="cond" truecount="2" falsecount="0"/>
+      <line num="4" count="1" type="stmt"/>
+      <line num="6" count="1" type="stmt"/>
+    </file>
+    <file name="mathFunctions.js" path="C:\Users\emanu\OneDrive\Área de Trabalho\Emanuel\Web-Development-Course\8-Node.JS\class-08-automatic-tests\unit-tests\src\mathFunctions.js">
+      <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="4"/>
+      <line num="1" count="1" type="stmt"/>
+      <line num="3" count="1" type="stmt"/>
+      <line num="7" count="1" type="stmt"/>
+      <line num="11" count="1" type="stmt"/>
+      <line num="15" count="1" type="stmt"/>
+    </file>
+  </project>
+</coverage>

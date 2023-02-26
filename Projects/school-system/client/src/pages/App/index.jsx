@@ -1,20 +1,18 @@
-import { Link, Outlet } from 'react-router-dom'
+import { Outlet } from 'react-router-dom'
+import { Menu } from '../../components/Menu'
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 export function App() {
   return (
     <div className="container">
-      <h1>School System</h1>
-      <nav>
-        <ul>
-          <li><Link to={'/'}>Home</Link></li>
-          <li><Link to={'/Studants'}>Alunos</Link></li>
-          <li><Link to={'/contact'}>Contato</Link></li>
-          <li><Link to={'/about'}>Sobre</Link></li>
-        </ul>
-      </nav>
-
+      <header>
+        <h1>Sistema de Alunos</h1>
+        <Menu/>
+      </header>
       <Outlet/>
-      
-      <p>Footer</p>
+      <footer>
+        <p>Footer</p>
+      </footer>
     </div>
   )
 }

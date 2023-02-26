@@ -1,7 +1,7 @@
-export function About() {
+export function Register() {
   return (
     <div className="container">
-      <h1>About</h1>
+      <h1>Cadastrar</h1>
     </div>
   )
 }

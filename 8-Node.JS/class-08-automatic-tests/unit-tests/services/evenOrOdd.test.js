@@ -1,4 +1,4 @@
-const evenOrOdd = require('../src/evenOrOdd');
+const evenOrOdd = require('./evenOrOdd');
 
 const numEven = 10;
 const numOdd = 11;

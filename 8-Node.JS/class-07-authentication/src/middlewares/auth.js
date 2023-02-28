@@ -1,20 +1,21 @@
-module.exports = async (req, res, next) => {
+const jwt = require('jsonwebtoken');
+const { secret } = require('../config/auth.json');
+
+module.exports = (req, res, next) => {
     try {
-        const authToken = req.headers.authorization;
-        if (!authToken) return res.status(400).json({alert: 'Please inform token'});
+        const bearerToken = req.headers.authorization;
+        if (!bearerToken) return res.status(400).json({alert: 'Please inform your token'});
         
-        const token = authToken.split(' ');
-        if (token.length != 2) return res.status(401).json({alert: 'Unauthorized token'});
-        if (!/^Bearer$/i.test(token[0])) return res.status(401).json({alert: 'Unauthorized token'});
-        
-        const jwt = require('jsonwebtoken');
-        const { secret } = require('../config/auth.json');
+        const token = bearerToken.split(' ');
+        if (token.length != 2) return res.status(401).json('Unauthorized token');
+        if (!/^Bearer$/i.test(token[0])) return res.status(401).json('Unauthorized token');
+
         jwt.verify(token[1], secret, (error, decoded) => {
-            if (error) return res.status(401).json({error: error.message});
-            req.user = {id: Number(decoded.id)};
+            if (error) return res.json(error.message);
+            req.userID = decoded.id;
             return next();
-        });
+        });        
     } catch (error) {
-        return res.json({error: error.message});
-    }   
+        return console.error(error.message);
+    }
 }

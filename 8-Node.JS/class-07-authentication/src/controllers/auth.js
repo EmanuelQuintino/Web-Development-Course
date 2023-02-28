@@ -16,8 +16,8 @@ module.exports = {
             const passwordCheck = await bcrypt.compare(password, user.password);
             if(!passwordCheck) return res.status(400).json('Email or Password incorrect');
 
-            const token = jwt.sign({id: user.id}, secret, {expiresIn});
-            return res.json(token);
+            const token = jwt.sign({id: String(user.id)}, secret, {expiresIn});
+            return res.json({token});
         } catch (error) {
             return console.error(error.message);
         }

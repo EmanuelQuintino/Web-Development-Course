@@ -44,17 +44,22 @@ export const Menu = styled.div`
     & a {
         padding: .8rem;
         border-radius: .4rem;
+        color: ${({theme}) => theme.colors.neutralB};
     }
 
     & a:hover {
-        border-bottom: 4px solid ${({theme}) => theme.colors.neutral9};
+        border-bottom: 4px solid ${({theme}) => theme.colors.neutralB};
+    }
+
+    & .active {
+        color: ${({theme}) => theme.colors.neutral1};
     }
 `;
 
 export const MainArticle = styled.article`
     grid-area: MainArticle;
 
-    max-width: 64.0rem;
+    max-width: 92.0rem;
     margin: 0 auto;
     padding: 2.4rem;
 

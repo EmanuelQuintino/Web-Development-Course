@@ -13,6 +13,12 @@ export default {
         neutral6: "#666", 
         neutral7: "#777", 
         neutral8: "#888", 
-        neutral9: "#999" 
+        neutral9: "#999", 
+        neutralA: "#AAA", 
+        neutralB: "#BBB", 
+        neutralC: "#CCC", 
+        neutralD: "#DDD", 
+        neutralE: "#EEE", 
+        neutralF: "#FFF" 
     }
 }

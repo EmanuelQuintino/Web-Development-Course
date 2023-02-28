@@ -1,25 +1,25 @@
-const prisma = require("../databases");
+const prisma = require('../databases');
 const bcrypt = require('bcrypt');
+const jwt = require('jsonwebtoken');
+const { secret, expiresIn } = require('../config/auth.json');
 
 module.exports = {
     async auth(req, res) {
         try {
-            const {email, password } = req.body;
-            if (!email) return res.status(400).json({alert: 'Please inform E-mail'});
-            if (!password) return res.status(400).json({alert: 'Please inform Password'});
-            
+            const {email, password} = req.body;
+            if (!email) return res.status(400).json('Email is required');
+            if (!password) return res.status(400).json('Password is required');
+
             const user = await prisma.users.findUnique({where: {email}});
-            if (!user) return res.status(400).json({alert: 'E-mail or password invalid'});
-            
+            if (!user) return res.status(400).json('Email or Password incorrect');
+
             const passwordCheck = await bcrypt.compare(password, user.password);
-            if (!passwordCheck) return res.status(400).json({alert: 'E-mail or password invalid'});
-            
-            const jwt = require('jsonwebtoken');
-            const { secret, expiresIn } = require('../config/auth.json');
-            const token = jwt.sign({id: String(user.id)}, secret, {expiresIn});
-            return res.json({login: user, token});
+            if(!passwordCheck) return res.status(400).json('Email or Password incorrect');
+
+            const token = jwt.sign({id: user.id}, secret, {expiresIn});
+            return res.json(token);
         } catch (error) {
-            return res.json({error: error.message});
+            return console.error(error.message);
         }
     }
 }

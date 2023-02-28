@@ -48,7 +48,6 @@ module.exports = {
             if(!user) return res.json('User not found').status(400);
 
             const userEmail = await prisma.users.findUnique({where: {email}});
-            console.log(userEmail.email, user.email);
             if (userEmail && (userEmail.email != user.email)) return res.json('Email already used');
 
             const passwordHash = await bcrypt.hash(password, 10);

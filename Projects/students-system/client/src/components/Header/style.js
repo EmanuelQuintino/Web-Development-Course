@@ -9,9 +9,9 @@ export const HeaderContainer = styled.header`
     width: 100%;
     height: 12.0rem;
     padding: 3.2rem;
-    border-bottom: .2rem solid ${({theme}) => theme.color.neutral8};
+    border-bottom: .4rem solid ${({theme}) => theme.colors.neutral8};
 
-    background: ${({theme}) => theme.color.background};
+    background: ${({theme}) => theme.colors.background};
     color: white;
 
     & img {
@@ -21,6 +21,6 @@ export const HeaderContainer = styled.header`
     & h3 {
         font-weight: 500;
         font-size: 2.4rem;
-        color: ${({theme}) => theme.color.neutral8};
+        color: ${({theme}) => theme.colors.neutral8};
     }
 `;

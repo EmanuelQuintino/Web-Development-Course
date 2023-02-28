@@ -7,19 +7,15 @@ export const HeaderContainer = styled.header`
     justify-content: space-between;
 
     width: 100%;
-    height: 10.0rem;
-    padding: 2.4rem;
+    height: 12.0rem;
+    padding: 3.2rem;
     border-bottom: .2rem solid ${({theme}) => theme.color.neutral8};
 
     background: ${({theme}) => theme.color.background};
     color: white;
 
     & img {
-        width: 10%;
-    }
-
-    > div span {
-        color: ${({theme}) => theme.color.main};
+        width: 9.2rem;
     }
 
     & h3 {

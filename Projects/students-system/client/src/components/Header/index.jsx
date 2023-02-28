@@ -5,7 +5,7 @@ export function Header() {
         <HeaderContainer>
             <img src="./images/logo-rj.png" alt="logo" />
             <div>
-                <h1>Sistema de <span>Estudantes</span></h1>
+                <h1>Sistema de Estudantes</h1>
                 <h3>Curso de Desenvolvimento Web</h3>
             </div>
         </HeaderContainer>

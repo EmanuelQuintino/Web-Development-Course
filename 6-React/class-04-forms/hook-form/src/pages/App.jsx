@@ -5,7 +5,7 @@ import './App.css'
 
 const schema = object({
   name: string().required('Campo obrigatório!'),
-  email: string().required('Campo obrigatório!'),
+  email: string().email('Insira um Email válido').required('Campo obrigatório!'),
   term: string().oneOf(['yes'], 'Por favor, ler e aceitar os termos de uso para cadastrar!')
 }).required();
 

@@ -1,7 +1,7 @@
 import { Container } from "./style"
 import { useForm } from "react-hook-form";
 import { yupResolver } from '@hookform/resolvers/yup';
-import { object, string } from "yup";
+import { object, string, number } from "yup";
 
 const schema = object({
   name: string().required("Preencha este campo").max(40, "Tamanho máximo de até 40 caracteres"),
@@ -9,7 +9,7 @@ const schema = object({
   phone: string().required("Preencha este campo").max(40, "Tamanho máximo de até 40 caracteres"),
   gender: string().required("Preencha este campo").max(40, "Tamanho máximo de até 40 caracteres"),
   cep: string().required("Preencha este campo").max(40, "Tamanho máximo de até 40 caracteres"),
-  number: string().required("Preencha este campo").max(40, "Tamanho máximo de até 40 caracteres"),
+  number: string().required("Preencha este campo").max(10, "Tamanho máximo de até 10 caracteres"),
   street: string().required("Preencha este campo").max(40, "Tamanho máximo de até 40 caracteres"),
   district: string().required("Preencha este campo").max(40, "Tamanho máximo de até 40 caracteres"),
   city: string().required("Preencha este campo").max(40, "Tamanho máximo de até 40 caracteres"),
@@ -53,15 +53,15 @@ export function Register() {
         <section className="radioGender">
           <div>Gênero</div>
           <span>
-            <input type="radio" id='male' value='masculino' {...register("gender")}/>
+            <input type="radio" id='male' value='M' {...register("gender")}/>
             <label htmlFor="male"> Masculo</label>
           </span>
           <span>
-            <input type="radio" id='female' value='feminino' {...register("gender")}/>
+            <input type="radio" id='female' value='F' {...register("gender")}/>
             <label htmlFor="female"> Femino</label>
           </span>
           <span>
-            <input type="radio" id='other' value='outro' {...register("gender")}/>
+            <input type="radio" id='other' value='Outro' {...register("gender")}/>
             <label htmlFor="other"> Outro</label>
           </span>
           <span className="error">{errors.gender?.message}</span>

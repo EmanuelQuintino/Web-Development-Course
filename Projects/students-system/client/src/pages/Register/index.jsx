@@ -18,12 +18,14 @@ const schema = object({
 }).required();
 
 export function Register() {
-  const { register, handleSubmit, formState: { errors } } = useForm({
+  const { register, handleSubmit, formState: { errors }, reset } = useForm({
     resolver: yupResolver(schema)
   });
   
   function onSubmit(data) {
     console.log(data);
+    alert('Estudante cadastrado com sucesso!');
+    reset();
   }
 
   console.log(errors);

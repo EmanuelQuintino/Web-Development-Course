@@ -2,6 +2,7 @@ import { Container } from "./style"
 import { useForm } from "react-hook-form";
 import { yupResolver } from '@hookform/resolvers/yup';
 import { object, string, number } from "yup";
+import { useState, useEffect } from "react";
 
 const schema = object({
   name: string().required("Preencha este campo").max(40, "Tamanho máximo de até 40 caracteres"),
@@ -22,13 +23,22 @@ export function Register() {
     resolver: yupResolver(schema)
   });
   
+  const [studentData, setStudentData] = useState();
+
   function onSubmit(data) {
-    console.log(data);
+    setStudentData(data);
     alert('Estudante cadastrado com sucesso!');
     reset();
   }
 
-  console.log(errors);
+  async function callCEP(event) {
+    const CEP = event.target.value;
+    fetch(`https://viacep.com.br/ws/${CEP}/json/`)
+      .then((response) => response.json())
+      .then((data) => console.log(data));
+  }
+
+  console.log(studentData);
 
   return (
     <Container>
@@ -71,7 +81,7 @@ export function Register() {
 
         <section>
           <label htmlFor="cep">CEP</label>
-          <input type="text" id="cep" placeholder="12345-678" {...register("cep")}/>
+          <input type="text" id="cep" placeholder="12345-678" {...register("cep")} onBlur={callCEP}/>
           <span className="error">{errors.cep?.message}</span>
         </section>
     

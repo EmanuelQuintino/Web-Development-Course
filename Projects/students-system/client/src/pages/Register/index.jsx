@@ -24,6 +24,7 @@ export function Register() {
   });
   
   const [studentData, setStudentData] = useState();
+  // const [CEPData, setcCEPtData] = useState();
 
   function onSubmit(data) {
     setStudentData(data);
@@ -31,14 +32,15 @@ export function Register() {
     reset();
   }
 
-  async function callCEP(event) {
-    const CEP = event.target.value;
-    fetch(`https://viacep.com.br/ws/${CEP}/json/`)
-      .then((response) => response.json())
-      .then((data) => console.log(data));
-  }
+  // async function callCEP(event) {
+  //   const CEP = event.target.value;
+  //   fetch(`https://viacep.com.br/ws/${CEP}/json/`)
+  //     .then((request) => request.json())
+  //     .then((data) => setcCEPtData(data));
+  // }
 
   console.log(studentData);
+  // console.log(CEPData);
 
   return (
     <Container>
@@ -81,7 +83,15 @@ export function Register() {
 
         <section>
           <label htmlFor="cep">CEP</label>
-          <input type="text" id="cep" placeholder="12345-678" {...register("cep")} onBlur={callCEP}/>
+          
+          <input 
+            type="text" 
+            id="cep" 
+            placeholder="12345-678" 
+            {...register("cep")} 
+            // onBlur={callCEP}
+          />
+          
           <span className="error">{errors.cep?.message}</span>
         </section>
     
@@ -94,25 +104,51 @@ export function Register() {
             
         <section>
           <label htmlFor="street">Logradouro</label>
-          <input type="text" id="street" placeholder="Ex: Rua, Avenida, Travessa" {...register("street")}/>
+          
+          <input 
+            type="text" 
+            id="street" 
+            placeholder="Ex: Rua, Avenida, Travessa" 
+            {...register("street")}
+            // value={CEPData ? CEPData.logradouro : ""}
+          />
+          
           <span className="error">{errors.street?.message}</span>
         </section>
             
         <section>
           <label htmlFor="district">Bairro</label>
-          <input type="text" id="district" {...register("district")}/>
+          
+          <input 
+            type="text" 
+            id="district" 
+            {...register("district")}
+            // value={CEPData ? CEPData.bairro : ""}
+          />
+          
           <span className="error">{errors.district?.message}</span>
         </section>
     
         <section>
           <label htmlFor="city">Cidade</label>
-          <input type="text" id="city" {...register("city")}/>
+
+          <input 
+            type="text" 
+            id="city" 
+            {...register("city")}
+            // value={CEPData ? CEPData.localidade : ""}
+          />
+          
           <span className="error">{errors.city?.message}</span>
         </section>
             
         <section>
           <label htmlFor="state">Estado</label>
-          <select id="state" {...register("state")}>
+          <select 
+            id="state" 
+            {...register("state")} 
+            // value={CEPData ? CEPData.uf : ""}
+          >
               <option value="AC">Acre</option>
               <option value="AL">Alagoas</option>
               <option value="AP">Amapá</option>
@@ -146,7 +182,13 @@ export function Register() {
           
         <section>
           <label htmlFor="uf">UF</label>
-          <input type="text" id="uf" placeholder="Ex: CE" {...register("uf")}/>
+          <input 
+            type="text" 
+            id="uf" 
+            placeholder="Ex: CE" 
+            {...register("uf")}
+            // value={CEPData ? CEPData.uf : ""}
+          />
           <span className="error">{errors.uf?.message}</span>
         </section>
 

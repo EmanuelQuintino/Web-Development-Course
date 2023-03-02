@@ -14,7 +14,6 @@ module.exports = {
     async create(req, res, next) {
         try {
             const { name, email, cpf, phone, gender, cep, number, street, district, city, state, uf } = req.body;
-
             const studentEmail = await prisma.students.findUnique({where: {email}});
             if (studentEmail) return res.status(400).json("O Email já foi cadastrado");
 
@@ -22,10 +21,11 @@ module.exports = {
             if (studentCPF) return res.status(400).json("O CPF já foi cadastrado");
 
             await prisma.students.create({
-                data: {name, email, phone, gender, cep, number, street, district, city, state, uf}
+                data: {name, email, cpf, phone, gender, cep, number, street, district, city, state, uf}
             });
             return res.json(`Aluno ${name} cadastrado com sucesso`);
         } catch (error) {
+            console.log(error);
             next(error);
         }
     },
@@ -39,10 +39,14 @@ module.exports = {
             if (!student) return res.status(400).json("Estudante não encontrado");
 
             const studentEmail = await prisma.students.findUnique({where: {email}});
-            if (studentEmail) return res.status(400).json("O Email já foi cadastrado");
-
+            if (studentEmail && (studentEmail.email != student.email)) {
+                return res.status(400).json("O Email já foi cadastrado");
+            }
+            
             const studentCPF = await prisma.students.findUnique({where: {cpf}});
-            if (studentCPF) return res.status(400).json("O CPF já foi cadastrado");
+            if (studentCPF && (studentCPF.cpf != student.cpf)) {
+                return res.status(400).json("O CPF já foi cadastrado");
+            }
 
             await prisma.students.update({
                 where: {id: Number(id)}, 

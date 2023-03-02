@@ -34,6 +34,7 @@ export function Register() {
 
   // async function callCEP(event) {
   //   const CEP = event.target.value;
+  //   fetch(`https://cdn.apicep.com/file/apicep/${CEP}.json`)
   //   fetch(`https://viacep.com.br/ws/${CEP}/json/`)
   //     .then((request) => request.json())
   //     .then((data) => setcCEPtData(data));

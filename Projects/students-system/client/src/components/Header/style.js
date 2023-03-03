@@ -5,6 +5,7 @@ export const HeaderContainer = styled.header`
     align-items: center;
     justify-content: space-between;
 
+    height: 10.0rem;
     width: 100%;
     padding: 2.4rem;
     border-bottom: .4rem solid ${({theme}) => theme.colors.neutral8};

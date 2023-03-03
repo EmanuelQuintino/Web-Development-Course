@@ -1,7 +1,14 @@
 import styled from 'styled-components' 
 
 export const MenuContainer = styled.div`
-    background: ${({theme}) => theme.colors.neutral8};
+    background: #000C;
+    
+    padding: 2.4rem;
+    width: 100%;
+    height: calc(100vh - 10.0rem);
+
+    position: absolute;
+    z-index: 1;    
 
     display: grid;
     place-content: center;

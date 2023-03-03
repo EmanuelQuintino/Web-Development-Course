@@ -9,6 +9,7 @@ const schema = object({
   name: string().required("Preencha este campo").max(40, "Tamanho máximo de até 40 caracteres"),
   email: string().email("Preencha um Email válido").required("Preencha este campo").max(40, "Tamanho máximo de até 40 caracteres"),
   cpf: string().required("Preencha este campo").max(14, "Tamanho máximo de até 14 caracteres"),
+  birth: string().required("Preencha este campo").max(10, "Tamanho máximo de até 10 caracteres"),
   phone: string().required("Preencha este campo").max(40, "Tamanho máximo de até 40 caracteres"),
   gender: string().required("Preencha este campo").max(40, "Tamanho máximo de até 40 caracteres"),
   cep: string().required("Preencha este campo").max(40, "Tamanho máximo de até 40 caracteres"),
@@ -65,6 +66,12 @@ export function FormRegister() {
         <section>
           <label htmlFor="cpf">CPF</label>
           <input type="text" id="cpf" {...register("cpf")}/>
+          <span className="error">{errors.phone?.message}</span>
+        </section>
+
+        <section>
+          <label htmlFor="birth">Nascimento</label>
+          <input type="date" id="birth" {...register("birth")}/>
           <span className="error">{errors.phone?.message}</span>
         </section>
 

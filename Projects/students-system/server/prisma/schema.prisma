@@ -12,6 +12,7 @@ model students {
   name       String    @db.VarChar(255)
   email      String    @unique(map: "email") @db.VarChar(255)
   cpf        String    @unique(map: "cpf") @db.VarChar(255)
+  birth      DateTime  @db.Date
   phone      String    @db.VarChar(255)
   gender     String    @db.VarChar(255)
   cep        String    @db.VarChar(255)

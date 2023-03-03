@@ -4,6 +4,7 @@ CREATE TABLE `students` (
     `name` VARCHAR(255) NOT NULL,
     `email` VARCHAR(255) NOT NULL,
     `cpf` VARCHAR(255) NOT NULL,
+    `birth` DATE NOT NULL,
     `phone` VARCHAR(255) NOT NULL,
     `gender` VARCHAR(255) NOT NULL,
     `cep` VARCHAR(255) NOT NULL,

@@ -1,26 +1,43 @@
 import styled from 'styled-components'
 
 export const HeaderContainer = styled.header`
-    grid-area: header;
     display: flex;
     align-items: center;
     justify-content: space-between;
 
     width: 100%;
-    height: 12.0rem;
-    padding: 3.2rem;
+    padding: 2.4rem;
     border-bottom: .4rem solid ${({theme}) => theme.colors.neutral8};
 
     background: ${({theme}) => theme.colors.background};
     color: white;
 
-    & img {
-        width: 9.2rem;
+    .menuIcon {
+        font-size: 2.4rem;
+    }
+
+    .logoMenu {
+        display: flex;
+        align-items: center;
+        gap: .4rem;
+    }
+
+    .logoMenu div {
+        text-align: end;
+    }
+
+    & h1 {
+        font-size: 1.6rem;
+        line-height: 2.4rem;
     }
 
     & h3 {
         font-weight: 500;
-        font-size: 2.4rem;
+        font-size: 1.4rem;
         color: ${({theme}) => theme.colors.neutral8};
+    }
+
+    img {
+        width: 4.8rem;
     }
 `;

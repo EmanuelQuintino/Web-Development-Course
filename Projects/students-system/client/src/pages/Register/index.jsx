@@ -3,10 +3,12 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from '@hookform/resolvers/yup';
 import { object, string, number } from "yup";
 import { useState, useEffect } from "react";
+import axios from "axios";
 
 const schema = object({
   name: string().required("Preencha este campo").max(40, "Tamanho máximo de até 40 caracteres"),
   email: string().email("Preencha um Email válido").required("Preencha este campo").max(40, "Tamanho máximo de até 40 caracteres"),
+  cpf: string().required("Preencha este campo").max(14, "Tamanho máximo de até 14 caracteres"),
   phone: string().required("Preencha este campo").max(40, "Tamanho máximo de até 40 caracteres"),
   gender: string().required("Preencha este campo").max(40, "Tamanho máximo de até 40 caracteres"),
   cep: string().required("Preencha este campo").max(40, "Tamanho máximo de até 40 caracteres"),
@@ -18,7 +20,7 @@ const schema = object({
   uf: string().required("Preencha este campo").max(2, "Tamanho máximo de até 2 caracteres"),
 }).required();
 
-export function Register() {
+export function RegisterStudent() {
   const { register, handleSubmit, formState: { errors }, reset } = useForm({
     resolver: yupResolver(schema)
   });
@@ -26,10 +28,13 @@ export function Register() {
   const [studentData, setStudentData] = useState();
   // const [CEPData, setcCEPtData] = useState();
 
+  const API = "http://localhost:3000/students"
   function onSubmit(data) {
-    setStudentData(data);
-    alert('Estudante cadastrado com sucesso!');
-    reset();
+    console.log(data);
+    axios.post(API, data)
+    .then((res) => alert(res.data))
+    .catch((error) => alert(error))
+    // reset();
   }
 
   // async function callCEP(event) {
@@ -57,6 +62,12 @@ export function Register() {
           <label htmlFor="email">Email</label>
           <input type="email" id="email" {...register("email")}/>
           <span className="error">{errors.email?.message}</span>
+        </section>
+
+        <section>
+          <label htmlFor="cpf">CPF</label>
+          <input type="text" id="cpf" {...register("cpf")}/>
+          <span className="error">{errors.phone?.message}</span>
         </section>
 
         <section>

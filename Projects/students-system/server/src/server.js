@@ -5,6 +5,9 @@ app.listen(3000, console.log('Server is running on PORT 3000'));
 
 app.use(express.json());
 
+const cors = require('cors');
+app.use(cors());
+
 const routes = require('./routes');
 app.use(routes);
 

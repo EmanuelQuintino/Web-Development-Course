@@ -7,7 +7,6 @@ export function App() {
   return (
     <Container>
       <Header/>
-      <Menu/>
       <main>
         <MainArticle>
           <Outlet/>

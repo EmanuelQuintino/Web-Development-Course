@@ -1,7 +1,10 @@
 export default {
     colors : {
-        main: '#70C7FD',
-        complementary: "#FCC16F",
+        main0: '#024040',
+        main1: '#23D9D9',
+        main2: '#088B8B',
+        complementary1: "#401800",
+        complementary2: "#8C3908",
         background: "#252525",
         font: "#FFF",
         neutral0: "#000", 

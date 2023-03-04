@@ -6,9 +6,8 @@ import { Menu } from "../Menu"
 
 export function Header() {
     const [menuActive, setMenuActive] = useState(false);
-    function toggleMenu() {
-        setMenuActive(!menuActive)
-    }
+    const toggleMenu = () =>  setMenuActive(!menuActive);
+    
     return (
         <>
             <HeaderContainer>

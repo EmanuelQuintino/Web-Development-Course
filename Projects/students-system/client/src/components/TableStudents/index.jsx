@@ -9,11 +9,22 @@ export function TableStudents() {
     const [listStudents, setListStudents] = useState([]);
     const [searchStudent, setSearchStudent] = useState('');
     
-    useEffect(() => {
-        const API = "http://localhost:3000/students"
+    const API = "http://localhost:3000/students/"
+    
+    function listEstudents() {
         axios.get(API)
         .then((res) => setListStudents(res.data))
         .catch((error) => console.error(error));
+    }
+
+    function deleteEstudent(ID) {
+        axios.delete(API + ID)
+        .then((res) => setListStudents(res.data))
+        .catch((error) => console.error(error));
+    }
+
+    useEffect(() => {
+        listEstudents();
     }, []);
     
     const filterStudents = listStudents.filter((student) => {

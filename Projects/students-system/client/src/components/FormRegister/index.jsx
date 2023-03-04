@@ -34,7 +34,7 @@ export function FormRegister() {
         console.log(data);
         axios.post(API, data)
         .then((res) => alert(res.data))
-        .catch((error) => alert(error))
+        .catch((error) => alert((error.response.data)));
         // reset();
     }
 

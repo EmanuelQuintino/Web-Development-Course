@@ -33,8 +33,6 @@ export function TableStudents() {
                     <BsSearch className="searchIcon"/>
                 </section>
 
-                <p>lorem</p>
-
                 <section className="tableStudents">
                     <Table striped bordered hover>
                         <thead>

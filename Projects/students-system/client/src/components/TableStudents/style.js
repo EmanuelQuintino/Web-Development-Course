@@ -17,7 +17,9 @@ export const Container = styled.div `
     
     #inputSearchStudent {
         margin-top: 1.6rem;
+        width: 100%;
         border: none;
+        background: none;
         border-bottom: .2rem solid ${({theme}) => theme.colors.neutral8};
         padding: .4rem 1.2rem;
         border-radius: .4rem;
@@ -33,7 +35,7 @@ export const Container = styled.div `
     .searchIcon {
         position: absolute;
         bottom: 1.0rem;
-        right: 4.8rem;
+        right: 1.6rem;
         font-size: 1.4rem;
         color: ${({theme}) => theme.colors.neutral8};
     }

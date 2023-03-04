@@ -35,16 +35,17 @@ export const HeaderContainer = styled.header`
 
     & h1 {
         font-size: 1.6rem;
-        line-height: 2.4rem;
     }
-
+    
     & h3 {
+        line-height: .8rem;
         font-weight: 500;
         font-size: 1.4rem;
         color: ${({theme}) => theme.colors.neutral8};
     }
 
     img {
-        width: 4.8rem;
+        width: 5.2rem;
+        padding-bottom: .4rem;
     }
 `;

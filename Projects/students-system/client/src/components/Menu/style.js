@@ -13,7 +13,7 @@ export const MenuContainer = styled.div`
     display: grid;
     place-content: center;
 
-    & ul {
+    ul {
         list-style: none;
 
         display: grid;
@@ -23,14 +23,18 @@ export const MenuContainer = styled.div`
         font-weight: 600;
         text-align: center;
     }
-
-    & a {
+    
+    a {
         padding: .8rem;
         border-radius: .4rem;
         color: ${({theme}) => theme.colors.neutralB};
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: .8rem;
     }
 
-    & a:hover {
+    a:hover {
         border-bottom: 4px solid ${({theme}) => theme.colors.neutralB};
     }
 

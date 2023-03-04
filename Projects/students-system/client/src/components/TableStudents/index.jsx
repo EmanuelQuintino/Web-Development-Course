@@ -3,11 +3,21 @@ import { useState, useEffect } from "react"
 import axios from "axios";
 import { Table } from 'react-bootstrap';
 import { BsSearch } from "react-icons/bs"
+import { TiEdit } from "react-icons/ti"
 
 
 export function TableStudents() {
     const [listStudents, setListStudents] = useState([]);
     const [searchStudent, setSearchStudent] = useState('');
+
+    const filterStudents = listStudents.filter((student) => {
+        return (
+            String(student.id).toLowerCase().includes(searchStudent.toLowerCase()) ||
+            student.name.toLowerCase().includes(searchStudent.toLowerCase()) ||
+            student.cpf.toLowerCase().includes(searchStudent.toLowerCase()) ||
+            student.email.toLowerCase().includes(searchStudent.toLowerCase())
+        );
+    })
     
     const API = "http://localhost:3000/students/"
     
@@ -19,23 +29,15 @@ export function TableStudents() {
 
     function deleteEstudent(ID) {
         axios.delete(API + ID)
-        .then((res) => setListStudents(res.data))
-        .catch((error) => console.error(error));
+        .then((res) => alert(res.data))
+        .catch((error) => console.error(error))
+        .finally(() => listEstudents());
     }
 
     useEffect(() => {
         listEstudents();
     }, []);
     
-    const filterStudents = listStudents.filter((student) => {
-        return (
-            String(student.id).toLowerCase().includes(searchStudent.toLowerCase()) ||
-            student.name.toLowerCase().includes(searchStudent.toLowerCase()) ||
-            student.cpf.toLowerCase().includes(searchStudent.toLowerCase()) ||
-            student.email.toLowerCase().includes(searchStudent.toLowerCase())
-        );
-    })
-
     return (
         <Container>
             <article>
@@ -60,7 +62,7 @@ export function TableStudents() {
                                 <th>ID</th>
                                 <th>Nome</th>
                                 <th>Telefone</th>
-                                <th>Config</th>
+                                <th>Editar</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -71,7 +73,7 @@ export function TableStudents() {
                                             <td>{student.id}</td>
                                             <td>{student.name}</td>
                                             <td>{student.phone}</td>
-                                            <td>Detalhes</td>
+                                            <td onClick={() => deleteEstudent(student.id)}><TiEdit/></td>
                                         </tr>
                                     )
                                 }) 

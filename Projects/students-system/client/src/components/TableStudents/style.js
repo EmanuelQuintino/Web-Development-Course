@@ -63,4 +63,12 @@ export const Container = styled.div `
     .tableStudents table {
         font-size: .8rem;
     }
+
+    th, td {
+        text-align: center;
+    }
+
+    tr td:nth-child(2) {
+        text-align: start;
+    }
 `;

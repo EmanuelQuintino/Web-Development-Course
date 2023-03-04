@@ -31,34 +31,30 @@ export function TableStudents() {
                 </section>
 
                 <section>
-                    { listStudents &&
-                        filterStudents.map((student, index) => <p key={index}>{student.name}</p>) 
-                    }
-                </section>
-
-                <section>
                     <Table striped bordered hover>
                         <thead>
                             <tr>
-                                <th>#</th>
-                                <th>First Name</th>
-                                <th>Last Name</th>
-                                <th>Username</th>
+                                <th>ID</th>
+                                <th>Nome</th>
+                                <th>Email</th>
+                                <th>Telefone</th>
+                                <th>Config</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td>1</td>
-                                <td>Mark</td>
-                                <td>Otto</td>
-                                <td>@mdo</td>
-                            </tr>
-                            <tr>
-                                <td>2</td>
-                                <td>Jacob</td>
-                                <td>Thornton</td>
-                                <td>@fat</td>
-                            </tr>
+                            { listStudents &&
+                                filterStudents.map((student, index) => {
+                                    return (
+                                        <tr key={index}>
+                                            <td>{student.id}</td>
+                                            <td>{student.name}</td>
+                                            <td>{student.email}</td>
+                                            <td>{student.phone}</td>
+                                            <td>Details Editar</td>
+                                        </tr>
+                                    )
+                                }) 
+                            }
                         </tbody>
                     </Table>  
                 </section>

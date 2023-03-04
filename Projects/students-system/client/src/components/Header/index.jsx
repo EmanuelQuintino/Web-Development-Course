@@ -23,7 +23,10 @@ export function Header() {
                     <img src="./images/logo-rj.png" alt="logo" />
                 </div>
             </HeaderContainer>
-            { menuActive ? <Menu/> : "" }
+            
+            <div onClick={toggleMenu}>
+                { menuActive && <Menu/> }
+            </div>
         </>
     )
 }

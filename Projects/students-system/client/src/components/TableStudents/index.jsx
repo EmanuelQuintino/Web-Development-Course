@@ -24,18 +24,22 @@ export function TableStudents() {
             student.email.toLowerCase().includes(searchStudent.toLowerCase())
         );
     })
+
     return (
         <Container>
             <article>
-                <section className="inputSection">
-                    <input
-                        id="inputSearchStudent" 
-                        type="text"
-                        placeholder="Buscar aluno" 
-                        onChange={(event) => setSearchStudent(event.target.value)}
-                    />
-                    <label htmlFor="inputSearchStudent" className="labelInputSearch srOnly">Buscar aluno</label>
-                    <BsSearch className="searchIcon"/>
+                <section className="titleSearch">
+                    <h1>Alunos</h1>
+                    <div className="inputSection">
+                        <input
+                            id="inputSearchStudent" 
+                            type="text"
+                            placeholder=" " 
+                            onChange={(event) => setSearchStudent(event.target.value)}
+                        />
+                        <label htmlFor="inputSearchStudent" className="labelInputSearch">Buscar aluno</label>
+                        <BsSearch className="searchIcon"/>
+                    </div>
                 </section>
 
                 <section className="tableStudents">

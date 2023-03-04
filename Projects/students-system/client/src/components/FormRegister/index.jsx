@@ -46,7 +46,7 @@ export function FormRegister() {
     //     .then((data) => setcCEPtData(data));
     // }
 
-    console.log(studentData);
+    // console.log(studentData);
     // console.log(CEPData);
 
     return (

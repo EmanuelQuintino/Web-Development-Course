@@ -3,6 +3,7 @@ import { IoMdMenu } from "react-icons/io"
 import { IoMdClose } from "react-icons/io"
 import { useState } from "react"
 import { Menu } from "../Menu"
+import { Link } from "react-router-dom"
 
 export function Header() {
     const [menuActive, setMenuActive] = useState(false);
@@ -20,7 +21,9 @@ export function Header() {
                         <h1>Sistema de Estudantes</h1>
                         <h3>Curso de Desenvolvimento Web</h3>
                     </div>
-                    <img src="./images/logo-rj.png" alt="logo" />
+                    <Link to="/">
+                        <img src="./images/logo-rj.png" alt="logo" />
+                    </Link>
                 </div>
             </HeaderContainer>
             

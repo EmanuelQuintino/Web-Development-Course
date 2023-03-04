@@ -77,7 +77,7 @@ export function FormRegister() {
 
         <section>
           <label htmlFor="phone">Telefone</label>
-          <input type="text" id="phone" {...register("phone")}/>
+          <input type="tel" id="phone" {...register("phone")}/>
           <span className="error">{errors.phone?.message}</span>
         </section>
 

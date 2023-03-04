@@ -14,6 +14,14 @@ export const Container = styled.div `
         padding: 0 .4rem;
         color: ${({theme}) => theme.colors.neutralA};
     }
+
+    .srOnly {
+        position: absolute;
+        width: 0.1rem;
+        height: 0.1rem;
+        overflow: hidden;
+        color: transparent;
+    }
     
     #inputSearchStudent {
         margin-top: 1.6rem;
@@ -25,7 +33,8 @@ export const Container = styled.div `
         border-radius: .4rem;
     }
     
-    #inputSearchStudent:focus + .labelInputSearch {
+    #inputSearchStudent:focus + .labelInputSearch,
+    #inputSearchStudent:valid + .labelInputSearch {
         bottom: 2.6rem;
         font-size: 1.2rem;
         background: white;

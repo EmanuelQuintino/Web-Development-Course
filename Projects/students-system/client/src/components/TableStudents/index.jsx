@@ -17,7 +17,12 @@ export function TableStudents() {
     }, []);
     
     const filterStudents = listStudents.filter((student) => {
-        return student.name.toLowerCase().includes(searchStudent.toLowerCase());
+        return (
+            String(student.id).toLowerCase().includes(searchStudent.toLowerCase()) ||
+            student.name.toLowerCase().includes(searchStudent.toLowerCase()) ||
+            student.cpf.toLowerCase().includes(searchStudent.toLowerCase()) ||
+            student.email.toLowerCase().includes(searchStudent.toLowerCase())
+        );
     })
     return (
         <Container>
@@ -25,11 +30,11 @@ export function TableStudents() {
                 <section className="inputSection">
                     <input
                         id="inputSearchStudent" 
-                        type="text" 
+                        type="text"
+                        placeholder="Buscar aluno" 
                         onChange={(event) => setSearchStudent(event.target.value)}
-                        value={searchStudent}
                     />
-                    <label htmlFor="inputSearchStudent" className="labelInputSearch">Buscar aluno</label>
+                    <label htmlFor="inputSearchStudent" className="labelInputSearch srOnly">Buscar aluno</label>
                     <BsSearch className="searchIcon"/>
                 </section>
 
@@ -39,7 +44,6 @@ export function TableStudents() {
                             <tr>
                                 <th>ID</th>
                                 <th>Nome</th>
-                                <th>Email</th>
                                 <th>Telefone</th>
                                 <th>Config</th>
                             </tr>
@@ -51,7 +55,6 @@ export function TableStudents() {
                                         <tr key={index}>
                                             <td>{student.id}</td>
                                             <td>{student.name}</td>
-                                            <td>{student.email}</td>
                                             <td>{student.phone}</td>
                                             <td>Detalhes</td>
                                         </tr>

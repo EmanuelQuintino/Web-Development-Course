@@ -3,7 +3,7 @@ import { useState, useEffect } from "react"
 import axios from "axios";
 import { Table } from 'react-bootstrap';
 import { BsSearch } from "react-icons/bs"
-import { TiEdit } from "react-icons/ti"
+import { BiEdit } from "react-icons/bi"
 
 
 export function TableStudents() {
@@ -73,7 +73,9 @@ export function TableStudents() {
                                             <td>{student.id}</td>
                                             <td>{student.name}</td>
                                             <td>{student.phone}</td>
-                                            <td onClick={() => deleteEstudent(student.id)}><TiEdit/></td>
+                                            <td onClick={() => deleteEstudent(student.id)}>
+                                                <BiEdit className="editIcon"/>
+                                            </td>
                                         </tr>
                                     )
                                 }) 

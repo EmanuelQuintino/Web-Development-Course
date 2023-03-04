@@ -71,4 +71,8 @@ export const Container = styled.div `
     tr td:nth-child(2) {
         text-align: start;
     }
+
+    .editIcon {
+        font-size: 1.2rem;
+    }
 `;

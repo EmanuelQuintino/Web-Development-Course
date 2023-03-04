@@ -9,7 +9,7 @@ export const Container = styled.div`
 export const MainArticle = styled.article`
     max-width: 32.0rem;
     margin: 0 auto;
-    padding: 2.4rem .0rem;
+    padding: 2.4rem .0rem 7.6rem;
     text-align: justify;
 `;
 

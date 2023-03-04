@@ -74,5 +74,6 @@ export const Container = styled.div `
 
     .editIcon {
         font-size: 1.2rem;
+        cursor: pointer;
     }
 `;

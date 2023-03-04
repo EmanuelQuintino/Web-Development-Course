@@ -61,8 +61,9 @@ export function TableStudents() {
                             <tr>
                                 <th>ID</th>
                                 <th>Nome</th>
+                                <th>Cidade</th>
                                 <th>Telefone</th>
-                                <th>Editar</th>
+                                <th>Detalhes</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -72,6 +73,7 @@ export function TableStudents() {
                                         <tr key={index}>
                                             <td>{student.id}</td>
                                             <td>{student.name}</td>
+                                            <td>{student.city}</td>
                                             <td>{student.phone}</td>
                                             <td onClick={() => deleteEstudent(student.id)}>
                                                 <BiEdit className="editIcon"/>

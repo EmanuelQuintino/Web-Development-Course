@@ -1,6 +1,7 @@
 import { Container } from "./style"
 import { useState, useEffect } from "react"
 import axios from "axios";
+import { Table } from 'react-bootstrap';
 
 export function TableStudents() {
     const [listStudents, setListStudents] = useState([]);
@@ -33,6 +34,33 @@ export function TableStudents() {
                     { listStudents &&
                         filterStudents.map((student, index) => <p key={index}>{student.name}</p>) 
                     }
+                </section>
+
+                <section>
+                    <Table striped bordered hover>
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>First Name</th>
+                                <th>Last Name</th>
+                                <th>Username</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Jacob</td>
+                                <td>Thornton</td>
+                                <td>@fat</td>
+                            </tr>
+                        </tbody>
+                    </Table>  
                 </section>
             </article>
         </Container>

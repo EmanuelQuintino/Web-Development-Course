@@ -1,7 +1,7 @@
 import { Header } from "../components/Header"
-import { Menu } from "../components/Menu"
 import { Container, MainArticle , Footer } from "./style"
 import { Outlet } from "react-router-dom"
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 export function App() {
   return (

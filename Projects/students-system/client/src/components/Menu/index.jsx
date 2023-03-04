@@ -18,7 +18,7 @@ export function Menu() {
               </li>
               <li>
                 <NavLink to="/students" className={({isActive}) => isActive ? 'active' : ''}>
-                  <BsTable/>
+                  <BsTable className="iconMenuStudentsTable"/>
                   Alunos
                 </NavLink>
               </li>
@@ -30,7 +30,7 @@ export function Menu() {
               </li>
               <li>
                 <NavLink to="/about" className={({isActive}) => isActive ? 'active' : ''}>
-                  <BsInfoCircleFill/>
+                  <BsInfoCircleFill className="iconMenuAbout"/>
                   Sobre
                 </NavLink>
               </li>

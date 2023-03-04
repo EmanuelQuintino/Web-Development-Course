@@ -41,4 +41,9 @@ export const MenuContainer = styled.div`
     & .active {
         color: ${({theme}) => theme.colors.neutral1};
     }
+
+    .iconMenuStudentsTable,
+    .iconMenuAbout {
+        font-size: 1.6rem;
+    }
 `;

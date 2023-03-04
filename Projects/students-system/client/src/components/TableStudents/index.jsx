@@ -2,6 +2,8 @@ import { Container } from "./style"
 import { useState, useEffect } from "react"
 import axios from "axios";
 import { Table } from 'react-bootstrap';
+import { BsSearch } from "react-icons/bs"
+
 
 export function TableStudents() {
     const [listStudents, setListStudents] = useState([]);
@@ -20,17 +22,20 @@ export function TableStudents() {
     return (
         <Container>
             <article>
-                <section>
-                    <label htmlFor=""></label>
-                    <input 
+                <section className="inputSection">
+                    <input
+                        id="inputSearchStudent" 
                         type="text" 
-                        placeholder="Nome do aluno" 
                         onChange={(event) => setSearchStudent(event.target.value)}
                         value={searchStudent}
                     />
+                    <label htmlFor="inputSearchStudent" className="labelInputSearch">Buscar aluno</label>
+                    <BsSearch className="searchIcon"/>
                 </section>
 
-                <section>
+                <p>lorem</p>
+
+                <section className="tableStudents">
                     <Table striped bordered hover>
                         <thead>
                             <tr>
@@ -50,7 +55,7 @@ export function TableStudents() {
                                             <td>{student.name}</td>
                                             <td>{student.email}</td>
                                             <td>{student.phone}</td>
-                                            <td>Details Editar</td>
+                                            <td>Detalhes</td>
                                         </tr>
                                     )
                                 }) 

@@ -31,7 +31,7 @@ export function TableStudents() {
     function fetchStudents() {
         axios.get(API)
         .then((res) => setListStudents(res.data))
-        .catch((error) => alert((error.response.data)));
+        .catch((error) => alert(error.response.data));
     }
 
     function deleteStudent(ID) {
@@ -39,7 +39,7 @@ export function TableStudents() {
         if (isDelete) {
             axios.delete(API + ID)
             .then((res) => alert(res.data))
-            .catch((error) => console.error(error))
+            .catch((error) => alert(error.response.data))
             .finally(() => {
                 fetchStudents();
                 modalClose();
@@ -103,7 +103,7 @@ export function TableStudents() {
 
         axios.put(API + ID, dataStudent)
             .then((res) => alert(res.data))
-            .catch((error) => console.error(error.response.data))
+            .catch((error) => alert(error.response.data))
             .finally(() => fetchStudents());
     }
     

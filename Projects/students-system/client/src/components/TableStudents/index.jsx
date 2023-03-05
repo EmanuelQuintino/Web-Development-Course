@@ -35,10 +35,17 @@ export function TableStudents() {
     }
 
     function deleteStudent(ID) {
-        axios.delete(API + ID)
-        .then((res) => alert(res.data))
-        .catch((error) => console.error(error))
-        .finally(() => fetchStudents());
+        const isDelete = confirm("Deseja excluir o aluno?");
+        if (isDelete) {
+            axios.delete(API + ID)
+            .then((res) => alert(res.data))
+            .catch((error) => console.error(error))
+            .finally(() => {
+                fetchStudents();
+                modalClose();
+            });
+        }
+
     }
 
     useEffect(() => {
@@ -95,11 +102,9 @@ export function TableStudents() {
         }
 
         axios.put(API + ID, dataStudent)
-            .then((res) => { 
-                alert(res.data); 
-                fetchStudents();
-            })
-            .catch((error) => console.error(error));
+            .then((res) => alert(res.data))
+            .catch((error) => console.error(error.response.data))
+            .finally(() => fetchStudents());
     }
     
     return (
@@ -206,11 +211,11 @@ export function TableStudents() {
                             </Form>
                         </Modal.Body>
                         <Modal.Footer>
-                            <Button variant="secondary" onClick={modalClose}>
-                                Fechar
+                            <Button variant="danger" onClick={() => deleteStudent(studentID)}>
+                                Deletar
                             </Button>
-                            <Button variant="primary" type="submit" onClick={modalClose}>
-                                Salvar
+                            <Button variant="primary" onClick={modalClose}>
+                                Atualizar
                             </Button>
                         </Modal.Footer>
                     </Modal>

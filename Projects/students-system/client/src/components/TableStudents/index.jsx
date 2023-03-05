@@ -11,7 +11,8 @@ import Modal from 'react-bootstrap/Modal';
 export function TableStudents() {
     const [listStudents, setListStudents] = useState([]);
     const [searchStudent, setSearchStudent] = useState('');
-    const [editModalShow, setFormEditShow ] = useState(true);
+    const [editModalShow, setFormEditShow ] = useState(false);
+    const [studentID, setStudentID ] = useState('');
     const [studentName, setStudentName ] = useState('');
     const [studentEmail, setStudentEmail ] = useState('');
     const [studentCPF, setStudentCPF ] = useState('');
@@ -48,6 +49,7 @@ export function TableStudents() {
         setFormEditShow(true);
 
         const student = listStudents.filter((student) => String(student.id).includes(ID));
+        setStudentID(student[0].id);
         setStudentName(student[0].name);
         setStudentEmail(student[0].email);
         setStudentCPF(student[0].cpf);    
@@ -57,8 +59,21 @@ export function TableStudents() {
         setFormEditShow(false);
     }
 
+    function handleName(event) {
+        setStudentName(event.target.value)
+    }
+
+    function handleEmail(event) {
+        setStudentEmail(event.target.value)
+    }
+
+    function handleCPF(event) {
+        setStudentCPF(event.target.value)
+    }
+
     function updateStudent(event) {
         event.preventDefault();
+        const ID = event.target.id.value;
         const name = event.target.name.value;
         const email = event.target.email.value;
         const cpf = event.target.cpf.value;
@@ -66,26 +81,25 @@ export function TableStudents() {
         const dataStudent = {
             name, 
             email, 
-            cpf
+            cpf,
+            birth: "2020-06-06",
+            phone: "(88) 99605-9913",
+            gender: "M",
+            cep: "63580-000",
+            number: "123",
+            street: "José Fafundo",
+            district: "Planalto",
+            city: "Jucás", 
+            state: "Ceará",
+            uf: "CE" 
         }
 
-        console.log(dataStudent);
-
-        axios.put(API + "ID", dataStudent)
-            .then((res) => alert(res.data))
-            .catch((error) => alert((error.response.data)));
-    }
-
-    function hendleName(event) {
-        setStudentName(event.target.value)
-    }
-
-    function hendleEmail(event) {
-        setStudentEmail(event.target.value)
-    }
-
-    function hendleCPF(event) {
-        setStudentCPF(event.target.value)
+        axios.put(API + ID, dataStudent)
+            .then((res) => { 
+                alert(res.data); 
+                fetchStudents();
+            })
+            .catch((error) => console.error(error));
     }
     
     return (
@@ -143,16 +157,26 @@ export function TableStudents() {
                             <Modal.Title>Detalhes do Aluno</Modal.Title>
                         </Modal.Header>
                         <Modal.Body>
-                            <Form onSubmit={updateStudent}>
+                                <Form onSubmit={updateStudent}>
+                                <Form.Group className="mb-3" controlId="id">
+                                    <Form.Label>ID</Form.Label>
+                                    <Form.Control
+                                        type="text"
+                                        placeholder="ID do Aluno"
+                                        name="id"
+                                        value={studentID}
+                                        disabled
+                                    />
+                                </Form.Group>
                                 <Form.Group className="mb-3" controlId="name">
                                     <Form.Label>Nome</Form.Label>
                                     <Form.Control
                                         type="text"
-                                        placeholder="nome do aluno"
+                                        placeholder="Nome do aluno"
                                         autoFocus
                                         name="name"
                                         value={studentName}
-                                        onChange={hendleName}
+                                        onChange={handleName}
                                     />
                                 </Form.Group>
                                 <Form.Group className="mb-3" controlId="email">
@@ -162,7 +186,7 @@ export function TableStudents() {
                                         placeholder="nome@exemplo.com"
                                         name="email"
                                         value={studentEmail}
-                                        onChange={hendleEmail}
+                                        onChange={handleEmail}
                                         />
                                 </Form.Group>
                                 <Form.Group className="mb-3" controlId="cpf">
@@ -172,12 +196,12 @@ export function TableStudents() {
                                         placeholder="123.123.123-12"
                                         name="cpf"
                                         value={studentCPF}
-                                        onChange={hendleCPF}
+                                        onChange={handleCPF}
                                     />
                                 </Form.Group>
 
                                 <Button variant="primary" type="submit" onClick={modalClose}>
-                                    Salvar
+                                    Atualizar
                                 </Button>
                             </Form>
                         </Modal.Body>

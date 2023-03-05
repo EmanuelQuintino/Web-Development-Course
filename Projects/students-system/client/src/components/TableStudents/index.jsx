@@ -12,6 +12,9 @@ export function TableStudents() {
     const [listStudents, setListStudents] = useState([]);
     const [searchStudent, setSearchStudent] = useState('');
     const [editModalShow, setFormEditShow ] = useState(true);
+    const [studentName, setStudentName ] = useState('');
+    const [studentEmail, setStudentEmail ] = useState('');
+    const [studentCPF, setStudentCPF ] = useState('');
 
     const filterStudents = listStudents.filter((student) => {
         return (
@@ -24,25 +27,34 @@ export function TableStudents() {
     
     const API = "http://localhost:3000/students/"
     
-    function listEstudents() {
+    function fetchStudents() {
         axios.get(API)
         .then((res) => setListStudents(res.data))
         .catch((error) => alert((error.response.data)));
     }
 
-    function deleteEstudent(ID) {
+    function deleteStudent(ID) {
         axios.delete(API + ID)
         .then((res) => alert(res.data))
         .catch((error) => console.error(error))
-        .finally(() => listEstudents());
+        .finally(() => fetchStudents());
     }
 
     useEffect(() => {
-        listEstudents();
+        fetchStudents();
     }, []);
 
-    function handleModalEdit() {
-        setFormEditShow(!editModalShow);
+    function modalOpen(ID) {
+        setFormEditShow(true);
+
+        const student = listStudents.filter((student) => String(student.id).includes(ID));
+        setStudentName(student[0].name);
+        setStudentEmail(student[0].email);
+        setStudentCPF(student[0].cpf);    
+    }
+
+    function modalClose() {
+        setFormEditShow(false);
     }
 
     function updateStudent(event) {
@@ -62,6 +74,18 @@ export function TableStudents() {
         axios.put(API + "ID", dataStudent)
             .then((res) => alert(res.data))
             .catch((error) => alert((error.response.data)));
+    }
+
+    function hendleName(event) {
+        setStudentName(event.target.value)
+    }
+
+    function hendleEmail(event) {
+        setStudentEmail(event.target.value)
+    }
+
+    function hendleCPF(event) {
+        setStudentCPF(event.target.value)
     }
     
     return (
@@ -101,8 +125,8 @@ export function TableStudents() {
                                             <td>{student.name}</td>
                                             <td>{student.city}</td>
                                             <td>{student.phone}</td>
-                                            {/* <td onClick={() => deleteEstudent(student.id)}> */}
-                                            <td onClick={handleModalEdit}>
+                                            {/* <td onClick={() => deleteStudent(student.id)}> */}
+                                            <td onClick={() => modalOpen(student.id)}>
                                                 <BiEdit className="editIcon"/>
                                             </td>
                                         </tr>
@@ -114,7 +138,7 @@ export function TableStudents() {
                 </section>
 
                 <section>
-                    <Modal show={editModalShow} onHide={handleModalEdit}>
+                    <Modal show={editModalShow} onHide={modalClose}>
                         <Modal.Header closeButton>
                             <Modal.Title>Detalhes do Aluno</Modal.Title>
                         </Modal.Header>
@@ -127,6 +151,8 @@ export function TableStudents() {
                                         placeholder="nome do aluno"
                                         autoFocus
                                         name="name"
+                                        value={studentName}
+                                        onChange={hendleName}
                                     />
                                 </Form.Group>
                                 <Form.Group className="mb-3" controlId="email">
@@ -135,7 +161,9 @@ export function TableStudents() {
                                         type="email"
                                         placeholder="nome@exemplo.com"
                                         name="email"
-                                    />
+                                        value={studentEmail}
+                                        onChange={hendleEmail}
+                                        />
                                 </Form.Group>
                                 <Form.Group className="mb-3" controlId="cpf">
                                     <Form.Label>CPF</Form.Label>
@@ -143,19 +171,21 @@ export function TableStudents() {
                                         type="text"
                                         placeholder="123.123.123-12"
                                         name="cpf"
+                                        value={studentCPF}
+                                        onChange={hendleCPF}
                                     />
                                 </Form.Group>
 
-                                <Button variant="primary" type="submit" onClick={handleModalEdit}>
+                                <Button variant="primary" type="submit" onClick={modalClose}>
                                     Salvar
                                 </Button>
                             </Form>
                         </Modal.Body>
                         <Modal.Footer>
-                            <Button variant="secondary" onClick={handleModalEdit}>
+                            <Button variant="secondary" onClick={modalClose}>
                                 Fechar
                             </Button>
-                            <Button variant="primary" type="submit" onClick={handleModalEdit}>
+                            <Button variant="primary" type="submit" onClick={modalClose}>
                                 Salvar
                             </Button>
                         </Modal.Footer>

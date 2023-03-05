@@ -15,15 +15,15 @@ module.exports = {
         try {
             const { name, email, cpf, birth, phone, gender, cep, number, street, district, city, state, uf } = req.body;
             const studentEmail = await prisma.students.findUnique({where: {email}});
-            if (studentEmail) return res.status(400).json("O Email já foi cadastrado");
+            if (studentEmail) return res.status(400).json("Email já cadastrado");
 
             const studentCPF = await prisma.students.findUnique({where: {cpf}});
-            if (studentCPF) return res.status(400).json("O CPF já foi cadastrado");
+            if (studentCPF) return res.status(400).json("CPF já cadastrado");
 
             await prisma.students.create({
                 data: {name, email, cpf, birth: new Date(birth), phone, gender, cep, number, street, district, city, state, uf}
             });
-            return res.json(`Aluno ${name} cadastrado com sucesso`);
+            return res.json(`Aluno cadastrado com sucesso`);
         } catch (error) {
             console.log(error);
             next(error);
@@ -40,19 +40,19 @@ module.exports = {
 
             const studentEmail = await prisma.students.findUnique({where: {email}});
             if (studentEmail && (studentEmail.email != student.email)) {
-                return res.status(400).json("O Email já foi cadastrado");
+                return res.status(400).json("Email já cadastrado");
             }
             
             const studentCPF = await prisma.students.findUnique({where: {cpf}});
             if (studentCPF && (studentCPF.cpf != student.cpf)) {
-                return res.status(400).json("O CPF já foi cadastrado");
+                return res.status(400).json("CPF já cadastrado");
             }
 
             await prisma.students.update({
                 where: {id: Number(id)}, 
                 data: { name, email, cpf, birth: new Date(birth), phone, gender, cep, number, street, district, city, state, uf }
             });
-            return res.json(`Estudante ${name} atualizado com sucesso`);
+            return res.json(`Estudante atualizado com sucesso`);
         } catch (error) {
             next(error);
         }
@@ -66,7 +66,7 @@ module.exports = {
             if(!student) return res.status(400).json('Estudante não encontrado');
 
             const deleteStudent = await prisma.students.delete({where: {id: Number(id)}});
-            return res.json(`O Estudante ${deleteStudent.name} foi deletado com sucesso`);            
+            return res.json(`Estudante deletado com sucesso`);            
         } catch (error) {
             next(error);
         }

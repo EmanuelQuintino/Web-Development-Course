@@ -27,7 +27,7 @@ export function TableStudents() {
     function listEstudents() {
         axios.get(API)
         .then((res) => setListStudents(res.data))
-        .catch((error) => console.error(error));
+        .catch((error) => alert((error.response.data)));
     }
 
     function deleteEstudent(ID) {
@@ -43,6 +43,25 @@ export function TableStudents() {
 
     function handleModalEdit() {
         setFormEditShow(!editModalShow);
+    }
+
+    function updateStudent(event) {
+        event.preventDefault();
+        const name = event.target.name.value;
+        const email = event.target.email.value;
+        const cpf = event.target.cpf.value;
+        
+        const dataStudent = {
+            name, 
+            email, 
+            cpf
+        }
+
+        console.log(dataStudent);
+
+        axios.put(API + "ID", dataStudent)
+            .then((res) => alert(res.data))
+            .catch((error) => alert((error.response.data)));
     }
     
     return (
@@ -97,34 +116,48 @@ export function TableStudents() {
                 <section>
                     <Modal show={editModalShow} onHide={handleModalEdit}>
                         <Modal.Header closeButton>
-                        <Modal.Title>Detalhes do Aluno</Modal.Title>
+                            <Modal.Title>Detalhes do Aluno</Modal.Title>
                         </Modal.Header>
                         <Modal.Body>
-                        <Form>
-                            <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-                            <Form.Label>Email</Form.Label>
-                            <Form.Control
-                                type="email"
-                                placeholder="name@example.com"
-                                autoFocus
-                            />
-                            </Form.Group>
-                            <Form.Group
-                            className="mb-3"
-                            controlId="exampleForm.ControlTextarea1"
-                            >
-                            <Form.Label>Example textarea</Form.Label>
-                            <Form.Control as="textarea" rows={3} />
-                            </Form.Group>
-                        </Form>
+                            <Form onSubmit={updateStudent}>
+                                <Form.Group className="mb-3" controlId="name">
+                                    <Form.Label>Nome</Form.Label>
+                                    <Form.Control
+                                        type="text"
+                                        placeholder="nome do aluno"
+                                        autoFocus
+                                        name="name"
+                                    />
+                                </Form.Group>
+                                <Form.Group className="mb-3" controlId="email">
+                                    <Form.Label>Email</Form.Label>
+                                    <Form.Control
+                                        type="email"
+                                        placeholder="nome@exemplo.com"
+                                        name="email"
+                                    />
+                                </Form.Group>
+                                <Form.Group className="mb-3" controlId="cpf">
+                                    <Form.Label>CPF</Form.Label>
+                                    <Form.Control 
+                                        type="text"
+                                        placeholder="123.123.123-12"
+                                        name="cpf"
+                                    />
+                                </Form.Group>
+
+                                <Button variant="primary" type="submit" onClick={handleModalEdit}>
+                                    Salvar
+                                </Button>
+                            </Form>
                         </Modal.Body>
                         <Modal.Footer>
-                        <Button variant="secondary" onClick={handleModalEdit}>
-                            Close
-                        </Button>
-                        <Button variant="primary" onClick={handleModalEdit}>
-                            Save Changes
-                        </Button>
+                            <Button variant="secondary" onClick={handleModalEdit}>
+                                Fechar
+                            </Button>
+                            <Button variant="primary" type="submit" onClick={handleModalEdit}>
+                                Salvar
+                            </Button>
                         </Modal.Footer>
                     </Modal>
                 </section>

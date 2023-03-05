@@ -4,11 +4,14 @@ import axios from "axios";
 import { Table } from 'react-bootstrap';
 import { BsSearch } from "react-icons/bs"
 import { BiEdit } from "react-icons/bi"
-
+import Button from 'react-bootstrap/Button';
+import Form from 'react-bootstrap/Form';
+import Modal from 'react-bootstrap/Modal';
 
 export function TableStudents() {
     const [listStudents, setListStudents] = useState([]);
     const [searchStudent, setSearchStudent] = useState('');
+    const [editModalShow, setFormEditShow ] = useState(true);
 
     const filterStudents = listStudents.filter((student) => {
         return (
@@ -37,6 +40,10 @@ export function TableStudents() {
     useEffect(() => {
         listEstudents();
     }, []);
+
+    function handleModalEdit() {
+        setFormEditShow(!editModalShow);
+    }
     
     return (
         <Container>
@@ -75,7 +82,8 @@ export function TableStudents() {
                                             <td>{student.name}</td>
                                             <td>{student.city}</td>
                                             <td>{student.phone}</td>
-                                            <td onClick={() => deleteEstudent(student.id)}>
+                                            {/* <td onClick={() => deleteEstudent(student.id)}> */}
+                                            <td onClick={handleModalEdit}>
                                                 <BiEdit className="editIcon"/>
                                             </td>
                                         </tr>
@@ -84,6 +92,41 @@ export function TableStudents() {
                             }
                         </tbody>
                     </Table>  
+                </section>
+
+                <section>
+                    <Modal show={editModalShow} onHide={handleModalEdit}>
+                        <Modal.Header closeButton>
+                        <Modal.Title>Detalhes do Aluno</Modal.Title>
+                        </Modal.Header>
+                        <Modal.Body>
+                        <Form>
+                            <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+                            <Form.Label>Email</Form.Label>
+                            <Form.Control
+                                type="email"
+                                placeholder="name@example.com"
+                                autoFocus
+                            />
+                            </Form.Group>
+                            <Form.Group
+                            className="mb-3"
+                            controlId="exampleForm.ControlTextarea1"
+                            >
+                            <Form.Label>Example textarea</Form.Label>
+                            <Form.Control as="textarea" rows={3} />
+                            </Form.Group>
+                        </Form>
+                        </Modal.Body>
+                        <Modal.Footer>
+                        <Button variant="secondary" onClick={handleModalEdit}>
+                            Close
+                        </Button>
+                        <Button variant="primary" onClick={handleModalEdit}>
+                            Save Changes
+                        </Button>
+                        </Modal.Footer>
+                    </Modal>
                 </section>
             </article>
         </Container>

@@ -17,25 +17,26 @@ export const MenuContainer = styled.div`
         list-style: none;
 
         display: grid;
-        gap: 5.6rem;
+        gap: 4.8rem;
 
-        font-size: 2.0rem;
+        font-size: 1.6rem;
         font-weight: 600;
         text-align: center;
     }
     
     a {
-        padding: .8rem;
+        padding: .2rem;
         border-radius: .4rem;
         color: ${({theme}) => theme.colors.neutralB};
         display: flex;
         align-items: center;
         justify-content: center;
         gap: .8rem;
+        border-bottom: 2px solid transparent;
     }
 
     a:hover {
-        border-bottom: 4px solid ${({theme}) => theme.colors.neutralB};
+        border-bottom-color: ${({theme}) => theme.colors.neutralB};
     }
 
     & .active {
@@ -44,6 +45,6 @@ export const MenuContainer = styled.div`
 
     .iconMenuStudentsTable,
     .iconMenuAbout {
-        font-size: 1.6rem;
+        font-size: 1.4rem;
     }
 `;

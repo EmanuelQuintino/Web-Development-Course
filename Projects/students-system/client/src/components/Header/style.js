@@ -16,11 +16,13 @@ export const HeaderContainer = styled.header`
     .menuIcon {
         font-size: 2.4rem;
         color: ${({theme}) => theme.colors.neutral8};
+        cursor: pointer;
     }
     
     .menuIconClose {
         font-size: 2.4rem;
         color: ${({theme}) => theme.colors.neutral8};
+        cursor: pointer;
     }
 
     .logoMenu {

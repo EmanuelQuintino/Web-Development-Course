@@ -53,7 +53,7 @@ export function FormRegister() {
       <Form onSubmit={handleSubmit(onSubmit)}>
         <section>
           <label htmlFor="name">Nome</label>
-          <input type="text" id="name" {...register("name")}/>
+          <input type="text" id="name" {...register("name")} autoFocus/>
           <span className="error">{errors.name?.message}</span>
         </section>
 

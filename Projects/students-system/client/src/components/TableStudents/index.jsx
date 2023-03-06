@@ -11,11 +11,23 @@ import Modal from 'react-bootstrap/Modal';
 export function TableStudents() {
     const [listStudents, setListStudents] = useState([]);
     const [searchStudent, setSearchStudent] = useState('');
-    const [editModalShow, setFormEditShow ] = useState(true);
-    const [studentID, setStudentID ] = useState('');
-    const [studentName, setStudentName ] = useState('');
-    const [studentEmail, setStudentEmail ] = useState('');
-    const [studentCPF, setStudentCPF ] = useState('');
+    const [editModalShow, setFormEditShow ] = useState(false);
+    const [studentData, setStudentData ] = useState({
+        id: "", 
+        name: "", 
+        email: "",
+        cpf: "",
+        birth: "",
+        phone: "",
+        gender: "",
+        cep: "",
+        number: "",
+        street: "",
+        district: "",
+        city: "", 
+        state: "",
+        uf: "" 
+    });
 
     const filterStudents = listStudents.filter((student) => {
         return (
@@ -54,33 +66,21 @@ export function TableStudents() {
 
     function modalOpen(ID) {
         setFormEditShow(true);
-
         const student = listStudents.filter((student) => String(student.id).includes(ID));
-        setStudentID(student[0].id);
-        setStudentName(student[0].name);
-        setStudentEmail(student[0].email);
-        setStudentCPF(student[0].cpf);    
+        const { id, name, email, cpf, birth, phone, gender, cep, number, street, district, city, state, uf } = student[0];
+        setStudentData({ id, name, email, cpf, birth, phone, gender, cep, number, street, district, city, state, uf });    
     }
 
     function modalClose() {
         setFormEditShow(false);
     }
 
-    function handleName(event) {
-        setStudentName(event.target.value)
-    }
-
-    function handleEmail(event) {
-        setStudentEmail(event.target.value)
-    }
-
-    function handleCPF(event) {
-        setStudentCPF(event.target.value)
-    }
-
     function handleChangeInputs(event) {
         const { name, value } = event.target;
-        console.log(name, value);
+        setStudentData({
+            ...studentData,
+            [name]: value
+        });
     }
 
     function handleSubmitUpdateStudent(event) {
@@ -88,15 +88,25 @@ export function TableStudents() {
         const ID = event.target.id.value;
         const name = event.target.name.value;
         const email = event.target.email.value;
-        const cpf = event.target.cpf.value;
+        const cpf = event.target.email.value;
+        const birth = event.target.email.value;
+        const phone = event.target.cpf.value;
+        const gender = event.target.cpf.value;
+        const cep = event.target.cpf.value;
+        const number = event.target.cpf.value;
+        const street = event.target.cpf.value;
+        const district = event.target.cpf.value;
+        const city = event.target.cpf.value;
+        const state = event.target.cpf.value;
+        const uf = event.target.cpf.value;
         
-        const dataStudent = {
+        const dataStudentUpdate = {
             name, 
             email, 
             cpf,
-            birth: "2020-06-06",
-            phone: "(88) 99605-9913",
-            gender: "M",
+            birth,
+            phone,
+            gender,
             cep: "63580-000",
             number: "123",
             street: "José Fafundo",
@@ -106,9 +116,9 @@ export function TableStudents() {
             uf: "CE" 
         }
 
-        axios.put(API + ID, dataStudent)
+        axios.put(API + ID, dataStudentUpdate)
             .then((res) => alert(res.data))
-            .catch((error) => alert(error.response.data))
+            .catch((error) => console.error((error.response.data.error)))
             .finally(() => fetchStudents());
     }
     
@@ -174,7 +184,7 @@ export function TableStudents() {
                                         type="text"
                                         placeholder="ID do Aluno"
                                         name="id"
-                                        value={studentID}
+                                        value={studentData.id}
                                         disabled
                                     />
                                 </Form.Group>
@@ -186,7 +196,7 @@ export function TableStudents() {
                                         placeholder="Nome do aluno"
                                         autoFocus
                                         name="name"
-                                        value={studentName}
+                                        value={studentData.name}
                                         onChange={handleChangeInputs}
                                     />
                                 </Form.Group>
@@ -197,7 +207,7 @@ export function TableStudents() {
                                         type="email"
                                         placeholder="nome@exemplo.com"
                                         name="email"
-                                        value={studentEmail}
+                                        value={studentData.email}
                                         onChange={handleChangeInputs}
                                         />
                                 </Form.Group>
@@ -208,37 +218,38 @@ export function TableStudents() {
                                         type="text"
                                         placeholder="123.123.123-12"
                                         name="cpf"
-                                        value={studentCPF}
+                                        value={studentData.cpf}
                                         onChange={handleChangeInputs}
                                     />
                                 </Form.Group>
 
-                                <Form.Group className="mb-3" controlId="name">
+                                <Form.Group className="mb-3" controlId="birth">
                                     <Form.Label>Nascimento</Form.Label>
                                     <Form.Control
                                         type="date"
                                         name="birth"
-                                        value={''}
+                                        value={studentData.birth}
                                         onChange={handleChangeInputs}
                                     />
                                 </Form.Group>
-                                <Form.Group className="mb-3" controlId="name">
+                                <Form.Group className="mb-3" controlId="phone">
                                     <Form.Label>Celular</Form.Label>
                                     <Form.Control
                                         type="text"
                                         placeholder="(00) 00000-0000 "
                                         name="phone"
-                                        value={''}
+                                        value={studentData.phone}
                                         onChange={handleChangeInputs}
                                     />
                                 </Form.Group>
-                                <Form.Group className="mb-3" controlId="name">
+                                <Form.Group className="mb-3" controlId="gender">
                                     <Form.Label>Gênero</Form.Label>
                                     {['radio'].map((type) => (
                                         <div key={`inline-${type}`} className="mb-3" id="radio">
                                             <Form.Check
                                                 inline
                                                 label="M"
+                                                value={"M"}
                                                 name="gender"
                                                 type={type}
                                                 id={`inline-${type}-1`}
@@ -247,6 +258,7 @@ export function TableStudents() {
                                             <Form.Check
                                                 inline
                                                 label="F"
+                                                value={"F"}
                                                 name="gender"
                                                 type={type}
                                                 id={`inline-${type}-2`}
@@ -255,6 +267,7 @@ export function TableStudents() {
                                             <Form.Check
                                                 inline
                                                 label="Outro"
+                                                value={"Outro"}
                                                 name="gender"
                                                 type={type}
                                                 id={`inline-${type}-3`}

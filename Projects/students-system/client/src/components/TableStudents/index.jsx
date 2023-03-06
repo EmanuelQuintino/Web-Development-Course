@@ -68,7 +68,13 @@ export function TableStudents() {
         setFormEditShow(true);
         const student = listStudents.filter((student) => String(student.id).includes(ID));
         const { id, name, email, cpf, birth, phone, gender, cep, number, street, district, city, state, uf } = student[0];
-        setStudentData({ id, name, email, cpf, birth, phone, gender, cep, number, street, district, city, state, uf });    
+        
+        let birthSplit = birth;
+        if (String(birth).includes('T')) {
+            birthSplit = String(birth).split('T')[0];
+        }
+
+        setStudentData({ id, name, email, cpf, birth: birthSplit, phone, gender, cep, number, street, district, city, state, uf });    
     }
 
     function modalClose() {
@@ -88,25 +94,25 @@ export function TableStudents() {
         const ID = event.target.id.value;
         const name = event.target.name.value;
         const email = event.target.email.value;
-        const cpf = event.target.email.value;
-        const birth = event.target.email.value;
-        const phone = event.target.cpf.value;
-        const gender = event.target.cpf.value;
-        const cep = event.target.cpf.value;
-        const number = event.target.cpf.value;
-        const street = event.target.cpf.value;
-        const district = event.target.cpf.value;
-        const city = event.target.cpf.value;
-        const state = event.target.cpf.value;
-        const uf = event.target.cpf.value;
+        const cpf = event.target.cpf.value;
+        const birth = event.target.birth.value;
+        const phone = event.target.phone.value;
+        const gender = event.target.gender.value;
+        // const cep = event.target.cep.value;
+        // const number = event.target.number.value;
+        // const street = event.target.street.value;
+        // const district = event.target.district.value;
+        // const city = event.target.city.value;
+        // const state = event.target.state.value;
+        // const uf = event.target.uf.value;
         
         const dataStudentUpdate = {
             name, 
             email, 
             cpf,
-            birth,
+            birth: birth ? birth : studentData.birth,
             phone,
-            gender,
+            gender: gender ? gender : studentData.gender,
             cep: "63580-000",
             number: "123",
             street: "José Fafundo",
@@ -115,6 +121,8 @@ export function TableStudents() {
             state: "Ceará",
             uf: "CE" 
         }
+
+        console.log(dataStudentUpdate);
 
         axios.put(API + ID, dataStudentUpdate)
             .then((res) => alert(res.data))
@@ -278,11 +286,11 @@ export function TableStudents() {
                                 </Form.Group>
                             </Modal.Body>
                             <Modal.Footer>
-                                <Button variant="danger" onClick={() => deleteStudent(studentID)}>
+                                <Button variant="danger" onClick={() => deleteStudent(studentData.id)}>
                                     Deletar
                                 </Button>
                                 <Button variant="primary" type="submit" onClick={modalClose}>
-                                        Atualizar
+                                    Atualizar
                                 </Button>
                             </Modal.Footer>
                         </Form>

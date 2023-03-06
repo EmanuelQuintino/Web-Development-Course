@@ -11,7 +11,7 @@ import Modal from 'react-bootstrap/Modal';
 export function TableStudents() {
     const [listStudents, setListStudents] = useState([]);
     const [searchStudent, setSearchStudent] = useState('');
-    const [editModalShow, setFormEditShow ] = useState(false);
+    const [editModalShow, setFormEditShow ] = useState(true);
     const [studentID, setStudentID ] = useState('');
     const [studentName, setStudentName ] = useState('');
     const [studentEmail, setStudentEmail ] = useState('');
@@ -78,7 +78,12 @@ export function TableStudents() {
         setStudentCPF(event.target.value)
     }
 
-    function updateStudent(event) {
+    function handleChangeInputs(event) {
+        const { name, value } = event.target;
+        console.log(name, value);
+    }
+
+    function handleSubmitUpdateStudent(event) {
         event.preventDefault();
         const ID = event.target.id.value;
         const name = event.target.name.value;
@@ -157,12 +162,12 @@ export function TableStudents() {
                 </section>
 
                 <section>
-                    <Modal show={editModalShow} onHide={modalClose}>
+                    <Modal show={editModalShow} onHide={modalClose} className="modalUpdateStudents">
                         <Modal.Header closeButton>
                             <Modal.Title>Detalhes do Aluno</Modal.Title>
                         </Modal.Header>
-                        <Modal.Body>
-                                <Form onSubmit={updateStudent}>
+                        <Form onSubmit={handleSubmitUpdateStudent}>
+                            <Modal.Body>
                                 <Form.Group className="mb-3" controlId="id">
                                     <Form.Label>ID</Form.Label>
                                     <Form.Control
@@ -173,6 +178,7 @@ export function TableStudents() {
                                         disabled
                                     />
                                 </Form.Group>
+
                                 <Form.Group className="mb-3" controlId="name">
                                     <Form.Label>Nome</Form.Label>
                                     <Form.Control
@@ -181,9 +187,10 @@ export function TableStudents() {
                                         autoFocus
                                         name="name"
                                         value={studentName}
-                                        onChange={handleName}
+                                        onChange={handleChangeInputs}
                                     />
                                 </Form.Group>
+
                                 <Form.Group className="mb-3" controlId="email">
                                     <Form.Label>Email</Form.Label>
                                     <Form.Control
@@ -191,9 +198,10 @@ export function TableStudents() {
                                         placeholder="nome@exemplo.com"
                                         name="email"
                                         value={studentEmail}
-                                        onChange={handleEmail}
+                                        onChange={handleChangeInputs}
                                         />
                                 </Form.Group>
+
                                 <Form.Group className="mb-3" controlId="cpf">
                                     <Form.Label>CPF</Form.Label>
                                     <Form.Control 
@@ -201,23 +209,70 @@ export function TableStudents() {
                                         placeholder="123.123.123-12"
                                         name="cpf"
                                         value={studentCPF}
-                                        onChange={handleCPF}
+                                        onChange={handleChangeInputs}
                                     />
                                 </Form.Group>
 
-                                <Button variant="primary" type="submit" onClick={modalClose}>
-                                    Atualizar
+                                <Form.Group className="mb-3" controlId="name">
+                                    <Form.Label>Nascimento</Form.Label>
+                                    <Form.Control
+                                        type="date"
+                                        name="birth"
+                                        value={''}
+                                        onChange={handleChangeInputs}
+                                    />
+                                </Form.Group>
+                                <Form.Group className="mb-3" controlId="name">
+                                    <Form.Label>Celular</Form.Label>
+                                    <Form.Control
+                                        type="text"
+                                        placeholder="(00) 00000-0000 "
+                                        name="phone"
+                                        value={''}
+                                        onChange={handleChangeInputs}
+                                    />
+                                </Form.Group>
+                                <Form.Group className="mb-3" controlId="name">
+                                    <Form.Label>Gênero</Form.Label>
+                                    {['radio'].map((type) => (
+                                        <div key={`inline-${type}`} className="mb-3" id="radio">
+                                            <Form.Check
+                                                inline
+                                                label="M"
+                                                name="gender"
+                                                type={type}
+                                                id={`inline-${type}-1`}
+                                                onChange={handleChangeInputs}
+                                            />
+                                            <Form.Check
+                                                inline
+                                                label="F"
+                                                name="gender"
+                                                type={type}
+                                                id={`inline-${type}-2`}
+                                                onChange={handleChangeInputs}
+                                            />
+                                            <Form.Check
+                                                inline
+                                                label="Outro"
+                                                name="gender"
+                                                type={type}
+                                                id={`inline-${type}-3`}
+                                                onChange={handleChangeInputs}
+                                            />
+                                        </div>
+                                    ))}
+                                </Form.Group>
+                            </Modal.Body>
+                            <Modal.Footer>
+                                <Button variant="danger" onClick={() => deleteStudent(studentID)}>
+                                    Deletar
                                 </Button>
-                            </Form>
-                        </Modal.Body>
-                        <Modal.Footer>
-                            <Button variant="danger" onClick={() => deleteStudent(studentID)}>
-                                Deletar
-                            </Button>
-                            <Button variant="primary" onClick={modalClose}>
-                                Atualizar
-                            </Button>
-                        </Modal.Footer>
+                                <Button variant="primary" type="submit" onClick={modalClose}>
+                                        Atualizar
+                                </Button>
+                            </Modal.Footer>
+                        </Form>
                     </Modal>
                 </section>
             </article>

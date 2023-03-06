@@ -76,4 +76,14 @@ export const Container = styled.div `
         font-size: 1.2rem;
         cursor: pointer;
     }
+
+    .modal-body {
+        font-size: .2rem;
+        color: red;
+    }
+
+    .modalUpdateStudents {
+        font-size: 1.2rem;
+        background: red;
+    }
 `;

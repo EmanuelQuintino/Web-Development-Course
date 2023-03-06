@@ -21,7 +21,7 @@ export const Footer = styled.div`
     background: ${({theme}) => theme.colors.background};
     border-top: .4rem solid ${({theme}) => theme.colors.neutral8};
     color: white;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     font-weight: 500;
     padding: 1.6rem;
     text-align: center;

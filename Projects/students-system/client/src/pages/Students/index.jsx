@@ -1,9 +1,9 @@
-import { TableStudents } from "../../components/TableStudents";
+import { HandleStudents } from "../../components/HandleStudents";
 
 export function Students() {
   return (
     <div className="container">
-      <TableStudents/>
+      <HandleStudents/>
     </div>
   )
 }

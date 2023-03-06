@@ -8,7 +8,7 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import Modal from 'react-bootstrap/Modal';
 
-export function TableStudents() {
+export function HandleStudents() {
     const [listStudents, setListStudents] = useState([]);
     const [searchStudent, setSearchStudent] = useState('');
     const [editModalShow, setFormEditShow ] = useState(false);
@@ -168,7 +168,6 @@ export function TableStudents() {
                                             <td>{student.name}</td>
                                             <td>{student.city}</td>
                                             <td>{student.phone}</td>
-                                            {/* <td onClick={() => deleteStudent(student.id)}> */}
                                             <td onClick={() => modalOpen(student.id)}>
                                                 <BiEdit className="editIcon"/>
                                             </td>

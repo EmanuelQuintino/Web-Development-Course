@@ -14,7 +14,7 @@ export const Container = styled.div `
 
     .labelInputSearch {
         position: absolute;
-        bottom: .4rem;
+        bottom: .2rem;
         left: .8rem;
         pointer-events: none;
         transition: 400ms;
@@ -35,14 +35,20 @@ export const Container = styled.div `
         width: 100%;
         background: none;
         border: .1rem solid ${({theme}) => theme.colors.neutral8};
-        padding: .4rem 1.2rem;
+        padding: .4rem 1.2rem .2rem;
         border-radius: .4rem;
         font-size: 1.2rem;
+        color: ${({theme}) => theme.colors.neutral6};
+    }
+    
+    #inputSearchStudent:focus {
+        outline: .1rem solid ${({theme}) => theme.colors.complementary3};
+        border: .1rem solid ${({theme}) => theme.colors.complementary3};
     }
     
     #inputSearchStudent:not(:placeholder-shown) + .labelInputSearch,
     #inputSearchStudent:focus + .labelInputSearch {
-        bottom: 2.0rem;
+        bottom: 1.8rem;
         font-size: .9rem;
         background: white;
         color: ${({theme}) => theme.colors.neutral6};
@@ -75,15 +81,5 @@ export const Container = styled.div `
     .editIcon {
         font-size: 1.2rem;
         cursor: pointer;
-    }
-
-    .modal-body {
-        font-size: .2rem;
-        color: red;
-    }
-
-    .modalUpdateStudents {
-        font-size: 1.2rem;
-        background: red;
     }
 `;

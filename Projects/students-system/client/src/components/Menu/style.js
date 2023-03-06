@@ -40,7 +40,7 @@ export const MenuContainer = styled.div`
     }
 
     & .active {
-        color: ${({theme}) => theme.colors.neutral1};
+        color: ${({theme}) => theme.colors.neutralF};
     }
 
     .iconMenuStudentsTable,

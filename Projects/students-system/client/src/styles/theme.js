@@ -1,14 +1,16 @@
-export default {
+export const Theme = {
     colors : {
         main0: '#024040',
         main1: '#23D9D9',
         main2: '#088B8B',
         complementary1: "#401800",
         complementary2: "#8C3908",
+        complementary3: "#FF8C4A",
+        complementary4: "#E06D2B",
         background: "#252525",
         font: "#FFF",
         neutral0: "#000", 
-        neutral1: "#FFF", 
+        neutral1: "#111", 
         neutral2: "#222", 
         neutral3: "#333", 
         neutral4: "#444", 

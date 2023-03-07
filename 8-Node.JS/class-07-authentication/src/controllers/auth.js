@@ -1,7 +1,7 @@
 const prisma = require('../databases');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
-const { secret, expiresIn } = require('../config/auth.json');
+const { secret, expiresIn } = require('../config/auth');
 
 module.exports = {
     async auth(req, res) {

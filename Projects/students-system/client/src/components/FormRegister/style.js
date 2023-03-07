@@ -28,8 +28,20 @@ export const Form = styled.form `
         margin: 0 1.6rem 0 0;
     }
 
-    & button {
+    button {
         width: 100%;
-        margin-top: 2.4rem;
+        margin-top: 3.2rem;
+        border: none;
+        border-radius: .8rem;
+        padding: .4rem;
+        font-size: 1.6rem;
+        font-weight: 600;
+        background: ${({theme}) => theme.colors.neutral8};
+        color: white;
+    }
+    
+    button:hover {
+        background: ${({theme}) => theme.colors.neutral6};
+        
     }
 `; 

@@ -59,12 +59,12 @@ export const Form = styled.form `
         padding: .4rem;
         font-size: 1.4rem;
         font-weight: 600;
-        background: ${({theme}) => theme.colors.neutral5};
+        background: #49B666;
         color: white;
     }
     
     button:hover {
-        background: ${({theme}) => theme.colors.neutral4};
+        background: #47A15F;
         
     }
 `; 

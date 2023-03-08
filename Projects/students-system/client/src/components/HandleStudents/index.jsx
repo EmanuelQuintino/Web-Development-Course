@@ -11,7 +11,7 @@ import Modal from 'react-bootstrap/Modal';
 export function HandleStudents() {
     const [listStudents, setListStudents] = useState([]);
     const [searchStudent, setSearchStudent] = useState('');
-    const [editModalShow, setFormEditShow ] = useState(true);
+    const [editModalShow, setFormEditShow ] = useState(false);
     const [studentData, setStudentData ] = useState({
         id: "", 
         name: "", 

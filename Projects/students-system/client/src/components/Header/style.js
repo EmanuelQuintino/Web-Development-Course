@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const HeaderContainer = styled.header`
+export const Container = styled.section`
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -9,7 +9,6 @@ export const HeaderContainer = styled.header`
     width: 100%;
     padding: 2.4rem;
     border-bottom: .4rem solid ${({theme}) => theme.colors.neutral8};
-
     background: ${({theme}) => theme.colors.background};
     color: white;
 
@@ -19,12 +18,6 @@ export const HeaderContainer = styled.header`
     }
 
     .menuIcon {
-        font-size: 2.4rem;
-        color: ${({theme}) => theme.colors.neutral8};
-        cursor: pointer;
-    }
-    
-    .menuIconClose {
         font-size: 2.4rem;
         color: ${({theme}) => theme.colors.neutral8};
         cursor: pointer;
@@ -40,11 +33,11 @@ export const HeaderContainer = styled.header`
         text-align: end;
     }
 
-    & h1 {
+    h1 {
         font-size: 1.6rem;
     }
     
-    & h3 {
+    h3 {
         line-height: .8rem;
         font-weight: 500;
         font-size: 1.4rem;

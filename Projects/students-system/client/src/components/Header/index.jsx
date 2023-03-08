@@ -1,4 +1,4 @@
-import { HeaderContainer } from "./style"
+import { Container } from "./style"
 import { IoMdMenu } from "react-icons/io"
 import { IoMdClose } from "react-icons/io"
 import { useState } from "react"
@@ -11,11 +11,11 @@ export function Header() {
     
     return (
         <>
-            <HeaderContainer>
-                <button>
+            <Container>
+                <button onClick={toggleMenu}>
                     {menuActive ?
-                        <IoMdClose className="menuIconClose"onClick={toggleMenu}/> :
-                        <IoMdMenu className="menuIcon" onClick={toggleMenu}/>
+                        <IoMdClose className="menuIcon"/> :
+                        <IoMdMenu className="menuIcon" />
                     }
                 </button>
                 <div className="logoMenu">
@@ -27,7 +27,7 @@ export function Header() {
                         <img src="./images/logo-rj.png" alt="logo" />
                     </Link>
                 </div>
-            </HeaderContainer>
+            </Container>
             
             <div onClick={toggleMenu}>
                 { menuActive && <Menu/> }

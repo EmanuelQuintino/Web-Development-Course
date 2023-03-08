@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const Form = styled.form `
+export const Container = styled.section `
     border: .2rem solid ${({theme}) => theme.colors.neutralE};
     background: #F5F5F588;
     border-radius: .8rem;

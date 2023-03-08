@@ -1,6 +1,6 @@
 import styled from 'styled-components' 
 
-export const MenuContainer = styled.div`
+export const Container = styled.section`
     background: #000C;
     
     padding: 2.4rem;

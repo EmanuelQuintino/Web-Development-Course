@@ -1,4 +1,4 @@
-import { MenuContainer } from "./style"
+import { Container } from "./style"
 import { NavLink } from "react-router-dom"
 import { AiFillHome } from "react-icons/ai"
 import { BsTable } from "react-icons/bs"
@@ -7,7 +7,7 @@ import { BsInfoCircleFill } from "react-icons/bs"
 
 export function Menu() {
     return (
-        <MenuContainer>
+        <Container>
           <nav>
             <ul>
               <li>
@@ -36,6 +36,6 @@ export function Menu() {
               </li>
             </ul>
           </nav>
-        </MenuContainer>
+        </Container>
     )
 }

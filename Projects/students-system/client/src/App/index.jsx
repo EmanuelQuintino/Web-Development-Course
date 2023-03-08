@@ -1,21 +1,20 @@
+import { Container} from "./style"
 import { Header } from "../components/Header"
-import { Container, MainArticle , Footer } from "./style"
 import { Outlet } from "react-router-dom"
 import 'bootstrap/dist/css/bootstrap.min.css';
-// import "bootstrap/dist/css/bootstrap.css";
 
 export function App() {
   return (
     <Container>
-      <Header/>
+      <header>
+        <Header/>
+      </header>
       <main>
-        <MainArticle>
-          <Outlet/>
-        </MainArticle>
+        <Outlet/>
       </main>  
-      <Footer>
+      <footer>
         Web Development Course
-      </Footer>
+      </footer>
     </Container>
   )
 }

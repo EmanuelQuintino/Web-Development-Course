@@ -1,7 +1,9 @@
+import { Container } from "./style"
+
 export function About() {
   return (
-    <div className="container">
+    <Container>
       <h1>Sobre</h1>
-    </div>
+    </Container>
   )
 }

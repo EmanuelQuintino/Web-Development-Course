@@ -13,6 +13,11 @@ export const HeaderContainer = styled.header`
     background: ${({theme}) => theme.colors.background};
     color: white;
 
+    button {
+        background: none;
+        border: none;
+    }
+
     .menuIcon {
         font-size: 2.4rem;
         color: ${({theme}) => theme.colors.neutral8};

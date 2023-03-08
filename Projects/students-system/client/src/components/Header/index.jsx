@@ -12,10 +12,12 @@ export function Header() {
     return (
         <>
             <HeaderContainer>
-                {menuActive ?
-                    <IoMdClose className="menuIconClose"onClick={toggleMenu}/> :
-                    <IoMdMenu className="menuIcon" onClick={toggleMenu}/>
-                }
+                <button>
+                    {menuActive ?
+                        <IoMdClose className="menuIconClose"onClick={toggleMenu}/> :
+                        <IoMdMenu className="menuIcon" onClick={toggleMenu}/>
+                    }
+                </button>
                 <div className="logoMenu">
                     <div>
                         <h1>Sistema de Estudantes</h1>

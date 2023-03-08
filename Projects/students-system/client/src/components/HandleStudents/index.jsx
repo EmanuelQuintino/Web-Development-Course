@@ -105,7 +105,7 @@ export function HandleStudents() {
         const district = event.target.district.value;
         const city = event.target.city.value;
         const state = event.target.state.value;
-        // const uf = event.target.uf.value;
+        const uf = event.target.uf.value;
         
         const dataStudentUpdate = {
             name, 
@@ -120,14 +120,14 @@ export function HandleStudents() {
             district,
             city, 
             state,
-            uf: "CE" 
+            uf 
         }
 
         console.log(dataStudentUpdate);
 
         axios.put(API + ID, dataStudentUpdate)
             .then((res) => alert(res.data))
-            .catch((error) => console.error((error.response.data.error)))
+            .catch((error) => alert((error.response.data)))
             .finally(() => fetchStudents());
     }
     
@@ -229,7 +229,7 @@ export function HandleStudents() {
                                             name="cpf"
                                             value={studentData.cpf}
                                             onChange={handleChangeInputs}
-                                            />
+                                        />
                                     </Form.Group>
 
                                     <Form.Group className="mb-3 w-50" controlId="birth">

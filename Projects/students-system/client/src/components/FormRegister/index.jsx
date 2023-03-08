@@ -31,6 +31,7 @@ export function FormRegister() {
 
     const API = "http://localhost:3000/students"
     function onSubmit(data) {
+        console.log(data);
         axios.post(API, data)
         .then((res) => alert(res.data))
         .catch((error) => alert(error.response.data));

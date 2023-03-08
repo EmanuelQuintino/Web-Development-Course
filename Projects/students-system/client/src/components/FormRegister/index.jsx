@@ -84,15 +84,15 @@ export function FormRegister() {
           <div>Gênero</div>
           <span>
             <input type="radio" id='male' value='M' {...register("gender")}/>
-            <label htmlFor="male"> Masculo</label>
+            <label htmlFor="male">Masculo</label>
           </span>
           <span>
             <input type="radio" id='female' value='F' {...register("gender")}/>
-            <label htmlFor="female"> Femino</label>
+            <label htmlFor="female">Femino</label>
           </span>
           <span>
             <input type="radio" id='other' value='Outro' {...register("gender")}/>
-            <label htmlFor="other"> Outro</label>
+            <label htmlFor="other">Outro</label>
           </span>
           <span className="error">{errors.gender?.message}</span>
         </section>

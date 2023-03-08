@@ -27,19 +27,19 @@ export const MenuContainer = styled.div`
     a {
         padding: .2rem;
         border-radius: .4rem;
-        color: ${({theme}) => theme.colors.neutralB};
+        color: ${({theme}) => theme.colors.neutral8};
+        border-bottom: 2px solid transparent;
         display: flex;
         align-items: center;
         justify-content: center;
         gap: .8rem;
-        border-bottom: 2px solid transparent;
     }
 
     a:hover {
-        border-bottom-color: ${({theme}) => theme.colors.neutralB};
+        border-bottom-color: ${({theme}) => theme.colors.neutral8};
     }
 
-    & .active {
+    .active {
         color: ${({theme}) => theme.colors.neutralF};
     }
 

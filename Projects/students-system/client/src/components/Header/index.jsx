@@ -7,7 +7,7 @@ import { Link } from "react-router-dom"
 
 export function Header() {
     const [menuActive, setMenuActive] = useState(false);
-    const toggleMenu = () =>  setMenuActive(!menuActive);
+    const toggleMenu = () => setMenuActive(!menuActive);
     
     return (
         <>

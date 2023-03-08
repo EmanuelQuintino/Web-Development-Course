@@ -55,7 +55,7 @@ export const Form = styled.form `
         width: 100%;
         margin-top: 3.2rem;
         border: none;
-        border-radius: .8rem;
+        border-radius: .4rem;
         padding: .4rem;
         font-size: 1.4rem;
         font-weight: 600;

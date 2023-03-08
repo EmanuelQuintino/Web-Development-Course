@@ -1,7 +1,8 @@
 import styled from 'styled-components'
 
 export const Form = styled.form `
-    background: ${({theme}) => theme.colors.neutralE};
+    border: .2rem solid ${({theme}) => theme.colors.neutralE};
+    background: #F5F5F588;
     border-radius: .8rem;
 
     padding: 1.2rem;

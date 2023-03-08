@@ -11,7 +11,7 @@ import Modal from 'react-bootstrap/Modal';
 export function HandleStudents() {
     const [listStudents, setListStudents] = useState([]);
     const [searchStudent, setSearchStudent] = useState('');
-    const [editModalShow, setFormEditShow ] = useState(false);
+    const [editModalShow, setFormEditShow ] = useState(true);
     const [studentData, setStudentData ] = useState({
         id: "", 
         name: "", 
@@ -99,12 +99,12 @@ export function HandleStudents() {
         const birth = event.target.birth.value;
         const phone = event.target.phone.value;
         const gender = event.target.gender.value;
-        // const cep = event.target.cep.value;
-        // const number = event.target.number.value;
-        // const street = event.target.street.value;
-        // const district = event.target.district.value;
-        // const city = event.target.city.value;
-        // const state = event.target.state.value;
+        const cep = event.target.cep.value;
+        const number = event.target.number.value;
+        const street = event.target.street.value;
+        const district = event.target.district.value;
+        const city = event.target.city.value;
+        const state = event.target.state.value;
         // const uf = event.target.uf.value;
         
         const dataStudentUpdate = {
@@ -114,12 +114,12 @@ export function HandleStudents() {
             birth: birth ? birth : studentData.birth,
             phone,
             gender: gender ? gender : studentData.gender,
-            cep: "63580-000",
-            number: "123",
-            street: "José Fafundo",
-            district: "Planalto",
-            city: "Jucás", 
-            state: "Ceará",
+            cep,
+            number,
+            street,
+            district,
+            city, 
+            state,
             uf: "CE" 
         }
 
@@ -180,13 +180,13 @@ export function HandleStudents() {
                 </section>
 
                 <section>
-                    <Modal show={editModalShow} onHide={modalClose} className="modalUpdateStudents">
+                    <Modal show={editModalShow} onHide={modalClose}>
                         <Modal.Header closeButton>
                             <Modal.Title>Detalhes do Aluno</Modal.Title>
                         </Modal.Header>
-                        <Form onSubmit={handleSubmitUpdateStudent}>
-                            <Modal.Body>
-                                <Form.Group className="mb-3" controlId="id">
+                        <Form onSubmit={handleSubmitUpdateStudent} className="form-modal">
+                            <Modal.Body style={{padding: '.8rem 2.4rem'}}>
+                                <Form.Group className="mb-3 w-25" controlId="id">
                                     <Form.Label>ID</Form.Label>
                                     <Form.Control
                                         type="text"
@@ -220,70 +220,158 @@ export function HandleStudents() {
                                         />
                                 </Form.Group>
 
+                                <div className="d-flex justify-content-between">
+                                    <Form.Group className="mb-3 w-45" controlId="cpf">
+                                        <Form.Label>CPF</Form.Label>
+                                        <Form.Control 
+                                            type="text"
+                                            placeholder="123.123.123-12"
+                                            name="cpf"
+                                            value={studentData.cpf}
+                                            onChange={handleChangeInputs}
+                                            />
+                                    </Form.Group>
+
+                                    <Form.Group className="mb-3 w-50" controlId="birth">
+                                        <Form.Label>Nascimento</Form.Label>
+                                        <Form.Control
+                                            type="date"
+                                            name="birth"
+                                            value={studentData.birth}
+                                            onChange={handleChangeInputs}
+                                            />
+                                    </Form.Group>
+                                </div>
+
+                                <div className="d-flex justify-content-between">
+                                    <Form.Group className="mb-3 w-40" controlId="phone">
+                                        <Form.Label>Celular</Form.Label>
+                                        <Form.Control
+                                            type="text"
+                                            placeholder="(00) 00000-0000 "
+                                            name="phone"
+                                            value={studentData.phone}
+                                            onChange={handleChangeInputs}
+                                            />
+                                    </Form.Group>
+                                    <Form.Group className="mb-3 w-50" controlId="gender">
+                                        <Form.Label>Gênero</Form.Label>
+                                        {['radio'].map((type) => (
+                                            <div key={`inline-${type}`} className="mb-3" id="radio">
+                                                <Form.Check
+                                                    inline
+                                                    label="M"
+                                                    value={"M"}
+                                                    name="gender"
+                                                    type={type}
+                                                    id={`inline-${type}-1`}
+                                                    onChange={handleChangeInputs}
+                                                />
+                                                <Form.Check
+                                                    inline
+                                                    label="F"
+                                                    value={"F"}
+                                                    name="gender"
+                                                    type={type}
+                                                    id={`inline-${type}-2`}
+                                                    onChange={handleChangeInputs}
+                                                />
+                                                <Form.Check
+                                                    inline
+                                                    label="Outro"
+                                                    value={"Outro"}
+                                                    name="gender"
+                                                    type={type}
+                                                    id={`inline-${type}-3`}
+                                                    onChange={handleChangeInputs}
+                                                />
+                                            </div>
+                                        ))}
+                                    </Form.Group>
+                                </div>
+
+                                <div className="d-flex justify-content-between">
+                                    <Form.Group className="mb-3 w-50" controlId="cpf">
+                                        <Form.Label>CEP</Form.Label>
+                                        <Form.Control 
+                                            type="text"
+                                            placeholder="00000-000"
+                                            name="cep"
+                                            value={studentData.cep}
+                                            onChange={handleChangeInputs}
+                                        />
+                                    </Form.Group>
+
+                                    <Form.Group className="mb-3 w-40" controlId="cpf">
+                                        <Form.Label>Número</Form.Label>
+                                        <Form.Control 
+                                            type="text"
+                                            placeholder="123A"
+                                            name="number"
+                                            value={studentData.number}
+                                            onChange={handleChangeInputs}
+                                        />
+                                    </Form.Group>
+                                </div>
+
                                 <Form.Group className="mb-3" controlId="cpf">
-                                    <Form.Label>CPF</Form.Label>
+                                    <Form.Label>Rua</Form.Label>
                                     <Form.Control 
                                         type="text"
-                                        placeholder="123.123.123-12"
-                                        name="cpf"
-                                        value={studentData.cpf}
+                                        placeholder="Ex: Rua, Avenida, Travessa"
+                                        name="street"
+                                        value={studentData.street}
                                         onChange={handleChangeInputs}
                                     />
                                 </Form.Group>
 
-                                <Form.Group className="mb-3" controlId="birth">
-                                    <Form.Label>Nascimento</Form.Label>
-                                    <Form.Control
-                                        type="date"
-                                        name="birth"
-                                        value={studentData.birth}
-                                        onChange={handleChangeInputs}
-                                    />
-                                </Form.Group>
-                                <Form.Group className="mb-3" controlId="phone">
-                                    <Form.Label>Celular</Form.Label>
-                                    <Form.Control
-                                        type="text"
-                                        placeholder="(00) 00000-0000 "
-                                        name="phone"
-                                        value={studentData.phone}
-                                        onChange={handleChangeInputs}
-                                    />
-                                </Form.Group>
-                                <Form.Group className="mb-3" controlId="gender">
-                                    <Form.Label>Gênero</Form.Label>
-                                    {['radio'].map((type) => (
-                                        <div key={`inline-${type}`} className="mb-3" id="radio">
-                                            <Form.Check
-                                                inline
-                                                label="M"
-                                                value={"M"}
-                                                name="gender"
-                                                type={type}
-                                                id={`inline-${type}-1`}
-                                                onChange={handleChangeInputs}
-                                            />
-                                            <Form.Check
-                                                inline
-                                                label="F"
-                                                value={"F"}
-                                                name="gender"
-                                                type={type}
-                                                id={`inline-${type}-2`}
-                                                onChange={handleChangeInputs}
-                                            />
-                                            <Form.Check
-                                                inline
-                                                label="Outro"
-                                                value={"Outro"}
-                                                name="gender"
-                                                type={type}
-                                                id={`inline-${type}-3`}
-                                                onChange={handleChangeInputs}
-                                            />
-                                        </div>
-                                    ))}
-                                </Form.Group>
+                                <div className="d-flex justify-content-between">
+                                    <Form.Group className="mb-3 w-50" controlId="cpf">
+                                        <Form.Label>Bairro</Form.Label>
+                                        <Form.Control 
+                                            type="text"
+                                            placeholder=""
+                                            name="district"
+                                            value={studentData.district}
+                                            onChange={handleChangeInputs}
+                                        />
+                                    </Form.Group>
+
+                                    <Form.Group className="mb-3 w-40" controlId="cpf">
+                                        <Form.Label>Cidade</Form.Label>
+                                        <Form.Control 
+                                            type="text"
+                                            placeholder=""
+                                            name="city"
+                                            value={studentData.city}
+                                            onChange={handleChangeInputs}
+                                        />
+                                    </Form.Group>
+                                </div>
+                                
+                                <div className="d-flex justify-content-between">
+                                    <Form.Group className="mb-3 w-50" controlId="cpf">
+                                        <Form.Label>Estado</Form.Label>
+                                        <Form.Control 
+                                            type="text"
+                                            placeholder=""
+                                            name="state"
+                                            value={studentData.state}
+                                            onChange={handleChangeInputs}
+                                        />
+                                    </Form.Group>
+
+                                    <Form.Group className="mb-3 w-40" controlId="cpf">
+                                        <Form.Label>UF</Form.Label>
+                                        <Form.Control 
+                                            type="text"
+                                            placeholder="CE"
+                                            name="uf"
+                                            value={studentData.uf}
+                                            onChange={handleChangeInputs}
+                                        />
+                                    </Form.Group>
+                                </div>
                             </Modal.Body>
                             <Modal.Footer>
                                 <Button variant="danger" onClick={() => deleteStudent(studentData.id)}>

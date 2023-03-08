@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const Container = styled.div `
-
     .titleSearch {
         display: flex;
         align-items: center;
@@ -81,5 +80,9 @@ export const Container = styled.div `
     .editIcon {
         font-size: 1.2rem;
         cursor: pointer;
+    }
+
+    .form-modal {
+        color: red;
     }
 `;

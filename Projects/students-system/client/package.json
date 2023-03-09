@@ -17,6 +17,7 @@
     "react-dom": "^18.2.0",
     "react-hook-form": "^7.43.2",
     "react-icons": "^4.8.0",
+    "react-input-mask": "^2.0.4",
     "react-router-dom": "^6.8.2",
     "styled-components": "^5.3.6",
     "yup": "^1.0.2"

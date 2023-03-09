@@ -2,6 +2,7 @@ import { Container } from "./style"
 import { useForm } from "react-hook-form";
 import { yupResolver } from '@hookform/resolvers/yup';
 import { object, string, number } from "yup";
+import InputMask from 'react-input-mask';
 import { useState, useEffect } from "react";
 import axios from "axios";
 
@@ -54,19 +55,24 @@ export function FormRegister() {
         <form onSubmit={handleSubmit(onSubmit)}>
           <section>
             <label htmlFor="name">Nome</label>
-            <input type="text" id="name" {...register("name")} autoFocus/>
+            <input type="text" id="name" {...register("name")} placeholder="Digite o nome do aluno" autoFocus/>
             <span className="error">{errors.name?.message}</span>
           </section>
 
           <section>
             <label htmlFor="email">Email</label>
-            <input type="email" id="email" {...register("email")}/>
+            <input type="email" id="email" placeholder="Digite o email do aluno" {...register("email")}/>
             <span className="error">{errors.email?.message}</span>
           </section>
 
           <section>
             <label htmlFor="cpf">CPF</label>
-            <input type="text" id="cpf" {...register("cpf")}/>
+            <InputMask 
+              mask={"999.999.999-99"} 
+              placeholder="000.000.000-00"
+              type="text" 
+              id="cpf" 
+              {...register("cpf")}/>
             <span className="error">{errors.phone?.message}</span>
           </section>
 
@@ -78,7 +84,12 @@ export function FormRegister() {
 
           <section>
             <label htmlFor="phone">Telefone</label>
-            <input type="tel" id="phone" {...register("phone")}/>
+            <InputMask
+              mask={"(99) 99999-9999"} 
+              placeholder="(00) 00000-0000" 
+              type="tel" 
+              id="phone" 
+              {...register("phone")}/>
             <span className="error">{errors.phone?.message}</span>
           </section>
 
@@ -102,7 +113,8 @@ export function FormRegister() {
           <section>
             <label htmlFor="cep">CEP</label>
             
-            <input 
+            <InputMask
+              mask={"99999-999"} 
               type="text" 
               id="cep" 
               placeholder="12345-678" 

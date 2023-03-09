@@ -89,9 +89,11 @@ export function HandleStudents() {
             [name]: value
         });
     }
-
+    
     function handleSubmitUpdateStudent(event) {
         event.preventDefault();
+        console.log(event.target.cpf);
+
         const ID = event.target.id.value;
         const name = event.target.name.value;
         const email = event.target.email.value;
@@ -106,6 +108,8 @@ export function HandleStudents() {
         const city = event.target.city.value;
         const state = event.target.state.value;
         const uf = event.target.uf.value;
+
+        console.log(cpf);
         
         const dataStudentUpdate = {
             name, 
@@ -291,7 +295,7 @@ export function HandleStudents() {
                                 </div>
 
                                 <div className="d-flex justify-content-between">
-                                    <Form.Group className="mb-3 w-50" controlId="cpf">
+                                    <Form.Group className="mb-3 w-50" controlId="cep">
                                         <Form.Label>CEP</Form.Label>
                                         <Form.Control 
                                             type="text"
@@ -302,7 +306,7 @@ export function HandleStudents() {
                                         />
                                     </Form.Group>
 
-                                    <Form.Group className="mb-3 w-40" controlId="cpf">
+                                    <Form.Group className="mb-3 w-40" controlId="number">
                                         <Form.Label>Número</Form.Label>
                                         <Form.Control 
                                             type="text"
@@ -314,7 +318,7 @@ export function HandleStudents() {
                                     </Form.Group>
                                 </div>
 
-                                <Form.Group className="mb-3" controlId="cpf">
+                                <Form.Group className="mb-3" controlId="street">
                                     <Form.Label>Rua</Form.Label>
                                     <Form.Control 
                                         type="text"
@@ -326,7 +330,7 @@ export function HandleStudents() {
                                 </Form.Group>
 
                                 <div className="d-flex justify-content-between">
-                                    <Form.Group className="mb-3 w-50" controlId="cpf">
+                                    <Form.Group className="mb-3 w-50" controlId="district">
                                         <Form.Label>Bairro</Form.Label>
                                         <Form.Control 
                                             type="text"
@@ -337,7 +341,7 @@ export function HandleStudents() {
                                         />
                                     </Form.Group>
 
-                                    <Form.Group className="mb-3 w-40" controlId="cpf">
+                                    <Form.Group className="mb-3 w-40" controlId="city">
                                         <Form.Label>Cidade</Form.Label>
                                         <Form.Control 
                                             type="text"
@@ -350,7 +354,7 @@ export function HandleStudents() {
                                 </div>
                                 
                                 <div className="d-flex justify-content-between">
-                                    <Form.Group className="mb-3 w-50" controlId="cpf">
+                                    <Form.Group className="mb-3 w-50" controlId="state">
                                         <Form.Label>Estado</Form.Label>
                                         <Form.Control 
                                             type="text"
@@ -361,7 +365,7 @@ export function HandleStudents() {
                                         />
                                     </Form.Group>
 
-                                    <Form.Group className="mb-3 w-40" controlId="cpf">
+                                    <Form.Group className="mb-3 w-40" controlId="uf">
                                         <Form.Label>UF</Form.Label>
                                         <Form.Control 
                                             type="text"

@@ -5,7 +5,7 @@ export function About() {
     <Container>
       <h1>Sobre</h1>
       <p>
-        Projeto criado para conclusão do Curso de Desenvolvimento Web Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae dolor voluptates quisquam temporibus incidunt ullam itaque! Quibusdam laudantium at rerum! Repellendus laboriosam alias accusamus quia voluptate blanditiis explicabo labore doloribus.
+        Projeto Full Stack criado para conclusão do Curso de Desenvolvimento Web. Aborda estilos em JavaScript e pré processadores, rotas e menu de navegação e página de error 404, também conta com formulários e validação de campos para cadastro. Na página de Alunos, foi colocado um input de busca avançada por ID, Nome, Email, Cidade e CPF que mostra - em uma tabela - os dados dos alunos com opção de editar ou deletar se preferir. Algumas das tecnologias usados foram:
       </p>
 
       <section>
@@ -16,7 +16,7 @@ export function About() {
             <li>Style Components</li>
             <li>React Router Dom</li>
             <li>React Icons</li>
-            <li>UseForm e Yup</li>
+            <li>UseForm</li>
             <li>Axios</li>
             <li>Bootstrap</li>
           </ul>

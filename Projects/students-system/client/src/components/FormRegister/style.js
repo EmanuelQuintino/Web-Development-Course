@@ -7,8 +7,11 @@ export const Container = styled.section `
 
     padding: 1.2rem;
 
-    section {
+    section + section {
         margin-top: 1.6rem;
+    }
+    
+    section {
         position: relative;
     }
 

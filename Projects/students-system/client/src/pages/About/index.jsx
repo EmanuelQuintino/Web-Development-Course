@@ -9,10 +9,10 @@ export function About() {
       </p>
 
       <section>
-      <h2>Tecnologias</h2>
         <p>
-          <h4>React</h4>
+          <h3>Front-End</h3>
           <ul>
+            <li>React</li>
             <li>Style Components</li>
             <li>React Router Dom</li>
             <li>React Icons</li>
@@ -23,8 +23,10 @@ export function About() {
         </p>
 
         <p>
-          <h4>Node</h4>
+          <h4>Back-End</h4>
           <ul>
+            <li>MySQL</li>
+            <li>Node</li>
             <li>Express</li>
             <li>Prisma</li>
           </ul>

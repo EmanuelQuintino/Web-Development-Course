@@ -1,7 +1,7 @@
 import { Container } from "./style"
 import { useForm } from "react-hook-form";
 import { yupResolver } from '@hookform/resolvers/yup';
-import { object, string, number } from "yup";
+import { object, string } from "yup";
 import InputMask from 'react-input-mask';
 import { useState, useEffect } from "react";
 import axios from "axios";
@@ -86,7 +86,7 @@ export function FormRegister() {
           <section>
             <label htmlFor="phone">Telefone</label>
             <InputMask
-              mask={"(99) 99999-9999"} 
+              mask={"(99) 99999-9999"}
               placeholder="(00) 00000-0000" 
               type="tel" 
               id="phone" 

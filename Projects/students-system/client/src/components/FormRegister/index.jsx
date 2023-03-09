@@ -26,10 +26,7 @@ export function FormRegister() {
     const { register, handleSubmit, formState: { errors }, reset } = useForm({
         resolver: yupResolver(schema)
     });
-  
-    const [studentData, setStudentData] = useState();
-    // const [CEPData, setcCEPtData] = useState();
-
+    
     const API = "http://localhost:3000/students"
     function onSubmit(data) {
         console.log(data);
@@ -39,6 +36,8 @@ export function FormRegister() {
         // reset();
     }
 
+    // const [CEPData, setcCEPtData] = useState();
+    
     // async function callCEP(event) {
     //   const CEP = event.target.value;
     //   fetch(`https://cdn.apicep.com/file/apicep/${CEP}.json`)
@@ -47,7 +46,6 @@ export function FormRegister() {
     //     .then((data) => setcCEPtData(data));
     // }
 
-    // console.log(studentData);
     // console.log(CEPData);
 
     return (

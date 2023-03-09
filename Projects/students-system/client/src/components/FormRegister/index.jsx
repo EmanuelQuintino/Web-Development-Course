@@ -72,7 +72,8 @@ export function FormRegister() {
               placeholder="000.000.000-00"
               type="text" 
               id="cpf" 
-              {...register("cpf")}/>
+              {...register("cpf")}
+            />
             <span className="error">{errors.phone?.message}</span>
           </section>
 
@@ -89,7 +90,8 @@ export function FormRegister() {
               placeholder="(00) 00000-0000" 
               type="tel" 
               id="phone" 
-              {...register("phone")}/>
+              {...register("phone")}
+            />
             <span className="error">{errors.phone?.message}</span>
           </section>
 
@@ -112,7 +114,6 @@ export function FormRegister() {
 
           <section>
             <label htmlFor="cep">CEP</label>
-            
             <InputMask
               mask={"99999-999"} 
               type="text" 
@@ -121,13 +122,12 @@ export function FormRegister() {
               {...register("cep")} 
               // onBlur={callCEP}
             />
-            
             <span className="error">{errors.cep?.message}</span>
           </section>
       
           <section>
             <label htmlFor="number">Número</label>
-            <input type="text" id="number" placeholder="Ex: 123" {...register("number")}/>
+            <input type="text" id="number" placeholder="123A" {...register("number")}/>
             <span className="error">{errors.number?.message}</span>
 
           </section>

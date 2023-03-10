@@ -3,8 +3,16 @@ const prisma = require('../databases');
 module.exports = {
     async read(req, res, next) {
         try {
-            const listStudents = await prisma.students.findMany();
-            return res.json(listStudents);
+            const { id } = req.query;
+            if (id) {
+                const listStudent = await prisma.students.findUnique({where: {id: Number(id)}});
+                return listStudent ? 
+                    res.json(listStudent) : 
+                    res.status(400).json('Aluno não encontrado');
+            } else {
+                const listStudents = await prisma.students.findMany();
+                return res.json(listStudents);
+            }
         } catch (error) {
             if (error.code == "P2021") return res.status(500).json("Tabela não encontrada");
             next(error);
@@ -14,6 +22,10 @@ module.exports = {
     async create(req, res, next) {
         try {
             const { name, email, cpf, birth, phone, gender, cep, number, street, district, city, state, uf } = req.body;
+            if (!email.includes("@") || !email.includes(".")) {
+                res.status(400).json("Por favor insira um email válido");
+            }
+
             const studentEmail = await prisma.students.findUnique({where: {email}});
             if (studentEmail) return res.status(400).json("Email já cadastrado");
 
@@ -25,7 +37,6 @@ module.exports = {
             });
             return res.json(`Aluno cadastrado com sucesso`);
         } catch (error) {
-            console.log(error);
             next(error);
         }
     },
@@ -34,7 +45,10 @@ module.exports = {
         try {
             const { id } = req.params;
             const { name, email, cpf, birth, phone, gender, cep, number, street, district, city, state, uf } = req.body;
-            
+            if (!email.includes("@") || !email.includes(".")) {
+                res.status(400).json("Por favor insira um email válido");
+            }
+    
             const student = await prisma.students.findUnique({where: {id: Number(id)}});
             if (!student) return res.status(400).json("Estudante não encontrado");
 

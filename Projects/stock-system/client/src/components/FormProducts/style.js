@@ -6,7 +6,8 @@ export const Container = styled.section `
     }
     
     label {
-        margin-top: 1.0rem;
+        margin-top: 1.2rem;
+        line-height: 1.2rem;
     }
 
     .error {

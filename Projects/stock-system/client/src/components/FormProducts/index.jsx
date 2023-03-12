@@ -7,17 +7,16 @@ export function FormProducts() {
   const { register, handleSubmit, formState: { errors } } = useForm();
 
   const API = "http://localhost:3000/products";
-  // console.log(API);
-  console.log(errors);
   
   function onSubmit(data) {
     console.log(data);
   }
+
   return (
     <Container>
       <Form onSubmit={handleSubmit(onSubmit)}>
         <Form.Group className="mb-3" controlId="name">
-          <Form.Label>Nome</Form.Label>
+          <Form.Label>*Nome</Form.Label>
           <Form.Control 
             type="text" 
             placeholder="Nome do produto" 
@@ -27,7 +26,7 @@ export function FormProducts() {
         </Form.Group>
 
         <Form.Group className="mb-3" controlId="desciption">
-          <Form.Label>Descrição</Form.Label>
+          <Form.Label>*Descrição</Form.Label>
           <Form.Control 
             type="text" 
             placeholder="Descreva detalhes do produto"
@@ -37,7 +36,7 @@ export function FormProducts() {
         </Form.Group>
 
         <Form.Group className="mb-3" controlId="price">
-          <Form.Label>Preço</Form.Label>
+          <Form.Label>*Preço</Form.Label>
           <Form.Control 
             type="text" 
             placeholder="R$ 3.50"
@@ -47,7 +46,7 @@ export function FormProducts() {
         </Form.Group>
 
         <Form.Group className="mb-3" controlId="expiresIn">
-          <Form.Label>Vencimento</Form.Label>
+          <Form.Label>*Vencimento</Form.Label>
           <Form.Control 
             type="date" 
             {...register("expiresIn", { required: true })}
@@ -56,7 +55,7 @@ export function FormProducts() {
         </Form.Group>
 
         <Form.Group className="mb-3" controlId="linkImage">
-          <Form.Label>Imagem</Form.Label>
+          <Form.Label>*Imagem</Form.Label>
           <Form.Control 
             type="text" 
             placeholder="Link da imagem" 

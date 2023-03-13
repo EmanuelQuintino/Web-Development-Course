@@ -16,11 +16,11 @@ export function FormProducts() {
     <Container>
       <Form onSubmit={handleSubmit(onSubmit)}>
         <Form.Group className="mb-3" controlId="name">
-          <Form.Label>Nome</Form.Label>
+          <Form.Label>Produto</Form.Label>
           <Form.Control 
             type="text" 
             placeholder="Nome do produto" 
-            {...register("name", { 
+            {...register("product", { 
               required: "Campo obrigatório",
               pattern: {value: /[A-Za-z]/, message: "Somente texto é permitido"}, 
               maxLength: {value: 60, message: "Número máximo de caracteres é 60"}

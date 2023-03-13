@@ -19,13 +19,13 @@ module.exports = {
 
     async create(req, res) {
         try {
-            const {name, description, price, expires_in, link_image} = req.body;
-            if (!name || !description || !price || !expires_in || !link_image || 
-                name == "" || description == "" || price == "" || expires_in == "" || link_image == "") {
+            const {product, description, price, expires_in, link_image} = req.body;
+            if (!product || !description || !price || !expires_in || !link_image || 
+                product == "" || description == "" || price == "" || expires_in == "" || link_image == "") {
                 return res.status(400).json("Por favor informar todos os campos");
             }
             await prisma.products.create({
-                data: {name, description, price: Number(price), expires_in: new Date(expires_in), link_image}
+                data: {product, description, price: Number(price), expires_in: new Date(expires_in), link_image}
             });
             return res.json("Produto cadastrado com sucesso");
         } catch (error) {
@@ -36,10 +36,10 @@ module.exports = {
     async update(req, res) {
         try {
             const { id } = req.params;
-            const {name, description, price, expires_in, link_image} = req.body;
+            const {product, description, price, expires_in, link_image} = req.body;
 
-            if (!name || !description || !price || !expires_in || !link_image || 
-                name == "" || description == "" || price == "" || expires_in == "" || link_image == "") {
+            if (!product || !description || !price || !expires_in || !link_image || 
+                product == "" || description == "" || price == "" || expires_in == "" || link_image == "") {
                 return res.status(400).json("Por favor informar todos os campos");
             }
 
@@ -47,7 +47,7 @@ module.exports = {
             if (!listProduct) return res.status(400).json("Produto não encontrado");
             
             await prisma.products.update({
-                data: {name, description, price: Number(price), expires_in: new Date(expires_in), link_image},
+                data: {product, description, price: Number(price), expires_in: new Date(expires_in), link_image},
                 where: {id: Number(id)}
             });
             return res.json("Produto atualizado com sucesso");

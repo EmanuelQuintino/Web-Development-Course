@@ -15,7 +15,7 @@ export function FormProducts() {
   return (
     <Container>
       <Form onSubmit={handleSubmit(onSubmit)}>
-        <Form.Group className="mb-3" controlId="name">
+        <Form.Group className="mb-3" controlId="product">
           <Form.Label>Produto</Form.Label>
           <Form.Control 
             type="text" 
@@ -26,7 +26,7 @@ export function FormProducts() {
               maxLength: {value: 60, message: "Número máximo de caracteres é 60"}
             })}
           />
-          {errors.name && <span className='error'>{errors.name.message}</span>}
+          {errors.product && <span className='error'>{errors.product.message}</span>}
         </Form.Group>
 
         <Form.Group className="mb-3" controlId="desciption">

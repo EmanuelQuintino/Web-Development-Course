@@ -16,37 +16,37 @@ export function FormProducts() {
     <Container>
       <Form onSubmit={handleSubmit(onSubmit)}>
         <Form.Group className="mb-3" controlId="name">
-          <Form.Label>*Nome</Form.Label>
+          <Form.Label>Nome</Form.Label>
           <Form.Control 
             type="text" 
-            placeholder="Nome do produto" 
+            placeholder="*Nome do produto" 
             {...register("name", { required: true })}
           />
           {errors.name && <span className='error'>Campo obrigatório</span>}
         </Form.Group>
 
         <Form.Group className="mb-3" controlId="desciption">
-          <Form.Label>*Descrição</Form.Label>
+          <Form.Label>Descrição</Form.Label>
           <Form.Control 
             type="text" 
-            placeholder="Descreva detalhes do produto"
+            placeholder="*Descreva detalhes do produto"
             {...register("description", { required: true })} 
           />
           {errors.description && <span className='error'>Campo obrigatório</span>}
         </Form.Group>
 
         <Form.Group className="mb-3" controlId="price">
-          <Form.Label>*Preço</Form.Label>
+          <Form.Label>Preço</Form.Label>
           <Form.Control 
             type="text" 
-            placeholder="R$ 3.50"
+            placeholder="*R$ 3.50"
             {...register("price", { required: true })}
           />
           {errors.price && <span className='error'>Campo obrigatório</span>}
         </Form.Group>
 
         <Form.Group className="mb-3" controlId="expiresIn">
-          <Form.Label>*Vencimento</Form.Label>
+          <Form.Label>Data de vencimento</Form.Label>
           <Form.Control 
             type="date" 
             {...register("expiresIn", { required: true })}
@@ -55,10 +55,10 @@ export function FormProducts() {
         </Form.Group>
 
         <Form.Group className="mb-3" controlId="linkImage">
-          <Form.Label>*Imagem</Form.Label>
+          <Form.Label>Imagem</Form.Label>
           <Form.Control 
             type="text" 
-            placeholder="Link da imagem" 
+            placeholder="*Link da imagem" 
             {...register("linkImage", { required: true })}
           />
           {errors.linkImage && <span className='error'>Campo obrigatório</span>}

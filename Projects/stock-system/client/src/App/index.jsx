@@ -1,5 +1,5 @@
 import { Container } from "./style"
-import { FormProducts } from "../components/formProducts"
+import { FormProducts } from "../components/FormProducts"
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 export function App() {

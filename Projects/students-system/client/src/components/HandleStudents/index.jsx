@@ -33,8 +33,6 @@ export function HandleStudents() {
         return (
             String(student.id).toLowerCase().includes(searchStudent.toLowerCase()) ||
             student.name.toLowerCase().includes(searchStudent.toLowerCase()) ||
-            student.cpf.toLowerCase().includes(searchStudent.toLowerCase()) ||
-            student.email.toLowerCase().includes(searchStudent.toLowerCase()) ||
             student.city.toLowerCase().includes(searchStudent.toLowerCase())
         );
     })

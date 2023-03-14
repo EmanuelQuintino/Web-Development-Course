@@ -125,7 +125,10 @@ export function HandleStudents() {
         console.log(dataStudentUpdate);
 
         axios.put(API + ID, dataStudentUpdate)
-            .then((res) => alert(res.data))
+            .then((res) => {
+                alert(res.data)
+                modalClose();
+            })
             .catch((error) => alert((error.response.data)))
             .finally(() => fetchStudents());
     }
@@ -205,6 +208,7 @@ export function HandleStudents() {
                                         name="name"
                                         value={studentData.name}
                                         onChange={handleChangeInputs}
+                                        required
                                     />
                                 </Form.Group>
 
@@ -216,6 +220,7 @@ export function HandleStudents() {
                                         name="email"
                                         value={studentData.email}
                                         onChange={handleChangeInputs}
+                                        required
                                         />
                                 </Form.Group>
 
@@ -228,6 +233,7 @@ export function HandleStudents() {
                                             name="cpf"
                                             value={studentData.cpf}
                                             onChange={handleChangeInputs}
+                                            required
                                         />
                                     </Form.Group>
 
@@ -238,6 +244,7 @@ export function HandleStudents() {
                                             name="birth"
                                             value={studentData.birth}
                                             onChange={handleChangeInputs}
+                                            required
                                             />
                                     </Form.Group>
                                 </div>
@@ -251,6 +258,7 @@ export function HandleStudents() {
                                             name="phone"
                                             value={studentData.phone}
                                             onChange={handleChangeInputs}
+                                            required
                                             />
                                     </Form.Group>
                                     <Form.Group className="mb-3 w-50" controlId="gender">
@@ -265,6 +273,7 @@ export function HandleStudents() {
                                                     type={type}
                                                     id={`inline-${type}-1`}
                                                     onChange={handleChangeInputs}
+                                                    required
                                                 />
                                                 <Form.Check
                                                     inline
@@ -274,6 +283,7 @@ export function HandleStudents() {
                                                     type={type}
                                                     id={`inline-${type}-2`}
                                                     onChange={handleChangeInputs}
+                                                    required
                                                 />
                                                 <Form.Check
                                                     inline
@@ -283,6 +293,7 @@ export function HandleStudents() {
                                                     type={type}
                                                     id={`inline-${type}-3`}
                                                     onChange={handleChangeInputs}
+                                                    required
                                                 />
                                             </div>
                                         ))}
@@ -298,6 +309,7 @@ export function HandleStudents() {
                                             name="cep"
                                             value={studentData.cep}
                                             onChange={handleChangeInputs}
+                                            required
                                         />
                                     </Form.Group>
 
@@ -309,6 +321,7 @@ export function HandleStudents() {
                                             name="number"
                                             value={studentData.number}
                                             onChange={handleChangeInputs}
+                                            required
                                         />
                                     </Form.Group>
                                 </div>
@@ -321,6 +334,7 @@ export function HandleStudents() {
                                         name="street"
                                         value={studentData.street}
                                         onChange={handleChangeInputs}
+                                        required
                                     />
                                 </Form.Group>
 
@@ -333,6 +347,7 @@ export function HandleStudents() {
                                             name="district"
                                             value={studentData.district}
                                             onChange={handleChangeInputs}
+                                            required
                                         />
                                     </Form.Group>
 
@@ -344,6 +359,7 @@ export function HandleStudents() {
                                             name="city"
                                             value={studentData.city}
                                             onChange={handleChangeInputs}
+                                            required
                                         />
                                     </Form.Group>
                                 </div>
@@ -357,6 +373,7 @@ export function HandleStudents() {
                                             name="state"
                                             value={studentData.state}
                                             onChange={handleChangeInputs}
+                                            required
                                         />
                                     </Form.Group>
 
@@ -368,6 +385,7 @@ export function HandleStudents() {
                                             name="uf"
                                             value={studentData.uf}
                                             onChange={handleChangeInputs}
+                                            required
                                         />
                                     </Form.Group>
                                 </div>
@@ -376,7 +394,7 @@ export function HandleStudents() {
                                 <Button variant="danger" onClick={() => deleteStudent(studentData.id)}>
                                     Deletar
                                 </Button>
-                                <Button variant="primary" type="submit" onClick={modalClose}>
+                                <Button variant="primary" type="submit">
                                     Atualizar
                                 </Button>
                             </Modal.Footer>

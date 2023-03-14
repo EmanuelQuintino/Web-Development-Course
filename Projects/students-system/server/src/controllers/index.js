@@ -6,9 +6,8 @@ module.exports = {
             const { id } = req.query;
             if (id) {
                 const listStudent = await prisma.students.findUnique({where: {id: Number(id)}});
-                return listStudent ? 
-                    res.json(listStudent) : 
-                    res.status(400).json('Aluno não encontrado');
+                if (!listStudent) return res.status(400).json('Aluno não encontrado'); 
+                return res.json(listStudent);
             } else {
                 const listStudents = await prisma.students.findMany();
                 return res.json(listStudents);
@@ -22,6 +21,14 @@ module.exports = {
     async create(req, res, next) {
         try {
             const { name, email, cpf, birth, phone, gender, cep, number, street, district, city, state, uf } = req.body;
+
+            if (!name || !email || !cpf || !birth || !phone || !gender || !cep || 
+                !number || !street || !district || !city || !state || !uf ||
+                name == "" || email == "" || cpf == "" || birth == "" || phone == "" || gender== "" || cep== "" ||
+                number == "" || street == "" || district == "" || city == "" || state == "" || uf == "") {
+                return res.status(400).json('Por favor preencha todos os campos');
+            }
+
             if (!email.includes("@") || !email.includes(".")) {
                 res.status(400).json("Por favor insira um email válido");
             }
@@ -35,7 +42,7 @@ module.exports = {
             await prisma.students.create({
                 data: {name, email, cpf, birth: new Date(birth), phone, gender, cep, number, street, district, city, state, uf}
             });
-            return res.json(`Aluno cadastrado com sucesso`);
+            return res.status(201).json('Aluno cadastrado com sucesso');
         } catch (error) {
             next(error);
         }
@@ -45,6 +52,14 @@ module.exports = {
         try {
             const { id } = req.params;
             const { name, email, cpf, birth, phone, gender, cep, number, street, district, city, state, uf } = req.body;
+            
+            if (!name || !email || !cpf || !birth || !phone || !gender || !cep || 
+                !number || !street || !district || !city || !state || !uf ||
+                name == "" || email == "" || cpf == "" || birth == "" || phone == "" || gender== "" || cep== "" ||
+                number == "" || street == "" || district == "" || city == "" || state == "" || uf == "") {
+                return res.status(400).json('Por favor preencha todos os campos');
+            }
+            
             if (!email.includes("@") || !email.includes(".")) {
                 res.status(400).json("Por favor insira um email válido");
             }
@@ -63,8 +78,8 @@ module.exports = {
             }
 
             await prisma.students.update({
-                where: {id: Number(id)}, 
-                data: { name, email, cpf, birth: new Date(birth), phone, gender, cep, number, street, district, city, state, uf }
+                data: { name, email, cpf, birth: new Date(birth), phone, gender, cep, number, street, district, city, state, uf },
+                where: {id: Number(id)} 
             });
             return res.json(`Estudante atualizado com sucesso`);
         } catch (error) {
@@ -75,11 +90,10 @@ module.exports = {
     async delete(req, res, next) {
         try {
             const { id } = req.params;
-
             const student = await prisma.students.findUnique({where: {id: Number(id)}});
             if(!student) return res.status(400).json('Estudante não encontrado');
 
-            const deleteStudent = await prisma.students.delete({where: {id: Number(id)}});
+            await prisma.students.delete({where: {id: Number(id)}});
             return res.json(`Estudante deletado com sucesso`);            
         } catch (error) {
             next(error);

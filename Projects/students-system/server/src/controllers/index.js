@@ -22,10 +22,32 @@ module.exports = {
         try {
             const { name, email, cpf, birth, phone, gender, cep, number, street, district, city, state, uf } = req.body;
 
-            if (!name || !email || !cpf || !birth || !phone || !gender || !cep || 
-                !number || !street || !district || !city || !state || !uf ||
-                name == "" || email == "" || cpf == "" || birth == "" || phone == "" || gender== "" || cep== "" ||
-                number == "" || street == "" || district == "" || city == "" || state == "" || uf == "") {
+            if (!name || 
+                !email || 
+                !cpf || 
+                !birth || 
+                !phone || 
+                !gender || 
+                !cep || 
+                !number || 
+                !street || 
+                !district || 
+                !city || 
+                !state || 
+                !uf ||
+                name == "" || 
+                email == "" || 
+                cpf == "" || 
+                birth == "" || 
+                phone == "" || 
+                gender== "" || 
+                cep== "" ||
+                number == "" || 
+                street == "" || 
+                district == "" || 
+                city == "" || 
+                state == "" || 
+                uf == "" ) {
                 return res.status(400).json('Por favor preencha todos os campos');
             }
 
@@ -53,10 +75,32 @@ module.exports = {
             const { id } = req.params;
             const { name, email, cpf, birth, phone, gender, cep, number, street, district, city, state, uf } = req.body;
             
-            if (!name || !email || !cpf || !birth || !phone || !gender || !cep || 
-                !number || !street || !district || !city || !state || !uf ||
-                name == "" || email == "" || cpf == "" || birth == "" || phone == "" || gender== "" || cep== "" ||
-                number == "" || street == "" || district == "" || city == "" || state == "" || uf == "") {
+            if (!name || 
+                !email || 
+                !cpf || 
+                !birth || 
+                !phone || 
+                !gender || 
+                !cep || 
+                !number || 
+                !street || 
+                !district || 
+                !city || 
+                !state || 
+                !uf ||
+                name == "" || 
+                email == "" || 
+                cpf == "" || 
+                birth == "" || 
+                phone == "" || 
+                gender== "" || 
+                cep== "" ||
+                number == "" || 
+                street == "" || 
+                district == "" || 
+                city == "" || 
+                state == "" || 
+                uf == "") {
                 return res.status(400).json('Por favor preencha todos os campos');
             }
             

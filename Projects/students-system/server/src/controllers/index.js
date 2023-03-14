@@ -30,7 +30,7 @@ module.exports = {
             }
 
             if (!email.includes("@") || !email.includes(".")) {
-                res.status(400).json("Por favor insira um email válido");
+                return res.status(400).json("Por favor insira um email válido");
             }
 
             const studentEmail = await prisma.students.findUnique({where: {email}});
@@ -61,7 +61,7 @@ module.exports = {
             }
             
             if (!email.includes("@") || !email.includes(".")) {
-                res.status(400).json("Por favor insira um email válido");
+                return res.status(400).json("Por favor insira um email válido");
             }
     
             const student = await prisma.students.findUnique({where: {id: Number(id)}});

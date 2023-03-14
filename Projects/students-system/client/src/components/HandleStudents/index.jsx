@@ -90,7 +90,6 @@ export function HandleStudents() {
     
     function handleSubmitUpdateStudent(event) {
         event.preventDefault();
-        console.log(event.target.cpf);
 
         const ID = event.target.id.value;
         const name = event.target.name.value;
@@ -106,8 +105,6 @@ export function HandleStudents() {
         const city = event.target.city.value;
         const state = event.target.state.value;
         const uf = event.target.uf.value;
-
-        console.log(cpf);
         
         const dataStudentUpdate = {
             name, 

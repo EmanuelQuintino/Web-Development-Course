@@ -41,20 +41,20 @@ export function HandleStudents() {
     
     function fetchStudents() {
         axios.get(API)
-        .then((res) => setListStudents(res.data))
-        .catch((error) => alert(error.response.data));
+            .then((res) => setListStudents(res.data))
+            .catch((error) => alert(error.response.data));
     }
 
     function deleteStudent(ID) {
         const isDelete = confirm("Deseja excluir o aluno?");
         if (isDelete) {
             axios.delete(API + ID)
-            .then((res) => alert(res.data))
-            .catch((error) => alert(error.response.data))
-            .finally(() => {
-                fetchStudents();
-                modalClose();
-            });
+                .then((res) => alert(res.data))
+                .catch((error) => alert(error.response.data))
+                .finally(() => {
+                    fetchStudents();
+                    modalClose();
+                });
         }
 
     }

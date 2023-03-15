@@ -35,7 +35,7 @@ export function FormUser() {
         </Row>
         <Row className="mb-3">
           <Form.Group md="6" controlId="password">
-            <Form.Label>Senha</Form.Label>
+            <Form.Label className="form-label2">Senha</Form.Label>
             <Form.Control type="password" placeholder="Informe a senha" required />
             <Form.Control.Feedback type="invalid">
               Campo obrigatório

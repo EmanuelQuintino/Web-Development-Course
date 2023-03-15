@@ -6,7 +6,18 @@ export const Container = styled.section`
         margin: 0 auto;
     }
 
+    .form-label2 {
+        margin-top: 10px;
+    }
+
+    .invalid-feedback {
+        position: absolute;
+        width: 320px;
+    }
+
     button {
         width: 100%;
+        margin-top: 16px;
+        padding: 4px;
     }
 `;

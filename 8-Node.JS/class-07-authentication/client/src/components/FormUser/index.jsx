@@ -33,6 +33,7 @@ export function FormUser() {
             </Form.Control.Feedback>
           </Form.Group>
         </Row>
+        
         <Row className="mb-3">
           <Form.Group md="6" controlId="password">
             <Form.Label className="form-label2">Senha</Form.Label>
@@ -42,6 +43,17 @@ export function FormUser() {
             </Form.Control.Feedback>
           </Form.Group>
         </Row>
+        
+        <Row className="mb-3">
+          <Form.Group md="6" controlId="confirmPassword">
+            <Form.Label className="form-label2">Confirmar Senha</Form.Label>
+            <Form.Control type="password" placeholder="Confirme sua senha" required />
+            <Form.Control.Feedback type="invalid">
+              Campo obrigatório
+            </Form.Control.Feedback>
+          </Form.Group>
+        </Row>
+
         <Button type="submit">Cadastrar</Button>
       </Form>
     </Container>

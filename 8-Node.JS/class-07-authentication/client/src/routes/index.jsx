@@ -1,4 +1,4 @@
-import {createBrowserRouter} from "react-router-dom";
+import {createBrowserRouter, Navigate} from "react-router-dom";
 import { App } from "../App";
 import { SignIn } from "../pages/SignIn";
 import { SignUp } from "../pages/SignUp";
@@ -11,7 +11,7 @@ export const Routes = createBrowserRouter([
         children: [
             { path: "/", element:  <SignIn/>},
             { path: "/register", element: <SignUp/>},
-            { path: "/home", element: <Home/>},
+            { path: "/home", element: true ? <Home/> : <Navigate to={"/"}/>},
         ]
     }
 ]);

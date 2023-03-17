@@ -8,9 +8,7 @@ import { AuthContext } from "../../context/Auth";
 
 export function FormLogin() {
   const [validated, setValidated] = useState(false);
-  const { authenticated, handleLogin } = useContext(AuthContext);
-
-  console.log(authenticated);
+  const { handleLogin } = useContext(AuthContext);
   
   const handleSubmit = (event) => {
     const form = event.currentTarget;

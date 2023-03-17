@@ -3,10 +3,15 @@ import React, { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import Row from 'react-bootstrap/Row';
+import { useContext } from 'react';
+import { AuthContext } from "../../context/Auth";
 
 export function FormLogin() {
   const [validated, setValidated] = useState(false);
+  const { authenticated, handleLogin } = useContext(AuthContext);
 
+  console.log(authenticated);
+  
   const handleSubmit = (event) => {
     const form = event.currentTarget;
     if (form.checkValidity() === false) {
@@ -15,6 +20,11 @@ export function FormLogin() {
     }
 
     setValidated(true);
+
+    event.preventDefault();
+    const email = event.target.email.value;
+    const password = event.target.password.value;
+    handleLogin({email, password});
   };
 
   return (
@@ -26,6 +36,7 @@ export function FormLogin() {
             <Form.Control
               required
               type="email"
+              name="email"
               placeholder="Digite seu email"
             />
             <Form.Control.Feedback type="invalid">
@@ -37,7 +48,11 @@ export function FormLogin() {
         <Row className="mb-3">
           <Form.Group md="6" controlId="passwordLogin">
             <Form.Label className="form-label2">Senha</Form.Label>
-            <Form.Control type="password" placeholder="Informe a senha" required />
+            <Form.Control 
+              type="password" 
+              placeholder="Informe a senha"
+              name="password" 
+              required />
             <Form.Control.Feedback type="invalid">
               Campo obrigatório
             </Form.Control.Feedback>

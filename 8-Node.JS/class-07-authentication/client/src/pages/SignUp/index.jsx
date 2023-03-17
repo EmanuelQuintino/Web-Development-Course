@@ -9,7 +9,7 @@ export function SignUp() {
             <h2>Cadastre-se</h2>
             <FormUser />
             <Link to={"/"}>
-                <Button variant="link">Login</Button>
+                <Button variant="link">Voltar</Button>
             </Link>
         </Container>
     )

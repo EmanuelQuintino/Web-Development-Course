@@ -17,7 +17,7 @@ module.exports = {
             if(!passwordCheck) return res.status(401).json('Email or Password incorrect');
 
             const token = jwt.sign({id: String(user.id)}, secret, {expiresIn});
-            return res.json({id: user.id, status: "Authenticated", token});
+            return res.json({id: user.id, authenticated: true, token});
         } catch (error) {
             return console.error(error.message);
         }

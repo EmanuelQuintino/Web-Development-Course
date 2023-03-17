@@ -10,8 +10,12 @@ export function AuthProvider({children}) {
         console.log(email, password);
         API.post("/login", {email, password})
             .then((res) => {
-                console.log(res.data);
-                setAuthenticated(true);    
+                if (res.data.authenticated) {
+                    console.log(res.data);
+                    setAuthenticated(true)
+                    localStorage.setItem("token", JSON.stringify(res.data.token));
+                    API.defaults.headers.common['Authorization'] = res.data.token;
+                }    
             })
             .catch((error) => alert(error.response.data));
     }

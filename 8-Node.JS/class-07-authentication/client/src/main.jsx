@@ -1,11 +1,12 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import { App } from './App'
 import { Reset } from './style/reset'
+import { RouterProvider } from 'react-router-dom'
+import { Routes } from "./routes"
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <App />
+    <RouterProvider router={Routes}/>
     <Reset/>
   </React.StrictMode>,
 )

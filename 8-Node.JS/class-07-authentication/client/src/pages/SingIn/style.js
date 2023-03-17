@@ -5,6 +5,6 @@ export const Container = styled.section`
         width: 100%;
         margin: 0 auto;
         margin-top: 2.4rem;
-        font-size: 1.2rem;
+        font-size: 1.4rem;
     }
 `;

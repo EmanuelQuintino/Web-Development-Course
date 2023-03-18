@@ -67,6 +67,15 @@ export const Container = styled.section`
 
     .tableStudents table {
         font-size: .8rem;
+        position: relative;
+    }
+
+    .spinner {
+        animation: spinnerRotate 1s linear infinite;
+        font-size: 2.4rem;
+        position: absolute;
+        margin: 50% 45%;
+        color: ${({theme}) => theme.colors.neutral8};
     }
 
     th, td {
@@ -85,4 +94,10 @@ export const Container = styled.section`
     .form-modal {
         color: red;
     }
+
+    @keyframes spinnerRotate {
+    to {
+        transform: rotate(360deg);
+    }
+}
 `;

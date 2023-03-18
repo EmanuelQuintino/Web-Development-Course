@@ -220,7 +220,7 @@ export function FormRegister() {
             <span className="error">{errors.uf?.message}</span>
           </section>
 
-          <button>Enviar</button>
+          <button>Cadastrar</button>
         </form>
       </Container>
     )

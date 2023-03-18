@@ -60,7 +60,7 @@ export const Container = styled.section `
         border: none;
         border-radius: .4rem;
         padding: .4rem;
-        font-size: 1.4rem;
+        font-size: 1.2rem;
         font-weight: 600;
         background: #008080;
         color: white;

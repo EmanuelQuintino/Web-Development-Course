@@ -101,8 +101,7 @@ export function HandleStudents() {
                                     studentData={studentData}
                                     fetchStudents={fetchStudents}
                                 />
-                        </Modal.Body>
-                            
+                        </Modal.Body>            
                     </Modal>
                 </section>
             </article>

@@ -152,6 +152,7 @@ export function FormUpdate({modalClose, studentData, fetchStudents}) {
                             type={type}
                             id={`inline-${type}-1`}
                             onChange={handleInputChange}
+                            value={"M"}
                             required
                             checked={studentData.gender === 'M'}
                         />
@@ -162,19 +163,20 @@ export function FormUpdate({modalClose, studentData, fetchStudents}) {
                             type={type}
                             id={`inline-${type}-2`}
                             onChange={handleInputChange}
+                            value={"F"}
                             required
                             checked={studentData.gender === 'F'}
                         />
                         <Form.Check
                             inline
                             label="Outro"
-                            value={"Outro"}
                             name="gender"
                             type={type}
                             id={`inline-${type}-3`}
+                            value={"Outro"}
                             onChange={handleInputChange}
                             required
-                            checked={studentData.gender === 'Other'}
+                            checked={studentData.gender === 'Outro'}
                         />
                     </div>
                 ))}

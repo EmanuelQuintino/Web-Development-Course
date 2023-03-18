@@ -4,7 +4,7 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import { object, string } from "yup";
 import InputMask from 'react-input-mask';
 import { useState, useEffect } from "react";
-import axios from "axios";
+import { API } from "../../config/api";
 
 const schema = object({
   name: string().required("Preencha este campo").max(40, "Tamanho máximo de até 40 caracteres"),
@@ -27,10 +27,9 @@ export function FormRegister() {
         resolver: yupResolver(schema)
     });
     
-    const API = "http://localhost:3000/students"
     function onSubmit(data) {
         console.log(data);
-        axios.post(API, data)
+        API.post("/students", data)
           .then((res) => alert(res.data))
           .catch((error) => alert(error.response.data));
         // reset();

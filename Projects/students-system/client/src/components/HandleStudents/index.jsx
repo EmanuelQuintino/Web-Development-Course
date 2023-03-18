@@ -4,30 +4,15 @@ import axios from "axios";
 import { Table } from 'react-bootstrap';
 import { BsSearch } from "react-icons/bs"
 import { BiEdit } from "react-icons/bi"
-import Button from 'react-bootstrap/Button';
-import Form from 'react-bootstrap/Form';
 import Modal from 'react-bootstrap/Modal';
+import { FormUpdate } from "../FormUpdate";
+
 
 export function HandleStudents() {
     const [listStudents, setListStudents] = useState([]);
     const [searchStudent, setSearchStudent] = useState('');
     const [editModalShow, setFormEditShow ] = useState(false);
-    const [studentData, setStudentData ] = useState({
-        id: "", 
-        name: "", 
-        email: "",
-        cpf: "",
-        birth: "",
-        phone: "",
-        gender: "",
-        cep: "",
-        number: "",
-        street: "",
-        district: "",
-        city: "", 
-        state: "",
-        uf: "" 
-    });
+    const [studentData, setStudentData ] = useState({});
 
     const filterStudents = listStudents.filter((student) => {
         return (
@@ -186,219 +171,14 @@ export function HandleStudents() {
                         <Modal.Header closeButton>
                             <Modal.Title>Detalhes do Aluno</Modal.Title>
                         </Modal.Header>
-                        <Form onSubmit={handleSubmitUpdateStudent} className="form-modal">
-                            <Modal.Body style={{padding: '.8rem 2.4rem'}}>
-                                <Form.Group className="mb-3 w-25" controlId="id">
-                                    <Form.Label>ID</Form.Label>
-                                    <Form.Control
-                                        type="text"
-                                        placeholder="ID do Aluno"
-                                        name="id"
-                                        value={studentData.id}
-                                        disabled
-                                    />
-                                </Form.Group>
-
-                                <Form.Group className="mb-3" controlId="name">
-                                    <Form.Label>Nome</Form.Label>
-                                    <Form.Control
-                                        type="text"
-                                        placeholder="Nome do aluno"
-                                        autoFocus
-                                        name="name"
-                                        value={studentData.name}
-                                        onChange={handleChangeInputs}
-                                        required
-                                    />
-                                </Form.Group>
-
-                                <Form.Group className="mb-3" controlId="email">
-                                    <Form.Label>Email</Form.Label>
-                                    <Form.Control
-                                        type="email"
-                                        placeholder="nome@exemplo.com"
-                                        name="email"
-                                        value={studentData.email}
-                                        onChange={handleChangeInputs}
-                                        required
-                                        />
-                                </Form.Group>
-
-                                <div className="d-flex justify-content-between">
-                                    <Form.Group className="mb-3 w-45" controlId="cpf">
-                                        <Form.Label>CPF</Form.Label>
-                                        <Form.Control 
-                                            type="text"
-                                            placeholder="123.123.123-12"
-                                            name="cpf"
-                                            value={studentData.cpf}
-                                            onChange={handleChangeInputs}
-                                            required
-                                        />
-                                    </Form.Group>
-
-                                    <Form.Group className="mb-3 w-50" controlId="birth">
-                                        <Form.Label>Nascimento</Form.Label>
-                                        <Form.Control
-                                            type="date"
-                                            name="birth"
-                                            value={studentData.birth}
-                                            onChange={handleChangeInputs}
-                                            required
-                                            />
-                                    </Form.Group>
-                                </div>
-
-                                <div className="d-flex justify-content-between">
-                                    <Form.Group className="mb-3 w-40" controlId="phone">
-                                        <Form.Label>Celular</Form.Label>
-                                        <Form.Control
-                                            type="text"
-                                            placeholder="(00) 00000-0000 "
-                                            name="phone"
-                                            value={studentData.phone}
-                                            onChange={handleChangeInputs}
-                                            required
-                                            />
-                                    </Form.Group>
-                                    <Form.Group className="mb-3 w-50" controlId="gender">
-                                        <Form.Label>Gênero</Form.Label>
-                                        {['radio'].map((type) => (
-                                            <div key={`inline-${type}`} className="mb-3" id="radio">
-                                                <Form.Check
-                                                    inline
-                                                    label="M"
-                                                    value={"M"}
-                                                    name="gender"
-                                                    type={type}
-                                                    id={`inline-${type}-1`}
-                                                    onChange={handleChangeInputs}
-                                                    required
-                                                />
-                                                <Form.Check
-                                                    inline
-                                                    label="F"
-                                                    value={"F"}
-                                                    name="gender"
-                                                    type={type}
-                                                    id={`inline-${type}-2`}
-                                                    onChange={handleChangeInputs}
-                                                    required
-                                                />
-                                                <Form.Check
-                                                    inline
-                                                    label="Outro"
-                                                    value={"Outro"}
-                                                    name="gender"
-                                                    type={type}
-                                                    id={`inline-${type}-3`}
-                                                    onChange={handleChangeInputs}
-                                                    required
-                                                />
-                                            </div>
-                                        ))}
-                                    </Form.Group>
-                                </div>
-
-                                <div className="d-flex justify-content-between">
-                                    <Form.Group className="mb-3 w-50" controlId="cep">
-                                        <Form.Label>CEP</Form.Label>
-                                        <Form.Control 
-                                            type="text"
-                                            placeholder="00000-000"
-                                            name="cep"
-                                            value={studentData.cep}
-                                            onChange={handleChangeInputs}
-                                            required
-                                        />
-                                    </Form.Group>
-
-                                    <Form.Group className="mb-3 w-40" controlId="number">
-                                        <Form.Label>Número</Form.Label>
-                                        <Form.Control 
-                                            type="text"
-                                            placeholder="123A"
-                                            name="number"
-                                            value={studentData.number}
-                                            onChange={handleChangeInputs}
-                                            required
-                                        />
-                                    </Form.Group>
-                                </div>
-
-                                <Form.Group className="mb-3" controlId="street">
-                                    <Form.Label>Rua</Form.Label>
-                                    <Form.Control 
-                                        type="text"
-                                        placeholder="Ex: Rua, Avenida, Travessa"
-                                        name="street"
-                                        value={studentData.street}
-                                        onChange={handleChangeInputs}
-                                        required
-                                    />
-                                </Form.Group>
-
-                                <div className="d-flex justify-content-between">
-                                    <Form.Group className="mb-3 w-50" controlId="district">
-                                        <Form.Label>Bairro</Form.Label>
-                                        <Form.Control 
-                                            type="text"
-                                            placeholder=""
-                                            name="district"
-                                            value={studentData.district}
-                                            onChange={handleChangeInputs}
-                                            required
-                                        />
-                                    </Form.Group>
-
-                                    <Form.Group className="mb-3 w-40" controlId="city">
-                                        <Form.Label>Cidade</Form.Label>
-                                        <Form.Control 
-                                            type="text"
-                                            placeholder=""
-                                            name="city"
-                                            value={studentData.city}
-                                            onChange={handleChangeInputs}
-                                            required
-                                        />
-                                    </Form.Group>
-                                </div>
-                                
-                                <div className="d-flex justify-content-between">
-                                    <Form.Group className="mb-3 w-50" controlId="state">
-                                        <Form.Label>Estado</Form.Label>
-                                        <Form.Control 
-                                            type="text"
-                                            placeholder=""
-                                            name="state"
-                                            value={studentData.state}
-                                            onChange={handleChangeInputs}
-                                            required
-                                        />
-                                    </Form.Group>
-
-                                    <Form.Group className="mb-3 w-40" controlId="uf">
-                                        <Form.Label>UF</Form.Label>
-                                        <Form.Control 
-                                            type="text"
-                                            placeholder="CE"
-                                            name="uf"
-                                            value={studentData.uf}
-                                            onChange={handleChangeInputs}
-                                            required
-                                        />
-                                    </Form.Group>
-                                </div>
-                            </Modal.Body>
-                            <Modal.Footer>
-                                <Button variant="danger" onClick={() => deleteStudent(studentData.id)}>
-                                    Deletar
-                                </Button>
-                                <Button variant="primary" type="submit">
-                                    Atualizar
-                                </Button>
-                            </Modal.Footer>
-                        </Form>
+                        <Modal.Body style={{padding: '.8rem 2.4rem'}}>
+                            <FormUpdate 
+                                    modalClose={modalClose} 
+                                    studentData={studentData}
+                                    fetchStudents={fetchStudents}
+                                />
+                        </Modal.Body>
+                            
                     </Modal>
                 </section>
             </article>

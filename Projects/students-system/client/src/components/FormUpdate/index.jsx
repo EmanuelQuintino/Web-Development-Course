@@ -4,13 +4,19 @@ import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import {API} from '../../config/api';
 
-export function FormUpdate({modalClose, studentData, fetchStudents}) {    
+export function FormUpdate({modalClose, studentData, fetchStudents}) { 
+    
+    let birthSplit = studentData.birth;
+    if (String(studentData.birth).includes('T')) {
+        birthSplit = String(studentData.birth).split('T')[0];
+    }
+
     const [studentDataForm, setStudentDataForm] = useState({
         id: studentData.id,
         name: studentData.name,
         email: studentData.email,
         cpf: studentData.cpf,
-        birth: studentData.birth,
+        birth: birthSplit,
         phone: studentData.phone,
         gender: studentData.gender,
         cep: studentData.cep,
@@ -142,22 +148,22 @@ export function FormUpdate({modalClose, studentData, fetchStudents}) {
                         <Form.Check
                             inline
                             label="M"
-                            value={"M"}
                             name="gender"
                             type={type}
                             id={`inline-${type}-1`}
                             onChange={handleInputChange}
                             required
+                            checked={studentData.gender === 'M'}
                         />
                         <Form.Check
                             inline
                             label="F"
-                            value={"F"}
                             name="gender"
                             type={type}
                             id={`inline-${type}-2`}
                             onChange={handleInputChange}
                             required
+                            checked={studentData.gender === 'F'}
                         />
                         <Form.Check
                             inline
@@ -168,6 +174,7 @@ export function FormUpdate({modalClose, studentData, fetchStudents}) {
                             id={`inline-${type}-3`}
                             onChange={handleInputChange}
                             required
+                            checked={studentData.gender === 'Other'}
                         />
                     </div>
                 ))}

@@ -1,18 +1,17 @@
 import { Container } from "./style"
 import { useState, useEffect } from "react"
-import axios from "axios";
 import { Table } from 'react-bootstrap';
 import { BsSearch } from "react-icons/bs"
 import { BiEdit } from "react-icons/bi"
 import Modal from 'react-bootstrap/Modal';
 import { FormUpdate } from "../FormUpdate";
-
+import {API} from"../../config/api";
 
 export function HandleStudents() {
     const [listStudents, setListStudents] = useState([]);
-    const [searchStudent, setSearchStudent] = useState('');
-    const [editModalShow, setFormEditShow ] = useState(false);
-    const [studentData, setStudentData ] = useState({});
+    const [showModal, setShowModal] = useState(false);
+    const [studentData, setStudentData] = useState({});
+    const [searchStudent, setSearchStudent] = useState("");
 
     const filterStudents = listStudents.filter((student) => {
         return (
@@ -22,100 +21,25 @@ export function HandleStudents() {
         );
     })
     
-    const API = "http://localhost:3000/students/"
     
     function fetchStudents() {
-        axios.get(API)
+        API.get("/students")
             .then((res) => setListStudents(res.data))
             .catch((error) => alert(error.response.data));
-    }
-
-    function deleteStudent(ID) {
-        const isDelete = confirm("Deseja excluir o aluno?");
-        if (isDelete) {
-            axios.delete(API + ID)
-                .then((res) => alert(res.data))
-                .catch((error) => alert(error.response.data))
-                .finally(() => {
-                    fetchStudents();
-                    modalClose();
-                });
-        }
-
     }
 
     useEffect(() => {
         fetchStudents();
     }, []);
 
-    function modalOpen(ID) {
-        setFormEditShow(true);
-        const student = listStudents.filter((student) => String(student.id).includes(ID));
-        const { id, name, email, cpf, birth, phone, gender, cep, number, street, district, city, state, uf } = student[0];
-        
-        let birthSplit = birth;
-        if (String(birth).includes('T')) {
-            birthSplit = String(birth).split('T')[0];
-        }
-
-        setStudentData({ id, name, email, cpf, birth: birthSplit, phone, gender, cep, number, street, district, city, state, uf });    
+    function modalOpen(studentID) {
+        setShowModal(true);
+        const student = listStudents.findIndex(student => student.id === studentID);
+        setStudentData(listStudents[student]);  
     }
 
     function modalClose() {
-        setFormEditShow(false);
-    }
-
-    function handleChangeInputs(event) {
-        const { name, value } = event.target;
-        setStudentData({
-            ...studentData,
-            [name]: value
-        });
-    }
-    
-    function handleSubmitUpdateStudent(event) {
-        event.preventDefault();
-
-        const ID = event.target.id.value;
-        const name = event.target.name.value;
-        const email = event.target.email.value;
-        const cpf = event.target.cpf.value;
-        const birth = event.target.birth.value;
-        const phone = event.target.phone.value;
-        const gender = event.target.gender.value;
-        const cep = event.target.cep.value;
-        const number = event.target.number.value;
-        const street = event.target.street.value;
-        const district = event.target.district.value;
-        const city = event.target.city.value;
-        const state = event.target.state.value;
-        const uf = event.target.uf.value;
-        
-        const dataStudentUpdate = {
-            name, 
-            email, 
-            cpf,
-            birth: birth ? birth : studentData.birth,
-            phone,
-            gender: gender ? gender : studentData.gender,
-            cep,
-            number,
-            street,
-            district,
-            city, 
-            state,
-            uf 
-        }
-
-        console.log(dataStudentUpdate);
-
-        axios.put(API + ID, dataStudentUpdate)
-            .then((res) => {
-                alert(res.data)
-                modalClose();
-            })
-            .catch((error) => alert((error.response.data)))
-            .finally(() => fetchStudents());
+        setShowModal(false);
     }
     
     return (
@@ -167,7 +91,7 @@ export function HandleStudents() {
                 </section>
 
                 <section>
-                    <Modal show={editModalShow} onHide={modalClose}>
+                    <Modal show={showModal} onHide={modalClose}>
                         <Modal.Header closeButton>
                             <Modal.Title>Detalhes do Aluno</Modal.Title>
                         </Modal.Header>

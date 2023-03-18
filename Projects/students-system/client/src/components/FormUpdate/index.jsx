@@ -27,8 +27,6 @@ export function FormUpdate({modalClose, studentData, fetchStudents}) {
         state: studentData.state,
         uf: studentData.uf,
     });
-
-    console.log(studentDataForm);
     
     const handleSubmit = (event) => {
         event.preventDefault();

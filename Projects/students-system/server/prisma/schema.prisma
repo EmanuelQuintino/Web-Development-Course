@@ -3,12 +3,13 @@ generator client {
 }
 
 datasource db {
-  provider = "mysql"
+  // provider = "mysql"
+  provider = "postgresql"
   url      = env("DATABASE_URL")
 }
 
 model students {
-  id         Int       @id @default(autoincrement()) @db.UnsignedInt
+  id         Int       @id @default(autoincrement())
   name       String    @db.VarChar(255)
   email      String    @unique(map: "email") @db.VarChar(255)
   cpf        String    @unique(map: "cpf") @db.VarChar(255)
@@ -22,6 +23,6 @@ model students {
   city       String    @db.VarChar(255)
   state      String    @db.VarChar(255)
   uf         String    @db.VarChar(255)
-  created_at DateTime  @default(now()) @db.DateTime(0)
-  updated_at DateTime  @default(now()) @db.DateTime(0) @updatedAt
+  created_at DateTime  @default(now())
+  updated_at DateTime  @default(now()) @updatedAt
 }

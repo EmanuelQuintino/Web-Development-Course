@@ -3,10 +3,10 @@ import { AppRoutes } from "./app";
 import { AuthRoutes } from "./auth";
 
 export function Routes() {
+    const isAuthenticated = false;
     return (
         <BrowserRouter>
-            <AppRoutes/>
-            {/* <AuthRoutes/> */}
+            { isAuthenticated ? <AppRoutes/> : <AuthRoutes/>}
         </BrowserRouter>
     )
 }

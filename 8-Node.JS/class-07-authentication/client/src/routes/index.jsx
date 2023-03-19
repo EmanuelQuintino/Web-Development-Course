@@ -1,17 +1,12 @@
-import {createBrowserRouter, Navigate} from "react-router-dom";
-import { App } from "../App";
-import { SignIn } from "../pages/SignIn";
-import { SignUp } from "../pages/SignUp";
-import { Home } from "../pages/Home";
+import { BrowserRouter } from "react-router-dom";
+import { AppRoutes } from "./app";
+import { AuthRoutes } from "./auth";
 
-export const Routes = createBrowserRouter([
-    {
-        path: "/",
-        element: <App/>,
-        children: [
-            { path: "/", element:  <SignIn/>},
-            { path: "/register", element: <SignUp/>},
-            { path: "/home", element: true ? <Home/> : <Navigate to={"/"}/>},
-        ]
-    }
-]);
+export function Routes() {
+    return (
+        <BrowserRouter>
+            {/* <AppRoutes/> */}
+            <AuthRoutes/>
+        </BrowserRouter>
+    )
+}

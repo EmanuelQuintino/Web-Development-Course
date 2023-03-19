@@ -5,7 +5,7 @@ export const Container = styled.section`
     min-height: 100vh;
     
     display: grid;
-    place-items: center;
+    place-content: center;
 
     text-align: center;
     

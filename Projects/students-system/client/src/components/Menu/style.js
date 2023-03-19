@@ -19,7 +19,7 @@ export const Container = styled.section`
         display: grid;
         gap: 4.8rem;
 
-        font-size: 1.6rem;
+        font-size: 1.8rem;
         font-weight: 600;
         text-align: center;
     }

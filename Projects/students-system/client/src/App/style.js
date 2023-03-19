@@ -6,7 +6,7 @@ export const Container = styled.div`
     overflow: ${({MenuActive}) => MenuActive ? "hidden" : "auto"};
 
     main {
-        max-width: 32.0rem;
+        max-width: 36.0rem;
         margin: 0 auto;
         padding: 2.4rem .0rem 7.6rem;
         text-align: justify;

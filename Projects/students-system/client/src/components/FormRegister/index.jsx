@@ -150,6 +150,7 @@ export function FormRegister() {
               type="text" 
               id="district" 
               {...register("district")}
+              placeholder="Bairro onde mora o aluno"
               // value={CEPData ? CEPData.bairro : ""}
               />
             
@@ -161,7 +162,8 @@ export function FormRegister() {
 
             <input 
               type="text" 
-              id="city" 
+              id="city"
+              placeholder="Cidade onde mora o aluno" 
               {...register("city")}
               // value={CEPData ? CEPData.localidade : ""}
             />

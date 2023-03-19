@@ -16,7 +16,7 @@ export const Container = styled.section `
     }
 
     label {
-        font-size: 1.2rem;
+        font-size: 1.4rem;
         line-height: 2.4rem;
         cursor: pointer;
     }
@@ -60,7 +60,7 @@ export const Container = styled.section `
         border: none;
         border-radius: .4rem;
         padding: .4rem;
-        font-size: 1.2rem;
+        font-size: 1.6rem;
         font-weight: 600;
         background: #008080;
         color: white;

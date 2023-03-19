@@ -19,7 +19,7 @@ export const Container = styled.section`
         transition: 400ms;
         padding: 0 .4rem;
         color: ${({theme}) => theme.colors.neutralA};
-        font-size: 1.2rem;
+        font-size: 1.6rem;
     }
 
     .srOnly {
@@ -36,7 +36,7 @@ export const Container = styled.section`
         border: .1rem solid ${({theme}) => theme.colors.neutral8};
         padding: .4rem 1.2rem .2rem;
         border-radius: .4rem;
-        font-size: 1.2rem;
+        font-size: 1.6rem;
         color: ${({theme}) => theme.colors.neutral6};
     }
     
@@ -47,8 +47,8 @@ export const Container = styled.section`
     
     #inputSearchStudent:not(:placeholder-shown) + .labelInputSearch,
     #inputSearchStudent:focus + .labelInputSearch {
-        bottom: 1.8rem;
-        font-size: .9rem;
+        bottom: 2.2rem;
+        font-size: 1.2rem;
         background: white;
         color: ${({theme}) => theme.colors.neutral6};
     }
@@ -56,8 +56,8 @@ export const Container = styled.section`
     .searchIcon {
         position: absolute;
         bottom: .8rem;
-        right: 1.6rem;
-        font-size: 1.0rem;
+        right: 1.2rem;
+        font-size: 1.6rem;
         color: ${({theme}) => theme.colors.neutral8};
     }
 
@@ -66,7 +66,7 @@ export const Container = styled.section`
     }
 
     .tableStudents table {
-        font-size: .8rem;
+        font-size: 1.0rem;
         position: relative;
     }
 

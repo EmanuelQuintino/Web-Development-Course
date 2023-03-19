@@ -23,7 +23,6 @@ export function HandleStudents() {
         );
     })
     
-    
     function fetchStudents() {
         setIsLoading(true);
         API.get("/students")
@@ -45,6 +44,11 @@ export function HandleStudents() {
     function modalClose() {
         setShowModal(false);
     }
+
+    function onSubmitFetchStudents(event) {
+        event.preventDefault();
+        fetchStudents();
+    }
     
     return (
         <Container>
@@ -52,14 +56,16 @@ export function HandleStudents() {
                 <section className="titleSearch">
                     <h1>Alunos</h1>
                     <div className="inputSection">
-                        <input
-                            id="inputSearchStudent" 
-                            type="text"
-                            placeholder=" " 
-                            onChange={(event) => setSearchStudent(event.target.value)}
-                        />
-                        <label htmlFor="inputSearchStudent" className="labelInputSearch">Buscar aluno</label>
-                        <BsSearch className="searchIcon"/>
+                        <form onSubmit={onSubmitFetchStudents}>
+                            <input
+                                id="inputSearchStudent" 
+                                type="text"
+                                placeholder=" " 
+                                onChange={(event) => setSearchStudent(event.target.value)}
+                            />
+                            <label htmlFor="inputSearchStudent" className="labelInputSearch">Buscar aluno</label>
+                            <BsSearch className="searchIcon"/>
+                        </form>
                     </div>
                 </section>
 

@@ -10,7 +10,6 @@ export function AuthProvider({children}) {
         const authUser = JSON.parse(localStorage.getItem("@studentsSystem:authUser"));
         if (authUser) {
             API.defaults.headers.common['Authorization'] = `Bearer ${authUser.token}`;
-            // API.defaults.headers.Authorization = `Bearer ${res.data.token}`;
             setUserAuthData(authUser);                    
         }
     }, [])
@@ -20,7 +19,6 @@ export function AuthProvider({children}) {
         .then((res) => {
             if (res.data.authenticated) {
                     API.defaults.headers.common['Authorization'] = `Bearer ${res.data.token}`;
-                    // API.defaults.headers.Authorization = `Bearer ${res.data.token}`;
                     localStorage.setItem("@studentsSystem:authUser", JSON.stringify(res.data));
                     setUserAuthData(res.data);                      
                 }    

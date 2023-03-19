@@ -9,6 +9,7 @@ export const Container = styled.section`
 
     h2 {
         text-align: center;
+        font-size: 2.8rem;
     }
     
     .btn-link {

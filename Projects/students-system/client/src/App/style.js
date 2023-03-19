@@ -4,7 +4,11 @@ export const Container = styled.div`
     width: 100%;
     height: 100vh;
     overflow: ${({MenuActive}) => MenuActive ? "hidden" : "auto"};
-
+    
+    h1 {
+        font-size: 2.0rem;
+    }
+    
     main {
         max-width: 36.0rem;
         margin: 0 auto;

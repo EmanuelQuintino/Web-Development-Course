@@ -1,6 +1,8 @@
 import { Container } from './style';
 import React, { useState } from 'react';
 import Form from 'react-bootstrap/Form';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import {API} from '../../config/api';
@@ -68,44 +70,49 @@ export function FormUpdate({modalClose, studentData, fetchStudents}) {
   return (
     <Container>
         <Form onSubmit={handleSubmit} className="form-modal">
-            <Form.Group className="mb-3 w-25" controlId="id">
-                <Form.Label>ID</Form.Label>
-                <Form.Control
-                    type="text"
-                    placeholder="ID do Aluno"
-                    name="id"
-                    value={studentDataForm.id}
-                    disabled
-                />
-            </Form.Group>
+            <Row className="mb-3">
+                <Form.Group as={Col} md="3" controlId="id">
+                    <Form.Label>ID</Form.Label>
+                    <Form.Control
+                        type="text"
+                        placeholder="ID do Aluno"
+                        name="id"
+                        value={studentDataForm.id}
+                        disabled
+                        />
+                </Form.Group>
+            </Row>
 
-            <Form.Group className="mb-3" controlId="name">
-                <Form.Label>Nome</Form.Label>
-                <Form.Control
-                    type="text"
-                    placeholder="Nome do aluno"
-                    autoFocus
-                    name="name"
-                    value={studentDataForm.name}
-                    onChange={handleInputChange}
-                    required
-                />
-            </Form.Group>
+            <Row className="mb-3">
+                <Form.Group md="6" controlId="name">
+                    <Form.Label>Nome</Form.Label>
+                    <Form.Control
+                        type="text"
+                        placeholder="Nome do aluno"
+                        autoFocus
+                        name="name"
+                        value={studentDataForm.name}
+                        onChange={handleInputChange}
+                        required
+                        />
+                </Form.Group>
+            </Row>
 
-            <Form.Group className="mb-3" controlId="email">
-                <Form.Label>Email</Form.Label>
-                <Form.Control
-                    type="email"
-                    placeholder="nome@exemplo.com"
-                    name="email"
-                    value={studentDataForm.email}
-                    onChange={handleInputChange}
-                    required
-                    />
-            </Form.Group>
-
-            <div className="d-flex justify-content-between">
-                <Form.Group className="mb-3 w-45" controlId="cpf">
+            <Row className="mb-3">
+                <Form.Group md="6" controlId="email">
+                    <Form.Label>Email</Form.Label>
+                    <Form.Control
+                        type="email"
+                        placeholder="nome@exemplo.com"
+                        name="email"
+                        value={studentDataForm.email}
+                        onChange={handleInputChange}
+                        required
+                        />
+                </Form.Group>
+            </Row>
+            <Row className="mb-3">
+                <Form.Group as={Col} md="6" controlId="cpf">
                     <Form.Label>CPF</Form.Label>
                     <Form.Control 
                         type="text"
@@ -114,10 +121,10 @@ export function FormUpdate({modalClose, studentData, fetchStudents}) {
                         value={studentDataForm.cpf}
                         onChange={handleInputChange}
                         required
-                    />
+                        />
                 </Form.Group>
 
-                <Form.Group className="mb-3 w-50" controlId="birth">
+                <Form.Group as={Col} md="6" controlId="birth">
                     <Form.Label>Nascimento</Form.Label>
                     <Form.Control
                         type="date"
@@ -127,10 +134,10 @@ export function FormUpdate({modalClose, studentData, fetchStudents}) {
                         required
                         />
                 </Form.Group>
-            </div>
+            </Row>
 
-            <div className="d-flex justify-content-between">
-                <Form.Group className="mb-3 w-30" controlId="phone">
+            <Row className="mb-3">
+                <Form.Group as={Col} md="6" controlId="phone">
                     <Form.Label>Celular</Form.Label>
                     <Form.Control
                         type="text"
@@ -141,7 +148,7 @@ export function FormUpdate({modalClose, studentData, fetchStudents}) {
                         required
                         />
                 </Form.Group>
-                <Form.Group className="mb-3 w-60" controlId="gender">
+                <Form.Group as={Col} md="6" controlId="gender">
                     <Form.Label>Gênero</Form.Label>
                     {['radio'].map((type) => (
                         <div key={`inline-${type}`} className="mb-3" id="radio">
@@ -155,7 +162,7 @@ export function FormUpdate({modalClose, studentData, fetchStudents}) {
                                 value={"M"}
                                 required
                                 checked={studentData.gender === 'M'}
-                            />
+                                />
                             <Form.Check
                                 inline
                                 label="F"
@@ -166,7 +173,7 @@ export function FormUpdate({modalClose, studentData, fetchStudents}) {
                                 value={"F"}
                                 required
                                 checked={studentData.gender === 'F'}
-                            />
+                                />
                             <Form.Check
                                 inline
                                 label="Outro"
@@ -177,14 +184,14 @@ export function FormUpdate({modalClose, studentData, fetchStudents}) {
                                 onChange={handleInputChange}
                                 required
                                 checked={studentData.gender === 'Outro'}
-                            />
+                                />
                         </div>
                     ))}
                 </Form.Group>
-            </div>
+            </Row>
 
-            <div className="d-flex justify-content-between">
-                <Form.Group className="mb-3 w-50" controlId="cep">
+            <Row className="mb-3">
+                <Form.Group as={Col} md="6" controlId="cep">
                     <Form.Label>CEP</Form.Label>
                     <Form.Control 
                         type="text"
@@ -196,7 +203,7 @@ export function FormUpdate({modalClose, studentData, fetchStudents}) {
                     />
                 </Form.Group>
 
-                <Form.Group className="mb-3 w-40" controlId="number">
+                <Form.Group as={Col} md="6" controlId="number">
                     <Form.Label>Número</Form.Label>
                     <Form.Control 
                         type="text"
@@ -205,9 +212,9 @@ export function FormUpdate({modalClose, studentData, fetchStudents}) {
                         value={studentDataForm.number}
                         onChange={handleInputChange}
                         required
-                    />
+                        />
                 </Form.Group>
-            </div>
+            </Row>
 
             <Form.Group className="mb-3" controlId="street">
                 <Form.Label>Rua</Form.Label>
@@ -221,8 +228,8 @@ export function FormUpdate({modalClose, studentData, fetchStudents}) {
                 />
             </Form.Group>
 
-            <div className="d-flex justify-content-between">
-                <Form.Group className="mb-3 w-50" controlId="district">
+            <Row className="mb-3">
+                <Form.Group as={Col} md="6" controlId="district">
                     <Form.Label>Bairro</Form.Label>
                     <Form.Control 
                         type="text"
@@ -234,7 +241,7 @@ export function FormUpdate({modalClose, studentData, fetchStudents}) {
                     />
                 </Form.Group>
 
-                <Form.Group className="mb-3 w-40" controlId="city">
+                <Form.Group as={Col} md="6" controlId="city">
                     <Form.Label>Cidade</Form.Label>
                     <Form.Control 
                         type="text"
@@ -245,10 +252,10 @@ export function FormUpdate({modalClose, studentData, fetchStudents}) {
                         required
                     />
                 </Form.Group>
-            </div>
+            </Row>
             
-            <div className="d-flex justify-content-between">
-                <Form.Group className="mb-3 w-50" controlId="state">
+            <Row className="mb-3">
+                <Form.Group as={Col} md="6" controlId="state">
                     <Form.Label>Estado</Form.Label>
                     <Form.Control 
                         type="text"
@@ -260,7 +267,7 @@ export function FormUpdate({modalClose, studentData, fetchStudents}) {
                     />
                 </Form.Group>
 
-                <Form.Group className="mb-3 w-40" controlId="uf">
+                <Form.Group as={Col} md="6" controlId="uf">
                     <Form.Label>UF</Form.Label>
                     <Form.Control 
                         type="text"
@@ -271,7 +278,7 @@ export function FormUpdate({modalClose, studentData, fetchStudents}) {
                         required
                     />
                 </Form.Group>
-            </div>
+            </Row>
             <Modal.Footer>
                 <Button variant="danger" onClick={() => deleteStudent(studentData.id)}>
                     Deletar

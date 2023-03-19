@@ -18,7 +18,7 @@ export const Container = styled.section`
     }
 
     .menuIcon {
-        font-size: 2.4rem;
+        font-size: 2.8rem;
         color: ${({theme}) => theme.colors.neutral8};
         cursor: pointer;
     }

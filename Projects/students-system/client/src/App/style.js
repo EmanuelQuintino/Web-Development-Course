@@ -8,7 +8,7 @@ export const Container = styled.div`
     h1 {
         font-size: 2.0rem;
     }
-    
+
     main {
         max-width: 36.0rem;
         margin: 0 auto;
@@ -24,7 +24,7 @@ export const Container = styled.div`
         background: ${({theme}) => theme.colors.background};
         border-top: .4rem solid ${({theme}) => theme.colors.neutral8};
         color: white;
-        font-size: 1.4rem;
+        font-size: 1.6rem;
         font-weight: 500;
         padding: 1.6rem;
         text-align: center;

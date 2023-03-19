@@ -11,18 +11,18 @@ export function FormLogin() {
   const { handleLogin } = useContext(AuthContext);
   
   const handleSubmit = (event) => {
-    const form = event.currentTarget;
-    if (form.checkValidity() === false) {
-      event.preventDefault();
-      event.stopPropagation();
-    }
-
-    setValidated(true);
-
     event.preventDefault();
-    const email = event.target.email.value;
-    const password = event.target.password.value;
-    handleLogin({email, password});
+    const form = event.currentTarget;
+    
+    if (form.checkValidity() === false) {
+      event.stopPropagation();
+    } else {
+      const email = event.target.email.value;
+      const password = event.target.password.value;
+      handleLogin({email, password});
+    }
+    
+    setValidated(true);    
   };
 
   return (

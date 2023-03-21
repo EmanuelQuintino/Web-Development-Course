@@ -5,10 +5,10 @@ import { useContext } from 'react';
 import { AuthContext } from "../context/Auth";
 
 export function Routes() {
-    const {userAuthData} = useContext(AuthContext);
+    const { userAuthData } = useContext(AuthContext);
     return (
         <BrowserRouter>
-            { userAuthData.authenticated ? <AppRoutes/> : <AuthRoutes/>}
+            { userAuthData.authenticated ? <AppRoutes/> : <AuthRoutes/> }
         </BrowserRouter>
     )
 }

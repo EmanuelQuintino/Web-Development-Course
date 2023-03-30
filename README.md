@@ -17,7 +17,7 @@ O curso de Desenvolvimento Web é o nosso programa piloto e faz parte do projeto
   Node.JS
   <img align="center" alt="Git" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"/>     
   Git
-  <img align="center" alt="MySQL" height="70" width="60" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original-wordmark.svg">
+  <img align="center" alt="PostgreSQL" height="35" width="45" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" />
   SQL
 </div>
 

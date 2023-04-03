@@ -27,7 +27,7 @@ console.log(144 ** (1/2));
 // Crie e execute uma função de nome 'test" que retorne "JavaScript" e imprima seu retorno.
 
 function test() {
-    return 'JavaScript'
+  return 'JavaScript'
 }
 console.log(test());
 
@@ -47,11 +47,11 @@ console.log(list);
 // Liste todos os valores do array criado na questão anterior ultilizando o for.
 
 for (let index = 0; index < list.length; index++) {
-    console.log(list[index]);
+  console.log(list[index]);
 }
 
 for (const value of list) {
-    console.log(value);
+  console.log(value);
 }
 
 
@@ -60,10 +60,10 @@ for (const value of list) {
 
 let count = 0
 while (count <= 500) {
-    if (count < 200 || count >=400) {
-        console.log(count);
-    }
-    count++
+  if (count < 200 || count >=400) {
+    console.log(count);
+  }
+  count++
 }
 
 
@@ -77,9 +77,9 @@ const speed = 75
 const maxSpeed = 60
 
 if (speed > maxSpeed || speed < (maxSpeed / 2)) {
-    situation = 'multado!'
+  situation = 'multado!'
 } else {
-    situation = 'não multado!'
+  situation = 'não multado!'
 }
 
 console.log(`Motorista ${situation}`)

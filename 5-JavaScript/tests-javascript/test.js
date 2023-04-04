@@ -49,16 +49,16 @@ console.log(reverseLetters("z<*zj"));
 
 // main();
 
-// const deley = new Promise((resolve, reject) => {
-//   setTimeout(async () => {
-//     resolve(console.log("Timeout"));
-//   }, 3000)
-// }) 
+const deley = new Promise((resolve, reject) => {
+  setTimeout(async () => {
+    resolve(console.log("Timeout"));
+  }, 3000)
+}) 
 
-// async function main() {
-//   console.log("Start");
-//   await deley.finally();
-//   console.log("Finish");
-// }
+async function main() {
+  console.log("Start");
+  await deley.finally();
+  console.log("Finish");
+}
 
-// main();
+main();

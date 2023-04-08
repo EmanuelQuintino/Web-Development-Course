@@ -37,27 +37,27 @@ console.log(reverseLetters("z<*zj"));
 // Questão 3 (Asynchronism):
 // Corrija o código abaixo para imprimir - respectivamente - Start, Timeout e Finish:
 
-// const deley = () => setTimeout(() => {
+// const delay = () => setTimeout(() => {
 //   console.log("Timeout");
 // }, 3000);
 
 // async function main() {
 //   console.log("Start");
-//   await deley();
+//   await delay();
 //   console.log("Finish");
 // }
 
 // main();
 
-const deley = new Promise((resolve, reject) => {
+const delay = new Promise((resolve, reject) => {
   setTimeout(async () => {
     resolve(console.log("Timeout"));
-  }, 3000)
+  }, 2000)
 }) 
 
 async function main() {
   console.log("Start");
-  await deley.finally();
+  await delay.finally();
   console.log("Finish");
 }
 

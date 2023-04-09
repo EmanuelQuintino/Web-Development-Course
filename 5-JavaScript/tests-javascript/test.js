@@ -31,7 +31,7 @@ function reverseLetters(string) {
   return revertedString;
 }
 
-console.log(reverseLetters("z<*zj"));
+// console.log(reverseLetters("z<*zj"));
 
 
 // Questão 3 (Asynchronism):
@@ -49,15 +49,15 @@ console.log(reverseLetters("z<*zj"));
 
 // main();
 
-const delay = new Promise((resolve, reject) => {
-  setTimeout(async () => {
+const delay = () => new Promise((resolve) => {
+  setTimeout(() => {
     resolve(console.log("Timeout"));
   }, 2000)
 }) 
 
 async function main() {
   console.log("Start");
-  await delay.finally();
+  await delay();
   console.log("Finish");
 }
 

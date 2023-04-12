@@ -15,7 +15,6 @@ function reverseText(text) {
 // console.log(reverseText("Web Development Course"));
 
 
-
 // Questão 2 (Data Manipulation):
 // Adicione a lógica para reverter apenas as letras na função abaixo:
 

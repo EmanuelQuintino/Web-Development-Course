@@ -4,7 +4,7 @@ import { useContext } from 'react';
 import { AuthContext } from '../../context/Auth';
 
 export function Home() {
-    const {handleLogout} = useContext(AuthContext);
+    const { handleLogout } = useContext(AuthContext);
     return (
         <Container>
             <h1>Home</h1>

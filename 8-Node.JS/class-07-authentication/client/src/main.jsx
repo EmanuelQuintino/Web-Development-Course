@@ -8,8 +8,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <AuthProvider>
-      <Reset/>
-      <Routes/>
-    </AuthProvider>      
+      <Reset />
+      <Routes />
+    </AuthProvider>
   </React.StrictMode>,
 )

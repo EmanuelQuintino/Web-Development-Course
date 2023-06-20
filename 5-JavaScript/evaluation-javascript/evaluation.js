@@ -1,4 +1,4 @@
-// Questão 1 (Data Manipulation):
+// Questão 1 (Data Manipulation)
 // Adicione a lógica para reverter texto na função abaixo:
 
 // function reverseText(text) {
@@ -15,7 +15,7 @@ function reverseText(text) {
 // console.log(reverseText("Web Development Course"));
 
 
-// Questão 2 (Data Manipulation):
+// Questão 2 (Data Manipulation)
 // Adicione a lógica para reverter apenas as letras na função abaixo:
 
 // function reverseLetters(string) {
@@ -33,7 +33,7 @@ function reverseLetters(string) {
 // console.log(reverseLetters("z<*zj"));
 
 
-// Questão 3 (Asynchronism):
+// Questão 3 (Asynchronism)
 // Corrija o código abaixo para imprimir - respectivamente - Start, Timeout e Finish:
 
 // const delay = () => setTimeout(() => {
@@ -52,12 +52,27 @@ const delay = () => new Promise((resolve) => {
   setTimeout(() => {
     resolve(console.log("Timeout"));
   }, 2000)
-}) 
+})
 
 async function main() {
-  console.log("Start");
-  await delay();
-  console.log("Finish");
+  // console.log("Start");
+  // await delay();
+  // console.log("Finish");
 }
 
 main();
+
+// Questão 4 (Array manipulation)
+// Faça uma função que receba um array de números inteiros e imprima a soma máxima e a soma mínima de 3 números:
+
+function sumMaxMin(arrayNumbers) {
+  const orderArrayNumbers = arrayNumbers.sort((a, b) => a - b);
+  const sumMax = orderArrayNumbers.slice(-3).reduce((a, b) => a + b);
+  const sumMin = orderArrayNumbers.slice(0, 3).reduce((a, b) => a + b);
+  return console.log(sumMax, sumMin);
+};
+
+const arrayNumbers1 = [5, 4, 3, 2, 1];
+const arrayNumbers2 = [12, 45, 23, 9, 102, 3];
+
+// sumMaxMin(arrayNumbers2);

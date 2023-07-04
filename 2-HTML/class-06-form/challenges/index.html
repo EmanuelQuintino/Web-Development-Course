@@ -1,197 +1,181 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Class-06 Formulários Challenge</title>
-
-    <!-- 
-        1) Criar formulário de perfil do aluno com os campos:
-
-            -Dados Pessoais:
-                Nome, Nascimento, RG, CPF, Sexo
-
-            -Linguagens de Domínio:
-                HTML, CSS, JavaScript, SQL
-
-            -Dados de Login:
-                Email, Senha, Foto
-            
-            -Observações:
-                Campo para texto.
-        
-
-        2) Valídar RG, CPF, File e inputs obrigatórios
-        
-        3) Criar Botões Submit e Reset
-     -->
-
-    <style>
-        body {
-            background: #E5E5E5;
-        }
-        
-        header {
-            text-align: center;
-        }
-
-        main {
-            width: 350px;
-            margin: auto;
-            background: #FAFAFC;
-            border-radius: 8px;
-            padding: 16px;
-        }
-
-        form {
-            width: 320px;
-            margin: 0 auto;
-        }
-
-        .area-01 label, .area-03 label {
-            width: 80px;
-            display: inline-block;
-            text-align: right;
-        }
-
-        /* input[type="number"]::-webkit-inner-spin-button {
-        -webkit-appearance: none;
-        } */
-
-        button {
-            background: white;
-            border-radius: 4px;
-            border: solid 1px black;
-        }
-    </style>
-
-</head>
-
-<body>
-    <header>
-        <h1>CRIE SEU PERFIL</h1>
-    </header>
-    <main>
-        <form action="" method="get">
-            <fieldset class="area-01">
-                <legend>
-                    <strong>
-                        DADOS PESSOAIS
-                    </strong>
-                </legend>
-                
-                <section>
-                    <label for="name">Nome:</label>
-                    <input id="name" type="text" autofocus required placeholder="Digite seu nome" name="name">
-                </section>
-
-                <br>
-                <section>
-                    <label for="birth">Nascimento: </label>
-                    <input id="birth" type="date" name="birth">
-                </section>
-                
-                <br>
-                <section>
-                    <label for="RG">RG:</label>
-                    <input id="RG" type="text" required placeholder="Informe seu RG" name="RG" pattern="[0-9]{11}">
-                </section>
-                <br>
-                <section>
-                    <label for="CPF">CPF:</label>
-                    <input id="CPF" type="text" required placeholder="Informe seu CPF" name="CPF" pattern="[0-9]{11}">
-                </section>
-                <br>
-                <section>
-                    <label for="masculine">Masculino</label>
-                    <input id="masculine" type="radio" name="sexo">
-
-                    <label for="feminine">Feminino</label>
-                    <input id="feminine" type="radio" name="sexo">
-                </section>
-            </fieldset>
-
-            <br>
-
-            <fieldset class="area-02">
-                <legend>
-                    <strong>
-                        LINGUAGENS DE DOMÍNIO
-                    </strong>
-                </legend>
-                
-                <section>
-                    <span>
-                        <input id="html" type="checkbox" name="html">
-                        <label for="html">HTML</label>      
-                    </span>
-
-                    <span>
-                        <input id="css" type="checkbox" name="css">
-                        <label for="css">CSS</label>      
-                    </span>
-
-                    <span>
-                        <input id="javaScript" type="checkbox" name="javaScript">
-                        <label for="javaScript">JavaScript</label>      
-                    </span>
-
-                    <span>
-                        <input id="sql" type="checkbox" name="sql">
-                        <label for="sql">SQL</label>      
-                    </span>
-                </section>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Class 06 Forms Challenge</title>
+  <!-- 
+    1) Criar formulário de perfil do aluno com os campos:
+        - Dados Pessoais: Nome, Nascimento, RG, CPF, Sexo
+        - Linguagens de Domínio: HTML, CSS, JavaScript, SQL
+        - Dados de Login: Email, Senha, Foto
+        - Observações: Campo para texto.
+    2) Valídar RG, CPF, File e inputs obrigatórios
+    3) Criar Botões Submit e Reset
+  -->
+  <style>
+    body {
+      background: #E5E5E5;
+    }
     
-            </fieldset>
+    header {
+      text-align: center;
+    }
 
-            <br>
-            
-            <fieldset class="area-03">
-                <legend>
-                    <strong>
-                        DADOS DE LOGIN
-                    </strong>
-                </legend>
+    main {
+      width: 350px;
+      margin: auto;
+      background: #FAFAFC;
+      border-radius: 8px;
+      padding: 16px;
+    }
 
-                <section>
-                    <label for="email">E-mail:</label>
-                    <input type="email" placeholder="fuluno@email.com" id="email" required name="email">
-                </section>
+    form {
+      width: 320px;
+      margin: 0 auto;
+    }
 
-                <br>
-                <section>
-                    <label for="password">Senha:</label>
-                    <input type="password" id="password" minlength="8" required placeholder="Mínimo de 8 caracteres" name="password">
-                </section>
+    .area-01 label, .area-03 label {
+      width: 80px;
+      display: inline-block;
+      text-align: right;
+    }
 
-                <br>
-                <section>
-                    <label for="photo">Foto:</label>
-                    <input type="file" id="photo" accept="image/*" name="photo">
-                </section>
-            </fieldset>
+    /* input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    } */
 
-            <br>
+    button {
+      background: white;
+      border-radius: 4px;
+      border: solid 1px black;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>CRIE SEU PERFIL</h1>
+  </header>
+  <main>
+    <form action="" method="get">
+      <fieldset class="area-01">
+        <legend>
+          <strong>
+            DADOS PESSOAIS
+          </strong>
+        </legend>
+        
+        <section>
+          <label for="name">Nome:</label>
+          <input id="name" type="text" autofocus required placeholder="Digite seu nome" name="name">
+        </section>
 
-            <fieldset class="area-04">
-                <legend>
-                    <strong>
-                        OBSERVAÇÕES       
-                    </strong>
-                </legend>
+        <br>
+        <section>
+          <label for="birth">Nascimento: </label>
+          <input id="birth" type="date" name="birth">
+        </section>
+        
+        <br>
+        <section>
+          <label for="RG">RG:</label>
+          <input id="RG" type="text" required placeholder="Informe seu RG" name="RG" pattern="[0-9]{11}">
+        </section>
+        <br>
+        <section>
+          <label for="CPF">CPF:</label>
+          <input id="CPF" type="text" required placeholder="Informe seu CPF" name="CPF" pattern="[0-9]{11}">
+        </section>
+        <br>
+        <section>
+          <label for="masculine">Masculino</label>
+          <input id="masculine" type="radio" name="sexo" value="M">
 
-                <section>
-                    <label for="observation" hidden>Observação</label>
-                    <textarea name="" id="observation" cols="36" rows="10" placeholder="Faça observações sobre seu perfil" name="observation" maxlength="370"></textarea>
-                </section>
-            </fieldset>
+          <label for="feminine">Feminino</label>
+          <input id="feminine" type="radio" name="sexo" value="F">
+        </section>
+      </fieldset>
 
-            <br>
+      <br>
 
-            <button type="submit">Salvar</button>
-            <button type="reset">Limpar</button>
-        </form>
-    </main>
+      <fieldset class="area-02">
+        <legend>
+          <strong>
+            LINGUAGENS DE DOMÍNIO
+          </strong>
+        </legend>
+        
+        <section>
+          <span>
+            <input id="html" type="checkbox" name="html">
+            <label for="html">HTML</label>      
+          </span>
+
+          <span>
+            <input id="css" type="checkbox" name="css">
+            <label for="css">CSS</label>      
+          </span>
+
+          <span>
+            <input id="javascript" type="checkbox" name="javaScript">
+            <label for="javascript">JavaScript</label>      
+          </span>
+
+          <span>
+            <input id="sql" type="checkbox" name="sql">
+            <label for="sql">SQL</label>      
+          </span>
+        </section>
+      </fieldset>
+
+      <br>
+      
+      <fieldset class="area-03">
+        <legend>
+          <strong>
+            DADOS DE LOGIN
+          </strong>
+        </legend>
+
+        <section>
+          <label for="email">E-mail:</label>
+          <input type="email" placeholder="fuluno@email.com" id="email" required name="email">
+        </section>
+
+        <br>
+        <section>
+          <label for="password">Senha:</label>
+          <input type="password" id="password" minlength="8" required placeholder="Mínimo de 8 caracteres" name="password">
+        </section>
+
+        <br>
+        <section>
+          <label for="photo">Foto:</label>
+          <input type="file" id="photo" accept="image/*" name="photo">
+        </section>
+      </fieldset>
+
+      <br>
+
+      <fieldset class="area-04">
+        <legend>
+          <strong>
+            OBSERVAÇÕES       
+          </strong>
+        </legend>
+
+        <section>
+          <label for="observation" hidden>Observação</label>
+          <textarea name="" id="observation" cols="36" rows="10" placeholder="Faça observações sobre seu perfil" name="observation" maxlength="370"></textarea>
+        </section>
+      </fieldset>
+
+      <br>
+
+      <button type="submit">Salvar</button>
+      <button type="reset">Limpar</button>
+    </form>
+  </main>
 </body>
 </html>

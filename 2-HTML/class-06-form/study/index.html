@@ -1,224 +1,228 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Class-06 Formulários Study</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Class 06 Forms</title>
+  <style>
+    body {
+      width: 320px;
+      margin: auto;
+    }
+  </style>
 </head>
-
 <body>
-    <form action="" method="get">
-        <br>
-        <label for="pesquisa">Campo de Pesquisa</label> <br>
-        <input 
-            type="search"
-            id="pesquisa" 
-            size="25" 
-            placeholder="O que dejesa pesquisar?" 
-            aria-label="Campo de busca"
-            autofocus
-            autocomplete=""
-            title="Digite apenas texto"
-            > 
-            
-            <!-- pattern="[a-zA-z]" -->
-            
-            <!-- pattern="[0-9]{11-13}" Ex: ID,CPF -->
-            
-            <button type="submit">Pesquisar</button>
-    </form>
+  <!-- Tipos de input: password, checkbox, radio, file, data, number, url, hidden... -->
+  <!-- <input type="text"> -->
 
-    <br>
-    <form action="" method="get" id="contato" name="inputs-contacts">
-        <fieldset>
-            <legend>Contato</legend>
+  <h1>Class 06 Forms</h1>
 
-            <!-- ligar label e input com ir e from "> -->
-            <label for="nome">Nome</label>
-            <input id="nome" type="text" placeholder="Digite seu nome" required>
-            
-            <button type="submit" form="contato">enviar</button>
-        </fieldset>
-    </form>
-<!--  
-    Posso usar fieldset fora do form com ID
-
-    <fieldset form="contato">
-        <legend>Contato</legend>
-        <label for="">Nome</label>
-        <input type="text">
-        <button>enviar</button>
-    </fieldset> 
--->
-    <br>
+  <form id="formSearch" method="get">
+    <label for="search">Pesquisar</label> <br>
     <input 
-        type="text"
-        list="frutas"
-        placeholder="Escolha uma fruta"/>
+      type="text"
+      id="search"
+      name="search"
+      size="25"
+      maxlength="25" 
+      placeholder="Digite para pesquisar" 
+      aria-label="Campo de busca"
+      autofocus
+      autocomplete="Emanuel"
+      title="Digite apenas texto"
+      required
+    >         
+    <button type="submit" form="formSearch">Pesquisar</button>
+</form>
+
+  <br>
+  
+  <form id="formLogin" method="get">
+    <fieldset>
+        <legend>Login</legend>
+
+        <label for="email">Email</label><br>
+        <input 
+        type="email" 
+        autocomplete="email" 
+        placeholder="Insira seu email"
+        name="email"
+        pattern=".*@.*\.com"
+        title="Insira um email válido!"
+        >
+        
+        <br><br>
+        <label for="password">Password</label><br>
+        <input 
+        type="password" 
+          name="password"
+          minlength="6" 
+          pattern="[0-9a-zA-Z]{4-8}" 
+          placeholder="Insira sua senha"
+          title="Coloque sua senha 6 a 8 caracteres alfanuméricos"
+          required
+          inputmode="numeric"
+          autocomplete="new-password" 
+        > 
+        <!-- inputmode para teclado numérico no celular -->
+
+        <br><br>
+        <button type="submit" form="formLogin">Logar</button>
+    </fieldset>
+  </form>
+  
+  <br>
+
+  <form method="get">    
+    <input 
+      type="number" 
+      name="number" 
+      placeholder="Insira número"
+      inputmode="numeric"
+      min="0"
+      max="100"
+      step="5"
+    >
+
+    <br><br>
+
+    <!-- types: datetime-local, month, time, week  -->    
+    <input 
+      type="date" 
+      value="2022-05-26"
+      name="date" 
+      placeholder="Insira data de nascimento"
+    >
     
-    <datalist id="frutas">
-        <option value="Manga"></option>
-        <option value="Uva"></option>
-        <option value="Abacaxi"></option>
-    </datalist> 
+    <br><br> 
+    <input 
+      type="range"
+      min="0"
+      max="100"
+      step="1"
+      value="70"
+    >
+
+    <br><br>
     
-    <select name="frutas" id="fruits">
-        <option value="Manga">Manga</option>
-        <option value="Uva">Uva</option>
-        <option value="Abacaxi">Abacaxi</option>
+    <!-- Input file precisa da estrutura form com enctype="multipart/form-data" (tratamento de dado) -->
+    <input 
+      type="file" 
+      placeholder="Insira um arquivo"
+      accept="image/*"
+      multiple
+    > 
+    <!-- aceppt: ".doc"; ".pdf"; ".svg"; "image/*" ; "audio/*" ; "video/*" -->
+    
+    <br><br>
+
+    <input 
+      type="color" 
+      value="#00ff00"
+      list="colors" 
+      name="color" 
+      placeholder="Insira sua cor favorita"
+    >
+
+    <datalist id="colors">
+      <option>#ff0000</option>
+      <option>#00ff00</option>
+      <option>#0000ff</option>
+    </datalist>
+    
+    <br><br>
+
+    <!-- input checkbox  -->
+    <fieldset>
+      <legend>Favoritos</legend>
+      <div>
+        <input
+          type="checkbox"
+          name="audio"
+          id="audio"
+          checked
+        >
+        <label for="audio">Audio</label>
+      </div>
+      <div>
+        <input
+          type="checkbox"
+          name="image"
+          id="image"
+        >
+        <label for="image">Imagem</label>
+      </div>
+    </fieldset>
+
+    <br>
+
+    <!-- input radio -->
+    <fieldset>
+      <legend>Aceita os termos de uso?</legend>
+      <label for="yes">Sim</label>
+      <input 
+        checked
+        type="radio"
+        id="yes"
+        name="term"
+        value="accept"
+      >
+      <label for="no">Não</label>
+      <input 
+        type="radio"
+        id="no"
+        name="term"
+        value="notAccept"
+      >
+    </fieldset>
+
+    <br>
+
+    <label for="fruits">Fruta</label>
+    <select name="frutas" id="fruits" multiple size="3">
+    <!--Mais de um elemento: multiple; size = "2" quantos elementos quero deixar visível-->
+      <option value="Manga">Manga</option>
+      <option value="Uva">Uva</option>
+      <option value="Abacaxi">Abacaxi</option>
+      <option value="Banana">Banana</option>
+      <option value="Goiaba">Goiaba</option>
     </select>
 
-    <!-- Tipos de input: password, checkbox, radio, file, data, number, url, hidden... -->
+    <br><br>
+
+    <label for="category">Escolha a Modalidade Esportiva: </label>
+    <select name="category" id="category">      
+      <optgroup label="Coletivo:">
+        <option value="Futsal">Futsal</option>
+        <option value="Basquete">Basquete</option>
+        <option value="Vôlei">Vôlei</option>
+        <option value="Futebol">Futebol</option>
+      </optgroup>
+     
+      <optgroup label="Individual:">
+        <option value="Xadrez">Xadrez</option>
+        <option value="Ping Pong">Ping Pong</option>
+        <option value="Skate">Skate</option>
+        <option value="Ginasta">Ginasta</option>
+      </optgroup>
+    </select>
+
+    <br><br>
+
+    <label for="comment">Área de Comentários</label>
+    <br>
+    <textarea 
+      placeholder="Insira seu comentário até 500 caracteres" 
+      name="comentar" 
+      id="comment" 
+      cols="30" 
+      rows="10" 
+      maxlength="500" 
+      wrap="soft"></textarea>
     
-    <form action="">
-        <br>
-        <input 
-            type="color" 
-            value="#00ff00"
-            list="" 
-            name="teste1" 
-            placeholder="Insira sua cor favorita"
-        >
-        
-        <br><br>
-        <!-- datetime-local, month, time, week  -->
-        <input 
-            type="date" 
-            value="2022-05-26"
-            list="" 
-            name="teste2" 
-            placeholder="Insira data de nascimento"
-        >
-        
-        <br><br>
-        <input 
-            type="number" 
-            list="" 
-            name="teste3" 
-            placeholder="Insira número"
-            min="0"
-            max="100"
-            step="5"
-            >
-        
-        <br><br>
-        <input 
-            type="range"
-            min="0"
-            max="100"
-            step="1"
-            value="70"
-        >
-        
-        <br><br>
-        <input 
-            type="email" 
-            autocomplete="email" 
-            placeholder="Insira seu email"
-            pattern=".*@.*\.com"
-            title="Insira um email válido!"
-        >
-        
-        <br><br>
-        <input 
-            type="password" 
-            minlength="6" 
-            pattern="[0-9a-zA-Z]{4-8}" 
-            placeholder="Insira sua senha"
-            title="Coloque sua senha no mínimo de 6 caracteres alfanuméricos"
-            required
-            inputmode="numeric"
-            autocomplete="new-password" 
-        > <!-- inputmode para teclado numérico no celular -->
-
-        <br><br>
-        
-        <!-- para usar input file precisa da estrutura form com enctype (tratamento de dado) -->
-        <form action="" method="post" enctype="multipart/form-data"> 
-            <input 
-            type="file" 
-            placeholder="Insira um arquivo"
-            accept="image/*"
-            multiple
-
-            > <!-- aceppt: ".doc"; "image/*" ; "audio/*" ; "video/*" -->
-        </form>
-        
-        <!-- input do checkbox  -->
-        <br>
-        <fieldset>
-            <legend>Favoritos</legend>
-            <div>
-                <input
-                    type="checkbox"
-                    name="checkbox"
-                    id="audio"
-                >
-                <label for="audio">Audio</label>
-            </div>
-            <div>
-                <input
-                    type="checkbox"
-                    name="checkbox"
-                    id="image"
-                >
-                <label for="image">Imagem</label>
-            </div>
-        </fieldset>
-
-        <br>
-        <!-- input para radio -->
-        <fieldset>
-            <legend>Aceita os termos de uso?</legend>
-            <label for="yes">Sim</label>
-            <input 
-                checked
-                type="radio"
-                id="yes"
-                name="termo"
-                value="aceita"
-            >
-            <label for="no">Não</label>
-            <input 
-                type="radio"
-                id="no"
-                name="termo"
-                value="naoaceita"
-            >
-        </fieldset>
-
-        <br>
-        <label for="categoria">Escolha a Modalidade Esportiva: </label>
-        <select name="" id="categoria"> <!--Mais de um elemento: multiple; size = "2" quantos elementos quero deixar visível-->
-            
-            <option value="">Sem opção</option>
-           
-            <optgroup label="Coletivo:">
-                <option value="Futsal">Futsal</option>
-                <option value="Basquete">Basquete</option>
-                <option value="Vôlei">Vôlei</option>
-                <option value="Futebol">Futebol</option>
-            </optgroup>
-           
-            <optgroup label="Individual:">
-                <option value="Xadrez">Xadrez</option>
-                <option value="Ping Pong">Ping Pong</option>
-                <option value="Skate">Skate</option>
-                <option value="Ginasta">Ginasta</option>
-            </optgroup>
-            
-        </select>
-
-        <br><br>
-        <label for="comentario">Área de Comentários</label>
-        <br>
-        <textarea placeholder="Insira seu comentário até 500 caracteres" name="comentar" id="comentario" cols="30" rows="10" maxlength="500" wrap="soft"></textarea>
-        
-        <br><br>
-        <button type="submit">Salvar</button>
-        
-    </form>
-        
+    <br><br>
+    <button type="submit">Salvar</button>
+  </form>
 </body>
 </html>

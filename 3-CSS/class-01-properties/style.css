@@ -1,83 +1,89 @@
-@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Roboto:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Roboto:wght@400;700&display=swap");
 
 body {
-    width: 720px;
-    margin: auto;
+  width: 720px;
+  margin: auto;
 
-    /* font-family: 'Times New Roman', Times, serif; */
-    font-family: 'Bungee Spice', cursive;
-    /* font-family: 'Roboto', sans-serif; */
+  /* font-family: 'Times New Roman', Times, serif; */
+  font-family: "Bungee Spice", cursive;
+  /* font-family: 'Roboto', sans-serif; */
 
-    /* background: linear-gradient(180deg, lightblue, lightgreen); */
+  /* background: linear-gradient(180deg, lightblue, lightgreen); */
 
-    background-image: url("images/logo.jpg");
-    background-repeat: no-repeat;
-    background-size: 320px;
-    background-position: top right;
-    background-attachment: fixed;
-    /* backdrop-filter: blur(5px); */
-    /* backdrop-filter: brightness(60%); */
-    /* backdrop-filter: opacity(50%); */
+  background-image: url("images/logo.jpg");
+  background-repeat: no-repeat;
+  background-size: 320px;
+  background-position: top right;
+  background-attachment: fixed;
+  /* backdrop-filter: blur(5px); */
+  /* backdrop-filter: brightness(60%); */
+  /* backdrop-filter: opacity(50%); */
 }
 
 div.myImage {
+  height: 120px;
+  width: 120px;
 
-    height: 120px;
-    width: 120px;
+  background: linear-gradient(
+    130deg,
+    rgba(0, 0, 255, 0.5),
+    rgba(128, 0, 128, 0.5),
+    rgba(255, 0, 0, 0.5),
+    rgba(255, 166, 0, 0.5),
+    rgba(255, 255, 0, 0.5)
+  );
 
-    background: linear-gradient(130deg, rgba(0, 0, 255, 0.5), rgba(128, 0, 128, 0.5), rgba(255, 0, 0, 0.5),rgba(255, 166, 0, 0.5), rgba(255, 255, 0, 0.5));
+  /* background: radial-gradient(circle farthest-corner at 35% 90%, #fec564, transparent 50%), radial-gradient(circle farthest-corner at 0 140%, #fec564, transparent 50%), radial-gradient(ellipse farthest-corner at 0 -25%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 20% -50%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 0, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 60% -20%, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 100%, #d9317a, transparent), linear-gradient(#6559ca, #bc318f 30%, #e33f5f 50%, #f77638 70%, #fec66d 100%); */
 
-    /* background: radial-gradient(circle farthest-corner at 35% 90%, #fec564, transparent 50%), radial-gradient(circle farthest-corner at 0 140%, #fec564, transparent 50%), radial-gradient(ellipse farthest-corner at 0 -25%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 20% -50%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 0, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 60% -20%, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 100%, #d9317a, transparent), linear-gradient(#6559ca, #bc318f 30%, #e33f5f 50%, #f77638 70%, #fec66d 100%); */
-
-    border-radius: 25%;   
+  border-radius: 25%;
 }
 
 img {
-    width: 320px;
-    position: fixed;
-    z-index: -1;
-    opacity: 0.5;
-    top: 35%;  
-    right: 35%;
+  width: 320px;
+  position: fixed;
+  z-index: -1;
+  opacity: 0.5;
+  top: 35%;
+  right: 35%;
 }
 
-h1, p{
+h1,
+p {
+  /* color: #AA0; */
+  color: black;
+  font-weight: bold;
+  /* 0-9 A B C D E F*/
+  font-style: italic;
+  font-size: 32px;
+  /* font-size: 4rem; */
+  /* font-size: 70%; */
 
-/* color: #AA0; */
-    color:  black;
-    font-weight: bold;
-    /* 0-9 A B C D E F*/
-    font-style: italic;
-    font-size: 32px;
-    /* font-size: 4rem; */
-    /* font-size: 70%; */
+  /* letter-spacing: 8px; */
+  /* word-spacing: 2em; */
+  /* line-height: 2; */
 
-    /* letter-spacing: 8px; */
-    /* word-spacing: 2em; */
-    /* line-height: 2; */
+  text-transform: capitalize;
 
-    text-transform: capitalize;
+  text-align: right;
 
-    text-align: right;
-
-    text-shadow: 0.2px 0.2px 0.5px black;
+  text-shadow: 0.2px 0.2px 0.5px black;
 }
 
 .texto p {
-    color: hsl(240, 100%, 50%)
-    /* 0 - 255 */
+  color: hsl(240, 100%, 50%);
+  /* 0 - 255 */
 }
 
 .texto {
-    color: peru;
-    /* background-color: bisque; */
-    /* border: solid 1px red; */
+  color: peru;
+  /* background-color: bisque; */
+  /* border: solid 1px red; */
 }
 
 #ultimoTexto .texto {
-    color: azure;
+  color: azure;
 }
 
 div {
-    font-size: 70%;
+  font-size: 70%;
 }

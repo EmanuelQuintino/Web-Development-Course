@@ -12,13 +12,11 @@
 - border
 - padding
 - margin
+  - Margin Collapsing
+    - Quando o top se junta com o bottom sem somar (Pega o margin maior)
+    - Obs: Quando os elementos estão lado a lado somam-se as margens.
 
-## Margin Collapsing
-
-- Quando o top se junta com o bottom sem somar (Pega o margin maior)
-- Obs: Quando os elementos estão lado a lado somam-se as margens.
-
-## Shorthand:
+### Shorthand:
 
 - 1px > top, right, bottom, left (1px)
 - 1px 2px > top, bottom (1px) - right, left (2px)
@@ -43,6 +41,6 @@
 - inline
 
   - height e width não funcionam
-  - Somente valores horizontais em padding, margin e border
+  - Somente valores horizontais em padding, margin e border vão funcionar
 
 - inline-block

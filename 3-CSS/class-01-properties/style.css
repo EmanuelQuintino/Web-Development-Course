@@ -20,6 +20,14 @@ body {
   /* backdrop-filter: opacity(50%); */
 }
 
+.triangle {
+  margin-top: 32px;
+  width: 0;
+  border-left: 100px solid transparent;
+  border-right: 100px solid transparent;
+  border-bottom: 150px solid orange;
+}
+
 img {
   width: 320px;
   position: fixed;

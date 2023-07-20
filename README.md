@@ -21,7 +21,6 @@ O curso de Desenvolvimento Web é o nosso programa piloto e faz parte do projeto
   SQL
 </div>
 
-
 ### Além de conteúdos complementares como:
 
 - Ética

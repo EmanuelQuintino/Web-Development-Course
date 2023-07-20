@@ -1,82 +1,32 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Class-02 Box Model</title>
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-    <!-- 
-        BOX MODEL
-
-            Cada elemento é representado como uma caixa retangular
-            Essa caixa possui propriedades de uma caixa em 2 dimensões (largura x altura)
-            
-            Properties:
-                -width, heigh (size)  
-                -content
-                -border
-                -padding
-                -margin
-                    Margin Collapsing 
-                        Quando o top se junta com o bottom sem somar (Pega o margin maior)
-                        Obs: Quando os elementos estão lado a lado somam-se as margens.
-
-                Shorthand: 
-                    1px >  top, right, bottom, left (1px)
-                    1px 2px > top, bottom (1px) - right, left (2px)
-                	1px 2px 3px > top (1px) - right, left (2px) - bottom (3px) 
-                    1px 2px 3px 4px > top(1px) - right(2px) - bottom (3px) - left(4px)
-
-                Position 
-                    -static      
-                    -relative    
-                    -absolute    
-                    -sticky
-                    -fixed
-                        (top, right, bottom, left)  
-                
-                Display
-                    - block
-                       Mantém as propriedades
-
-                    - inline 
-                        height e width não funcionam
-                        Somente valores horizontais em padding, margin e border
-                        
-                    - inline-block
-                    
-                    - flex
-                        flex-direction: column;
-                        flex-wrap: wrap;
-                        align-items: center;
-                        justify-content: center;
-                        gap: 8px;
-     -->
-</head>
-
-<body>
+  <body>
     <header>
-        <section>
-            <h1>Box Model</h1>
-            <img src="../images/box-model.png" alt="">
-        </section>
+      <section>
+        <h1>Box Model</h1>
+        <img src="../images/box-model.png" alt="" />
+      </section>
 
-        <section>
-            <h2>Flex Box</h2>
-            <img src="../images/flex-box.png" alt="">
-        </section>
-
+      <section>
+        <h2>Flex Box</h2>
+        <img src="../images/flex-box.png" alt="" />
+      </section>
     </header>
 
     <h2>Position</h2>
     <main>
-        <div class="square1">X</div>
-        <div class="square2">Y</div>
-        <div class="square3">Z</div>
+      <div class="square1">X</div>
+      <div class="square2">Y</div>
+      <div class="square3">Z</div>
     </main>
     <!-- 
         <section>
@@ -100,8 +50,5 @@
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium quod, similique voluptate ducimus quisquam cumque nobis iste fugiat eaque sapiente nostrum provident tenetur expedita cum tempora pariatur beatae nihil officiis.</p>
     </section> 
 -->
-
-
-</body>
-
+  </body>
 </html>

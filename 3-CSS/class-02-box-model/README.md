@@ -52,15 +52,3 @@ Obs: Quando os elementos estão lado a lado somam-se as margens.
   Somente valores horizontais em padding, margin e border
 
 - inline-block
-
-- flex
-
-  flex-direction: column;
-
-  flex-wrap: wrap;
-
-  align-items: center;
-
-  justify-content: center;
-
-  gap: 8px;

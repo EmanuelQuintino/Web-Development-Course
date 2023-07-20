@@ -44,3 +44,7 @@
   - Somente valores horizontais em padding, margin e border vão funcionar
 
 - inline-block
+
+# Links
+
+-[Box-Model-MDN](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/The_box_model)

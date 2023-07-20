@@ -1,7 +1,6 @@
 # BOX MODEL
 
 Cada elemento é representado como uma caixa retangular
-
 Essa caixa possui propriedades de uma caixa em 2 dimensões (largura x altura)
 
 ## Properties:
@@ -15,17 +14,13 @@ Essa caixa possui propriedades de uma caixa em 2 dimensões (largura x altura)
 ## Margin Collapsing
 
 Quando o top se junta com o bottom sem somar (Pega o margin maior)
-
 Obs: Quando os elementos estão lado a lado somam-se as margens.
 
 ## Shorthand:
 
 1px > top, right, bottom, left (1px)
-
 1px 2px > top, bottom (1px) - right, left (2px)
-
 1px 2px 3px > top (1px) - right, left (2px) - bottom (3px)
-
 1px 2px 3px 4px > top(1px) - right(2px) - bottom (3px) - left(4px)
 
 ## Position

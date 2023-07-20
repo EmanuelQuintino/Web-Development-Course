@@ -4,12 +4,9 @@ main {
   height: 370px;
   width: 480px;
   background: linear-gradient(90deg, #f2274c2f, #7a8c54);
-
   margin: 72px auto;
   text-align: center;
-
   padding: 24px;
-
   border-radius: 16px;
   box-shadow: 1px 1px 4px black;
 }
@@ -22,20 +19,16 @@ img {
 
 h1 {
   font-family: "Merienda", cursive;
-
   color: #7a8c54;
   text-shadow: 1px 1px 2px black;
-
   font-size: 48px;
 }
 
 p {
   font-family: "Courier New", Courier, monospace;
-
   font-weight: bold;
   margin-top: -32px;
   font-size: 24px;
-
   color: #590202cc;
 }
 

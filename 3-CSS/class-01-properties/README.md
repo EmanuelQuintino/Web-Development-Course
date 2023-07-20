@@ -4,7 +4,7 @@
 
 Selector > Declaration > Propertie > Value
 
-## Colorimetry:
+## Colorimetry
 
 ### Properties
 
@@ -49,7 +49,7 @@ Selector > Declaration > Propertie > Value
 - text-align: center; (start, end, left, right, justify)
 - text-shadow: 1px 1px 2px red; (offset-x | offset-y | blur-radius)
 
-## Web-Fonts
+### Web-Fonts
 
 - link - Usado dentro da tag head.
 

@@ -21,7 +21,7 @@ body {
 main {
   background: linear-gradient(225deg, var(--yellow-color), var(--orange-color));
 
-  box-shadow: 1px 1px 4px 0.2px black;
+  box-shadow: 0px 0.5px 2px 0.2px black;
 
   height: 420px;
   width: 720px;
@@ -39,17 +39,28 @@ main :nth-child(2) {
   width: 360px;
 }
 
-img {
+.boxImage img {
   width: 240px;
   padding: 24px;
   border-radius: 32px;
-  background: rgba(0, 0, 0, 0.1);
-  box-shadow: 0.1px 0.1px 2px black;
+  background: rgba(0, 0, 0, 0.07);
+  box-shadow: 0.1px 0.1px 1px black;
 }
 
-h1 {
+.boxSlogan h1 {
   font-family: "Kanit", sans-serif;
   font-size: 40px;
+  line-height: 32px;
+}
+
+.boxSlogan h2 {
+  font-family: "Kanit", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.boxContact {
+  margin-top: 20px;
 }
 
 p {
@@ -66,6 +77,6 @@ p {
 }
 
 span {
-  color: #2c87bf;
-  text-shadow: 1px 1px 1px black;
+  color: var(--blue-color);
+  text-shadow: 0px 0px 1px black;
 }

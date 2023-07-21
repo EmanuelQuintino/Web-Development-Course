@@ -27,6 +27,8 @@ h1 {
   /* font-size: 2em; */
   font-family: "Press Start 2P", cursive;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5), 1px 1px 1px rgba(0, 0, 0, 0.5);
+  /* text-decoration: underline black; */
+  text-transform: uppercase;
 }
 
 h2 {

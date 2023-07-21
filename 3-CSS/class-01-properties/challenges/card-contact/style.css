@@ -14,29 +14,17 @@
   box-sizing: border-box;
 }
 
-body {
-  height: 100%;
-}
-
 main {
-  background: linear-gradient(225deg, var(--yellow-color), var(--orange-color));
-
+  background: linear-gradient(320deg, var(--yellow-color), var(--orange-color));
   box-shadow: 0px 0.5px 2px 0.2px black;
-
   height: 420px;
   width: 720px;
-  margin: 120px auto 0;
-  padding: 48px;
+  margin: 100px auto 0;
   border-radius: 32px;
-
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 48px;
-}
-
-main :nth-child(2) {
-  width: 360px;
 }
 
 .boxImage img {
@@ -44,7 +32,7 @@ main :nth-child(2) {
   padding: 24px;
   border-radius: 32px;
   background: rgba(0, 0, 0, 0.07);
-  box-shadow: 0.1px 0.1px 1px black;
+  box-shadow: 0px 0px 2px black;
 }
 
 .boxSlogan h1 {
@@ -77,5 +65,5 @@ p {
 
 span {
   color: var(--blue-color);
-  text-shadow: 0px 0px 1px black;
+  text-shadow: 0px 1px 2px black;
 }

@@ -1,6 +1,7 @@
 body {
   width: 720px;
   margin: auto;
+  font-size: 20px;
 
   /* font-family: 'Times New Roman', Times, serif; */
   font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -8,20 +9,22 @@ body {
   /* background: lightgray; */
   /* background: linear-gradient(180deg, lightblue, lightgreen); */
   background-image: url("../images/image-background.jpg");
-  background-image: url("../images/logo-rj.png");
-  background-size: 120px;
+  /* background-image: url("../images/logo-rj.png"); */
+  /* background-size: 120px; */
   background-repeat: no-repeat;
   /* background-position: top right; */
   background-position: center;
   background-attachment: fixed;
-  /* background-size: cover; */
+  background-size: cover;
   /* backdrop-filter: blur(5px) brightness(60%); */
 }
 
 h1 {
   color: orange;
   font-weight: 700;
-  font-size: 24px;
+  font-size: 32px;
+  font-size: 2rem;
+  /* font-size: 2em; */
   font-family: "Press Start 2P", cursive;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5), 1px 1px 1px rgba(0, 0, 0, 0.5);
 }
@@ -50,7 +53,7 @@ p {
 .square {
   height: 120px;
   width: 120px;
-  background: orange;
+  background: #e5db08;
   box-shadow: -4px 0px 2px rgba(0, 0, 0, 0.5), 4px 0px 2px rgba(0, 0, 0, 0.5);
 }
 

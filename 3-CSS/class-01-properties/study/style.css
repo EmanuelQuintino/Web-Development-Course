@@ -1,26 +1,21 @@
-@import url("https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Roboto:wght@400;700&display=swap");
-
 body {
   width: 720px;
   margin: auto;
 
   /* font-family: 'Times New Roman', Times, serif; */
-  font-family: "Bungee Spice", cursive;
-  /* font-family: 'Roboto', sans-serif; */
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 
   /* background: lightgray; */
   /* background: linear-gradient(180deg, lightblue, lightgreen); */
   background-image: url("../images/image-background.jpg");
   background-image: url("../images/logo-rj.png");
-  background-size: 320px;
+  background-size: 120px;
   background-repeat: no-repeat;
   /* background-position: top right; */
   background-position: center;
   background-attachment: fixed;
   /* background-size: cover; */
-  /* backdrop-filter: blur(5px); */
-  /* backdrop-filter: brightness(60%); */
-  backdrop-filter: opacity(50%);
+  /* backdrop-filter: blur(5px) brightness(60%); */
 }
 
 .triangle {
@@ -31,43 +26,22 @@ body {
   border-bottom: 150px solid orange;
 }
 
-h1,
+h1 {
+  color: orange;
+  font-weight: 700;
+  font-size: 24px;
+  font-family: "Press Start 2P", cursive;
+}
+
+h2 {
+  color: #e5db08;
+  font-weight: 200;
+}
+
 p {
-  /* color: #AA0; */
-  color: black;
-  font-weight: bold;
-  /* 0-9 A B C D E F*/
-  font-style: italic;
-  font-size: 32px;
-  /* font-size: 4rem; */
-  /* font-size: 70%; */
-
-  /* letter-spacing: 8px; */
-  /* word-spacing: 2em; */
-  /* line-height: 2; */
-
-  text-transform: capitalize;
-
-  text-align: right;
-
-  text-shadow: 0.2px 0.2px 0.5px black;
-}
-
-.texto p {
-  color: hsl(240, 100%, 50%);
-  /* 0 - 255 */
-}
-
-.texto {
-  color: peru;
-  /* background-color: bisque; */
-  /* border: solid 1px red; */
-}
-
-#ultimoTexto .texto {
-  color: azure;
-}
-
-div {
-  font-size: 70%;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  letter-spacing: 4px;
+  word-spacing: 4px;
+  line-height: 24px;
 }

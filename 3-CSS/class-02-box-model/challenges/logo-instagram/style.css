@@ -1,6 +1,19 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.logoInstagram {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
 .background {
-  height: 320px;
-  width: 320px;
+  height: 330px;
+  width: 330px;
   border-radius: 25%;
   display: flex;
   align-items: center;
@@ -43,10 +56,10 @@
 }
 
 .square {
-  height: 180px;
-  width: 180px;
+  height: 240px;
+  width: 240px;
   border-radius: 30%;
-  border: 20px solid white;
+  border: 24px solid white;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -54,15 +67,15 @@
 }
 
 .circle {
-  height: 80px;
-  width: 80px;
+  height: 120px;
+  width: 120px;
   border-radius: 100%;
-  border: 20px solid white;
+  border: 24px solid white;
 }
 
 .dot {
-  height: 24px;
-  width: 24px;
+  height: 32px;
+  width: 32px;
   border-radius: 100%;
   background: white;
   position: absolute;

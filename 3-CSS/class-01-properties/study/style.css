@@ -31,11 +31,13 @@ h1 {
   font-weight: 700;
   font-size: 24px;
   font-family: "Press Start 2P", cursive;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5), 1px 1px 1px rgba(0, 0, 0, 0.5);
 }
 
 h2 {
   color: #e5db08;
   font-weight: 200;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
 }
 
 p {

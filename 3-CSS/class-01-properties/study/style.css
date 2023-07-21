@@ -8,16 +8,19 @@ body {
   font-family: "Bungee Spice", cursive;
   /* font-family: 'Roboto', sans-serif; */
 
+  /* background: lightgray; */
   /* background: linear-gradient(180deg, lightblue, lightgreen); */
-
-  background-image: url("images/logo.jpg");
-  background-repeat: no-repeat;
+  background-image: url("../images/image-background.jpg");
+  background-image: url("../images/logo-rj.png");
   background-size: 320px;
-  background-position: top right;
+  background-repeat: no-repeat;
+  /* background-position: top right; */
+  background-position: center;
   background-attachment: fixed;
+  /* background-size: cover; */
   /* backdrop-filter: blur(5px); */
   /* backdrop-filter: brightness(60%); */
-  /* backdrop-filter: opacity(50%); */
+  backdrop-filter: opacity(50%);
 }
 
 .triangle {
@@ -26,15 +29,6 @@ body {
   border-left: 100px solid transparent;
   border-right: 100px solid transparent;
   border-bottom: 150px solid orange;
-}
-
-img {
-  width: 320px;
-  position: fixed;
-  z-index: -1;
-  opacity: 0.5;
-  top: 35%;
-  right: 35%;
 }
 
 h1,

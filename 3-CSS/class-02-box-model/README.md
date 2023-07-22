@@ -7,14 +7,15 @@
 
 ## Properties:
 
-- width, heigh (size)
+- width
+- heigh
 - content
 - border
 - padding
 - margin
   - Margin Collapsing
     - Quando o top se junta com o bottom sem somar (Pega o margin maior)
-    - Obs: Quando os elementos estão lado a lado somam-se as margens.
+    - Obs: Quando os elementos estão lado a lado somam-se as margens
 
 ### Shorthand:
 
@@ -25,9 +26,8 @@
 
 ## Position (top, right, bottom, left)
 
-- static
-- relative
 - absolute
+- relative
 - sticky
 - fixed
 - z-index

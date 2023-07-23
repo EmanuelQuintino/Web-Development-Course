@@ -77,15 +77,15 @@ text-shadow: 1px 1px 2px red;
 
 - @font-face — Descreve o aspecto de uma fonte externa a ser baixada.
 
-  - TTF (TrueType), OTF (OpenType)
-  - site: https://www.dafont.com/pt/
-
   ```css
   @font-face {
     font-family: nameFont;
     src: url("fonts/font.ttf");
   }
   ```
+
+  - TTF (TrueType), OTF (OpenType)
+  - Site: https://www.dafont.com/pt/
 
 ## Background
 

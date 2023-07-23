@@ -1,0 +1,165 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  min-width: 320px;
+
+  display: grid;
+
+  grid-template-areas:
+    "HEADER HEADER"
+    "MAIN ASIDE"
+    "FOOTER FOOTER";
+
+  grid-template-columns: 1fr 65%;
+  grid-template-rows: 20% 1fr 10%;
+}
+
+header {
+  grid-area: HEADER;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  border: solid 1px;
+  background: linear-gradient(#034001, #078c03);
+  color: white;
+  font: bolder;
+  text-shadow: 0.01rem 0.01rem 0.1rem black;
+
+  padding: 2em;
+}
+
+#title {
+  font-size: 3em;
+  text-shadow: 1px 1px 2px black;
+}
+
+ul {
+  display: flex;
+  list-style: none;
+  justify-content: space-evenly;
+  align-items: center;
+  border: solid 1px;
+  width: 24rem;
+
+  font-size: 24px;
+  text-align: center;
+}
+
+li {
+  padding: 0.4rem;
+  flex: 1;
+  text-shadow: 0.5px 0.5px 0.5px black;
+}
+
+li:hover {
+  background-color: #078c03;
+  filter: brightness(1.2);
+  cursor: pointer;
+}
+
+main {
+  grid-area: MAIN;
+
+  padding: 0 32px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Part 1, Part 2 */
+article {
+  font: bolder;
+  padding: 0.5rem;
+
+  /* box-shadow: .5px .5px 2px 1px black; */
+  border-radius: 8px;
+}
+
+h2 {
+  background: linear-gradient(90deg, #078c03, #088c0300);
+  color: white;
+  padding: 4px;
+  text-shadow: 1px 1px 2px black;
+}
+
+p {
+  margin: 0.5rem;
+}
+
+aside {
+  grid-area: ASIDE;
+}
+
+aside.gallery {
+  display: flex;
+  place-items: center;
+}
+
+.gallery section {
+  max-width: 480px;
+  display: grid;
+  grid-template-areas:
+    "A B C"
+    "A D E";
+  gap: 24px;
+
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+.gallery :nth-child(1) {
+  grid-area: A;
+  max-width: 13rem;
+}
+
+.gallery :nth-child(2) {
+  grid-area: B;
+}
+.gallery :nth-child(3) {
+  grid-area: C;
+}
+.gallery :nth-child(4) {
+  grid-area: D;
+}
+.gallery :nth-child(5) {
+  grid-area: E;
+}
+
+img {
+  max-width: 16rem;
+  transition: 200ms;
+
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
+
+  border-radius: 4px;
+
+  object-fit: cover;
+}
+
+img:hover {
+  scale: 1.05;
+  filter: brightness(1.1);
+}
+
+footer {
+  grid-area: FOOTER;
+  font-size: 0.7rem;
+  border: solid 1px;
+  background: linear-gradient(#078c03, #034001);
+  color: white;
+  font: bolder;
+  padding: 0.5em;
+  text-shadow: 0.5px 0.5px 2px black;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

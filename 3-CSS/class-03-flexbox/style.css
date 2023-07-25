@@ -1,0 +1,47 @@
+.container {
+  border: 2px solid black;
+  padding: 8px;
+  height: 80vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+
+.square {
+  height: 120px;
+  width: 120px;
+  color: white;
+}
+
+.square:nth-child(1) {
+  background: rgb(171, 77, 77);
+  padding: 8px;
+}
+
+.square:nth-child(2) {
+  background: rgb(81, 186, 81);
+  padding: 16px;
+}
+
+.square:nth-child(3) {
+  background: rgb(78, 78, 184);
+  padding: 24px;
+}
+
+.square:nth-child(4) {
+  background: rgb(160, 171, 77);
+  padding: 8px;
+}
+
+.square:nth-child(5) {
+  background: rgb(158, 81, 186);
+  padding: 16px;
+}
+
+.square:nth-child(6) {
+  background: rgb(78, 182, 184);
+  padding: 24px;
+}

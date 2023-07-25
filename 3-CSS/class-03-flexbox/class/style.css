@@ -20,16 +20,19 @@
 .square:nth-child(1) {
   background: teal;
   padding: 8px;
+  order: 1;
 }
 
 .square:nth-child(2) {
   background: orange;
   padding: 16px;
+  order: 2;
 }
 
 .square:nth-child(3) {
   background: steelblue;
   padding: 24px;
+  order: 3;
 }
 
 .square:nth-child(4) {

@@ -9,6 +9,7 @@ align-items: center;
 justify-content: space-around;
 gap: 32px;
 flex-wrap: wrap;
+order: 1;
 ```
 
 ## Links

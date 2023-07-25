@@ -1,4 +1,4 @@
-# BOX MODEL
+# Box Model
 
 - Cada elemento é representado como uma caixa retangular
 - Essa caixa possui propriedades de uma caixa em 2 dimensões (largura x altura)

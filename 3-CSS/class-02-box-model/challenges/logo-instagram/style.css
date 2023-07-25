@@ -27,7 +27,7 @@
     #fec66d 90%
   );
 
-  /* background: radial-gradient(
+  background: radial-gradient(
       circle farthest-corner at 35% 90%,
       #fec564,
       transparent 50%
@@ -52,7 +52,7 @@
       #e33f5f 50%,
       #f77638 70%,
       #fec66d 100%
-    ); */
+    );
 }
 
 .square {

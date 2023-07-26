@@ -1,95 +1,92 @@
 :root {
-    /* font-size: 1rem; */
-    /* font-size: 16px; */
-    /* font-size: 32px; */
+  /* font-size: 1rem; */
+  /* font-size: 16px; */
+  /* font-size: 32px; */
 
-    /* 16px => 100%* = 1rem */
-    /* 16px => 50%* = 2rem */
-    /* 16px => 25%* = 4rem */
-    /* 16px => 12.5%* = 8rem */
-    /* 16px => 6.25%* = 16rem */
-    
-    font-size: 6.25%;
+  /* 16px => 100%* = 1rem */
+  /* 16px => 50%* = 2rem */
+  /* 16px => 25%* = 4rem */
+  /* 16px => 12.5%* = 8rem */
+  /* 16px => 6.25%* = 16rem */
+
+  font-size: 6.25%;
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-size: 16rem;
+  font-size: 16rem;
 }
 
 header {
-    background: green;
-    width: 100%;
-    height: 320rem;
+  background: green;
+  width: 100%;
+  height: 320rem;
 }
 
 .container {
-    width: 50%;
-    height: 70%;
-    background: red;
+  width: 50%;
+  height: 70%;
+  background: red;
 }
 
 img {
-    /* width: 300px; */
-    width: 100%;
-    height: auto;
-
-    object-fit: cover;
+  /* width: 300px; */
+  width: 100%;
+  height: auto;
+  object-fit: cover;
 }
 
 main {
-    padding: 32px;
-    padding: 2rem;
-    padding: 32rem;
+  padding: 32px;
+  padding: 2rem;
+  padding: 32rem;
 }
 
 h1 {
-    /* font-size: 48px; */
-    /* font-size: 3rem; */
-    font-size: 48rem;
+  /* font-size: 48px; */
+  /* font-size: 3rem; */
+  font-size: 48rem;
 }
 
 h2 {
-    /* margin-top: 32px; */
-    /* margin-top: 2rem; */
-    margin-top: 32rem;
+  /* margin-top: 32px; */
+  /* margin-top: 2rem; */
+  margin-top: 32rem;
 }
 
 h3 {
-    /* margin-top: 24px; */
-    /* margin-top: 1.5rem; */
-    margin-top: 24rem;
+  /* margin-top: 24px; */
+  /* margin-top: 1.5rem; */
+  margin-top: 24rem;
 }
 
 ul {
-    list-style-position: inside;
-    columns: 2;
-
-    /* margin-top: 8px; */
-    margin-top: 8rem;
-
-    font-size: 18px;
-    font-size: 1.125rem;
-    font-size: 18rem;
+  list-style-position: inside;
+  columns: 2;
+  /* margin-top: 8px; */
+  margin-top: 8rem;
+  font-size: 18px;
+  font-size: 1.125rem;
+  font-size: 18rem;
 }
 
 section:last-child {
-    margin-top: 32px;
-    margin-top: 32rem;
+  margin-top: 32px;
+  margin-top: 32rem;
 }
 
 div {
-    /* font-size: 2em; */
-    /* font-size: 2rem; */
-    font-size: 32rem;
+  /* font-size: 2em; */
+  /* font-size: 2rem; */
+  font-size: 32rem;
 }
 
 span {
-    font-size: 128px;
-    font-size: 32px;
+  font-size: 128px;
+  font-size: 32px;
 }

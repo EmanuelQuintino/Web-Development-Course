@@ -4,7 +4,7 @@
 
 Divisão de toda a página em linhas e colunas de forma bidimensional
 
-[flex vs grid](./images/flex-vs-grid.jpg)
+![flex vs grid](./images/flex-vs-grid.jpg)
 
 ```css
 grid-template-columns: minmax(100px, 30%);

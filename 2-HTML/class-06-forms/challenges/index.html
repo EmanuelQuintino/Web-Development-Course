@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Class 06 Forms Challenge</title>
-  <!-- 
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Class 06 Forms Challenge</title>
+    <!-- 
     1) Criar formulário de cadastro do aluno com os campos:
         - Dados Pessoais: Nome, Nascimento, RG, CPF, Sexo
         - Linguagens de Domínio: HTML, CSS, JavaScript, SQL
@@ -14,219 +14,213 @@
     2) Valídar RG, CPF, File e inputs obrigatórios
     3) Criar Botões Submit e Reset
   -->
-  <style>
-    body {
-      background: #E5E5E5;
-    }
-    
-    header {
-      text-align: center;
-    }
+    <style>
+      body {
+        background: #e5e5e5;
+      }
 
-    main {
-      width: 350px;
-      margin: auto;
-      background: #FAFAFC;
-      border-radius: 8px;
-      padding: 16px;
-    }
+      header {
+        text-align: center;
+      }
 
-    form {
-      width: 320px;
-      margin: 0 auto;
-    }
+      main {
+        width: 350px;
+        margin: auto;
+        background: #fafafc;
+        border-radius: 8px;
+        padding: 16px;
+      }
 
-    .personalData label, .loginData label {
-      width: 80px;
-      display: inline-block;
-      text-align: right;
-    }
+      form {
+        width: 320px;
+        margin: 0 auto;
+      }
 
-    /* input[type="number"]::-webkit-inner-spin-button {
+      .personalData label,
+      .loginData label {
+        width: 80px;
+        display: inline-block;
+        text-align: right;
+      }
+
+      /* input[type="number"]::-webkit-inner-spin-button {
     -webkit-appearance: none;
     } */
 
-    textarea {
-      resize: none;
-      padding: 8px;
-    }
+      textarea {
+        resize: none;
+        padding: 8px;
+      }
 
-    button {
-      background: white;
-      border-radius: 4px;
-      border: solid 1px black;
-    }
-  </style>
-</head>
-<body>
-  <header>
-    <h1>Cadastro de Alunos</h1>
-  </header>
-  <main>
-    <form method="get" enctype="multipart/form-data">
-      <fieldset class="personalData">
-        <legend>
-          <strong>
-            DADOS PESSOAIS
-          </strong>
-        </legend>
-        
-        <section>
-          <label for="name">Nome:</label>
-          <input 
-            id="name" 
-            type="text" 
-            placeholder="Digite seu nome" 
-            name="name"
-            autofocus 
-            required 
-          >
-        </section>
+      button {
+        background: white;
+        border-radius: 4px;
+        border: solid 1px black;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Cadastro de Alunos</h1>
+    </header>
+    <main>
+      <form method="get" enctype="multipart/form-data">
+        <fieldset class="personalData">
+          <legend>
+            <strong> DADOS PESSOAIS </strong>
+          </legend>
 
-        <br>
-        <section>
-          <label for="birth">Nascimento:</label>
-          <input id="birth" type="date" name="birth">
-        </section>
-        
-        <br>
-        <section>
-          <label for="RG">RG:</label>
-          <input 
-            id="RG" 
-            type="text" 
-            required 
-            placeholder="Informe seu RG" 
-            name="RG" 
-            maxlength="11"
-            minlength="8"
-            pattern="[0-9]{8,11}"
-            title="Digite de 8 a 11 números do RG"
-          >
-        </section>
-        <br>
-        <section>
-          <label for="CPF">CPF:</label>
-          <input 
-            id="CPF" 
-            type="text" 
-            required 
-            placeholder="Informe seu CPF" 
-            name="CPF" 
-            maxlength="11"
-            minlength="8"
-            pattern="[0-9]{11}"
-            title="Digite os 11 números do CPF"
-          >
-        </section>
-        <br>
-        <section>
-          <label for="masculine">Masculino</label>
-          <input id="masculine" type="radio" name="sexo" value="M">
+          <section>
+            <label for="name">Nome:</label>
+            <input
+              id="name"
+              type="text"
+              placeholder="Digite seu nome"
+              name="name"
+              autofocus
+              required
+            />
+          </section>
 
-          <label for="feminine">Feminino</label>
-          <input id="feminine" type="radio" name="sexo" value="F">
-        </section>
-      </fieldset>
+          <br />
+          <section>
+            <label for="birth">Nascimento:</label>
+            <input id="birth" type="date" name="birth" />
+          </section>
 
-      <br>
+          <br />
+          <section>
+            <label for="RG">RG:</label>
+            <input
+              id="RG"
+              type="text"
+              required
+              placeholder="Informe seu RG"
+              name="RG"
+              maxlength="11"
+              minlength="8"
+              pattern="[0-9]{8,11}"
+              title="Digite de 8 a 11 números do RG"
+            />
+          </section>
+          <br />
+          <section>
+            <label for="CPF">CPF:</label>
+            <input
+              id="CPF"
+              type="text"
+              required
+              placeholder="Informe seu CPF"
+              name="CPF"
+              maxlength="11"
+              minlength="8"
+              pattern="[0-9]{11}"
+              title="Digite os 11 números do CPF"
+            />
+          </section>
+          <br />
+          <section>
+            <label for="masculine">Masculino</label>
+            <input id="masculine" type="radio" name="sexo" value="M" />
 
-      <fieldset class="languagesData">
-        <legend>
-          <strong>
-            LINGUAGENS DE DOMÍNIO
-          </strong>
-        </legend>
-        
-        <section>
-          <span>
-            <input id="html" type="checkbox" name="html">
-            <label for="html">HTML</label>      
-          </span>
+            <label for="feminine">Feminino</label>
+            <input id="feminine" type="radio" name="sexo" value="F" />
+          </section>
+        </fieldset>
 
-          <span>
-            <input id="css" type="checkbox" name="css">
-            <label for="css">CSS</label>      
-          </span>
+        <br />
 
-          <span>
-            <input id="javascript" type="checkbox" name="javascript">
-            <label for="javascript">JavaScript</label>      
-          </span>
+        <fieldset class="languagesData">
+          <legend>
+            <strong> LINGUAGENS DE DOMÍNIO </strong>
+          </legend>
 
-          <span>
-            <input id="sql" type="checkbox" name="sql">
-            <label for="sql">SQL</label>      
-          </span>
-        </section>
-      </fieldset>
+          <section>
+            <span>
+              <input id="html" type="checkbox" name="html" />
+              <label for="html">HTML</label>
+            </span>
 
-      <br>
-      
-      <fieldset class="loginData">
-        <legend>
-          <strong>
-            DADOS DE LOGIN
-          </strong>
-        </legend>
+            <span>
+              <input id="css" type="checkbox" name="css" />
+              <label for="css">CSS</label>
+            </span>
 
-        <section>
-          <label for="email">E-mail:</label>
-          <input type="email" placeholder="fuluno@email.com" id="email" required name="email">
-        </section>
+            <span>
+              <input id="javascript" type="checkbox" name="javascript" />
+              <label for="javascript">JavaScript</label>
+            </span>
 
-        <br>
-        <section>
-          <label for="password">Senha:</label>
-          <input 
-            type="password" 
-            id="password" 
-            name="password"
-            minlength="8" 
-            required 
-            placeholder="Mínimo de 8 caracteres" 
-          >
-        </section>
+            <span>
+              <input id="sql" type="checkbox" name="sql" />
+              <label for="sql">SQL</label>
+            </span>
+          </section>
+        </fieldset>
 
-        <br>
-        <section>
-          <label for="photo">Foto:</label>
-          <input 
-            type="file" 
-            id="photo" 
-            name="photo"
-            accept="image/*" 
-          >
-        </section>
-      </fieldset>
+        <br />
 
-      <br>
+        <fieldset class="loginData">
+          <legend>
+            <strong> DADOS DE LOGIN </strong>
+          </legend>
 
-      <fieldset class="obsData">
-        <legend>
-          <strong>
-            OBSERVAÇÕES       
-          </strong>
-        </legend>
+          <section>
+            <label for="email">E-mail:</label>
+            <input
+              type="email"
+              placeholder="fuluno@email.com"
+              id="email"
+              required
+              name="email"
+            />
+          </section>
 
-        <section>
-          <label for="observation" hidden>Observação</label>
-          <textarea 
-            id="observation" 
-            name="observation" 
-            cols="36" 
-            rows="10" 
-            maxlength="370"
-            placeholder="Faça observações sobre seu perfil"       
-          ></textarea>
-        </section>
-      </fieldset>
+          <br />
+          <section>
+            <label for="password">Senha:</label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              minlength="8"
+              required
+              placeholder="Mínimo de 8 caracteres"
+            />
+          </section>
 
-      <br>
+          <br />
+          <section>
+            <label for="photo">Foto:</label>
+            <input type="file" id="photo" name="photo" accept="image/*" />
+          </section>
+        </fieldset>
 
-      <button type="submit">Salvar</button>
-      <button type="reset">Limpar</button>
-    </form>
-  </main>
-</body>
+        <br />
+
+        <fieldset class="obsData">
+          <legend>
+            <strong> OBSERVAÇÕES </strong>
+          </legend>
+
+          <section>
+            <label for="observation" hidden>Observação</label>
+            <textarea
+              id="observation"
+              name="observation"
+              cols="36"
+              rows="10"
+              maxlength="370"
+              placeholder="Faça observações sobre seu perfil"
+            ></textarea>
+          </section>
+        </fieldset>
+
+        <br />
+
+        <button type="submit">Salvar</button>
+        <button type="reset">Limpar</button>
+      </form>
+    </main>
+  </body>
 </html>

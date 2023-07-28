@@ -34,11 +34,12 @@ grid-template-areas:
 
 Obs: Usar grid-area nos elementos com os nomes escolhidos;
 
-## Align
+## Alignment
 
-- Sabendo que o Grid é bidimensional podemos trabalhar nos eixos X e Y
-- O justify-content(x) e aling-content(y) nos permite alinhar o Grid, relativo ao próprio espaço de fora quando menor que a área definida
-- O justify-items(x) e o align-items(y) nos permite alinhar o conteúdo do grid
+- Sabendo que o Grid é bidimensional podemos trabalhar nos eixos X (justify) e Y (aling)
+- O "content" nos permite alinhar o Grid, relativo ao próprio espaço de fora quando menor que a área definida
+- O "items" nos permite alinhar o conteúdo do grid
+- O "self" permite alinhar o conteúdo do próprio filho no grid
 
 ## Links
 

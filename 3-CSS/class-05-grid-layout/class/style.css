@@ -27,7 +27,7 @@ body {
   /* justify-items: center; */
   /* align-items: center; */
 
-  gap: 8px;
+  gap: 8px 16px;
 }
 
 header {
@@ -35,6 +35,8 @@ header {
   /* grid-column: 1 / 3; */
   /* grid-row: 1; */
   grid-area: Header;
+  /* justify-self: center; */
+  /* align-self: center; */
 }
 
 h1 {

@@ -1,0 +1,45 @@
+@import url(reset.css);
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+  background: #252525;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#headerLogo {
+  width: 76px;
+}
+
+nav {
+  padding: 24px;
+}
+
+nav ul {
+  display: flex;
+  gap: 20px;
+}
+
+ul li a {
+  color: white;
+  font-size: 24px;
+  padding: 8px;
+  border-radius: 8px;
+}
+
+ul li a:hover {
+  background: #fff2;
+}
+
+.menuSelect {
+  color: #73cdfc;
+}
+
+main {
+  padding: 16px;
+}

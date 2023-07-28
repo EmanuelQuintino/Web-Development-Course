@@ -24,14 +24,6 @@
 - 1px 2px 3px > top (1px) - right, left (2px) - bottom (3px)
 - 1px 2px 3px 4px > top(1px) - right(2px) - bottom (3px) - left(4px)
 
-## Position (top, right, bottom, left)
-
-- absolute
-- relative
-- sticky
-- fixed
-- z-index
-
 ## Display
 
 - block
@@ -48,4 +40,3 @@
 ## Links
 
 - [Box-Model](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/The_box_model)
-- [Position](https://developer.mozilla.org/en-US/docs/Web/CSS/position)

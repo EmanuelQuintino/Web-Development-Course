@@ -1,0 +1,20 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1 {
+  background: teal;
+  color: white;
+}
+
+h3 {
+  position: sticky;
+  top: 0px;
+  background: lightgray;
+}
+
+section p {
+  padding: 32px;
+}

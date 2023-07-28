@@ -4,8 +4,7 @@
   box-sizing: border-box;
 }
 
-h1,
-h2 {
+h1 {
   background: teal;
   color: white;
 }
@@ -40,14 +39,4 @@ h2 {
 
 .square3 {
   background: orange;
-}
-
-h3 {
-  position: sticky;
-  top: 0px;
-  background: lightgray;
-}
-
-section p {
-  padding: 32px;
 }

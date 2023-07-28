@@ -3,7 +3,7 @@
 - Cada elemento é representado como uma caixa retangular
 - Essa caixa possui propriedades de uma caixa em 2 dimensões (largura x altura)
 
-![box-model](./images/box-model.png)
+<img src="./images/box-model.png" alt="box model" width="560">
 
 ## Properties:
 

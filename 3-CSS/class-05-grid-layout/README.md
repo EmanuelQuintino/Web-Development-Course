@@ -2,6 +2,10 @@
 
 ## Display Grid
 
+Divisão de toda a página em linhas e colunas de forma bidimensional
+
+[flex vs grid](./images/flex-vs-grid.jpg)
+
 ```css
 grid-template-columns: minmax(100px, 30%);
 grid-template-rows: 10% 50% 1fr 1fr 10%;
@@ -19,14 +23,14 @@ align-items: center;
 
 grid-column: 1 / 3;
 grid-row: 1 / 2;
-```
 
-- grid-template-areas
-  -        coluna 1 coluna 2
-  - linha 1 "header header"
-  - linha 2 "main   aside"
-  - linha 3 ".      aside"
-  - linha 4 "footer footer";
+grid-template-areas:
+  "Header Header"
+  "Main   Aside"
+  ".      Aside"
+  ".      Aside"
+  "Footer Footer";
+```
 
 Obs: Usar grid-area nos elementos com os nomes escolhidos;
 

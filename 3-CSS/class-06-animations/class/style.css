@@ -1,42 +1,72 @@
 body {
+  width: 480px;
+  margin: auto;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
-h1:hover {
-  color: red;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+h1 {
+  animation: slide 2s;
+  animation-fill-mode: forwards;
 }
 
-h2:hover {
-  color: blue;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+p {
+  animation: fadeIn 2s;
+  animation-fill-mode: forwards;
 }
 
 .square {
-  width: 160px;
-  height: 160px;
-  background: grey;
-  padding: 16px;
-
-  font-size: 32px;
-  color: white;
-
-  transition: background-color 3000ms, width 2000ms, height 2000ms 1s,
-    transform 2s;
-
-  /* Transition Deley: Adicionar mais um parâmetro */
+  width: 120px;
+  height: 120px;
+  background: purple;
+  transition-property: background-color, transform;
+  transition-duration: 3s;
+  transition-delay: 3s;
+  transition-timing-function: ease-in-out;
+  transition: background-color 1s 1s ease-in, transform 3s 1s ease-out;
 }
 
 .square:hover {
-  background-color: red;
-  /* font-size: 64px; */
-  /* font-weight: bold; */
+  background-color: teal;
+  transform: scale(1.1);
+}
 
-  width: 300px;
-  height: 330px;
+.spinner {
+  margin-top: 24px;
+  width: 48px;
+  animation-name: spinner;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
 
-  /* transform: scale(1.1); */
-  transform: rotateY(720deg);
+@keyframes spinner {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slide {
+  from {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

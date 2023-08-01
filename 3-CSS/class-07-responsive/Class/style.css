@@ -13,14 +13,16 @@ h1 {
   font-size: 3.2rem;
 }
 
-.myImage {
+.boxImage {
   max-width: 32rem;
   overflow: hidden;
 }
 
-.myImage img {
+.boxImage img {
   width: 100%;
   height: auto;
+  object-fit: cover;
+  object-position: center;
 }
 
 p {

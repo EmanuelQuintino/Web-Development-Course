@@ -20,6 +20,18 @@
     max-width: 48rem;
   }
 
+  .boxImage {
+    max-width: 32rem;
+    overflow: hidden;
+  }
+
+  .boxImage img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    object-position: center;
+  }
+
   h1 {
     font-size: clamp(2.4rem, 5vw + 1rem, 4.2rem);
   }

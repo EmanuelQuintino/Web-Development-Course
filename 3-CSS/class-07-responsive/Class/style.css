@@ -19,8 +19,9 @@ h1 {
 }
 
 .boxImage img {
-  width: 50%;
-  aspect-ratio: 1/2;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 5/2;
   object-fit: cover;
   object-position: center;
 }

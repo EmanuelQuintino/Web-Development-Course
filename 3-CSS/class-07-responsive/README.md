@@ -15,11 +15,19 @@
 
     font-size: 6.25%;
   }
+
+  main {
+    max-width: 48rem;
+  }
+
+  h1 {
+    font-size: clamp(2.4rem, 5vw + 1rem, 4.2rem);
+  }
   ```
 
   - Fixed Unit
 
-  - 'px' - Pixels
+    - 'px' - Pixels
 
   - Flexible Unit
 

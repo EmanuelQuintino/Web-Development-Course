@@ -1,0 +1,33 @@
+:root {
+  /* 100 / 1.6 */
+  font-size: 62.5%;
+}
+
+main {
+  max-width: 32rem;
+  margin: auto;
+}
+
+h1 {
+  /* font-size: 2em; */
+  font-size: 3.2rem;
+}
+
+.myImage {
+  max-width: 32rem;
+  overflow: hidden;
+}
+
+.myImage img {
+  width: 100%;
+  height: auto;
+}
+
+p {
+  font-size: 1.6rem;
+}
+
+div {
+  font-size: 2em;
+  /* font-size: 1.6rem; */
+}

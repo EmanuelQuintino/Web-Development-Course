@@ -11,7 +11,9 @@
 .container {
   padding: 2.4rem;
   max-width: 48rem;
+  height: 100vh;
   margin: 0 auto;
+  display: grid;
 }
 
 header {
@@ -37,6 +39,7 @@ h1 {
   height: auto;
   margin: 4.8rem auto 0;
   object-fit: cover;
+  object-position: center;
   transition: 300ms;
   animation-name: cloudAnimation;
   animation-duration: 2000ms;
@@ -65,7 +68,7 @@ footer {
   font-weight: bolder;
   margin-top: 3.2rem;
   text-align: center;
-  margin-top: 2.4rem;
+  margin: 2.4rem;
 }
 
 @media (min-width: 640px) {

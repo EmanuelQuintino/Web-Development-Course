@@ -21,16 +21,17 @@ p {
   width: 120px;
   height: 120px;
   background: purple;
-  transition-property: background-color, transform;
+  transition-property: background-color, transform, border-radius;
   transition-duration: 3s;
-  transition-delay: 3s;
+  transition-delay: 2s;
   transition-timing-function: ease-in-out;
-  transition: background-color 1s 1s ease-in, transform 3s 1s ease-out;
+  transition: background-color 2s 1s ease-in, transform 2s 1s ease-out, border-radius 3s 1s;
 }
 
 .square:hover {
   background-color: teal;
-  transform: scale(1.1);
+  transform: scale(1.5);
+  border-radius: 100%;
 }
 
 .spinner {

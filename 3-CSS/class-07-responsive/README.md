@@ -1,4 +1,4 @@
-# RESPONSIVE
+# Responsive
 
 - Units CSS
 

@@ -2,8 +2,6 @@
 
 - Units CSS
 
-  - Fixed Unit
-
   ```css
   :root {
     font-size: 1rem;
@@ -18,6 +16,8 @@
     font-size: 6.25%;
   }
   ```
+
+  - Fixed Unit
 
   - 'px' - Pixels
 

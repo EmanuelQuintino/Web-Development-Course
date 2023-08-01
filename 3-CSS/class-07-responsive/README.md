@@ -4,7 +4,22 @@
 
   - Fixed Unit
 
-    - 'px' - Pixels
+  ```css
+  :root {
+    font-size: 1rem;
+    font-size: 16px;
+
+    /* 16px => 100%* = 1rem */
+    /* 16px => 50%* = 2rem */
+    /* 16px => 25%* = 4rem */
+    /* 16px => 12.5%* = 8rem */
+    /* 16px => 6.25%* = 16rem */
+
+    font-size: 6.25%;
+  }
+  ```
+
+  - 'px' - Pixels
 
   - Flexible Unit
 
@@ -15,23 +30,7 @@
     - 'em' - Parent Element
     - 'rem' - Root Element
 
-    ```css
-    :root {
-      font-size: 6.25%;
-    }
-    ```
-
-    ```
-      16px => 100% = 1rem
-      16px => 50% = 2rem
-      16px => 25% = 4rem
-      16px => 12.5% = 8rem
-      16px => 6.25% = 16rem
-    ```
-
-- @media
-
-  - Uma regra de grupo condicional que aplicará seu conteúdo se o dispositivo atender aos critérios da condição definida usando uma consulta de mídia
+- Media Queries
 
   ```css
   @media (min-width: 420px) {
@@ -40,6 +39,8 @@
     }
   }
   ```
+
+  - Uma regra de grupo condicional que aplicará seu conteúdo se o dispositivo atender aos critérios da condição definida usando uma consulta de mídia
 
 - Mobile First
 

@@ -4,8 +4,9 @@
 }
 
 main {
-  max-width: 32rem;
+  max-width: 42rem;
   margin: auto;
+  padding: 2.4rem;
 }
 
 h1 {
@@ -14,14 +15,14 @@ h1 {
 }
 
 .boxImage {
-  max-width: 32rem;
+  max-width: 42rem;
   overflow: hidden;
 }
 
 .boxImage img {
   width: 100%;
   height: auto;
-  aspect-ratio: 5/2;
+  aspect-ratio: 3/1;
   object-fit: cover;
   object-position: center;
 }
@@ -33,4 +34,32 @@ p {
 div {
   font-size: 2em;
   /* font-size: 1.6rem; */
+}
+
+@media (max-width: 2048px) {
+  main {
+    background: peru;
+  }
+}
+
+@media (max-width: 1024px) {
+  main {
+    background: steelblue;
+  }
+}
+
+@media (max-width: 720px) {
+  main {
+    background: sienna;
+  }
+}
+
+@media (max-width: 420px) {
+  main {
+    background: teal;
+  }
+
+  .boxImage img {
+    aspect-ratio: 1/1;
+  }
 }

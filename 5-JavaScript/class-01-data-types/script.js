@@ -1,8 +1,6 @@
 // ECMAScript Data Types
 
-
 // >>>>> Primitive Values : String, Number, Boolean... <<<<<
-
 
 // ----- String ------
 // let nome = "Emanuel"
@@ -10,13 +8,11 @@
 
 // console.log(typeof age)
 
-
 // ----- Number: integer, float, NaN, Infinity -----
 // console.log(typeof 32.2)
 // console.log(typeof (32 + 5))
 // console.log(typeof 15 + "Emanuel")
 // console.log(typeof NaN)
-
 
 // ----- Boolean: true or false ------
 // console.log(typeof (10 == 20))
@@ -26,23 +22,21 @@
 // console.log((11 == "11"))
 // console.log((11 === "11")) //cuidado porque são tipos diferentes de dados
 
-
 // ------ Template Strings (Interpolation) ------
 
-let num1 = '10'
-let num2 = 20
+let num1 = "10";
+let num2 = 20;
 
-num1 = Number(num1) // type conversion (typecasting)
+num1 = Number(num1); // type conversion (typecasting)
 // Number() (função construtora para converter um dado em número)
 
-// console.log(num1 + num2) // Type Coersion 
+// console.log(num1 + num2) // Type Coersion
 
-let soma = num1 + num2
-
+let soma = num1 + num2;
 
 // console.log("A soma é: " + num1 + num2)
 
-// grouping operator 
+// grouping operator
 // console.log("A soma é: " + (num1 + num2))
 
 // concatenation
@@ -51,47 +45,42 @@ let soma = num1 + num2
 // Template Strings (Interpolation)
 // console.log(`A soma de ${num1} e de ${num2} é igual a ${soma}`)
 
-
-
 //  >>>>> Variables Scope (hoisting) <<<<<<
 
-{   
-    // var num
-    var num = "Global"
-    // let num = "Global"
+{
+  // var num
+  var num = "Global";
+  // let num = "Global"
 
-    // const pi = 3.14
+  // const pi = 3.14
 
-    // console.log(num)    
+  // console.log(num)
 
-        {
-            var num = "Local"
-            // let num = "Local"
-            // var pi = 1
-            // let pi = 1
-            // console.log(num)
-            // console.log(pi)   
-        }
-
-        {
-            // var num = "Local2"
-            let num = "Local2"
-            // console.log(num)
-        }
-
+  {
+    var num = "Local";
+    // let num = "Local"
+    // var pi = 1
+    // let pi = 1
     // console.log(num)
     // console.log(pi)
+  }
+
+  {
+    // var num = "Local2"
+    let num = "Local2";
+    // console.log(num)
+  }
+
+  // console.log(num)
+  // console.log(pi)
 }
-
-
 
 //  >>>>> Type Structutal (Object, Functions) <<<<<<
 
-
 // // ------ Object ------
-let name = "Emanuel"
-let age = 29
-let profession = "Web Developer"
+let name = "Emanuel";
+let age = 29;
+let profession = "Web Developer";
 
 // console.log(name)
 // console.log(age)
@@ -107,9 +96,8 @@ let profession = "Web Developer"
 // console.log(typeof person)
 // console.log(person.name)
 
-
 // ----- Array (Vetor) ------
-countries = ["Brasil", "Alemanha", "Itália", "Uruguai", "Espanha"]
+countries = ["Brasil", "Alemanha", "Itália", "Uruguai", "Espanha"];
 
 // console.log(typeof countries)
 // console.log(countries)
@@ -127,40 +115,37 @@ countries = ["Brasil", "Alemanha", "Itália", "Uruguai", "Espanha"]
 // console.log(countries[3][1])
 
 countries = [
-    {
-        name: "Brasil",
-        champion: 5
-    },
-    
-    {
-        name: "Alemanha",
-        champion: 4
-    },
+  {
+    name: "Brasil",
+    champion: 5,
+  },
 
-    {
-        name: "Itália",
-        champion: 4
-    },
+  {
+    name: "Alemanha",
+    champion: 4,
+  },
 
-    {
-        name: "Uruguai",
-        champion: 2
-    },
+  {
+    name: "Itália",
+    champion: 4,
+  },
 
-    {
-        name: "Espanha",
-        champion: 1
-    },
-]
+  {
+    name: "Uruguai",
+    champion: 2,
+  },
 
-country = 0
+  {
+    name: "Espanha",
+    champion: 1,
+  },
+];
+
+country = 0;
 
 // console.log(countries)
 // console.log(typeof countries)
 // console.log(countries[country].name)
 // console.log(countries[country].champion)
 
-console.log(`${countries[country].name} tem ${countries[country].champion} título(s)`)
-
-
-// referência: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Data_structures
+console.log(`${countries[country].name} tem ${countries[country].champion} título(s)`);

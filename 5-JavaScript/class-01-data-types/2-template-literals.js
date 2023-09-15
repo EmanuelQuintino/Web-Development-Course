@@ -1,6 +1,6 @@
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals
 
-// Template Strings (Interpolation)
+// Template Literals
 
 let num1 = "10";
 let num2 = 20;

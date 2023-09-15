@@ -7,7 +7,7 @@ let userName = prompt("Digite seu nome: ");
 alert("Olá, " + userName + ", vamos fazer uma soma!");
 
 let firstNumber = Number(prompt("O primeiro número: "));
-let secondNumber = Number(prompt("O sugundo número: "));
+let secondNumber = Number(prompt("O segundo número: "));
 
 const sum = firstNumber + secondNumber;
 

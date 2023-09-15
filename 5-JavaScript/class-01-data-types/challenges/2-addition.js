@@ -3,6 +3,6 @@
 let firstNumber = Number(prompt("Digite o primeiro número: "));
 let secondNumber = Number(prompt("Digite o segundo número: "));
 
-const sum = firstNumber + secondNumber;
+const addition = firstNumber + secondNumber;
 
-alert(`A soma entre ${firstNumber} e ${secondNumber} é igual a ${sum}`);
+alert(`A soma entre ${firstNumber} e ${secondNumber} é igual a ${addition}`);

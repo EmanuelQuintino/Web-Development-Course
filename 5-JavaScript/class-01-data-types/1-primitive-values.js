@@ -3,7 +3,7 @@
 // Primitive Values : String, Number, Boolean...
 
 // String
-let nome = "Emanuel";
+let name = "Emanuel";
 let age = "29";
 
 console.log(typeof age);

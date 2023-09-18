@@ -13,7 +13,7 @@ console.log(pi);
   let num = "local";
   num = "changed";
 
-  pi = 3;
+  // pi = 3;
 
   // var num = "local";
   // var pi = 1

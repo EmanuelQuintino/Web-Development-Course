@@ -1,3 +1,5 @@
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators
+
 // Expressions Grouping Operator
 let total = (2 + 3) * 3;
 console.log(total);

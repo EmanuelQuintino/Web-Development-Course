@@ -74,6 +74,7 @@ console.log(Math.min(...numbers))
 
 // >>>>>>>>>>>>>> Date Manipulation <<<<<<<<<<<<
 
+// new: left-hand-side expression
 let dateNow = new Date()
 let date1 = new Date("2022-03-01 12:03:19")
 let date2 = new Date("2022-04-01 12:03:19")

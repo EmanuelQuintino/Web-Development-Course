@@ -30,7 +30,7 @@ console.log(avarege >= 7 ? "Aprovado" : "Reprovado");
 
 // * Cuidado com valores Truthy e False onde o booleano é considerado obrigatório (condicionais e loops).
 
-// Truthy               False
+// Truthy               Falsy
 // 1, 1.5, -1           0
 // " ", "0", "false"    ""
 // {}                   null

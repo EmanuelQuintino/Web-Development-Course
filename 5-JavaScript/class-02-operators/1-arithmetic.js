@@ -20,7 +20,10 @@ console.log(num1 * num2);
 console.log(num1 / num2);
 console.log(num1 % num2);
 console.log(num1 ** num2);
+console.log(16 ** 1 / 2);
+console.log(Math.sqrt(16));
 
+console.log(num1++);
 console.log(--num1);
 console.log(++num1 + num2);
 
@@ -34,4 +37,5 @@ num1 *= 2;
 num1 /= 2;
 num1 &= 2;
 num1 **= 2;
+
 console.log(num1);

@@ -2,10 +2,20 @@
 
 // Primitive Values : String, Number, Boolean...
 
-// String
-let name = "Emanuel";
-let age = "29";
+// let 123variable;
+// let my-variable;
+// let my variable;
+// let my$variable;
+// let my#variable;
+// let my-variável;
+// let if;
+// let break;
 
+// String
+let namePerson = "Emanuel";
+let age = 29;
+
+console.log(namePerson);
 console.log(typeof age);
 
 // Number: integer, float, NaN, Infinity

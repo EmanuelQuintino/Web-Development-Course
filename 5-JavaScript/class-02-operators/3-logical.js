@@ -6,16 +6,16 @@
 // or   ||
 // not  !
 
-//Ir para a Walt Disney?
+//Go to Walt Disney?
 
-// let economizarDinheiro = true
-// let juntarDinheiro = true
+let creditCard = true;
+let hasCredit = true;
 
-// console.log(!economizarDinheiro)
+console.log(!creditCard);
 
-// console.log(economizarDinheiro && juntarDinheiro)
+console.log(creditCard && hasCredit);
 
-let guardarPoupanca = false;
-let pegarEmprestimo = false;
+let saveMoney = true;
+let getLoan = true;
 
-// console.log(guardarPoupanca || pegarEmprestimo)
+console.log(saveMoney || getLoan);

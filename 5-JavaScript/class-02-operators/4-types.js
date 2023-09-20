@@ -20,7 +20,6 @@ delete fruits[1];
 console.log(fruits);
 
 // Ternary
-
 test ? true : false;
 
 console.log(n1 > n2 ? "Yes" : "No");

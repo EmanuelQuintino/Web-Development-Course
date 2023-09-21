@@ -11,7 +11,7 @@
 let creditCard = true;
 let hasCredit = true;
 
-console.log(!creditCard);
+console.log(!!creditCard);
 
 console.log(creditCard && hasCredit);
 

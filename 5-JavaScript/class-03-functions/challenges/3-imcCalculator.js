@@ -1,8 +1,5 @@
-//vai para condicionais if peso normal ou não
-
-// Crie uma função que retorne o IMC dos pacientes
-// Faça um array (lista) com todos os pacientes
-// Cada paciente deverá conter as propriedades name, height, weight;
+// Crie uma função que retorne o IMC
+// Faça um array (lista) com pacientes e as propriedades name, height, weight;
 // Escreva na tela o nome do paciente e o seu IMC
 
 function calcIMC(patient) {
@@ -11,21 +8,9 @@ function calcIMC(patient) {
 }
 
 const listPatients = [
-  {
-    name: "Maria",
-    height: 160,
-    weight: 55,
-  },
-  {
-    name: "Ana",
-    height: 162,
-    weight: 60,
-  },
-  {
-    name: "Pedro",
-    height: 185,
-    weight: 80,
-  },
+  { name: "Maria", height: 160, weight: 55 },
+  { name: "Ana", height: 162, weight: 60 },
+  { name: "Pedro", height: 185, weight: 80 },
 ];
 
 document.write(`O IMC de ${listPatients[0].name} é ${calcIMC(listPatients[0])} <br>`);

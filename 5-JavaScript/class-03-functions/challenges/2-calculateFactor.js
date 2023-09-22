@@ -1,4 +1,6 @@
-// Crie uma função para calcular o fatorial de um número e imprima na tela
+// Crie uma função para calcular o fatorial de um número
+// Solicite o número ao usuário via prompt
+// Escreva (write) na tela o resultado
 
 function calculateFactor(number) {
   if (number === 0 || number === 1) return 1;

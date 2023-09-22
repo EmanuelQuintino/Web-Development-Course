@@ -23,6 +23,7 @@ console.log(num1 ** num2);
 console.log(16 ** (1 / 2));
 console.log(Math.sqrt(16));
 console.log(Math.cbrt(8));
+console.log(Math.pow(2, 4));
 
 console.log(num1++);
 console.log(--num1);

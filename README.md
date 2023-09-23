@@ -12,6 +12,8 @@ O curso de Desenvolvimento Web é o nosso programa piloto e faz parte do projeto
   <img align="center" alt="JavaScript" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg">
   JavaScript
   <img align="center" alt="React" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg">
+  TypeScript
+  <img align="center" alt="TypeScript" title="TypeScript" height="40" width="50" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" />
   React
   <img align="center" alt="Node.JS" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"/>
   Node.JS
@@ -27,5 +29,6 @@ O curso de Desenvolvimento Web é o nosso programa piloto e faz parte do projeto
 - Empreendedorismo
 - Segurança da Informação
 - LinkedIn
+- Chat GPT
 - GitHub
 - Inglês

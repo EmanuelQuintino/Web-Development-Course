@@ -49,5 +49,9 @@ console.log(arrayNums.slice(1, -3));
 arrayNums.splice(-2, 2);
 console.log(arrayNums);
 
+techs.splice(techs.indexOf("CSS"), 1);
+techs.splice(1, 2, "Chat GPT", "Inglês");
+console.log(techs);
+
 console.log(arrayNums + techs);
 console.log(arrayNums.concat(techs));

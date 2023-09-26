@@ -7,5 +7,6 @@ function convertMsToKmh(speed) {
 }
 
 const userSpeed = Number(prompt("Digite a velocidade em m/s para coverter em km/h:"));
+const convertedSpeed = convertMsToKmh(userSpeed);
 
-document.write(`${userSpeed}m/s é ${convertMsToKmh(userSpeed)}km/h`);
+document.write(`${userSpeed}m/s é ${convertedSpeed}km/h`);

@@ -31,3 +31,7 @@ console.log(phrase.split("").reverse().join(""));
 console.log(phrase.includes("web")); //case-sensitive
 console.log("Web" == "web");
 console.log(phrase.toLocaleLowerCase().includes("web"));
+
+function log() {
+  return "print";
+}

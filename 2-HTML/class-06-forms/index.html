@@ -12,9 +12,6 @@
     </style>
   </head>
   <body>
-    <!-- Tipos de input: password, checkbox, radio, file, data, number, url, hidden... -->
-    <!-- <input type="text"> -->
-
     <h1>Class 06 Forms</h1>
 
     <form id="formSearch" method="get" enctype="multipart/form-data">
@@ -68,6 +65,7 @@
 
         <br /><br />
         <button type="submit" form="formLogin">Login</button>
+        <button type="reset" form="formLogin">Resetar</button>
       </fieldset>
     </form>
 
@@ -87,12 +85,7 @@
       <br /><br />
 
       <!-- types: datetime-local, month, time, week  -->
-      <input
-        type="date"
-        value="2022-05-26"
-        name="date"
-        placeholder="Insira data de nascimento"
-      />
+      <input type="date" value="2022-05-26" name="date" />
 
       <br /><br />
       <input type="range" min="0" max="100" step="1" value="70" />
@@ -147,14 +140,12 @@
 
       <br />
 
-      <label for="fruits">Fruta</label>
-      <select name="frutas" id="fruits" multiple size="3">
+      <label for="students">Alunos</label>
+      <select name="students" id="students" multiple size="3">
         <!--Mais de um elemento: multiple; size = "2" quantos elementos quero deixar visível-->
-        <option value="Manga">Manga</option>
-        <option value="Uva">Uva</option>
-        <option value="Abacaxi">Abacaxi</option>
-        <option value="Banana">Banana</option>
-        <option value="Goiaba">Goiaba</option>
+        <option value="s001">Emanuel</option>
+        <option value="s002">Adriana</option>
+        <option>Natanael</option>
       </select>
 
       <br /><br />

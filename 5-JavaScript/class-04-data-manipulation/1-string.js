@@ -3,12 +3,19 @@
 // Prototype (Chain)
 
 let myName = "Emanuel";
-
 console.log(myName.__proto__);
 
 console.log(myName.length);
+console.log(myName.toUpperCase());
+console.log(myName.toLowerCase());
+
 console.log(myName[1]);
-console.log(myName.toLocaleUpperCase());
+
+myName[1] = "T";
+console.log(myName); // string immutable
+
+myName = "test";
+console.log(myName);
 
 let phrase = "  I'm a Web Developer";
 

@@ -4,16 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Class 06 Forms Challenge</title>
-    <!-- 
-    1) Criar formulário de cadastro do aluno com os campos:
-        - Dados Pessoais: Nome, Nascimento, RG, CPF, Sexo
-        - Linguagens de Domínio: HTML, CSS, JavaScript, SQL
-        - Dados de Login: Email, Senha, Foto
-        - Observações: Campo para texto.
-    2) Valídar RG, CPF, File e inputs obrigatórios
-    3) Criar Botões Submit e Reset
-  -->
+    <title>Challenge Student Form</title>
     <style>
       body {
         background: #e5e5e5;
@@ -43,9 +34,9 @@
         text-align: right;
       }
 
-      /* input[type="number"]::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    } */
+      input[type="number"]::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+      }
 
       textarea {
         resize: none;
@@ -67,7 +58,7 @@
       <form method="get" enctype="multipart/form-data">
         <fieldset class="personalData">
           <legend>
-            <strong> DADOS PESSOAIS </strong>
+            <strong>DADOS PESSOAIS</strong>
           </legend>
 
           <section>
@@ -83,12 +74,14 @@
           </section>
 
           <br />
+
           <section>
             <label for="birth">Nascimento:</label>
             <input id="birth" type="date" name="birth" />
           </section>
 
           <br />
+
           <section>
             <label for="RG">RG:</label>
             <input
@@ -103,7 +96,9 @@
               title="Digite de 8 a 11 números do RG"
             />
           </section>
+
           <br />
+
           <section>
             <label for="CPF">CPF:</label>
             <input
@@ -113,18 +108,24 @@
               placeholder="Informe seu CPF"
               name="CPF"
               maxlength="11"
-              minlength="8"
+              minlength="11"
               pattern="[0-9]{11}"
               title="Digite os 11 números do CPF"
             />
           </section>
-          <br />
-          <section>
-            <label for="masculine">Masculino</label>
-            <input id="masculine" type="radio" name="sexo" value="M" />
 
-            <label for="feminine">Feminino</label>
-            <input id="feminine" type="radio" name="sexo" value="F" />
+          <br />
+
+          <section>
+            <span>
+              <label for="masculine">Masculino</label>
+              <input id="masculine" type="radio" name="sexo" value="M" />
+            </span>
+
+            <span>
+              <label for="feminine">Feminino</label>
+              <input id="feminine" type="radio" name="sexo" value="F" />
+            </span>
           </section>
         </fieldset>
 
@@ -132,7 +133,7 @@
 
         <fieldset class="languagesData">
           <legend>
-            <strong> LINGUAGENS DE DOMÍNIO </strong>
+            <strong>LINGUAGENS DE DOMÍNIO</strong>
           </legend>
 
           <section>
@@ -162,7 +163,7 @@
 
         <fieldset class="loginData">
           <legend>
-            <strong> DADOS DE LOGIN </strong>
+            <strong>DADOS DE LOGIN</strong>
           </legend>
 
           <section>
@@ -177,6 +178,7 @@
           </section>
 
           <br />
+
           <section>
             <label for="password">Senha:</label>
             <input
@@ -190,6 +192,7 @@
           </section>
 
           <br />
+
           <section>
             <label for="photo">Foto:</label>
             <input type="file" id="photo" name="photo" accept="image/*" />
@@ -200,7 +203,7 @@
 
         <fieldset class="obsData">
           <legend>
-            <strong> OBSERVAÇÕES </strong>
+            <strong>OBSERVAÇÕES</strong>
           </legend>
 
           <section>

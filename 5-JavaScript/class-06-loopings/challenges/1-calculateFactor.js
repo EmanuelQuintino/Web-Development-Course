@@ -3,8 +3,15 @@
 // Escreva (write) na tela o resultado
 
 function calculateFactor(number) {
-  if (number === 0 || number === 1) return 1;
-  return number * calculateFactor(number - 1);
+  let result = 1;
+  for (let i = number; i > 0; i--) {
+    result *= i;
+  }
+
+  return result;
+
+  // if (number === 0 || number === 1) return 1;
+  // return number * calculateFactor(number - 1);
 }
 
 const userNum = Number(prompt("Digite um número oara calcular seu fatorial:"));

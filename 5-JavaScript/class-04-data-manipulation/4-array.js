@@ -1,13 +1,14 @@
-// Array Manipulation
+// Array Manipulation: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array
 
-let myArray = Array(1, "a", () => "A");
+const myArray = Array(1, "a", () => "A");
+
 console.log(myArray);
 console.log(myArray.length);
 console.log(myArray[2]());
 console.log(myArray.join("_"));
 
-let myName = "Emanuel";
-console.log(Array.from(myName));
+const myName = "Emanuel";
+
 console.log(myName.split(""));
 console.log(myName.split("").reverse().join(""));
 
@@ -43,15 +44,15 @@ console.log(index);
 const indexSlice = techs.slice(1, -1);
 console.log(indexSlice);
 
-const arrayNums = [2, 3, 5, 1, 4];
-console.log(arrayNums.slice(1, -3));
+const arrayLetters = ["A", "B", "C", "D", "E", "F"];
+console.log(arrayLetters.slice(1, -3));
 
-arrayNums.splice(-2, 2);
-console.log(arrayNums);
+arrayLetters.splice(-2, 2);
+console.log(arrayLetters);
 
 techs.splice(techs.indexOf("CSS"), 1);
 techs.splice(1, 2, "Chat GPT", "Inglês");
 console.log(techs);
 
-console.log(arrayNums + techs);
-console.log(arrayNums.concat(techs));
+console.log(arrayLetters + techs);
+console.log(arrayLetters.concat(techs));

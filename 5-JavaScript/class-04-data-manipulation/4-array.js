@@ -1,4 +1,4 @@
-// Array Manipulation: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array
+// Array Manipulation: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array
 
 const myArray = Array(1, "a", () => "A");
 
@@ -37,6 +37,7 @@ techs.push("Node.js");
 
 console.log(techs);
 console.log(techs.includes("React"));
+console.log("A" == "a");
 
 let index = techs.indexOf("Node.js"); // -1 not exist
 console.log(index);
@@ -45,9 +46,11 @@ const indexSlice = techs.slice(1, -1);
 console.log(indexSlice);
 
 const arrayLetters = ["A", "B", "C", "D", "E", "F"];
-console.log(arrayLetters.slice(1, -3));
 
-arrayLetters.splice(-2, 2);
+console.log(arrayLetters.slice(1, -3));
+console.log(arrayLetters);
+
+console.log(arrayLetters.splice(-2, 2)); // create new array
 console.log(arrayLetters);
 
 techs.splice(techs.indexOf("CSS"), 1);

@@ -1,25 +1,27 @@
-let weekDay = 9;
+//Switch: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/switch
+
+const weekDay = new Date().getDay(); // 0-6
 
 switch (weekDay) {
-  case 1:
+  case 0:
     console.log("Domingo");
     break;
-  case 2:
+  case 1:
     console.log("Segunda");
     break;
-  case 3:
+  case 2:
     console.log("Terça");
     break;
-  case 4:
+  case 3:
     console.log("Quarta");
     break;
-  case 5:
+  case 4:
     console.log("Quinta");
     break;
-  case 6:
+  case 5:
     console.log("Sexta");
     break;
-  case 7:
+  case 6:
     console.log("Sábado");
     break;
   default:

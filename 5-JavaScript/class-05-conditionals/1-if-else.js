@@ -1,19 +1,20 @@
 const userAge = 30;
+const hasCNH = true;
 
 if (userAge >= 18) {
-  console.log("Pode dirigir");
-} else {
-  console.log("Não pode dirigir");
-}
-
-if (age >= 18) {
   console.log("Maior de idade!");
 } else {
   console.log("Menor de idade!");
 }
 
-if (age >= 16) {
-  if (age >= 18 && age <= 70) {
+if (userAge >= 18 && hasCNH) {
+  console.log("Pode dirigir");
+} else {
+  console.log("Não pode dirigir");
+}
+
+if (userAge >= 16) {
+  if (userAge >= 18 && userAge <= 70) {
     console.log("Voto obrigatório!");
   } else {
     console.log("Voto facultativo!");

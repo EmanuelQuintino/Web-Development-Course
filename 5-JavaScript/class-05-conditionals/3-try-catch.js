@@ -1,12 +1,11 @@
-const runMyAplication = () => "Running Function..."
+const runMyAplication = () => "Running Function...";
 
 try {
-    console.log(runMyAplication())
+  console.log(runMyAplication());
 } catch (error) {
-    console.log(`My Test: ${error}`)
-}
-finally {
-    console.log(`Sempre será executado!`)
+  console.log(`My Test: ${error}`);
+} finally {
+  console.log(`Sempre será executado!`);
 }
 
-document.write("Rodando aplicação!")
+document.write("Rodando aplicação!");

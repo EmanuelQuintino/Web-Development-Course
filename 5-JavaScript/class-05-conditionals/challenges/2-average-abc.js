@@ -19,27 +19,22 @@ function averageCalculate(grade1, grade2) {
 }
 
 function abcConvert(average) {
-  let noteABC;
-
-  Number(average);
   if (average >= 90 && average <= 100) {
-    noteABC = "A";
-  } else if (average >= 80 && average <= 89) {
-    noteABC = "B";
-  } else if (average >= 70 && average <= 79) {
-    noteABC = "C";
-  } else if (average >= 60 && average <= 69) {
-    noteABC = "D";
-  } else if (average >= 0 && average <= 59) {
-    noteABC = "F";
+    return "A";
+  } else if (average >= 80 && average < 90) {
+    return "B";
+  } else if (average >= 70 && average < 80) {
+    return "C";
+  } else if (average >= 60 && average < 70) {
+    return "D";
+  } else if (average >= 0 && average < 60) {
+    return "F";
   } else {
-    noteABC = "Média inválida!";
+    return "Média inválida!";
   }
-
-  return noteABC;
 }
 
-let averageStudant = averageCalculate(80, "a90");
+let averageStudant = averageCalculate(80, "90");
 console.log(averageStudant);
 
 let abcAverage = abcConvert(averageStudant);
@@ -47,20 +42,20 @@ console.log(abcAverage);
 
 switch (abcAverage) {
   case "A":
-    alert("Excelente, aprovado com A!");
+    console.log("Excelente, aprovado com A!");
     break;
   case "B":
-    alert("Muito bem, aprovado com B!");
+    console.log("Muito bem, aprovado com B!");
     break;
   case "C":
-    alert("Aprovado com C!");
+    console.log("Aprovado com C!");
     break;
   case "D":
-    alert("Foi quase, reprovado com D!");
+    console.log("Foi quase, reprovado com D!");
     break;
   case "F":
-    alert("Precisa estudar mais, reprovado com F!");
+    console.log("Precisa estudar mais, reprovado com F!");
     break;
   default:
-    alert("Nota ABC Inválida!");
+    console.log("Nota ABC Inválida!");
 }

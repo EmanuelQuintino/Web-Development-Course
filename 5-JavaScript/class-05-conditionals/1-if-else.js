@@ -15,28 +15,12 @@ if (userAge >= 18 && hasCNH) {
   console.log("Não pode dirigir");
 }
 
-if (userAge >= 16) {
-  if (userAge >= 18 && userAge <= 70) {
-    console.log("Voto obrigatório!");
-  } else {
-    console.log("Voto facultativo!");
-  }
-} else {
-  console.log("Não pode votar!");
-}
+const average = 7;
 
-let money = window.prompt("Quanto você tem?");
-let price = window.prompt("Quanto custa a blusa?");
-
-if (money > price) {
-  window.alert("Está com preço bom, vou comprar!");
-} else if (money == price) {
-  window.alert("Vou ficar sem dinheiro mas compro a blusa!");
+if (average >= 7) {
+  console.log("Aprovado");
+} else if (average >= 5) {
+  console.log("Recuperação");
 } else {
-  let resp = window.prompt("Pode pegar dinheiro emprestado? (S/N)");
-  if (resp.toLowerCase() == "s") {
-    window.alert("Me individei mas comprei a blusa!");
-  } else {
-    window.alert("Muito caro, estou fora!");
-  }
+  console.log("Reprovado");
 }

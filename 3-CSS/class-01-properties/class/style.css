@@ -1,3 +1,13 @@
+@font-face {
+  font-family: myFontPokemon;
+  src: url("./pokemon/Pokemon\ Solid.ttf");
+}
+
+@font-face {
+  font-family: myFontPlayStation;
+  src: url("./zrnic/zrnic\ rg.otf");
+}
+
 body {
   width: 720px;
   margin: auto;
@@ -71,4 +81,15 @@ p {
   border-left: 70px solid transparent;
   border-right: 70px solid transparent;
   border-bottom: 105px solid orange;
+}
+
+#logoPokemon {
+  font-family: myFontPokemon;
+  font-size: 32px;
+  color: orange;
+}
+
+#logoPlayStation {
+  font-family: myFontPlayStation;
+  font-size: 32px;
 }

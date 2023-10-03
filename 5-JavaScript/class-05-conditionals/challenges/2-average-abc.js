@@ -1,5 +1,4 @@
-// Crie um algoritmo que tenha 3 funções que faça a média,
-// Transforme essa média para o sistema de caracteres ABC
+// Crie uma função para converter média para o sistema de caracteres ABC
 // Depois diga se o aluno foi aprovado (A, B e C) ou reprovado (D e F):
 // As funções devem funcionar com strings e notas inválidas devem retornar mensagem de erro.
 
@@ -9,10 +8,10 @@
 // D: 60 - 69
 // F:  < - 60
 
-function averageCalculate(note1, note2) {
-  let average = (Number(note1) + Number(note2)) / 2;
+function averageCalculate(grade1, grade2) {
+  let average = (Number(grade1) + Number(grade2)) / 2;
 
-  if (!average) {
+  if (isNaN(average)) {
     average = "Insira somente notas válidas!";
   }
 
@@ -40,39 +39,28 @@ function abcConvert(average) {
   return noteABC;
 }
 
-function estudantSituation(noteABC) {
-  let situation;
-
-  switch (noteABC) {
-    case "A":
-      situation = "Excelente, aprovado com A!";
-      break;
-    case "B":
-      situation = "Muito bem, aprovado com B!";
-      break;
-    case "C":
-      situation = "Aprovado com C!";
-      break;
-    case "D":
-      situation = "Foi quase, reprovado com D!";
-      break;
-    case "F":
-      situation = "Precisa estudar mais, reprovado com F!";
-      break;
-    default:
-      situation = "Nota ABC Inválida!";
-  }
-  return situation;
-}
-
-let note1 = 80;
-let note2 = "90";
-
-let averageStudant = averageCalculate(note1, note2);
+let averageStudant = averageCalculate(80, "a90");
 console.log(averageStudant);
 
 let abcAverage = abcConvert(averageStudant);
 console.log(abcAverage);
 
-let situation = estudantSituation(abcAverage);
-console.log(situation);
+switch (abcAverage) {
+  case "A":
+    alert("Excelente, aprovado com A!");
+    break;
+  case "B":
+    alert("Muito bem, aprovado com B!");
+    break;
+  case "C":
+    alert("Aprovado com C!");
+    break;
+  case "D":
+    alert("Foi quase, reprovado com D!");
+    break;
+  case "F":
+    alert("Precisa estudar mais, reprovado com F!");
+    break;
+  default:
+    alert("Nota ABC Inválida!");
+}

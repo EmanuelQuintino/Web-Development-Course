@@ -2,7 +2,7 @@ const runMyAplication = () => "Running Function...";
 
 try {
   console.log(runMyAplication());
-} catch (error) {
+} catch (error) { // hoisting 
   console.error(`My Test: ${error}`);
 } finally {
   console.log(`Sempre será executado!`);

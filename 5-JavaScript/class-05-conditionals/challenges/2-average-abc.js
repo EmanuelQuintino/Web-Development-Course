@@ -19,6 +19,10 @@ function averageCalculate(grade1, grade2) {
 }
 
 function abcConvert(average) {
+  if (typeof average === "string") {
+    average = Number(average.replace(",", "."));
+  }
+
   if (average >= 90 && average <= 100) {
     return "A";
   } else if (average >= 80 && average < 90) {

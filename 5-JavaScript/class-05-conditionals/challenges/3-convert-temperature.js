@@ -16,19 +16,19 @@ function degreeConvert(degree) {
     throw new Error("Valor inválido! Insira conforme exemplo: 10F ou 20C.");
   }
 
-  function convertToFahrenheit() {
+  function convertCelsiusToFahrenheit() {
     return ((newDegree * 9) / 5 + 32).toLocaleString("pt-BR") + "F";
   }
 
-  function convertToCelsius() {
+  function convertFahrenheitToCelsius() {
     return (((newDegree - 32) * 5) / 9).toLocaleString("pt-BR") + "C";
   }
 
   switch (scaleDegree) {
     case "C":
-      return convertToFahrenheit();
+      return convertCelsiusToFahrenheit();
     case "F":
-      return convertToCelsius();
+      return convertFahrenheitToCelsius();
     default:
       throw new Error("Escala não identificada, insira 'C' ou 'F': Ex: 10F ou 20C.");
   }

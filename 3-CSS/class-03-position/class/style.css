@@ -9,6 +9,47 @@ h1 {
   color: white;
 }
 
+.container {
+  width: 160px;
+  height: 160px;
+  position: fixed;
+  right: 8px;
+  top: 32px;
+  z-index: -1;
+  opacity: 0.1;
+}
+
+.square {
+  width: 80px;
+  height: 80px;
+  background: red;
+  padding: 8px;
+  color: white;
+}
+
+#squareX {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 1;
+}
+
+#squareY {
+  background: green;
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  z-index: 2;
+}
+
+#squareZ {
+  background: blue;
+  position: absolute;
+  top: 60px;
+  left: 60px;
+  z-index: 3;
+}
+
 h3 {
   position: sticky;
   top: 0px;
@@ -16,5 +57,5 @@ h3 {
 }
 
 section p {
-  padding: 32px;
+  margin: 24px;
 }

@@ -14,4 +14,7 @@ function fibonacciSequence(amount) {
   return array;
 }
 
-document.write(fibonacciSequence(10));
+const userAmount = Number(prompt("Digite quantos números de Fibonacci deseja imprimir:"));
+const resultFibonacciSequence = fibonacciSequence(userAmount);
+
+document.write(resultFibonacciSequence);

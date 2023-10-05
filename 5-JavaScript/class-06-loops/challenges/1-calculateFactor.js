@@ -1,9 +1,9 @@
 // Crie uma função para calcular o fatorial de um número
-// Solicite o número ao usuário via prompt
-// Escreva (write) na tela o resultado
+// Passe o número via argumento e use um FOR para operação
 
 function calculateFactor(number) {
   let result = 1;
+
   for (let i = number; i > 0; i--) {
     result *= i;
   }
@@ -14,6 +14,7 @@ function calculateFactor(number) {
   // return number * calculateFactor(number - 1);
 }
 
-const userNum = Number(prompt("Digite um número oara calcular seu fatorial:"));
+const userNumber = Number(prompt("Digite um número para calcular seu fatorial:"));
+const resultCalculateFactor = calculateFactor(userNumber);
 
-document.write(`O fatorial de ${userNum} é: ${calculateFactor(userNum)}`);
+document.write(`O fatorial de ${userNumber} é: ${resultCalculateFactor}`);

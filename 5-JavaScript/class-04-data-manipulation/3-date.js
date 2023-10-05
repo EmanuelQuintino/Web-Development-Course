@@ -1,4 +1,4 @@
-// Date Manipulation: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date
+// Reference: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date
 
 // new: left-hand-side expression
 let dateNow = new Date();

@@ -1,4 +1,4 @@
-// Array Manipulation: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array
+// Reference: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array
 
 const myArray = Array(1, "a", () => "A");
 

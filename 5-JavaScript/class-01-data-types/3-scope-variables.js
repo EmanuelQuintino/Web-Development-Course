@@ -1,4 +1,4 @@
-// https://developer.mozilla.org/en-US/docs/Glossary/Hoisting
+// Reference: https://developer.mozilla.org/en-US/docs/Glossary/Hoisting
 
 let num = "global";
 const pi = 3.14;

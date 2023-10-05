@@ -1,4 +1,4 @@
-// referência: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures
+// Reference: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures
 
 // Primitive Values : String, Number, Boolean...
 

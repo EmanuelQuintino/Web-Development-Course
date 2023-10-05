@@ -1,4 +1,4 @@
-// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals
+// Reference: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals
 
 let num1 = "10";
 let num2 = 20;

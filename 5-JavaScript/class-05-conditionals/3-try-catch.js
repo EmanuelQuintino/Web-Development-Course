@@ -1,8 +1,11 @@
+// Reference: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/try...catch
+
 const runMyAplication = () => "Running Function...";
 
 try {
   console.log(runMyAplication());
-} catch (error) { // hoisting 
+} catch (error) {
+  // hoisting
   console.error(`My Test: ${error}`);
 } finally {
   console.log(`Sempre será executado!`);

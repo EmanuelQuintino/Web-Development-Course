@@ -1,4 +1,4 @@
-// IF: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/if...else
+// Reference: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/if...else
 
 const userAge = 30;
 const hasCNH = true;

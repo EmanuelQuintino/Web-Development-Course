@@ -1,4 +1,4 @@
-//Switch: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/switch
+// Reference: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/switch
 
 const weekDay = new Date().getDay(); // 0-6
 

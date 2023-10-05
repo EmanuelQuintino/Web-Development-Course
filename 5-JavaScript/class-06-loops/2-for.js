@@ -1,6 +1,7 @@
 // Reference: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration
 
-for (let count = 0; count <= 10; count++) { /* increment factor */
+// increment factor
+for (let count = 0; count <= 10; count++) {
   if (count > 2 && count < 8) {
     continue;
     // break;
@@ -31,4 +32,16 @@ for (let i = 0; i < multArray.length; i++) {
   for (let j = 0; j < multArray[i].length; j++) {
     console.log(multArray[i][j]);
   }
+}
+
+const arrayLetters = ["A", "B", "C"];
+const objectPerson = { name: "Emanuel", age: 30 };
+
+// in - index
+for (const key of arrayLetters) {
+  console.log(key);
+}
+
+for (const key in objectPerson) {
+  console.log(key + ": " + object[key]);
 }

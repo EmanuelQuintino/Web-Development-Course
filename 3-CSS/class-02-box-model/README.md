@@ -17,6 +17,16 @@
     - Quando o top se junta com o bottom sem somar (Pega o margin maior)
     - Obs: Quando os elementos estão lado a lado somam-se as margens
 
+### Reset
+
+```css
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+```
+
 ### Shorthand:
 
 - 1px > top, right, bottom, left (1px)

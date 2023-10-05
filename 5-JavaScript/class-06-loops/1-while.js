@@ -1,6 +1,6 @@
 // Reference: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration
 
-let count = 10; //flag
+let count = 1; //flag
 while (count <= 10) {
   if (count > 2 && count < 8) {
     count++;
@@ -8,10 +8,7 @@ while (count <= 10) {
     // break;
   }
 
-  if (count % 2 == 0) {
-    console.log(count);
-  }
-
+  console.log(count);
   count++; // container
 }
 

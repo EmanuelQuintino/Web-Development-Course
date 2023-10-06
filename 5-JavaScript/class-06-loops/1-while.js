@@ -12,9 +12,24 @@ while (count <= 10) {
   count++; // container
 }
 
-let resp = false;
+count = 0;
+let noia = 1;
+while (noia <= 200) {
+  console.log(noia);
+  noia = count * 2;
+  count++;
+}
+
+let resp;
+while (true) {
+  resp = prompt("Deseja encerrar?");
+
+  if (resp) {
+    alert("Obrigado pela sua visita!");
+    break;
+  }
+}
+
 do {
   resp = prompt("Deseja sair?");
 } while (resp);
-
-console.log("Running...");

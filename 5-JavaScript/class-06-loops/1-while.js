@@ -13,10 +13,10 @@ while (count <= 10) {
 }
 
 count = 0;
-let noia = 1;
-while (noia <= 200) {
-  console.log(noia);
-  noia = count * 2;
+let aux = 1;
+while (aux <= 200) {
+  console.log(aux);
+  aux = count * 2;
   count++;
 }
 

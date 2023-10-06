@@ -1,7 +1,11 @@
+* {
+  margin: 0;
+}
+
 .container {
   border: 2px solid black;
   padding: 8px;
-  height: 80vh;
+  height: 100vh;
   display: flex;
   flex-direction: row;
   align-items: center;

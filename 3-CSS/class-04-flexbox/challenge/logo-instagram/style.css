@@ -5,10 +5,10 @@
 }
 
 .logoInstagram {
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh;
 }
 
 .background {
@@ -40,8 +40,8 @@
 .square {
   height: 240px;
   width: 240px;
-  border-radius: 30%;
   border: 24px solid white;
+  border-radius: 30%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -51,15 +51,15 @@
 .circle {
   height: 120px;
   width: 120px;
-  border-radius: 100%;
   border: 24px solid white;
+  border-radius: 100%;
 }
 
 .dot {
   height: 32px;
   width: 32px;
-  border-radius: 100%;
   background: white;
+  border-radius: 100%;
   position: absolute;
   top: 18px;
   right: 18px;

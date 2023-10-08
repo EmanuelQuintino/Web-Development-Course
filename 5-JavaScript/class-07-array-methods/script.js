@@ -1,8 +1,8 @@
 // ARRAYS (Methods) - Principle of Immutability
 
-const team = 'Brasil'
+const team = "Brasil";
 // const team = {name: 'Brasil', cups: 5}
-const teams = ['Brasil', 'Argentina', 'Portugal', 'Alemanha']
+const teams = ["Brasil", "Argentina", "Portugal", "Alemanha"];
 
 // >>>>>>>>> forEach <<<<<<<<<<
 // teams.forEach((value, index, array) => {
@@ -24,7 +24,7 @@ const teams = ['Brasil', 'Argentina', 'Portugal', 'Alemanha']
 
 // console.log(testReturnMap) // Immutable
 
-const real = [10, 20, 30, 40, 50]
+const real = [10, 20, 30, 40, 50];
 // const convertDollar = real.map((value) => value * 5.36)
 // console.log(convertDollar)
 // console.log(real)
@@ -43,18 +43,18 @@ const real = [10, 20, 30, 40, 50]
 // console.log(real.filter((value) => value < 40))
 
 const averageStudants = [
-    {id: 1, name: 'João', average: 4, birth: 1990},
-    {id: 2, name: 'Thiago', average: 6, birth: 2002},
-    {id: 3, name: 'Jonas', average: 5, birth: 1998},
-    {id: 4, name: 'Rosa', average: 9, birth: 2004},
-    {id: 5, name: 'Amanda', average: 8, birth: 1992},
-    {id: 6, name: 'Pedro', average: 7, birth: 1993},
-]
+  { id: 1, name: "João", average: 4, birth: 1990 },
+  { id: 2, name: "Thiago", average: 6, birth: 2002 },
+  { id: 3, name: "Jonas", average: 5, birth: 1998 },
+  { id: 4, name: "Rosa", average: 9, birth: 2004 },
+  { id: 5, name: "Amanda", average: 8, birth: 1992 },
+  { id: 6, name: "Pedro", average: 7, birth: 1993 },
+];
 
 // console.table(averageStudants.filter((studant) => studant.average >= 7));
 // console.table(averageStudants.filter(studant => studant.birth >= 2000))
 
-let yearCurrent = new Date().getFullYear()
+let yearCurrent = new Date().getFullYear();
 // console.log(yearCurrent);
 
 // console.table(averageStudants.filter(studant => (yearCurrent - studant.birth) >= 30))
@@ -68,20 +68,24 @@ let yearCurrent = new Date().getFullYear()
 // >>>>>>> Sort <<<<<<<<
 // Table ASCII (0-9, A-Z, a-z)
 
-const numArray = [2, "2", 2, 1, 5, 19, 10, 20]
+const numArray = [2, "2", 2, 1, 5, 19, 10, 20];
 // console.log(numArray.sort((a, b) => a - b))
 
 // console.table(averageStudants.sort((a, b) => b.average - a.average))
 
-console.table(averageStudants.sort((a, b) => {
+console.table(
+  averageStudants.sort((a, b) => {
     if (a.name > b.name) return 1;
     if (a.name < b.name) return -1;
     return 0;
-}))
+  })
+);
 
 // >>>>>> Concat <<<<<<
-console.log(numArray.concat(real).sort((a, b) => a - b))
-
+console.log(numArray.concat(real).sort((a, b) => a - b));
 
 // Exercise
-Array.from({length:25}, (v, i) => i + 1).sort(() => Math.random() - 0.5).filter((v, i) => i < 15).sort((a, b) => a - b)
+Array.from({ length: 25 }, (v, i) => i + 1)
+  .sort(() => Math.random() - 0.5)
+  .filter((v, i) => i < 15)
+  .sort((a, b) => a - b);

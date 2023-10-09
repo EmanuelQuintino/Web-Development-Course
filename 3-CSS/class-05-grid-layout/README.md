@@ -15,12 +15,6 @@ grid-template-rows: repeat(5, 72px);
 
 gap: 16px 8px;
 
-justify-content: center;
-align-content: start;
-
-justify-items: end;
-align-items: center;
-
 grid-column: 1 / 3;
 grid-row: 1 / 2;
 
@@ -35,6 +29,20 @@ grid-template-areas:
 Obs: Usar grid-area nos elementos com os nomes escolhidos;
 
 ## Alignment
+
+```css
+align-content: start;
+justify-content: center;
+place-content: center;
+
+align-items: center;
+justify-items: end;
+place-items: center;
+
+align-self: center;
+justify-self: end;
+place-self: center;
+```
 
 - Sabendo que o Grid é bidimensional podemos trabalhar nos eixos X (justify) e Y (aling)
 - O "content" nos permite alinhar o Grid, relativo ao próprio espaço de fora quando menor que a área definida

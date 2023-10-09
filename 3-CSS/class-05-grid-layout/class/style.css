@@ -21,11 +21,13 @@ body {
   grid-template-columns: 128px 128px;
   grid-template-rows: repeat(5, 72px);
 
-  justify-content: center;
   align-content: center;
+  justify-content: center;
+  place-content: center;
 
-  /* justify-items: center; */
   /* align-items: center; */
+  /* justify-items: center; */
+  /* place-items: center; */
 
   gap: 8px 16px;
 }

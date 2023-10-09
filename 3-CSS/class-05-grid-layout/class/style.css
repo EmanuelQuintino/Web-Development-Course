@@ -25,9 +25,9 @@ body {
   justify-content: center;
   place-content: center;
 
-  /* align-items: center; */
-  /* justify-items: center; */
-  /* place-items: center; */
+  align-items: center;
+  justify-items: center;
+  place-items: stretch;
 
   gap: 8px 16px;
 }

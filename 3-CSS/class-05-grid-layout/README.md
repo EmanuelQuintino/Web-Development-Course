@@ -37,7 +37,7 @@ place-content: center;
 
 align-items: center;
 justify-items: end;
-place-items: center;
+place-items: stretch;
 
 align-self: center;
 justify-self: end;

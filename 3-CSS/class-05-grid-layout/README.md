@@ -25,11 +25,11 @@ grid-column: 1 / 3;
 grid-row: 1 / 2;
 
 grid-template-areas:
-  "Header Header"
-  "Main   Aside"
-  ".      Aside"
-  ".      Aside"
-  "Footer Footer";
+  "Header Header" 240px
+  "Main   Aside" 1fr
+  ".      Aside" 1fr
+  ".      Aside" 1fr
+  "Footer Footer" 120px / 1fr 240px;
 ```
 
 Obs: Usar grid-area nos elementos com os nomes escolhidos;

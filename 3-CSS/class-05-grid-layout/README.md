@@ -32,7 +32,7 @@ Obs: Usar grid-area nos elementos com os nomes escolhidos;
 
 ```css
 align-content: start;
-justify-content: center;
+justify-content: space-around;
 place-content: center;
 
 align-items: center;

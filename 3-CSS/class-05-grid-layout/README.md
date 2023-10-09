@@ -30,6 +30,11 @@ Obs: Usar grid-area nos elementos com os nomes escolhidos;
 
 ## Alignment
 
+- Sabendo que o Grid é bidimensional podemos trabalhar nos eixos X (justify) e Y (aling)
+- O "content" nos permite alinhar o Grid, relativo ao próprio espaço de fora quando menor que a área definida
+- O "items" nos permite alinhar o conteúdo do grid
+- O "self" permite alinhar o conteúdo do próprio filho no grid
+
 ```css
 align-content: start;
 justify-content: space-around;
@@ -43,11 +48,6 @@ align-self: center;
 justify-self: end;
 place-self: center;
 ```
-
-- Sabendo que o Grid é bidimensional podemos trabalhar nos eixos X (justify) e Y (aling)
-- O "content" nos permite alinhar o Grid, relativo ao próprio espaço de fora quando menor que a área definida
-- O "items" nos permite alinhar o conteúdo do grid
-- O "self" permite alinhar o conteúdo do próprio filho no grid
 
 ## Links
 

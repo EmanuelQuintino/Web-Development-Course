@@ -19,8 +19,8 @@ for (let index = 0; index < array.length; index++) {
 }
 
 const multArray = [
+  ["A", "B", "C"],
   [1, 2, 3],
-  ["a", "b", "c"],
   [[], {}, () => "X"],
 ];
 
@@ -34,14 +34,19 @@ for (let i = 0; i < multArray.length; i++) {
   }
 }
 
-const arrayLetters = ["A", "B", "C"];
 const objectPerson = { name: "Emanuel", age: 30 };
 
 // in - index
-for (const key of arrayLetters) {
-  console.log(key);
+for (const i of array) {
+  console.log(i);
+}
+
+for (const i of multArray) {
+  for (const j of i) {
+    console.log(j);
+  }
 }
 
 for (const key in objectPerson) {
-  console.log(key + ": " + object[key]);
+  console.log(key + ": " + objectPerson[key]);
 }

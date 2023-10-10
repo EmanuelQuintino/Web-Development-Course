@@ -1,5 +1,5 @@
-// Crie um algoritmo que adivinhe um número de 1 a 10
-// Capture o número de tentativas enquando não acertar
+// Crie um jogo que adivinhe um número de 1 a 10
+// O jogo encerra quando acertar o número e apresenta quantas tentativas levou
 // O programa deve ser encerrado caso o usuário clique em cancelar
 
 const numberRandom = Math.ceil(Math.random() * 10);

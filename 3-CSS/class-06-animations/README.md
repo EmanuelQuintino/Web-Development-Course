@@ -23,15 +23,6 @@
 
 ```css
 @keyframes animationName {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes animationName {
   0% {
     transform: scale(1);
   }
@@ -42,6 +33,15 @@
 
   100% {
     transform: scale(1);
+  }
+}
+
+@keyframes animationName {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
   }
 }
 ```

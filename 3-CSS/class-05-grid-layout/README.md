@@ -13,6 +13,8 @@ grid-template-rows: 10% 50% 1fr 1fr 10%;
 grid-template-columns: 128px 128px;
 grid-template-rows: repeat(5, 72px);
 
+column-gap: 2%;
+row-gap: 12px;
 gap: 16px 8px;
 
 grid-column: 1 / 3;

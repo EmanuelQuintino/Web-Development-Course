@@ -48,4 +48,5 @@
 
 ## Links
 
+- [transition](https://developer.mozilla.org/en-US/docs/Web/CSS/transition)
 - [animation](https://developer.mozilla.org/en-US/docs/Web/CSS/animation)

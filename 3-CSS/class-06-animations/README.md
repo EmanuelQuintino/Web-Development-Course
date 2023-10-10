@@ -3,11 +3,20 @@
 ## Transition
 
 ```css
-transition-property: background-color, transform;
-transition-duration: 3s;
-transition-delay: 3s;
-transition-timing-function: ease-in-out;
-transition: background-color 1s 1s ease-in, transform 3s 1s ease-out;
+.element {
+  transition-property: background-color, transform, border-radius;
+  transition-duration: 3s;
+  transition-delay: 2s;
+  transition-timing-function: ease-in-out;
+  transition: background-color 2s 1s ease-in, transform 2s 1s ease-out,
+    border-radius 3s 1s;
+}
+
+.element:hover {
+  background-color: teal;
+  transform: scale(1.5);
+  border-radius: 100%;
+}
 ```
 
 ## @keyframes

@@ -8,7 +8,7 @@ body {
 }
 
 h1 {
-  animation: slide 2s;
+  animation: slideTopDown 2s;
   animation-fill-mode: forwards;
 }
 
@@ -63,7 +63,7 @@ p {
   }
 }
 
-@keyframes slide {
+@keyframes slideTopDown {
   from {
     opacity: 0;
     transform: translateY(-100%);

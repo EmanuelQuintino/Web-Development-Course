@@ -1,3 +1,5 @@
+// Reference: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array
+
 const teams = ["Brasil", "Argentina", "Portugal", "Alemanha"];
 
 teams.forEach((value, index, array) => {

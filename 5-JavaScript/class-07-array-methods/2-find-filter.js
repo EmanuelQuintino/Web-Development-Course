@@ -1,3 +1,5 @@
+// Reference: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array
+
 const averageStudants = [
   { id: 1, name: "João", average: 4, birth: 1990 },
   { id: 2, name: "Thiago", average: 6, birth: 2002 },

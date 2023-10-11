@@ -3,6 +3,15 @@
 let num1 = 7.93467;
 let num2 = -5249582749582489795578;
 
+console.log(Number(""));
+console.log(Number(" "));
+console.log(Number("a"));
+console.log(Number(null));
+console.log(Number(true));
+console.log(Number(false));
+console.log(Number(undefined)); // not valid value
+console.log(isNaN(num1));
+
 console.log(num1);
 console.log(parseInt(num1));
 console.log(parseInt(num2)); // limited

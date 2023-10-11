@@ -36,30 +36,30 @@ div {
   /* font-size: 1.6rem; */
 }
 
-@media (max-width: 2048px) {
-  main {
-    background: peru;
-  }
-}
-
-@media (max-width: 1024px) {
-  main {
-    background: steelblue;
-  }
-}
-
-@media (max-width: 720px) {
-  main {
-    background: sienna;
-  }
-}
-
-@media (max-width: 420px) {
+@media (min-width: 420px) {
   main {
     background: teal;
   }
 
   .boxImage img {
     aspect-ratio: 1/1;
+  }
+}
+
+@media (min-width: 720px) {
+  main {
+    background: sienna;
+  }
+}
+
+@media (min-width: 1024px) {
+  main {
+    background: steelblue;
+  }
+}
+
+@media (min-width: 1500px) {
+  main {
+    background: peru;
   }
 }

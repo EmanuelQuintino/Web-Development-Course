@@ -35,6 +35,18 @@ p {
   border-radius: 100%;
 }
 
+input[type="text"] {
+  border: 0;
+  background: #eee;
+  border-radius: 4px;
+  margin-top: 24px;
+  padding: 8px;
+}
+
+input:focus {
+  outline: 2px solid lightgray;
+}
+
 .spinner {
   margin-top: 24px;
   width: 48px;

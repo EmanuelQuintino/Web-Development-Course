@@ -1,26 +1,28 @@
 // Reference: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array
 
-const teams = ["Brasil", "Argentina", "Portugal", "Alemanha"];
+const array = ["Matrix", "IT", "ET", "Jumanji", "Barbie"];
 
-teams.forEach((value, index, array) => {
-  console.log({ value, index, array });
+console.log(array);
+
+const arrayForEach = array.forEach((value, index, array) => {
+  // array[index] = "A";
+  return { value, index, array };
 });
 
-const teamArray = Array.from(team);
-const testReturnForEach = teamArray.forEach((value, index, array) => {
-  console.log(value, index, array);
+console.log(arrayForEach);
+
+// Immutable
+
+/*⭐*/ const arrayMap = array.map((value, index, array) => {
+  return { value, index, array };
 });
 
-console.log(testReturnForEach); // no return
+console.log(array);
+console.log(arrayMap);
 
-/*⭐*/ let testReturnMap = teamArray.map((team, index, array) => {
-  console.log(team, index, array);
-  return [team, index, array];
-});
+const dollar = [1, 2, 3000, 40, 50];
 
-console.log(testReturnMap); // Immutable
+const realConverted = dollar.map((value) => value * 5.05);
 
-const real = [10, 20, 30, 40, 50];
-const convertDollar = real.map((value) => value * 5.36);
-console.log(convertDollar);
-console.log(real);
+console.log(dollar);
+console.log(realConverted);

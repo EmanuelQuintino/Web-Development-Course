@@ -3,7 +3,7 @@
 const teams = ["Brasil", "Argentina", "Portugal", "Alemanha"];
 
 teams.forEach((value, index, array) => {
-  console.log(value, index, array);
+  console.log({ value, index, array });
 });
 
 const teamArray = Array.from(team);
@@ -13,7 +13,7 @@ const testReturnForEach = teamArray.forEach((value, index, array) => {
 
 console.log(testReturnForEach); // no return
 
-let testReturnMap = teamArray.map((team, index, array) => {
+/*⭐*/ let testReturnMap = teamArray.map((team, index, array) => {
   console.log(team, index, array);
   return [team, index, array];
 });

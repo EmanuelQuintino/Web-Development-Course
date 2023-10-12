@@ -25,10 +25,9 @@
 */
 
 const listItens = [];
-let menuOption;
 
 while (true) {
-  menuOption = prompt(`
+  const menuOption = prompt(`
     Digite a opção desejada:
 
     1 - Cadastrar item

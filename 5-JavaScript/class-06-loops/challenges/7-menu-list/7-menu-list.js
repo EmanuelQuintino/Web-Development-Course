@@ -30,10 +30,10 @@ while (true) {
   const menuOption = prompt(`
     Digite a opção desejada:
 
-    1 - Cadastrar item
-    2 - Ver itens cadastrados
-    3 - Remover item cadastrado
-    4 - Sair do programa
+      1 - Cadastrar item
+      2 - Ver itens cadastrados
+      3 - Remover item cadastrado
+      4 - Sair do programa
     `);
 
   if (menuOption === "4" || menuOption === null) {
@@ -54,8 +54,10 @@ while (true) {
           break;
         }
 
+        addItem = addItem.trim().split(" ").filter(Boolean).join(" ");
+
         if (addItem === "") {
-          alert("Digite o nome para cadastrar.");
+          alert("Por favor, digite o nome para cadastrar.");
           continue;
         }
 
@@ -63,7 +65,7 @@ while (true) {
           alert("Item já cadastrado!");
         } else {
           listItens.push(addItem);
-          alert(`"${addItem}" cadastrado com sucesso!`);
+          alert(`"${addItem}" cadastrado(a) com sucesso!`);
         }
       }
       break;

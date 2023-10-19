@@ -48,30 +48,28 @@ while (true) {
   switch (menuOption) {
     case "1":
       while (true) {
-        let addItem = prompt("Digite o nome do item para adicionar:");
+        let addItemName = prompt("Digite o nome do item para adicionar:");
 
-        if (addItem === null) {
-          break;
-        }
+        if (addItemName === null) break;
 
-        addItem = addItem.trim().split(" ").filter(Boolean).join(" ");
+        addItemName = addItemName.trim().split(" ").filter(Boolean).join(" ");
 
-        if (addItem === "") {
+        if (addItemName === "") {
           alert("Por favor, digite o nome para cadastrar.");
           continue;
         }
 
-        if (listItens.includes(addItem)) {
+        if (listItens.includes(addItemName)) {
           alert("Item já cadastrado!");
         } else {
-          listItens.push(addItem);
-          alert(`"${addItem}" cadastrado(a) com sucesso!`);
+          listItens.push(addItemName);
+          alert(`"${addItemName}" cadastrado(a) com sucesso!`);
         }
       }
       break;
 
     case "2":
-      if (listItens.length == 0) {
+      if (listItens.length === 0) {
         alert("Lista vazia!");
       } else {
         alert(listItens.join("-"));
@@ -79,37 +77,38 @@ while (true) {
       break;
 
     case "3":
-      if (listItens.length == 1) {
-        alert(`Item "${listItens[0]}" foi removido com sucesso!`);
-        listItens.pop();
+      if (listItens.length === 1) {
+        const removeItemName = listItens.pop();
+        alert(`Item "${removeItemName}" foi removido com sucesso!`);
         break;
       }
 
       while (true) {
-        if (listItens.length == 0) {
+        if (listItens.length === 0) {
           alert("Lista vazia!");
           break;
         } else {
-          let removeItem = prompt("Digite o nome do item para remover:");
+          let removeItemName = prompt("Digite o nome do item para remover:");
 
-          if (removeItem == null) {
-            break;
-          }
+          if (removeItemName === null) break;
 
-          if (removeItem == "") {
+          removeItemName = removeItemName.trim().split(" ").filter(Boolean).join(" ");
+
+          if (removeItemName === "") {
             alert("Por favor, insira o nome para remover.");
             continue;
           }
 
-          if (listItens.includes(removeItem)) {
-            listItens.splice(listItens.indexOf(removeItem), 1);
-            alert(`"${removeItem}" foi removido com sucesso!`);
+          if (listItens.includes(removeItemName)) {
+            listItens.splice(listItens.indexOf(removeItemName), 1);
+            alert(`"${removeItemName}" foi removido com sucesso!`);
           } else {
             alert("Item não encontrado!");
           }
         }
       }
       break;
+
     default:
       alert("Opção Inválida!");
   }

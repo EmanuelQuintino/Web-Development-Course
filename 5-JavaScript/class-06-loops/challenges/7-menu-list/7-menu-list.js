@@ -36,9 +36,7 @@ while (true) {
       4 - Sair do programa
     `);
 
-  if (menuOption === "4" || menuOption === null) {
-    break;
-  }
+  if (menuOption === "4" || menuOption === null) break;
 
   if (menuOption === "") {
     alert("Por favor escolha alguma das opções.");

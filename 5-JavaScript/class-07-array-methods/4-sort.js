@@ -1,4 +1,4 @@
-// Reference: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array
+// Reference: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort
 
 const numArray = [2, "2", 2, 1, 5, 19, 10, 20];
 

@@ -33,7 +33,11 @@ const rectangles = [
 ];
 
 const calculatedAreas = rectangles.map((rectangle) => {
-  return { area: rectangle.width * rectangle.height };
+  return {
+    name: `Retângulo ${index + 1}`,
+    area: value.width * value.height,
+  };
 });
 
 console.log(calculatedAreas);
+console.table(calculatedAreas);

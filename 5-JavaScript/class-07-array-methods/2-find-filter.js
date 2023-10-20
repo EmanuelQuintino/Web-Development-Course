@@ -1,6 +1,6 @@
 // Reference: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array
 
-const studants = [
+const students = [
   { id: 1, name: "João", average: 6, birth: 2005 },
   { id: 2, name: "Thiago", average: 6, birth: 2002 },
   { id: 3, name: "Jonas", average: 5, birth: 1998 },

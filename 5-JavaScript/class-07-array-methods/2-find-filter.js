@@ -12,11 +12,11 @@ const students = [
 const currentYear = new Date().getFullYear();
 console.log(currentYear);
 
-console.log(studants.find((student) => student.id === 3));
-console.log(studants.find((studant) => studant.name === "Amanda"));
-console.log(studants.find((studant) => studant.average >= 7));
+console.log(students.find((student) => student.id === 3));
+console.log(students.find((studant) => studant.name === "Amanda"));
+console.log(students.find((studant) => studant.average >= 7));
 
-console.table(studants.filter((studant) => studant.average >= 7));
-console.table(studants.filter((studant) => studant.birth >= 2000));
-console.table(studants.filter((studant) => currentYear - studant.birth <= 18));
-console.table(studants.filter((studant) => studant.name.includes("d")));
+console.table(students.filter((studant) => studant.average >= 7));
+console.table(students.filter((studant) => studant.birth >= 2000));
+console.table(students.filter((studant) => currentYear - studant.birth <= 18));
+console.table(students.filter((studant) => studant.name.includes("d")));

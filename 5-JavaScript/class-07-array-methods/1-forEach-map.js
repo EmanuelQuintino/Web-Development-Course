@@ -32,7 +32,7 @@ const rectangles = [
   { width: 2, height: 8 },
 ];
 
-const calculatedAreas = rectangles.map((rectangle) => {
+const calculatedAreas = rectangles.map((value, index) => {
   return {
     name: `Retângulo ${index + 1}`,
     area: value.width * value.height,

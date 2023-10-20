@@ -76,8 +76,8 @@ while (true) {
 
     case "3":
       if (listItens.length === 1) {
-        const removeItemName = listItens.pop();
-        alert(`Item "${removeItemName}" foi removido com sucesso!`);
+        const removedItemName = listItens.pop();
+        alert(`Item "${removedItemName}" foi removido com sucesso!`);
         break;
       }
 

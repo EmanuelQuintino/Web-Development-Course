@@ -8,7 +8,10 @@ const students = [
   { id: 3, name: "Jonas", average: 5, birth: 1998 },
   { id: 4, name: "Rosa", average: 9, birth: 2004 },
   { id: 5, name: "Amanda", average: 8, birth: 1992 },
-  { id: 7, name: "Pedro", average: 7, birth: 2000 },
+  { id: 6, name: "Pedro", average: 7, birth: 1998 },
+  { id: 7, name: "Pedro", average: 6, birth: 2000 },
+  { id: 8, name: "Dudu", average: 8, birth: 2007 },
+  { id: 9, name: "Nathan", average: 10, birth: 2006 },
 ];
 
 console.log(

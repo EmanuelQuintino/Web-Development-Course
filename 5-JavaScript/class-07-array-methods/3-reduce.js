@@ -1,4 +1,4 @@
-// Reference: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array
+// Reference: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce
 
 let initial = 200;
 const sumReal = real.reduce((a, b) => a + b, initial);

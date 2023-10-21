@@ -13,8 +13,8 @@ const arrayForEach = array.forEach((value, index, array) => {
 
 console.log(arrayForEach);
 
-// Immutable
-/*⭐*/ const arrayMap = array.map((value, index, array) => {
+// Immutable ⭐
+const arrayMap = array.map((value, index, array) => {
   return { value, index, array };
 });
 

@@ -34,8 +34,8 @@ console.log(
 
 console.log(students.find((student) => student.average >= 7));
 
-// Immutable
-/*⭐*/ console.table(students.filter((student) => student.average >= 7));
+// Immutable ⭐
+console.table(students.filter((student) => student.average >= 7));
 
 console.log(students);
 

@@ -47,11 +47,11 @@ console.log(indexSlice);
 
 const arrayLetters = ["A", "B", "C", "D", "E", "F"];
 
-const sliceNewArray = arrayLetters.slice(1, -3); // create new array
+const sliceNewArray = arrayLetters.slice(1, -3); // new array
 console.log(sliceNewArray);
 console.log(arrayLetters);
 
-const spliceNewArray = arrayLetters.splice(-2, 2); // modify array
+const spliceNewArray = arrayLetters.splice(-2, 2); // modify
 console.log(spliceNewArray);
 console.log(arrayLetters);
 

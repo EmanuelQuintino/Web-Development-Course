@@ -6,17 +6,40 @@ const students = [
   { id: 3, name: "Jonas", average: 5, birth: 1998 },
   { id: 4, name: "Rosa", average: 9, birth: 2004 },
   { id: 5, name: "Amanda", average: 8, birth: 1992 },
-  { id: 6, name: "Pedro", average: 7, birth: 1998 },
+  { id: 7, name: "Pedro", average: 7, birth: 2000 },
 ];
+
+console.log(
+  students.find((value) => {
+    return value.id === 6 || value.id === 5;
+  })
+);
+
+console.log(
+  students.find((value) => {
+    return value.name === "Jonas" && value.name === "Rosa";
+  })
+);
+
+console.log(
+  students.find((value) => {
+    return value.name === "Pedro" && value.birth > 1998;
+  })
+);
+
+console.log(students.find((student) => student.average >= 7));
+
+// Immutable
+/*⭐*/ console.table(students.filter((student) => student.average >= 7));
+
+console.log(students);
 
 const currentYear = new Date().getFullYear();
 console.log(currentYear);
 
-console.log(students.find((student) => student.id === 3));
-console.log(students.find((studant) => studant.name === "Amanda"));
-console.log(students.find((studant) => studant.average >= 7));
+console.table(students.filter((student) => student.birth >= 2000));
+console.table(students.filter((student) => currentYear - student.birth <= 18));
+console.table(students.filter((student) => student.name.includes("d")));
 
-console.table(students.filter((studant) => studant.average >= 7));
-console.table(students.filter((studant) => studant.birth >= 2000));
-console.table(students.filter((studant) => currentYear - studant.birth <= 18));
-console.table(students.filter((studant) => studant.name.includes("d")));
+const userName = prompt("Digite o nome:");
+console.log(students.filter((value) => value.name.includes(userName)));

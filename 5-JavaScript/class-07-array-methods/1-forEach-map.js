@@ -47,7 +47,7 @@ console.table(calculatedAreas);
 const arrayNames = ["joão", "emanuel", "vieira", "quintino"];
 
 const capitalizeNames = arrayNames.map((name) => {
-  return name.split("")[0].toUpperCase() + name.slice(1);
+  return name[0].toUpperCase() + name.slice(1);
 });
 
 console.log(capitalizeNames.join(" "));

@@ -42,7 +42,7 @@ console.log(arrayNumbers);
 
 const arrayAnimes = [
   { name: "Cavaleiros do Zodíaco", year: 1986 },
-  { name: "Dragon Ball Z", year: 1984 },
+  { name: "Dragon Ball", year: 1984 },
   { name: "Digimon", year: 1997 },
   { name: "Naruto", year: 1997 },
 ];
@@ -54,3 +54,6 @@ console.table(
     return 0;
   })
 );
+
+console.table(arrayAnimes.sort((a, b) => a.year - b.year));
+console.table(arrayAnimes);

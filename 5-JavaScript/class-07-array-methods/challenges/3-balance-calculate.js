@@ -1,6 +1,6 @@
 // Crie uma lógica para calcular o somatório das Receitas e das Despesas abaixo
 // Imprima os somatórios e o saldo formatado no padão brasileiro,
-// Informe se a situação está Positiva ou Negativa e se existe dívidas.
+// Informe se a situação está positiva ou negativa e se existe dívidas.
 
 const incomes = ["salary", "R$ 2000,00", "commission", "R$ 825,45", "bônus", "R$ 320,00"];
 

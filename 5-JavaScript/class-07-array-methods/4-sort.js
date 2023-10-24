@@ -2,9 +2,10 @@
 
 const arrayNumbers = [2, "2", 1, 5, 2, 4, 3, 10];
 
-// Table ASCII (0-9, A-Z, a-z)
-arrayNumbers.sort();
+// Lexicographic Order (Unicode)
+const arrayNumbersSorted = arrayNumbers.sort();
 
+// Table ASCII (0-9, A-Z, a-z)
 arrayNumbers.sort((a, b) => {
   if (a < b) return -1;
   if (a > b) return 1;
@@ -13,9 +14,10 @@ arrayNumbers.sort((a, b) => {
 
 arrayNumbers.sort((a, b) => b - a);
 
-console.log(arrayNumbers);
+console.log(arrayNumbersSorted.join("-"));
+console.log(arrayNumbers.join("-"));
 
-const arrayNames = ["Emanuel", "Ana", "Pedro", "gato", "casa", "Érica"];
+const arrayNames = ["Pedinho", "eduardo", "Luíza", "Éric"];
 
 arrayNames.sort();
 arrayNames.sort((a, b) => a - b);
@@ -28,19 +30,21 @@ arrayNames.sort((a, b) => {
   return 0;
 });
 
-arrayNames.sort((a, b) => a.localeCompare(b));
-console.log(arrayNames);
-
-// Lexicographic Order (Unicode)
 console.log("A" < "B");
 console.log("A".charCodeAt());
 console.log("B".charCodeAt());
 
+arrayNames.sort((a, b) => a.localeCompare(b));
+console.log(arrayNames);
+
+arrayNumbers.sort((a, b) => String(a).localeCompare(b)); // not work
+console.log(arrayNumbers);
+
 const arrayAnimes = [
-  { name: "Cavaleiros do Zodíaco", year: 1985 },
-  { name: "Dragon Ball Z", year: 1989 },
-  { name: "Digimon", year: 2000 },
-  { name: "Naruto", year: 2004 },
+  { name: "Cavaleiros do Zodíaco", year: 1986 },
+  { name: "Dragon Ball Z", year: 1984 },
+  { name: "Digimon", year: 1997 },
+  { name: "Naruto", year: 1997 },
 ];
 
 console.table(

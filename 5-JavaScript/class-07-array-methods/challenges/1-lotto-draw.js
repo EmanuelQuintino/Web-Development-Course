@@ -4,7 +4,8 @@
 
 const lottoDraw = Array.from({ length: 25 }, (value, index) => index + 1)
   .sort(() => Math.random() - 0.5)
-  .findexlter((value, index) => index < 15)
-  .sort((a, b) => a - b);
+  .filter((value, index) => index < 15)
+  .sort((a, b) => a - b)
+  .join("-");
 
-console.log(lottoDraw.join("-"));
+console.log(lottoDraw);

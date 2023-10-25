@@ -16,9 +16,9 @@ const expenses = [
 ];
 
 const incomeValues = incomes.filter((value) => value.includes("R$"));
-const incomeValuesNumber = incomeValues.map((income) =>
-  Number(income.replace("R$ ", "").replace(",", "."))
-);
+const incomeValuesNumber = incomeValues.map((income) => {
+  return Number(income.replace("R$ ", "").replace(",", "."));
+});
 const incomesSum = incomeValuesNumber.reduce((a, b) => a + b, 0);
 
 const expensesValues = expenses.filter((value) => value.includes("R$"));
@@ -34,14 +34,24 @@ if (resultBalance > 0) {
   statusBalance = "Existe um superávit. Invista o dinheiro!";
 } else if (resultBalance < 0) {
   statusBalance = "Foi gasto todo dinheiro e existe dívidas!";
-} else {
+} else if (resultBalance == 0) {
   statusBalance = "Foi gasto todo dinheiro, mas não existe dívidas!";
 }
 
-console.log(`Gastos: ${incomesSum.toLocaleString("pt-br", {
-  style: "currency",
-  currency: "brl",
-})}
-Despesas: ${expensesSum.toLocaleString("pt-br", { style: "currency", currency: "brl" })}
+console.log(
+  `Gastos: ${incomesSum.toLocaleString("pt-br", {
+    style: "currency",
+    currency: "brl",
+  })}`
+);
+
+console.log(
+  `Despesas: ${expensesSum.toLocaleString("pt-br", {
+    style: "currency",
+    currency: "brl",
+  })}`
+);
+
+console.log(`
 Saldo: ${resultBalance.toLocaleString("pt-br", { style: "currency", currency: "brl" })}
 ${statusBalance}.`);

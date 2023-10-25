@@ -1,78 +1,92 @@
-// Questão 1 (Data Manipulation)
-// Adicione a lógica para reverter texto na função abaixo:
+// Questão 1 (Data Types):
+// Declare as seguntes variáveis e atribua os valores por tipo:
+// Sting, Number, Boolean, Function, Array, Object
 
-// function reverseText(text) {
-//   return text;
-// }
+let number = 1;
+let sting = "1";
+let boolean = true;
+let myFunction = () => {};
+let array = [];
+let object = {};
 
-// console.log(reverseText("Web Development Course"));
+// Questão 2 (Operators):
+// Imprima as operações de soma, subtração, multiplicação, divisão,
+// resto da divisão e potenciação de 12 e 3 e raiz quadrada de 144;
 
-function reverseText(text) {
-  let revertedText = text.split("").reverse().join("")
-  return revertedText;
+console.log(12 + 3);
+console.log(12 - 3);
+console.log(12 * 3);
+console.log(12 / 3);
+console.log(12 % 3);
+console.log(12 ** 3);
+console.log(144 ** (1 / 2));
+
+// Questão 3 (Functions):
+// Crie e execute uma função de nome 'test" que retorne "JavaScript" concatenado com um valor passado como argumento e imprima seu retorno.
+
+function test(value) {
+  return "JavaScript " + value;
 }
 
-// console.log(reverseText("Web Development Course"));
+console.log(test("test"));
 
+// Questão 4 (Data Manipulation):
+// Usando os métodos FIFO e LIFO, crie um array com 3 valos e posteriormente
+// insira mais um valor no final e substitua o do início por outro.
 
-// Questão 2 (Data Manipulation)
-// Adicione a lógica para reverter apenas as letras na função abaixo:
+const list = ["A", "B", "C"];
+list.push("D");
+list.shift();
+list.unshift("E");
+console.log(list);
 
-// function reverseLetters(string) {
-//   return string;
-// }
+// Questão 5 (for):
+// Liste todos os valores do array criado na questão anterior ultilizando o for.
 
-// console.log(reverseLetters("z<*zj"));
-// result: j<*zz
-
-function reverseLetters(string) {
-  let revertedString = [...string].map((letter) => letter)
-  return revertedString;
+for (let index = 0; index < list.length; index++) {
+  console.log(list[index]);
 }
 
-// console.log(reverseLetters("z<*zj"));
-
-
-// Questão 3 (Asynchronism)
-// Corrija o código abaixo para imprimir - respectivamente - Start, Timeout e Finish:
-
-// const delay = () => setTimeout(() => {
-//   console.log("Timeout");
-// }, 3000);
-
-// async function main() {
-//   console.log("Start");
-//   await delay();
-//   console.log("Finish");
-// }
-
-// main();
-
-const delay = () => new Promise((resolve) => {
-  setTimeout(() => {
-    resolve(console.log("Timeout"));
-  }, 2000)
-})
-
-async function main() {
-  // console.log("Start");
-  // await delay();
-  // console.log("Finish");
+for (const value of list) {
+  console.log(value);
 }
 
-main();
+// Questão 6 (while):
+// Escreva os números de 0 a 500 sem os que pertencem à familía do 200 e do 300:
 
-// Questão 4 (Array manipulation)
-// Faça uma função que receba um array de números inteiros e imprima a soma máxima e a soma mínima de 3 números:
+let count = 0;
+while (count <= 500) {
+  if (count < 200 || count >= 400) {
+    console.log(count);
+  }
+  count++;
+}
 
-function sumMaxMin(arrayNumbers) {
-  const orderArrayNumbers = arrayNumbers.sort((a, b) => a - b);
-  const sumMax = orderArrayNumbers.slice(-3).reduce((a, b) => a + b);
-  const sumMin = orderArrayNumbers.slice(0, 3).reduce((a, b) => a + b);
-  return console.log(sumMax, sumMin);
-};
+// Questão 7 (if):
+// Crie uma lógica para verificar se o motorista foi multado
+// A infração pode ser por velocidade alta (quando ultrapassar a máxima)
+// E por velocidade baixa ( quando estiver inferior à metade da máxima )
+// A velocidade da pista é de 60km/h
 
-const arrayNumbers1 = [5, 4, 3, 2, 1];
-const arrayNumbers2 = [12, 45, 23, 9, 102, 3];
+const speed = 75;
+const maxSpeed = 60;
 
-// sumMaxMin(arrayNumbers2);
+if (speed > maxSpeed || speed < maxSpeed / 2) {
+  situation = "multado!";
+} else {
+  situation = "não multado!";
+}
+
+console.log(`Motorista ${situation}`);
+
+// Questão 8 (array methods):
+// Uma empresa vai dar 10% de aumento para seus funcionários
+// Abaixo tem a lista com todos os salários atuais de cada um deles
+// Apresente os novos salários e o novo total em folha dessa empresa
+
+const salary = [2000, 2800, 3000, 4000, 2200, 7500, 3650, 8000, 2000, 5000];
+const newSalary = salary.map((salary) => (salary * 10) / 100 + salary);
+console.log(newSalary);
+
+let sumNewSalary = newSalary.reduce((a, b) => a + b);
+console.log(sumNewSalary.toLocaleString("pt-br", { style: "currency", currency: "brl" }));

@@ -52,6 +52,9 @@ console.log(sliceNewArray);
 console.log(arrayLetters);
 
 const spliceNewArray = arrayLetters.splice(-2, 2); // modify
+
+arrayLetters.splice(1, 0, "insert");
+
 console.log(spliceNewArray);
 console.log(arrayLetters);
 

@@ -8,22 +8,18 @@
     <script src="script.js" defer></script>
   </head>
   <body>
-    <h1 id="myTitle">Document Object Model (DOM)</h1>
+    <h1 id="myTitle">Class DOM</h1>
 
-    <p class="paragraph">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto dolores sit
-      recusandae quasi aliquid deleniti eum harum iusto magni, modi accusantium, possimus
-      tenetur quidem voluptas fuga ut officia, <span id="expedita">expedita</span> quod!
-    </p>
+    <div class="box">X</div>
+    <div class="box">Y</div>
+    <div class="box">Z</div>
 
-    <p class="paragraph">
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus quisquam enim
-      vero et, architecto facere temporibus molestiae voluptates quasi consequuntur rem
-      commodi minima voluptas, natus illum assumenda error, repudiandae consectetur.
-    </p>
+    <input type="number" id="number1" />
+    <input type="number" id="number2" />
+    <button class="sumButton" onclick="sumNumbers()">Soma</button>
 
-    <input type="password" id="myText" />
-    <button id="myButton">Enviar</button>
-    <div id="writeText">Meu Texto</div>
+    <strong class="result">Resultado</strong>
+
+    <input type="text" id="myText" onkeyup="typingText()" />
   </body>
 </html>

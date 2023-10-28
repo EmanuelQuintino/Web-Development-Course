@@ -1,37 +1,55 @@
-// const myTitle = document.getElementById("myTitle") // element
-// const myTitle = document.querySelector("body h1#myTitle") // element
+// Reference: https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction
 
-// console.log(myTitle)
-// console.log(myTitle.textContent)
+// const myTitle = document.getElementById("myTitle"); // element
+const myTitle = document.querySelector("h1#myTitle"); // element
 
-// myTitle.innerHTML = "Teste"
-// myTitle.innerText = "<h3>Teste</h3>"
-// myTitle.innerHTML = "<h3>Teste</h3>"
+console.log(myTitle);
+console.log(myTitle.textContent);
+console.log(myTitle.innerHTML);
 
-myTitle.style.color = "red"
+myTitle.innerText = "Teste";
+myTitle.innerText = "<i>Teste</i>";
+myTitle.innerHTML = "<i>Teste</i>";
 
-// const myParagraph = document.getElementsByClassName("paragraph") //HTMLCollection
-// console.log(myParagraph[0]);
+myTitle.style.color = "red";
 
-// for (const value of myParagraph) {
-    // console.log(value);
-// }
+const boxesHTMLCollection = document.getElementsByClassName("box");
+console.log(boxesHTMLCollection);
+console.log(boxesHTMLCollection[0]);
 
-const myParagraph = document.querySelectorAll(".paragraph") // NodeList
-console.log(myParagraph);
+for (const box of boxesHTMLCollection) {
+  console.log(box);
+  box.style.color = "green";
+}
 
-myParagraph.forEach((value) => {
-    value.style.color = 'green'
-})
+// boxesHTMLCollection.forEach((value) => {
+//   console.log(value);
+// });
 
-const myText = document.querySelector("#myText")
-const myButton = document.querySelector("#myButton")
-const writeText = document.querySelector("#writeText")
+const boxesNodeList = document.querySelectorAll(".box");
+console.log(boxesNodeList);
 
-myButton.addEventListener("click", () =>{
-    writeText.innerHTML = myText.value
-})
+for (const node of boxesNodeList) {
+  console.log(node);
+}
 
-myText.addEventListener("keyup", () =>{
-    writeText.innerHTML = myText.value
-})
+boxesNodeList.forEach((value) => {
+  value.style.color = "blue";
+});
+
+const myText = document.querySelector("#myText");
+const number1 = document.querySelector("#number1");
+const number2 = document.querySelector("#number2");
+const myButton = document.querySelector(".sumButton");
+const result = document.querySelector(".result");
+
+function sumNumbers() {
+  result.innerHTML = Number(number1.value) + Number(number2.value);
+}
+
+function typingText() {
+  result.innerHTML = myText.value;
+}
+
+myButton.addEventListener("click", sumNumbers);
+myText.addEventListener("keyup", typingText);

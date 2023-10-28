@@ -9,14 +9,14 @@ let array = [1, "A", true, [{}, {}], () => {}];
 let object = { key: "value" };
 
 // Question 2 (Operators)
-// Imprima as operações de soma, subtração, multiplicação, divisão, resto da divisão e potenciação de 12 e 3 e raiz quadrada de 144
+// Imprima as operações de soma, subtração, multiplicação, divisão, resto da divisão e potenciação de 2 e 3 e raiz quadrada de 144
 
-console.log(12 + 3);
-console.log(12 - 3);
-console.log(12 * 3);
-console.log(12 / 3);
-console.log(12 % 3);
-console.log(12 ** 3);
+console.log(2 + 3);
+console.log(2 - 3);
+console.log(2 * 3);
+console.log(2 / 3);
+console.log(2 % 3);
+console.log(2 ** 3);
 console.log(144 ** (1 / 2));
 console.log(Math.sqrt(144));
 

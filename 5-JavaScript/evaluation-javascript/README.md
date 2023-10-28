@@ -3,29 +3,27 @@
 ### Questão 1 (Data Types):
 
 - Declare as seguntes variáveis e atribua os valores por tipo:
-Sting, Number, Boolean, Function, Array, Object
+  Sting, Number, Boolean, Function, Array, Object
 
 ### Questão 2 (Operators):
 
-- Imprima as operações de soma, subtração, multiplicação, divisão,
-resto da divisão e potenciação de 12 e 3 e raiz quadrada de 144;
+- Imprima as operações de soma, subtração, multiplicação, divisão, resto da divisão e potenciação de 2 e 3 e raiz quadrada de 144
 
 ### Questão 3 (Functions):
 
-- Crie e execute uma função de nome 'test" que retorne "JavaScript" concatenado com um valor passado como argumento e imprima seu retorno.
+- Crie e execute uma função de nome 'test" que retorne "JavaScript" concatenado com um valor passado como argumento e imprima seu retorno
 
 ### Questão 4 (Data Manipulation):
 
-- Usando os métodos FIFO e LIFO, crie um array com 3 valos e posteriormente
-insira mais um valor no final e substitua o do início por outro.
+- Usando os métodos FIFO e LIFO, crie um array com 3 valos e posteriormente insira mais um valor no final e substitua o do início por outro
 
 ### Questão 5 (for):
 
-- Liste todos os valores do array criado na questão anterior ultilizando o for.
+- Liste todos os valores do array criado na questão anterior ultilizando o for
 
 ### Questão 6 (while):
 
-- Escreva os números de 0 a 500 sem os que pertencem à familía do 200 e do 300:
+- Escreva os números de 0 a 100 sem os que pertencem à familía do 40, do 50 e do 60
 
 ### Questão 7 (if):
 

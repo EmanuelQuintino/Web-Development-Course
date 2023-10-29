@@ -14,6 +14,7 @@ console.log(n1++);
 console.log(n1);
 console.log(++n1);
 console.log(typeof n2);
+console.log(typeof +"1");
 
 const fruits = ["banana", "maçã", "uva"];
 delete fruits[1];

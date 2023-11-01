@@ -10,15 +10,17 @@
   <body>
     <h1 id="myTitle">Class DOM</h1>
 
-    <div class="box">X</div>
-    <div class="box">Y</div>
-    <div class="box">Z</div>
+    <main class="container">
+      <div class="box">X</div>
+      <div class="box">Y</div>
+      <div class="box">Z</div>
+    </main>
 
     <input type="number" id="number1" />
     <input type="number" id="number2" />
     <button class="sumButton" onclick="sumNumbers()">Soma</button>
 
-    <strong class="result">Resultado</strong>
+    <strong>Resultado = <span class="result"></span></strong>
 
     <input type="text" id="myText" onkeyup="typingText()" />
   </body>

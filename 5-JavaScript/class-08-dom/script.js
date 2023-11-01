@@ -1,17 +1,23 @@
 // Reference: https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction
 
-// const myTitle = document.getElementById("myTitle"); // element
+// const myTitle = document.getElementById("myTitle");
 const myTitle = document.querySelector("h1#myTitle"); // element
+const myContainer = document.querySelector(".container");
 
 console.log(myTitle);
 console.log(myTitle.textContent);
 console.log(myTitle.innerHTML);
 
-myTitle.innerText = "Teste";
-myTitle.innerText = "<i>Teste</i>";
-myTitle.innerHTML = "<i>Teste</i>";
+console.log(myContainer);
+console.log(myContainer.textContent);
+console.log(myContainer.innerHTML);
+
+myTitle.innerText = "Text";
+myTitle.innerText = "<i>HTML</i>";
+myTitle.innerHTML = "<i>HTML</i>";
 
 myTitle.style.color = "red";
+myTitle.style.backgroundColor = "lightgray";
 
 const boxesHTMLCollection = document.getElementsByClassName("box");
 console.log(boxesHTMLCollection);
@@ -19,7 +25,7 @@ console.log(boxesHTMLCollection[0]);
 
 for (const box of boxesHTMLCollection) {
   console.log(box);
-  box.style.color = "green";
+  box.style.color = "orange";
 }
 
 // boxesHTMLCollection.forEach((value) => {
@@ -34,7 +40,7 @@ for (const node of boxesNodeList) {
 }
 
 boxesNodeList.forEach((value) => {
-  value.style.color = "blue";
+  value.style.color = "peru";
 });
 
 const myText = document.querySelector("#myText");

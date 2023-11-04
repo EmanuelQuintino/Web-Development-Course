@@ -12,67 +12,42 @@ import { operations } from "./functions.js";
 // console.log(operations.sum(2, 4));
 // console.log(operations.div(2, 4));
 
-
-//>>>>>>> Class <<<<<<<<<<
-class Person {
-    constructor (name, age) {
-        this.name = name
-        this.age = age
-        this.canDrive = age >= 18
-        this.status = () => {
-            if (this.canDrive) {
-                return 'Pode dirigir';
-            } else {
-                return 'Não pode dirigir';
-            }
-        }
-    }
-}
-
-const person1 = new Person('Emanuel', 30)
-// console.log(person1.status());
-// console.log(typeof person1);
-
 // //>>>>>>> Factory (Creational Design Pattern ) <<<<<<<<<<
 function person(name, age) {
-    return {
-        name,
-        age,
-        canDrive: age >= 18,
-        status: function status(canDrive) {
-            if (this.canDrive) {
-                return 'Pode dirigir';
-            } else {
-                return 'Não pode dirigir';
-            }
-        }
-    }
+  return {
+    name,
+    age,
+    canDrive: age >= 18,
+    status: function status(canDrive) {
+      if (this.canDrive) {
+        return "Pode dirigir";
+      } else {
+        return "Não pode dirigir";
+      }
+    },
+  };
 }
 
-const person2 = person('João', 17)
+const person2 = person("João", 17);
 // console.log(person2.status());
 // console.log(typeof person2);
 
-
-
 //destructure
-const array = ['A', 'B']
-const [item1, item2] = array
+const array = ["A", "B"];
+const [item1, item2] = array;
 // console.log(item1)
 // console.log(item2)
 
-
 // rest
 function showArray(array, ...itens) {
-    // console.log(array);
-    // console.log(itens);
+  // console.log(array);
+  // console.log(itens);
 }
 
-showArray(array, 'D', 'E', 'F')
-
+showArray(array, "D", "E", "F");
 
 // spread
-const numbers = [1, 3, 42, 5, 87, 6]
+const numbers = [1, 3, 42, 5, 87, 6];
 // console.log(...numbers)
 // console.log(Math.max(...numbers))
 

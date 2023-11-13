@@ -41,7 +41,7 @@ arrayListItens.map((value) => console.log(value));
 
 // ASI (Automatic Semicolon Insertion)
 
-// Babel (ES6 to ES5)
+// Babel (ES6 to ES5) involves three main steps
 // - Parser: Code to AST (Abstract Syntex Tree)
 // - Transformer: AST Manipulates (JSON)
 // - Generator: AST to Code

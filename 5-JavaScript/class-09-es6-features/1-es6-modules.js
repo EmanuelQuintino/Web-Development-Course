@@ -5,8 +5,8 @@
 // EcmaScript (2015) - ES6 Modules
 
 // named import
-import { sum, sub, mul, div } from "./functions.js";
-import { mathOperations } from "./functions.js";
+import { sum, sub, mul, div } from "./scripts/functions.js";
+import { mathOperations } from "./scripts/functions.js";
 
 console.log(sum(3, 2));
 console.log(sub(3, 2));

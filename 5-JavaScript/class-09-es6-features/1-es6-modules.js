@@ -2,7 +2,7 @@
 
 // Reference: https://developer.mozilla.org/en-US/docs/web/javascript/reference/statements/export
 
-// EcmaScript (2015) - ES6 Modules
+// EcmaScript (2015) - ES6 Modules (import, export)
 
 // named import
 import { sum, sub, mul, div } from "./scripts/functions.js";

@@ -68,3 +68,8 @@ async function userGitHubData(user) {
 
 userGitHubData("EmanuelQuintino");
 console.log("Fim");
+
+const gitHubUsers = Promise.all([
+  fetch(`https://api.github.com/users/EmanuelQuintino`),
+  fetch(`https://api.github.com/users/EmanuelQuintino`),
+]).then((response) => console.log(response));

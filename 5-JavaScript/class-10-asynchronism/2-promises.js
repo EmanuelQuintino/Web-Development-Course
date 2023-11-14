@@ -17,7 +17,7 @@ console.log(promise);
 
 promise
   .then((answer) => console.log(answer))
-  .catch((error) => console.log(error))
+  .catch((error) => console.error(error))
   .finally(() => console.log("Requisição concluída!"));
 
 async function requestData() {
@@ -25,7 +25,7 @@ async function requestData() {
     const response = await promise;
     console.log(response);
   } catch (error) {
-    console.log(error);
+    console.error(error);
   } finally {
     console.log("Requisição concluída!");
   }
@@ -51,7 +51,7 @@ gitHubUser
   .then((user) => {
     console.log(`${user.name}: ${user.bio}`);
   })
-  .catch((error) => console.log(error));
+  .catch((error) => console.error(error));
 
 async function userGitHubData(user) {
   try {
@@ -62,7 +62,7 @@ async function userGitHubData(user) {
         console.log(`${name}: ${bio}`);
       });
   } catch (error) {
-    console.log(error);
+    console.error(error);
   }
 }
 
@@ -79,7 +79,7 @@ fetch(url)
       console.log(repository.name);
     }
   })
-  .catch((error) => console.log(error));
+  .catch((error) => console.error(error));
 
 async function userRepositories(name) {
   // return promise
@@ -93,7 +93,7 @@ async function userRepositories(name) {
       console.log(repository.name);
     }
   } catch (error) {
-    console.log(error);
+    console.error(error);
   }
 }
 

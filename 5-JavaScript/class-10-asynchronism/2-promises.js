@@ -68,33 +68,3 @@ async function userGitHubData(user) {
 
 userGitHubData("EmanuelQuintino");
 console.log("Fim");
-
-// Exercise
-fetch(url)
-  .then((userRequest) => userRequest.json())
-  .then((userData) => fetch(userData.repos_url))
-  .then((repositoriesRequest) => repositoriesRequest.json())
-  .then((userRepositories) => {
-    for (const repository of userRepositories) {
-      console.log(repository.name);
-    }
-  })
-  .catch((error) => console.error(error));
-
-async function userRepositories(name) {
-  // return promise
-  try {
-    const url = `https://api.github.com/users/${name}`;
-    const userData = await fetch(url).then((response) => response.json());
-    const userRepositories = await fetch(userData.repos_url).then((response) =>
-      response.json()
-    );
-    for (const repository of userRepositories) {
-      console.log(repository.name);
-    }
-  } catch (error) {
-    console.error(error);
-  }
-}
-
-userRepositories("EmanuelQuintino");

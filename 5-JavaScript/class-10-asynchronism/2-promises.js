@@ -72,4 +72,6 @@ console.log("Fim");
 const gitHubUsers = Promise.all([
   fetch(`https://api.github.com/users/EmanuelQuintino`),
   fetch(`https://api.github.com/users/EmanuelQuintino`),
-]).then((response) => console.log(response));
+])
+  .then((response) => console.log(response))
+  .catch((error) => console.error(error));

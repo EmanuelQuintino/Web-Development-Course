@@ -1,32 +1,28 @@
-// setTimeout
+// Reference: https://developer.mozilla.org/en-US/docs/Web/API/setTimeout
 
 console.log("Antes");
-let timeOut = setTimeout(() => {
-  console.log("Test TimeOut ms");
+
+const timeOut = setTimeout(() => {
+  console.log("setTimeOut");
 }, 2000);
+
 console.log("Depois");
 
+// Reference: https://developer.mozilla.org/en-US/docs/Web/API/setInterval
+
 let count = 0;
-const array = [12, 28, 33, 46, 52, 59];
-const newArray = [];
-let interval = setInterval(() => {
+const interval = setInterval(() => {
   console.log("SetInterval");
-  newArray.push(array[count]);
-
-  let numbers = document.querySelector(".numbers");
-  numbers.innerHTML = newArray.join("-");
-
-  if (array.length == newArray.length) {
+  count++;
+  if (count === 10) {
     clearInterval(interval);
   }
-
-  count++;
-}, 1400);
+}, 1000);
 
 console.log(timeOut);
 console.log(interval);
 
-let isFinish = false;
+const isFinish = false;
 if (isFinish) {
   clearTimeout(timeOut);
   clearTimeout(interval);

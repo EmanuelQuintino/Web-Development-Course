@@ -39,7 +39,7 @@ console.log("Início");
 const userName = "EmanuelQuintino";
 const url = `https://api.github.com/users/${userName}`;
 const gitHubUser = fetch(url)
-  .then((request) => request.json())
+  .then((response) => response.json())
   .then(({ name, bio }) => ({
     name,
     bio,

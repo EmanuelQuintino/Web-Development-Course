@@ -21,7 +21,10 @@ console.log(typeof 32);
 console.log(typeof 32.5);
 console.log(typeof (32 + 5));
 console.log(typeof 15 + "Emanuel");
+
 console.log(typeof NaN);
+console.log(typeof Number("Emanuel"));
+
 console.log(typeof Infinity);
 console.log(2 / 0);
 

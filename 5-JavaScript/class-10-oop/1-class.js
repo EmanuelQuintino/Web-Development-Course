@@ -17,7 +17,7 @@ class Pokemon {
     console.log(`${this.name} atacou!`);
   }
 
-  damage(damage, effective) {
+  damage(effective, damage = 20) {
     if (effective) {
       let damageEffective = damage * 1.3;
       this.health -= damageEffective;
@@ -39,9 +39,9 @@ console.log(squirtle.level);
 bulbasaur.attack();
 
 let effective = false;
-squirtle.damage(30, effective);
+squirtle.damage();
 console.log(squirtle.health);
 
 effective = true;
-squirtle.damage(30, effective);
+squirtle.damage(effective);
 console.log(squirtle.health);

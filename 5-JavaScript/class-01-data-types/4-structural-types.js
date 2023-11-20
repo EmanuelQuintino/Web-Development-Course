@@ -1,22 +1,28 @@
-// Structutal Types (Object, Functions)
+// structural types (object, array, functions)
 
-// Object
-let namePerson = "Emanuel";
-let age = 29;
-let profession = "Web Developer";
+// object
+const userName = "Emanuel";
+const userAge = 29;
+const userProfession = "Web Developer";
 
-console.log(namePerson);
-console.log(age);
-console.log(profession);
+console.log(userName);
+console.log(userAge);
+console.log(userProfession);
 
-const person = {
+const user = {
   name: "Emanuel",
   age: 29,
   profession: "Web Developer",
-  action: () => {
-    console.log("Estudou");
-  },
+  phone: "(88) 99605-9913",
+  isAdmin: true,
 };
+
+console.log(user);
+console.log(typeof user);
+console.log(user.name);
+console.log(user.phone);
+console.log(user.profession);
+console.log(user.isAdmin);
 
 const pokemon = {
   name: "Blastoise",
@@ -34,7 +40,17 @@ console.log(pokemon["type"]);
 console.log(pokemon.attack());
 console.log(pokemon.special());
 
-// Array (Vector)
+// array (vector)
+
+const filmList = ["Matrix", "Interestellar", "Shrek", "Get Out", "Split"];
+
+console.log(filmList);
+console.log(typeof filmList);
+
+console.log(filmList[1]);
+console.log(filmList[2]);
+console.log(filmList[3]);
+// N.A.N
 
 // const pokedex = ["Charmander", 6, "Bulbasour", 5, "Squirtle", 4];
 

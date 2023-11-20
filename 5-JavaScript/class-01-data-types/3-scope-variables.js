@@ -1,26 +1,25 @@
 // Reference: https://developer.mozilla.org/en-US/docs/Glossary/Hoisting
 
-let num = "global";
+let num = 10; // global
 const pi = 3.14;
+var userName = "Emanuel";
 
-// var num = "global";
-// var num
+pi = 100; // const error
 
 console.log(num);
 console.log(pi);
 
 {
-  let num = "local";
+  let num = 20; // local
   num = "changed";
 
-  // pi = 3;
-
-  // var num = "local";
-  // var pi = 1
+  var userName = "Quintino";
 
   console.log(num);
   console.log(pi);
+  console.log(userName);
 }
 
 console.log(num);
 console.log(pi);
+console.log(userName);

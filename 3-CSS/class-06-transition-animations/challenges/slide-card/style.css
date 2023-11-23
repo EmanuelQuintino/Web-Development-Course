@@ -1,0 +1,44 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.cards {
+  display: grid;
+  place-content: center;
+  height: 95vh;
+  perspective: 300px;
+}
+
+.card {
+  width: 160px;
+  height: 200px;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 500ms;
+}
+
+.card:hover {
+  transform: rotateY(180deg);
+}
+
+.card div {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  position: absolute;
+  font-size: 24px;
+  padding: 12px;
+  color: white;
+}
+
+.front {
+  background: peru;
+  transform: rotateY(180deg);
+}
+
+.back {
+  background: navy;
+  backface-visibility: hidden;
+}

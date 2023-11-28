@@ -5,7 +5,7 @@
 // Binary
 let n1 = 8;
 let n2 = 7;
-console.log(n1 + n2);
+console.log(n1 / n2);
 console.log("Test " + n2);
 
 // Unary
@@ -23,7 +23,7 @@ console.log(fruits);
 // Ternary
 // test ? true : false;
 
-console.log(n1 > n2 ? "true" : "false");
+console.log(2 > 3 ? "Sim" : "Não");
 
 let average = 7;
 console.log(average >= 7 ? "aprovado" : "reprovado");

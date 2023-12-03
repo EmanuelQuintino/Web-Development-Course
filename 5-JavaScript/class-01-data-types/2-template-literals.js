@@ -15,8 +15,10 @@ let num2 = 20;
 
 num1 = Number(num1); // type conversion (typecasting)
 
-console.log(num1 + num2); // type coersion
+console.log(num1 + num2);
+console.log(10 + "20"); // type coersion
 console.log(Number("10") + 20);
+console.log(+"10" + 20);
 
 // grouping operator
 console.log("A soma é: " + num1 + num2);

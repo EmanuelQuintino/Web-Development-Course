@@ -1,14 +1,23 @@
-// Question 1 (Data Types)
+// Question 1 (variables)
+
+// let 123variable;
+// let my-variable;
+// let my variable;
+// let my#variable;
+// let if;
+// let break;
+
+// Question (data types)
 console.log(10 == "10");
 
-// Question 2 (Data Types)
+// Question 2 (data types)
 console.log(2 + +"3");
 // a) error
 // b) 5
 // c) 23
 // d) N.R.A
 
-// Question 3 (Data Types)
+// Question 3 (data types)
 console.log(typeof 2 / 0);
 
 // a) error
@@ -40,7 +49,7 @@ const filmList = ["Matrix", "Interestellar", "Shrek", "Get Out", "Split"];
 // c) console.log(filmList[3]);
 // d) N.R.A
 
-// Question 6 (Operators)
+// Question 6 (operators)
 
 let num1 = 2;
 

@@ -1,9 +1,5 @@
 # Class 03 States
 
-## Immutability
-
-An immutable value is one whose content cannot be changed without creating an entirely new value.
-
 ## Rendering Flow
 
 - When the status changes
@@ -40,4 +36,12 @@ function incrementNum() {
 }
 
 // log: "3"
+```
+
+## Immutability
+
+An immutable value is one whose content cannot be changed without creating an entirely new value.
+
+```js
+setItems((prevState) => [...prevState, newItem]);
 ```

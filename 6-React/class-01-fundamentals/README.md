@@ -18,7 +18,7 @@
   - typescript template
 
 - Syntax
-  - JSX = JS + HTML
-  - standard/named exports
+  - default/named exports
   - public/assets folder
+  - JSX = JS + HTML
   - fragment

@@ -33,6 +33,7 @@ function incrementNum() {
 
 function incrementNum() {
   setNum((prevState) => prevState + 1);
+  setNum((prevState) => prevState + 1);
 }
 
 // log: "3"

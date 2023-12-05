@@ -1,0 +1,19 @@
+.card {
+  border: solid 1px black;
+  max-width: 240px;
+  margin: 16px auto;
+  text-align: center;
+}
+
+.card img {
+  width: 100%;
+}
+
+.card strong {
+  display: block;
+  margin-top: 16px;
+}
+
+.card p {
+  margin-top: 8px;
+}

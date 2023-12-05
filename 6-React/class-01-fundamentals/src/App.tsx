@@ -1,7 +1,6 @@
 import React from "react";
 import imageReact from "./assets/react.svg";
 
-// named exports
 export function App() {
   return (
     <React.Fragment>

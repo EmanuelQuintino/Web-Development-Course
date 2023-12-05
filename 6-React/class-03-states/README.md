@@ -5,16 +5,17 @@
 - When the status changes
 - When the property changes
 - When parent component renders
+- Passing function is different from executing (infinite rendering)
 
 ### The key must be unique and not random
 
-[1, 2, 3, 4, 5]
-0, 1, 2, 3, 4
+<pre>
+["A", "B", "C", "D", "E"]
+  0,   1,   2,   3,   4
 
-[1, 2, 5, 4, 3]
-0, 1, 2, 3, 4
-
-- Passing function is different from executing (infinite rendering)
+["A", "B", "E", "D", "C"]
+  0,   1,   2,   3,   4
+</pre>
 
 ### Closures
 

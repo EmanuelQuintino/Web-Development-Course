@@ -1,11 +1,13 @@
+import React from "react";
 import imageReact from "./assets/react.svg";
 
 export function App() {
   return (
-    <>
-      <h1>Hello World!!!</h1>
-      <img src="vite.svg" alt="" width={120} />
-      <img src={imageReact} alt="" width={120} />
-    </>
+    <React.Fragment>
+      <h1>Fundamentals</h1>
+      <p>Component = TSX (TS + HTML)</p>
+      <img src="vite.svg" alt="public" width={120} />
+      <img src={imageReact} alt="assets" width={120} />
+    </React.Fragment>
   );
 }

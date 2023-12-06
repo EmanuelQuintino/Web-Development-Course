@@ -2,7 +2,7 @@
 
 ## Rendering Flow
 
-- When the status changes
+- When the state changes
 - When the property changes
 - When parent component renders
 - Passing function is different from executing (infinite rendering)

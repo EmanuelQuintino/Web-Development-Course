@@ -1,5 +1,5 @@
 import React from "react";
-import imageReact from "./assets/react.svg";
+import imageReact from "../assets/react.svg";
 
 export function App() {
   return (

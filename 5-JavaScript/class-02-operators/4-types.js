@@ -43,3 +43,18 @@ console.log("0" ? "true" : "false");
 console.log({} ? "true" : "false");
 console.log(null ? "true" : "false");
 console.log(-Infinity ? "true" : "false");
+
+// Reference: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing
+
+// Nullish Coalescing Operator
+console.log("Emanuel" || "right-hand");
+console.log(1 || "right-hand");
+
+console.log("" || "right-hand");
+console.log(0 || "right-hand");
+
+console.log("" ?? "right-hand");
+console.log(0 ?? "right-hand");
+
+console.log(null ?? "right-hand");
+console.log(undefined ?? "right-hand");

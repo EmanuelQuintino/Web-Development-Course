@@ -1,7 +1,7 @@
 :root {
-  font-size: 62.5%;  
+  font-size: 62.5%;
   background: #242424;
-  color: white;  
+  color: white;
 }
 
 * {
@@ -10,7 +10,9 @@
   box-sizing: border-box;
 }
 
-body, input, button {
+body,
+input,
+button {
   font-size: 1.6rem;
   font-family: sans-serif;
 }

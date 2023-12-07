@@ -1,9 +1,5 @@
 // Reference: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators
 
-// Expressions Grouping Operator
-let total = (2 + 3) * 3;
-console.log(total);
-
 // Operator Precedence
 
 // grouping                      ()
@@ -24,6 +20,7 @@ console.log(3 < 2 || 4 < 10);
 console.log(6 < 2 || 4 > 10);
 console.log(3 > 2 > 1);
 console.log(true == 1); // true == 1 false == 0
+console.log(false == 0);
 console.log(3 > 2 == 1);
 console.log(true === 1);
 console.log(3 > 2 && 2 > 1);

@@ -2,14 +2,22 @@
 
 ## Rendering Flow
 
-- When the state changes
-- When the property changes
+- When the state or property changes
 - When parent component renders
 - Passing function is different from executing (infinite rendering)
 
 ## Key Props
 
 The key must be unique and not random
+
+- ID
+
+<pre>
+["A", "B", "C", "D", "E"]
+  1,   2,   3,   4,   ?
+</pre>
+
+- Index
 
 <pre>
 ["A", "B", "C", "D", "E"]

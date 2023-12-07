@@ -10,6 +10,7 @@
 - static
 - inference
 - generics
+- assertion
 - compilation
 
 ```ts

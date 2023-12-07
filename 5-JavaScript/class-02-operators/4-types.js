@@ -25,8 +25,8 @@ console.log(fruits);
 
 console.log(2 > 3 ? "Sim" : "Não");
 
-let average = 7;
-console.log(average >= 7 ? "aprovado" : "reprovado");
+const number = "qwe70";
+console.log(number % 2 == 0 ? "Par" : number % 2 == 1 ? "Ímpar" : "Inválido");
 
 // Be careful with Truthy and Falsy values where Boolean is considered mandatory (conditionals and loops).
 

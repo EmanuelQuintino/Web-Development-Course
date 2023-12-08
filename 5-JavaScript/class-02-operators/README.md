@@ -39,31 +39,31 @@
 ### Conjunction
 
 <pre>
-P	Q  P ^ Q	
-V	V    V
-V	F	 	 V
-F	V	 	 V
-F	F	 	 F
+P	  Q  P ^ Q	
+V	  V    V
+V	  F	 	 V
+F	  V	 	 V
+F	  F	 	 F
 </pre>
 
 ### Disjunction
 
 <pre>
-P	Q  P v Q	
-V	V    V
-V	F	 	 F
-F	V	 	 F
-F	F	 	 F
+P	  Q   P v Q	
+V	  V     V
+V	  F     F
+F	  V	 	  F
+F	  F	 	  F
 </pre>
 
 ### Negation
 
 <pre>
-P Q   ~P ~Q
-V V    F  F
-V F    F  V
-F V    V  F
-F F    V  V
+P   Q   ~P ~Q
+V   V    F  F
+V   F    F  V
+F   V    V  F
+F   F    V  V
 </pre>
 
 ## Type Operators

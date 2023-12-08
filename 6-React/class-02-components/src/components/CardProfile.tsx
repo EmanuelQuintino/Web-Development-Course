@@ -1,18 +1,16 @@
 import "./style.css";
 
-type CardProfileProps = {
-  gitHub: string;
+type CardProps = {
   name: string;
-  birth: number;
-  calcAge: (age: number) => number;
+  birth: string;
+  calcUserAge: (birth: string) => number;
 };
 
-export function CardProfile({ gitHub, name, birth, calcAge }: CardProfileProps) {
+export function CardProfile({ name, birth, calcUserAge }: CardProps) {
   return (
-    <div className="card">
-      <img src={`https://github.com/${gitHub}.png`} alt="image-profile" />
+    <div className="container">
       <strong>{name}</strong>
-      <p>Idade: {calcAge(birth)}</p>
+      <p>Idade: {calcUserAge(birth)}</p>
     </div>
   );
 }

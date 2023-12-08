@@ -1,30 +1,27 @@
 import { CardProfile } from "../components/CardProfile";
 
-function calcAge(birth: number) {
-  const currentYear = new Date().getFullYear();
-  return currentYear - birth;
+function calcUserAge(birth: string) {
+  const dateNow = new Date().getTime();
+  const dateBirth = new Date(birth).getTime();
+  const userAge = Math.floor((dateNow - dateBirth) / (1000 * 60 * 60 * 24 * 365.25));
+  return userAge;
 }
 
-const users = [
-  { id: 1, gitHub: "EmanuelQuintino", name: "Emanuel Quintino", birth: 1992 },
-  { id: 2, gitHub: "EmanuelQuintino", name: "Emanuel Quintino", birth: 1992 },
-  { id: 3, gitHub: "EmanuelQuintino", name: "Emanuel Quintino", birth: 1992 },
+const dataAPI = [
+  { id: 1, name: "Emanuel", birth: "12-25-1992" },
+  { id: 2, name: "Éric", birth: "06-18-2004" },
+  { id: 3, name: "Jorge", birth: "01-23-1995" },
+  { id: 4, name: "Jonatas", birth: "12-01-2004" },
 ];
 
 export function App() {
   return (
     <>
-      <h1 style={{ textAlign: "center" }}>Class Components</h1>
+      <h1>Class 02 Components</h1>
 
-      {users.map(({ id, gitHub, name, birth }) => {
+      {dataAPI.map(({ id, name, birth }) => {
         return (
-          <CardProfile
-            key={id}
-            gitHub={gitHub}
-            name={name}
-            birth={birth}
-            calcAge={calcAge}
-          />
+          <CardProfile key={id} name={name} birth={birth} calcUserAge={calcUserAge} />
         );
       })}
     </>

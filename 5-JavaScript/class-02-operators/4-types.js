@@ -1,5 +1,3 @@
-// Reference: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators
-
 // Type Operators
 
 // Binary
@@ -28,14 +26,7 @@ console.log(2 > 3 ? "Sim" : "Não");
 const number = "qwe70";
 console.log(number % 2 == 0 ? "Par" : number % 2 == 1 ? "Ímpar" : "Inválido");
 
-// Be careful with Truthy and Falsy values where Boolean is considered mandatory (conditionals and loops).
-
-// Truthy               Falsy
-// 1, 1.5, -1           0
-// " ", "0", "false"    ""
-// {}                   null
-// []                   undefined
-// Infinity, -Infinity  NaN
+// Truthy and Falsy
 
 console.log(-1 ? "true" : "false");
 console.log("" ? "true" : "false");

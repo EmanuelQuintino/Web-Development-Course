@@ -1,17 +1,4 @@
-// Reference: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators
-
-// Operator Precedence
-
-// grouping                      ()
-// negation and increment        ! ++ --
-// multiplication and division   * /
-// addition and subtraction      + -
-// comparison                    < <= > >=
-// equality                      == != === !==
-// and                           &&
-// or                            ||
-// conditional                   ?:
-// assignment                    = += -= *= %=
+// Operator Order Precedence
 
 console.log(7 + 8 / 2);
 console.log((7 + 8) / 2);

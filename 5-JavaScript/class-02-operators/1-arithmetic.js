@@ -1,13 +1,4 @@
-// Reference: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators
-
 // Arithmetic Operators
-
-// addition ( + )
-// subtraction ( - )
-// multiplication ( * )
-// division ( / )
-// remainder ( % )
-// exponentiation ( ** ) to square root use " ** 1/2 "
 
 let num1 = "2";
 let num2 = 2;

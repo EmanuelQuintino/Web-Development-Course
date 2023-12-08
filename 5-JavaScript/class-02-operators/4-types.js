@@ -44,9 +44,14 @@ console.log({} ? "true" : "false");
 console.log(null ? "true" : "false");
 console.log(-Infinity ? "true" : "false");
 
-// Reference: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing
+// Logical and Nullish Coalescing Operator
 
-// Logical/Nullish Coalescing Operator
+console.log(true && "right-hand");
+console.log(false && "right-hand");
+
+console.log("Emanuel" && "right-hand");
+console.log("" && "right-hand");
+
 console.log(true || "right-hand");
 console.log(false || "right-hand");
 

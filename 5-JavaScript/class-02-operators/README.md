@@ -23,7 +23,7 @@
 
 ## Comparison Operators (Boolean)
 
-- \> >=
+- > >=
 - < <=
 - == !=
 - === !==
@@ -31,7 +31,7 @@
 ## Logical Operators (Boolean)
 
 - and ( && )
-- or  ( || )
+- or ( || )
 - not ( ! )
 
 ## TRUTH TABLE
@@ -39,21 +39,21 @@
 ### Conjunction
 
 <pre>
-P	Q   P ^ Q	
-V	V     V
-V	F	 	  V
-F	V	 	  V
-F	F	 	  F
+P	Q  P ^ Q	
+V	V    V
+V	F	 	 V
+F	V	 	 V
+F	F	 	 F
 </pre>
 
 ### Disjunction
 
 <pre>
-P	Q   P v Q	
-V	V     V
-V	F	 	  F
-F	V	 	  F
-F	F	 	  F
+P	Q  P v Q	
+V	V    V
+V	F	 	 F
+F	V	 	 F
+F	F	 	 F
 </pre>
 
 ### Negation
@@ -68,9 +68,9 @@ F F    V  V
 
 ## Type Operators
 
--  unary
--  binary
--  ternary (test ? true : false)
+- Unary
+- Binary
+- Ternary (test ? true : false)
 
 ## Truthy e False
 
@@ -101,4 +101,14 @@ Conditional Ternary                   ? :
 Assignment                            = += -= *= %=
 </pre>
 
-Reference: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Expressions_and_Operators
+## Logical and Nullish Coalescing Operator
+
+- &&
+- ||
+- ??
+
+## Links
+
+- [Expressions and Operators](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Expressions_and_Operators)
+
+- [Nullish Coalescing Operators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing)

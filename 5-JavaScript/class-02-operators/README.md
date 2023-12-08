@@ -2,14 +2,14 @@
 
 ## Arithmetic Operators
 
-- addition ( + )
-- subtraction ( - )
-- multiplication ( \* )
-- division ( / )
-- remainder ( % )
-- exponentiation ( ** ) to square root use " ** 1/2 "
-- increment ( ++ )
-- decrement ( -- )
+- addition (+)
+- subtraction (-)
+- multiplication (\*)
+- division (/)
+- remainder (%)
+- exponentiation (**) to square root use " ** 1/2 "
+- increment (++)
+- decrement (--)
 
 ## Assignment (Atribuição)
 
@@ -30,9 +30,9 @@
 
 ## Logical Operators (Boolean)
 
-- and ( && )
-- or ( || )
-- not ( ! )
+- && (and)
+- || (or)
+- ! (not)
 
 ## TRUTH TABLE
 

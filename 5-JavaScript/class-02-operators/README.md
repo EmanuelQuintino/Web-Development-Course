@@ -44,7 +44,6 @@ V   V    V
 V   F    V
 F   V    V
 F   F    F
-
 </pre>
 
 ### Disjunction

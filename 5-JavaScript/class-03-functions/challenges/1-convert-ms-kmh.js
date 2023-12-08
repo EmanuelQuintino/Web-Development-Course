@@ -2,11 +2,12 @@
 // Solicite a velocidade via prompt e passe como argumento
 // Execute a função e escreva o resultado
 
-function convertMsToKmh(speed) {
-  return speed * 3.6;
+function convertToKmh(speedMs) {
+  return speedMs * 3.6;
 }
 
-const userSpeed = Number(prompt("Digite a velocidade em m/s para coverter em km/h:"));
-const convertedSpeed = convertMsToKmh(userSpeed);
+const userSpeedMs = Number(prompt("Digite a velocidade em M/s:"));
 
-document.write(`${userSpeed}m/s é ${convertedSpeed}km/h`);
+const convertedSpeed = convertToKmh(userSpeedMs);
+
+window.alert(`${userSpeedMs}m/s é ${convertedSpeed}km/h`);

@@ -1,53 +1,44 @@
 // Reference: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions
 
-// Function Statements
+// function statements
 
-// Named
-function myTest(text /*parameters*/) {
+// named
+function printText(text /*parameters*/) {
   console.log(text);
 }
 
-myTest("Testando a função"); //arguments
+printText("Text"); //arguments
+printText(123);
 
-function add(num1, num2) {
-  // return num1 + num2
-  let soma = num1 + num2; //key operator
-  return soma;
+function sumNumbers(num1 = 0, num2 = 0) {
+  const sum = num1 + num2; // key operator
+  return sum;
 }
 
-// Anonymous
-const add = function (num1, num2) {
+console.log(sumNumbers(20, 3));
+
+const resultSum = sumNumbers(2, 30);
+console.log(resultSum);
+
+// anonymous
+const sumNumbers = function (num1, num2) {
   return num1 + num2;
 };
 
-// Arrow
-const add = (num1, num2) => num1 + num2;
+// arrow *
+const sumNumbers = (num1, num2) => num1 + num2;
 
-console.log(add(2, 5));
-console.log(add);
+console.log(sumNumbers(2, 5));
+console.log(sumNumbers);
 
-// Callback
+// callback
 function show(item) {
   console.log(item);
 }
 
-function addShow(num1, num2, callback) {
+function sumNumbersShow(num1, num2, callback) {
   let sum = num1 + num2;
   callback(sum);
 }
 
-addShow(2, 3, show);
-
-// Constructor
-function Car(brandName, motorPower) {
-  this.brand = brandName;
-  this.motor = motorPower;
-}
-
-const siena = new Car("Fiat", 1.4);
-const onix = new Car("Chevrolet", 1.4);
-const polo = new Car("Volkswagen", 1.0);
-
-console.log(siena.brand);
-console.log(onix.motor);
-console.log(polo);
+sumNumbersShow(2, 3, show);

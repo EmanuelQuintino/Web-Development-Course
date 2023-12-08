@@ -13,13 +13,13 @@
 
 ## Assignment (Atribuição)
 
-- num1 = num1 + 2
-- num1 += 2
-- num1 -= 2
-- num1 \*= 2
-- num1 /= 2
-- num1 &= 2
-- num1 \*\*= 2
+- =
+- +=
+- -=
+- \*=
+- /=
+- &=
+- \*\*=
 
 ## Comparison Operators (Boolean)
 

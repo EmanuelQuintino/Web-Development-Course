@@ -4,7 +4,7 @@
 
 - addition ( + )
 - subtraction ( - )
-- multiplication ( * )
+- multiplication ( \* )
 - division ( / )
 - remainder ( % )
 - exponentiation ( ** ) to square root use " ** 1/2 "
@@ -16,14 +16,14 @@
 - num1 = num1 + 2
 - num1 += 2
 - num1 -= 2
-- num1 *= 2
+- num1 \*= 2
 - num1 /= 2
 - num1 &= 2
-- num1 **= 2
+- num1 \*\*= 2
 
 ## Comparison Operators (Boolean)
 
-- > >=
+- \> > =
 - < <=
 - == !=
 - === !==

@@ -23,7 +23,7 @@
 
 ## Comparison Operators (Boolean)
 
-- \> > =
+- \> >=
 - < <=
 - == !=
 - === !==

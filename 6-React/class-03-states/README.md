@@ -1,6 +1,6 @@
 # Class 03 States
 
-## Rendering Flow
+## React Render Flow
 
 - When the state or property changes
 - When parent component renders
@@ -16,14 +16,14 @@ function incrementNum() {
   setNum(num + 1);
 }
 
-// log: "2"
+// log: "1"
 
 function incrementNum() {
   setNum((prevState) => prevState + 1);
   setNum((prevState) => prevState + 1);
 }
 
-// log: "3"
+// log: "2"
 ```
 
 ## Immutability

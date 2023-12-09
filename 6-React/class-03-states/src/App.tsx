@@ -1,5 +1,4 @@
-import "./App.css";
-import { useState, useEffect, ChangeEvent } from "react";
+import { useState, useEffect, ChangeEvent, FormEvent } from "react";
 
 type UserData = {
   name: string;
@@ -9,6 +8,7 @@ type UserData = {
 
 export function App() {
   const [count, setCount] = useState(0);
+  const [inputName, setInputName] = useState("Emanuel Quintino");
   const [userName, setUserName] = useState("EmanuelQuintino");
   const [userData, setUserData] = useState<UserData>({} as UserData);
 
@@ -21,7 +21,12 @@ export function App() {
   }
 
   function handleChangeUserName(event: ChangeEvent<HTMLInputElement>) {
-    setUserName(event.target.value);
+    setInputName(event.target.value);
+  }
+
+  function handleFormSubmit(event: FormEvent) {
+    event.preventDefault();
+    setUserName(inputName);
   }
 
   useEffect(() => {
@@ -34,25 +39,30 @@ export function App() {
   }, [userName]);
 
   return (
-    <div className="container">
+    <div style={{ textAlign: "center" }}>
       <h1>Class States</h1>
 
       <section>
-        <p>Nome: {userName}</p>
+        <p>Nome: {inputName}</p>
         <p>Count: {count}</p>
 
         <button onClick={removeCount}>&lt;Rem</button>
         <button onClick={addCount}>Add&gt;</button>
       </section>
 
-      <form>
-        <input type="text" onChange={handleChangeUserName} />
+      <form onSubmit={handleFormSubmit} style={{ marginTop: 16 }}>
+        <input
+          type="text"
+          placeholder="Nome do usuário"
+          onChange={handleChangeUserName}
+        />
+        <button>Pesquisar</button>
       </form>
 
       {userData && (
         <section>
           <h2>{userData.name}</h2>
-          <img src={userData.avatar_url} />
+          <img src={userData.avatar_url} width={240} />
           <p>{userData.bio}</p>
         </section>
       )}

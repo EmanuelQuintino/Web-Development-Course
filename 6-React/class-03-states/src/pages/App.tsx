@@ -1,16 +1,16 @@
 import "./App.css";
 import { useState, useEffect, ChangeEvent } from "react";
 
-interface UserData {
+type UserData = {
   name: string;
   avatar_url: string;
   bio: string;
-}
+};
 
 export function App() {
   const [count, setCount] = useState(0);
   const [userName, setUserName] = useState("EmanuelQuintino");
-  const [dataUser, setDataUser] = useState<UserData>({} as UserData);
+  const [userData, setUserData] = useState<UserData>({} as UserData);
 
   function addCount() {
     setCount((prevCount) => prevCount + 1);
@@ -28,7 +28,7 @@ export function App() {
     if (userName) {
       fetch(`https://api.github.com/users/${userName}`)
         .then((response) => response.json())
-        .then((data) => setDataUser(data))
+        .then((data) => setUserData(data))
         .catch((error) => console.error(error));
     }
   }, [userName]);
@@ -49,11 +49,11 @@ export function App() {
         <input type="text" onChange={handleChangeUserName} />
       </form>
 
-      {dataUser && (
+      {userData && (
         <section>
-          <h2>{dataUser.name}</h2>
-          <img src={dataUser.avatar_url} />
-          <p>{dataUser.bio}</p>
+          <h2>{userData.name}</h2>
+          <img src={userData.avatar_url} />
+          <p>{userData.bio}</p>
         </section>
       )}
     </div>

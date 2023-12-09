@@ -47,18 +47,13 @@ const filmList = ["Matrix", "Interestellar", "Shrek", "Get Out", "Split"];
 console.log(filmList);
 console.log(typeof filmList);
 
+console.log(filmList[0]);
+console.log(filmList[-1]);
+
 console.log(filmList[1]);
 console.log(filmList[2]);
 console.log(filmList[3]);
 // N.A.N
-
-// const pokedex = ["Charmander", 6, "Bulbasour", 5, "Squirtle", 4];
-
-// const pokedex = [
-//   ["Charmander", 6],
-//   ["Bulbasour", 5],
-//   ["Squirtle", 4],
-// ];
 
 const pokedex = [
   { name: "Charmander", level: 6 },
@@ -70,9 +65,9 @@ console.log(pokedex);
 console.log(typeof pokedex);
 console.log(pokedex[0]);
 console.log(pokedex[2]);
-console.log(pokedex[1][0]);
 console.log(pokedex[0].name);
 console.log(pokedex[0].level);
+console.log(pokedex[-1]);
 
 console.log(person);
 console.log(typeof person);

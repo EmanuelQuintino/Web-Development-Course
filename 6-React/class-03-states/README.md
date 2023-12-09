@@ -12,16 +12,16 @@ A closure is the combination of a function bundled together (enclosed) with refe
 
 ```js
 function outerFunction() {
-  let outerVariable = "Eu sou uma variável externa";
+  const outerVariable = "lexical environment";
 
   function innerClosureFunction() {
     console.log(outerVariable);
   }
 
-  return innerFunction;
+  innerClosureFunction();
 }
 
-closureFunction();
+outerFunction();
 ```
 
 In other words, a closure gives you access to an outer function's scope from an inner function. In JavaScript, closures are created every time a function is created, at function creation time.

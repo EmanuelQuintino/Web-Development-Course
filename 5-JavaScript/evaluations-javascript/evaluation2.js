@@ -40,6 +40,13 @@ console.log(num);
 // c) error
 // d) N.R.A
 
+// Question 5 data Manipulation
+myName[1] = "T";
+console.log(myName); // string immutable *
+
+// revert string
+console.log("revert string".split("").reverse().join(""));
+
 // Question 5 (array)
 
 const filmList = ["Matrix", "Interestellar", "Shrek", "Get Out", "Split"];

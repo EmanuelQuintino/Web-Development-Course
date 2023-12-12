@@ -60,7 +60,7 @@ export function App() {
         )}
       </section>
 
-      <section style={{ textAlign: "left", marginTop: 32 }}>
+      <section style={{ textAlign: "left", width: 240, margin: "auto", marginTop: 42 }}>
         <strong>Repositório: {inputRepo}</strong>
 
         <form style={{ marginTop: 16 }}>

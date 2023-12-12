@@ -1,6 +1,4 @@
-// Crie uma função que calcule o IMC do usuário
-// A função deve receber os parâmetros de height e de weight;
-// Escreva na tela o IMC e se está bom ou rium seguindo a tabela
+// ⚠️ Desafio: Crie uma função que receba os parâmetros height, weight e calcule o IMC do usuário. Escreva na tela o IMC e se está bom ou rium seguindo a tabela
 
 function calcIMC(height, weight) {
   const imc = weight / (height / 100) ** 2;

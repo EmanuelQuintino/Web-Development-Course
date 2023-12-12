@@ -1,7 +1,4 @@
-// Solicite 2 números do usuário via prompt
-// Apresente as operações e os resultados escrevendo no documento (função write).
-// Crie constantes e atribua as operações de
-// +, -, *, /, %, ** e raiz para os números solicitados.
+// ⚠️ Desafio: Solicite 2 números do usuário via prompt, apresente as operações e os resultados escrevendo no documento (função write). Crie constantes e atribua as operações de +, -, *, /, %, ** e raiz para os números solicitados.
 
 const num1 = Number(prompt("Digite o primeiro número: "));
 const num2 = Number(prompt("Digite o sugundo número: "));

@@ -1,6 +1,4 @@
-// Crie uma função para verificar palíndromos
-// A lógica deve receber string com palavra ou texto
-// Use um ternário para imprimir "Verdadeiro" ou "Falso" na tela
+// ⚠️ Desafio: Crie uma função para verificar palíndromos. A lógica deve receber string com palavra ou texto
 
 function isPalindrome(text) {
   const normalText = text.toLowerCase().replaceAll(" ", "");

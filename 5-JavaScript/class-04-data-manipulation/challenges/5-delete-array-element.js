@@ -1,6 +1,4 @@
-// Crie uma função que remova um elemento específico de um Array
-// Insira o nome do elemento e o array via parâmetros
-// Retorne o array com valor atualizado
+// ⚠️ Desafio: Crie uma função que remova um elemento específico de um Array. Insira o nome do elemento e o array via parâmetros depois retorne o array com valor atualizado
 
 const techs = ["HTML", 10, "CSS", 20, "JavaScript", 30];
 

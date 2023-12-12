@@ -1,4 +1,4 @@
-// Crie uma função que retorne quantas palavras tem em uma frase
+// ⚠️ Desafio: Crie uma função que retorne quantas palavras tem em uma frase
 
 function textWordCount(text) {
   return text.trim().split(" ").length;

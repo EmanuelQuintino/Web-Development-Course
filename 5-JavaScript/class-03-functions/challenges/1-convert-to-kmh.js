@@ -1,6 +1,4 @@
-// Declare uma função para converter velocidade de m/s para km/h
-// Solicite a velocidade via prompt e passe como argumento
-// Execute a função e escreva o resultado
+// ⚠️ Desafio: Declare uma função para converter velocidade de m/s para km/h e solicite a velocidade via prompt e passe como argumento. Execute a função e escreva o resultado
 
 function convertToKmh(speedMs) {
   return speedMs * 3.6;

@@ -1,5 +1,4 @@
-// Crie um programa que pergunte em que data o usuário nasceu
-// Depois escreva na tela quantos anos ele tem
+// ⚠️ Desafio: Crie um programa que pergunte em que data o usuário nasceu, depois escreva na tela quantos anos ele tem
 
 const dateWasBorn = new Date(prompt("Digite a data (yyyy-mm-dd) em que você nasceu:"));
 

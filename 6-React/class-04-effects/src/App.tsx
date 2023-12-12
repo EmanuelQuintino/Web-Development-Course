@@ -1,4 +1,5 @@
 import { useState, useEffect, ChangeEvent } from "react";
+import { UserCard } from "./components/UserCard";
 
 type UserData = {
   name: string;
@@ -52,11 +53,11 @@ export function App() {
         <h1>Class Effect</h1>
 
         {userData && (
-          <section>
-            <h2>{userData.name}</h2>
-            <img src={userData.avatar_url} width={240} />
-            <p>{userData.bio}</p>
-          </section>
+          <UserCard
+            name={userData.name}
+            avatar_url={userData.avatar_url}
+            bio={userData.bio}
+          />
         )}
       </section>
 

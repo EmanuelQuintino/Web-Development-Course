@@ -47,6 +47,14 @@ console.log(myName); // string immutable *
 // revert string
 console.log("revert string".split("").reverse().join(""));
 
+// count numbers
+const num = 7.12345;
+console.log(String(num).replace(".", "").length);
+
+// max numbers
+const numbers = [12, 34, 4, 98, 32, 56, 178, 12, 43, 65];
+console.log(Math.max(...numbers)); //spread
+
 // Question 5 (array)
 
 const filmList = ["Matrix", "Interestellar", "Shrek", "Get Out", "Split"];

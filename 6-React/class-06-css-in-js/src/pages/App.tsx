@@ -1,12 +1,16 @@
+import { useState } from "react";
 import { Button } from "../components/button";
 import { AppContainer } from "./styles";
 
+export type AppThemeProps = "light" | "dark";
+
 export function App() {
+  const [appTheme, setAppTheme] = useState<AppThemeProps>("light");
+
   return (
-    <AppContainer>
+    <AppContainer appTheme={appTheme}>
       <h1>Class 06 Css in JS</h1>
-      <Button />
-      <Button />
+      <Button appTheme={appTheme} setAppTheme={setAppTheme} />
     </AppContainer>
   );
 }

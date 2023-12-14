@@ -8,5 +8,4 @@ function deleteArrayElement(element, array) {
   return array;
 }
 
-const newArray = deleteArrayElement("JavaScript", techs);
-document.write(newArray);
+console.log(deleteArrayElement("JavaScript", techs));

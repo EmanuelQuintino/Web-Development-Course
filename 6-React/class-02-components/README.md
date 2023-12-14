@@ -12,6 +12,11 @@
 - generics
 - assertion
 - compilation
+  - ASI (Automatic Semicolon Insertion)
+  - Babel (ES6 to ES5) involves three main steps
+    - Parser: Map code to AST (Abstract Syntex Tree)
+    - Transformer: AST manipulates (JSON)
+    - Generator: AST to code
 
 ```ts
 type User = {

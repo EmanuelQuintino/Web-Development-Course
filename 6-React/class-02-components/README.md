@@ -12,14 +12,6 @@
 - Generics
 - Assertion
 
-## JavaScript Compilation
-
-- ASI (Automatic Semicolon Insertion)
-- Babel (ES6 to ES5) involves three main steps
-  - Parser => map code to AST (Abstract Syntex Tree)
-  - Transformer => AST manipulates (JSON)
-  - Generator => AST to code
-
 ```ts
 type User = {
   name: string;
@@ -34,6 +26,14 @@ function user(user: User) {
 
 user({ name: "Emanuel", age: 30 });
 ```
+
+## JavaScript Compilation
+
+- ASI (Automatic Semicolon Insertion)
+- Babel (ES6 to ES5) involves three main steps
+  - Parser => map code to AST (Abstract Syntex Tree)
+  - Transformer => AST manipulates (JSON)
+  - Generator => AST to code
 
 ## Key Props
 

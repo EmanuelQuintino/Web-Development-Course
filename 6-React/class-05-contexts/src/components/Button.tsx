@@ -6,9 +6,5 @@ export function Button() {
   function changeName() {
     setName((prevName) => (prevName === "Emanuel" ? "Quintino" : "Emanuel"));
   }
-  return (
-    <>
-      <button onClick={changeName}>Change name</button>
-    </>
-  );
+  return <button onClick={changeName}>Change name</button>;
 }

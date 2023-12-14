@@ -1,13 +1,19 @@
+import { ContextTheme } from "../main";
 import { ButtonContainer } from "./styles";
+import { useContext } from "react";
 
-type Props = {
-  darkTheme: boolean;
-  setDarkTheme: React.Dispatch<React.SetStateAction<boolean>>;
-};
+export function Button() {
+  const { theme, setTheme } = useContext(ContextTheme);
 
-export function Button({ darkTheme, setDarkTheme }: Props) {
   function changeTheme() {
-    setDarkTheme(!darkTheme);
+    setTheme((prevState) => (prevState === "dark" ? "light" : "dark"));
   }
-  return <ButtonContainer onClick={changeTheme}>Tema</ButtonContainer>;
+
+  const nameChangeTheme = theme === "light" ? "dark" : "light";
+
+  return (
+    <ButtonContainer onClick={changeTheme}>
+      Change thema {nameChangeTheme}
+    </ButtonContainer>
+  );
 }

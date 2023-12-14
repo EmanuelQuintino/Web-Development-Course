@@ -1,16 +1,20 @@
-import { useState } from "react";
-import { Button } from "../components/button";
+import { GlobalStyles } from "../styles/reset";
 import { AppContainer } from "./styles";
-
-export type AppThemeProps = "light" | "dark";
+import { ThemeProvider } from "styled-components";
+import { useState } from "react";
+import { appDarkTheme } from "../styles/themeDark";
+import { appLightTheme } from "../styles/themeLight";
+import { Button } from "../components/Button";
 
 export function App() {
-  const [appTheme, setAppTheme] = useState<AppThemeProps>("light");
-
+  const [darkTheme, setDarkTheme] = useState(true);
   return (
-    <AppContainer appTheme={appTheme}>
-      <h1>Class 06 Css in JS</h1>
-      <Button appTheme={appTheme} setAppTheme={setAppTheme} />
-    </AppContainer>
+    <ThemeProvider theme={darkTheme == true ? appDarkTheme : appLightTheme}>
+      <AppContainer>
+        <h1>Class 06 Css in JS</h1>
+        <Button darkTheme={darkTheme} setDarkTheme={setDarkTheme} />
+      </AppContainer>
+      <GlobalStyles />
+    </ThemeProvider>
   );
 }

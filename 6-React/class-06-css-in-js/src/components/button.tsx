@@ -1,19 +1,13 @@
-import React from "react";
 import { ButtonContainer } from "./styles";
-import { AppThemeProps } from "../pages/App";
 
 type Props = {
-  appTheme: AppThemeProps;
-  setAppTheme: React.Dispatch<React.SetStateAction<AppThemeProps>>;
+  darkTheme: boolean;
+  setDarkTheme: React.Dispatch<React.SetStateAction<boolean>>;
 };
 
-export function Button({ appTheme, setAppTheme }: Props) {
+export function Button({ darkTheme, setDarkTheme }: Props) {
   function changeTheme() {
-    setAppTheme(appTheme === "light" ? "dark" : "light");
+    setDarkTheme(!darkTheme);
   }
-  return (
-    <>
-      <ButtonContainer onClick={changeTheme}>theme</ButtonContainer>;
-    </>
-  );
+  return <ButtonContainer onClick={changeTheme}>Tema</ButtonContainer>;
 }

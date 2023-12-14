@@ -3,9 +3,12 @@ import { UserContext } from "../contexts/UserContext";
 
 export function Button() {
   const { setName } = useContext(UserContext);
+  function changeName() {
+    setName((prevName) => (prevName === "Emanuel" ? "Quintino" : "Emanuel"));
+  }
   return (
     <>
-      <button onClick={() => setName("Quintino")}>Change name</button>
+      <button onClick={changeName}>Change name</button>
     </>
   );
 }

@@ -1,13 +1,9 @@
-import { ContextTheme } from "../main";
+import { ContextTheme } from "../contexts/ThemeContext";
 import { ButtonContainer } from "./styles";
 import { useContext } from "react";
 
 export function Button() {
-  const { theme, setTheme } = useContext(ContextTheme);
-
-  function changeTheme() {
-    setTheme((prevState) => (prevState === "dark" ? "light" : "dark"));
-  }
+  const { theme, changeTheme } = useContext(ContextTheme);
 
   const nameChangeTheme = theme === "light" ? "dark" : "light";
 

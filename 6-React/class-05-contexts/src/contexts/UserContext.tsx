@@ -1,8 +1,23 @@
-import { createContext } from "react";
+import { PropsWithChildren, createContext, useState } from "react";
 
-type UserContext = {
+type Context = {
   name: string;
   setName: React.Dispatch<React.SetStateAction<string>>;
 };
 
-export const UserContext = createContext({} as UserContext);
+export const UserContext = createContext<Context>({} as Context);
+
+export function UserProvider({ children }: PropsWithChildren) {
+  const [name, setName] = useState("Emanuel");
+
+  return (
+    <UserContext.Provider
+      value={{
+        name,
+        setName,
+      }}
+    >
+      {children}
+    </UserContext.Provider>
+  );
+}

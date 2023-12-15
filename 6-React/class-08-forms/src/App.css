@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 240px;
+  margin: 32px auto;
+}
+
+section {
+  margin-top: 12px;
+}
+
+input {
+  width: 100%;
+  padding: 4px 8px;
+}
+
+button {
+  margin-top: 16px;
+  width: 100%;
+  padding: 4px 8px;
+}
+
+.errors {
+  color: red;
+  font-size: 8px;
+  margin-top: 2px;
+  display: block;
+  position: absolute;
+}

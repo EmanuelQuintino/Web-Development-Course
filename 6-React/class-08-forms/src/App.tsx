@@ -21,7 +21,7 @@ export function App() {
     if (data.name === "Emanuel") {
       setError("name", {
         type: "manual",
-        message: "Nome Emanuel não pode!",
+        message: "Nome Emanuel não pode",
       });
       return;
     }
@@ -30,7 +30,7 @@ export function App() {
 
   function passwordValidate() {
     if (watch("password") !== watch("passwordConfirm")) {
-      return "Senhas não conferem!";
+      return "Senhas não conferem";
     }
     return true;
   }
@@ -46,7 +46,7 @@ export function App() {
               type="text"
               placeholder="digite seu nome"
               autoFocus
-              {...register("name", { required: "Campo obrigatório!" })}
+              {...register("name", { required: "Campo obrigatório" })}
             />
           </label>
           <span className="errors">{errors?.name?.message}</span>
@@ -59,7 +59,7 @@ export function App() {
               type="text"
               placeholder="exemplo@email.com"
               {...register("email", {
-                required: "Campo obrigatório!",
+                required: "Campo obrigatório",
                 pattern: {
                   value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
                   message: "Endereço de e-mail inválido",
@@ -74,18 +74,18 @@ export function App() {
           <label>
             Senha:
             <input
-              type="password"
+              type="text"
               placeholder="mínimo de 7 dígitos"
               {...register("password", {
-                required: "Campo obrigatório!",
+                required: "Campo obrigatório",
                 minLength: {
                   value: 7,
-                  message: "A senha deve ter no mínimo 7 dígitos!",
+                  message: "A senha deve ter no mínimo 7 dígitos",
                 },
                 pattern: {
-                  value:
-                    /^(?=.*[a-zA-Z])(?=.*\d)(?=.*[!@#$%^&*()_+{}|:"<>?,./\\[\]-]).+$/i,
-                  message: "A senha deve ter números, letras e caracteres especiais!",
+                  value: /^(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()_+{}|:"<>?,./\\[\]-]).+$/,
+                  message:
+                    "A senha deve ter número, letra maiúscula e caractere especial",
                 },
               })}
             />
@@ -98,9 +98,9 @@ export function App() {
             Confirmar Senha:
             <input
               type="password"
-              placeholder="mínimo de 7 dígitos"
+              placeholder="digite a senha novamente"
               {...register("passwordConfirm", {
-                required: "Campo obrigatório!",
+                required: "Campo obrigatório",
                 validate: passwordValidate,
               })}
             />

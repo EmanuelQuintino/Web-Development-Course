@@ -29,32 +29,28 @@ switch (weekDay) {
     break;
 }
 
-let option = window.prompt(`
-    Digite a opção desejada:
+const option = prompt(`
+  Digite a opção desejada:
 
-    1: Consultoria
-    2: Atendimento
-    3: Encerar`);
+  1: Consultoria
+  2: Atendimento
+  3: Encerar
+`);
 
 switch (option) {
   case "1":
-    window.alert(`
-        Consultorias em:
-
-        - Finanças
-        - Vendas
-        - Markting`);
+    alert("Consultorias em finanças, vendas e markting");
     break;
   case "2":
-    window.alert("Vamos passar para um de nossos atendentes!");
+    alert("Vamos passar para um de nossos atendentes!");
     break;
   case "3":
-    window.alert("Obrigado pela sua visita, volte sempre!");
+    alert("Obrigado pela sua visita, volte sempre!");
     break;
   case null:
-    window.alert("Programa ecerrado!");
+    alert("Programa ecerrado!");
     break;
   default:
-    window.alert("Digite uma opção válida!");
+    alert("Digite uma opção válida!");
     break;
 }

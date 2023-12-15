@@ -5,6 +5,7 @@ type Inputs = {
   name: string;
   email: string;
   password: string;
+  passwordConfirm: string;
 };
 
 export function App() {
@@ -12,9 +13,27 @@ export function App() {
     register,
     handleSubmit,
     formState: { errors },
+    watch,
+    setError,
   } = useForm<Inputs>();
 
-  const onSubmit: SubmitHandler<Inputs> = (data) => console.log(data);
+  const onSubmit: SubmitHandler<Inputs> = (data) => {
+    if (data.name === "Emanuel") {
+      setError("name", {
+        type: "manual",
+        message: "Nome Emanuel não pode!",
+      });
+      return;
+    }
+    console.log(data);
+  };
+
+  function passwordValidate() {
+    if (watch("password") !== watch("passwordConfirm")) {
+      return "Senhas não conferem!";
+    }
+    return true;
+  }
 
   return (
     <div className="container">
@@ -53,7 +72,7 @@ export function App() {
 
         <section>
           <label>
-            Password:
+            Senha:
             <input
               type="password"
               placeholder="mínimo de 7 dígitos"
@@ -64,13 +83,29 @@ export function App() {
                   message: "A senha deve ter no mínimo 7 dígitos!",
                 },
                 pattern: {
-                  value: /^(?=.*[a-zA-Z])(?=.*\d).+/i,
-                  message: "A senha deve ser alfanumérica",
+                  value:
+                    /^(?=.*[a-zA-Z])(?=.*\d)(?=.*[!@#$%^&*()_+{}|:"<>?,./\\[\]-]).+$/i,
+                  message: "A senha deve ter números, letras e caracteres especiais!",
                 },
               })}
             />
           </label>
           <span className="errors">{errors?.password?.message}</span>
+        </section>
+
+        <section>
+          <label>
+            Confirmar Senha:
+            <input
+              type="password"
+              placeholder="mínimo de 7 dígitos"
+              {...register("passwordConfirm", {
+                required: "Campo obrigatório!",
+                validate: passwordValidate,
+              })}
+            />
+          </label>
+          <span className="errors">{errors?.passwordConfirm?.message}</span>
         </section>
 
         <button type="submit">Cadastrar</button>

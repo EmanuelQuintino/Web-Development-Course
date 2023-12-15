@@ -1,6 +1,6 @@
-// ⚠️ Desafio: Crie uma função para converter média para o sistema de caracteres ABC
+// ⚠️ Desafio: Crie uma função de converter média para o sistema de caracteres ABC
 // Depois diga se o aluno foi aprovado (A, B e C) ou reprovado (D e F)
-// As funções devem funcionar com strings e notas inválidas devem retornar mensagem de erro.
+// Insira validações para notas strings e fora do range.
 
 // A: 90 - 100
 // B: 80 - 90
@@ -8,19 +8,13 @@
 // D: 60 - 70
 // F:  < - 60
 
-function averageCalculate(grade1, grade2) {
-  let average = (Number(grade1) + Number(grade2)) / 2;
-
-  if (isNaN(average)) {
-    average = "Insira somente notas válidas!";
-  }
-
-  return average;
-}
-
 function abcConvert(average) {
-  if (typeof average === "string") {
+  if (typeof average == "string") {
     average = Number(average.replace(",", "."));
+
+    if (isNaN(average)) {
+      return "Insira somente notas válidas!";
+    }
   }
 
   if (average >= 90 && average <= 100) {
@@ -38,10 +32,9 @@ function abcConvert(average) {
   }
 }
 
-let averageStudant = averageCalculate(80, "90");
-console.log(averageStudant);
+const average = "90";
 
-let abcAverage = abcConvert(averageStudant);
+const abcAverage = abcConvert(average);
 console.log(abcAverage);
 
 switch (abcAverage) {

@@ -1,4 +1,4 @@
-# Class 06 CSS in JS
+# Class 08 CSS in JS
 
 - CSS
 - Preprocessors

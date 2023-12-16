@@ -1,4 +1,4 @@
-# Class 03 States
+# Class 02 States
 
 ## React Render Flow
 

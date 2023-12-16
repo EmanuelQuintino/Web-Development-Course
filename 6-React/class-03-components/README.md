@@ -1,4 +1,4 @@
-# Class 02 Components
+# Class 03 Components
 
 ## Component
 

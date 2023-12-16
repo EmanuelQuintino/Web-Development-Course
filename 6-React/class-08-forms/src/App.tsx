@@ -15,6 +15,7 @@ export function App() {
     formState: { errors },
     watch,
     setError,
+    reset,
   } = useForm<Inputs>();
 
   const onSubmit: SubmitHandler<Inputs> = (data) => {
@@ -26,6 +27,7 @@ export function App() {
       return;
     }
     console.log(data);
+    reset();
   };
 
   function passwordValidate() {
@@ -46,17 +48,24 @@ export function App() {
               type="text"
               placeholder="digite seu nome"
               autoFocus
-              {...register("name", { required: "Campo obrigatório" })}
+              {...register("name", {
+                required: "Campo obrigatório",
+                minLength: { value: 3, message: "Mínimo de 3 caracteres" },
+                pattern: {
+                  value: /^[a-zA-Z\s]+$/i,
+                  message: "Apenas letras são permitidas",
+                },
+              })}
             />
           </label>
-          <span className="errors">{errors?.name?.message}</span>
+          <span className="errors">{errors.name?.message}</span>
         </section>
 
         <section>
           <label>
             Email:
             <input
-              type="text"
+              type="email"
               placeholder="exemplo@email.com"
               {...register("email", {
                 required: "Campo obrigatório",
@@ -67,14 +76,14 @@ export function App() {
               })}
             />
           </label>
-          <span className="errors">{errors?.email?.message}</span>
+          <span className="errors">{errors.email?.message}</span>
         </section>
 
         <section>
           <label>
             Senha:
             <input
-              type="text"
+              type="password"
               placeholder="mínimo de 7 dígitos"
               {...register("password", {
                 required: "Campo obrigatório",
@@ -90,7 +99,7 @@ export function App() {
               })}
             />
           </label>
-          <span className="errors">{errors?.password?.message}</span>
+          <span className="errors">{errors.password?.message}</span>
         </section>
 
         <section>
@@ -105,7 +114,7 @@ export function App() {
               })}
             />
           </label>
-          <span className="errors">{errors?.passwordConfirm?.message}</span>
+          <span className="errors">{errors.passwordConfirm?.message}</span>
         </section>
 
         <button type="submit">Cadastrar</button>

@@ -5,12 +5,16 @@
 }
 
 .container {
-  width: 240px;
-  margin: 32px auto;
+  width: 260px;
+  margin: 32px auto 0;
 }
 
 section {
   margin-top: 12px;
+}
+
+label {
+  font-size: 12px;
 }
 
 input {
@@ -26,8 +30,7 @@ button {
 
 .errors {
   color: red;
-  font-size: 8px;
-  margin-top: 2px;
+  font-size: 10px;
   display: block;
   position: absolute;
 }

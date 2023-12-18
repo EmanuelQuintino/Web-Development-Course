@@ -8,7 +8,7 @@
 // D: 60 - 70
 // F:  < - 60
 
-function abcConvert(average) {
+function convertABC(average) {
   if (typeof average == "string") {
     average = Number(average.replace(",", "."));
 
@@ -28,14 +28,12 @@ function abcConvert(average) {
   } else if (average >= 0 && average < 60) {
     return "F";
   } else {
-    return "Média inválida!";
+    return "Média fora do do intervalo de 0 a 100!";
   }
 }
 
-const average = "90";
-
-const abcAverage = abcConvert(average);
-console.log(abcAverage);
+const averageConverted = convertABC("90");
+console.log(averageConverted);
 
 switch (abcAverage) {
   case "A":
@@ -54,5 +52,5 @@ switch (abcAverage) {
     console.log("Precisa estudar mais, reprovado com F!");
     break;
   default:
-    console.log("Nota ABC Inválida!");
+    console.log("Nota inválida!");
 }

@@ -1,5 +1,3 @@
-// Reference: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find
-
 // Reference: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter
 
 const students = [
@@ -13,26 +11,6 @@ const students = [
   { id: 8, name: "Dudu", average: 8, birth: 2007 },
   { id: 9, name: "Nathan", average: 10, birth: 2006 },
 ];
-
-console.log(
-  students.find((value) => {
-    return value.id === 6 || value.id === 5;
-  })
-);
-
-console.log(
-  students.find((value) => {
-    return value.name === "Jonas" && value.name === "Rosa";
-  })
-);
-
-console.log(
-  students.find((value) => {
-    return value.name === "Pedro" && value.birth > 1998;
-  })
-);
-
-console.log(students.find((student) => student.average >= 7));
 
 // Immutable ⭐
 console.table(students.filter((student) => student.average >= 7));

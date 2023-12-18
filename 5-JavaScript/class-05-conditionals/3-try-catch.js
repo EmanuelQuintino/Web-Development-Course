@@ -1,25 +1,24 @@
 // Reference: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/try...catch
 
-const runMyAplication = () => "Running Function...";
+const runFunc = () => "Running function...";
 
 try {
-  console.log(runMyAplication());
+  console.log(runFunc());
 } catch (error) {
-  // hoisting
-  console.error(`My Test: ${error}`);
+  console.error(error);
 } finally {
   console.log(`Sempre será executado!`);
 }
 
-document.write("Rodando aplicação!");
+document.write("Aplicação online!");
 
-function divideNumbers(num1, num2 = 1) {
-  if (num2 === 0) throw new Error("Divisor não pode ser 0!");
+function divNumbers(num1, num2 = 1) {
+  if (num2 == 0) throw Error("Divisor não pode ser 0!");
   return num1 / num2;
 }
 
 try {
-  console.log(divideNumbers(4, 0));
+  console.log(divNumbers(4, 0));
 } catch (error) {
   console.error(error);
 }

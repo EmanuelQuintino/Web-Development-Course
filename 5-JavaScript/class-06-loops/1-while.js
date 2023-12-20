@@ -12,13 +12,7 @@ while (count <= 10) {
   count++; // container
 }
 
-count = 0;
-let aux = 1;
-while (aux <= 200) {
-  console.log(aux);
-  aux = count * 2;
-  count++;
-}
+console.log("Programa encerrado!");
 
 let resp;
 while (true) {

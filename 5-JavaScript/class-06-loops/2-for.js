@@ -1,14 +1,14 @@
 // Reference: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration
 
 // increment factor
-for (let count = 0; count <= 10; count++) {
-  if (count > 2 && count < 8) {
-    continue;
-    // break;
-  }
-
+for (let count = 1; count <= 100; count++) {
   if (count % 2 == 0) {
     console.log(count);
+  }
+
+  if (count > 20 && count < 80) {
+    continue;
+    // break;
   }
 }
 

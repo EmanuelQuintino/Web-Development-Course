@@ -12,31 +12,21 @@ function degreeConvert(degree) {
   const scaleDegree = arrayDegree.pop().toUpperCase();
   const newDegree = Number(arrayDegree.join(""));
 
-  if (isNaN(newDegree)) {
-    throw new Error("Valor inválido! Insira conforme exemplo: 10F ou 20C.");
-  }
+  if (isNaN(newDegree)) throw Error("Valor inválido!");
 
-  function convertCelsiusToFahrenheit(degree) {
-    return ((degree * 9) / 5 + 32).toLocaleString("pt-BR") + "F";
-  }
-
-  function convertFahrenheitToCelsius(degree) {
-    return (((degree - 32) * 5) / 9).toLocaleString("pt-BR") + "C";
-  }
-
-  switch (scaleDegree) {
-    case "C":
-      return convertCelsiusToFahrenheit(newDegree);
-    case "F":
-      return convertFahrenheitToCelsius(newDegree);
-    default:
-      throw new Error("Escala não identificada, insira 'C' ou 'F': Ex: 10F ou 20C.");
+  if (scaleDegree == "C") {
+    return (newDegree * 9) / 5 + 32 + "F";
+  } else if (scaleDegree == "F") {
+    return ((newDegree - 32) * 5) / 9 + "C";
+  } else {
+    throw new Error("Escala inválida!");
   }
 }
 
 try {
-  const temperature = "10C";
-  console.log(`${temperature.toUpperCase()} =  ${degreeConvert(temperature)}`);
+  const degree = "100C";
+  const covertedDegree = degreeConvert(degree);
+  console.log(`${degree} = ${covertedDegree}`);
 } catch (error) {
   console.error(error);
 }

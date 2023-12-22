@@ -18,11 +18,11 @@ console.log(2 + +"3");
 // d) N.R.A
 
 // Question 3 (data types)
-console.log(typeof 2 / 0);
+console.log(2 / 0);
 
 // a) error
 // b) infinity
-// c) number
+// c) 2
 // d) N.R.A
 
 // Question 4 (scope variebles)
@@ -43,43 +43,6 @@ console.log(num);
 // Question 5 data Manipulation
 myName[1] = "T";
 console.log(myName); // string immutable *
-
-// revert string
-console.log("revert string".split("").reverse().join(""));
-
-// count numbers
-const num = 7.12345;
-console.log(String(num).replace(".", "").length);
-
-// max numbers
-const numbers = [12, 34, 4, 98, 32, 56, 178, 12, 43, 65];
-console.log(Math.max(...numbers)); //spread
-
-// duplicates
-const setRemovedDuplicates = new Set(numbers);
-const arrayRemovedDuplicates = [...setRemovedDuplicates];
-console.log(arrayRemovedDuplicates);
-
-// flattening
-const nestedArrays = [
-  [1, 2],
-  [3, 4],
-  [5, 6],
-];
-
-const singleArray = [].concat(...nestedArrays);
-
-console.log(singleArray);
-
-// count category
-const arrayLetters = ["A", "A", "B", "C", "C", "C"];
-
-const countLetters = arrayLetters.reduce((prev, letter) => {
-  prev[letter] ? prev[letter]++ : (prev[letter] = 1);
-  return prev;
-}, {});
-
-console.log(countLetters);
 
 // Question 5 (array)
 
@@ -104,14 +67,39 @@ console.log(num1);
 // c) 3, 4, 8, 8
 // d) error
 
-// Question 3 (Functions)
+// revert string
+console.log("revert string".split("").reverse().join(""));
 
-// Question 4 (Data Manipulation)
+// count numbers
+const num = 7.1356231304987145;
+console.log(String(num).replace(".", "").length);
 
-// Question 5 (for)
+// max numbers
+const numbers = [12, 34, 4, 98, 32, 56, 178, 12, 43, 65];
+console.log(Math.max(...numbers)); //spread
 
-// Question 6 (while)
+// duplicates
+const array = ["A", "A", "B", "B"];
+const arrayRemovedDuplicates = [...new Set(array)];
+console.log(arrayRemovedDuplicates);
 
-// Question 7 (if)
+// flattening
+const nestedArrays = [
+  [1, 2],
+  [3, 4],
+  [5, 6],
+];
 
-// Question 8 (array methods)
+const singleArray = [].concat(...nestedArrays);
+
+console.log(singleArray);
+
+// count category
+const arrayLetters = ["A", "A", "B", "C", "C", "C"];
+
+const countLetters = arrayLetters.reduce((prev, letter) => {
+  prev[letter] ? prev[letter]++ : (prev[letter] = 1);
+  return prev;
+}, {});
+
+console.log(countLetters);

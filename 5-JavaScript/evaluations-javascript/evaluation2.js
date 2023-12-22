@@ -71,6 +71,16 @@ const singleArray = [].concat(...nestedArrays);
 
 console.log(singleArray);
 
+// count category
+const arrayLetters = ["A", "A", "B", "C", "C", "C"];
+
+const countLetters = arrayLetters.reduce((prev, letter) => {
+  prev[letter] ? prev[letter]++ : (prev[letter] = 1);
+  return prev;
+}, {});
+
+console.log(countLetters);
+
 // Question 5 (array)
 
 const filmList = ["Matrix", "Interestellar", "Shrek", "Get Out", "Split"];

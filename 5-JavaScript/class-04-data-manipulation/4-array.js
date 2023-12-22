@@ -101,3 +101,14 @@ console.log(clone);
 
 console.log(letters + techs);
 console.log(letters.concat(techs));
+
+// flattening
+const nestedArrays = [
+  [1, 2],
+  [3, 4],
+  [5, 6],
+];
+
+const singleArray = [].concat(...nestedArrays);
+
+console.log(singleArray);

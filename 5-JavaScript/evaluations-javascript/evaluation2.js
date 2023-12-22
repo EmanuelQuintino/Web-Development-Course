@@ -55,6 +55,22 @@ console.log(String(num).replace(".", "").length);
 const numbers = [12, 34, 4, 98, 32, 56, 178, 12, 43, 65];
 console.log(Math.max(...numbers)); //spread
 
+// duplicates
+const setRemovedDuplicates = new Set(numbers);
+const arrayRemovedDuplicates = [...setRemovedDuplicates];
+console.log(arrayRemovedDuplicates);
+
+// flattening
+const nestedArrays = [
+  [1, 2],
+  [3, 4],
+  [5, 6],
+];
+
+const singleArray = [].concat(...nestedArrays);
+
+console.log(singleArray);
+
 // Question 5 (array)
 
 const filmList = ["Matrix", "Interestellar", "Shrek", "Get Out", "Split"];

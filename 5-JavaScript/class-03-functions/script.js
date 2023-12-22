@@ -42,3 +42,24 @@ function sumNumbersShow(num1, num2, callback) {
 }
 
 sumNumbersShow(2, 3, show);
+
+// factory (creational design pattern)
+
+function person(name, age) {
+  return {
+    name,
+    age,
+    canDrive: age >= 18,
+    status: () => {
+      if (age >= 18) {
+        return "Pode dirigir";
+      } else {
+        return "Não pode dirigir";
+      }
+    },
+  };
+}
+
+console.log(person("Emanuel", 30));
+console.log(typeof person("Emanuel", 30));
+console.log(person("Emanuel", 30).status());

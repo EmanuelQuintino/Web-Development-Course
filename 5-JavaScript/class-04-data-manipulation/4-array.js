@@ -69,10 +69,14 @@ function showArray(array, ...itens) {
 showArray(letters, "D", "E", "F");
 
 // spread
-const numbers = [1, 3, 42, 5, 87, 6];
+const numbers = [4, 1, 3, 3, 4, 2, 5, 8, 6];
 console.log(numbers);
 console.log(...numbers);
 console.log(Math.max(...numbers));
+
+const setRemovedDuplicates = new Set(numbers);
+const arrayRemovedDuplicates = [...setRemovedDuplicates];
+console.log(arrayRemovedDuplicates);
 
 // value
 let num1 = 1;

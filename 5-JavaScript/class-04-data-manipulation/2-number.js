@@ -20,7 +20,7 @@ console.log(String(num1).length);
 console.log(String(num1).replace(".", "").length);
 
 console.log(String(num1));
-console.log(num1.toString());
+console.log(num1.toString(16)); // hexadecimal
 console.log(num1.toPrecision(3));
 console.log(num1.toFixed(2));
 console.log(num1.toExponential(1));

@@ -5,15 +5,12 @@
 const numbersMega = [];
 
 while (numbersMega.length < 6) {
-  let numberDrawn = String(Math.ceil(Math.random() * 60)).padStart(2, 0);
+  const numberDrawn = Math.ceil(Math.random() * 60);
+  const formatedNumber = String(numberDrawn).padStart(2, "0");
 
-  if (!numbersMega.includes(numberDrawn)) {
-    if (numberDrawn > numbersMega[numbersMega.length - 1]) {
-      numbersMega.push(numberDrawn);
-    } else if (numberDrawn < numbersMega[0]) {
-      numbersMega.unshift(numberDrawn);
-    }
+  if (!numbersMega.includes(formatedNumber)) {
+    numbersMega.push(formatedNumber);
   }
 }
 
-document.write(numbersMega.join("-"));
+console.log(numbersMega.sort((a, b) => a - b).join("-"));

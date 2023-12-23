@@ -1,20 +1,24 @@
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
+import "./style.css";
 
 export function Header() {
   return (
     <header>
-      <h1>App</h1>
+      <Link to="/">
+        <h1>App</h1>
+      </Link>
+
       <nav>
         <ul>
-          <Link to="/">
+          <NavLink to="/">
             <li>Home</li>
-          </Link>
-          <Link to="/gallery">
+          </NavLink>
+          <NavLink to="/gallery">
             <li>Gallery</li>
-          </Link>
-          <Link to="/contact">
+          </NavLink>
+          <NavLink to="/contact">
             <li>Contact</li>
-          </Link>
+          </NavLink>
         </ul>
       </nav>
     </header>

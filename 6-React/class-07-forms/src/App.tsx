@@ -117,7 +117,9 @@ export function App() {
           <span className="errors">{errors.passwordConfirm?.message}</span>
         </section>
 
-        <button type="submit">Cadastrar</button>
+        <button type="submit" disabled={!(watch("name")?.length > 3)}>
+          Cadastrar
+        </button>
       </form>
     </div>
   );

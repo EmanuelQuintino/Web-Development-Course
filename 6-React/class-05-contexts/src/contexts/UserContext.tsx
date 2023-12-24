@@ -1,20 +1,24 @@
 import { PropsWithChildren, createContext, useState } from "react";
 
 type Context = {
-  name: string;
-  setName: React.Dispatch<React.SetStateAction<string>>;
+  count: number;
+  incrementCount: () => void;
 };
 
-export const UserContext = createContext<Context>({} as Context);
+export const UserContext = createContext({} as Context);
 
 export function UserProvider({ children }: PropsWithChildren) {
-  const [name, setName] = useState("Emanuel");
+  const [count, setCount] = useState(0);
+
+  function incrementCount() {
+    setCount((prevCount) => prevCount + 1);
+  }
 
   return (
     <UserContext.Provider
       value={{
-        name,
-        setName,
+        count,
+        incrementCount,
       }}
     >
       {children}

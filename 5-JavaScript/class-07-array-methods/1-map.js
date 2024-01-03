@@ -1,16 +1,22 @@
 // Reference: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map
 
-const array = ["Matrix", "IT", "ET", "Jumanji", "Barbie"];
+const numbers = [1, 2, 3];
 
-console.log(array);
+// immutable ⭐
+const newNumbers = array.map((number) => number * 2);
 
-// Immutable ⭐
-const arrayMap = array.map((value, index, array) => {
-  return { value, index, array };
+console.log(numbers);
+console.log(newNumbers);
+
+const films = ["Matrix", "IT", "ET", "Jumanji", "Barbie"];
+
+// higher-order function
+const newFilms = films.map((film, index, array) => {
+  return { film: film.toUpperCase(), index, array };
 });
 
-console.log(array);
-console.log(arrayMap);
+console.log(films);
+console.log(newFilms);
 
 const arrayDollar = [1, 2, 3000, 40, 50];
 
@@ -25,15 +31,15 @@ const rectangles = [
   { width: 2, height: 8 },
 ];
 
-const calculatedAreas = rectangles.map((value, index) => {
+const areas = rectangles.map((rectangle, index) => {
   return {
     name: `Retângulo ${index + 1}`,
-    area: value.width * value.height,
+    area: rectangle.width * rectangle.height + "m²",
   };
 });
 
-console.log(calculatedAreas);
-console.table(calculatedAreas);
+console.log(areas);
+console.table(areas);
 
 const arrayNames = ["joão", "emanuel", "vieira", "quintino"];
 

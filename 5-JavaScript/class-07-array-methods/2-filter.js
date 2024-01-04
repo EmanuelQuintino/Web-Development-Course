@@ -1,5 +1,13 @@
 // Reference: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter
 
+const numbers = [1, 2, 3, 4, 5, 6, 7, 8];
+
+// immutable ⭐
+const filteredNumbers = numbers.filter((value) => value < 5);
+
+console.log(numbers);
+console.log(filteredNumbers);
+
 const students = [
   { id: 1, name: "João", average: 6, birth: 2005 },
   { id: 2, name: "Thiago", average: 6, birth: 2002 },
@@ -12,7 +20,6 @@ const students = [
   { id: 9, name: "Nathan", average: 10, birth: 2006 },
 ];
 
-// Immutable ⭐
 console.table(students.filter((student) => student.average >= 7));
 
 console.log(students);
@@ -25,4 +32,4 @@ console.table(students.filter((student) => currentYear - student.birth <= 18));
 console.table(students.filter((student) => student.name.includes("d")));
 
 const userName = prompt("Digite o nome:");
-console.log(students.filter((value) => value.name.includes(userName)));
+console.log(students.filter((student) => student.name.includes(userName)));

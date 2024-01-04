@@ -3,7 +3,7 @@
 const arrayNumbers = [2, "2", 1, 5, 2, 4, 3, 10];
 
 // Lexicographic Order (Unicode)
-const arrayNumbersSorted = arrayNumbers.sort();
+console.log(arrayNumbers.sort());
 
 // Table ASCII (0-9, A-Z, a-z)
 arrayNumbers.sort((a, b) => {
@@ -13,9 +13,7 @@ arrayNumbers.sort((a, b) => {
 });
 
 arrayNumbers.sort((a, b) => b - a);
-
-console.log(arrayNumbersSorted.join("-"));
-console.log(arrayNumbers.join("-"));
+console.log(arrayNumbers);
 
 const arrayNames = ["Pedinho", "eduardo", "Luíza", "Éric"];
 
@@ -35,7 +33,7 @@ console.log("A".charCodeAt());
 console.log("B".charCodeAt());
 
 arrayNames.sort((a, b) => a.localeCompare(b));
-console.log(arrayNames);
+console.log(arrayNames); // mutable!
 
 arrayNumbers.sort((a, b) => String(a).localeCompare(b)); // not work
 console.log(arrayNumbers);
@@ -47,13 +45,6 @@ const arrayAnimes = [
   { name: "Naruto", year: 1997 },
 ];
 
-console.table(
-  arrayAnimes.sort((a, b) => {
-    if (a.name > b.name) return 1;
-    if (a.name < b.name) return -1;
-    return 0;
-  })
-);
-
+console.table(arrayAnimes.sort((a, b) => a.name.localeCompare(b.name)));
 console.table(arrayAnimes.sort((a, b) => a.year - b.year));
 console.table(arrayAnimes);

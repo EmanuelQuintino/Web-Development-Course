@@ -1,4 +1,4 @@
-// Crie uma função que reproduza a sequencia de Fibonacci
+// ⚠️ Desafio: Crie uma função que reproduza a sequencia de Fibonacci
 // Passe como argumento quantos números deseja reproduzir
 
 function fibonacciSequence(amount) {

@@ -1,4 +1,4 @@
-// Crie um jogo que adivinhe um número de 1 a 10
+// ⚠️ Desafio: Crie um jogo que adivinhe um número de 1 a 10
 // O jogo encerra quando acertar o número e apresenta quantas tentativas levou
 // O programa deve ser encerrado caso o usuário clique em cancelar
 

@@ -1,4 +1,4 @@
-// Crie uma função para calcular o fatorial de um número
+// ⚠️ Desafio: Crie uma função para calcular o fatorial de um número
 // Passe o número via argumento e use um FOR para operação
 
 function calculateFactor(number) {

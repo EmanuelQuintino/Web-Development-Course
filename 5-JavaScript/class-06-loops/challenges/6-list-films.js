@@ -1,4 +1,4 @@
-// Crie um sistema que receba listas de filmes por categoria
+// ⚠️ Desafio: Crie um sistema que receba listas de filmes por categoria
 // Apresente o total das categorias e dos filmes, depois sugira as listas que deseja ver
 // A sugestão deve persistir enquanto o usuário não colocar um nome válido (faça validações)
 // Mostre a categoria, quantos filmes ela tem e os nomes de cada um deles.

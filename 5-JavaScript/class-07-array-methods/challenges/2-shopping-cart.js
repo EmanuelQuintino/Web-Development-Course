@@ -1,4 +1,4 @@
-// ⚠️ Desafio: 
+// ⚠️ Desafio: Crie uma lógica para somar total do carrinho de compras com ojeto contendo nome, quantidade e valor de cada item
 
 const products = [
   { name: "Camiseta", price: 20, units: 3 },

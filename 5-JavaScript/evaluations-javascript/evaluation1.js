@@ -11,7 +11,7 @@
 
 // Questão 3 (Functions):
 
-// Crie e execute uma função de nome 'test" que retorne "JavaScript" concatenado com um valor passado como argumento e imprima seu retorno
+// Crie e execute uma função de nome "concat" que retorne "JavaScript" concatenado com um valor passado como argumento e imprima seu retorno
 
 // Questão 4 (Data Manipulation):
 
@@ -28,8 +28,8 @@
 // Questão 7 (if):
 
 //Crie uma lógica para verificar se o motorista foi multado
-// A infração pode ser por velocidade alta (quando ultrapassar a máima)
-// E por velocidade baixa ( quando estiver inferior à metade da máxima
+// A infração pode ser por velocidade alta (quando ultrapassar a máxima)
+// E por velocidade baixa (quando estiver inferior à metade da máxima
 // A velocidade da pista é de 60km/h
 
 // Questão 8 (array methods):

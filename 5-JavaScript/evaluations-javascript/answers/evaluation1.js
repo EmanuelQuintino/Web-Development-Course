@@ -5,7 +5,7 @@ let number = 1;
 let sting = "1";
 let boolean = true;
 let myFunction = function () {};
-let array = [1, "A", true, [{}, {}], () => {}];
+let array = [1, "A", true];
 let object = { key: "value" };
 
 // Question 2 (Operators)
@@ -21,13 +21,13 @@ console.log(144 ** (1 / 2));
 console.log(Math.sqrt(144));
 
 // Question 3 (Functions)
-// Crie e execute uma função de nome 'test" que retorne "JavaScript" concatenado com um valor passado como argumento e imprima seu retorno
+// Crie e execute uma função de nome "concat" que retorne "JavaScript" concatenado com um valor passado como argumento e imprima seu retorno
 
-function test(value) {
+function concat(value) {
   return "JavaScript " + value;
 }
 
-console.log(test("test"));
+console.log(concat(10));
 
 // Question 4 (Data Manipulation)
 // Usando os métodos FIFO e LIFO, crie um array com 3 valos e posteriormente insira mais um valor no final e substitua o do início por outro
@@ -61,16 +61,6 @@ while (count <= 100) {
   count++;
 }
 
-count = 0;
-while (count <= 100) {
-  if (count >= 40 && count < 70) {
-    count++;
-    continue;
-  }
-  console.log(count);
-  count++;
-}
-
 // Question 7 (if)
 // Crie uma lógica para verificar se o motorista foi multado
 // A infração pode ser por velocidade alta (quando ultrapassar a máxima)
@@ -93,10 +83,10 @@ if (speed > maxSpeed) {
 // Abaixo tem a lista com todos os salários atuais de cada um deles
 // Apresente os novos salários e o novo total em folha dessa empresa
 
-const salary = [2000, 2800, 3000, 4000, 2200, 7500, 3650, 8000, 2000, 5000];
+const salaries = [2000, 2800, 3000, 4000, 2200, 7500, 3650, 8000, 2000, 5000];
 
-const newSalary = salary.map((salary) => salary * 1.1);
+const newSalary = salaries.map((salary) => salary * 1.1);
 console.log(newSalary);
 
-const sumNewSalary = newSalary.reduce((prev, curr) => prev + curr);
-console.log(sumNewSalary.toLocaleString("pt-br", { style: "currency", currency: "brl" }));
+const sumnewSalary = newSalary.reduce((a, b) => a + b);
+console.log(sumnewSalary);

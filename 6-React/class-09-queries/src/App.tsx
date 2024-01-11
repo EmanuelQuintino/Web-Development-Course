@@ -1,0 +1,7 @@
+export function App() {
+  return (
+    <>
+      <h1>Class Queries</h1>
+    </>
+  );
+}

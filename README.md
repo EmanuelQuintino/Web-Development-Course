@@ -1,6 +1,6 @@
 # Web-Development-Course
 
-O curso de Desenvolvimento Web é o nosso programa piloto e faz parte do projeto REPROGRAMA JUCÁS com a direção do Empreenda Mais, uma parceria entre prefeitura municipal e CVT jucaense com o objetivo de gerar renda através da Educação e fomentar a tecnologia em nosso município. Ele está em andamento formando profissionais na área de programação capazes de planejar, programar e publicar aplicações web, desenvolvendo competências responsáveis pela interface visível e interativa (Front-end) e pela lógica e funcionalidades do sistema (Back-end). Além disso, promove habilidades para entendimento e aplicação de boas práticas no perfil profissional.
+O curso de Desenvolvimento Web é o nosso programa piloto e faz parte do projeto REPROGRAMA JUCÁS com a direção do Empreenda Mais, uma parceria entre prefeitura municipal e CVT jucaense com o objetivo de gerar renda através da Educação e fomentar a tecnologia em nosso município. Ele está em andamento formando profissionais na área de programação capazes de planejar, programar e publicar aplicações web, desenvolvendo competências responsáveis pela criação de interfaces (Front-end) e pela lógica e funcionalidades do sistema (Back-end). Além disso, promove habilidades para entendimento e aplicação de boas práticas no perfil profissional.
 
 ### Dentre as tecnologias abordadas temos:
 

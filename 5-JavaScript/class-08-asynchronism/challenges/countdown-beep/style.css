@@ -1,125 +1,125 @@
 @font-face {
-    font-family: digital-clock;
-    src: url('fonts/DS-DIGII.TTF');
+  font-family: digital-clock;
+  src: url("fonts/DS-DIGII.TTF");
 }
 
 :root {
-    font-size: 62.5%;
+  font-size: 62.5%;
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 body {
-    font-size: 1.6rem;
-    color: #088b8b;
+  font-size: 1.6rem;
+  color: #088b8b;
 }
 
 .main-container {
-    height: 100vh;
-    width: 100%;
-    background: white;
+  height: 100vh;
+  width: 100%;
+  background: white;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .circle-container {
-    width: 40.0rem;
-    height: 40.0rem;
-    background: #ddd;
-    border-radius: 50%;
+  width: 40rem;
+  height: 40rem;
+  background: #ddd;
+  border-radius: 50%;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-    position: absolute;
-    z-index: 1;
+  position: absolute;
+  z-index: 1;
 
-    overflow: hidden;
+  overflow: hidden;
 }
 
 .semicircle {
-    width: 50%;
-    height: 100%;
+  width: 50%;
+  height: 100%;
 
-    position: absolute;
-    top: 0;
-    left: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
 
-    transform-origin: right center;
+  transform-origin: right center;
 }
 
 .semicircle:nth-child(1) {
-    background: #088b8b;
-    z-index: 2;
+  background: #088b8b;
+  z-index: 2;
 }
 
 .semicircle:nth-child(2) {
-    background: #088b8b;
-    z-index: 3;
+  background: #088b8b;
+  z-index: 3;
 }
 
 .semicircle:nth-child(3) {
-    background: #ddd;
-    z-index: 4;
+  background: #ddd;
+  z-index: 4;
 }
 
 .outermost-circle {
-    width: 39.0rem;
-    height: 39.0rem;
-    border-radius: 50%;
-    background: white;
-    z-index: 5;
+  width: 39rem;
+  height: 39rem;
+  border-radius: 50%;
+  background: white;
+  z-index: 5;
 }
 
 .timer-container {
-    width: 35.0rem;
-    height: 20.0rem;
+  width: 35rem;
+  height: 20rem;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .timer {
-    font-size: 6.4rem;
-    font-weight: 400;
-    font-family: digital-clock;
+  font-size: 6.4rem;
+  font-weight: 400;
+  font-family: digital-clock;
 
-    z-index: 6;
-    display: none;
+  z-index: 6;
+  display: none;
 }
 
 .start-button {
-    font-size: 4.8rem;
-    color: #088b8b;
+  font-size: 4.8rem;
+  color: #088b8b;
 
-    border: none;
-    background: none;
+  border: none;
+  background: none;
 
-    position: absolute;
+  position: absolute;
 
-    z-index: 7;
+  z-index: 7;
 }
 
 .start-button:hover {
-    cursor: pointer;
-    filter: brightness(1.1);
+  cursor: pointer;
+  filter: brightness(1.1);
 }
 
 .colon {
-    background: transparent;
+  background: transparent;
 
-    width: 1.0rem;
-    padding-bottom: 1.0rem;
+  width: 1rem;
+  padding-bottom: 1rem;
 
-    margin-left: 0;
-    margin-right: 0;
+  margin-left: 0;
+  margin-right: 0;
 }

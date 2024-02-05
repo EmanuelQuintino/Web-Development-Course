@@ -1,5 +1,4 @@
 // Promises
-
 // Pending - Fulfilled - Rejected - Settled
 
 console.log("Fazer requisição");

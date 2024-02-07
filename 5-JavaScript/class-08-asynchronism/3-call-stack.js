@@ -10,8 +10,7 @@ function greeting() {
 }
 
 function printGreeting() {
-  const greeted = greeting();
-  console.log(greeted);
+  console.log(greeting());
 }
 
 printGreeting();

@@ -36,45 +36,13 @@ console.log("Finalizar requisição");
 console.log("Início");
 
 const userName = "EmanuelQuintino";
-const url = `https://api.github.com/users/${userName}`;
-const gitHubUser = fetch(url)
-  .then((response) => response.json())
-  .then(({ name, bio }) => ({
-    name,
-    bio,
-  }));
 
-console.log(gitHubUser);
+console.log("Antes");
 
-gitHubUser
-  .then((user) => {
-    console.log(`${user.name}: ${user.bio}`);
-  })
-  .catch((error) => console.error(error));
+const userGitHub = fetch(API)
+  .then((res) => res.json())
+  .then((data) => console.log(data))
+  .catch((error) => console.error(error))
+  .finally(() => console.log("Fim da requisão!!!"));
 
-async function userGitHubData(user) {
-  try {
-    const url = `https://api.github.com/users/${user}`;
-    await fetch(url)
-      .then((request) => request.json())
-      .then(({ name, bio }) => {
-        console.log(`${name}: ${bio}`);
-      });
-  } catch (error) {
-    console.error(error);
-  }
-}
-
-userGitHubData("EmanuelQuintino");
-console.log("Fim");
-
-const gitHubUsers = Promise.all([
-  fetch(`https://api.github.com/users/EmanuelQuintino`),
-  fetch(`https://api.github.com/users/EmanuelQuintino`),
-])
-  .then((response) => {
-    console.log(response);
-    console.log(response[0].json().then((data) => console.log(data)));
-    console.log(response[1].json().then((data) => console.log(data)));
-  })
-  .catch((error) => console.error(error));
+console.log("Depois");

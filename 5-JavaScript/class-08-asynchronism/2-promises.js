@@ -15,7 +15,7 @@ const promise = new Promise((resolve, reject) => {
 console.log(promise);
 
 promise
-  .then((answer) => console.log(answer))
+  .then((response) => console.log(response))
   .catch((error) => console.error(error))
   .finally(() => console.log("Requisição concluída!"));
 

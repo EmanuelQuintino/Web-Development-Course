@@ -1,0 +1,24 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.sprite {
+  width: calc(288px / 6);
+  height: 100%;
+  background-image: url("images/sonic-sprite.png");
+  background-repeat: no-repeat;
+  animation: animation-sprite 1s steps(6) infinite;
+}
+
+@keyframes animation-sprite {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: -288px 0;
+  }
+}

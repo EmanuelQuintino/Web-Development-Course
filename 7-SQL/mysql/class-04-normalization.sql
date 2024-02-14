@@ -1,7 +1,7 @@
 -- NORMALIZATION
 
-DROP TABLE studants;
-CREATE TABLE studants (
+DROP TABLE students;
+CREATE TABLE students (
 	id SMALLINT UNSIGNED AUTO_INCREMENT,
 	name VARCHAR(255) NOT NULL,
     phone VARCHAR(255) NOT NULL,
@@ -13,9 +13,9 @@ CREATE TABLE studants (
     PRIMARY KEY(id)
 );
 
-DESCRIBE studants;
+DESCRIBE students;
 
-INSERT INTO studants(
+INSERT INTO students(
 	name, 
     phone, 
     address, 
@@ -26,7 +26,7 @@ VALUES
 ('Thiago', '(88) 8888-8888, (99) 9999-9999', 'Rua X, Bairro Y, Cidade Z', 1, 'Programador Web', 240),
 ('Beatriz', '(88) 8888-8888, (99) 9999-9999', 'Rua X, Bairro Y, Cidade Z', 2, 'Ferramentas Digitais', 160);
 
-SELECT * FROM studants;
+SELECT * FROM students;
 
 DROP TABLE courses;
 CREATE TABLE courses(
@@ -44,8 +44,8 @@ INSERT INTO courses (name, hours) VALUES
 
 SELECT * FROM courses;
 
-DROP TABLE studants;
-CREATE TABLE studants (
+DROP TABLE students;
+CREATE TABLE students (
 	id SMALLINT UNSIGNED AUTO_INCREMENT,
 	name VARCHAR(255) NOT NULL,
     street VARCHAR(255) NOT NULL,
@@ -57,9 +57,9 @@ CREATE TABLE studants (
     FOREIGN KEY(course) REFERENCES courses(id)
 );
 
-DESCRIBE studants;
+DESCRIBE students;
 
-INSERT INTO studants(
+INSERT INTO students(
 	name, 
     street, 
     neighborhood, 
@@ -70,12 +70,12 @@ VALUES
 ('Thiago','Rua X', 'Bairro Y', 'Cidade Z', 1),
 ('Beatriz','Rua X', 'Bairro Y', 'Cidade Z', 2);
 
-SELECT * FROM studants;
+SELECT * FROM students;
 
-SELECT studants.name, courses.name 
-FROM studants INNER JOIN courses
-ON studants.course = courses.id
-ORDER BY studants.name;
+SELECT students.name, courses.name 
+FROM students INNER JOIN courses
+ON students.course = courses.id
+ORDER BY students.name;
 
 DROP TABLE phones;
 CREATE TABLE phones(
@@ -84,7 +84,7 @@ CREATE TABLE phones(
     studant SMALLINT UNSIGNED NOT NULL,
   
 	PRIMARY KEY(id),
-    FOREIGN KEY(studant) REFERENCES studants(id) ON DELETE CASCADE
+    FOREIGN KEY(studant) REFERENCES students(id) ON DELETE CASCADE
 );
 
 DESCRIBE phones;
@@ -97,10 +97,10 @@ INSERT INTO phones (number, studant) VALUES
 
 SELECT * FROM phones;
 
-SELECT studants.name, phones.number
-FROM phones INNER JOIN studants
-ON phones.studant = studants.id
-ORDER BY studants.name;
+SELECT students.name, phones.number
+FROM phones INNER JOIN students
+ON phones.studant = students.id
+ORDER BY students.name;
 
-SELECT * FROM studants;
-DELETE FROM studants WHERE id = 1;
+SELECT * FROM students;
+DELETE FROM students WHERE id = 1;

@@ -1,5 +1,5 @@
-DROP TABLE studants;
-CREATE TABLE studants(
+DROP TABLE students;
+CREATE TABLE students(
 	id SMALLINT UNSIGNED PRIMARY KEY AUTO_INCREMENT, 
 	name VARCHAR(40) NOT NULL,
     cpf VARCHAR(11) UNIQUE NOT NULL,
@@ -10,22 +10,22 @@ CREATE TABLE studants(
     subscription TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
-DESCRIBE studants;
+DESCRIBE students;
 
-INSERT INTO studants (name, cpf, birth_year, gender, c_performance)
+INSERT INTO students (name, cpf, birth_year, gender, c_performance)
 VALUES ("João", "12345678900", "1989-12-25", "M", 89.2);
 
-INSERT INTO Studants VALUES 
+INSERT INTO Students VALUES 
 (DEFAULT, "Pedro", "12345678901", "1998-02-12", "M", DEFAULT, 90.75, DEFAULT),
 (DEFAULT, "Maria", "12345678902", "1995-06-23", "F", DEFAULT, 95, DEFAULT);
 
-SELECT * FROM studants;
+SELECT * FROM students;
 SELECT 
 	id AS ID, 
     name AS Nome, 
     c_performance AS CR,
     course AS Curso
-FROM studants 
+FROM students 
 ORDER BY CR 
 DESC LIMIT 10;
 
@@ -34,7 +34,7 @@ SELECT
     birth_year AS Nascimanto, 
     CURDATE() Hoje,
     FLOOR(DATEDIFF(CURRENT_DATE(), birth_year) / 365.25) Idade
-FROM studants;
+FROM students;
 
 DROP TABLE courses;
 CREATE TABLE courses (

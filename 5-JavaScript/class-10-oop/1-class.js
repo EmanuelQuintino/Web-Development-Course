@@ -1,47 +1,61 @@
 // Reference: https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Object-oriented_programming
 
 // paradigm (OOP)
-// entities (real world)
+// entities or objects (real world)
 // properties (attributes / variables)
 // methods (functions)
 // this (scope)
 
-class Pokemon {
-  constructor(name, level) {
-    this.name = name;
-    this.level = level;
-    this.health = 100;
+class Control {
+  constructor(temp) {
+    this.color = "white";
+    this.temperature = temp;
+    this.isOn = false;
   }
 
-  attack() {
-    console.log(`${this.name} atacou!`);
+  on_Off() {
+    this.isOn = !this.isOn; // -(-2) = +2
   }
 
-  damage(effective, damage = 20) {
-    if (effective) {
-      let damageEffective = damage * 1.3;
-      this.health -= damageEffective;
-      console.log(`${this.name} sofreu ${damageEffective} de dano efetivo!`);
-    } else {
-      this.health -= damage;
-      console.log(`${this.name} sofreu ${damage} de dano!`);
-    }
+  tempUpper() {
+    this.temperature = this.temperature + 1;
+  }
+
+  tempLower() {
+    this.temperature = this.temperature - 1;
   }
 }
 
-const charmander = new Pokemon("Charmander", 4);
-const squirtle = new Pokemon("Squirtle", 5);
-const bulbasaur = new Pokemon("Bulbasaur", 6);
+const airControl = new Control(18);
+const airControl2 = new Control(22);
 
-console.log(charmander.name);
-console.log(squirtle.level);
+console.log(airControl.temperature);
+console.log(airControl2.temperature);
+console.log(airControl2.color);
 
-bulbasaur.attack();
+airControl.on_Off();
+airControl.on_Off();
+console.log(airControl.isOn);
 
-let effective = false;
-squirtle.damage();
-console.log(squirtle.health);
+airControl.tempLower();
 
-effective = true;
-squirtle.damage(effective);
-console.log(squirtle.health);
+console.log(airControl.temperature);
+
+const buttonUpper = document.querySelector(".buttonUpper");
+const buttonLower = document.querySelector(".buttonLower");
+const buttonOnOff = document.querySelector(".buttonOnOff");
+
+buttonUpper.addEventListener("click", () => {
+  airControl.tempUpper();
+  console.log(airControl.temperature);
+});
+
+buttonLower.addEventListener("click", () => {
+  airControl.tempLower();
+  console.log(airControl.temperature);
+});
+
+buttonOnOff.addEventListener("click", () => {
+  airControl.on_Off();
+  console.log(airControl.isOn);
+});

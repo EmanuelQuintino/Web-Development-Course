@@ -1,25 +1,40 @@
-class Animal {
-  constructor(nome, wight) {
-    this.nome = nome;
-    this.wight = wight;
-  }
-}
-
-class Dog extends Animal {
-  constructor(nome, wight, race) {
-    super(nome, wight);
-    this.race = race;
+class Bird {
+  constructor() {
+    this.skin = "feather";
+    this.header = "beak";
   }
 
   action() {
-    console.log("Latir!");
+    return "Fly!";
   }
 }
 
-const animal = new Animal("Spike");
-console.log(animal.nome);
+class Chicken extends Bird {
+  constructor() {
+    super();
+  }
 
-const spike = new Dog("Spike", 15, "Doberman");
-console.log(spike.nome);
-console.log(spike.race);
-spike.action();
+  action() {
+    return "run!";
+  }
+}
+
+class Duck extends Bird {
+  constructor() {
+    super();
+    this.footer = "webbed foot";
+  }
+
+  action() {
+    return "swims";
+  }
+}
+
+const myBird = new Bird();
+const myChicken = new Chicken();
+const myDuck = new Duck();
+
+console.log(myBird.action());
+console.log(myChicken.skin);
+console.log(myDuck.footer);
+console.log(myDuck.action());

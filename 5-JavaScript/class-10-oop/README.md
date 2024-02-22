@@ -1,10 +1,12 @@
 # Object Oriented Programming (OOP)
 
-- Programming Paradigm
+### Programming Paradigm
 
-  - entities or objects (real world)
+### Pillars
 
 - Abstraction
+
+  - entities or objects of real world
 
   - class
     - constructor

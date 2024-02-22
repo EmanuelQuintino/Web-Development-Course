@@ -4,7 +4,7 @@
 
   - entities or objects (real world)
 
-- abstraction
+- Abstraction
 
   - class
     - constructor
@@ -12,12 +12,12 @@
     - this (scope)
     - methods (functions)
 
-- inheritance
+- Inheritance
 
   - extends
   - super
 
-- polymorphism
-- encapsulation
+- Polymorphism
+- Encapsulation
 
 [Class Reference](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Object-oriented_programming)

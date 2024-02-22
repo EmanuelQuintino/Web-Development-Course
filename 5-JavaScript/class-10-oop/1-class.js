@@ -1,11 +1,3 @@
-// Reference: https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Object-oriented_programming
-
-// paradigm (OOP)
-// entities or objects (real world)
-// properties (attributes / variables)
-// methods (functions)
-// this (scope)
-
 class Control {
   constructor(temp) {
     this.color = "white";

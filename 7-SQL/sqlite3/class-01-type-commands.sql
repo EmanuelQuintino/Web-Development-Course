@@ -2,31 +2,62 @@
 CREATE TABLE IF NOT EXISTS students (
     id INTEGER PRIMARY KEY AUTOINCREMENT, 
     name TEXT NOT NULL,
-    age INT
+    age NUMERIC
 );
 
 DROP TABLE students;
 
 -- DML
 INSERT INTO students (name, age) VALUES 
-    ("Pedrinho", 20), 
-    ("Luíza", 19);
+    ("Wellington", 18),
+    ("Emanuel", 18), 
+    ("Maurício", 21);
 
-UPDATE students SET age = 21 WHERE name = "Pedrinho";
-UPDATE students SET age = 19 WHERE id = 2;
-UPDATE students SET name = "Dudu", age = 20 WHERE id = 4;
+-- DQL
+SELECT * FROM students;
+
+SELECT name, age 
+FROM students 
+WHERE id = 7;
+
+SELECT * FROM students 
+WHERE id = 6 OR id = 8;
+
+SELECT * 
+FROM students 
+WHERE age > 18 
+ORDER BY age DESC;
+
+-- DML
+UPDATE students 
+SET age = 99
+WHERE name = "Pedrinho";
+
+UPDATE students 
+SET age = 17 
+WHERE id = 3;
+
+UPDATE students 
+SET name = "Pedro", age = 17 
+WHERE id = 3;
 
 DELETE FROM students;
-DELETE FROM students WHERE id = 6; 
-
--- *DQL
-SELECT * FROM students;
-SELECT * FROM students WHERE name = "Pedrinho";
-SELECT * FROM students WHERE id = 2;
+DELETE FROM students WHERE id = 4;
 
 -- DDL
-ALTER TABLE students ADD COLUMN city TEXT;
-ALTER TABLE students DROP COLUMN city;
+ALTER TABLE students 
+ADD COLUMN city TEXT;
 
--- Challenge DML
-UPDATE students SET city = "Jucás" WHERE id = 9;
+ALTER TABLE students 
+DROP COLUMN city;
+
+ALTER TABLE students 
+RENAME COLUMN city TO test;
+
+-- challenge DML
+UPDATE students 
+SET city = "Jucás";
+
+UPDATE students 
+SET city = "Saboeiro" 
+WHERE id = 6;

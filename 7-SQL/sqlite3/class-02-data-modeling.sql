@@ -5,7 +5,6 @@ CREATE TABLE IF NOT EXISTS students (
     id_course INTEGER REFERENCES courses(id) ON DELETE CASCADE
 );
 
-
 DROP TABLE students;
 
 CREATE TABLE IF NOT EXISTS courses (

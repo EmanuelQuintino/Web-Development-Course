@@ -1,3 +1,4 @@
+DROP TABLE students;
 CREATE TABLE IF NOT EXISTS students (
     id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
     name TEXT NOT NULL,
@@ -7,15 +8,12 @@ CREATE TABLE IF NOT EXISTS students (
     -- id_course INTEGER REFERENCES courses(id) ON DELETE CASCADE
 );
 
-DROP TABLE students;
-
+DROP TABLE courses;
 CREATE TABLE IF NOT EXISTS courses (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     name TEXT NOT NULL,
     workload INTEGER NOT NULL
 );
-
-DROP TABLE courses;
 
 INSERT INTO students (id, name, email, id_course) VALUES 
     (1, "Erick", "erick@gmail.com", "1"),

@@ -4,7 +4,7 @@ CREATE TABLE IF NOT EXISTS students (
     name TEXT NOT NULL,
     email TEXT UNIQUE NOT NULL,
     id_course INTEGER NOT NULL, 
-    FOREIGN KEY (id_course )REFERENCES courses(id) ON DELETE CASCADE
+    FOREIGN KEY (id_course ) REFERENCES courses(id) ON DELETE CASCADE
     -- id_course INTEGER REFERENCES courses(id) ON DELETE CASCADE
 );
 
@@ -28,11 +28,12 @@ INSERT INTO courses (name, workload) VALUES
 SELECT * FROM students;
 SELECT * FROM courses;
 
--- INNER, RIGHT, LEFT, FULL
-SELECT students.name as aluno, courses.name as curso
+-- *, INNER, RIGHT, LEFT, FULL
+SELECT students.name, courses.name as curso
 FROM students
 INNER JOIN courses 
-ON students.id_course = courses.id;
+ON students.id_course = courses.id
+WHERE course IS NOT NULL;
 
 DELETE FROM students WHERE id = 1;
 DELETE FROM courses WHERE id = 1;

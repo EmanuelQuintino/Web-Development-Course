@@ -7,16 +7,9 @@ CREATE TABLE IF NOT EXISTS students (
   street TEXT NOT NULL,
   neighborhood TEXT NOT NULL,
   city TEXT NOT NULL,
-  course INTEGER,  
-  FOREIGN KEY(course) REFERENCES courses(id)
+  course_id INTEGER,  
+  FOREIGN KEY(course_id) REFERENCES courses(id)
 );
-
-INSERT INTO students(name, street, neighborhood, city, course) VALUES
-  ("Emanuel","Rua X", "Bairro Y", "Cidade Z", 1),
-  ("Thiago","Rua X", "Bairro Y", "Cidade Z", 1),
-  ("Beatriz","Rua X", "Bairro Y", "Cidade Z", 2);
-
-SELECT * FROM students;
 
 DROP TABLE IF EXISTS courses;
 CREATE TABLE IF NOT EXISTS courses(
@@ -32,12 +25,19 @@ INSERT INTO courses (name, hours) VALUES
 
 SELECT * FROM courses;
 
+INSERT INTO students(name, street, neighborhood, city, course_id) VALUES
+  ("Emanuel","Rua X", "Bairro Y", "Cidade Z", 1),
+  ("Thiago","Rua X", "Bairro Y", "Cidade Z", 1),
+  ("Beatriz","Rua X", "Bairro Y", "Cidade Z", 2);
+
+SELECT * FROM students;
+
 DROP TABLE IF EXISTS phones;
 CREATE TABLE IF NOT EXISTS phones(
-    number TEXT NOT NULL,
-    student_id INTEGER NOT NULL,
-    PRIMARY KEY(number, student_id),
-    FOREIGN KEY(student_id) REFERENCES students(id) ON DELETE CASCADE
+  number TEXT NOT NULL,
+  student_id INTEGER NOT NULL,
+  PRIMARY KEY(number, student_id),
+  FOREIGN KEY(student_id) REFERENCES students(id) ON DELETE CASCADE
 );
 
 INSERT INTO phones (number, student_id) VALUES
@@ -51,6 +51,11 @@ SELECT * FROM phones;
 SELECT students.name, phones.number
 FROM phones INNER JOIN students
 ON phones.student_id = students.id
+ORDER BY students.name;
+
+SELECT students.name, courses.name
+FROM students INNER JOIN courses
+ON students.course_id = courses.id
 ORDER BY students.name;
 
 SELECT * FROM students;

@@ -1,7 +1,7 @@
 -- NORMALIZATION
 
 DROP TABLE IF EXISTS students;
-CREATE TABLE students (
+CREATE TABLE IF NOT EXISTS students (
 	id INTEGER PRIMARY KEY AUTOINCREMENT,
 	name TEXT NOT NULL,
   street TEXT NOT NULL,
@@ -19,7 +19,7 @@ INSERT INTO students(name, street, neighborhood, city, course) VALUES
 SELECT * FROM students;
 
 DROP TABLE IF EXISTS courses;
-CREATE TABLE courses(
+CREATE TABLE IF NOT EXISTS courses(
 	id INTEGER PRIMARY KEY AUTOINCREMENT,
   name TEXT NOT NULL,
   hours INTEGER NOT NULL
@@ -33,7 +33,7 @@ INSERT INTO courses (name, hours) VALUES
 SELECT * FROM courses;
 
 DROP TABLE IF EXISTS phones;
-CREATE TABLE phones(
+CREATE TABLE IF NOT EXISTS phones(
     number TEXT NOT NULL,
     student_id INTEGER NOT NULL,
     PRIMARY KEY(number, student_id),
@@ -55,35 +55,3 @@ ORDER BY students.name;
 
 SELECT * FROM students;
 DELETE FROM students WHERE id = 1;
-
--- 
-
-CREATE TABLE students (
-    id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
-    name TEXT NOT NULL,
-    email TEXT UNIQUE NOT NULL,
-    id_course INTEGER REFERENCES courses(id)
-);
-
-DROP TABLE students;
-
-CREATE TABLE courses (
-    id INTEGER PRIMARY KEY AUTOINCREMENT,
-    name TEXT NOT NULL,
-    workload INTEGER NOT NULL
-);
-
-DROP TABLE courses;
-
-INSERT INTO students (name, email, id_course)VALUES
-    ("Erick", "erick@gmail.com", 3),
-    ("Jorge", "jorge@gmail.com", 2),
-    ("Daniel", "daniel@gmail.com", 2);
-    
-INSERT INTO courses (name, workload) VALUES
-    ("Web Development", 360),
-    ("Data Analysis", 240),
-    ("Cyber Security", 240);
-    
-SELECT * FROM students;
-SELECT * FROM courses;

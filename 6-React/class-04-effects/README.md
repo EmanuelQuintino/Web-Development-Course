@@ -3,14 +3,6 @@
 - State and Lifecycle Component
 - Derived States
 
-## JavaScript Compilation
-
-- ASI (Automatic Semicolon Insertion)
-- Babel (ES6 to ES5) involves three main steps
-  - Parser => map code to AST (Abstract Syntex Tree)
-  - Transformer => AST manipulates (JSON)
-  - Generator => AST to code
-
 ## Key Props
 
 The key must be unique and not random
@@ -31,3 +23,11 @@ The key must be unique and not random
 ["A", "B", "E", "D", "C"]
   0,   1,   2,   3,   4
 </pre>
+
+## JavaScript Compilation
+
+- ASI (Automatic Semicolon Insertion)
+- Babel (ES6 to ES5) involves three main steps
+  - Parser => map code to AST (Abstract Syntex Tree)
+  - Transformer => AST manipulates (JSON)
+  - Generator => AST to code

@@ -3,9 +3,9 @@ CREATE TABLE IF NOT EXISTS clients (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
   name TEXT NOT NULL,
   cpf TEXT UNIQUE NOT NULL,
-  street TEXT NOT NULL,
-  neighborhood TEXT NOT NULL,
-  city TEXT NOT NULL
+  street TEXT,
+  neighborhood TEXT,
+  city TEXT
 );
 
 DROP TABLE IF EXISTS phones;
@@ -35,28 +35,12 @@ CREATE TABLE IF NOT EXISTS sales (
   FOREIGN KEY(id_product) REFERENCES products(id)
 );
 
-INSERT INTO clients (name, street, neighborhood, city) VALUES
-  ("Jonatan","Rua X", "Bairro Y", "Cidade Z"),
-  ("Daniel","Rua X", "Bairro Y", "Cidade Z"),
-  ("Natan","Rua X", "Bairro Y", "Cidade Z");
+INSERT INTO clients (name, cpf) VALUES
+  ("Jonatan","123.123.123-00"),
+  ("Daniel","123.123.123-01"),
+  ("Natan","123.123.123-02");
 
 SELECT * FROM clients;
-
-INSERT INTO products (name, price) VALUES 
-  ("Arroz", 120), 
-  ("Feijão", 20.75),
-  ("Macarrão", 47),
-  ("Leite", 140.5);
-
-SELECT * FROM products;
-
-INSERT INTO sales (id_client, id_product, amount) VALUES 
-  (1, 1, 2), 
-  (2, 1, 4),
-  (2, 2, 1),
-  (3, 2, 10);
-    
-SELECT * FROM sales;
 
 INSERT INTO phones (number, client_id) VALUES
   ("(88) 8888-8888", 1),
@@ -65,6 +49,22 @@ INSERT INTO phones (number, client_id) VALUES
   ("(77) 7777-7777", 3);
 
 SELECT * FROM phones;
+
+INSERT INTO products (name, price) VALUES 
+  ("Smartwatche", 450), 
+  ("Samsumg M54", 1800),
+  ("Acer Aspire 5", 2830.75),
+  ("Lenovo IdeaPad", 2602.25);
+
+SELECT * FROM products;
+
+INSERT INTO sales (id_client, id_product, amount) VALUES 
+  (1, 1, 2), 
+  (2, 2, 4),
+  (2, 4, 2),
+  (3, 3, 5);
+    
+SELECT * FROM sales;
 
 SELECT clients.name, phones.number
 FROM clients

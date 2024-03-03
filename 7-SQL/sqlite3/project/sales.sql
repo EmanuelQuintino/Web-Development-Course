@@ -1,18 +1,26 @@
--- NORMALIZATION
-
 DROP TABLE IF EXISTS clients;
 CREATE TABLE IF NOT EXISTS clients (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
   name TEXT NOT NULL,
+  cpf TEXT UNIQUE NOT NULL,
   street TEXT NOT NULL,
   neighborhood TEXT NOT NULL,
   city TEXT NOT NULL
+);
+
+DROP TABLE IF EXISTS phones;
+CREATE TABLE IF NOT EXISTS phones (
+  number TEXT NOT NULL,
+  client_id INTEGER NOT NULL,
+  PRIMARY KEY(number, client_id),
+  FOREIGN KEY(client_id) REFERENCES clients(id) ON DELETE CASCADE
 );
 
 DROP TABLE IF EXISTS products;
 CREATE TABLE IF NOT EXISTS products (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
   name TEXT NOT NULL,
+  description TEXT,
   price INTEGER NOT NULL
 );
 
@@ -22,17 +30,9 @@ CREATE TABLE IF NOT EXISTS sales (
   id_client INTEGER NOT NULL,
   id_product INTEGER NOT NULL,
   amount INTEGER NOT NULL,
-  Date DATE DEFAULT CURRENT_DATE,
+  date DATE DEFAULT CURRENT_DATE,
   FOREIGN KEY(id_client) REFERENCES clients(id) ON DELETE CASCADE
   FOREIGN KEY(id_product) REFERENCES products(id)
-);
-
-DROP TABLE IF EXISTS phones;
-CREATE TABLE IF NOT EXISTS phones (
-  number TEXT NOT NULL,
-  client_id INTEGER NOT NULL,
-  PRIMARY KEY(number, client_id),
-  FOREIGN KEY(client_id) REFERENCES clients(id) ON DELETE CASCADE
 );
 
 INSERT INTO clients (name, street, neighborhood, city) VALUES

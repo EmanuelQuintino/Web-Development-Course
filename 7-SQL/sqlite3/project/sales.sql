@@ -78,9 +78,9 @@ SELECT clients.name AS Nome_Cliente,
        sales.amount * products.price AS Total_Vendido
 
 FROM clients
-INNER JOIN sales ON clients.id = sales.id_client
+INNER JOIN sales ON sales.id_client = clients.id
 INNER JOIN products ON sales.id_product = products.id
 ORDER BY clients.name;
 
 SELECT * FROM clients;
-DELETE FROM clients WHERE id = 2;
+DELETE FROM clients WHERE id = 1;

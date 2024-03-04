@@ -16,7 +16,7 @@ export function App() {
 
   return (
     <>
-      <h1>Class States</h1>
+      <h1>Class 03 States</h1>
 
       <section>
         <p>Count: {count}</p>

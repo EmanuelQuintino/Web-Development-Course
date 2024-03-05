@@ -1,12 +1,15 @@
 import { useState } from "react";
 
 export function App() {
+  // let count = 0;
   const [count, setCount] = useState(0); // inference
   const [status, setStatus] = useState("");
 
   function incrementCount() {
+    // count += 1;
     setCount((prevCount) => prevCount + 1);
     setStatus("Increment");
+    console.log(count);
   }
 
   function decrementCount() {

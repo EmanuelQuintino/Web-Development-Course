@@ -1,4 +1,4 @@
-# Class 04 Effect
+# Class 04 Effects
 
 - State and Lifecycle
 

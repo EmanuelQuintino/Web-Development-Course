@@ -1,25 +1,30 @@
 import { useState, useEffect } from "react";
+import { UserCard } from "../components/UserCard";
 
 export function App() {
   const [count, setCount] = useState(0);
-  const [countClick, setCountClick] = useState(0);
+  const [count2, setCount2] = useState(0);
 
   console.log("Redenrized"); // componentWillMount
 
   useEffect(() => {
     console.log("Effect"); // componentDidMount
 
-    setCountClick((value) => value + 1); // Derived States
+    setCount2((value) => value + 1); // derived states
 
     return () => console.log("Closed"); // componentWillUnmount
   }, [count]); // componentDidUpdate
+
+  console.log("Redenrized"); // componentWillMount
 
   return (
     <>
       <h1>Class 04 Effects</h1>
       <p>Count: {count}</p>
-      <p>CountClick: {countClick}</p>
+      <p>Count2: {count2}</p>
       <button onClick={() => setCount((value) => value + 1)}>add</button>
+
+      <UserCard name="EmanuelQuintino" />
     </>
   );
 }

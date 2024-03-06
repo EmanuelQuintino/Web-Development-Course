@@ -15,18 +15,17 @@ CREATE TABLE IF NOT EXISTS courses (
     workload INTEGER NOT NULL
 );
 
+SELECT * FROM students;
 INSERT INTO students (id, name, email, id_course) VALUES 
     (1, "Erick", "erick@gmail.com", "1"),
     (2, "Pedro", "pedro@gmail.com", "1"),
     (3, "Neemias", "neemias@gmail.com", "2");
     
+SELECT * FROM courses;
 INSERT INTO courses (name, workload) VALUES 
     ("Web Developement", 360),
     ("Data Analysis", 240),
     ("Cyber Security", 240);
-
-SELECT * FROM students;
-SELECT * FROM courses;
 
 -- *, INNER, RIGHT, LEFT, FULL
 SELECT students.name, courses.name as curso

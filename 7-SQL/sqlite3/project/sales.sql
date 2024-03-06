@@ -11,17 +11,17 @@ CREATE TABLE IF NOT EXISTS clients (
 DROP TABLE IF EXISTS phones;
 CREATE TABLE IF NOT EXISTS phones (
   number TEXT NOT NULL,
-  client_id INTEGER NOT NULL,
-  PRIMARY KEY(number, client_id),
-  FOREIGN KEY(client_id) REFERENCES clients(id) ON DELETE CASCADE
+  id_client INTEGER NOT NULL,
+  PRIMARY KEY (number, id_client),
+  FOREIGN KEY (id_client) REFERENCES clients(id) ON DELETE CASCADE
 );
 
 DROP TABLE IF EXISTS products;
 CREATE TABLE IF NOT EXISTS products (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
   name TEXT NOT NULL,
-  description TEXT,
-  price INTEGER NOT NULL
+  price INTEGER NOT NULL,
+  description TEXT
 );
 
 DROP TABLE IF EXISTS sales;
@@ -31,46 +31,42 @@ CREATE TABLE IF NOT EXISTS sales (
   id_product INTEGER NOT NULL,
   amount INTEGER NOT NULL,
   date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-  FOREIGN KEY(id_client) REFERENCES clients(id) ON DELETE CASCADE
-  FOREIGN KEY(id_product) REFERENCES products(id)
+  FOREIGN KEY (id_client) REFERENCES clients(id) ON DELETE CASCADE
+  FOREIGN KEY (id_product) REFERENCES products(id)
 );
 
-INSERT INTO clients (name, cpf) VALUES
+SELECT * FROM clients;
+INSERT INTO clients(name, cpf) VALUES
   ("Jonatan","123.123.123-00"),
   ("Daniel","123.123.123-01"),
   ("Natan","123.123.123-02");
 
-SELECT * FROM clients;
-
-INSERT INTO phones (number, client_id) VALUES
+SELECT * FROM phones;
+INSERT INTO phones(number, id_client) VALUES
   ("(88) 8888-8888", 1),
   ("(99) 9999-9999", 1),
   ("(00) 0000-0000", 2),
   ("(77) 7777-7777", 3);
 
-SELECT * FROM phones;
-
-INSERT INTO products (name, price) VALUES 
+SELECT * FROM products;
+INSERT INTO products(name, price) VALUES 
   ("Smartwatche", 450), 
   ("Samsumg M54", 1800),
   ("Acer Aspire 5", 2830.75),
   ("Lenovo IdeaPad", 2602.25);
 
-SELECT * FROM products;
-
-INSERT INTO sales (id_client, id_product, amount) VALUES 
+SELECT * FROM sales;
+INSERT INTO sales(id_client, id_product, amount) VALUES 
   (1, 1, 2), 
   (2, 2, 4),
   (2, 4, 2),
   (3, 3, 5);
     
-SELECT * FROM sales;
-
 SELECT clients.name, phones.number
 FROM clients
 INNER JOIN phones
-ON clients.id = phones.client_id
-ORDER BY clients.name;
+ON clients.id = phones.id_client
+ORDER BY clients.name DESC;
 
 SELECT clients.name AS Nome_Cliente, 
        products.name AS Produto, 

@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { UserCard } from "../components/UserCard";
+import { UserGitHubCard } from "../components/UserGitHubCard";
 
 export function App() {
   const [count, setCount] = useState(0);
@@ -24,7 +24,7 @@ export function App() {
       <p>Count2: {count2}</p>
       <button onClick={() => setCount((value) => value + 1)}>add</button>
 
-      <UserCard name="EmanuelQuintino" />
+      <UserGitHubCard name="EmanuelQuintino" />
     </>
   );
 }

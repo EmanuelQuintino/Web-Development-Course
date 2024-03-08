@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-type UserData = {
+type UserProps = {
   avatar_url: string;
   name: string;
   bio: string;
@@ -10,8 +10,8 @@ type Props = {
   name: string;
 };
 
-export function UserCard({ name }: Props) {
-  const [userData, setUserData] = useState<UserData | null>(null);
+export function UserGitHubCard({ name }: Props) {
+  const [userData, setUserData] = useState<UserProps>({} as UserProps);
 
   useEffect(() => {
     fetch(`https://api.github.com/users/${name}`)

@@ -20,15 +20,15 @@ CREATE TABLE IF NOT EXISTS courses(
 
 SELECT * FROM courses;
 INSERT INTO courses (name, hours) VALUES
-  ("Programador Web", 240),
-  ("Informática para o mundo do trabalho", 160),
-  ("Ferramentas Digitais", 60);
+  ('Programador Web', 240),
+  ('Informática para o mundo do trabalho', 160),
+  ('Ferramentas Digitais', 60);
 
 SELECT * FROM students;
 INSERT INTO students(name, street, neighborhood, city, course_id) VALUES
-  ("Emanuel","Rua X", "Bairro Y", "Cidade Z", 1),
-  ("Thiago","Rua X", "Bairro Y", "Cidade Z", 1),
-  ("Beatriz","Rua X", "Bairro Y", "Cidade Z", 2);
+  ('Emanuel','Rua X', 'Bairro Y', 'Cidade Z', 1),
+  ('Thiago','Rua X', 'Bairro Y', 'Cidade Z', 1),
+  ('Beatriz','Rua X', 'Bairro Y', 'Cidade Z', 2);
 
 DROP TABLE IF EXISTS phones;
 CREATE TABLE IF NOT EXISTS phones(
@@ -40,10 +40,10 @@ CREATE TABLE IF NOT EXISTS phones(
 
 SELECT * FROM phones;
 INSERT INTO phones (number, student_id) VALUES
-  ("(88) 8888-8888", 1),
-  ("(99) 9999-9999", 1),
-  ("(00) 0000-0000", 2),
-  ("(77) 7777-7777", 3);
+  ('(88) 8888-8888', 1),
+  ('(99) 9999-9999', 1),
+  ('(00) 0000-0000', 2),
+  ('(77) 7777-7777', 3);
 
 SELECT students.name, phones.number
 FROM phones INNER JOIN students

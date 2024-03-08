@@ -9,9 +9,9 @@ CREATE TABLE IF NOT EXISTS students (
 
 -- DML
 INSERT INTO students (name, cpf, age) VALUES 
-    ("Wellington", "123.123.123-01", 18),
-    ("Emanuel","123.123.123-02", 18), 
-    ("Maurício", "123.123.123-03", 21);
+    ('Wellington', '123.123.123-01', 18),
+    ('Emanuel','123.123.123-02', 18), 
+    ('Maurício', '123.123.123-03', 21);
 
 -- DQL
 SELECT * FROM students;
@@ -36,14 +36,14 @@ ROLLBACK;
 -- DML
 UPDATE students 
 SET age = 99
-WHERE name = "Pedrinho";
+WHERE name = 'Pedrinho';
 
 UPDATE students 
 SET age = 17 
 WHERE id = 3;
 
 UPDATE students 
-SET name = "Pedro", age = 17 
+SET name = 'Pedro', age = 17 
 WHERE id = 3;
 
 DELETE FROM students;
@@ -52,7 +52,7 @@ DELETE FROM students WHERE id = 4;
 -- DDL
 ALTER TABLE students 
 ADD COLUMN city TEXT 
-NOT NULL DEFAULT "Jucás";
+NOT NULL DEFAULT 'Jucás';
 
 ALTER TABLE students 
 DROP COLUMN city;
@@ -62,8 +62,8 @@ RENAME COLUMN city TO test;
 
 -- challenge DML
 UPDATE students 
-SET city = "Jucás";
+SET city = 'Jucás';
 
 UPDATE students 
-SET city = "Saboeiro" 
+SET city = 'Saboeiro' 
 WHERE id = 6;

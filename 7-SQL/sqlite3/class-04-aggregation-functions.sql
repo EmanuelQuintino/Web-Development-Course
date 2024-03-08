@@ -4,6 +4,8 @@ SELECT * FROM orders ORDER BY pais DESC;
 SELECT DISTINCT pais FROM orders ORDER BY pais;
 SELECT DISTINCT categoria FROM orders ORDER BY categoria;
 
+SELECT * FROM orders WHERE regiao = 'Bra';
+
 SELECT * FROM orders WHERE regiao LIKE 'cal%';
 SELECT * FROM orders WHERE regiao LIKE '%nia';
 SELECT * FROM orders WHERE regiao LIKE '_a%';
@@ -25,7 +27,7 @@ ORDER BY quantidade;
 SELECT 
     COUNT(*) AS QTD, 
     TOTAL(total_vendas),
-    SUM(total_vendas) AS Total_Vendas, 
+    ROUND(SUM(total_vendas), 2) AS Total, 
     MIN(total_vendas) AS MIN, 
     MAX(total_vendas) AS MAX, 
     AVG(total_vendas) AS AVG, 
@@ -45,7 +47,8 @@ SELECT COUNT(DISTINCT regiao) FROM orders;
 SELECT pais, ROUND(SUM(total_vendas)) AS total 
 FROM orders 
 GROUP BY pais 
-ORDER BY total DESC;
+ORDER BY total DESC
+LIMIT 10;
 
 SELECT 
     pais, 
@@ -57,3 +60,8 @@ FROM orders
 GROUP BY pais 
 HAVING total > 700000 
 ORDER BY total DESC;
+
+SELECT id_pedido, COUNT(id_pedido) 
+FROM orders GROUP BY id_pedido;
+
+SELECT * FROM orders WHERE id_pedido = 'AE-2011-9160';

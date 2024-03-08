@@ -1,7 +1,7 @@
 import { useContext } from "react";
-import { UserContext } from "../contexts/UserContext";
+import { IncrementContext } from "../contexts/IncrementContext";
 
 export function Card() {
-  const { count, showCount } = useContext(UserContext);
+  const { count, showCount } = useContext(IncrementContext);
   return <p>Web Developer {showCount && count}</p>;
 }

@@ -1,8 +1,8 @@
 import { useContext } from "react";
-import { UserContext } from "../contexts/UserContext";
+import { IncrementContext } from "../contexts/IncrementContext";
 
 export function Button() {
-  const { incrementCount, showCount, switchShowCount } = useContext(UserContext);
+  const { incrementCount, showCount, switchShowCount } = useContext(IncrementContext);
   return (
     <>
       <button onClick={incrementCount}>Increment</button>

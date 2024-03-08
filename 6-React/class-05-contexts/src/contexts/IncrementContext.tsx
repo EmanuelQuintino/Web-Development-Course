@@ -7,9 +7,9 @@ type Context = {
   switchShowCount: () => void;
 };
 
-export const UserContext = createContext({} as Context);
+export const IncrementContext = createContext({} as Context);
 
-export function UserProvider({ children }: PropsWithChildren) {
+export function IncrementProvider({ children }: PropsWithChildren) {
   const [count, setCount] = useState(1);
   const [showCount, setShowCount] = useState(true);
 
@@ -22,7 +22,7 @@ export function UserProvider({ children }: PropsWithChildren) {
   }
 
   return (
-    <UserContext.Provider
+    <IncrementContext.Provider
       value={{
         count,
         incrementCount,
@@ -31,6 +31,6 @@ export function UserProvider({ children }: PropsWithChildren) {
       }}
     >
       {children}
-    </UserContext.Provider>
+    </IncrementContext.Provider>
   );
 }

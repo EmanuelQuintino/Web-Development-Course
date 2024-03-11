@@ -1,35 +1,34 @@
 import { createContext, useContext } from "react";
 
 type ContextProps = {
-  userName: string;
+  name: string;
 };
 
 const MyContext = createContext({} as ContextProps);
 
-export function Context() {
-  const userName = "Context";
+export function ContextPage() {
   return (
-    <MyContext.Provider value={{ userName }}>
+    <MyContext.Provider value={{ name: "Emanuel" }}>
+      <h1>My Context Page</h1>
       <Card />
     </MyContext.Provider>
   );
 }
 
 export function Card() {
-  const { userName } = useContext(MyContext);
   return (
     <>
-      <h1>Card {userName}</h1>
-      <Description />
+      <h2>Card</h2>
+      <Button />
     </>
   );
 }
 
-export function Description() {
-  const { userName } = useContext(MyContext);
+export function Button() {
+  const { name } = useContext(MyContext);
   return (
     <>
-      <p>Class example {userName}</p>
+      <button>{name}</button>
     </>
   );
 }

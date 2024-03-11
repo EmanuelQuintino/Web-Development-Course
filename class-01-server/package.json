@@ -1,0 +1,19 @@
+{
+  "name": "class-01-server",
+  "version": "1.0.0",
+  "description": "Starting Node.JS Module",
+  "main": "./src/server.js",
+  "scripts": {
+    "start": "node ./src/server.js"
+  },
+  "keywords": [
+    "node.js", 
+    "server", 
+    "express"
+  ],
+  "author": "Emanuel Quintino",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}

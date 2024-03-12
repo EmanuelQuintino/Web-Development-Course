@@ -2,7 +2,7 @@
   "name": "class-01-server",
   "version": "1.0.0",
   "description": "Start Node Server",
-  "main": "index.js",
+  "main": "dist/server.js",
   "scripts": {
     "start": "node dist/server.js",
     "build": "tsup src",

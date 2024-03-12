@@ -19,12 +19,12 @@ router.get("/user/:id/:name", (req: Request, res: Response) => {
 // Query Params
 router.get("/user", (req: Request, res: Response) => {
   const { id, name } = req.query;
-  res.send(`User:${id} Name:${name}`);
+  res.send(`ID:${id} Name:${name}`);
 });
 
 // Body Params
 router.post("/user", (req: Request, res: Response) => {
   const { id, name } = req.body;
-  res.send(`User:${id} Name:${name}`);
+  res.send(`ID:${id} Name:${name}`);
   res.json({ id, name });
 });

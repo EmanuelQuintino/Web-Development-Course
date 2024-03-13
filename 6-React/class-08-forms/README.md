@@ -1,6 +1,6 @@
 # Class 08 Forms
 
-## Reack Hook Form
+## React Hook Form
 
 ```shell
 npm install react-hook-form

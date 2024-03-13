@@ -1,4 +1,5 @@
 import express from "express";
+import { router } from "./routes";
 
 const app = express();
 const port = 3000;
@@ -10,5 +11,4 @@ app.listen(port, () => {
 // Middleware
 app.use(express.json());
 
-import { router } from "./routes";
 app.use(router);

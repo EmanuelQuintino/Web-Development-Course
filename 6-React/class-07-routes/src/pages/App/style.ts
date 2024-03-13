@@ -23,7 +23,8 @@ export const Container = styled.div`
     list-style: none;
   }
 
-  a {
+  header a,
+  footer a {
     text-decoration: none;
     color: black;
   }

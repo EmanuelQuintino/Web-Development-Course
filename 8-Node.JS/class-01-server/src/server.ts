@@ -7,6 +7,6 @@ app.listen(port, () => {
   console.log(`Server is running on PORT ${port}...`);
 });
 
-app.route("/").get((_request, response) => {
+app.get("/", (_request, response) => {
   response.send({ className: "Class 01 Server" });
 });

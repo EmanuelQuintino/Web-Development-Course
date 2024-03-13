@@ -18,4 +18,4 @@ npm install styled-components
 
 ## Links
 
-[Docs](https://styled-components.com/)
+[styled components docs](https://styled-components.com/)

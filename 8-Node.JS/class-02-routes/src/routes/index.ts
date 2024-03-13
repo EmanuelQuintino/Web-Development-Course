@@ -14,19 +14,19 @@ router.get("/users", (_req: Request, res: Response) => {
   ]);
 });
 
-// Route Params
+// route params
 router.get("/user/:id/:name", (req: Request, res: Response) => {
   const { id, name } = req.params;
   res.send(`User:${id} Name:${name}`);
 });
 
-// Query Params
+// query params
 router.get("/user", (req: Request, res: Response) => {
   const { id, name } = req.query;
   res.send(`ID:${id} Name:${name}`);
 });
 
-// Body Params
+// body params
 router.post("/user", (req: Request, res: Response) => {
   const { id, name } = req.body;
   res.send(`ID:${id} Name:${name}`);

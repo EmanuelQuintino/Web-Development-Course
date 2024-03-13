@@ -17,18 +17,17 @@ router.get("/users", (_req: Request, res: Response) => {
 // route params
 router.get("/user/:id/:name", (req: Request, res: Response) => {
   const { id, name } = req.params;
-  res.send(`User:${id} Name:${name}`);
+  res.send({ id, name });
 });
 
 // query params
 router.get("/user", (req: Request, res: Response) => {
   const { id, name } = req.query;
-  res.send(`ID:${id} Name:${name}`);
+  res.send({ id, name });
 });
 
 // body params
 router.post("/user", (req: Request, res: Response) => {
   const { id, name } = req.body;
-  res.send(`ID:${id} Name:${name}`);
-  res.json({ id, name });
+  res.send({ id, name });
 });

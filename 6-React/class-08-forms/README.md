@@ -16,4 +16,4 @@ npm install react-hook-form
 
 ## Links
 
-[Docs](https://www.react-hook-form.com/)
+[hook form docs](https://www.react-hook-form.com/)

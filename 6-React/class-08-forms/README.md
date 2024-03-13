@@ -8,7 +8,7 @@ npm install react-hook-form
 
 - useForm
   - register
-  - handleSubmit
+  - handleSubmit (type Inputs, SubmitHandler)
   - formState: { errors }
   - watch
   - setError

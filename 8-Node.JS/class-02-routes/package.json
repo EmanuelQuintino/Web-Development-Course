@@ -2,7 +2,7 @@
   "name": "class-02-routes",
   "version": "1.0.0",
   "description": "add server routes",
-  "main": "dist/server.js",
+  "main": "src/server.ts",
   "scripts": {
     "start": "node dist/server.js",
     "build": "tsup src",

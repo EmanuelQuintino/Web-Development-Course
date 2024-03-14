@@ -2,8 +2,11 @@
 
 - Router
 - Middlewares
-- Requests
-  - Route Params
-  - Query Params
-    - ![query params](../documents/query-params-url.png)
-  - Body Params
+
+## Requests
+
+- Route Params
+- Query Params
+- Body Params
+
+![query params](../documents/query-params-url.png)

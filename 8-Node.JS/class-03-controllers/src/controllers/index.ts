@@ -15,7 +15,19 @@ export const userController = {
 
   read(req: Request, res: Response) {
     const { id } = req.params;
-    res.status(200).send({ user: id });
+    const { limit, offset } = req.query;
+
+    if (id) {
+      res.status(200).json({ user: id });
+      return;
+    }
+
+    if (limit && offset) {
+      res.status(200).json({ page: { limit, offset } });
+      return;
+    }
+
+    res.status(404).json({ status: "user(s) not found!" });
   },
 
   update(req: Request, res: Response) {

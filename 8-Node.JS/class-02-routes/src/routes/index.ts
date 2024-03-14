@@ -28,6 +28,7 @@ router.get("/user", (req: Request, res: Response) => {
 
 // body params
 router.post("/user", (req: Request, res: Response) => {
-  const { id, name } = req.body;
-  res.send({ id, name });
+  const { id, name, age } = req.body;
+  console.log({ id, name, age });
+  res.send({ status: "user create!" });
 });

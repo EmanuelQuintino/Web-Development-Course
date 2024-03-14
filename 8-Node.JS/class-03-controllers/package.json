@@ -1,5 +1,5 @@
 {
-  "name": "class-02-routes",
+  "name": "class-03-contollers",
   "version": "1.0.0",
   "description": "add server routes",
   "main": "src/server.ts",

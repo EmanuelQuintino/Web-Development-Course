@@ -8,6 +8,14 @@
 - isLoading
 - error
 
+## Immutability
+
+An immutable value is one whose content cannot be changed without creating an entirely new value.
+
+```js
+setItems((prevState) => [...prevState, newItem]);
+```
+
 ## Key Props
 
 The key must be unique and not random

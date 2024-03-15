@@ -1,12 +1,12 @@
 # Class 09 Queries
 
-## Immutability
+## useQuery
 
-An immutable value is one whose content cannot be changed without creating an entirely new value.
-
-```js
-setItems((prevState) => [...prevState, newItem]);
-```
+- queryKey
+- queryFn
+- data
+- isLoading
+- error
 
 ## Key Props
 

@@ -1,14 +1,15 @@
 import { useQuery } from "@tanstack/react-query";
+import { UserCard } from "../components/UserCard";
 
 type User = {
   id: number;
   name: string;
-  email: string;
+  phone: string;
 };
 
 export function App() {
   async function getUsers() {
-    const API = "ahttps://jsonplaceholder.typicode.com/users";
+    const API = "https://jsonplaceholder.typicode.com/users";
     const data = await fetch(API);
     return data.json();
   }
@@ -18,7 +19,9 @@ export function App() {
     queryFn: getUsers,
   });
 
-  console.error(error);
+  console.log(data);
+
+  if (error) console.error(error);
 
   return (
     <>
@@ -27,12 +30,7 @@ export function App() {
       {!isLoading && error && <div>Error...</div>}
 
       {data?.map((user: User) => {
-        return (
-          <div key={user.id}>
-            <strong>{user.name}</strong>
-            <p>{user.email}</p>
-          </div>
-        );
+        return <UserCard key={user.id} name={user.name} phone={user.phone} />;
       })}
     </>
   );

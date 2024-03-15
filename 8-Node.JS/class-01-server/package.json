@@ -4,9 +4,9 @@
   "description": "Start Node Server",
   "main": "src/server.ts",
   "scripts": {
-    "start": "node dist/server.js",
+    "dev": "tsx watch src/server.ts",
     "build": "tsup src",
-    "dev": "tsx watch src/server.ts"
+    "start": "node dist/server.js"
   },
   "keywords": [
     "node.js",

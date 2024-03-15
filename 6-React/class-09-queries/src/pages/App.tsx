@@ -18,7 +18,7 @@ export function App() {
     queryFn: getUsers,
   });
 
-  console.log(data);
+  console.error(error);
 
   return (
     <>

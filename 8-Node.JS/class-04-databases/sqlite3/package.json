@@ -4,7 +4,7 @@
   "description": "class-04-databases-sqlite3",
   "main": "src/server.ts",
   "scripts": {
-    "dev": "tsx src/server.ts",
+    "dev": "tsx watch src/server.ts",
     "build": "tsup src",
     "start": "node dist/server.js"
   },
@@ -23,6 +23,8 @@
     "typescript": "^5.4.2"
   },
   "dependencies": {
-    "express": "^4.18.3"
+    "express": "^4.18.3",
+    "sqlite": "^5.1.1",
+    "sqlite3": "^5.1.7"
   }
 }

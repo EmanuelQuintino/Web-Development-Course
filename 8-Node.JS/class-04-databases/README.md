@@ -2,7 +2,9 @@
 
 ## API Restfull
 
-## Hash Passwords
+## Exceptions
+
+## Hash Passwords and use UUID
 
 ```bash
 npm install bcrypt

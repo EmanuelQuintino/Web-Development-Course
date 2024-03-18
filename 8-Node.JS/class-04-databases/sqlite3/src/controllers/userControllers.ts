@@ -1,6 +1,7 @@
 import { Request, Response, NextFunction } from "express";
 import { sqliteConnection } from "../databases/sqlite3";
 import { hash } from "bcrypt";
+import { randomUUID } from "node:crypto";
 
 export const userControllers = {
   async create(req: Request, res: Response, next: NextFunction) {
@@ -12,10 +13,11 @@ export const userControllers = {
       if (userExists) throw res.status(400).send({ message: "user already exists!" });
 
       if (name && email && password) {
+        const userUUID = randomUUID();
         const passwordHash = await hash(password, 10);
         const user = await db.run(
-          "INSERT INTO users (name, email, password) VALUES (?, ?, ?);",
-          [name, email, passwordHash]
+          "INSERT INTO users (id, name, email, password) VALUES (?, ?, ?, ?);",
+          [userUUID, name, email, passwordHash]
         );
         return res.status(201).send({ message: "user created!" });
       } else {

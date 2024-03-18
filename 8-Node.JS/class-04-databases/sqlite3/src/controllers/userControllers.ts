@@ -1,15 +1,15 @@
-import { Request, Response } from "express";
+import { Request, Response, NextFunction } from "express";
 import { sqliteConnection } from "../databases/sqlite3";
 import { hash } from "bcrypt";
 
 export const userControllers = {
-  async create(req: Request, res: Response) {
+  async create(req: Request, res: Response, next: NextFunction) {
     try {
       const { name, email, password } = req.body;
       const db = await sqliteConnection();
 
       const userExists = await db.get("SELECT * FROM users WHERE email = (?)", [email]);
-      if (userExists) return res.status(400).send({ message: "user already exists!" });
+      if (userExists) throw res.status(400).send({ message: "user already exists!" });
 
       if (name && email && password) {
         const passwordHash = await hash(password, 10);
@@ -22,12 +22,11 @@ export const userControllers = {
         return res.status(401).send({ message: "missing user data" });
       }
     } catch (error) {
-      console.error(error);
-      return res.status(500).send({ error: "server error" });
+      next(error);
     }
   },
 
-  async read(req: Request, res: Response) {
+  async read(req: Request, res: Response, next: NextFunction) {
     try {
       const { id } = req.params;
       const db = await sqliteConnection();
@@ -36,11 +35,10 @@ export const userControllers = {
       if (user) {
         return res.status(200).send(user);
       } else {
-        return res.status(404).send({ message: "user note found!" });
+        throw res.status(402).send({ message: "user note found!" });
       }
     } catch (error) {
-      console.error(error);
-      return res.status(500).send({ error: "server error" });
+      next(error);
     }
   },
 

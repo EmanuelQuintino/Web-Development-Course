@@ -24,6 +24,12 @@ console.log(user.phone);
 console.log(user.profession);
 console.log(user.isAdmin);
 
+const num1 = 2;
+const num2 = 3;
+
+// object literal
+console.log({ num1, num2 });
+
 const pokemon = {
   name: "Blastoise",
   level: 50,

@@ -1,7 +1,8 @@
 import { Request, Response, NextFunction } from "express";
 import { sqliteConnection } from "../databases/sqlite3";
-import { hash } from "bcrypt";
+import { hash, compare } from "bcrypt";
 import { randomUUID } from "node:crypto";
+import { v4 as uuidv4 } from "uuid";
 
 export const userControllers = {
   async create(req: Request, res: Response, next: NextFunction) {
@@ -9,19 +10,21 @@ export const userControllers = {
       const { name, email, password } = req.body;
       const db = await sqliteConnection();
 
-      const userExists = await db.get("SELECT * FROM users WHERE email = (?)", [email]);
-      if (userExists) throw res.status(400).send({ message: "user already exists!" });
-
       if (name && email && password) {
-        const userUUID = randomUUID();
+        const userExists = await db.get("SELECT * FROM users WHERE email = (?)", [email]);
+        if (userExists) throw res.status(400).send({ message: "user already exists!" });
+
+        const userUUID = randomUUID() || uuidv4();
         const passwordHash = await hash(password, 10);
-        const user = await db.run(
+
+        await db.run(
           "INSERT INTO users (id, name, email, password) VALUES (?, ?, ?, ?);",
           [userUUID, name, email, passwordHash]
         );
+
         return res.status(201).send({ message: "user created!" });
       } else {
-        return res.status(401).send({ message: "missing user data" });
+        throw res.status(400).send({ message: "missing user data" });
       }
     } catch (error) {
       next(error);
@@ -31,14 +34,22 @@ export const userControllers = {
   async read(req: Request, res: Response, next: NextFunction) {
     try {
       const { id } = req.params;
+      const { password } = req.body;
       const db = await sqliteConnection();
 
-      const user = await db.get("SELECT * FROM users WHERE id = (?)", [id]);
-      if (user) {
-        return res.status(200).send(user);
-      } else {
-        throw res.status(402).send({ message: "user note found!" });
+      if (!password) {
+        throw res.status(400).send({ message: "please confirm your password" });
       }
+
+      const user = await db.get("SELECT * FROM users WHERE id = (?)", [id]);
+      if (!user) throw res.status(404).send({ message: "user not found!" });
+
+      const passwordCheck = await compare(password, user.password);
+      if (!passwordCheck) {
+        throw res.status(400).send({ message: "password not checked!" });
+      }
+
+      return res.status(200).send(user);
     } catch (error) {
       next(error);
     }

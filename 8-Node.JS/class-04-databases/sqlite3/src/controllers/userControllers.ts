@@ -11,23 +11,21 @@ export const userControllers = {
       const userSchema = z.object({
         name: z
           .string({
-            required_error: "nome obrigatório!",
-            invalid_type_error: "nome deve ser um texto!",
+            required_error: "name is required!",
+            invalid_type_error: "name must be a string!",
           })
-          .min(3, { message: "nome com mínimo de 3 caracteres!" }),
+          .min(3, { message: "name must have at least 3 characters" }),
 
-        email: z
-          .string({ required_error: "email obrigatório!" })
-          .email("Email inválido!"),
+        email: z.string({ required_error: "email is required!" }).email("invalid email!"),
 
-        password: z.string({ required_error: "senha obrigatória!" }),
+        password: z.string({ required_error: "password is required!" }),
       });
 
       const { name, email, password } = userSchema.parse(req.body);
       const db = await sqliteConnection();
 
       const userExists = await db.get("SELECT * FROM users WHERE email = ?", [email]);
-      if (userExists) throw res.status(400).json({ message: "email já em uso!" });
+      if (userExists) throw res.status(400).json({ message: "email already in use!" });
 
       const userUUID = randomUUID() || uuidv4();
       const passwordHash = await hash(password, 10);
@@ -39,7 +37,7 @@ export const userControllers = {
         passwordHash,
       ]);
 
-      return res.status(201).json({ message: "usuário criado com sucesso!" });
+      return res.status(201).json({ message: "user created!", uuid: userUUID });
     } catch (error) {
       return next(error);
     }
@@ -56,14 +54,15 @@ export const userControllers = {
       }
 
       const user = await db.get("SELECT * FROM users WHERE id = ?", [id]);
-      if (!user) throw res.status(404).json({ message: "usuário não encontrado!" });
+      if (!user) throw res.status(404).json({ message: "user not found!" });
 
       const passwordCheck = await compare(password, user.password);
       if (!passwordCheck) {
-        throw res.status(400).json({ message: "senha inválida!" });
+        throw res.status(400).json({ message: "invalid password!" });
       }
 
-      return res.status(200).send(user);
+      const { name, email } = user;
+      return res.status(200).send({ name, email });
     } catch (error) {
       next(error);
     }
@@ -74,20 +73,20 @@ export const userControllers = {
       const userSchema = z.object({
         name: z
           .string({
-            required_error: "nome obrigatório!",
-            invalid_type_error: "nome deve ser um texto!",
+            required_error: "name is required!",
+            invalid_type_error: "name must be a string!",
           })
-          .min(3, { message: "nome com mínimo de 3 caracteres!" }),
+          .min(3, { message: "name must have at least 3 characters" }),
 
         email: z
-          .string({ required_error: "email obrigatório!" })
-          .email("Email inválido!"),
+          .string({ required_error: "email is required!" })
+          .email("invalid email!!"),
 
-        password: z.string({ required_error: "por favor, confirme sua senha!" }),
+        password: z.string({ required_error: "please, confirm your password!" }),
 
         newPassword: z
           .string()
-          .min(7, { message: "senha com mínimo de 7 caracteres!" })
+          .min(7, { message: "password must have at least 7 characters" })
           .nullable(),
       });
 
@@ -96,16 +95,16 @@ export const userControllers = {
       const db = await sqliteConnection();
 
       const user = await db.get("SELECT * FROM users WHERE id = ?", [id]);
-      if (!user) throw res.status(404).json({ message: "usuário não encontrado!" });
+      if (!user) throw res.status(404).json({ message: "user not found!" });
 
       const passwordCheck = await compare(password, user.password);
       if (!passwordCheck) {
-        throw res.status(400).json({ message: "senha inválida!" });
+        throw res.status(400).json({ message: "invalid password!" });
       }
 
       const userEmail = await db.get("SELECT * FROM users WHERE email = ?", [email]);
       if (userEmail && userEmail.id != id) {
-        throw res.status(400).json({ message: "email já em uso!" });
+        throw res.status(400).json({ message: "email already in use!" });
       }
 
       if (newPassword) {
@@ -127,7 +126,7 @@ export const userControllers = {
         await db.get(updateQuery, [name, email, id]);
       }
 
-      return res.status(200).json({ message: "usuário atualizado com sucesso!" });
+      return res.status(200).json({ message: "user updated!" });
     } catch (error) {
       return next(error);
     }
@@ -140,21 +139,19 @@ export const userControllers = {
       const db = await sqliteConnection();
 
       if (!password) {
-        throw res.status(400).json({ message: "por favor, confirme sua senha!" });
+        throw res.status(400).json({ message: "please, confirm your password!" });
       }
 
       const user = await db.get("SELECT * FROM users WHERE id = ?", [id]);
-      if (!user) throw res.status(404).json({ message: "usuário não encontrado!" });
+      if (!user) throw res.status(404).json({ message: "user not found!" });
 
       const passwordCheck = await compare(password, user.password);
       if (!passwordCheck) {
-        throw res.status(400).json({ message: "senha inválida!" });
+        throw res.status(400).json({ message: "invalid password!" });
       }
 
       await db.get("DELETE FROM users WHERE id = ?", [id]);
-      return res
-        .status(200)
-        .json({ message: `usuário ${user.name} deletado com sucesso!` });
+      return res.status(200).json({ message: `user ${user.name} deleted!` });
     } catch (error) {
       return next(error);
     }

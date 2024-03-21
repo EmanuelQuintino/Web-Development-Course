@@ -11,7 +11,7 @@ export function appErrors(
   res: Response,
   next: NextFunction
 ) {
-  console.error("middleware error: ", error);
+  console.error("Middleware Error - ", error);
   res.status(error.status || 500);
-  res.json({ message: error.message });
+  res.json({ message: error.message || "Server error!" });
 }

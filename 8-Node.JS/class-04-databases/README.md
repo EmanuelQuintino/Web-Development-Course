@@ -2,8 +2,6 @@
 
 ## API Restfull
 
-## Exceptions
-
 ```bash
 zod
 ```

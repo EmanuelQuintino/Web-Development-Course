@@ -6,6 +6,7 @@ export const userController = {
       const { id, name, age } = req.body;
 
       if (id && name && age) {
+        // console.log(a);
         console.log("created", { id, name, age });
         return res.status(201).json({ message: `user ${id} created!` });
       }

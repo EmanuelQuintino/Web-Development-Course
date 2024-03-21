@@ -28,6 +28,13 @@ HTTP response status codes indicate whether a specific HTTP request has been suc
 
 The status codes listed below are defined by RFC [9110](https://httpwg.org/specs/rfc9110.html#overview.of.status.codes).
 
+## Exceptions
+
+- Synchronous and Asynchronous
+- Middlewares
+  - appError
+  - pageNotFoundError
+
 ## Links
 
 - [methods](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods)

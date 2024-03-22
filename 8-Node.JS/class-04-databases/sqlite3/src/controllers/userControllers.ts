@@ -18,7 +18,9 @@ export const userControllers = {
 
         email: z.string({ required_error: "email is required!" }).email("invalid email!"),
 
-        password: z.string({ required_error: "password is required!" }),
+        password: z
+          .string({ required_error: "password is required!" })
+          .min(7, { message: "password must have at least 7 characters" }),
       });
 
       const { name, email, password } = userSchema.parse(req.body);
@@ -37,7 +39,7 @@ export const userControllers = {
         passwordHash,
       ]);
 
-      return res.status(201).json({ message: "user created!", uuid: userUUID });
+      return res.status(201).json({ message: "user created!", id: userUUID });
     } catch (error) {
       return next(error);
     }
@@ -78,9 +80,7 @@ export const userControllers = {
           })
           .min(3, { message: "name must have at least 3 characters" }),
 
-        email: z
-          .string({ required_error: "email is required!" })
-          .email("invalid email!!"),
+        email: z.string({ required_error: "email is required!" }).email("invalid email!"),
 
         password: z.string({ required_error: "please, confirm your password!" }),
 

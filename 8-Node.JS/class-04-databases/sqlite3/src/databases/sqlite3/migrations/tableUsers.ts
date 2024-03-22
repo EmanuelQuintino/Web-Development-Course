@@ -1,4 +1,4 @@
-export const createTableUsers = `
+export const tableUsers = `
   CREATE TABLE IF NOT EXISTS users (
     id VARCHAR PRIMARY KEY,
     name VARCHAR NOT NULL,

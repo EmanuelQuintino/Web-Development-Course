@@ -1,10 +1,10 @@
 import { sqliteConnection } from "..";
-import { createTableUsers } from "./createTableUsers";
+import { tableUsers } from "./tableUsers";
 
 export async function runMigrations() {
-  const schemas = [createTableUsers].join("");
+  const schemas = [tableUsers].join("");
 
   sqliteConnection()
     .then((db) => db.exec(schemas))
-    .catch((error) => console.error("Error migrations:", error));
+    .catch((error) => console.error("Migration Error - ", error));
 }

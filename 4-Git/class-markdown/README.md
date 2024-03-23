@@ -21,6 +21,7 @@ Use # to create titles. Add more # for sub-headings, indicating lower levels:
 ## Emphasis
 
 ```md
+highlight: `text`.
 bold: **text**.
 italics: _text_.
 strikethrough: ~~text~~.

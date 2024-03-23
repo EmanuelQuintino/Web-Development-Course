@@ -27,7 +27,7 @@ export const userControllers = {
       const db = await sqliteConnection();
 
       const userExists = await db.get("SELECT * FROM users WHERE email = ?", [email]);
-      if (userExists) throw res.status(400).json({ message: "email already in use!" });
+      if (userExists) throw res.status(400).json({ message: "email already exists!" });
 
       const userUUID = randomUUID() || uuidv4();
       const passwordHash = await hash(password, 10);
@@ -105,7 +105,7 @@ export const userControllers = {
 
       const userEmail = await db.get("SELECT * FROM users WHERE email = ?", [email]);
       if (userEmail && userEmail.id != id) {
-        throw res.status(400).json({ message: "email already in use!" });
+        throw res.status(400).json({ message: "email already exists!" });
       }
 
       if (newPassword) {

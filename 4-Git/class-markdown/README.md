@@ -28,7 +28,7 @@ Tachado: ~~texto~~.
 
 ## Listas
 
-Listas não ordenadas: Use -, \*, ou + seguido de um espaço para itens de lista.
+- Listas não ordenadas: Use -, \*, ou + seguido de um espaço para itens de lista.
 
 ```md
 - Item 1
@@ -37,7 +37,7 @@ Listas não ordenadas: Use -, \*, ou + seguido de um espaço para itens de lista
   - Subitem 2.2
 ```
 
-    Listas ordenadas: Use números seguidos de um ponto e espaço.
+- Listas ordenadas: Use números seguidos de um ponto e espaço.
 
 ```md
 1. Primeiro Item
@@ -60,15 +60,19 @@ Listas não ordenadas: Use -, \*, ou + seguido de um espaço para itens de lista
 
 ## Blocos de código
 
+````md
 ```js
 console.log();
 ```
+````
+
+````
 
 ## Citações
 
 ```md
 > Isto é uma citação
-```
+````
 
 ## Tabela
 
@@ -76,3 +80,10 @@ console.log();
 | ----------- | ----------- |
 | Dado 1      | Dado 2      |
 | Dado 3      | Dado 4      |
+
+```md
+| Cabeçalho 1 | Cabeçalho 2 |
+| ----------- | ----------- |
+| Dado 1      | Dado 2      |
+| Dado 3      | Dado 4      |
+```

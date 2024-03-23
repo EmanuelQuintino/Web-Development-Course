@@ -1,4 +1,205 @@
-# GIT
+# Git Commands
+
+```bash
+# Verifica a versão do Git instalada
+git --version
+```
+
+```bash
+# Inicializa um repositório Git
+git init
+```
+
+```bash
+# Remove completamente o controle de versão do Git do diretório atual
+rm -rf .git
+```
+
+```bash
+# Configura o nome do usuário globalmente
+git config --global user.name "Emanuel Quintino"
+```
+
+```bash
+# Configura o email do usuário globalmente
+git config --global user.email "emanuelquintino@hotmail.com"
+```
+
+```bash
+# Configura o editor de texto padrão para commits
+git config --global core.editor "code -w"
+```
+
+```bash
+# Remove a configuração de email global
+git config --global --unset use.email
+```
+
+```bash
+# Lista todas as configurações globais do Git
+git config --global --list
+```
+
+```bash
+# Lista todas as configurações locais do Git
+git config --local --list
+```
+
+```bash
+# Verifica o estado do repositório (Diretório de Trabalho, Área de Stage, Logs do Repositório)
+```
+
+git status
+
+```bash
+# Adiciona todos os arquivos ao Stage
+git add .
+```
+
+```bash
+# Remove arquivos do Stage (especificar nome do arquivo)
+git rm --cached
+```
+
+```bash
+# Restaura todos os arquivos do Stage para a versão do último commit
+git restore .
+```
+
+```bash
+# Restaura todos os arquivos do Stage para a versão anterior ao último commit
+git restore --staged .
+```
+
+```bash
+# Realiza um commit com a mensagem "first commit"
+git commit -m "first commit"
+```
+
+```bash
+# Altera a mensagem do último commit
+git commit --amend -m "new message"
+```
+
+```bash
+# Desfaz o último commit, mantendo as mudanças no Stage
+git reset --soft HEAD~1
+```
+
+```bash
+# Desfaz os dois últimos commits, descartando as mudanças
+git reset --hard HEAD~2
+```
+
+```bash
+# Exibe o histórico de commits
+git log
+```
+
+```bash
+# Exibe os últimos 3 commits
+git log -n 3
+```
+
+```bash
+# Exibe as mudanças feitas no commit especificado
+git show [hash]
+```
+
+```bash
+# Exibe as diferenças entre o diretório de trabalho e o Stage
+git diff
+```
+
+```bash
+# Renomeia a branch principal para 'main'
+git branch -M main
+```
+
+```bash
+# Adiciona um repositório remoto (especificar endereço)
+git remote add origin
+```
+
+```bash
+# Remove um repositório remoto (especificar endereço)
+git remote remove origin
+```
+
+```bash
+# Lista os repositórios remotos
+git remote -v
+```
+
+```bash
+# Empurra os commits para o repositório remoto 'origin' na branch 'main'
+git push -u origin main
+```
+
+```bash
+# Empurra os commits para o repositório remoto 'origin' na branch atual
+git push
+```
+
+```bash
+# Puxa as alterações do repositório remoto para a branch local atual
+git pull
+```
+
+```bash
+# Clona um repositório remoto (especificar link)
+git clone
+```
+
+```bash
+# Lista todas as branches locais
+git branch
+```
+
+```bash
+# Cria uma nova branch (especificar nome)
+git branch
+```
+
+```bash
+# Deleta uma branch (especificar nome)
+git branch -D
+```
+
+```bash
+# Muda para a branch especificada
+git checkout
+```
+
+```bash
+# Cria e muda para uma nova branch (especificar nome)
+git checkout -b
+```
+
+```bash
+# Realiza a fusão da branch especificada com a branch atual
+git merge
+```
+
+```bash
+# Empurra a branch especificada para o repositório remoto 'origin'
+git push origin
+```
+
+```bash
+# Empurra a branch especificada para o repositório remoto 'origin' e define como upstream
+git push -u origin
+```
+
+```bash
+# Puxa todas as branches e atualizações do repositório remoto
+git fetch
+```
+
+```bash
+# Remove todos os arquivos do cache do Git e remove arquivos do GitHub
+git rm -r --cached .
+```
 
 - **U** (Untracked): São os arquivos que ainda não são monitorados pelo GIT.
 
@@ -7,246 +208,3 @@
 - **A** (Added): Arquivos que ainda não foram commitados mas já rodou git add.
 
 - **D** (Deleted): São arquivo que foram removidos.
-
-## Commands
-
-- Verifica a versão do Git instalada
-
-```bash
-git --version
-```
-
-- Inicializa um repositório Git
-
-```bash
-git init
-```
-
-- Remove completamente o controle de versão do Git do diretório atual
-
-```bash
-rm -rf .git
-```
-
-- Configura o nome do usuário globalmente
-
-```bash
-git config --global user.name "Emanuel Quintino"
-```
-
-- Configura o email do usuário globalmente
-
-```bash
-git config --global user.email "emanuelquintino@hotmail.com"
-```
-
-- Configura o editor de texto padrão para commits
-
-```bash
-git config --global core.editor "code -w"
-```
-
-- Remove a configuração de email global
-
-```bash
-git config --global --unset use.email
-```
-
-- Lista todas as configurações globais do Git
-
-```bash
-git config --global --list
-```
-
-- Lista todas as configurações locais do Git
-
-```bash
-git config --local --list
-```
-
-- Verifica o estado do repositório (Diretório de Trabalho, Área de Stage, Logs do Repositório)
-
-```bash
-git status
-
-```
-
-- Adiciona todos os arquivos ao Stage
-
-```bash
-git add .
-```
-
-- Remove arquivos do Stage (especificar nome do arquivo)
-
-```bash
-git rm --cached
-```
-
-- Restaura todos os arquivos do Stage para a versão do último commit
-
-```bash
-git restore .
-```
-
-- Restaura todos os arquivos do Stage para a versão anterior ao último commit
-
-```bash
-git restore --staged .
-```
-
-- Realiza um commit com a mensagem "first commit"
-
-```bash
-git commit -m "first commit"
-```
-
-- Altera a mensagem do último commit
-
-```bash
-git commit --amend -m "new message"
-```
-
-- Desfaz o último commit, mantendo as mudanças no Stage
-
-```bash
-git reset --soft HEAD~1
-```
-
-- Desfaz os dois últimos commits, descartando as mudanças
-
-```bash
-git reset --hard HEAD~2
-```
-
-- Exibe o histórico de commits
-
-```bash
-git log
-```
-
-- Exibe os últimos 3 commits
-
-```bash
-git log -n 3
-```
-
-- Exibe as mudanças feitas no commit especificado
-
-```bash
-git show [hash]
-```
-
-- Exibe as diferenças entre o diretório de trabalho e o Stage
-
-```bash
-git diff
-```
-
-- Renomeia a branch principal para 'main'
-
-```bash
-git branch -M main
-```
-
-- Adiciona um repositório remoto (especificar endereço)
-
-```bash
-git remote add origin
-```
-
-- Remove um repositório remoto (especificar endereço)
-
-```bash
-git remote remove origin
-```
-
-- Lista os repositórios remotos
-
-```bash
-git remote -v
-```
-
-- Empurra os commits para o repositório remoto 'origin' na branch 'main'
-
-```bash
-git push -u origin main
-```
-
-- Empurra os commits para o repositório remoto 'origin' na branch atual
-
-```bash
-git push
-```
-
-- Puxa as alterações do repositório remoto para a branch local atual
-
-```bash
-git pull
-```
-
-- Clona um repositório remoto (especificar link)
-
-```bash
-git clone
-```
-
-- Lista todas as branches locais
-
-```bash
-git branch
-```
-
-- Cria uma nova branch (especificar nome)
-
-```bash
-git branch
-```
-
-- Deleta uma branch (especificar nome)
-
-```bash
-git branch -D
-```
-
-- Muda para a branch especificada
-
-```bash
-git checkout
-```
-
-- Cria e muda para uma nova branch (especificar nome)
-
-```bash
-git checkout -b
-```
-
-- Realiza a fusão da branch especificada com a branch atual
-
-```bash
-git merge
-```
-
-- Empurra a branch especificada para o repositório remoto 'origin'
-
-```bash
-git push origin
-```
-
-- Empurra a branch especificada para o repositório remoto 'origin' e define como upstream
-
-```bash
-git push -u origin
-```
-
-- Puxa todas as branches e atualizações do repositório remoto
-
-```bash
-git fetch
-```
-
-- Remove todos os arquivos do cache do Git e remove arquivos do GitHub
-
-```bash
-git rm -r --cached .
-```

@@ -1,202 +1,202 @@
 # Git Commands
 
 ```bash
-# Check the installed Git version
+# check the installed Git version
 git --version
 ```
 
 ```bash
-# Initialize a Git repository
+# initialize a Git repository
 git init
 ```
 
 ```bash
-# Completely remove Git version control from the current directory
+# completely remove Git version control from the current directory
 rm -rf .git
 ```
 
 ```bash
-# Configure username globally
+# configure username globally
 git config --global user.name "Emanuel Quintino"
 ```
 
 ```bash
-# Configure user email globally
+# configure user email globally
 git config --global user.email "emanuelquintino@hotmail.com"
 ```
 
 ```bash
-# Configure the default text editor for commits
+# configure the default text editor for commits
 git config --global core.editor "code -w"
 ```
 
 ```bash
-# Remove global email configuration
+# remove global email configuration
 git config --global --unset use.email
 ```
 
 ```bash
-# List all Git global settings
+# list all Git global settings
 git config --global --list
 ```
 
 ```bash
-# List all local Git configurations
+# list all local Git configurations
 git config --local --list
 ```
 
 ```bash
-# Check the repository status (Working Directory, Stage Area, Repository Logs)
+# check the repository status (Working Directory, Stage Area, Repository Logs)
 git status
 ```
 
 ```bash
-# Add all files to the Stage
+# add all files to the Stage
 git add .
 ```
 
 ```bash
-# Remove files from Stage (specify file name)
+# remove files from Stage (specify file name)
 git rm --cached
 ```
 
 ```bash
-# Restores all Stage files to the version of the last commit
+# restores all Stage files to the version of the last commit
 git restore .
 ```
 
 ```bash
-# Restores all Stage files to the version prior to the last commit
+# restores all Stage files to the version prior to the last commit
 git restore --staged .
 ```
 
 ```bash
-# Make a commit with the message "first commit"
+# make a commit with the message "first commit"
 git commit -m "first commit"
 ```
 
 ```bash
-# Change the message of the last commit
+# change the message of the last commit
 git commit --amend -m "new message"
 ```
 
 ```bash
-# Undo the last commit, keeping the changes in the Stage
+# undo the last commit, keeping the changes in the Stage
 git reset --soft HEAD~1
 ```
 
 ```bash
-# Undo the last two commits, discarding the changes
+# undo the last two commits, discarding the changes
 git reset --hard HEAD~2
 ```
 
 ```bash
-# Display commit history
+# display commit history
 git log
 ```
 
 ```bash
-# Display the last 3 commits
+# display the last 3 commits
 git log -n 3
 ```
 
 ```bash
-# Display changes made to the specified commit
+# display changes made to the specified commit
 git show [hash]
 ```
 
 ```bash
-# Display the differences between the working directory and the Stage
+# display the differences between the working directory and the Stage
 git diff
 ```
 
 ```bash
-# Rename the main branch to 'main'
+# rename the main branch to 'main'
 git branch -M main
 ```
 
 ```bash
-# Add a remote repository (specify address)
+# add a remote repository (specify address)
 git remote add origin
 ```
 
 ```bash
-# Remove a remote repository (specify address)
+# remove a remote repository (specify address)
 git remote remove origin
 ```
 
 ```bash
-# List remote repositories
+# list remote repositories
 git remote -v
 ```
 
 ```bash
-# Push commits to remote repository 'origin' on branch 'main'
+# push commits to remote repository 'origin' on branch 'main'
 git push -u origin main
 ```
 
 ```bash
-# Push commits to remote repository 'origin' in current branch
+# push commits to remote repository 'origin' in current branch
 git push
 ```
 
 ```bash
-# Pull changes from the remote repository to the current local branch
+# pull changes from the remote repository to the current local branch
 git pull
 ```
 
 ```bash
-# Clones a remote repository (specify link)
+# clones a remote repository (specify link)
 git clone
 ```
 
 ```bash
-# List all local branches
+# list all local branches
 git branch
 ```
 
 ```bash
-# Create a new branch (specify name)
+# create a new branch (specify name)
 git branch
 ```
 
 ```bash
-# Delete a branch (specify name)
+# delete a branch (specify name)
 git branch -D
 ```
 
 ```bash
-# Switch to the specified branch
+# switch to the specified branch
 git checkout
 ```
 
 ```bash
-# Create and move to a new branch (specify name)
+# create and move to a new branch (specify name)
 git checkout -b
 ```
 
 ```bash
-# Merge the specified branch with the current branch
+# merge the specified branch with the current branch
 git merge
 ```
 
 ```bash
-# Push the specified branch to the 'origin' remote repository
+# push the specified branch to the 'origin' remote repository
 git push origin
 ```
 
 ```bash
-# Push the specified branch to the remote repository 'origin' and set it as upstream
+# push the specified branch to the remote repository 'origin' and set it as upstream
 git push -u origin
 ```
 
 ```bash
-# Pull all branches and updates from the remote repository
+# pull all branches and updates from the remote repository
 git fetch
 ```
 
 ```bash
-# Remove all files from Git cache and remove files from GitHub
+# remove all files from Git cache and remove files from GitHub
 git rm -r --cached .
 ```
 

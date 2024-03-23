@@ -196,7 +196,7 @@ git fetch
 ```
 
 ```bash
-# remove all files from Git cache and remove files from GitHub
+# remove all files from Git cache and remove files from github
 git rm -r --cached .
 ```
 

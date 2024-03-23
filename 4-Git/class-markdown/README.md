@@ -1,34 +1,34 @@
 # Class Markdown (md)
 
-## Títulos
+## Titles
 
-Use # para criar títulos. Adicione mais # para sub-títulos, indicando níveis menores:
-
-```md
-# Título Nível 1
-
-## Título Nível 2
-
-### Título Nível 3
-
-#### Título Nível 4
-
-##### Título Nível 5
-
-###### Título Nível 6
-```
-
-## Ênfase
+Use # to create titles. Add more # for sub-headings, indicating lower levels:
 
 ```md
-Negrito: **texto**.
-Itálico: _texto_.
-Tachado: ~~texto~~.
+# Title Level 1
+
+## Title Level 2
+
+### Title Level 3
+
+#### Title Level 4
+
+##### Title Level 5
+
+###### Title Level 6
 ```
 
-## Listas
+## Emphasis
 
-- Listas não ordenadas: Use -, \*, ou + seguido de um espaço para itens de lista.
+```md
+bold: **text**.
+italics: _text_.
+strikethrough: ~~text~~.
+```
+
+## Lists
+
+- Unorder lists: Use -, \*, or + followed by a space for list items.
 
 ```md
 - Item 1
@@ -37,11 +37,11 @@ Tachado: ~~texto~~.
   - Subitem 2.2
 ```
 
-- Listas ordenadas: Use números seguidos de um ponto e espaço.
+- Order lists: Use numbers followed by a period and space.
 
 ```md
-1. Primeiro Item
-2. Segundo Item
+1. First Item
+2. Second Item
    1. Subitem
    2. Subitem
 ```
@@ -52,13 +52,13 @@ Tachado: ~~texto~~.
 [Google](https://www.google.com)
 ```
 
-## Imagens
+## Images
 
 ```md
 ![OpenAI Logo](https://example.com/logo.png)
 ```
 
-## Blocos de código
+## Code blocks
 
 ````md
 ```js
@@ -66,17 +66,17 @@ console.log();
 ```
 ````
 
-## Citações
+## Quotes
 
 ```md
-> Isto é uma citação
+> This is a quote
 ```
 
-## Tabela
+## Table
 
 ```md
-| Cabeçalho 1 | Cabeçalho 2 |
-| ----------- | ----------- |
-| Dado 1      | Dado 2      |
-| Dado 3      | Dado 4      |
+| Heading 1 | Heading 2 |
+| --------- | --------- |
+| Data 1    | Data 2    |
+| Data 3    | Data 4    |
 ```

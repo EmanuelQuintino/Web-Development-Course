@@ -1,7 +1,7 @@
 import express from "express";
 import { router } from "./routes";
 import { appErrors } from "./middlewares/appErrors";
-import { pageNotFoundError } from "./middlewares/pageNotFoundError";
+import { pageNotFound } from "./middlewares/pageNotFound";
 
 const app = express();
 const port = 3000;
@@ -9,7 +9,7 @@ const port = 3000;
 app.use(express.json());
 app.use(router);
 
-app.use(pageNotFoundError);
+app.use(pageNotFound);
 app.use(appErrors);
 
 app.listen(port, () => {

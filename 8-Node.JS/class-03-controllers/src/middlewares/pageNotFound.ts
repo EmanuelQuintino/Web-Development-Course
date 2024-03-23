@@ -5,8 +5,8 @@ type CustomError = {
   status?: number;
 };
 
-export function pageNotFoundError(req: Request, res: Response, next: NextFunction) {
-  const error: CustomError = new Error("page not found!");
+export function pageNotFound(_req: Request, _res: Response, next: NextFunction) {
+  const error = new Error("Page not found!") as CustomError;
   error.status = 404;
   next(error);
 }

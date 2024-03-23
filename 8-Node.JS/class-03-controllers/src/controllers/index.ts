@@ -13,7 +13,7 @@ export const userController = {
 
       throw res.status(400).json({ message: "user not created!" });
     } catch (error) {
-      next(error);
+      return next(error);
     }
   },
 
@@ -32,7 +32,7 @@ export const userController = {
 
       throw res.status(404).json({ message: "user(s) not found!" });
     } catch (error) {
-      next(error);
+      return next(error);
     }
   },
 
@@ -48,7 +48,7 @@ export const userController = {
 
       throw res.status(400).json({ message: "user not updated!" });
     } catch (error) {
-      next(error);
+      return next(error);
     }
   },
 
@@ -57,7 +57,7 @@ export const userController = {
       const { id } = req.params;
       res.status(200).json({ message: `user ${id} deleted!` });
     } catch (error) {
-      next(error);
+      return next(error);
     }
   },
 };

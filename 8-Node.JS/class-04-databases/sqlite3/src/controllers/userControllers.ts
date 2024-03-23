@@ -49,24 +49,25 @@ export const userControllers = {
     try {
       const { id } = req.params;
       const { password } = req.body;
-      const db = await sqliteConnection();
 
       if (!password) {
         throw res.status(400).json({ message: "please confirm your password" });
       }
+
+      const db = await sqliteConnection();
 
       const user = await db.get("SELECT * FROM users WHERE id = ?", [id]);
       if (!user) throw res.status(404).json({ message: "user not found!" });
 
       const passwordCheck = await compare(password, user.password);
       if (!passwordCheck) {
-        throw res.status(400).json({ message: "invalid password!" });
+        throw res.status(401).json({ message: "invalid password!" });
       }
 
       const { name, email } = user;
       return res.status(200).send({ name, email });
     } catch (error) {
-      next(error);
+      return next(error);
     }
   },
 
@@ -115,7 +116,7 @@ export const userControllers = {
           WHERE id = ?
         `;
 
-        await db.get(updateQuery, [name, email, passwordHash, id]);
+        await db.run(updateQuery, [name, email, passwordHash, id]);
       } else {
         const updateQuery = `
             UPDATE users
@@ -123,7 +124,7 @@ export const userControllers = {
             WHERE id = ?
           `;
 
-        await db.get(updateQuery, [name, email, id]);
+        await db.run(updateQuery, [name, email, id]);
       }
 
       return res.status(200).json({ message: "user updated!" });

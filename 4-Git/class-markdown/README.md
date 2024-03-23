@@ -66,20 +66,13 @@ console.log();
 ```
 ````
 
-````
-
 ## Citações
 
 ```md
 > Isto é uma citação
-````
+```
 
 ## Tabela
-
-| Cabeçalho 1 | Cabeçalho 2 |
-| ----------- | ----------- |
-| Dado 1      | Dado 2      |
-| Dado 3      | Dado 4      |
 
 ```md
 | Cabeçalho 1 | Cabeçalho 2 |

@@ -1,210 +1,209 @@
 # Git Commands
 
 ```bash
-# Verifica a versão do Git instalada
+# Check the installed Git version
 git --version
 ```
 
 ```bash
-# Inicializa um repositório Git
+# Initialize a Git repository
 git init
 ```
 
 ```bash
-# Remove completamente o controle de versão do Git do diretório atual
+# Completely remove Git version control from the current directory
 rm -rf .git
 ```
 
 ```bash
-# Configura o nome do usuário globalmente
+# Configure username globally
 git config --global user.name "Emanuel Quintino"
 ```
 
 ```bash
-# Configura o email do usuário globalmente
+# Configure user email globally
 git config --global user.email "emanuelquintino@hotmail.com"
 ```
 
 ```bash
-# Configura o editor de texto padrão para commits
+# Configure the default text editor for commits
 git config --global core.editor "code -w"
 ```
 
 ```bash
-# Remove a configuração de email global
+# Remove global email configuration
 git config --global --unset use.email
 ```
 
 ```bash
-# Lista todas as configurações globais do Git
+# List all Git global settings
 git config --global --list
 ```
 
 ```bash
-# Lista todas as configurações locais do Git
+# List all local Git configurations
 git config --local --list
 ```
 
 ```bash
-# Verifica o estado do repositório (Diretório de Trabalho, Área de Stage, Logs do Repositório)
+# Check the repository status (Working Directory, Stage Area, Repository Logs)
+git status
 ```
 
-git status
-
 ```bash
-# Adiciona todos os arquivos ao Stage
+# Add all files to the Stage
 git add .
 ```
 
 ```bash
-# Remove arquivos do Stage (especificar nome do arquivo)
+# Remove files from Stage (specify file name)
 git rm --cached
 ```
 
 ```bash
-# Restaura todos os arquivos do Stage para a versão do último commit
+# Restores all Stage files to the version of the last commit
 git restore .
 ```
 
 ```bash
-# Restaura todos os arquivos do Stage para a versão anterior ao último commit
+# Restores all Stage files to the version prior to the last commit
 git restore --staged .
 ```
 
 ```bash
-# Realiza um commit com a mensagem "first commit"
+# Make a commit with the message "first commit"
 git commit -m "first commit"
 ```
 
 ```bash
-# Altera a mensagem do último commit
+# Change the message of the last commit
 git commit --amend -m "new message"
 ```
 
 ```bash
-# Desfaz o último commit, mantendo as mudanças no Stage
+# Undo the last commit, keeping the changes in the Stage
 git reset --soft HEAD~1
 ```
 
 ```bash
-# Desfaz os dois últimos commits, descartando as mudanças
+# Undo the last two commits, discarding the changes
 git reset --hard HEAD~2
 ```
 
 ```bash
-# Exibe o histórico de commits
+# Display commit history
 git log
 ```
 
 ```bash
-# Exibe os últimos 3 commits
+# Display the last 3 commits
 git log -n 3
 ```
 
 ```bash
-# Exibe as mudanças feitas no commit especificado
+# Display changes made to the specified commit
 git show [hash]
 ```
 
 ```bash
-# Exibe as diferenças entre o diretório de trabalho e o Stage
+# Display the differences between the working directory and the Stage
 git diff
 ```
 
 ```bash
-# Renomeia a branch principal para 'main'
+# Rename the main branch to 'main'
 git branch -M main
 ```
 
 ```bash
-# Adiciona um repositório remoto (especificar endereço)
+# Add a remote repository (specify address)
 git remote add origin
 ```
 
 ```bash
-# Remove um repositório remoto (especificar endereço)
+# Remove a remote repository (specify address)
 git remote remove origin
 ```
 
 ```bash
-# Lista os repositórios remotos
+# List remote repositories
 git remote -v
 ```
 
 ```bash
-# Empurra os commits para o repositório remoto 'origin' na branch 'main'
+# Push commits to remote repository 'origin' on branch 'main'
 git push -u origin main
 ```
 
 ```bash
-# Empurra os commits para o repositório remoto 'origin' na branch atual
+# Push commits to remote repository 'origin' in current branch
 git push
 ```
 
 ```bash
-# Puxa as alterações do repositório remoto para a branch local atual
+# Pull changes from the remote repository to the current local branch
 git pull
 ```
 
 ```bash
-# Clona um repositório remoto (especificar link)
+# Clones a remote repository (specify link)
 git clone
 ```
 
 ```bash
-# Lista todas as branches locais
+# List all local branches
 git branch
 ```
 
 ```bash
-# Cria uma nova branch (especificar nome)
+# Create a new branch (specify name)
 git branch
 ```
 
 ```bash
-# Deleta uma branch (especificar nome)
+# Delete a branch (specify name)
 git branch -D
 ```
 
 ```bash
-# Muda para a branch especificada
+# Switch to the specified branch
 git checkout
 ```
 
 ```bash
-# Cria e muda para uma nova branch (especificar nome)
+# Create and move to a new branch (specify name)
 git checkout -b
 ```
 
 ```bash
-# Realiza a fusão da branch especificada com a branch atual
+# Merge the specified branch with the current branch
 git merge
 ```
 
 ```bash
-# Empurra a branch especificada para o repositório remoto 'origin'
+# Push the specified branch to the 'origin' remote repository
 git push origin
 ```
 
 ```bash
-# Empurra a branch especificada para o repositório remoto 'origin' e define como upstream
+# Push the specified branch to the remote repository 'origin' and set it as upstream
 git push -u origin
 ```
 
 ```bash
-# Puxa todas as branches e atualizações do repositório remoto
+# Pull all branches and updates from the remote repository
 git fetch
 ```
 
 ```bash
-# Remove todos os arquivos do cache do Git e remove arquivos do GitHub
+# Remove all files from Git cache and remove files from GitHub
 git rm -r --cached .
 ```
 
-- **U** (Untracked): São os arquivos que ainda não são monitorados pelo GIT.
+- **U** (Untracked): These are files that are not yet monitored by GIT.
 
-- **M** (Modified): Arquivos que já foram commitados e agora foram modificados.
+- **M** (Modified): Files that have already been committed and have now been modified.
 
-- **A** (Added): Arquivos que ainda não foram commitados mas já rodou git add.
+- **A** (Added): Files that have not yet been committed but have already been run by git add.
 
-- **D** (Deleted): São arquivo que foram removidos.
+- **D** (Deleted): These are files that were removed.

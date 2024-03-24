@@ -9,20 +9,24 @@ import { sign } from "jsonwebtoken";
 export const userControllers = {
   async create(req: Request, res: Response, next: NextFunction) {
     try {
-      const userSchema = z.object({
-        name: z
-          .string({
-            required_error: "name is required!",
-            invalid_type_error: "name must be a string!",
-          })
-          .min(3, { message: "name must have at least 3 characters" }),
+      const userSchema = z
+        .object({
+          name: z
+            .string({
+              required_error: "name is required!",
+              invalid_type_error: "name must be a string!",
+            })
+            .min(3, { message: "name must have at least 3 characters" }),
 
-        email: z.string({ required_error: "email is required!" }).email("invalid email!"),
+          email: z
+            .string({ required_error: "email is required!" })
+            .email("invalid email!"),
 
-        password: z
-          .string({ required_error: "password is required!" })
-          .min(7, { message: "password must have at least 7 characters" }),
-      });
+          password: z
+            .string({ required_error: "password is required!" })
+            .min(7, { message: "password must have at least 7 characters" }),
+        })
+        .strict();
 
       const { name, email, password } = userSchema.parse(req.body);
       const db = await sqliteConnection();

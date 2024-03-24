@@ -49,8 +49,8 @@ npm install zod
 
 ## Links
 
+- [aws-rest-api](https://aws.amazon.com/pt/what-is/restful-api/)
+- [ibm-rest-api](https://www.ibm.com/br-pt/topics/rest-apis)
 - [uuid](https://www.npmjs.com/package/uuid)
 - [bcrypt](https://www.npmjs.com/package/bcrypt)
 - [zod](https://zod.dev/)
-- [aws-rest-api](https://aws.amazon.com/pt/what-is/restful-api/)
-- [ibm-rest-api](https://www.ibm.com/br-pt/topics/rest-apis)

@@ -19,7 +19,7 @@ export function authMiddleware(req: Request, res: Response, next: NextFunction) 
   }
 
   verify(token, process.env.SECRET_TOKEN, (error, decoded) => {
-    if (error) throw res.status(401).json({ message: "invalid token!" });
+    if (error) throw res.status(401).json({ message: error.message || "invalid token!" });
     req.userID = (decoded as JwtPayload).id;
     return next();
   });

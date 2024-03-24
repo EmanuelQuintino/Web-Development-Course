@@ -4,7 +4,7 @@ import { JwtPayload, verify } from "jsonwebtoken";
 export function authMiddleware(req: Request, res: Response, next: NextFunction) {
   const beareToken = req.headers.authorization;
 
-  if (!beareToken) return res.status(401).json({ message: "no token provided!" });
+  if (!beareToken) return res.status(401).json({ message: "token is required!" });
 
   const splitBeareToken = beareToken.split(" ");
 

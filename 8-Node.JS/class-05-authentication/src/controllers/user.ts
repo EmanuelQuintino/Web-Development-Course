@@ -4,6 +4,7 @@ import { hash, compare } from "bcrypt";
 import { randomUUID } from "node:crypto";
 import { v4 as uuidv4 } from "uuid";
 import { z } from "zod";
+import { sign } from "jsonwebtoken";
 
 export const userControllers = {
   async create(req: Request, res: Response, next: NextFunction) {
@@ -27,6 +28,7 @@ export const userControllers = {
       const db = await sqliteConnection();
 
       const userExists = await db.get("SELECT * FROM users WHERE email = ?", [email]);
+
       if (userExists) throw res.status(400).json({ message: "email already exists!" });
 
       const userUUID = randomUUID() || uuidv4();
@@ -39,7 +41,11 @@ export const userControllers = {
         passwordHash,
       ]);
 
-      return res.status(201).json({ message: "user created!", id: userUUID });
+      const token = sign({ id: userUUID }, process.env.SECRET_TOKEN, {
+        expiresIn: process.env.EXPIRESIN_TOKEN,
+      });
+
+      return res.status(201).json({ message: "user created!", token });
     } catch (error) {
       return next(error);
     }
@@ -47,8 +53,14 @@ export const userControllers = {
 
   async read(req: Request, res: Response, next: NextFunction) {
     try {
-      const { email, password } = req.body;
-      return res.status(200).json({ email, password });
+      const userID = req.userID;
+      const db = await sqliteConnection();
+
+      const user = await db.get("SELECT * FROM users WHERE id = ?", [userID]);
+      if (!user) throw res.status(404).json({ message: "user not found!" });
+
+      const { name, email } = user;
+      return res.status(200).send({ name, email });
     } catch (error) {
       return next(error);
     }

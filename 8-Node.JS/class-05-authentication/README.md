@@ -1,8 +1,25 @@
 # Class Authentication
 
+## Dotenv
+
+Dotenv is a zero-dependency module that loads environment variables from a .env file into process.env.
+
+```bash
+# install dotenv
+npm install dotenv --save
+```
+
 ## JWT (JSON Web Token)
 
 JSON Web Tokens are an open, industry standard [RFC 7519](https://datatracker.ietf.org/doc/html/rfc7519) method for representing claims securely between two parties.
+
+```bash
+# install jwt
+npm install jsonwebtoken --save
+
+# install dependencies
+npm i --save-dev @types/jsonwebtoken
+```
 
 - Structure Decoded
 
@@ -38,6 +55,15 @@ eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9
 .SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c;
 ```
 
+## Authorization
+
+Authorization header using the Bearer schema. The content of the header should look like the following:
+
+```
+Authorization: Bearer <token>
+```
+
 ## Links
 
+[dotenv](https://www.npmjs.com/package/dotenv)
 [JWT Docs](https://jwt.io/)

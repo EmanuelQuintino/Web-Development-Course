@@ -1,7 +1,7 @@
 import express from "express";
 import { router } from "./routes";
-import { appErrors } from "./middlewares/appErrors";
-import { pageNotFound } from "./middlewares/pageNotFound";
+import { appErrors } from "./errors/appErrors";
+import { pageNotFound } from "./errors/pageNotFound";
 
 const app = express();
 const port = 3000;

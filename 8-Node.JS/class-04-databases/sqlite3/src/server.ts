@@ -2,8 +2,8 @@ import express from "express";
 import { sqliteConnection } from "./databases/sqlite3";
 import { router } from "./routes";
 import { runMigrations } from "./databases/sqlite3/migrations";
-import { pageNotFound } from "./middlewares/pageNotFound";
-import { appErrors } from "./middlewares/appErrors";
+import { pageNotFound } from "./errors/pageNotFound";
+import { appErrors } from "./errors/appErrors";
 
 const app = express();
 const port = 3000;

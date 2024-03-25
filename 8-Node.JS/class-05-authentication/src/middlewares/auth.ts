@@ -2,25 +2,28 @@ import { Request, Response, NextFunction } from "express";
 import { JwtPayload, verify } from "jsonwebtoken";
 
 export function authMiddleware(req: Request, res: Response, next: NextFunction) {
-  const beareToken = req.headers.authorization;
+  const { cookie } = req.headers;
 
-  if (!beareToken) return res.status(401).json({ message: "token is required!" });
+  if (!cookie) return res.status(401).json({ message: "token is required!" });
 
-  const splitBeareToken = beareToken.split(" ");
+  const splitCookieToken = cookie.split("=");
 
-  if (splitBeareToken.length != 2) {
-    return res.status(401).json({ message: "badly formatted token!" });
+  if (splitCookieToken.length != 2) {
+    return res.status(401).json({ message: "badly formatted token1!" });
   }
 
-  const [schema, token] = splitBeareToken;
+  const [key, token] = splitCookieToken;
 
-  if (!/^Bearer$/i.test(schema)) {
-    return res.status(401).json({ message: "badly formatted token!" });
+  if (key != process.env.KEY_TOKEN) {
+    return res.status(401).json({ message: "badly formatted token2!" });
   }
 
   verify(token, process.env.SECRET_TOKEN, (error, decoded) => {
-    if (error) throw res.status(401).json({ message: error.message || "invalid token!" });
-    req.userID = (decoded as JwtPayload).id;
+    if (error) throw res.status(401).json({ message: error.message || "token error!" });
+
+    const { id, role } = decoded as JwtPayload;
+    req.userData = { id, role };
+
     return next();
   });
 }

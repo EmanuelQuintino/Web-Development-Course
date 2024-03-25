@@ -17,13 +17,20 @@ export const authControllers = {
         throw res.status(401).json({ message: "email or password invalid!" });
       }
 
-      const { id } = user;
+      const { id, role } = user;
 
-      const token = sign({ id }, process.env.SECRET_TOKEN, {
+      const token = sign({ id, role }, process.env.SECRET_TOKEN, {
         expiresIn: process.env.EXPIRESIN_TOKEN,
       });
 
-      return res.status(200).json({ id, token });
+      res.cookie(process.env.KEY_TOKEN, token, {
+        httpOnly: true,
+        sameSite: "none",
+        secure: true,
+        maxAge: 1000 * 60 * 15,
+      });
+
+      return res.status(200).json({ message: "login successful!", token });
     } catch (error) {
       return next(error);
     }

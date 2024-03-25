@@ -63,7 +63,16 @@ Authorization header using the Bearer schema. The content of the header should l
 Authorization: Bearer <token>
 ```
 
+## HTTP Cookies
+
+An HTTP cookie (web cookie, browser cookie) is a small piece of data that a server sends to a user's web browser. The browser may store the cookie and send it back to the same server with later requests:
+
+```
+Set-Cookie: <cookie-name>=<cookie-value>
+```
+
 ## Links
 
 [dotenv](https://www.npmjs.com/package/dotenv)
 [JWT Docs](https://jwt.io/)
+[HTTP Cookies](https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies)

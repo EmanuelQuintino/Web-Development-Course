@@ -3,5 +3,6 @@ declare namespace NodeJS {
     PORT: string;
     SECRET_TOKEN: string;
     EXPIRESIN_TOKEN: string;
+    KEY_TOKEN: string;
   }
 }

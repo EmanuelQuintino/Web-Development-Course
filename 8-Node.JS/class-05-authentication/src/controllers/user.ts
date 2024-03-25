@@ -57,7 +57,7 @@ export const userControllers = {
 
   async read(req: Request, res: Response, next: NextFunction) {
     try {
-      const userID = req.userID;
+      const userID = req.userData.id;
       const db = await sqliteConnection();
 
       const user = await db.get("SELECT * FROM users WHERE id = ?", [userID]);

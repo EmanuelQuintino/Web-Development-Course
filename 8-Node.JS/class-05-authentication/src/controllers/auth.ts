@@ -30,7 +30,7 @@ export const authControllers = {
         maxAge: 1000 * 60 * 15,
       });
 
-      return res.status(200).json({ message: "login successful!", token });
+      return res.status(200).json({ message: "login successful!" });
     } catch (error) {
       return next(error);
     }

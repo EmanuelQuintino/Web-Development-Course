@@ -4,7 +4,6 @@ import { hash, compare } from "bcrypt";
 import { randomUUID } from "node:crypto";
 import { v4 as uuidv4 } from "uuid";
 import { z } from "zod";
-import { sign } from "jsonwebtoken";
 
 export const userControllers = {
   async create(req: Request, res: Response, next: NextFunction) {
@@ -45,11 +44,7 @@ export const userControllers = {
         passwordHash,
       ]);
 
-      const token = sign({ id: userUUID }, process.env.SECRET_TOKEN, {
-        expiresIn: process.env.EXPIRESIN_TOKEN,
-      });
-
-      return res.status(201).json({ message: "user created!", token });
+      return res.status(201).json({ message: "user created!" });
     } catch (error) {
       return next(error);
     }

@@ -1,0 +1,18 @@
+Olá, "Recrutador", tudo bem?
+
+Me chamo Emanuel e a pouco tempo me candidatei à posição de Desenvolvedor Front-End (React/TypeScript) na "Empresa ABC".
+
+Gostaria de aproveitar a oportunidade para ressaltar meu interesse e adequação na vaga pois estão procurando alguém com requisitos específicos que correspondem às minhas habilidades:
+
+Possuo sólido conhecimento em desenvolvimento Front-End utilizando React e TypeScript, alinhado com conhecimento avançado em JavaScript (ES6+). Atualmente, tenho ministrado cursos para o Instituto Centec, onde utilizo essas tecnologias de forma prática. Adicionalmente, gostaria de compartilhar o link do GitHub, que está hospedado meu último projeto Front-End, desenvolvido em colaboração com os alunos e envolvendo consumo de uma API RESTful.
+
+Projeto: https://github.com/EmanuelQuintino/Pokedex
+
+Além disso, também estou envolvido na elaboração de um curso que aborda Análise de Dados e Inteligência Artificial, o qual demonstro o uso de Python para implementações práticas. Vou compartilhar o link de um Chatbot que desenvolvi recentemente, o qual integra o ChatGPT e reconhecimento de voz.
+
+Chatbot: https://github.com/EmanuelQuintino/Data-Analysis-Course/blob/main/8-AI/class-05-chatbot/index.py
+
+Estou à disposição para fornecer quaisquer esclarecimentos adicionais que se façam necessários.
+
+Atenciosamente,
+Emanuel Quintino

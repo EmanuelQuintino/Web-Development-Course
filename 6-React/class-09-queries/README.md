@@ -27,4 +27,4 @@ An API, or Application Programming Interface, is a set of rules, protocols, and 
 - [TMDB](https://developer.themoviedb.org/docs/getting-started)
 - [Marvel](https://developer.marvel.com/)
 - [YGOPRODeck](https://ygoprodeck.com/api-guide/)
-- [more...](https://github.com/public-apis/pub lic-apis)
+- [more...](https://github.com/public-apis/public-apis)

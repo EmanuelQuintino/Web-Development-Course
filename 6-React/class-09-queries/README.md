@@ -11,3 +11,20 @@ An API, or Application Programming Interface, is a set of rules, protocols, and 
 - data
 - isLoading
 - error
+
+## Public APIs
+
+- [JSONPlaceholder](https://jsonplaceholder.typicode.com/)
+- [Brasil API](https://brasilapi.com.br/docs)
+- [dummyJSON](https://dummyjson.com/)
+- [RandomUser](https://randomuser.me/)
+- [DiceBear](https://www.dicebear.com/)
+- [Weather API](https://openweathermap.org/api)
+- [Kitsu](https://kitsu.docs.apiary.io/#)
+- [Deck of Cards](https://deckofcardsapi.com/)
+- [Spotify](https://developer.spotify.com/documentation/web-api/tutorials/getting-started)
+- [PokeAPI](https://pokeapi.co/)
+- [TMDB](https://developer.themoviedb.org/docs/getting-started)
+- [Marvel](https://developer.marvel.com/)
+- [YGOPRODeck](https://ygoprodeck.com/api-guide/)
+- [more...](https://github.com/public-apis/pub lic-apis)

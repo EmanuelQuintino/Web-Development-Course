@@ -109,20 +109,20 @@ export const userControllers = {
       }
 
       if (newPassword) {
-        const passwordHash = await hash(newPassword, 10);
         const updateQuery = `
           UPDATE users
           SET name = ?, email = ?, password = ?, updated_at = DATETIME('now')
           WHERE id = ?
         `;
 
+        const passwordHash = await hash(newPassword, 10);
         await db.run(updateQuery, [name, email, passwordHash, id]);
       } else {
         const updateQuery = `
-            UPDATE users
-            SET name = ?, email = ?, updated_at = DATETIME('now')
-            WHERE id = ?
-          `;
+          UPDATE users
+          SET name = ?, email = ?, updated_at = DATETIME('now')
+          WHERE id = ?
+        `;
 
         await db.run(updateQuery, [name, email, id]);
       }

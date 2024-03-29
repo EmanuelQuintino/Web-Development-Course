@@ -23,4 +23,7 @@ npm i tsx -D
 
 # install tsup for build as a development dependency
 npm install tsup -D
+
+# install dotenv
+npm install dotenv --save
 ```

@@ -1,14 +1,5 @@
 # Class Authentication
 
-## Dotenv
-
-Dotenv is a zero-dependency module that loads environment variables from a .env file into process.env.
-
-```bash
-# install dotenv
-npm install dotenv --save
-```
-
 ## JWT (JSON Web Token)
 
 JSON Web Tokens are an open, industry standard [RFC 7519](https://datatracker.ietf.org/doc/html/rfc7519) method for representing claims securely between two parties.

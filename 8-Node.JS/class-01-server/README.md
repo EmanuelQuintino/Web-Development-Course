@@ -2,51 +2,51 @@
 
 ## Create server and install dependencies
 
-### Init
+- **Init**
 
-- Initialize a new NODE project with default values
+Initialize a new NODE project with default values
 
 ```bash
 npm init -y
 ```
 
-### TypeScript
+- **TypeScript**
 
-- Install typescript as a development dependency
+Install typescript as a development dependency
 
 ```bash
 npm install typescript -D
 ```
 
-- Initialize the typescript configuration file
+Initialize the typescript configuration file
 
 ```bash
 npx tsc --init
 ```
 
-### Express
+- **Express**
 
-- Install express as a dependency
+Install express as a dependency
 
 ```bash
 npm install express --save
 ```
 
-- Install typescript types for express as a development dependency
+Install typescript types for express as a development dependency
 
 ```bash
 npm install @types/express --save-dev
 ```
 
-### Execute
+- **Execute**
 
-- Install tsx for execute as a development dependency
+Install tsx for execute as a development dependency
 
 ```bash
 npm i tsx -D
 ```
 
-### Build
+- **Build**
 
 Install tsup for build as a development dependency
 
@@ -54,7 +54,7 @@ Install tsup for build as a development dependency
 npm install tsup -D
 ```
 
-## Dotenv
+- **Dotenv**
 
 Dotenv is a zero-dependency module that loads environment variables from a .env file into process.env.
 

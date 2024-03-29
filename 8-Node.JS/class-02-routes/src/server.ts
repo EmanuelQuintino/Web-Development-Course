@@ -1,8 +1,9 @@
 import express from "express";
 import { router } from "./routes";
+import "dotenv/config";
 
 const app = express();
-const port = 3000;
+const PORT = process.env.PORT || 3000;
 
 // middleware
 app.use(express.json());
@@ -10,6 +11,6 @@ app.use(express.json());
 // routers
 app.use(router);
 
-app.listen(port, () => {
-  console.log(`Server is running on PORT ${port}...`);
+app.listen(PORT, () => {
+  console.log(`Server is running on PORT ${PORT}...`);
 });

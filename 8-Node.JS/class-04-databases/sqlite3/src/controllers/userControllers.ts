@@ -1,8 +1,10 @@
 import { Request, Response, NextFunction } from "express";
-import { sqliteConnection } from "../databases/sqlite3";
-import { hash, compare } from "bcrypt";
-import { randomUUID } from "node:crypto";
-import { v4 as uuidv4 } from "uuid";
+import { getUserByEmail } from "../databases/sqlite3/services/userServices/getUserByEmail";
+import { createUser } from "../databases/sqlite3/services/userServices/createUser";
+import { getUserByID } from "../databases/sqlite3/services/userServices/getUserByID";
+import { updateUser } from "../databases/sqlite3/services/userServices/updateUser";
+import { deleteUser } from "../databases/sqlite3/services/userServices/deleteUser";
+import { compare } from "bcrypt";
 import { z } from "zod";
 
 export const userControllers = {
@@ -24,22 +26,13 @@ export const userControllers = {
       });
 
       const { name, email, password } = userSchema.parse(req.body);
-      const db = await sqliteConnection();
 
-      const userExists = await db.get("SELECT * FROM users WHERE email = ?", [email]);
+      const userExists = await getUserByEmail(email);
       if (userExists) throw res.status(400).json({ message: "email already exists!" });
 
-      const userUUID = randomUUID() || uuidv4();
-      const passwordHash = await hash(password, 10);
+      const userCreated = await createUser({ name, email, password });
 
-      await db.run("INSERT INTO users (id, name, email, password) VALUES (?, ?, ?, ?);", [
-        userUUID,
-        name,
-        email,
-        passwordHash,
-      ]);
-
-      return res.status(201).json({ message: "user created!", id: userUUID });
+      return res.status(201).json({ message: "user created!", ...userCreated });
     } catch (error) {
       return next(error);
     }
@@ -54,9 +47,7 @@ export const userControllers = {
         throw res.status(400).json({ message: "please confirm your password" });
       }
 
-      const db = await sqliteConnection();
-
-      const user = await db.get("SELECT * FROM users WHERE id = ?", [id]);
+      const user = await getUserByID(id);
       if (!user) throw res.status(404).json({ message: "user not found!" });
 
       const passwordCheck = await compare(password, user.password);
@@ -93,9 +84,8 @@ export const userControllers = {
 
       const { id } = req.params;
       const { name, email, password, newPassword } = userSchema.parse(req.body);
-      const db = await sqliteConnection();
 
-      const user = await db.get("SELECT * FROM users WHERE id = ?", [id]);
+      const user = await getUserByID(id);
       if (!user) throw res.status(404).json({ message: "user not found!" });
 
       const passwordCheck = await compare(password, user.password);
@@ -103,29 +93,12 @@ export const userControllers = {
         throw res.status(400).json({ message: "invalid password!" });
       }
 
-      const userEmail = await db.get("SELECT * FROM users WHERE email = ?", [email]);
+      const userEmail = await getUserByEmail(email);
       if (userEmail && userEmail.id != id) {
         throw res.status(400).json({ message: "email already exists!" });
       }
 
-      if (newPassword) {
-        const updateQuery = `
-          UPDATE users
-          SET name = ?, email = ?, password = ?, updated_at = DATETIME('now')
-          WHERE id = ?
-        `;
-
-        const passwordHash = await hash(newPassword, 10);
-        await db.run(updateQuery, [name, email, passwordHash, id]);
-      } else {
-        const updateQuery = `
-          UPDATE users
-          SET name = ?, email = ?, updated_at = DATETIME('now')
-          WHERE id = ?
-        `;
-
-        await db.run(updateQuery, [name, email, id]);
-      }
+      await updateUser({ id, name, email, newPassword });
 
       return res.status(200).json({ message: "user updated!" });
     } catch (error) {
@@ -137,13 +110,12 @@ export const userControllers = {
     try {
       const { id } = req.params;
       const { password } = req.body;
-      const db = await sqliteConnection();
 
       if (!password) {
         throw res.status(400).json({ message: "please, confirm your password!" });
       }
 
-      const user = await db.get("SELECT * FROM users WHERE id = ?", [id]);
+      const user = await getUserByID(id);
       if (!user) throw res.status(404).json({ message: "user not found!" });
 
       const passwordCheck = await compare(password, user.password);
@@ -151,7 +123,8 @@ export const userControllers = {
         throw res.status(400).json({ message: "invalid password!" });
       }
 
-      await db.get("DELETE FROM users WHERE id = ?", [id]);
+      await deleteUser(id);
+
       return res.status(200).json({ message: `user ${user.name} deleted!` });
     } catch (error) {
       return next(error);

@@ -21,8 +21,8 @@ export function authMiddleware(req: Request, res: Response, next: NextFunction) 
   verify(token, process.env.SECRET_TOKEN, (error, decoded) => {
     if (error) throw res.status(401).json({ message: error.message || "token error!" });
 
-    const { id, role } = decoded as JwtPayload;
-    req.userData = { id, role };
+    const { id } = decoded as JwtPayload;
+    req.userID = id;
 
     return next();
   });

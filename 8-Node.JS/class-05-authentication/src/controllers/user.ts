@@ -1,8 +1,7 @@
 import { Request, Response, NextFunction } from "express";
-import { sqliteConnection } from "../databases/sqlite3";
-import { hash, compare } from "bcrypt";
-import { randomUUID } from "node:crypto";
-import { v4 as uuidv4 } from "uuid";
+import { getUserByEmail } from "../databases/sqlite3/services/user/getUserByEmail";
+import { createUser } from "../databases/sqlite3/services/user/createUser";
+import { getUserByID } from "../databases/sqlite3/services/user/getUserByID";
 import { z } from "zod";
 
 export const userControllers = {
@@ -28,23 +27,12 @@ export const userControllers = {
         .strict();
 
       const { name, email, password } = userSchema.parse(req.body);
-      const db = await sqliteConnection();
 
-      const userExists = await db.get("SELECT * FROM users WHERE email = ?", [email]);
-
+      const userExists = await getUserByEmail(email);
       if (userExists) throw res.status(400).json({ message: "email already exists!" });
 
-      const userUUID = randomUUID() || uuidv4();
-      const passwordHash = await hash(password, 10);
-
-      await db.run("INSERT INTO users (id, name, email, password) VALUES (?, ?, ?, ?);", [
-        userUUID,
-        name,
-        email,
-        passwordHash,
-      ]);
-
-      return res.status(201).json({ message: "user created!" });
+      const userCreated = await createUser({ name, email, password });
+      return res.status(201).json({ message: "user created!", ...userCreated });
     } catch (error) {
       return next(error);
     }
@@ -53,9 +41,8 @@ export const userControllers = {
   async read(req: Request, res: Response, next: NextFunction) {
     try {
       const userID = req.userData.id;
-      const db = await sqliteConnection();
 
-      const user = await db.get("SELECT * FROM users WHERE id = ?", [userID]);
+      const user = await getUserByID(userID);
       if (!user) throw res.status(404).json({ message: "user not found!" });
 
       const { name, email } = user;

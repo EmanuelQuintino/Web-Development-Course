@@ -1,9 +1,9 @@
 import { Request, Response, NextFunction } from "express";
-import { getUserByEmail } from "../databases/sqlite3/services/userServices/getUserByEmail";
-import { createUser } from "../databases/sqlite3/services/userServices/createUser";
-import { getUserByID } from "../databases/sqlite3/services/userServices/getUserByID";
-import { updateUser } from "../databases/sqlite3/services/userServices/updateUser";
-import { deleteUser } from "../databases/sqlite3/services/userServices/deleteUser";
+import { getUserByEmail } from "../databases/sqlite3/services/user/getUserByEmail";
+import { createUser } from "../databases/sqlite3/services/user/createUser";
+import { getUserByID } from "../databases/sqlite3/services/user/getUserByID";
+import { updateUser } from "../databases/sqlite3/services/user/updateUser";
+import { deleteUser } from "../databases/sqlite3/services/user/deleteUser";
 import { compare } from "bcrypt";
 import { z } from "zod";
 

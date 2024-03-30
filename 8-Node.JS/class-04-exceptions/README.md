@@ -2,4 +2,4 @@
 
 ## Links
 
-- [exceptions](../class-03-controllers/README.md)
+- [Exceptions](../class-03-controllers/README.md)

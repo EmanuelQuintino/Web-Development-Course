@@ -10,11 +10,11 @@ HTTP verbs, also known as HTTP methods, are an essential part of the Hypertext T
 
 ![http verbs](../documents/http-verbs.png)
 
-- **GET**: Requests data from a specified resource.
-- **POST**: Submits data to be processed to a specified
-- **PUT**: Updates data on a specified resource.
-- **DELETE**: Deletes the specified resource.
-- **PATCH**: Applies partial modifications to a resource.
+- `GET`: Requests data from a specified resource.
+- `POST`: Submits data to be processed to a specified
+- `PUT`: Updates data on a specified resource.
+- `DELETE`: Deletes the specified resource.
+- `PATCH`: Applies partial modifications to a resource.
 
 ## HTTP response status codes
 
@@ -30,7 +30,8 @@ The status codes listed below are defined by RFC [9110](https://httpwg.org/specs
 
 ## Exceptions
 
-- Synchronous and Asynchronous
+- Synchronous
+- Asynchronous
 - Middlewares
   - appError
   - pageNotFoundError

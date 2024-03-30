@@ -5,8 +5,8 @@
 
 ## Requests
 
+![query params](../documents/query-params-url.png)
+
 - Route Params
 - Query Params
 - Body Params
-
-![query params](../documents/query-params-url.png)

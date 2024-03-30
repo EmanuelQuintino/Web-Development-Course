@@ -1,9 +1,5 @@
 # Class 04 Databases
 
-## Inversion of Dependencies or IoC (Inversion of Control)
-
-The principle of Inversion of Dependencies (IoC - Inversion of Control) is a software design that aims to invert the control of how the components of a system interact with each other. Instead of components directly controlling their dependencies, dependency inversion shifts that responsibility outside of the component. In summary, decouple business rules from infrastructure.
-
 ## Data Processing
 
 - **UUID**

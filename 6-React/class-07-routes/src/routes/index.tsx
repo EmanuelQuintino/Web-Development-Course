@@ -1,4 +1,4 @@
-import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import { Navigate, RouterProvider, createBrowserRouter } from "react-router-dom";
 import { Home } from "../pages/Home";
 import { Gallery } from "../pages/Gallery";
 import { Contact } from "../pages/Contact";
@@ -17,7 +17,9 @@ const router = createBrowserRouter([
       { path: "/contact", element: <Contact /> },
     ],
   },
-  { path: "/details", element: <Details />, errorElement: <Page404 /> },
+  { path: "*", element: <Page404 /> },
+  { path: "/details", element: <Details /> },
+  { path: "/admin", element: <Navigate to="/" replace /> },
 ]);
 
 export function AppRoutes() {

@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 
 export function Contact() {
+  // console.log(A);
+
   return (
     <>
       <h1>Contact</h1>

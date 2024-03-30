@@ -38,5 +38,5 @@ The status codes listed below are defined by RFC [9110](https://httpwg.org/specs
 
 ## Links
 
-- [methods](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods)
-- [status code](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status)
+- [Methods](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods)
+- [Status-Code](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status)

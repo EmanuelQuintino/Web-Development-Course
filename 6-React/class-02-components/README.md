@@ -35,3 +35,7 @@ user({ name: "Emanuel", age: 30 });
   - Parser => map code to AST (Abstract Syntex Tree)
   - Transformer => AST manipulates (JSON)
   - Generator => AST to code
+
+## Links
+
+-[TypeScript](https://www.typescriptlang.org/)

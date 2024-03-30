@@ -5,14 +5,19 @@ export function App() {
   const [count, setCount] = useState(0);
   const [count2, setCount2] = useState(0);
 
-  console.log("Redenrized"); // componentWillMount
+  console.log("redenrized"); // componentWillMount
 
   useEffect(() => {
-    console.log("Effect"); // componentDidMount
+    console.log("effect"); // componentDidMount
 
     setCount2((value) => value + 1); // derived states
 
-    return () => console.log("Closed"); // componentWillUnmount
+    const timeoutID = setTimeout(() => {
+      console.log("timeout");
+    }, 3000);
+
+    // return () => console.log("closed");
+    return () => clearInterval(timeoutID); // componentWillUnmount
   }, [count]); // componentDidUpdate
 
   console.log("Redenrized"); // componentWillMount

@@ -12,7 +12,7 @@ The principle of Inversion of Dependencies (IoC - Inversion of Control) is a sof
 
 ## Test Types
 
-![pyramid-tests](../documents/pyramid-tests.png)
+![pyramid-tests](../documents/pyramid-tests.png){ width=50% }
 
 - `Unit`
 - `Integration`
@@ -20,4 +20,4 @@ The principle of Inversion of Dependencies (IoC - Inversion of Control) is a sof
 
 ## Test Driven Development (TDD)
 
-![tdd](../documents/tdd.png)
+![tdd](../documents/tdd.png){ width=50% }

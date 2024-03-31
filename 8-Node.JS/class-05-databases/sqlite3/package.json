@@ -1,7 +1,7 @@
 {
   "name": "sqlite3",
   "version": "1.0.0",
-  "description": "class-04-databases-sqlite3",
+  "description": "class-databases-sqlite3",
   "main": "src/server.ts",
   "scripts": {
     "dev": "tsx watch src/server.ts",

@@ -1,5 +1,5 @@
 {
-  "name": "class-05-authentication",
+  "name": "class-07-authentication",
   "version": "1.0.0",
   "description": "class authentication with token jwt",
   "main": "src/server.ts",

@@ -1,7 +1,5 @@
 import { Request, Response, NextFunction } from "express";
-import { getUserByEmail } from "../databases/sqlite3/services/user/getUserByEmail";
-import { createUser } from "../databases/sqlite3/services/user/createUser";
-import { getUserByID } from "../databases/sqlite3/services/user/getUserByID";
+import { userRepository } from "../repositories/userRepository";
 import { z } from "zod";
 
 export const userControllers = {
@@ -28,10 +26,10 @@ export const userControllers = {
 
       const { name, email, password } = userSchema.parse(req.body);
 
-      const userExists = await getUserByEmail(email);
+      const userExists = await userRepository.getByEmail(email);
       if (userExists) throw res.status(400).json({ message: "email already exists!" });
 
-      const userCreated = await createUser({ name, email, password });
+      const userCreated = await userRepository.create({ name, email, password });
       return res.status(201).json({ message: "user created!", ...userCreated });
     } catch (error) {
       return next(error);
@@ -40,9 +38,9 @@ export const userControllers = {
 
   async read(req: Request, res: Response, next: NextFunction) {
     try {
-      const userID = req.userData.id;
+      const userID = req.userID;
 
-      const user = await getUserByID(userID);
+      const user = await userRepository.getByID(userID);
       if (!user) throw res.status(404).json({ message: "user not found!" });
 
       const { name, email } = user;

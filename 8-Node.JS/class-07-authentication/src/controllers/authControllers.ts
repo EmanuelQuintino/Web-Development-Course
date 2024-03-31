@@ -1,14 +1,14 @@
 import { Request, Response, NextFunction } from "express";
-import { getUserByEmail } from "../databases/sqlite3/services/user/getUserByEmail";
 import { compare } from "bcrypt";
 import { sign } from "jsonwebtoken";
+import { userRepository } from "../repositories/userRepository";
 
 export const authControllers = {
   async login(req: Request, res: Response, next: NextFunction) {
     try {
       const { email, password } = req.body;
 
-      const user = await getUserByEmail(email);
+      const user = await userRepository.getByEmail(email);
       if (!user) throw res.status(401).json({ message: "email or password invalid!" });
 
       const passwordCheck = await compare(password, user.password);

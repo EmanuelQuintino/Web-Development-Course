@@ -1,6 +1,6 @@
 import { Router } from "express";
-import { salesControllers } from "../controllers/sales";
-import { authMiddleware } from "../middlewares/auth";
+import { salesControllers } from "../controllers/salesControllers";
+import { authMiddleware } from "../middlewares/authMiddleware";
 import { roleAuthorization } from "../middlewares/roleAuthorization";
 
 export const salesRoutes = Router();

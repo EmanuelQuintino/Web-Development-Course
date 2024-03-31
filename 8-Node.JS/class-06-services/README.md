@@ -1,6 +1,6 @@
 # Class 06 Services
 
-The practice of using a folder called "repositories" and "services" to projects that follow the Dependency Inversion pattern is a common convention in many applications, especially those that follow a Clean Architecture (Clean Architecture) or Layered Architecture.
+The practice of using a folder called "repositories" and "services" to projects that follow the Dependency Inversion pattern is a common convention in many applications, especially those that follow a Clean Architecture or Layered Architecture.
 
 ## Here are some reasons why this convention is often adopted
 

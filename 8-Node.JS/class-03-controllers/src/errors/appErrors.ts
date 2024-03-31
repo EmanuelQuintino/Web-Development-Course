@@ -1,12 +1,7 @@
 import { Request, Response, NextFunction } from "express";
 
-type AppErrors = {
-  message: string;
-  status: number;
-};
-
 export function appErrors(
-  error: AppErrors,
+  error: Error & { status: number },
   _req: Request,
   res: Response,
   _next: NextFunction

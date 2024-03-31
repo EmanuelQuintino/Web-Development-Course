@@ -2,7 +2,7 @@
 
 The Web Development course is our pilot program and is part of the REPROGRAMA JUCÁS project led by Empreenda Mais, a partnership between the city hall and CVT Jucaense with the aim of generating income through Education and promoting technology in our municipality. It is underway training professionals in the area of programming capable of planning, programming and publishing web applications, developing skills responsible for creating interfaces (Front-end) and the system's logic and functionalities (Back-end). Furthermore, it promotes skills for understanding and applying good practices in the professional profile.
 
-### Technologies Covered
+## Technologies Covered
 
 <div>
    <img align="center" alt="HTML" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg ">

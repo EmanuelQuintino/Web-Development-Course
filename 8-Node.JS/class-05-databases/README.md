@@ -6,7 +6,7 @@
 
 2. `Client-Server Architecture:` The client and server should be separate entities, each with distinct responsibilities. This separation allows for scalability, portability, and independent evolution of client and server components.
 
-3. `Statelessness:` Each request from a client to the server must contain all the information necessary for the server to understand and process it. The server should not maintain any client state between requests. This simplifies server implementation, improves reliability, and scalability.
+3. `Statelessness:` Each client request to the server should include all necessary information for the server to understand and process it. The server should not maintain any client state between requests. This simplifies server implementation, improves reliability, and scalability.
 
 4. `Cacheability:` Responses from the server should be explicitly labeled as cacheable or non-cacheable. This allows clients or intermediaries to cache responses, reducing latency and improving performance.
 

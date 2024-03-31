@@ -4,11 +4,11 @@
 
 The principle of Inversion of Dependencies (IoC - Inversion of Control) is a software design that aims to invert the control of how the components of a system interact with each other. Instead of components directly controlling their dependencies, dependency inversion shifts that responsibility outside of the component. In summary, decouple business rules from infrastructure.
 
-> High-level modules should not depend on low-level modules. Both must depend on abstractions.
+> _High-level modules should not depend on low-level modules. Both must depend on abstractions._
 >
-> Abstractions should not depend on details. Details must depend on abstractions.
+> _Abstractions should not depend on details. Details must depend on abstractions._
 >
-> _Robert C. Martin_
+> > > > > > > > > > > > > > > > > > > > > > _Robert C. Martin (2000)_
 
 ## Test Types
 

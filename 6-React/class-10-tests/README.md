@@ -8,7 +8,9 @@ The principle of Inversion of Dependencies (IoC - Inversion of Control) is a sof
 >
 > _Abstractions should not depend on details. Details must depend on abstractions._
 >
-> > > > > > > > > > > > > > > > > > > > > > _Robert C. Martin (2000)_
+> _Robert C. Martin (2000)_:
+>
+> <div style="text-align: right">Robert C. Martin (2000)</div>
 
 ## Test Types
 

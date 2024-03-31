@@ -26,7 +26,7 @@ The Web Development course is our pilot program and is part of the REPROGRAMA JU
 ## Additional Content
 
 - Information Security
-- LinkedIn
-- GPT Chat
 - GitHub
+- Chat GPT
+- LinkedIn
 - English

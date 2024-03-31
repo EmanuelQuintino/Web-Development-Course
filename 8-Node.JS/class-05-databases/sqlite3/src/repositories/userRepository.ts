@@ -16,7 +16,7 @@ type UpdateUser = {
   newPassword?: string | null;
 };
 
-export const userRepositories = {
+export const userRepository = {
   async create({ name, email, password }: CreateUser) {
     const db = await sqliteConnection();
     const userUUID = randomUUID() || uuidv4();

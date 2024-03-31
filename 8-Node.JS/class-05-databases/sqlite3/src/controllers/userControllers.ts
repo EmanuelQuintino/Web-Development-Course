@@ -1,5 +1,5 @@
 import { Request, Response, NextFunction } from "express";
-import { userRepositories } from "../repositories/user";
+import { userRepository } from "../repositories/userRepository";
 import { compare } from "bcrypt";
 import { z } from "zod";
 
@@ -23,10 +23,10 @@ export const userControllers = {
 
       const { name, email, password } = userSchema.parse(req.body);
 
-      const userExists = await userRepositories.getByEmail(email);
+      const userExists = await userRepository.getByEmail(email);
       if (userExists) throw res.status(400).json({ message: "email already exists!" });
 
-      const userCreated = await userRepositories.create({ name, email, password });
+      const userCreated = await userRepository.create({ name, email, password });
 
       return res.status(201).json({ message: "user created!", ...userCreated });
     } catch (error) {
@@ -43,7 +43,7 @@ export const userControllers = {
         throw res.status(400).json({ message: "please confirm your password" });
       }
 
-      const user = await userRepositories.getByID(id);
+      const user = await userRepository.getByID(id);
       if (!user) throw res.status(404).json({ message: "user not found!" });
 
       const passwordCheck = await compare(password, user.password);
@@ -81,7 +81,7 @@ export const userControllers = {
       const { id } = req.params;
       const { name, email, password, newPassword } = userSchema.parse(req.body);
 
-      const user = await userRepositories.getByID(id);
+      const user = await userRepository.getByID(id);
       if (!user) throw res.status(404).json({ message: "user not found!" });
 
       const passwordCheck = await compare(password, user.password);
@@ -89,12 +89,12 @@ export const userControllers = {
         throw res.status(400).json({ message: "invalid password!" });
       }
 
-      const userEmail = await userRepositories.getByEmail(email);
+      const userEmail = await userRepository.getByEmail(email);
       if (userEmail && userEmail.id != id) {
         throw res.status(400).json({ message: "email already exists!" });
       }
 
-      await userRepositories.update({ id, name, email, newPassword });
+      await userRepository.update({ id, name, email, newPassword });
 
       return res.status(200).json({ message: "user updated!" });
     } catch (error) {
@@ -111,7 +111,7 @@ export const userControllers = {
         throw res.status(400).json({ message: "please, confirm your password!" });
       }
 
-      const user = await userRepositories.getByID(id);
+      const user = await userRepository.getByID(id);
       if (!user) throw res.status(404).json({ message: "user not found!" });
 
       const passwordCheck = await compare(password, user.password);
@@ -119,7 +119,7 @@ export const userControllers = {
         throw res.status(400).json({ message: "invalid password!" });
       }
 
-      await userRepositories.delete(id);
+      await userRepository.delete(id);
 
       return res.status(200).json({ message: `user ${user.name} deleted!` });
     } catch (error) {

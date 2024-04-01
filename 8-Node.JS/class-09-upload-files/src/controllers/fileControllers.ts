@@ -13,7 +13,7 @@ export const fileControllers = {
           name: originalname,
           key: filename,
           size: Number(size / 1024).toFixed(1) + "KB",
-          url: `${process.env.BASE_API}/file/${filename}`,
+          url: `${process.env.SERVER_BASE_URL}/file/${filename}`,
           created_at: new Date(),
         };
 

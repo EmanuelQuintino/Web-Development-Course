@@ -1,4 +1,11 @@
-# Automatic Tests
+# Class 10 Automatic Tests
+
+## Vitest
+
+```bash
+# install vitest for tests
+npm install vitest -D
+```
 
 ## Link
 

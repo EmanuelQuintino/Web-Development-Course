@@ -34,11 +34,13 @@ dateNow.setMilliseconds(dateNow.getMilliseconds() + 1000);
 console.log(dateNow.toLocaleTimeString("pt-BR"));
 
 console.log(
-  dateNow.toLocaleDateString("pt-BR", {
+  dateNow.toLocaleString("pt-BR", {
     weekday: "long",
     day: "2-digit",
     month: "long",
     year: "numeric",
+    hour: "2-digit",
+    minute: "2-digit",
   })
 );
 

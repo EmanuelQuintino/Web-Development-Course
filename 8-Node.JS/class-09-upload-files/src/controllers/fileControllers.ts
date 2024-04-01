@@ -32,7 +32,7 @@ export const fileControllers = {
       await fs.promises.stat(filePath);
       await fs.promises.unlink(filePath);
 
-      res.status(200).json({ message: "file deleted!" });
+      return res.status(200).json({ message: "file deleted!" });
     } catch (error) {
       return next(error);
     }

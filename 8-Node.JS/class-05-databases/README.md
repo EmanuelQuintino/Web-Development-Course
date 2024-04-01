@@ -20,7 +20,7 @@
 6. `Code on Demand (optional)`  
    This constraint is optional and rarely used in practice. It allows the server to provide executable code (e.g., JavaScript) to the client, enhancing functionality. However, most RESTful APIs do not require this constraint.
 
-## Data Processing
+## Validation
 
 - **UUID**
 
@@ -42,7 +42,7 @@ npm install bcrypt
 npm i --save-dev @types/bcrypt
 ```
 
-- **Validation**
+- **Zod**
 
 ```bash
 # install zod package for data validation

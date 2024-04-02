@@ -1,4 +1,14 @@
-# Services
+# Class 07 Services
+
+## Dependency Inversion Principle
+
+The principle of Inversion of Dependencies (IoC - Inversion of Control) is a software design that aims to invert the control of how the components of a system interact with each other. Instead of components directly controlling their dependencies, dependency inversion shifts that responsibility outside of the component. In summary, decouple business rules from infrastructure.
+
+> _High-level modules should not depend on low-level modules. Both must depend on abstractions._
+>
+> _Abstractions should not depend on details. Details must depend on abstractions._
+>
+> _Robert C. Martin (1996)_
 
 The practice of using a folder called "repositories" and "services" to projects that follow the Dependency Inversion pattern is a common convention in many applications, especially those that follow a Clean Architecture or Layered Architecture.
 

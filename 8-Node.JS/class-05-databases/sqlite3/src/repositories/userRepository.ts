@@ -1,15 +1,15 @@
+import { sqliteConnection } from "../databases/sqlite3";
 import { randomUUID } from "node:crypto";
 import { v4 as uuidv4 } from "uuid";
 import { hash } from "bcrypt";
-import { sqliteConnection } from "../databases/sqlite3";
 
-type CreateUser = {
+type UserDataCreate = {
   name: string;
   email: string;
   password: string;
 };
 
-type UpdateUser = {
+type UserDataUpdate = {
   id: string;
   name: string;
   email: string;
@@ -17,7 +17,7 @@ type UpdateUser = {
 };
 
 export const userRepository = {
-  async create({ name, email, password }: CreateUser) {
+  async create({ name, email, password }: UserDataCreate) {
     const db = await sqliteConnection();
     const userUUID = randomUUID() || uuidv4();
     const passwordHash = await hash(password, 10);
@@ -29,7 +29,7 @@ export const userRepository = {
       passwordHash,
     ]);
 
-    return { status: 201, id: userUUID };
+    return { status: 201, id: userUUID, message: "user created!" };
   },
 
   async getByID(id: string) {
@@ -42,7 +42,7 @@ export const userRepository = {
     return await db.get("SELECT * FROM users WHERE email = ?", [email]);
   },
 
-  async update({ id, name, email, newPassword }: UpdateUser) {
+  async update({ id, name, email, newPassword }: UserDataUpdate) {
     const db = await sqliteConnection();
 
     if (newPassword) {
@@ -53,7 +53,9 @@ export const userRepository = {
       `;
 
       const passwordHash = await hash(newPassword, 10);
-      return await db.run(updateQuery, [name, email, passwordHash, id]);
+      await db.run(updateQuery, [name, email, passwordHash, id]);
+
+      return { status: 200, message: "user updated!" };
     } else {
       const updateQuery = `
         UPDATE users
@@ -61,12 +63,14 @@ export const userRepository = {
         WHERE id = ?
       `;
 
-      return await db.run(updateQuery, [name, email, id]);
+      await db.run(updateQuery, [name, email, id]);
+      return { status: 200, message: "user updated!" };
     }
   },
 
   async delete(id: string) {
     const db = await sqliteConnection();
-    return await db.get("DELETE FROM users WHERE id = ?", [id]);
+    await db.run("DELETE FROM users WHERE id = ?", [id]);
+    return { status: 200, message: "user deleted!" };
   },
 };

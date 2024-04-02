@@ -28,7 +28,7 @@ export const userControllers = {
 
       const userCreated = await userRepository.create({ name, email, password });
 
-      return res.status(201).json({ message: "user created!", ...userCreated });
+      return res.status(201).json(userCreated);
     } catch (error) {
       return next(error);
     }
@@ -94,9 +94,9 @@ export const userControllers = {
         throw res.status(400).json({ message: "email already exists!" });
       }
 
-      await userRepository.update({ id, name, email, newPassword });
+      const userUpdated = await userRepository.update({ id, name, email, newPassword });
 
-      return res.status(200).json({ message: "user updated!" });
+      return res.status(200).json(userUpdated);
     } catch (error) {
       return next(error);
     }
@@ -119,9 +119,8 @@ export const userControllers = {
         throw res.status(400).json({ message: "invalid password!" });
       }
 
-      await userRepository.delete(id);
-
-      return res.status(200).json({ message: `user ${user.name} deleted!` });
+      const userDeleted = await userRepository.delete(id);
+      return res.status(200).json(userDeleted);
     } catch (error) {
       return next(error);
     }

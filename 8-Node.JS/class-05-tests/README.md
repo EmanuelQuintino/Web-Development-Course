@@ -1,4 +1,4 @@
-# Class 07 Services
+# Class 05 Automatic Tests
 
 ## Dependency Inversion Principle
 
@@ -28,3 +28,15 @@ The practice of using a folder called "repositories" and "services" to projects 
 
 - `Compliance with Software Design Principles`  
   This practice is aligned with SOLID principles, especially the Dependency Inversion Principle, which suggests that high-level modules should not depend on low-level modules, but rather both should depend on abstractions. Repositories, in this case, serve as abstractions for data access.
+
+## Test Types
+
+![pyramid-tests](../documents/pyramid-tests.png)
+
+- `Unit`
+- `Integration`
+- `End-to-End (E2E)`
+
+## Test Driven Development (TDD)
+
+![TDD](../documents/tdd.png)

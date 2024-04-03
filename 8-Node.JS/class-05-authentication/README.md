@@ -1,4 +1,4 @@
-# Class 06 Authentication
+# Class 05 Authentication
 
 ## JWT (JSON Web Token)
 

@@ -1,4 +1,4 @@
-# Class 05 Automatic Tests
+# Class 07 Automatic Tests
 
 ## Dependency Inversion Principle
 

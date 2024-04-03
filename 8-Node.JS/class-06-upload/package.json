@@ -1,5 +1,5 @@
 {
-  "name": "class-07-upload-files",
+  "name": "class-06-upload-files",
   "version": "1.0.0",
   "description": "Multer to upload files",
   "main": "src/server.ts",

@@ -14,11 +14,23 @@ export const userControllers = {
           })
           .min(3, { message: "name must have at least 3 characters" }),
 
-        email: z.string({ required_error: "email is required!" }).email("invalid email!"),
+        email: z
+          .string({
+            required_error: "email is required!",
+            invalid_type_error: "email must be a string!!",
+          })
+          .email("invalid email!"),
 
         password: z
-          .string({ required_error: "password is required!" })
-          .min(7, { message: "password must have at least 7 characters" }),
+          .string({
+            required_error: "email is required!",
+            invalid_type_error: "Somente texto!",
+          })
+          .min(7, { message: "password must have at least 7 characters" })
+          .regex(/^(?=.*[A-Z])(?=.*\d)(?=.*[^A-Za-z\d]).{7,}$/, {
+            message:
+              "The password must contain at least one capital letter, one number and one special character.",
+          }),
       });
 
       const { name, email, password } = userSchema.parse(req.body);
@@ -68,13 +80,31 @@ export const userControllers = {
           })
           .min(3, { message: "name must have at least 3 characters" }),
 
-        email: z.string({ required_error: "email is required!" }).email("invalid email!"),
+        email: z
+          .string({
+            required_error: "email is required!",
+            invalid_type_error: "email must be a string!",
+          })
+          .email("invalid email!"),
 
-        password: z.string({ required_error: "please, confirm your password!" }),
+        password: z
+          .string({
+            required_error: "please, confirm your password!",
+            invalid_type_error: "password must be a string!",
+          })
+          .min(7, { message: "password must have at least 7 characters" })
+          .regex(/^(?=.*[A-Z])(?=.*\d)(?=.*[^A-Za-z\d]).{7,}$/, {
+            message:
+              "The password must contain at least one capital letter, one number and one special character.",
+          }),
 
         newPassword: z
-          .string()
+          .string({ invalid_type_error: "password must be a string!" })
           .min(7, { message: "password must have at least 7 characters" })
+          .regex(/^(?=.*[A-Z])(?=.*\d)(?=.*[^A-Za-z\d]).{7,}$/, {
+            message:
+              "The password must contain at least one capital letter, one number and one special character.",
+          })
           .nullable(),
       });
 

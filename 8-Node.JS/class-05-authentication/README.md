@@ -125,8 +125,8 @@ app.use(
 
 ## Links
 
-[dotenv](https://www.npmjs.com/package/dotenv)
-[JWT Docs](https://jwt.io/)
-[HTTP Cookies](https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies)
-[Cookie-Parser](https://www.npmjs.com/package/cookie-parser)
-[CORS](https://www.npmjs.com/package/cors)
+- [dotenv](https://www.npmjs.com/package/dotenv)
+- [JWT Docs](https://jwt.io/)
+- [HTTP Cookies](https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies)
+- [Cookie-Parser](https://www.npmjs.com/package/cookie-parser)
+- [CORS](https://www.npmjs.com/package/cors)

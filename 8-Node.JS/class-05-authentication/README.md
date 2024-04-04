@@ -76,8 +76,6 @@ Set-Cookie: <cookie-name>=<cookie-value>
 - `maxAge: 1000 * 60 * 15`  
   This defines the lifetime of the cookie in milliseconds. Here, 1000 _ 60 _ 15 calculates to 15 minutes (1000 milliseconds _ 60 seconds _ 15 = 900,000 milliseconds or 15 minutes). After this time, the cookie will expire and be removed automatically.
 
-### Response Configs
-
 ```ts
 res.cookie(process.env.KEY_TOKEN, token, {
   httpOnly: true,

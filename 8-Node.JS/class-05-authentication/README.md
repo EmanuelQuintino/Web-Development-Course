@@ -62,8 +62,66 @@ An HTTP cookie (web cookie, browser cookie) is a small piece of data that a serv
 Set-Cookie: <cookie-name>=<cookie-value>
 ```
 
+- `httpOnly: true`  
+  This option helps mitigate the risk of client-side script accessing the protected cookie. If the httpOnly flag is set, the cookie cannot be accessed through client-side scripts (e.g., JavaScript), which is particularly important for preventing cross-site scripting (XSS) attacks.
+
+- `sameSite: "none"`  
+  This setting controls whether the cookie is sent along with cross-site requests. The None value means the cookie will be sent in all contexts, i.e., in responses to both first-party and cross-origin requests. This is useful for cross-site request forgery (CSRF) protection but requires Secure to be true if SameSite=None.
+
+- `secure: true`  
+  This option specifies that the cookie should only be transmitted over secure protocols such as HTTPS. It's a security measure to ensure that the cookie is sent in encrypted form, which prevents attackers from eavesdropping on the connection.
+
+- `maxAge: 1000 * 60 * 15`  
+  This defines the lifetime of the cookie in milliseconds. Here, 1000 _ 60 _ 15 calculates to 15 minutes (1000 milliseconds _ 60 seconds _ 15 = 900,000 milliseconds or 15 minutes). After this time, the cookie will expire and be removed automatically.
+
+```ts
+res.cookie(process.env.KEY_TOKEN, token, {
+  httpOnly: true,
+  sameSite: "none",
+  secure: true,
+  maxAge: 1000 * 60 * 15,
+});
+```
+
+- **Cookie Parser**  
+  Parse Cookie header and populate req.cookies with an object keyed by the cookie names. Optionally you may enable signed cookie support by passing a secret string, which assigns req.secret so it may be used by other middleware.
+
+```bash
+# install cookie parser
+npm install cookie-parser
+
+# install types cookie parser
+npm i --save-dev @types/cookie-parser
+```
+
+- **CORS**  
+  CORS is a node.js package for providing a Connect/Express middleware.
+
+```bash
+# to install cors
+npm install cors
+
+# for install types cors
+npm i --save-dev @types/cors
+```
+
+- **Server File**
+
+```ts
+app.use(cookieParser());
+
+const whitelist = ["http://localhost:5173", "http://127.0.0.1:5173"];
+app.use(
+  cors({
+    origin: whitelist,
+    credentials: true,
+  })
+);
+```
+
 ## Links
 
 [dotenv](https://www.npmjs.com/package/dotenv)
 [JWT Docs](https://jwt.io/)
 [HTTP Cookies](https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies)
+[cors](https://www.npmjs.com/package/cors)

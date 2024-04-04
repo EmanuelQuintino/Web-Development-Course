@@ -109,7 +109,7 @@ npm install cors
 npm i --save-dev @types/cors
 ```
 
-- **Server File**
+### Server File
 
 ```ts
 app.use(cookieParser());

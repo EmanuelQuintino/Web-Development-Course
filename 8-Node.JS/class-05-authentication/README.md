@@ -12,7 +12,7 @@ npm install jsonwebtoken --save
 npm i --save-dev @types/jsonwebtoken
 ```
 
-- Structure Decoded
+### Structure Decoded
 
 - **Header:** The header typically consists of two parts: the type of the token, which is JWT, and the signing algorithm being used, such as HMAC SHA256 or RSA.
 
@@ -62,6 +62,8 @@ An HTTP cookie (web cookie, browser cookie) is a small piece of data that a serv
 Set-Cookie: <cookie-name>=<cookie-value>
 ```
 
+### Cookie Response
+
 - `httpOnly: true`  
   This option helps mitigate the risk of client-side script accessing the protected cookie. If the httpOnly flag is set, the cookie cannot be accessed through client-side scripts (e.g., JavaScript), which is particularly important for preventing cross-site scripting (XSS) attacks.
 
@@ -74,6 +76,8 @@ Set-Cookie: <cookie-name>=<cookie-value>
 - `maxAge: 1000 * 60 * 15`  
   This defines the lifetime of the cookie in milliseconds. Here, 1000 _ 60 _ 15 calculates to 15 minutes (1000 milliseconds _ 60 seconds _ 15 = 900,000 milliseconds or 15 minutes). After this time, the cookie will expire and be removed automatically.
 
+### Response Configs
+
 ```ts
 res.cookie(process.env.KEY_TOKEN, token, {
   httpOnly: true,
@@ -83,8 +87,9 @@ res.cookie(process.env.KEY_TOKEN, token, {
 });
 ```
 
-- **Cookie Parser**  
-  Parse Cookie header and populate req.cookies with an object keyed by the cookie names. Optionally you may enable signed cookie support by passing a secret string, which assigns req.secret so it may be used by other middleware.
+### Cookie Parser
+
+Parse Cookie header and populate req.cookies with an object keyed by the cookie names. Optionally you may enable signed cookie support by passing a secret string, which assigns req.secret so it may be used by other middleware.
 
 ```bash
 # install cookie parser
@@ -94,8 +99,9 @@ npm install cookie-parser
 npm i --save-dev @types/cookie-parser
 ```
 
-- **CORS**  
-  CORS is a node.js package for providing a Connect/Express middleware.
+### CORS
+
+CORS is a node.js package for providing a Connect/Express middleware.
 
 ```bash
 # to install cors
@@ -124,4 +130,5 @@ app.use(
 [dotenv](https://www.npmjs.com/package/dotenv)
 [JWT Docs](https://jwt.io/)
 [HTTP Cookies](https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies)
-[cors](https://www.npmjs.com/package/cors)
+[Cookie-Parser](https://www.npmjs.com/package/cookie-parser)
+[CORS](https://www.npmjs.com/package/cors)

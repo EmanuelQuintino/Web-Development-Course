@@ -12,25 +12,28 @@ export const userControllers = {
             required_error: "name is required!",
             invalid_type_error: "name must be a string!",
           })
-          .min(3, { message: "name must have at least 3 characters" }),
+          .min(3, { message: "name must have at least 3 characters" })
+          .max(255, { message: "max name length exceeded" }),
 
         email: z
           .string({
             required_error: "email is required!",
-            invalid_type_error: "email must be a string!!",
+            invalid_type_error: "email must be a string!",
           })
-          .email("invalid email!"),
+          .email("invalid email!")
+          .max(255, { message: "max email length exceeded" }),
 
         password: z
           .string({
             required_error: "email is required!",
-            invalid_type_error: "Somente texto!",
+            invalid_type_error: "password must be a string!",
           })
           .min(7, { message: "password must have at least 7 characters" })
           .regex(/^(?=.*[A-Z])(?=.*\d)(?=.*[^A-Za-z\d]).{7,}$/, {
             message:
               "The password must contain at least one capital letter, one number and one special character.",
-          }),
+          })
+          .max(255, { message: "max password length exceeded" }),
       });
 
       const { name, email, password } = userSchema.parse(req.body);
@@ -78,29 +81,26 @@ export const userControllers = {
             required_error: "name is required!",
             invalid_type_error: "name must be a string!",
           })
-          .min(3, { message: "name must have at least 3 characters" }),
+          .min(3, { message: "name must have at least 3 characters" })
+          .max(255, { message: "max name length exceeded" }),
 
         email: z
           .string({
             required_error: "email is required!",
             invalid_type_error: "email must be a string!",
           })
-          .email("invalid email!"),
+          .email("invalid email!")
+          .max(255, { message: "max email length exceeded" }),
 
-        password: z
-          .string({
-            required_error: "please, confirm your password!",
-            invalid_type_error: "password must be a string!",
-          })
-          .min(7, { message: "password must have at least 7 characters" })
-          .regex(/^(?=.*[A-Z])(?=.*\d)(?=.*[^A-Za-z\d]).{7,}$/, {
-            message:
-              "The password must contain at least one capital letter, one number and one special character.",
-          }),
+        password: z.string({
+          required_error: "please, confirm your password!",
+          invalid_type_error: "password must be a string!",
+        }),
 
         newPassword: z
           .string({ invalid_type_error: "password must be a string!" })
           .min(7, { message: "password must have at least 7 characters" })
+          .max(255, { message: "max password length exceeded" })
           .regex(/^(?=.*[A-Z])(?=.*\d)(?=.*[^A-Za-z\d]).{7,}$/, {
             message:
               "The password must contain at least one capital letter, one number and one special character.",

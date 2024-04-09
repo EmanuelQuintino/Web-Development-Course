@@ -9,13 +9,6 @@ type CreateUser = {
   password: string;
 };
 
-type UpdateUser = {
-  id: string;
-  name: string;
-  email: string;
-  newPassword?: string | null;
-};
-
 export const userRepository = {
   async create({ name, email, password }: CreateUser) {
     const db = await sqliteConnection();
@@ -40,33 +33,5 @@ export const userRepository = {
   async getByEmail(email: string) {
     const db = await sqliteConnection();
     return await db.get("SELECT * FROM users WHERE email = ?", [email]);
-  },
-
-  async update({ id, name, email, newPassword }: UpdateUser) {
-    const db = await sqliteConnection();
-
-    if (newPassword) {
-      const updateQuery = `
-        UPDATE users
-        SET name = ?, email = ?, password = ?, updated_at = DATETIME('now')
-        WHERE id = ?
-      `;
-
-      const passwordHash = await hash(newPassword, 10);
-      return await db.run(updateQuery, [name, email, passwordHash, id]);
-    } else {
-      const updateQuery = `
-        UPDATE users
-        SET name = ?, email = ?, updated_at = DATETIME('now')
-        WHERE id = ?
-      `;
-
-      return await db.run(updateQuery, [name, email, id]);
-    }
-  },
-
-  async delete(id: string) {
-    const db = await sqliteConnection();
-    return await db.get("DELETE FROM users WHERE id = ?", [id]);
   },
 };

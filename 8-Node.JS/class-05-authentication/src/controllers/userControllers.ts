@@ -9,30 +9,30 @@ export const userControllers = {
         .object({
           name: z
             .string({
-              required_error: "name is required!",
-              invalid_type_error: "name must be a string!",
+              required_error: "Name is required!",
+              invalid_type_error: "Name must be a string!",
             })
-            .min(3, "name must have at least 3 characters")
-            .max(255, "max name length exceeded"),
+            .min(3, "Name must have at least 3 characters!")
+            .max(255, "Max name length exceeded!"),
 
           email: z
             .string({
-              required_error: "email is required!",
-              invalid_type_error: "email must be a string!",
+              required_error: "Email is required!",
+              invalid_type_error: "Email must be a string!",
             })
-            .email("invalid email!")
-            .max(255, "max email length exceeded"),
+            .email("Email poorly formatted!")
+            .max(255, "Max email length exceeded!"),
 
           password: z
             .string({
-              required_error: "email is required!",
-              invalid_type_error: "password must be a string!",
+              required_error: "Email is required!",
+              invalid_type_error: "Password must be a string!",
             })
-            .min(7, "password must have at least 7 characters")
-            .max(255, "max password length exceeded")
+            .min(7, "Password must have at least 7 characters!")
+            .max(255, "Max password length exceeded!")
             .regex(/^(?=.*[A-Z])(?=.*\d)(?=.*[^A-Za-z\d]).{7,}$/, {
               message:
-                "The password must contain at least one capital letter, one number and one special character.",
+                "The password must contain at least one capital letter, one number and one special character!",
             }),
         })
         .strict();

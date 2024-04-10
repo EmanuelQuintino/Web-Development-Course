@@ -11,16 +11,16 @@ export const authControllers = {
         .object({
           email: z
             .string({
-              invalid_type_error: "Somente texto!",
+              invalid_type_error: "Only text!",
             })
-            .email({ message: "Email inválido!" })
-            .max(255, "Tamanho máximo atingido para o email!"),
+            .email({ message: "Email poorly formatted!" })
+            .max(255, "Max email length exceeded!"),
 
           password: z
             .string({
-              invalid_type_error: "Para a senha use o tipo string!",
+              invalid_type_error: "For the password, use the string type!",
             })
-            .max(255, "Tamanho máximo atingido para a senha!"),
+            .max(255, "Max password length exceeded!"),
         })
         .strict();
 

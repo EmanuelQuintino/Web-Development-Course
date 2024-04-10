@@ -1,4 +1,5 @@
 import { Request, Response, NextFunction } from "express";
+import { z } from "zod";
 import { compare } from "bcrypt";
 import { sign } from "jsonwebtoken";
 import { userRepository } from "../repositories/userRepository";
@@ -6,7 +7,24 @@ import { userRepository } from "../repositories/userRepository";
 export const authControllers = {
   async login(req: Request, res: Response, next: NextFunction) {
     try {
-      const { email, password } = req.body;
+      const userSchema = z
+        .object({
+          email: z
+            .string({
+              invalid_type_error: "Somente texto!",
+            })
+            .email({ message: "Email inválido!" })
+            .max(255, "Tamanho máximo atingido para o email!"),
+
+          password: z
+            .string({
+              invalid_type_error: "Para a senha use o tipo string!",
+            })
+            .max(255, "Tamanho máximo atingido para a senha!"),
+        })
+        .strict();
+
+      const { email, password } = userSchema.parse(req.body);
 
       const user = await userRepository.getByEmail(email);
       if (!user) throw res.status(401).json({ message: "email or password invalid!" });

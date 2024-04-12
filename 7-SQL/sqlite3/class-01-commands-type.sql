@@ -16,6 +16,8 @@ INSERT INTO students (name, cpf, age) VALUES
 -- DQL
 SELECT * FROM students;
 
+SELECT name, age FROM students;
+
 SELECT name, age 
 FROM students 
 WHERE id = 7;

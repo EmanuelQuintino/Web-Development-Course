@@ -12,14 +12,14 @@ DROP TABLE courses;
 CREATE TABLE IF NOT EXISTS courses (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     name TEXT NOT NULL,
-    workload INTEGER NOT NULL
+    workload VARCHAR CHECK (workload IN ('40h', '60h', '160h', '240h')) DEFAULT '160h'
 );
 
 SELECT * FROM students;
 INSERT INTO students (id, name, email, id_course) VALUES 
-    (1, 'Erick', 'erick@gmail.com', '1'),
-    (2, 'Pedro', 'pedro@gmail.com', '1'),
-    (3, 'Neemias', 'neemias@gmail.com', '2');
+    (1, 'Erick', 'erick@gmail.com', 1),
+    (2, 'Pedro', 'pedro@gmail.com', 1),
+    (3, 'Neemias', 'neemias@gmail.com', 2);
     
 SELECT * FROM courses;
 INSERT INTO courses (name, workload) VALUES 

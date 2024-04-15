@@ -13,7 +13,7 @@ export const authControllers = {
             .string({
               invalid_type_error: "only text!",
             })
-            .email({ message: "email poorly formatted!" })
+            .email({ message: "email badly formatted!" })
             .max(255, "max email length exceeded!"),
 
           password: z

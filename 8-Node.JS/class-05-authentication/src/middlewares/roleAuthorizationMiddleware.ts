@@ -3,7 +3,7 @@ import { userRepository } from "../repositories/userRepository";
 
 type Roles = "admin" | "default";
 
-export function roleAuthorization(roleToVerify: Roles[]) {
+export function roleAuthorizationMiddleware(roleToVerify: Roles[]) {
   return async (req: Request, res: Response, next: NextFunction) => {
     try {
       const user = await userRepository.getByID(req.userID);

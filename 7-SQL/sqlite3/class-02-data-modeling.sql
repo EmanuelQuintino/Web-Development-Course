@@ -23,14 +23,13 @@ INSERT INTO students (id, name, email, id_course) VALUES
     
 SELECT * FROM courses;
 INSERT INTO courses (name, workload) VALUES 
-    ('Web Developement', 360),
-    ('Data Analysis', 240),
-    ('Cyber Security', 240);
+    ('Web Developement', '240h'),
+    ('Data Analysis', '160'),
+    ('Cyber Security', '40h');
 
 -- *, INNER, RIGHT, LEFT, FULL
-SELECT students.name, courses.name as curso
-FROM students
-INNER JOIN courses 
+SELECT students.name, courses.name as course
+FROM students INNER JOIN courses 
 ON students.id_course = courses.id
 WHERE course IS NOT NULL;
 

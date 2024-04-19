@@ -1,5 +1,5 @@
 import path from "path";
-import multer from "multer";
+import multer, { MulterError } from "multer";
 import crypto from "node:crypto";
 import { Request } from "express";
 
@@ -9,7 +9,7 @@ const storage = multer.diskStorage({
   destination: UPLOADS_FOLDER,
   filename(_req, file, callback) {
     const hash = crypto.randomBytes(10).toString("hex");
-    const fileName = `${hash}_${file.originalname}`;
+    const fileName = `${hash}_${file.originalname.replaceAll(" ", "_")}`;
     return callback(null, fileName);
   },
 });
@@ -22,13 +22,11 @@ const fileFilter = (
   const formatFiles = ["image/jpeg", "image/pjpeg", "image/png", "image/gif"];
 
   if (formatFiles.includes(file.mimetype)) return callback(null, true);
-
-  const error = new Error("Invalid image type!") as Error & { status: number };
+  ("40h");
+  const error = new Error("Invalid image type!") as MulterError & { status: number };
   error.status = 400;
 
-  if (callback) {
-    callback(error, false);
-  }
+  return callback(error, false);
 };
 
 export const MULTER = {

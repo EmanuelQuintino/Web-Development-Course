@@ -6,5 +6,5 @@ import { MULTER } from "../configs/uploadConfigs";
 export const router = Router();
 const upload = multer(MULTER);
 
-router.post("/files", upload.single("file"), fileControllers.upload);
-router.delete("/files/:file", upload.single("file"), fileControllers.dalete);
+router.post("/file", upload.single("file"), fileControllers.upload);
+router.delete("/file/:name", upload.single("file"), fileControllers.dalete);

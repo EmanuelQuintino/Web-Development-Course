@@ -9,7 +9,7 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 app.use(express.json());
-app.use("/files", express.static(UPLOADS_FOLDER));
+app.use("/file", express.static(UPLOADS_FOLDER));
 app.use(router);
 
 app.use(pageNotFound);

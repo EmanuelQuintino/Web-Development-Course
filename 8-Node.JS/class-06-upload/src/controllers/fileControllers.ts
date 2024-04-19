@@ -9,7 +9,7 @@ export const fileControllers = {
       if (req.file) {
         const { originalname, size, filename } = req.file;
 
-        const file = {
+        const myFile = {
           name: originalname,
           key: filename,
           size: Number(size / 1024).toFixed(1) + "KB",
@@ -17,7 +17,9 @@ export const fileControllers = {
           created_at: new Date(),
         };
 
-        return res.status(200).json(file);
+        return res.status(200).json(myFile);
+      } else {
+        throw res.status(200).json({});
       }
     } catch (error) {
       return next(error);
@@ -26,8 +28,8 @@ export const fileControllers = {
 
   async dalete(req: Request, res: Response, next: NextFunction) {
     try {
-      const { file } = req.params;
-      const filePath = path.resolve(UPLOADS_FOLDER, file);
+      const { name } = req.params;
+      const filePath = path.resolve(UPLOADS_FOLDER, name);
 
       await fs.promises.stat(filePath);
       await fs.promises.unlink(filePath);

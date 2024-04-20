@@ -40,3 +40,41 @@ The practice of using a folder called "repositories" and "services" to projects 
 ## Test Driven Development (TDD)
 
 ![TDD](../documents/tdd.png)
+
+## JEST
+
+Jest is a delightful JavaScript Testing Framework with a focus on simplicity.
+
+It works with projects using: Babel, TypeScript, Node, React, Angular, Vue and more!
+
+```bash
+# install jest for tests
+npm install --save-dev jest
+```
+
+```bash
+# install jest types
+npm i --save-dev @types/jest
+```
+
+```bash
+# init jest configs
+npm init jest@latest
+```
+
+### Config File
+
+```ts
+import type { Config } from "jest";
+
+export const jestConfig: Config = {
+  bail: true,
+  coverageProvider: "v8",
+  verbose: false,
+  testMatch: ["<rootDir>/src/**/*.{spec,test}.ts"],
+};
+```
+
+## Links
+
+- ![jest](https://jestjs.io/)

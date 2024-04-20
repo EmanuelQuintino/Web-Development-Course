@@ -15,14 +15,14 @@ DROP TABLE IF EXISTS courses;
 CREATE TABLE IF NOT EXISTS courses(
 	id INTEGER PRIMARY KEY AUTOINCREMENT,
   name TEXT NOT NULL,
-  hours INTEGER NOT NULL
+  hours VARCHAR CHECK (workload IN ('40h', '60h', '160h', '240h')) DEFAULT '160h'
 );
 
 SELECT * FROM courses;
 INSERT INTO courses (name, hours) VALUES
-  ('Programador Web', 240),
-  ('Informática para o mundo do trabalho', 160),
-  ('Ferramentas Digitais', 60);
+  ('Programador Web', '240h'),
+  ('Informática para o mundo do trabalho', '160h'),
+  ('Ferramentas Digitais', '60h');
 
 SELECT * FROM students;
 INSERT INTO students(name, street, neighborhood, city, course_id) VALUES

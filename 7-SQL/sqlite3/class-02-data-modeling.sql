@@ -4,15 +4,15 @@ CREATE TABLE IF NOT EXISTS students (
     name TEXT NOT NULL,
     email TEXT UNIQUE NOT NULL,
     id_course INTEGER NOT NULL, 
-    FOREIGN KEY (id_course ) REFERENCES courses(id) ON DELETE CASCADE
-    -- id_course INTEGER REFERENCES courses(id) ON DELETE CASCADE
+    FOREIGN KEY (id_course ) REFERENCES courses(id)
+    -- id_course INTEGER REFERENCES courses(id)
 );
 
 DROP TABLE courses;
 CREATE TABLE IF NOT EXISTS courses (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     name TEXT NOT NULL,
-    workload VARCHAR CHECK (workload IN ('40h', '60h', '160h', '240h')) DEFAULT '160h'
+    hours VARCHAR CHECK (hours IN ('40h', '60h', '160h', '240h')) DEFAULT '160h'
 );
 
 SELECT * FROM students;

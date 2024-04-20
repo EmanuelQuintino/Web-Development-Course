@@ -61,3 +61,7 @@ Dotenv is a zero-dependency module that loads environment variables from a .env 
 ```bash
 npm install dotenv --save
 ```
+
+```ts
+import "dotenv/config";
+```

@@ -62,17 +62,31 @@ npm i --save-dev @types/jest
 npm init jest@latest
 ```
 
+```bash
+# install ts-jest for types
+npm install ts-jest -D
+```
+
+```bash
+# install ts-node for types
+npm install ts-node -D
+```
+
 ### Config File
 
 ```ts
 import type { Config } from "jest";
 
-export const jestConfig: Config = {
+const config: Config = {
+  preset: "ts-jest",
+  testEnvironment: "node",
   bail: true,
   coverageProvider: "v8",
   verbose: false,
   testMatch: ["<rootDir>/src/**/*.{spec,test}.ts"],
 };
+
+export default config;
 ```
 
 ## Links

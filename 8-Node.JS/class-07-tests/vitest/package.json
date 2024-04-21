@@ -1,0 +1,33 @@
+{
+  "name": "class-07-tests",
+  "version": "1.0.0",
+  "description": "Tests for application",
+  "main": "src/server.ts",
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch src/server.ts",
+    "build": "tsup src/server.ts",
+    "start": "node dist/server.cjs",
+    "test": "vitest src",
+    "coverage": "vitest run --coverage"
+  },
+  "keywords": [
+    "node",
+    "typescript",
+    "tests"
+  ],
+  "author": "Emanuel Quintino",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@vitest/coverage-v8": "^1.5.0",
+    "tsup": "^8.0.2",
+    "tsx": "^4.7.2",
+    "typescript": "^5.4.5",
+    "vitest": "^1.5.0"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2"
+  }
+}

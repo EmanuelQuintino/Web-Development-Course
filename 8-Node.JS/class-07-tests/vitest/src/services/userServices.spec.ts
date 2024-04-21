@@ -1,3 +1,4 @@
+import { describe, it, expect } from "vitest";
 import { userRepositoriesInMemory } from "../repositories/userRepositoriesInMemory";
 import { userServices } from "./userServices";
 

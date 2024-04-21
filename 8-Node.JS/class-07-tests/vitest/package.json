@@ -8,7 +8,7 @@
     "dev": "tsx watch src/server.ts",
     "build": "tsup src/server.ts",
     "start": "node dist/server.cjs",
-    "test": "vitest src",
+    "test": "vitest",
     "coverage": "vitest run --coverage"
   },
   "keywords": [

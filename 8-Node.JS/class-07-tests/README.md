@@ -72,7 +72,7 @@ npm install ts-jest -D
 npm install ts-node -D
 ```
 
-### JEST Config File
+#### JEST Config File
 
 ```ts
 import type { Config } from "jest";
@@ -91,12 +91,14 @@ export default config;
 
 ## Vitest
 
+Vite's out-of-the-box support for common web patterns, features like glob imports and SSR primitives, and its many plugins and integrations are fostering a vibrant ecosystem. Its dev and build story are key to its success. For docs, there are several SSG-based alternatives powered by Vite. Vite's Unit Testing story hasn't been clear though. Existing options like Jest were created in a different context. There is a lot of duplication between Jest and Vite, forcing users to configure two different pipelines.
+
 ```bash
 # install vitest for tests
 npm install vitest -D
 ```
 
-### Vitest Configuration
+#### Vitest Configuration
 
 ```ts
 import { defineConfig } from "vitest/config";
@@ -108,7 +110,7 @@ export default defineConfig({
 });
 ```
 
-### Scripts
+#### Scripts
 
 ```json
 {
@@ -121,5 +123,5 @@ export default defineConfig({
 
 ## Links
 
-- ![jest](https://jestjs.io/)
-- ![vitest](https://vitest.dev/)
+- [jest](https://jestjs.io/)
+- [vitest](https://vitest.dev/)

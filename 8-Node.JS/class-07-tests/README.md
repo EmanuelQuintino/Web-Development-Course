@@ -72,7 +72,7 @@ npm install ts-jest -D
 npm install ts-node -D
 ```
 
-### Config File
+### JEST Config File
 
 ```ts
 import type { Config } from "jest";
@@ -89,6 +89,37 @@ const config: Config = {
 export default config;
 ```
 
+## Vitest
+
+```bash
+# install vitest for tests
+npm install vitest -D
+```
+
+### Vitest Configuration
+
+```ts
+import { defineConfig } from "vitest/config";
+
+export default defineConfig({
+  test: {
+    // ...
+  },
+});
+```
+
+### Scripts
+
+```json
+{
+  "scripts": {
+    "test": "vitest",
+    "coverage": "vitest run --coverage"
+  }
+}
+```
+
 ## Links
 
 - ![jest](https://jestjs.io/)
+- ![vitest](https://vitest.dev/)

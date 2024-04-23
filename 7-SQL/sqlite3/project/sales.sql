@@ -1,16 +1,16 @@
 DROP TABLE IF EXISTS clients;
 CREATE TABLE IF NOT EXISTS clients (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
-  name TEXT NOT NULL,
-  cpf TEXT UNIQUE NOT NULL,
-  street TEXT,
-  neighborhood TEXT,
-  city TEXT
+  name VARCHAR NOT NULL,
+  cpf VARCHAR UNIQUE NOT NULL,
+  street VARCHAR,
+  neighborhood VARCHAR,
+  city VARCHAR
 );
 
 DROP TABLE IF EXISTS phones;
 CREATE TABLE IF NOT EXISTS phones (
-  number TEXT NOT NULL,
+  number VARCHAR NOT NULL,
   id_client INTEGER NOT NULL,
   PRIMARY KEY (number, id_client),
   FOREIGN KEY (id_client) REFERENCES clients(id) ON DELETE CASCADE
@@ -19,9 +19,9 @@ CREATE TABLE IF NOT EXISTS phones (
 DROP TABLE IF EXISTS products;
 CREATE TABLE IF NOT EXISTS products (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
-  name TEXT NOT NULL,
+  name VARCHAR NOT NULL,
   price INTEGER NOT NULL,
-  description TEXT
+  description VARCHAR
 );
 
 DROP TABLE IF EXISTS sales;

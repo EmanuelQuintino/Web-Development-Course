@@ -6,9 +6,10 @@ SELECT DISTINCT categoria FROM orders ORDER BY categoria;
 
 SELECT * FROM orders WHERE regiao = 'Bra';
 
-SELECT * FROM orders WHERE regiao LIKE 'cal%';
-SELECT * FROM orders WHERE regiao LIKE '%nia';
-SELECT * FROM orders WHERE regiao LIKE '_a%';
+SELECT DISTINCT regiao FROM orders WHERE regiao LIKE 'cal%';
+SELECT DISTINCT regiao FROM orders WHERE regiao LIKE '%nia';
+SELECT DISTINCT regiao FROM orders WHERE regiao LIKE '%ia%';
+SELECT DISTINCT regiao FROM orders WHERE regiao LIKE '_a%';
 
 SELECT * FROM orders 
 WHERE regiao IN ('Bahia', 'Ceará')
@@ -17,6 +18,14 @@ ORDER BY regiao;
 SELECT * FROM orders 
 WHERE total_vendas >= 2000 AND total_vendas <= 3000 
 ORDER BY total_vendas;
+
+SELECT 
+    id_pedido, 
+    total_vendas,
+    quantidade,
+    total_vendas / quantidade AS média
+FROM orders
+WHERE total_vendas <= 2000;
 
 SELECT * FROM orders 
 WHERE quantidade BETWEEN 10 AND 20 

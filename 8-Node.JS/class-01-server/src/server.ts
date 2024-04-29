@@ -9,5 +9,5 @@ app.listen(PORT, () => {
 });
 
 app.get("/", (_request, response) => {
-  response.send({ className: "Class 01 Server" });
+  response.json({ className: "Class 01 Server" });
 });

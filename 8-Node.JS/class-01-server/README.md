@@ -46,14 +46,6 @@ npm install @types/express --save-dev
 npm i tsx -D
 ```
 
-### Build
-
-Install tsup for build as a development dependency
-
-```bash
-npm install tsup -D
-```
-
 ### Dotenv
 
 Dotenv is a zero-dependency module that loads environment variables from a .env file into process.env.
@@ -64,4 +56,12 @@ npm install dotenv --save
 
 ```ts
 import "dotenv/config";
+```
+
+### Build
+
+Install tsup for build as a development dependency
+
+```bash
+npm install tsup -D
 ```

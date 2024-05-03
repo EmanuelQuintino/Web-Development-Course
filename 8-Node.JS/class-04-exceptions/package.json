@@ -1,7 +1,7 @@
 {
-  "name": "class-03-contollers",
+  "name": "class-04-exceptions",
   "version": "1.0.0",
-  "description": "add server controllers",
+  "description": "add server exceptions",
   "main": "src/server.ts",
   "scripts": {
     "start": "node dist/server.js",
@@ -12,7 +12,7 @@
     "node.js",
     "server",
     "typescript",
-    "controllers"
+    "exceptions"
   ],
   "author": "Emanuel Quintino",
   "license": "ISC",

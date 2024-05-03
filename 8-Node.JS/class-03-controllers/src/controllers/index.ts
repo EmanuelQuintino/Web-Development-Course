@@ -1,63 +1,36 @@
-import { Request, Response, NextFunction } from "express";
+import { Request, Response } from "express";
 
 export const userController = {
-  async create(req: Request, res: Response, next: NextFunction) {
-    try {
-      const { id, name, age } = req.body;
+  create(req: Request, res: Response) {
+    const { name, age } = req.body;
 
-      if (id && name && age) {
-        // console.log(a);
-        console.log("created", { id, name, age });
-        return res.status(201).json({ message: `user ${id} created!` });
-      }
+    console.log("create user: ", { name, age });
 
-      throw res.status(400).json({ message: "user not created!" });
-    } catch (error) {
-      return next(error);
-    }
+    return res.status(201).json({ message: "user created!" });
   },
 
-  async read(req: Request, res: Response, next: NextFunction) {
-    try {
-      const { id } = req.params;
-      const { limit, offset } = req.query;
+  read(req: Request, res: Response) {
+    const { id } = req.params;
 
-      if (id) {
-        return res.status(200).json({ user: id });
-      }
+    console.log(`search user ${id}...`);
 
-      if (limit && offset) {
-        return res.status(200).json({ page: { limit, offset } });
-      }
-
-      throw res.status(404).json({ message: "user(s) not found!" });
-    } catch (error) {
-      return next(error);
-    }
+    return res.status(200).json({ user: `${id}` });
   },
 
-  async update(req: Request, res: Response, next: NextFunction) {
-    try {
-      const { id } = req.params;
-      const { name, age } = req.body;
+  update(req: Request, res: Response) {
+    const { id } = req.params;
+    const { name, age } = req.body;
 
-      if (id && name && age) {
-        console.log("updated", { id, name, age });
-        return res.status(200).json({ message: `user ${id} updated!` });
-      }
+    console.log("update user: ", { id, name, age });
 
-      throw res.status(400).json({ message: "user not updated!" });
-    } catch (error) {
-      return next(error);
-    }
+    return res.status(200).json({ message: `user ${id} updated!` });
   },
 
-  async delete(req: Request, res: Response, next: NextFunction) {
-    try {
-      const { id } = req.params;
-      res.status(200).json({ message: `user ${id} deleted!` });
-    } catch (error) {
-      return next(error);
-    }
+  delete(req: Request, res: Response) {
+    const { id } = req.params;
+
+    console.log(`delete user ${id}...`);
+
+    return res.status(200).json({ message: `user ${id} deleted!` });
   },
 };

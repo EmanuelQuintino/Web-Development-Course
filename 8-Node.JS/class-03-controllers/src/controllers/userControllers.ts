@@ -1,6 +1,6 @@
 import { Request, Response } from "express";
 
-export const userController = {
+export const userControllers = {
   create(req: Request, res: Response) {
     const { name, age } = req.body;
 

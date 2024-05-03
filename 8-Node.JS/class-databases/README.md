@@ -20,39 +20,7 @@
 6. `Code on Demand (optional)`  
    This constraint is optional and rarely used in practice. It allows the server to provide executable code (e.g., JavaScript) to the client, enhancing functionality. However, most RESTful APIs do not require this constraint.
 
-## Validation
-
-- **UUID**
-
-```bash
-# install uuid package
-npm install uuid
-
-# install uuid types for typeScript
-npm i --save-dev @types/uuid
-```
-
-- **Hash Passwords**
-
-```bash
-# install bcrypt package for password hashing
-npm install bcrypt
-
-# install bcrypt types for typeScript
-npm i --save-dev @types/bcrypt
-```
-
-- **Zod**
-
-```bash
-# install zod package for data validation
-npm install zod
-```
-
 ## Links
 
-- [uuid](https://www.npmjs.com/package/uuid)
-- [bcrypt](https://www.npmjs.com/package/bcrypt)
-- [zod](https://zod.dev/)
 - [ibm-rest-api](https://www.ibm.com/br-pt/topics/rest-apis)
 - [aws-rest-api](https://aws.amazon.com/pt/what-is/restful-api/)

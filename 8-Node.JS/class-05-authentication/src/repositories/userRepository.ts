@@ -1,28 +1,24 @@
-import { randomUUID } from "node:crypto";
-import { v4 as uuidv4 } from "uuid";
-import { hash } from "bcrypt";
 import { sqliteConnection } from "../databases/sqlite3";
 
 type CreateUser = {
+  id: string;
   name: string;
   email: string;
   password: string;
 };
 
 export const userRepository = {
-  async create({ name, email, password }: CreateUser) {
+  async create({ id, name, email, password }: CreateUser) {
     const db = await sqliteConnection();
-    const userUUID = randomUUID() || uuidv4();
-    const passwordHash = await hash(password, 10);
 
     await db.run("INSERT INTO users (id, name, email, password) VALUES (?, ?, ?, ?);", [
-      userUUID,
+      id,
       name,
       email,
-      passwordHash,
+      password,
     ]);
 
-    return { status: 201, id: userUUID };
+    return { status: 201, id };
   },
 
   async getByID(id: string) {

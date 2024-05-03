@@ -1,5 +1,8 @@
 import { Request, Response, NextFunction } from "express";
 import { userRepository } from "../repositories/userRepository";
+import { randomUUID } from "node:crypto";
+import { v4 as uuidv4 } from "uuid";
+import { hash } from "bcrypt";
 import { z } from "zod";
 
 export const userControllers = {
@@ -42,7 +45,16 @@ export const userControllers = {
       const userExists = await userRepository.getByEmail(email);
       if (userExists) throw res.status(400).json({ message: "email already exists!" });
 
-      const userCreated = await userRepository.create({ name, email, password });
+      const userUUID = randomUUID() || uuidv4();
+      const passwordHash = await hash(password, 10);
+
+      const userCreated = await userRepository.create({
+        id: userUUID,
+        name,
+        email,
+        password: passwordHash,
+      });
+
       return res.status(201).json({ message: "user created!", ...userCreated });
     } catch (error) {
       return next(error);

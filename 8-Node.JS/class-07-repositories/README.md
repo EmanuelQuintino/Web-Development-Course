@@ -1,4 +1,4 @@
-# Class 04 Databases
+# Class 07 Repositories
 
 ## RESTful Architecture (Representational State Transfer)
 

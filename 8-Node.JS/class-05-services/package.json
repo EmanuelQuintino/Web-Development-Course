@@ -1,0 +1,19 @@
+{
+  "name": "class-05-services",
+  "version": "1.0.0",
+  "description": "class for app services",
+  "main": "src/server.ts",
+  "scripts": {
+    "dev": "tsx src/server.ts",
+    "build": "tsup src",
+    "start": "node dist/server.js"
+  },
+  "keywords": [
+    "node.js",
+    "server",
+    "typescript",
+    "services"
+  ],
+  "author": "Emanuel Quintino",
+  "license": "ISC"
+}

@@ -1,5 +1,5 @@
-import path from "path";
 import multer, { MulterError } from "multer";
+import path from "path";
 import crypto from "node:crypto";
 import { Request } from "express";
 
@@ -19,7 +19,13 @@ const fileFilter = (
   file: Express.Multer.File,
   callback: multer.FileFilterCallback
 ) => {
-  const formatFiles = ["image/jpeg", "image/pjpeg", "image/png", "image/gif"];
+  const formatFiles = [
+    "image/jpeg",
+    "image/pjpeg",
+    "image/png",
+    "image/gif",
+    "application/pdf",
+  ];
 
   if (formatFiles.includes(file.mimetype)) return callback(null, true);
   ("40h");

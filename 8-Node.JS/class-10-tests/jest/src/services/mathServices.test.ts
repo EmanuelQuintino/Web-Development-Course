@@ -1,4 +1,4 @@
-import { subNumbers, sumNumbers } from "./mathFunctions";
+import { subNumbers, sumNumbers } from "./mathServices";
 
 describe("test functions math", () => {
   it("should make a sum 2 + 3 = 5", () => {

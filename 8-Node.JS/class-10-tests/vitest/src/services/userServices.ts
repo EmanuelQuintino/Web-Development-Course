@@ -1,6 +1,5 @@
-import { randomUUID } from "node:crypto";
-
-type UserData = {
+export type UserData = {
+  id: string;
   name: string;
   email: string;
 };
@@ -12,10 +11,10 @@ type UserRepository = {
 export const userServices = {
   async create(data: UserData, userRepository: UserRepository) {
     try {
-      const { name, email } = data;
+      const { id, name, email } = data;
 
       const user = {
-        id: randomUUID(),
+        id,
         name,
         email,
       };

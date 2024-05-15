@@ -1,15 +1,9 @@
-type UserData = {
-  id: string;
-  name: string;
-  email: string;
-};
+import { UserData } from "../services/userServices";
 
 export const userRepositoriesInMemory = {
   async create(data: UserData) {
     try {
       const { id, name, email } = data;
-
-      const users = [];
 
       const user = {
         id,
@@ -17,6 +11,7 @@ export const userRepositoriesInMemory = {
         email,
       };
 
+      const users = [];
       users.push(user);
 
       return users[users.length - 1];

@@ -9,14 +9,13 @@ export const userRepositoriesInMemory = {
     try {
       const { id, name, email } = data;
 
-      const users = [];
-
       const user = {
         id,
         name,
         email,
       };
 
+      const users = [];
       users.push(user);
 
       return users[users.length - 1];

@@ -4,18 +4,18 @@ import { JwtPayload, verify } from "jsonwebtoken";
 export function authMiddleware(req: Request, res: Response, next: NextFunction) {
   const { cookie } = req.headers;
 
-  if (!cookie) return res.status(401).json({ message: "token is required!" });
+  if (!cookie) throw res.status(401).json({ message: "token is required!" });
 
   const splitCookieToken = cookie.split("=");
 
   if (splitCookieToken.length != 2) {
-    return res.status(401).json({ message: "badly formatted token!" });
+    throw res.status(401).json({ message: "badly formatted token!" });
   }
 
   const [key, token] = splitCookieToken;
 
   if (key != process.env.KEY_TOKEN) {
-    return res.status(401).json({ message: "badly key token!" });
+    throw res.status(401).json({ message: "badly key token!" });
   }
 
   verify(token, process.env.SECRET_TOKEN, (error, decoded) => {

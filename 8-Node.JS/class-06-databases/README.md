@@ -1,4 +1,4 @@
-# Class 07 Repositories
+# Class 06 Repositories
 
 ## RESTful Architecture (Representational State Transfer)
 

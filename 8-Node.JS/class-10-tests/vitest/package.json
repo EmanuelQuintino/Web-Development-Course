@@ -9,7 +9,7 @@
     "build": "tsup src/server.ts",
     "start": "node dist/server.cjs",
     "test": "vitest",
-    "coverage": "vitest run --coverage"
+    "coverage": "vitest --coverage"
   },
   "keywords": [
     "node",

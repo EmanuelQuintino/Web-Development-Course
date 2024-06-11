@@ -5,8 +5,9 @@ import "dotenv/config";
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// middleware
-app.use(express.json());
+// middlewares
+app.use(express.json()); // parsing JSON data
+app.use(express.urlencoded({ extended: true })); // parsing form data
 
 // routers
 app.use(router);

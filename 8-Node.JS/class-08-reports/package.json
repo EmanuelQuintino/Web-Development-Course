@@ -1,0 +1,29 @@
+{
+  "name": "class-04-exceptions",
+  "version": "1.0.0",
+  "description": "add server exceptions",
+  "main": "src/server.ts",
+  "scripts": {
+    "start": "node dist/server.js",
+    "build": "tsup src",
+    "dev": "tsx watch src/server.ts"
+  },
+  "keywords": [
+    "node.js",
+    "server",
+    "typescript",
+    "exceptions"
+  ],
+  "author": "Emanuel Quintino",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "tsup": "^8.0.2",
+    "tsx": "^4.7.1",
+    "typescript": "^5.4.2"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.18.3"
+  }
+}

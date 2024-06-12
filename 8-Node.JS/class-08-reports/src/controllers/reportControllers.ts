@@ -5,9 +5,9 @@ import pdfFonts from "pdfmake/build/vfs_fonts";
 pdfMake.vfs = pdfFonts.pdfMake.vfs;
 
 const users = [
-  { id: "1", name: "John Doe", email: "john@example.com" },
-  { id: "2", name: "Jane Smith", email: "jane@example.com" },
-  { id: "3", name: "Michael Johnson", email: "michael@example.com" },
+  { id: "1", name: "user1", email: "user1@email.com" },
+  { id: "2", name: "user2", email: "user2@email.com" },
+  { id: "3", name: "user3", email: "user3@email.com" },
 ];
 
 export const reportControllers = {
@@ -49,7 +49,7 @@ export const reportControllers = {
       res.setHeader("Content-Type", "application/pdf");
       res.setHeader("Content-Disposition", "inline; filename=users.pdf");
 
-      return res.send(buffer);
+      res.send(buffer);
     } catch (error) {
       return next(error);
     }

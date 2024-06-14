@@ -46,27 +46,27 @@ git config --local --list
 ```
 
 ```bash
-# check the repository status (Working Directory, Stage Area, Repository Logs)
+# check the repository status (Working Directory, stage Area, Repository Logs)
 git status
 ```
 
 ```bash
-# add all files to the Stage
+# add all files to the stage
 git add .
 ```
 
 ```bash
-# remove files from Stage (specify file name)
+# remove files from stage (specify file name)
 git rm --cached
 ```
 
 ```bash
-# restores all Stage files to the version of the last commit
+# restores all stage files to the version of the last commit
 git restore .
 ```
 
 ```bash
-# restores all Stage files to the version prior to the last commit
+# restores all stage files to the version prior to the last commit
 git restore --staged .
 ```
 
@@ -81,7 +81,7 @@ git commit --amend -m "new message"
 ```
 
 ```bash
-# undo the last commit, keeping the changes in the Stage
+# undo the last commit, keeping the changes in the stage
 git reset --soft HEAD~1
 ```
 
@@ -106,7 +106,7 @@ git show [hash]
 ```
 
 ```bash
-# display the differences between the working directory and the Stage
+# display the differences between the working directory and the stage
 git diff
 ```
 
@@ -196,7 +196,7 @@ git fetch
 ```
 
 ```bash
-# remove all files from Git cache and remove files from github
+# remove all files from git cache and remove files from github
 git rm -r --cached .
 ```
 

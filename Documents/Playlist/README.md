@@ -1,5 +1,6 @@
 # Playlist WDC
 
+- [80s Nostalgic Synthwave // Electro Chillwave](https://www.youtube.com/watch?v=Fr-CuY0H38A)
 - [🕹️ Dive into Neon Night City: Cyberpunk 2077 Dark Synth Mix | Neon Vibes 🎮🎶](https://www.youtube.com/watch?v=iMj87lkF874)
 - [Back To The 80's | Best of Synthwave And Retro Electro Music Mix 2020](https://www.youtube.com/watch?v=ajTTZ7iy6Ls)
 - [198X ~ 80'S SYNTHWAVE MUSIC / SYNTH POP CHILLWAVE - CYBERPUNK ELECTRO MIX](https://www.youtube.com/watch?v=4n_B7T8yiWI)

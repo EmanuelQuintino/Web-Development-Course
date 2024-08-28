@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Class 04 List Study</title>
+    <style>
+      ol {
+        list-style: inside url("./assets/icons8-html-16.png");
+        list-style-position: inside;
+        /* list-style: decimal; */
+      }
+
+      ul {
+        list-style: square;
+      }
+
+      li::marker {
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Estudo dos tipos de listas</h1>
+
+    <h2>Lista Ordenada</h2>
+
+    <ol type="1" start="5" reversed>
+      <li>O auto da compadecida</li>
+      <li>Cidade de Deus</li>
+      <li>Scarface</li>
+      <li>O assassino: O primeiro alvo</li>
+
+      <li>
+        <ul>
+          <li>O alto da compadecida</li>
+          <li>Cidade de Deus</li>
+          <li>Scarface</li>
+          <li>O assassino: O primeiro alvo</li>
+        </ul>
+      </li>
+    </ol>
+
+    <h2>Lista Não Ordenada</h2>
+
+    <ul>
+      <li>The Boys</li>
+      <li>Suits</li>
+      <li>Greys Anatomy</li>
+      <li>Breaking Bad</li>
+    </ul>
+
+    <h2>Lista de Definição</h2>
+
+    <dl>
+      <dt>HTML</dt>
+      <dd>HyperText Markup Language</dd>
+
+      <dt>HTML</dt>
+      <dd>HyperText Markup Language</dd>
+
+      <br /><br />
+
+      <section>
+        <dt>Chapter 01</dt>
+
+        <dd>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora quod illum
+          eaque eum, nisi quisquam, et ea ratione id cum unde magni exercitationem
+          corrupti. Veritatis cumque iure nemo quia! Consequuntur!
+        </dd>
+        <br />
+        <dd>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem ipsum amet
+          doloribus impedit, explicabo rem nobis temporibus architecto, et sapiente velit
+          libero accusantium quo iusto sequi molestiae dolore perspiciatis odio.
+        </dd>
+      </section>
+    </dl>
+  </body>
+</html>

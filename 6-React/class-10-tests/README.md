@@ -21,8 +21,8 @@ npm install @testing-library/react -D
 npm install jsdom -D
 ```
 
-## Link
+## Links
 
-![vitest](https://vitest.dev/)
-![testing-library](https://testing-library.com/)
-![automatic-tests](../../8-Node.JS/class-08-tests/README.md)
+- [vitest](https://vitest.dev/)
+- [testing-library](https://testing-library.com/)
+- [automatic-tests](../../8-Node.JS/class-08-tests/README.md)

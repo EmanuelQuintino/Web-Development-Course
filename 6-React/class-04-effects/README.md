@@ -1,6 +1,6 @@
 # Class 04 Effects
 
-![component-lifecycle](../documents/life-circle.png)
+<img src="../documents/life-circle.png" alt="component-lifecycle" width="560">
 
 - State and Lifecycle
 

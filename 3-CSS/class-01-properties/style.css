@@ -80,7 +80,7 @@ p {
   width: 0;
   border-left: 70px solid transparent;
   border-right: 70px solid transparent;
-  border-bottom: 105px solid orange;
+  border-bottom: 105px solid orange; /* bottom = border + border/2 */
 }
 
 #logoPokemon {

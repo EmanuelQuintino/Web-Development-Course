@@ -18,7 +18,7 @@ body {
 
   /* background: lightgray; */
   /* background: linear-gradient(180deg, lightblue, lightgreen); */
-  background-image: url("../images/image-background.jpg");
+  background-image: url("./images/image-background.jpg");
   /* background-image: url("../images/logo-rj.png"); */
   /* background-size: 120px; */
   background-repeat: no-repeat;

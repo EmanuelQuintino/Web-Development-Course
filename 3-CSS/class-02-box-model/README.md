@@ -1,21 +1,26 @@
 # Box Model
 
-- Cada elemento é representado como uma caixa retangular
-- Essa caixa possui propriedades de uma caixa em 2 dimensões (largura x altura)
+- Each element is represented as a rectangular box
+- The box has properties of a 2-dimensional (width x height)
 
 <img src="./images/box-model.png" alt="box model" width="480">
 
 ## Properties:
 
 - width
-- heigh
+
+- height
+
 - content
+
 - border
+
 - padding
+
 - margin
   - Margin Collapsing
-    - Quando o top se junta com o bottom sem somar (Pega o margin maior)
-    - Obs: Quando os elementos estão lado a lado somam-se as margens
+    - When the top joins the bottom without adding (take the largest margin)
+    - Note: When the elements are side by side, the margins are added
 
 ### Reset
 
@@ -38,12 +43,12 @@
 
 - block
 
-  - Mantém as propriedades
+  - keeps the properties
 
 - inline
 
-  - height e width não funcionam
-  - Somente valores horizontais em padding, margin e border vão funcionar
+  - height and width do not work
+  - only horizontal values ​​in padding, margin and border will work
 
 - inline-block
 

@@ -23,7 +23,6 @@ body {
 }
 
 .sun {
-  position: absolute;
   animation: orbit 36.5s linear infinite;
 }
 
@@ -46,24 +45,37 @@ body {
   animation: orbit 36.5s linear infinite;
 }
 
-.earth img {
+.earth::after {
+  content: "";
+  display: block;
   width: 56px;
-  transform: translate(28px, 24px);
+  height: 56px;
+  background: url("./images/earth.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  transform: translate(100%);
 }
 
 .moon {
+  position: absolute;
   width: 140px;
   height: 140px;
   animation: orbit 22.7s linear infinite;
-  transform: translateX(32px);
-  position: absolute;
-  top: -16px;
-  left: -16px;
+  top: -40px;
+  left: 12px;
 }
 
-.moon img {
+.moon::after {
+  content: "";
+  display: block;
   width: 32px;
-  transform: translate(4px, 8px);
+  height: 32px;
+  background: url("./images/moon.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  transform: translate(12px);
 }
 
 @keyframes orbit {

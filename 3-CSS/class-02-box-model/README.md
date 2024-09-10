@@ -8,19 +8,21 @@
 ## Properties:
 
 - width
-
 - height
-
 - content
-
 - border
-
 - padding
-
 - margin
   - Margin Collapsing
     - When the top joins the bottom without adding (take the largest margin)
     - Note: When the elements are side by side, the margins are added
+
+### Shorthand:
+
+- 1px > top, right, bottom, left (1px)
+- 1px 2px > top, bottom (1px) - right, left (2px)
+- 1px 2px 3px > top (1px) - right, left (2px) - bottom (3px)
+- 1px 2px 3px 4px > top(1px) - right(2px) - bottom (3px) - left(4px)
 
 ### Reset
 
@@ -31,13 +33,6 @@
   box-sizing: border-box;
 }
 ```
-
-### Shorthand:
-
-- 1px > top, right, bottom, left (1px)
-- 1px 2px > top, bottom (1px) - right, left (2px)
-- 1px 2px 3px > top (1px) - right, left (2px) - bottom (3px)
-- 1px 2px 3px 4px > top(1px) - right(2px) - bottom (3px) - left(4px)
 
 ## Display
 

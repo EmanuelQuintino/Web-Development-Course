@@ -15,7 +15,7 @@
     }
 
     body {
-      background: url("./images/stars2.jpg");
+      background: url("./images/stars.jpg");
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center;
@@ -24,89 +24,65 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      position: relative;
     }
 
     .solarSystem {
-      height: 100%;
-      width: 100%;
-      font-size: 8px;
       display: flex;
       align-items: center;
       justify-content: center;
-      position: relative;
     }
 
     .sun {
-      animation: orbitSun 36.5s linear infinite;
+      position: absolute;
+      animation: orbit 36.5s linear infinite;
     }
 
     .sun img {
       width: 160px;
     }
 
-    .earthContainer {
-      position: absolute;
-      height: 380px;
-      width: 380px;
+    .lineOrbit {
+      border-color: transparent transparent transparent white;
+      border-style: solid;
+      border-width: 2px 0px 0px 1px;
       border-radius: 100%;
       border: 1px solid white;
-      display: flex;
-      align-items: center;
-      justify-content: center;
     }
 
     .earth {
       position: absolute;
-      height: 160px;
-      width: 160px;
-      border-radius: 100%;
-      border: 1px solid white;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      animation: orbitEarth 36.5s linear infinite;
+      width: 360px;
+      height: 360px;
+      animation: orbit 36.5s linear infinite;
     }
 
     .earth img {
-      width: 64px;
+      width: 56px;
+      transform: translate(28px, 24px);
     }
 
     .moon {
+      width: 140px;
+      height: 140px;
+      animation: orbit 22.7s linear infinite;
+      transform: translateX(32px);
       position: absolute;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      animation: orbitMoon 22.7s linear infinite;
+      top: -16px;
+      left: -16px;
     }
 
     .moon img {
       width: 32px;
+      transform: translate(4px, 8px);
     }
 
-    @keyframes orbitSun {
-      to {
+    @keyframes orbit {
+      0% {
+        transform: rotate(0deg);
+      }
+
+      100% {
         transform: rotate(360deg);
-      }
-    }
-
-    @keyframes orbitEarth {
-      0% {
-        transform: rotate(0deg) translate(190px) rotate(0deg);
-      }
-
-      100% {
-        transform: rotate(360deg) translate(190px) rotate(360deg);
-      }
-    }
-
-    @keyframes orbitMoon {
-      0% {
-        transform: rotate(0deg) translate(80px) rotate(0deg);
-      }
-
-      100% {
-        transform: rotate(360deg) translate(80px) rotate(360deg);
       }
     }
   </style>
@@ -116,13 +92,10 @@
         <img src="./images/sun.png" alt="" />
       </div>
 
-      <div class="earthContainer">
-        <div class="earth">
-          <img src="./images/earth.png" alt="" />
-
-          <div class="moon">
-            <img src="./images/moon.png" alt="" />
-          </div>
+      <div class="earth lineOrbit">
+        <img src="./images/earth.png" alt="" />
+        <div class="moon lineOrbit">
+          <img src="./images/moon.png" alt="" />
         </div>
       </div>
     </div>

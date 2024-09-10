@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Solar System</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: url("./images/stars2.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    .solarSystem {
+      height: 100%;
+      width: 100%;
+      font-size: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    .sun {
+      animation: orbitSun 36.5s linear infinite;
+    }
+
+    .sun img {
+      width: 160px;
+    }
+
+    .earthContainer {
+      position: absolute;
+      height: 380px;
+      width: 380px;
+      border-radius: 100%;
+      border: 1px solid white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .earth {
+      position: absolute;
+      height: 160px;
+      width: 160px;
+      border-radius: 100%;
+      border: 1px solid white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      animation: orbitEarth 36.5s linear infinite;
+    }
+
+    .earth img {
+      width: 64px;
+    }
+
+    .moon {
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      animation: orbitMoon 22.7s linear infinite;
+    }
+
+    .moon img {
+      width: 32px;
+    }
+
+    @keyframes orbitSun {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    @keyframes orbitEarth {
+      0% {
+        transform: rotate(0deg) translate(190px) rotate(0deg);
+      }
+
+      100% {
+        transform: rotate(360deg) translate(190px) rotate(360deg);
+      }
+    }
+
+    @keyframes orbitMoon {
+      0% {
+        transform: rotate(0deg) translate(80px) rotate(0deg);
+      }
+
+      100% {
+        transform: rotate(360deg) translate(80px) rotate(360deg);
+      }
+    }
+  </style>
+  <body>
+    <div class="solarSystem">
+      <div class="sun">
+        <img src="./images/sun.png" alt="" />
+      </div>
+
+      <div class="earthContainer">
+        <div class="earth">
+          <img src="./images/earth.png" alt="" />
+
+          <div class="moon">
+            <img src="./images/moon.png" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

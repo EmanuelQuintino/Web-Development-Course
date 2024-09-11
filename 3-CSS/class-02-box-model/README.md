@@ -43,7 +43,7 @@
 - inline
 
   - height and width do not work
-  - only horizontal values ​​in padding, margin and border will work
+  - top values ​​in padding, margin and border do not work
 
 - inline-block
 

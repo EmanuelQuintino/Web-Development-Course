@@ -4,16 +4,16 @@
   box-sizing: border-box;
 }
 
-.logoInstagram {
-  height: 100vh;
+body {
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 100vh;
 }
 
-.background {
-  height: 330px;
-  width: 330px;
+.logoInstagram {
+  height: 320px;
+  width: 320px;
   border-radius: 25%;
   display: flex;
   align-items: center;

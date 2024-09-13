@@ -52,15 +52,15 @@
 
 - Media Queries
 
+- A conditional group rule that will apply your content if the device meets the criteria of the condition defined using a media query
+
   ```css
-  @media (min-width: 420px) {
+  @media (min-width: 768px) {
     h1 {
       font-size: 4.2rem;
     }
   }
   ```
-
-  - Uma regra de grupo condicional que aplicará seu conteúdo se o dispositivo atender aos critérios da condição definida usando uma consulta de mídia
 
 - Mobile First
 

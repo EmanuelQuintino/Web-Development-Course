@@ -11,11 +11,12 @@
 body {
   font-family: "Courier New", Courier, monospace;
   font-size: 1.6rem;
-  color: white;
-  height: 100vh;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
+  height: 100vh;
+  color: white;
+  background: #0d0d0d;
 }
 
 header {
@@ -61,6 +62,7 @@ section {
   align-items: center;
   flex-direction: column;
   gap: 3.2rem;
+  max-width: 48rem;
 }
 
 h2 {
@@ -75,7 +77,6 @@ h2 > span {
 button {
   padding: 1.2rem 3.2rem;
   border-radius: 0.8rem;
-  font-weight: 700;
   border: none;
   background: #77cff2;
 }
@@ -86,8 +87,12 @@ button:hover {
   cursor: pointer;
 }
 
-.computer img {
+.computer {
   width: 16rem;
+}
+
+.computer img {
+  width: 100%;
 }
 
 footer {
@@ -114,11 +119,7 @@ footer {
   section {
     align-items: start;
     text-align: left;
-    width: 64rem;
-  }
-
-  section:nth-child(3) {
-    align-items: center;
+    max-width: 62rem;
   }
 
   h2 {
@@ -126,10 +127,7 @@ footer {
   }
 
   .computer {
+    align-items: center;
     width: 32rem;
-  }
-
-  .computer img {
-    width: 100%;
   }
 }

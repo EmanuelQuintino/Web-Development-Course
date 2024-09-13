@@ -52,7 +52,7 @@
 
 - Media Queries
 
-- A conditional group rule that will apply your content if the device meets the criteria of the condition defined using a media query
+  - A conditional group rule that will apply your content if the device meets the criteria of the condition defined using a media query
 
   ```css
   @media (min-width: 768px) {

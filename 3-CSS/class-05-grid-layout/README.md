@@ -2,7 +2,7 @@
 
 ## Display Grid
 
-Divisão de toda a página em linhas e colunas de forma bidimensional
+Dividing the entire page into rows and columns in a two-dimensional way
 
 <img src="./images/flex-vs-grid.jpg" alt="flex vs grid" width="560">
 
@@ -28,14 +28,14 @@ grid-template-areas:
   "Footer Footer" 120px / 1fr 240px;
 ```
 
-Obs: Usar grid-area nos elementos com os nomes escolhidos;
+Note: Use grid-area on the elements with the chosen names
 
 ## Alignment
 
-- Sabendo que o Grid é bidimensional podemos trabalhar nos eixos X (justify) e Y (aling)
-- O "content" nos permite alinhar o Grid, relativo ao próprio espaço de fora quando menor que a área definida
-- O "items" nos permite alinhar o conteúdo do grid
-- O "self" permite alinhar o conteúdo do próprio filho no grid
+- Knowing that the Grid is two-dimensional, we can work on the X (justify) and Y (align) axes
+- The "content" allows us to align the Grid, relative to its own outer space when smaller than the defined area
+- The "items" allows us to align the grid content
+- The "self" allows us to align the content of its own child in the grid
 
 ```css
 align-content: start;

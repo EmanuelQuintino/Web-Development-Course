@@ -22,27 +22,18 @@ body {
   justify-content: center;
 }
 
-.sun {
-  animation: orbit 36.5s linear infinite;
-}
-
 .sun img {
   width: 160px;
-}
-
-.lineOrbit {
-  border-color: transparent transparent transparent white;
-  border-style: solid;
-  border-width: 2px 0px 0px 1px;
-  border-radius: 100%;
-  border: 1px solid white;
+  animation: orbit 24000ms linear infinite;
 }
 
 .earth {
-  position: absolute;
   width: 360px;
   height: 360px;
-  animation: orbit 36.5s linear infinite;
+  border: 1px solid white;
+  border-radius: 100%;
+  position: absolute;
+  animation: orbit 36500ms linear infinite;
 }
 
 .earth::after {
@@ -58,12 +49,14 @@ body {
 }
 
 .moon {
-  position: absolute;
   width: 140px;
   height: 140px;
-  animation: orbit 22.7s linear infinite;
+  border: 1px solid white;
+  border-radius: 100%;
+  position: absolute;
   top: -40px;
-  left: 12px;
+  left: 14px;
+  animation: orbit 2800ms linear infinite;
 }
 
 .moon::after {

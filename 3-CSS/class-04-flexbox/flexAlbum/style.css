@@ -1,0 +1,21 @@
+main {
+  max-width: 1024px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+figure {
+  flex: 1 1 200px;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 32px;
+}
+
+img {
+  width: 100%;
+  display: block;
+}

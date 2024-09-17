@@ -1,0 +1,27 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.accordion {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.accordion figure {
+  flex: 1;
+  height: 100vh;
+  overflow: hidden;
+  transition: 300ms;
+}
+
+.accordion figure:hover {
+  flex: 4;
+}
+
+.accordion img {
+  height: 100%;
+}

@@ -58,7 +58,7 @@ main {
 
 @media (max-width: 768px) {
   body {
-    grid-template-rows: 1fr 50% 1fr 1fr;
+    grid-template-rows: 1fr 60% 1fr 1fr;
   }
 
   main {

@@ -2,228 +2,89 @@
 <html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Challenge Student Form</title>
-    <style>
-      body {
-        background: #e5e5e5;
-      }
-
-      header {
-        text-align: center;
-      }
-
-      main {
-        width: 350px;
-        margin: auto;
-        background: #fafafc;
-        border-radius: 8px;
-        padding: 16px;
-      }
-
-      form {
-        width: 320px;
-        margin: 0 auto;
-      }
-
-      .personalData label,
-      .loginData label {
-        width: 80px;
-        display: inline-block;
-        text-align: right;
-      }
-
-      input[type="number"]::-webkit-inner-spin-button {
-        -webkit-appearance: none;
-      }
-
-      textarea {
-        resize: none;
-        padding: 8px;
-      }
-
-      button {
-        background: white;
-        border-radius: 4px;
-        border: solid 1px black;
-      }
-    </style>
+    <meta name="description" content="formulário para inscrição de curso" />
+    <title>HTML Forms</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header>
-      <h1>Cadastro de Alunos</h1>
-    </header>
-    <main>
-      <form method="get" enctype="multipart/form-data">
-        <fieldset class="personalData">
-          <legend>
-            <strong>DADOS PESSOAIS</strong>
-          </legend>
+    <form method="get">
+      <fieldset>
+        <legend>Formulário de inscrição</legend>
+        <section>
+          <label for="name">Nome <span>*</span></label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Digite seu nome"
+            autofocus
+          />
+        </section>
 
+        <section>
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="exemplo@email.com" />
+        </section>
+
+        <div class="boxBirthPhone">
           <section>
-            <label for="name">Nome:</label>
-            <input
-              id="name"
-              type="text"
-              placeholder="Digite seu nome"
-              name="name"
-              autofocus
-              required
-            />
+            <label for="birth">Nascimento</label>
+            <input type="date" id="birth" name="birth" />
           </section>
 
-          <br />
-
           <section>
-            <label for="birth">Nascimento:</label>
-            <input id="birth" type="date" name="birth" />
+            <label for="phone">Whatsapp <span>*</span></label>
+            <input type="tel" id="phone" name="phone" placeholder="(xx) xxxxx-xxxx" />
           </section>
+        </div>
 
-          <br />
+        <section>
+          <label for="course">Curso <span>*</span></label>
+          <select name="course" id="course">
+            <option value="Informática">Informática</option>
+            <option value="Mecânica">Mecânica</option>
+            <option value="Comandos">Comandos</option>
+            <option value="Desenvolvimento Web">Desenvolvimento Web</option>
+          </select>
+        </section>
 
-          <section>
-            <label for="RG">RG:</label>
-            <input
-              id="RG"
-              type="text"
-              required
-              placeholder="Informe seu RG"
-              name="RG"
-              maxlength="11"
-              minlength="8"
-              pattern="[0-9]{8,11}"
-              title="Digite de 8 a 11 números do RG"
-            />
-          </section>
-
-          <br />
-
-          <section>
-            <label for="CPF">CPF:</label>
-            <input
-              id="CPF"
-              type="text"
-              required
-              placeholder="Informe seu CPF"
-              name="CPF"
-              maxlength="11"
-              minlength="11"
-              pattern="[0-9]{11}"
-              title="Digite os 11 números do CPF"
-            />
-          </section>
-
-          <br />
-
-          <section>
+        <section class="boxShift">
+          <fieldset>
             <span>
-              <label for="masculine">Masculino</label>
-              <input id="masculine" type="radio" name="sexo" value="M" />
+              <legend>Turno:</legend>
             </span>
 
             <span>
-              <label for="feminine">Feminino</label>
-              <input id="feminine" type="radio" name="sexo" value="F" />
-            </span>
-          </section>
-        </fieldset>
-
-        <br />
-
-        <fieldset class="languagesData">
-          <legend>
-            <strong>LINGUAGENS DE DOMÍNIO</strong>
-          </legend>
-
-          <section>
-            <span>
-              <input id="html" type="checkbox" name="html" />
-              <label for="html">HTML</label>
+              <label for="morning">Manhã</label>
+              <input type="radio" id="morning" name="shift" value="morning" checked />
             </span>
 
             <span>
-              <input id="css" type="checkbox" name="css" />
-              <label for="css">CSS</label>
+              <label for="afternoon">Tarde</label>
+              <input type="radio" id="afternoon" name="shift" value="afternoon" />
             </span>
+          </fieldset>
+        </section>
 
-            <span>
-              <input id="javascript" type="checkbox" name="javascript" />
-              <label for="javascript">JavaScript</label>
-            </span>
+        <section>
+          <label for="obs">Observações</label>
+          <textarea
+            name="obs"
+            id="obs"
+            placeholder="Escreva alguma pergunta ou sugestão"
+          ></textarea>
+        </section>
 
-            <span>
-              <input id="sql" type="checkbox" name="sql" />
-              <label for="sql">SQL</label>
-            </span>
-          </section>
-        </fieldset>
+        <section class="boxTerm">
+          <input type="checkbox" id="term" name="term" value="true" required />
+          <label for="term"
+            >Aceita os <a href="#">termos de uso</a>?<span>*</span>
+          </label>
+        </section>
 
-        <br />
-
-        <fieldset class="loginData">
-          <legend>
-            <strong>DADOS DE LOGIN</strong>
-          </legend>
-
-          <section>
-            <label for="email">E-mail:</label>
-            <input
-              type="email"
-              placeholder="fuluno@email.com"
-              id="email"
-              required
-              name="email"
-            />
-          </section>
-
-          <br />
-
-          <section>
-            <label for="password">Senha:</label>
-            <input
-              type="password"
-              id="password"
-              name="password"
-              minlength="8"
-              required
-              placeholder="Mínimo de 8 caracteres"
-            />
-          </section>
-
-          <br />
-
-          <section>
-            <label for="photo">Foto:</label>
-            <input type="file" id="photo" name="photo" accept="image/*" />
-          </section>
-        </fieldset>
-
-        <br />
-
-        <fieldset class="obsData">
-          <legend>
-            <strong>OBSERVAÇÕES</strong>
-          </legend>
-
-          <section>
-            <label for="observation" hidden>Observação</label>
-            <textarea
-              id="observation"
-              name="observation"
-              cols="36"
-              rows="10"
-              maxlength="370"
-              placeholder="Faça observações sobre seu perfil"
-            ></textarea>
-          </section>
-        </fieldset>
-
-        <br />
-
-        <button type="submit">Salvar</button>
-        <button type="reset">Limpar</button>
-      </form>
-    </main>
+        <button type="submit">Enviar</button>
+      </fieldset>
+    </form>
   </body>
 </html>

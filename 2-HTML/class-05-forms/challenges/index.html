@@ -19,6 +19,7 @@
             name="name"
             placeholder="Digite seu nome"
             autofocus
+            required
           />
         </section>
 
@@ -35,7 +36,13 @@
 
           <section>
             <label for="phone">Whatsapp <span>*</span></label>
-            <input type="tel" id="phone" name="phone" placeholder="(xx) xxxxx-xxxx" />
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              placeholder="(xx) xxxxx-xxxx"
+              required
+            />
           </section>
         </div>
 
@@ -77,7 +84,15 @@
         </section>
 
         <section class="boxTerm">
-          <input type="checkbox" id="term" name="term" value="true" required />
+          <input
+            type="checkbox"
+            id="term"
+            name="term"
+            value="true"
+            required
+            oninvalid="this.setCustomValidity('Por favor leia e aceite os termos de uso!')"
+            oninput="this.setCustomValidity('')"
+          />
           <label for="term"
             >Aceita os <a href="#">termos de uso</a>?<span>*</span>
           </label>

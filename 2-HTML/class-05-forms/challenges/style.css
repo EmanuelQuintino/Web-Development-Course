@@ -63,6 +63,10 @@ label {
 .boxBirthPhone {
   display: flex;
   gap: 24px;
+
+  & section {
+    flex: 1;
+  }
 }
 
 .boxShift {
@@ -137,7 +141,7 @@ button {
   margin-top: 24px;
 
   &:focus {
-    outline: 1.5px solid #c2218a;
+    outline: 1.5px solid #555;
   }
 
   &:hover {

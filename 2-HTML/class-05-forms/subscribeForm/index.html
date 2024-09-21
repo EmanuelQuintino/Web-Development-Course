@@ -13,7 +13,7 @@
         <legend>Formulário de inscrição</legend>
 
         <section>
-          <label for="name">Nome <span>*</span></label>
+          <label for="name">Nome <span title="Campo obrigatório">*</span></label>
           <input
             type="text"
             id="name"
@@ -36,7 +36,7 @@
           </section>
 
           <section>
-            <label for="phone">Whatsapp <span>*</span></label>
+            <label for="phone">Whatsapp <span title="Campo obrigatório">*</span></label>
             <input
               type="tel"
               id="phone"
@@ -48,7 +48,7 @@
         </div>
 
         <section>
-          <label for="course">Curso <span>*</span></label>
+          <label for="course">Curso <span title="Campo obrigatório">*</span></label>
           <select name="course" id="course">
             <option value="Informática">Informática</option>
             <option value="Mecânica">Mecânica</option>
@@ -95,7 +95,9 @@
             oninput="this.setCustomValidity('')"
           />
           <label for="term"
-            >Aceita os <a href="#">termos de uso</a>?<span>*</span>
+            >Aceita os <a href="#">termos de uso</a>?<span title="Campo obrigatório"
+              >*</span
+            >
           </label>
         </section>
 

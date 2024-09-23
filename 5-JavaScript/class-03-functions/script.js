@@ -63,3 +63,6 @@ function person(name, age) {
 console.log(person("Emanuel", 30));
 console.log(typeof person("Emanuel", 30));
 console.log(person("Emanuel", 30).status());
+
+const user = person("Emanuel", 30);
+console.log(user.status());

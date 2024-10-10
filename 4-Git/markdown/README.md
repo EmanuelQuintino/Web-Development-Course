@@ -1,4 +1,4 @@
-# Class Markdown (md)
+# Class Markdown (.md)
 
 ## Titles
 
@@ -21,10 +21,11 @@ Use # to create titles. Add more # for sub-headings, indicating lower levels:
 ## Emphasis
 
 ```md
-highlight: `text`.
-bold: **text**.
-italics: _text_.
-strikethrough: ~~text~~.
+normal: text
+highlight: `text`
+bold: **text**
+italics: _text_
+strikethrough: ~~text~~
 ```
 
 ## Lists

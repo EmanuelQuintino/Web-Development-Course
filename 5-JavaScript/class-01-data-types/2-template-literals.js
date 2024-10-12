@@ -16,7 +16,7 @@ let num2 = 20;
 num1 = Number(num1); // type conversion (typecasting)
 
 console.log(num1 + num2);
-console.log(10 + "20"); // type cohesion
+console.log(10 + "20"); // type coercion
 console.log(Number("10") + 20);
 console.log(+"10" + 20);
 

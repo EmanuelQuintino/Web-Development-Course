@@ -1,6 +1,4 @@
-// Reference: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_str uctures
-
-// Primitive Values : String, Number, Boolean...
+// Reference: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures
 
 // let 123variable;
 // let my-variable;
@@ -9,12 +7,23 @@
 // let if;
 // let break;
 
-// String
-let studentName = "Emanuel";
-let age = "30";
+let studentName = "Emanuel"; // string
+let age = 30; // number
+const cpf = "123.123.123-12"; // string
+let isAdmin = true; // boolean
+
+studentName = "Emanuel Quintino";
+// cpf = "123";
 
 console.log(studentName);
+console.log(age);
+console.log(cpf);
+console.log(isAdmin);
+
+console.log(typeof studentName);
 console.log(typeof age);
+console.log(typeof cpf);
+console.log(typeof isAdmin);
 
 // Number: integer, float, NaN, Infinity
 console.log(typeof 32);
@@ -27,15 +36,3 @@ console.log(typeof Number("Emanuel"));
 
 console.log(typeof Infinity);
 console.log(2 / 0);
-
-let number;
-console.log(number);
-
-// Boolean: true or false
-console.log(typeof true);
-console.log(typeof (10 == 20));
-console.log(20 == 20);
-console.log(20 == "Emanuel");
-console.log(20 != "Emanuel");
-console.log(11 == "11");
-console.log(11 === "11");

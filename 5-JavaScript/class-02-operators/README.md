@@ -23,10 +23,10 @@
 
 ## Comparison Operators (Boolean)
 
-- \> >=
-- < <=
-- == !=
-- === !==
+- \>, >=
+- <, <=
+- ==, !=
+- ===, !==
 
 ## Logical Operators (Boolean)
 
@@ -41,8 +41,8 @@
 <pre>
 P   Q   P^Q
 V   V    V
-V   F    V
-F   V    V
+V   F    F
+F   V    F
 F   F    F
 </pre>
 
@@ -51,8 +51,8 @@ F   F    F
 <pre>
 P   Q   PvQ
 V   V    V
-V   F    F
-F   V    F
+V   F    V
+F   V    V
 F   F    F
 </pre>
 

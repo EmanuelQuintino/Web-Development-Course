@@ -44,6 +44,7 @@ console.log(Math.sqrt(81));
 console.log(Math.PI);
 console.log(Math.E);
 console.log(Math.abs(num1));
+console.log(Math.trunc(5.678));
 
 console.log(Math.max(2, 3));
 console.log(Math.min(2, 3));

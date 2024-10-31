@@ -1,4 +1,4 @@
-// ⚠️ Desafio: Crie uma função para verificar palíndromos. A lógica deve receber string com palavra ou texto
+// ⚠️ Desafio: Crie uma função para verificar palíndromos e retorne TRUE ou FALSE. A lógica deve receber string com palavra ou texto
 
 function isPalindrome(text) {
   const normalText = text.toLowerCase().replaceAll(" ", "");

@@ -3,6 +3,10 @@
 let myName = "Emanuel";
 console.log(myName.__proto__);
 
+function log() {
+  return "print";
+}
+
 console.log(myName.length);
 console.log(myName.toUpperCase());
 console.log(myName.toLowerCase());
@@ -37,7 +41,3 @@ console.log(phrase.split("").reverse().join(""));
 console.log(phrase.includes("web")); // case-sensitive
 console.log("Web" == "web");
 console.log(phrase.toLowerCase().includes("WEB".toLowerCase()));
-
-function log() {
-  return "print";
-}

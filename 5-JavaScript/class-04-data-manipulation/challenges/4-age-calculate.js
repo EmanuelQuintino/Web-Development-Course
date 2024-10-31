@@ -5,4 +5,6 @@ const dateWasBorn = new Date(prompt("Digite a data (yyyy-mm-dd) em que você nas
 const dateNow = new Date();
 const ageUser = Math.floor((dateNow - dateWasBorn) / 1000 / 60 / 60 / 24 / 365.25);
 
+console.log(dateNow.getFullYear() - dateWasBorn.getFullYear());
+
 alert(`Em você tem ${ageUser} anos!`);

@@ -54,3 +54,20 @@ switch (option) {
     alert("Digite uma opção válida!");
     break;
 }
+
+const key = 5;
+
+switch (key) {
+  case 1:
+    console.log("Barra de cereau");
+    break;
+  case 2:
+    console.log("Barra de chocolate");
+    break;
+  case 3:
+    console.log("Latinha de refrigerante");
+    break;
+  default:
+    console.log("Por favor, escolher um item");
+    break;
+}

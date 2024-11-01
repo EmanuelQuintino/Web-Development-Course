@@ -3,7 +3,7 @@
 
 function fibonacciSequence(amount) {
   if (amount <= 0) return null;
-  if (amount === 1) return 0;
+  if (amount == 1) return 0;
 
   const array = [0, 1];
 

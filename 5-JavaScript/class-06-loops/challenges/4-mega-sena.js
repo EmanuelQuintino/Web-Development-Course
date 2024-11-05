@@ -1,6 +1,4 @@
-// ⚠️ Desafio: Crie um algoritmo que sortei os números da Mega-Sena
-// São 6 números aleatórios não duplicados de 1 a 60
-// Coloque em ordem crescente, com 0 a esquerda e separe com "-"
+// ⚠️ Desafio: Crie um algoritmo que sortei os números da Mega-Sena. São 6 números aleatórios não duplicados de 1 a 60. Coloque em ordem crescente, com 0 a esquerda e separe com "-"
 
 const numbersMega = [];
 

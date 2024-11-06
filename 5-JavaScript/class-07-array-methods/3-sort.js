@@ -6,6 +6,11 @@ const arrayNumbers = [2, "2", 1, 5, 2, 4, 3, 10];
 console.log(arrayNumbers.sort());
 
 // Table ASCII (0-9, A-Z, a-z)
+
+console.log("A" < "B");
+console.log("A".charCodeAt());
+console.log("B".charCodeAt());
+
 arrayNumbers.sort((a, b) => {
   if (a < b) return -1;
   if (a > b) return 1;
@@ -27,10 +32,6 @@ arrayNames.sort((a, b) => {
   if (a > b) return 1;
   return 0;
 });
-
-console.log("A" < "B");
-console.log("A".charCodeAt());
-console.log("B".charCodeAt());
 
 arrayNames.sort((a, b) => a.localeCompare(b));
 console.log(arrayNames); // mutable!

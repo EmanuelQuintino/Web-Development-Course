@@ -37,6 +37,7 @@ list.push("D");
 list.shift();
 list.unshift("E");
 list[0] = "test";
+series.splice(0, 1, "splice");
 console.log(list);
 
 // Question 5 (for)

@@ -38,4 +38,4 @@
 //Abaixo tem a lista com todos os salários atuais de cada um deles
 // Apresente os novos salários e o novo total em folha dessa empresa
 
-const salary = [2000, 2800, 3000, 4000, 2200, 7500, 3650, 8000, 2000, 5000];
+const salaries = [2000, 2800, 3000, 4000, 2200, 7500, 3650, 8000, 2000, 5000];

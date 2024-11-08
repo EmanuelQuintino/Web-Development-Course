@@ -15,7 +15,7 @@
 
 // Questão 4 (Data Manipulation):
 
-// Usando os métodos FIFO e LIFO, crie um array com 3 valos e posteriormente insira mais um valor no final e substitua o do início por outro
+// Usando os métodos FIFO e LIFO, crie um array com 3 valores e posteriormente insira mais um valor no final e substitua o do início por outro
 
 // Questão 5 (for):
 

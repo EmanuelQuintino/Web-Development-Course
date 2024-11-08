@@ -6,7 +6,9 @@ while (numbersMega.length < 6) {
   const numberDrawn = Math.ceil(Math.random() * 60);
   const formatedNumber = String(numberDrawn).padStart(2, "0");
 
-  if (!numbersMega.includes(formatedNumber)) {
+  if (numbersMega.includes(formatedNumber)) {
+    continue;
+  } else {
     numbersMega.push(formatedNumber);
   }
 }

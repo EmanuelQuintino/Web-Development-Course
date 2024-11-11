@@ -27,3 +27,8 @@ if (isFinish) {
   clearTimeout(timeoutID);
   clearTimeout(intervalID);
 }
+
+setInterval(() => {
+  const clock = new Date();
+  console.log(clock.toLocaleTimeString());
+}, 1000);

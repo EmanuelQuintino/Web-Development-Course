@@ -1,22 +1,42 @@
-class BankAccount {
-  #balance; // ES2022
-  constructor(client, initialBalance = 0) {
-    this.client = client;
-    this.#balance = initialBalance; // encapsulation
+class Client {
+  #cpf; // ES2022
+  constructor(name, phone, cpf) {
+    this.name = name;
+    this.phone = phone;
+    this.#cpf = cpf; // encapsulation
   }
 
   // getter
+  clientInfo() {
+    return `
+      Nome: ${this.name}, 
+      Telefone: ${this.phone}, 
+      CPF: ${this.#cpf}
+    `;
+  }
+}
+
+// inherit
+class BankAccount extends Client {
+  #balance;
+  constructor(name, phone, cpf, initialBalance = 0) {
+    super(name, phone, cpf);
+    this.#balance = initialBalance;
+  }
+
   balance() {
     return this.#balance;
   }
 
   // setter
   deposit(amount) {
+    this.#isNegativeAmount(amount);
     this.#balance += amount;
     return `Deposito de R$${amount}`;
   }
 
   withdraw(amount) {
+    this.#isNegativeAmount(amount);
     if (this.#balance >= amount) {
       this.#balance -= amount;
       return `Saque de R$${amount}`;
@@ -24,11 +44,22 @@ class BankAccount {
       return "Saldo insuficiente!";
     }
   }
+
+  #isNegativeAmount(amount) {
+    if (amount <= 0) throw Error("Valor inválido!");
+  }
 }
 
-const account = new BankAccount("Emanuel", 500);
-console.log(account.client);
-// console.log(account.#balance);
+const client = new Client("Emanuel", "(88) 99999-9999", "123.123.123-12");
+
+console.log(client.name);
+console.log(client.phone);
+console.log(client.clientInfo());
+
+const account = new BankAccount("Emanuel", "(88) 99999-9999", "123.123.123-12", 500);
+
+console.log(account.name);
+console.log(account.clientInfo());
 console.log(account.balance());
 console.log(account.deposit(100));
 console.log(account.balance());
@@ -36,3 +67,5 @@ console.log(account.withdraw(200));
 console.log(account.balance());
 console.log(account.withdraw(500));
 console.log(account.balance());
+console.log(account.deposit(-500));
+console.log(account.withdraw(-500));

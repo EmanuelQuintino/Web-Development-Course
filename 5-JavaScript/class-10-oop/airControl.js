@@ -1,10 +1,11 @@
 class AirControl {
   constructor(temp, color) {
-    this.color = color;
+    this.color = color; // attributes
     this.temp = temp;
     this.isOn = false;
   }
 
+  // methods
   power() {
     this.isOn = !this.isOn;
   }

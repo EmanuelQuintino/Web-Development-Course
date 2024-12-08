@@ -1,0 +1,30 @@
+article {
+  max-width: 50%;
+  margin: 0 auto;
+}
+
+section {
+  img {
+    width: 100%;
+    animation: fadeIn linear both;
+    animation-timeline: view(90% 10px); /* (stop, start) */
+  }
+
+  p {
+    animation: fadeIn linear both;
+    animation-timeline: view();
+    animation-range: entry; /* contain, cover, entry, exit */
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    scale: 0.8;
+  }
+
+  100% {
+    opacity: 1;
+    scale: 1;
+  }
+}

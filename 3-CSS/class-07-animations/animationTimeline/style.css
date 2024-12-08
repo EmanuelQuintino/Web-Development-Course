@@ -7,13 +7,14 @@ section {
   img {
     width: 100%;
     animation: fadeIn linear both;
-    animation-timeline: view(90% 10px); /* (stop, start) */
+    animation-timeline: view(90% 10px); /* (stop start) */
   }
 
   p {
     animation: fadeIn linear both;
     animation-timeline: view();
     animation-range: entry; /* contain, cover, entry, exit */
+    animation-range: 50px 25%; /* start stop*/
   }
 }
 

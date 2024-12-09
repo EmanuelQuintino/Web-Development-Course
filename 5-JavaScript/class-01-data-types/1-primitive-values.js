@@ -36,3 +36,13 @@ console.log(typeof Number("Emanuel"));
 
 console.log(typeof Infinity);
 console.log(2 / 0);
+
+// Truthy and Falsy
+console.log(Boolean("String"));
+console.log(Boolean(""));
+console.log(Boolean(" "));
+console.log(Boolean(1));
+console.log(Boolean(0));
+console.log(Boolean(-1));
+console.log(Boolean(undefined));
+console.log(Boolean(null));

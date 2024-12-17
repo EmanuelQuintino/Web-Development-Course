@@ -1,26 +1,30 @@
 // Logical Operators (Boolean)
 
-//Go to Walt Disney?
+const email = true;
+const password = true;
+
+console.log(email && password);
 
 console.log(true && true);
 console.log(true && false);
 console.log(false && true);
 console.log(false && false);
 
-let creditCard = true;
-let hasCredit = true;
+// Go to Walt Disney?
 
-console.log(!true);
-console.log(!!creditCard);
+const creditCard = true;
+const hasCredit = true;
+const pix = true;
 
 console.log("Viagem: " + (creditCard && hasCredit && true));
+
+console.log(creditCard || pix);
+console.log((creditCard && hasCredit) || pix);
 
 console.log(true || true);
 console.log(true || false);
 console.log(false || true);
 console.log(false || false);
 
-let saveMoney = true;
-let getLoan = true;
-
-console.log(saveMoney || getLoan);
+console.log(!true);
+console.log(!!creditCard);

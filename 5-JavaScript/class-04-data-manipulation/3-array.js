@@ -7,6 +7,7 @@ console.log(array.length);
 console.log(array[1]);
 console.log(array[2]());
 console.log(array[4].name);
+console.log(array[array.length - 1]);
 
 console.log(array.join("_"));
 

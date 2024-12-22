@@ -30,7 +30,7 @@ console.log(z1, z2);
 const user = {
   name: "user",
   age: 30,
-  status: ["A", "B", "C"],
+  status: ["A", "B", "C", [1]],
 };
 
 const shallowCopyUser = { ...user }; // spread operator
@@ -75,4 +75,5 @@ function deepFreeze(object) {
 deepFreeze(user);
 
 user.status[0] = "Zzzz";
+user.status[3][1] = "Zzzz";
 console.log(user);

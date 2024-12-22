@@ -13,6 +13,18 @@ console.log(dateNow.toLocaleDateString("pt-BR"));
 
 console.log(
   dateNow.toLocaleString("pt-BR", {
+    dateStyle: "long",
+  })
+);
+
+console.log(
+  dateNow.toLocaleString("pt-BR", {
+    timeStyle: "full",
+  })
+);
+
+console.log(
+  dateNow.toLocaleString("pt-BR", {
     weekday: "long",
     day: "2-digit",
     month: "long",
@@ -43,8 +55,6 @@ createDate.setHours(23);
 createDate.setMinutes(60);
 createDate.setSeconds(60);
 createDate.setMilliseconds(1000);
-
-console.log(createDate.toLocaleTimeString("pt-BR"));
 
 const date1 = new Date("2023-12-27");
 const date2 = new Date("2023-09-25");

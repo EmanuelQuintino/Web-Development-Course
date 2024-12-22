@@ -9,29 +9,7 @@ console.log(new Date().getTime());
 console.log(dateNow.toLocaleString("pt-BR"));
 console.log(dateNow.toLocaleDateString("pt-BR"));
 console.log(dateNow.toLocaleTimeString("pt-BR"));
-
-console.log(dateNow.getDay()); // 0 - 6
-console.log(dateNow.getDate());
-console.log(dateNow.getMonth()); // 0 - 11
-console.log(dateNow.getFullYear());
-
-dateNow.setDate(dateNow.getDate() + 30);
-dateNow.setMonth(dateNow.getMonth() + 12);
-dateNow.setFullYear(dateNow.getFullYear() + 10);
-
 console.log(dateNow.toLocaleDateString("pt-BR"));
-
-console.log(dateNow.getHours());
-console.log(dateNow.getMinutes());
-console.log(dateNow.getSeconds());
-console.log(dateNow.getMilliseconds());
-
-dateNow.setHours(dateNow.getHours() + 23);
-dateNow.setMinutes(dateNow.getMinutes() + 60);
-dateNow.setSeconds(dateNow.getSeconds() + 60);
-dateNow.setMilliseconds(dateNow.getMilliseconds() + 1000);
-
-console.log(dateNow.toLocaleTimeString("pt-BR"));
 
 console.log(
   dateNow.toLocaleString("pt-BR", {
@@ -43,6 +21,30 @@ console.log(
     minute: "2-digit",
   })
 );
+
+console.log(dateNow.getDay()); // 0 - 6
+console.log(dateNow.getDate());
+console.log(dateNow.getMonth()); // 0 - 11
+console.log(dateNow.getFullYear());
+
+console.log(dateNow.getHours());
+console.log(dateNow.getMinutes());
+console.log(dateNow.getSeconds());
+console.log(dateNow.getMilliseconds());
+
+const createDate = new Date("2024-01-10T00:00:00");
+console.log(createDate);
+
+createDate.setDate(createDate.getDate() + 30);
+createDate.setMonth(12);
+createDate.setFullYear(10);
+
+createDate.setHours(23);
+createDate.setMinutes(60);
+createDate.setSeconds(60);
+createDate.setMilliseconds(1000);
+
+console.log(createDate.toLocaleTimeString("pt-BR"));
 
 const date1 = new Date("2023-12-27");
 const date2 = new Date("2023-09-25");

@@ -1,3 +1,5 @@
+"use strict";
+
 class Client {
   #cpf; // ES2022
   constructor(name, phone, cpf) {
@@ -6,8 +8,7 @@ class Client {
     this.#cpf = cpf; // encapsulation
   }
 
-  // getter
-  clientInfo() {
+  get clientInfo() {
     return `
       Nome: ${this.name}, 
       Telefone: ${this.phone}, 
@@ -24,7 +25,7 @@ class BankAccount extends Client {
     this.#balance = initialBalance;
   }
 
-  balance() {
+  get balance() {
     return this.#balance;
   }
 
@@ -54,18 +55,18 @@ const client = new Client("Emanuel", "(88) 99999-9999", "123.123.123-12");
 
 console.log(client.name);
 console.log(client.phone);
-console.log(client.clientInfo());
+console.log(client.clientInfo);
 
 const account = new BankAccount("Emanuel", "(88) 99999-9999", "123.123.123-12", 500);
 
 console.log(account.name);
-console.log(account.clientInfo());
-console.log(account.balance());
+console.log(account.clientInfo);
+console.log(account.balance);
 console.log(account.deposit(100));
-console.log(account.balance());
+console.log(account.balance);
 console.log(account.withdraw(200));
-console.log(account.balance());
+console.log(account.balance);
 console.log(account.withdraw(500));
-console.log(account.balance());
+console.log(account.balance);
 console.log(account.deposit(-500));
 console.log(account.withdraw(-500));

@@ -43,7 +43,7 @@ function sumNumbersShow(num1, num2, callback) {
 
 sumNumbersShow(2, 3, show);
 
-// factory (creational design pattern)
+// factory (creation design pattern)
 
 function person(name, age) {
   return {

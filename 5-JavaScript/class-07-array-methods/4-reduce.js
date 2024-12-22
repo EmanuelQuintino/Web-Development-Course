@@ -14,7 +14,7 @@ const students = [
 
 console.log(students.reduce((a, b) => a + b.salary, 0));
 
-const groupeByCity = students.reduce((acc, student) => {
+const groupByCity = students.reduce((acc, student) => {
   if (!acc[student.city]) {
     acc[student.city] = [];
   }
@@ -22,7 +22,7 @@ const groupeByCity = students.reduce((acc, student) => {
   return acc;
 }, {});
 
-console.log(groupeByCity);
+console.log(groupByCity);
 
 const arrayLetters = ["A", "A", "B", "C", "C", "C"];
 

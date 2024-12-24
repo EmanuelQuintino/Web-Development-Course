@@ -1,5 +1,5 @@
 // Question 1 (Data Types)
-// Declare as seguntes variáveis e atribua os valores por tipo: Sting, Number, Boolean, Function, Array, Object
+// Declare as seguintes variáveis e atribua os valores por tipo: Sting, Number, Boolean, Function, Array, Object
 
 let number = 1;
 let sting = "1";
@@ -41,7 +41,7 @@ series.splice(0, 1, "splice");
 console.log(list);
 
 // Question 5 (for)
-// Liste todos os valores do array criado na questão anterior ultilizando o for
+// Liste todos os valores do array criado na questão anterior utilizando o for
 
 for (let index = 0; index < list.length; index++) {
   console.log(list[index]);
@@ -52,7 +52,7 @@ for (const value of list) {
 }
 
 // Question 6 (while)
-// Escreva os números de 0 a 100 sem os que pertencem à familía do 40, do 50 e do 60
+// Escreva os números de 0 a 100 sem os que pertencem à família do 40, do 50 e do 60
 
 let count = 0;
 while (count <= 100) {
@@ -89,5 +89,5 @@ const salaries = [2000, 2800, 3000, 4000, 2200, 7500, 3650, 8000, 2000, 5000];
 const newSalary = salaries.map((salary) => salary * 1.1);
 console.log(newSalary);
 
-const sumnewSalary = newSalary.reduce((a, b) => a + b);
-console.log(sumnewSalary);
+const sumNewSalary = newSalary.reduce((a, b) => a + b);
+console.log(sumNewSalary);

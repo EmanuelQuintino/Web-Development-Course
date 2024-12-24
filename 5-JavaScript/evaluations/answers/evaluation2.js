@@ -1,12 +1,5 @@
 // Question 1 (variables)
 
-// let 123variable;
-// let my-variable;
-// let my variable;
-// let my#variable;
-// let if;
-// let break;
-
 // Question (data types)
 console.log(10 == "10");
 
@@ -25,7 +18,7 @@ console.log(2 / 0);
 // c) 2
 // d) N.R.A
 
-// Question 4 (scope variebles)
+// Question 4 (scope variables)
 
 console.log(num);
 
@@ -46,7 +39,7 @@ console.log(myName); // string immutable *
 
 // Question 5 (array)
 
-const filmList = ["Matrix", "Interestellar", "Shrek", "Get Out", "Split"];
+const filmList = ["Matrix", "Interestelar", "Shrek", "Get Out", "Split"];
 
 // a) console.log(filmList[1]);
 // b) console.log(filmList[2]);

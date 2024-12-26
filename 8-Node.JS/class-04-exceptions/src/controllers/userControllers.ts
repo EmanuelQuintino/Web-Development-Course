@@ -1,15 +1,16 @@
 import { Request, Response, NextFunction } from "express";
+import { AppError } from "../errors/appError";
 
 export const userControllers = {
   async create(req: Request, res: Response, next: NextFunction) {
     try {
       const { id, name, age } = req.body;
+      // console.log(a); // error
 
       if (!id || !name || !age) {
-        throw res.status(400).json({ message: "missing data!" });
+        throw new AppError("data is required!", 400);
       }
 
-      // console.log(a); // error
       console.log("user created: ", { id, name, age });
 
       return res.status(201).json({ message: `user ${id} created!` });
@@ -22,8 +23,10 @@ export const userControllers = {
     try {
       const { id } = req.params;
 
-      if (!id) {
-        throw res.status(404).json({ message: "user(s) not found!" });
+      const user = false;
+
+      if (!user) {
+        throw new AppError("user not found!", 404);
       }
 
       return res.status(200).json({ user: id });

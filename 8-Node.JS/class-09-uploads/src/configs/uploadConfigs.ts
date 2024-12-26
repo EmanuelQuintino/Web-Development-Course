@@ -29,7 +29,9 @@ const fileFilter = (
 
   if (formatFiles.includes(file.mimetype)) return callback(null, true);
   ("40h");
-  const error = new Error("Invalid image type!") as MulterError & { status: number };
+  const error = new Error("Invalid image type!") as
+    | (MulterError & { status: number })
+    | any;
   error.status = 400;
 
   return callback(error, false);

@@ -2,7 +2,7 @@ import { Request, Response, NextFunction } from "express";
 import { AppError } from "./appError";
 
 export function appErrors(
-  error: Error & { status: number },
+  error: AppError,
   _req: Request,
   res: Response,
   _next: NextFunction

@@ -4,16 +4,23 @@ import { AppError } from "../errors/appError";
 export const userControllers = {
   async create(req: Request, res: Response, next: NextFunction) {
     try {
-      const { id, name, age } = req.body;
+      const { name, age } = req.body;
       // console.log(a); // error
 
-      if (!id || !name || !age) {
+      if (!name || !age) {
         throw new AppError("data is required!", 400);
       }
 
-      console.log("user created: ", { id, name, age });
+      const user = {
+        id: new Date().getTime(),
+        name,
+        age,
+      };
 
-      return res.status(201).json({ message: `user ${id} created!` });
+      return res.status(201).json({
+        message: `user  created!`,
+        data: user,
+      });
     } catch (error) {
       return next(error);
     }
@@ -23,7 +30,7 @@ export const userControllers = {
     try {
       const { id } = req.params;
 
-      const user = false;
+      const user = false; // query to databases
 
       if (!user) {
         throw new AppError("user not found!", 404);

@@ -1,7 +1,7 @@
 import { Request, Response, NextFunction } from "express";
+import { AppError } from "./appError";
 
 export function pageNotFound(_req: Request, _res: Response, next: NextFunction) {
-  const error = new Error("Page not found!") as Error & { status: number };
-  error.status = 404;
+  const error = new AppError("Page not found!", 404);
   next(error);
 }

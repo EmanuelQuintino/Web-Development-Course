@@ -4,7 +4,13 @@ export const userControllers = {
   create(req: Request, res: Response) {
     const { name, age } = req.body;
 
-    console.log("create user: ", { name, age });
+    const user = {
+      id: new Date().getTime(),
+      name,
+      age,
+    };
+
+    console.log("create user: ", user);
 
     return res.status(201).json({ message: "user created!" });
   },

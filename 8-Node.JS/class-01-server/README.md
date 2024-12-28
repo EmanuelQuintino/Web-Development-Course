@@ -92,3 +92,8 @@ npm install tsup -D
 
   - You can install any version **1.x.x** that is compatible with `1.4.2`, such as `1.5.0` or `1.4.3`.
   - But **does not allow** upgrading to a major version (e.g., `2.0.0`).
+
+### Links
+
+- [semver](https://semver.org/)
+- [calc](https://semver.npmjs.com/)

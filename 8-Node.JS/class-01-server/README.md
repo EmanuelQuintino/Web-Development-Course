@@ -101,6 +101,12 @@ npm outdated
 
 # shows and allows updating the versions
 npx npm-check-updates
+
+# interactive mode to updates
+npx npm-check-updates --interactive --format group
+
+# to update package-lock
+npm install
 ```
 
 ## Links

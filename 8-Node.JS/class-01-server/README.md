@@ -80,14 +80,6 @@ npm install tsup -D
 
 ## Semantic Versioning
 
-In Semantic Versioning, versions are expressed in the format MAJOR.MINOR.PATCH, where each part has a specific meaning regarding changes made to the software.
-
-```json
-{
-  "dependence": "^1.4.2"
-}
-```
-
 ### Breakdown of ^1.4.2:
 
 - **`1 (MAJOR)`**: Indicates that there are breaking changes that are not backward-compatible.

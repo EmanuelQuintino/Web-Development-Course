@@ -80,7 +80,7 @@ npm install tsup -D
 
 ## Semantic Versioning
 
-### Breakdown of ^1.4.2:
+### Breakdown of `"dependence": ^1.4.2`:
 
 - **`1 (MAJOR)`**: Indicates that there are breaking changes that are not backward-compatible.
 

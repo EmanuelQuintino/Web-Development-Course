@@ -90,13 +90,13 @@ In Semantic Versioning, versions are expressed in the format MAJOR.MINOR.PATCH, 
 
 ### Breakdown of ^1.4.2:
 
-1. **`1 (MAJOR)`**: Indicates that there are breaking changes that are not backward-compatible.
+- **`1 (MAJOR)`**: Indicates that there are breaking changes that are not backward-compatible.
 
-2. **`4 (MINOR)`**: New features were added in a backward-compatible manner.
+- **`4 (MINOR)`**: New features were added in a backward-compatible manner.
 
-3. **`2 (PATCH)`**: Indicate bug fixes and minor improvements that are backward-compatible.
+- **`2 (PATCH)`**: Indicate bug fixes and minor improvements that are backward-compatible.
 
-4. **`^`**: The `^` operator indicates a compatible update according to semantic versioning rules. For the version `^1.4.2`, it means:
+- **`^`**: The `^` operator indicates a compatible update according to semantic versioning rules. For the version `^1.4.2`, it means:
 
-- You can install any version **1.x.x** that is compatible with `1.4.2`.
-- It allows updates to newer minor and patch versions, such as `1.5.0` or `1.4.3`, but **does not allow** upgrading to a major version (e.g., `2.0.0`).
+  - You can install any version **1.x.x** that is compatible with `1.4.2`.
+  - It allows updates to newer minor and patch versions, such as `1.5.0` or `1.4.3`, but **does not allow** upgrading to a major version (e.g., `2.0.0`).

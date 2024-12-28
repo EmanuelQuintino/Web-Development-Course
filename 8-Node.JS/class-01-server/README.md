@@ -46,18 +46,6 @@ npm install @types/express --save-dev
 npm i tsx -D
 ```
 
-### Scripts
-
-```json
-{
-  "scripts": {
-    "dev": "tsx watch src/server.ts",
-    "build": "tsup src",
-    "start": "node dist/server.js"
-  }
-}
-```
-
 ### Dotenv
 
 Dotenv is a zero-dependency module that loads environment variables from a .env file into process.env.
@@ -76,4 +64,16 @@ Install tsup for build as a development dependency
 
 ```bash
 npm install tsup -D
+```
+
+### Scripts
+
+```json
+{
+  "scripts": {
+    "dev": "tsx watch --env-file .env src/server.ts",
+    "build": "tsup src --out-dir dist",
+    "start": "node --env-file=.env dist/server.js"
+  }
+}
 ```

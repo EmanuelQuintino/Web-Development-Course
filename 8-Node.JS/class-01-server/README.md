@@ -96,7 +96,11 @@ npm install tsup -D
 ## To Update Dependencies
 
 ```bash
+# checks if updates are available
 npm outdated
+
+# shows and allows updating the versions
+npx npm-check-updates
 ```
 
 ## Links

@@ -73,7 +73,7 @@ npm install tsup -D
   "scripts": {
     "dev": "tsx watch --env-file .env src/server.ts",
     "build": "tsup src --out-dir dist",
-    "start": "node --env-file=.env dist/server.js"
+    "start": "node dist/server.js"
   }
 }
 ```

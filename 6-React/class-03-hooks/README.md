@@ -1,4 +1,8 @@
-# Class 03 States
+# Class 03 Hooks
+
+## Component State
+
+State in React refers to the local data that a component holds and can modify. It allows components to manage dynamic content and user interactions. When the state changes, React triggers a re-render of the component to reflect the updated state.
 
 ## React Render Flow
 
@@ -70,3 +74,14 @@ The key must be unique and not random
 ["A", "B", "E", "D", "C"]
   0,   1,   2,   3,   4
 </pre>
+
+## Effects - Component Lifecycle
+
+<img src="../documents/life-circle.png" alt="component-lifecycle" width="640">
+
+- componentWillMount
+- componentDidMount
+- componentDidUpdate
+- componentWillUnmount
+
+- Derived States

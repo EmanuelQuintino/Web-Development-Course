@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export function App() {
   // let count = 0;
@@ -25,6 +25,23 @@ export function App() {
   function removeUser(userName: string) {
     setUsers(users.filter((user) => user != userName));
   }
+
+  console.log("rendered"); // componentWillMount
+
+  useEffect(() => {
+    console.log("effect"); // componentDidMount
+
+    setCount((value) => value + 1); // derived states
+
+    const timeoutID = setTimeout(() => {
+      console.log("timeout");
+    }, 3000);
+
+    // return () => console.log("closed");
+    return () => clearInterval(timeoutID); // componentWillUnmount
+  }, [count]); // componentDidUpdate
+
+  console.log("rendered"); // componentWillMount
 
   return (
     <>

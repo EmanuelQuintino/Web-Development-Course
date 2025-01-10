@@ -16,12 +16,14 @@ export function App() {
     setName(event.target.value);
   }
 
-  function addUsers() {
-    setUsers((users) => [...users, `user${users.length + 1}`]);
+  function handleAddUser() {
+    const userNumber = users.length + 1;
+    setUsers((users) => [...users, "user" + userNumber]);
   }
 
-  function removeUser(userName: string) {
-    setUsers(users.filter((user) => user != userName));
+  function handleRemoveUser(userName: string) {
+    const filterArray = users.filter((user) => user != userName);
+    setUsers(filterArray);
   }
 
   return (
@@ -30,7 +32,7 @@ export function App() {
 
       <section>
         <p>Count: {count}</p>
-        <button onClick={addCount}>Add+</button>
+        <button onClick={addCount}>add+</button>
       </section>
 
       <section>
@@ -40,13 +42,13 @@ export function App() {
 
       <section>
         <h2>Users</h2>
-        <button onClick={addUsers}>+ user</button>
+        <button onClick={handleAddUser}>user+</button>
 
         <ul>
           {users.map((user) => {
             return (
               <li key={user}>
-                {user} <button onClick={() => removeUser(user)}>-</button>
+                {user} <button onClick={() => handleRemoveUser(user)}>-</button>
               </li>
             );
           })}

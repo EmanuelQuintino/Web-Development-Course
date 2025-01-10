@@ -74,14 +74,3 @@ The key must be unique and not random
 ["A", "B", "E", "D", "C"]
   0,   1,   2,   3,   4
 </pre>
-
-## Effects - Component Lifecycle
-
-<img src="../documents/life-circle.png" alt="component-lifecycle" width="640">
-
-- componentWillMount
-- componentDidMount
-- componentDidUpdate
-- componentWillUnmount
-
-- Derived States

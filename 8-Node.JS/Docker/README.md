@@ -34,4 +34,4 @@ CMD ["npm", "start"]
 
 ## Links
 
-- [docs](https://www.docker.com/)
+- [Docs](https://www.docker.com/)

@@ -9,28 +9,27 @@
 
 ## Docker File
 
-```docker
-# Use a imagem base oficial do Node.js
+```Dockerfile
+# use the official Node.js base image
 FROM node:14
 
-# Defina o diretório de trabalho dentro do container
+# set the working directory inside the container
 WORKDIR /app
 
-# Copie o package.json e o package-lock.json para o container
+# copy package.json and package-lock.json to the container
 COPY package*.json ./
 
-# Instale as dependências do projeto
+# install project dependencies
 RUN npm install
 
-# Copie todo o conteúdo do projeto para o container
+# copy the entire project content to the container
 COPY . .
 
-# Expõe a porta que o aplicativo usará
+# expose the port that the application will use
 EXPOSE 3000
 
-# Comando para iniciar o aplicativo
+# command to start the application
 CMD ["npm", "start"]
-
 ```
 
 ## Links

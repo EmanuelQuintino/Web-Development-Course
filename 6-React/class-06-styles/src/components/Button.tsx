@@ -7,9 +7,5 @@ export function Button() {
 
   const nameChangeTheme = theme === "light" ? "dark" : "light";
 
-  return (
-    <ButtonContainer onClick={changeTheme}>
-      Change thema {nameChangeTheme}
-    </ButtonContainer>
-  );
+  return <ButtonContainer onClick={changeTheme}>{nameChangeTheme}</ButtonContainer>;
 }

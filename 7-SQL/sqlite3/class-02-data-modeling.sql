@@ -23,7 +23,7 @@ INSERT INTO students (id, name, email, id_course) VALUES
     
 SELECT * FROM courses;
 INSERT INTO courses (name, workload) VALUES 
-    ('Web Developement', '240h'),
+    ('Web Development', '240h'),
     ('Data Analysis', '160'),
     ('Cyber Security', '40h');
 

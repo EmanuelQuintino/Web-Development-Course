@@ -15,9 +15,16 @@ router.get("/users", (_req: Request, res: Response) => {
 });
 
 // route params
-router.get("/user/:id/:name", (req: Request, res: Response) => {
-  const { id, name } = req.params;
-  res.json({ id, name });
+router.get("/user/:id", (req, res) => {
+  const { id } = req.params;
+
+  const users = [
+    { id: 1, name: "Ash", age: 10 },
+    { id: 2, name: "Mestre Came", age: 300 },
+    { id: 3, name: "Alucard", age: 597 },
+  ];
+
+  res.json(users[Number(id) - 1] || {});
 });
 
 // query params

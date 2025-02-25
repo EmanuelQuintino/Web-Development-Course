@@ -10,6 +10,6 @@ export function appErrors(
   console.error("Middleware appErrors >>>> ", error);
 
   return res
-    .status(error.status || 500)
-    .json({ message: error.message || "Server Error!" });
+    .status(error.status || 400)
+    .json({ message: error.message || "Something is wrong!" });
 }

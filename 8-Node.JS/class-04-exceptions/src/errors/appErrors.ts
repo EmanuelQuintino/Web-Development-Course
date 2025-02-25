@@ -7,7 +7,7 @@ export function appErrors(
   res: Response,
   _next: NextFunction
 ) {
-  console.error("Middleware appErrors >>>> ", error);
+  console.error("Middleware appErrors >>> ", error);
 
   return res
     .status(error.status || 400)

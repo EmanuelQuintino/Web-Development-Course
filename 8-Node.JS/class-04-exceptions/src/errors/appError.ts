@@ -1,9 +1,9 @@
 export class AppError {
-  message: string;
-  status: number;
+  public message: string;
+  public statusCode: number;
 
-  constructor(message: string, status: number = 400) {
+  constructor(message: string, statusCode = 400) {
     this.message = message;
-    this.status = status;
+    this.statusCode = statusCode;
   }
 }

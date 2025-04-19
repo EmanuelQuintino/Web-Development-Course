@@ -1,0 +1,27 @@
+version: "3.9"
+
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: nodejs
+    container_name: api
+    ports:
+      - "3333:3333"
+    depends_on:
+      - postgres
+  postgres:
+    image: bitnami/postgresql:latest
+    container_name: db-postgres
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: api
+    volumes:
+      - database:/var/lib/postgresql/data
+
+volumes:
+  database:

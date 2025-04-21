@@ -29,10 +29,7 @@ const fileFilter = (
 
   if (formatFiles.includes(file.mimetype)) return callback(null, true);
 
-  const error = new Error("Invalid image type!") as
-    | (MulterError & { status: number })
-    | any;
-
+  const error = new Error("Invalid image type!") as any;
   error.status = 400;
 
   return callback(error, false);

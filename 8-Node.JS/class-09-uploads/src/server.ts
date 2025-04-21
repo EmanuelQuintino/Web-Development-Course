@@ -16,5 +16,5 @@ app.use(pageNotFound);
 app.use(appErrors);
 
 app.listen(PORT, () => {
-  console.log(`Server is runninig on PORT ${PORT}...`);
+  console.log(`Server is running on PORT ${PORT}...`);
 });

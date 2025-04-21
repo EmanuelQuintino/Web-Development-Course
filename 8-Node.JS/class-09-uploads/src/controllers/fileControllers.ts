@@ -26,7 +26,7 @@ export const fileControllers = {
     }
   },
 
-  async dalete(req: Request, res: Response, next: NextFunction) {
+  async delete(req: Request, res: Response, next: NextFunction) {
     try {
       const { name } = req.params;
       const filePath = path.resolve(UPLOADS_FOLDER, name);

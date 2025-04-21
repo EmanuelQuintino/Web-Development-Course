@@ -28,10 +28,11 @@ const fileFilter = (
   ];
 
   if (formatFiles.includes(file.mimetype)) return callback(null, true);
-  ("40h");
+
   const error = new Error("Invalid image type!") as
     | (MulterError & { status: number })
     | any;
+
   error.status = 400;
 
   return callback(error, false);
@@ -41,6 +42,6 @@ export const MULTER = {
   storage,
   fileFilter,
   limits: {
-    fileSize: 2 * 1024 * 1024, // 2MB
+    fileSize: 1024 * 1024 * 2, // 2MB
   },
 };

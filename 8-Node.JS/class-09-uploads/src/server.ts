@@ -2,8 +2,8 @@ import express from "express";
 import { router } from "./routes";
 import { pageNotFound } from "./errors/pageNotFound";
 import { appErrors } from "./errors/appErrors";
-import "dotenv/config";
 import { UPLOADS_FOLDER } from "./configs/uploadConfigs";
+import "dotenv/config";
 
 const app = express();
 const PORT = process.env.PORT || 3000;

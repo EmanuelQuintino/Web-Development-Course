@@ -9,7 +9,9 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 app.use(express.json());
-app.use("/file", express.static(UPLOADS_FOLDER));
+
+app.use("/file", express.static(UPLOADS_FOLDER)); // route to view files
+
 app.use(router);
 
 app.use(pageNotFound);
